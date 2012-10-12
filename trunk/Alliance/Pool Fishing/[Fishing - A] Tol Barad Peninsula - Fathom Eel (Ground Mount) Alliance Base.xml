@@ -1,0 +1,69 @@
+<HBProfile>
+	<Name>Tol Barad - Fathom Eel from Makelio</Name>
+	<MinDurability>0.4</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<ProtectedItems>
+		<Item name="Fishing Pole" entry="6256" />
+	</ProtectedItems>
+
+	<FishingSchool Entry="202780" Name="Fathom Eel"/>	
+
+	<SubProfile>
+		<Name>Tol Barad - Fathom Eel (Ground Mount)</Name>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>87</MaxLevel>
+		<TargetMinLevel>87</TargetMinLevel>
+		<Factions>14 16</Factions>
+		<Hotspots>
+<Hotspot X="141.426" Y="1098.69" Z="0.0001406968" />
+<Hotspot X="150.8407" Y="1271.031" Z="8.681417E-05" />
+<Hotspot X="55.90958" Y="1388.043" Z="8.681417E-05" />
+<Hotspot X="-7.821472" Y="1429.172" Z="-0.696553" />
+<Hotspot X="-124.715" Y="1371.717" Z="-0.696553" />
+<Hotspot X="-163.3857" Y="1265.35" Z="-0.696553" />
+<Hotspot X="-263.7357" Y="1184.042" Z="-0.696553" />
+<Hotspot X="-297.7492" Y="1157.569" Z="8.227672" />
+<Hotspot X="-307.9177" Y="1134.123" Z="21.52175" />
+<Hotspot X="-329.5221" Y="1101.797" Z="23.12896" />
+<Hotspot X="-360.838" Y="1058.807" Z="21.99885" />
+<Hotspot X="-409.6457" Y="1023.095" Z="1.622096" />
+<Hotspot X="-417.2388" Y="1044.976" Z="6.59402" />
+<Hotspot X="-394.5901" Y="1063.094" Z="20.23399" />
+<Hotspot X="-374.7456" Y="1105.396" Z="22.43465" />
+<Hotspot X="-388.2249" Y="1152.741" Z="22.34694" />
+<Hotspot X="-432.092" Y="1187.067" Z="11.0361" />
+<Hotspot X="-423.2542" Y="1200.588" Z="1.243828" />
+<Hotspot X="-417.0119" Y="1227.009" Z="0.0001847711" />
+<Hotspot X="-424.0769" Y="1261.609" Z="0.0001847711" />
+<Hotspot X="-442.0172" Y="1291.639" Z="-0.696553" />
+<Hotspot X="-450.8373" Y="1383.498" Z="-0.696553" />
+<Hotspot X="-383.0087" Y="1494.619" Z="-0.696553" />
+<Hotspot X="-266.6096" Y="1568.356" Z="-0.696553" />
+<Hotspot X="-211.5054" Y="1693.946" Z="-0.696553" />
+<Hotspot X="-265.2945" Y="1812.853" Z="-0.696553" />
+<Hotspot X="-296.283" Y="1960.005" Z="-0.696553" />
+<Hotspot X="-204.0058" Y="2029.526" Z="-0.696553" />
+<Hotspot X="-125.4915" Y="2036.919" Z="-0.696553" />
+		</Hotspots>
+		<Vendors>
+		<Vendor Name="Kevin Geissler" Entry="48251" Type="Repair" X="-374.3594" Y="1052.682" Z="21.98277" />
+		</Vendors>
+		<Blackspots>
+	<Blackspot X="84.5597" Y="1102.373" Z="1.798476" Radius="14.22863" />
+	<Blackspot X="85.31433" Y="1230.553" Z="3.187851" Radius="18.04737" />
+	<Blackspot X="-14.31529" Y="1386.83" Z="5.540438" Radius="9.268371" />
+	<Blackspot X="-124.1093" Y="1254.429" Z="16.17057" Radius="6.169087" />
+		</Blackspots>
+		<AvoidMobs>
+		</AvoidMobs>
+		<Mailboxes>
+		</Mailboxes>
+	</SubProfile>
+</HBProfile>
