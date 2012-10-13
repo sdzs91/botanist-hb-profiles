@@ -1,7 +1,7 @@
 Hi, 
 
-Inside each folder you will find a READ-ME.txt
-make sure you are reading it before using the profile.
+Inside each folder you will find a READ-ME.txtM
+Make sure you read it before using the profile.
 
 Thank you.
 
