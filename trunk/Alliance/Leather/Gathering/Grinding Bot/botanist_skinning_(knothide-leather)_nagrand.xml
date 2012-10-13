@@ -1,11 +1,11 @@
 <HBProfile>
-  <Name>botanist_grinding_lake-Kel-theril_anguished-highborne</Name>
+  <Name>botanist_skinning_(knothide-leather)_nagrand</Name>
   <MinDurability>0.4</MinDurability>
   <MinFreeBagSlots>1</MinFreeBagSlots>
   
   <MinLevel>1</MinLevel>
   <MaxLevel>86</MaxLevel>
-  <Factions>21</Factions>
+  <Factions>7 14</Factions>
   
   <MailGrey>False</MailGrey>
   <MailWhite>True</MailWhite>
@@ -18,27 +18,31 @@
   <SellGreen>False</SellGreen>
   <SellBlue>False</SellBlue>
   <SellPurple>False</SellPurple>
-
+  
 	<Vendors>
-      <Vendor Name="Wixxrak" Entry="11184" Type="Repair" X="6733.39" Y="-4699.038" Z="721.3698" />
+      
 	</Vendors>
 	
 	<Mailboxes>
-    <Mailbox X="6709.076" Y="-4667.268" Z="721.1526" />
+     
 	</Mailboxes>
-	
-	 <AvoidMobs>
-	  <AvoidMob Name="Betrayed Ranger" Entry="48670"   />
-     </AvoidMobs>
 
   <Hotspots>
-   <Hotspot X="6589.505" Y="-4118.161" Z="658.309" />
-   <Hotspot X="6542.048" Y="-4004.672" Z="658.7646" />
-   <Hotspot X="6611.455" Y="-3970.994" Z="670.0916" />
-   <Hotspot X="6676.163" Y="-4123.891" Z="663.9725" />
+<Hotspot X="-943.6112" Y="7942.755" Z="30.49523" />
+<Hotspot X="-941.1652" Y="7802.483" Z="36.3814" />
+<Hotspot X="-1132.026" Y="7722.632" Z="18.55701" />
+<Hotspot X="-1061.716" Y="7552.814" Z="29.78885" />
+<Hotspot X="-1048.262" Y="7372.493" Z="33.97583" />
+<Hotspot X="-811.224" Y="7273.275" Z="38.12819" />
+<Hotspot X="-753.2112" Y="7092.679" Z="34.84029" />
   </Hotspots>
   
   <Blackspots>
+  
   </Blackspots>
   
+    <AvoidMobs>
+
+    </AvoidMobs>
+
 </HBProfile>

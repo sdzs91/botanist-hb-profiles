@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-Grind[88-90]_botanist_dread-wastes_v1.4</Name>
+	<Name>[QO-N-Grind[88-90]_botanist_dread-wastes_v1.6</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -88,7 +88,15 @@
 					<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
 						<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
 						<CustomBehavior File="ForcedMount" MountType="Ground" />
-							<RunTo X="-974.8799" Y="3417.588" Z="53.22198" />						
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+							<Hotspot X="112.1781" Y="3224.536" Z="216.319" />
+							<Hotspot X="-104.1947" Y="2992.251" Z="178.4669" />
+							<Hotspot X="-151.7944" Y="2898.482" Z="156.86" />						
+							<Hotspot X="-214.6045" Y="2884.412" Z="131.5923" />
+							<Hotspot X="-337.2287" Y="2915.78" Z="147.6511" />
+						</CustomBehavior>						
+							<RunTo X="-974.8799" Y="3417.588" Z="53.22198" />							
 						<CustomBehavior File="ForcedDismount" />
 					</If>
 				</If>

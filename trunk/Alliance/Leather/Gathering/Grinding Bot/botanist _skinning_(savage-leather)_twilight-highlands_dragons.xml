@@ -1,6 +1,6 @@
 <HBProfile>
    <!--Created By Botanist-->
-   <Name>botanist _skinning-(525)_twilight-highlands_savage-leather</Name>   
+   <Name>botanist _skinning_(savage-leather)_twilight-highlands_dragons</Name>   
    <MinDurability>0.4</MinDurability>
    <MinFreeBagSlots>3</MinFreeBagSlots>   
    <SellGrey>True</SellGrey>
@@ -21,6 +21,8 @@
  	<TargetElites>False</TargetElites>
     <AvoidMobs>
 	 <AvoidMob Name="Apexar" Entry="46258" />
+	 <AvoidMob Name="Obsidian Pyrewing" Entry="46141" />
+	 <AvoidMob Name="Scarderis" Entry="47835" />
     </AvoidMobs>
 	<Blackspots>
 	 <Blackspot X="-4973.855" Y="-4455.5" Z="334.6986" Radius="100" />
@@ -35,30 +37,25 @@
     </Blackspots>
 	<!--Thundermar Mailbox-->
     <Mailboxes>
-	 <Mailbox X="-3205.928" Y="-5045.746" Z="120.3349" />
+	 <Mailbox X="-3206.622" Y="-5042.276" Z="120.2819" />
     </Mailboxes>
 	<!--Kirthaven Vendors-->
     <Vendors>
-     <Vendor Name="Cecily Stormbrow" Entry="49581" Type="Food" X="-2758.917" Y="-5356.455" Z="175.7845" />
-     <Vendor Name="Carrick Irongrin" Entry="49575" Type="Repair" X="-2804.078" Y="-5347.113" Z="177.1037" />
+     <Vendor Name="Caelyb Coppercrag" Entry="49592" Type="Repair" X="-3177.95" Y="-5021.481" Z="121.233" />
     </Vendors>
    
     <GrindArea>
-    <Factions>15</Factions>
+    <Factions>2350 2351</Factions>
     <TargetMinLevel>78</TargetMinLevel>
     <TargetMaxLevel>86</TargetMaxLevel>
     <Hotspots>
-     <Hotspot X="-2411.495" Y="-5071.07" Z="111.3792" />
-     <Hotspot X="-2410.002" Y="-5243" Z="119.242" />
-     <Hotspot X="-2406.915" Y="-5402.276" Z="136.2033" />
-     <Hotspot X="-2502.662" Y="-5687.684" Z="111.2534" />
-     <Hotspot X="-2484.527" Y="-5777.538" Z="85.06773" />
-     <Hotspot X="-2602.407" Y="-5838.232" Z="98.17881" />
-     <Hotspot X="-2834.698" Y="-5926.793" Z="97.12975" />
-     <Hotspot X="-2966.031" Y="-5756.537" Z="157.2355" />
-     <Hotspot X="-2890.85" Y="-5563.052" Z="170.8775" />
-     <Hotspot X="-2920.708" Y="-5434.106" Z="161.8761" />
-     <Hotspot X="-2824.423" Y="-5187.475" Z="180.7355" />
+<Hotspot X="-4749.868" Y="-5607.104" Z="64.47699" />
+<Hotspot X="-4632.601" Y="-5729.781" Z="52.31411" />
+<Hotspot X="-4570.208" Y="-5897.566" Z="34.04078" />
+<Hotspot X="-4800.413" Y="-6068.501" Z="8.124985" />
+<Hotspot X="-4999.134" Y="-5951.395" Z="14.99284" />
+<Hotspot X="-5117.544" Y="-5797.481" Z="15.05348" />
+<Hotspot X="-5185.797" Y="-5465.833" Z="23.92564" />
     </Hotspots>
     </GrindArea>
    </SubProfile>

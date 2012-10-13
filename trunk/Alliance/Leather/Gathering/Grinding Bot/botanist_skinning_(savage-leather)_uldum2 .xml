@@ -1,65 +1,103 @@
 <HBProfile>
-   <!--Created By Botanist-->
-   <Name>botanist _skinning-(525)_twilight-highlands_savage-leather</Name>   
-   <MinDurability>0.4</MinDurability>
-   <MinFreeBagSlots>3</MinFreeBagSlots>   
-   <SellGrey>True</SellGrey>
-   <SellWhite>False</SellWhite>
-   <SellGreen>False</SellGreen>
-   <SellBlue>False</SellBlue>
-   <SellPurple>False</SellPurple>  
-   <MailGrey>False</MailGrey>
-   <MailWhite>True</MailWhite>
-   <MailGreen>True</MailGreen>
-   <MailBlue>True</MailBlue>
-   <MailPurple>True</MailPurple>
-   
-   <SubProfile>
-    <Name>Kirthaven</Name>
-    <MinLevel>80</MinLevel>
-    <MaxLevel>86</MaxLevel>
- 	<TargetElites>False</TargetElites>
-    <AvoidMobs>
-	 <AvoidMob Name="Apexar" Entry="46258" />
-	 <AvoidMob Name="Obsidian Pyrewing" Entry="46141" />
-	 <AvoidMob Name="Scarderis" Entry="47835" />
-    </AvoidMobs>
-	<Blackspots>
-	 <Blackspot X="-4973.855" Y="-4455.5" Z="334.6986" Radius="100" />
-	 <Blackspot X="-4935.966" Y="-4593.08" Z="325.0277" Radius="25" />
-	 <Blackspot X="-3314.119" Y="-4863.538" Z="110.6354" Radius="100" />
-	 <Blackspot X="-3466.124" Y="-4868.553" Z="88.67686" Radius="100" />
-	 <Blackspot X="-3589.214" Y="-4845.209" Z="86.85037" Radius="100" />
-	 <Blackspot X="-3671.173" Y="-4815.083" Z="80.95471" Radius="100" />
-	 <Blackspot X="-4030.25" Y="-4838.122" Z="98.6027" Radius="30" />
-	 <Blackspot X="-4059.887" Y="-4803.676" Z="106.2977" Radius="30" />
-	 <Blackspot X="-4118.116" Y="-4779.83" Z="111.987" Radius="30" />
-    </Blackspots>
-	<!--Thundermar Mailbox-->
-    <Mailboxes>
-	 <Mailbox X="-3206.622" Y="-5042.276" Z="120.2819" />
-    </Mailboxes>
-	<!--Kirthaven Vendors-->
-    <Vendors>
-     <Vendor Name="Caelyb Coppercrag" Entry="49592" Type="Repair" X="-3177.95" Y="-5021.481" Z="121.233" />
-    </Vendors>
-   
-    <GrindArea>
-    <Factions>2350 2351</Factions>
-    <TargetMinLevel>78</TargetMinLevel>
-    <TargetMaxLevel>86</TargetMaxLevel>
-    <Hotspots>
-<Hotspot X="-4749.868" Y="-5607.104" Z="64.47699" />
-<Hotspot X="-4632.601" Y="-5729.781" Z="52.31411" />
-<Hotspot X="-4570.208" Y="-5897.566" Z="34.04078" />
-<Hotspot X="-4800.413" Y="-6068.501" Z="8.124985" />
-<Hotspot X="-4999.134" Y="-5951.395" Z="14.99284" />
-<Hotspot X="-5117.544" Y="-5797.481" Z="15.05348" />
-<Hotspot X="-5185.797" Y="-5465.833" Z="23.92564" />
-    </Hotspots>
-    </GrindArea>
-   </SubProfile>
-   
+  <!--Created By Botanist-->
+  <Name>botanist_skinning_(savage-leather)_uldum2</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>3</MinFreeBagSlots>
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>False</MailPurple>
+
+    <SubProfile>
+     <Name>Ramkahen</Name>
+     <MinLevel>80</MinLevel>
+     <MaxLevel>86</MaxLevel>
+ 	 <TargetElites>False</TargetElites>
+     <AvoidMobs>
+	  <AvoidMob Name="Training Dummy" Entry="44548" />
+	  <AvoidMob Name="Neferset Guard" Entry="46340" />
+	  <AvoidMob Name="Sand Pygmy" Entry="45190" />
+	  <AvoidMob Name="Neferset Smuggler" Entry="46884" />
+	  <AvoidMob Name="Wastewander Outrider" Entry="45905" />
+	  <AvoidMob Name="Venomblood Scorpid" Entry="45859" />
+	 </AvoidMobs>
+	 <Blackspots>
+	  <Blackspot X="-8831.937" Y="-388.6716" Z="164.2827" Radius="80" />
+	  <Blackspot X="-9353.024" Y="-680.3912" Z="105.4794" Radius="50" />
+	  <Blackspot X="-9355.567" Y="-1453.55" Z="65.45231" Radius="15" />
+	  <Blackspot X="-10427.12" Y="-1304.643" Z="43.93499" Radius="60" />
+     </Blackspots>
+	 <!--Ramkahen Mailbox-->
+     <Mailboxes>
+	  <Mailbox X="-9429.801" Y="-967.6786" Z="111.012" />
+     </Mailboxes>
+	 <!--Ramkahen Vendors-->
+     <Vendors>
+      <Vendor Name="Jahi" Entry="48884" Type="Food" X="-9488.002" Y="-912.434" Z="109.2151" />
+      <Vendor Name="Blacksmith Abasi" Entry="48617" Type="Repair" X="-9404.68" Y="-906.438" Z="112.5407" />
+     </Vendors>
+     <GrindArea>
+     <Factions>14 16 1999 1711</Factions>
+     <TargetMinLevel>79</TargetMinLevel> 
+     <TargetMaxLevel>85</TargetMaxLevel> 
+     <Hotspots>
+      <Hotspot X="-9431.311" Y="-1058.646" Z="114.4244" />
+      <Hotspot X="-9347.293" Y="-1166.748" Z="118.4284" />
+      <Hotspot X="-9344.478" Y="-1271.586" Z="116.1458" />	 
+      <Hotspot X="-9428.237" Y="-1416.176" Z="84.02544" />
+      <Hotspot X="-9646.571" Y="-1546.543" Z="37.36783" />
+      <Hotspot X="-9880.108" Y="-1471.972" Z="24.26538" />
+      <Hotspot X="-9898.529" Y="-1227.087" Z="46.82665" />
+      <Hotspot X="-9889.87" Y="-998.1755" Z="43.72691" />
+      <Hotspot X="-9957.139" Y="-1129.992" Z="44.4803" />
+      <Hotspot X="-10066.38" Y="-1162.199" Z="44.48563" />
+      <Hotspot X="-10151.86" Y="-1202.827" Z="44.36779" />
+      <Hotspot X="-10243.82" Y="-1252.77" Z="43.48438" />
+      <Hotspot X="-10320.95" Y="-1280.246" Z="44.48241" />
+      <Hotspot X="-10380.89" Y="-1297.081" Z="44.36706" />
+      <Hotspot X="-10417.85" Y="-1202.209" Z="45.10495" />
+      <Hotspot X="-10354.99" Y="-1169.049" Z="44.50852" />
+      <Hotspot X="-10268.39" Y="-1123.11" Z="44.45346" />
+      <Hotspot X="-10365.15" Y="-1031.165" Z="64.08901" />
+      <Hotspot X="-10490.78" Y="-1005.06" Z="124.8823" />
+      <Hotspot X="-10452.78" Y="-877.0822" Z="137.7826" />
+      <Hotspot X="-10357.25" Y="-752.856" Z="140.5561" />
+      <Hotspot X="-10280.65" Y="-818.6506" Z="93.57164" />
+      <Hotspot X="-10212.73" Y="-772.2739" Z="60.06165" />
+      <Hotspot X="-10152.44" Y="-676.3884" Z="49.03904" />
+      <Hotspot X="-10018.92" Y="-598.6799" Z="62.76542" />
+      <Hotspot X="-10009.98" Y="-446.5756" Z="63.27931" />
+      <Hotspot X="-9908.686" Y="-345.0775" Z="68.6606" />
+      <Hotspot X="-9772.805" Y="-329.8572" Z="76.65365" />
+      <Hotspot X="-9583.096" Y="-350.7838" Z="95.96004" />
+      <Hotspot X="-9567.923" Y="-463.9357" Z="123.1716" />
+      <Hotspot X="-9392.458" Y="-526.8799" Z="121.2923" />
+      <Hotspot X="-9417.709" Y="-620.7364" Z="109.4289" />
+      <Hotspot X="-9255.549" Y="-485.4311" Z="123.3281" />
+      <Hotspot X="-9186.269" Y="-294.2466" Z="132.2963" />
+      <Hotspot X="-9131.203" Y="-336.4579" Z="138.0193" />
+      <Hotspot X="-9147.228" Y="-470.8997" Z="130.2136" />
+      <Hotspot X="-9207.357" Y="-585.3516" Z="121.9437" />
+      <Hotspot X="-9297.887" Y="-691.9556" Z="120.5849" />
+      <Hotspot X="-9409.892" Y="-755.869" Z="107.1655" />
+      <Hotspot X="-9296.533" Y="-845.4429" Z="124.4981" />
+      <Hotspot X="-9113.331" Y="-910.4911" Z="144.4883" />
+      <Hotspot X="-8773.115" Y="-1003.948" Z="167.9048" />
+      <Hotspot X="-8703.016" Y="-1083.027" Z="159.3717" />
+      <Hotspot X="-8783.758" Y="-1166.356" Z="157.9328" />
+      <Hotspot X="-8879.189" Y="-1108.234" Z="157.07" />
+      <Hotspot X="-9136.354" Y="-1056.59" Z="138.5556" />	  
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+
+
+	
     <!--*******************************************************************Protected & Forced Mail Items**********************************************************************************-->
 	
 	<ProtectedItems>
@@ -583,4 +621,4 @@
 	<Item>17056</Item>    <!--Light Feather-->
    </ForceMail>
    
-</HBProfile>
+ </HBProfile>
