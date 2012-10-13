@@ -27,12 +27,12 @@
 	</AvoidMobs>
 	
 	<Blackspots>
-		<Blackspot X="-11046.93" Y="900.192" Z="36.02385" Radius="30" />
-		<Blackspot X="-11129.44" Y="938.5775" Z="36.69337" Radius="30" />
-		<Blackspot X="-11132.55" Y="884.6815" Z="38.9172" Radius="30" />
-		<Blackspot X="-11039.22" Y="784.0526" Z="37.83578" Radius="30" />
-		<Blackspot X="-11102.37" Y="790.5021" Z="37.67649" Radius="30" />
-		<Blackspot X="-11154.74" Y="735.8597" Z="32.57186" Radius="30" />
+		<Blackspot X="-11046.93" Y="900.192" Z="36.02385" Radius="5" />
+		<Blackspot X="-11129.44" Y="938.5775" Z="36.69337" Radius="5" />
+		<Blackspot X="-11132.55" Y="884.6815" Z="38.9172" Radius="5" />
+		<Blackspot X="-11039.22" Y="784.0526" Z="37.83578" Radius="5" />
+		<Blackspot X="-11102.37" Y="790.5021" Z="37.67649" Radius="5" />
+		<Blackspot X="-11154.74" Y="735.8597" Z="32.57186" Radius="5" />
 		<Blackspot X="-10417.03" Y="1107.214" Z="35.8898" Radius="35" />
 		<Blackspot X="-10666.08" Y="1227.45" Z="34.72566" Radius="20" />
 		<Blackspot X="-10640.97" Y="1245.051" Z="34.86412" Radius="20" />
@@ -413,7 +413,7 @@
 			</If>
 			
 			<While Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >		
-		<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+		<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Sentinel Hill in Westfall." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Sentinel Hill in Westfall." LogColor="Lime" />														
@@ -424,17 +424,21 @@
 				<CustomBehavior File="SetHearthstone" MobId="8931"  X="-10653.28" Y="1166.431" Z="34.50514" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-10966.91" Y="733.6973" Z="46.61634" />
+					<RunTo X="-10949.56" Y="1007.602" Z="38.95934" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 20." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>19,189,40,18,22</Factions>
+							<Factions>19,189,40,18,22,20</Factions>
 								<Hotspots>
-									<Hotspot X="-10966.91" Y="733.6973" Z="46.61634" />
-									<Hotspot X="-11141.67" Y="670.1395" Z="36.47466" />
-									<Hotspot X="-11149.05" Y="782.5557" Z="33.11599" />
-									<Hotspot X="-11057.12" Y="961.4391" Z="36.89378" />
+									<Hotspot X="-10949.56" Y="1007.602" Z="38.95934" />
+									<Hotspot X="-11067.83" Y="1067.076" Z="36.77298" />
+									<Hotspot X="-11160.94" Y="1043.174" Z="35.50538" />
+									<Hotspot X="-11139.1" Y="916.3351" Z="38.81927" />
+									<Hotspot X="-11224.59" Y="854.4511" Z="51.09785" />
+									<Hotspot X="-11138.79" Y="677.0735" Z="35.20739" />
+									<Hotspot X="-11007.36" Y="793.0016" Z="36.64104" />
+									<Hotspot X="-11012.73" Y="869.9868" Z="36.33125" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 20)" GoalText="Farming" />
