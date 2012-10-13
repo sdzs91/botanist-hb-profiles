@@ -57,7 +57,7 @@
 		
 				
 				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
-						Text="This is a leveling profile. It will be fully afk-able. It will currently level any class of toon (that isn't zone locked) from level 1 through level 20. You must manually move your toon to Northshire Valley before starting this profile if you are below level 8 otherwise, you can start the profile anywhere in Eastern Kingdoms. Includes mail and repair. The profile will auto set your hearthstone where it needs to be set. If yu have enough gold on your toon, the profile will train for and purchase a mount at level 20. If you like my work, please send donations to botanist1968@gmail.com using PayPal. Special thanks to Kick's, I used a great deal of his code purchasing mounts, to save a little tme when writing this." Title="WARNING" />
+						Text="This is a leveling profile. It will be fully afk-able. It will currently level any class of toon (that isn't zone locked) from level 1 through level 20. You must manually move your toon to Northshire Valley before starting this profile if you are below level 8 otherwise, you can start the profile anywhere in Eastern Kingdoms. Includes mail and repair. The profile will auto set your hearthstone where it needs to be set. If yu have enough gold on your toon, the profile will train for and purchase a mount at level 20. If you like my work, please send donations to botanist1968@gmail.com using PayPal. Special thanks to Kick's, I used a great deal of his code for purchasing mounts, to save a little tme when writing this." Title="WARNING" />
 						
 							
 						
