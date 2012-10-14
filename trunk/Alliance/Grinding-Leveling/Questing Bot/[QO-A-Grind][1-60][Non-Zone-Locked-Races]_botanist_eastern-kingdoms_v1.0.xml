@@ -64,7 +64,7 @@
 		
 				
 				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
-						Text="This is a leveling profile. It will be fully afk-able. It will currently level any class of toon (that isn't zone locked) from level 1 through level 20. You must manually move your toon to Northshire Valley before starting this profile if you are below level 8 otherwise, you can start the profile anywhere in Eastern Kingdoms. Includes mail and repair. The profile will auto set your hearthstone where it needs to be set. If yu have enough gold on your toon, the profile will train Journeyman Riding for you. Since this is MOP, and mounts are account bound, you should already have a ground mount to use after training. If this is the first level 20 character on your account, you will need to stop the bot at level 20. Go purchase Journeyman Riding and a mount. Then restart the profile in Stormwind. If you like my work, please send donations to botanist1968@gmail.com using PayPal." Title="WARNING" />
+						Text="This is a leveling profile. It will be fully afk-able. It will currently level any class of toon (that isn't zone locked) from level 1 through level 25. You must manually move your toon to Northshire Valley before starting this profile if you are below level 8 otherwise, you can start the profile anywhere in Eastern Kingdoms. Includes mail and repair. The profile will auto set your hearthstone where it needs to be set. If yu have enough gold on your toon, the profile will train Journeyman Riding for you. Since this is MOP, and mounts are account bound, you should already have a ground mount to use after training. If this is the first level 20 character on your account, you will need to stop the bot at level 20. Go purchase Journeyman Riding and a mount. Then restart the profile in Stormwind. If you like my work, please send donations to botanist1968@gmail.com using PayPal." Title="WARNING" />
 						
 							
 						
@@ -551,7 +551,67 @@
 				<If Condition="Me.Level &gt;= 22 &amp;&amp; Me.Level &lt;= 23" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="Message" Text="I am in the 22 to 23 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 22 to 25 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				</If>
+				
+		<While Condition="Me.Level &gt;= 22 &amp;&amp; Me.Level &lt;= 25" >		
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="Message" Text="Position check, Darkshire in Duskwood." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Darkshire." LogColor="Lime" />														
+					<RunTo X="-9226.454" Y="-2155.743" Z="63.73067" />
+				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="SetHearthstone" MobId="6790"  X="-10516" Y="-1161.213" Z="28.09951" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
+					<RunTo X="-10804.34" Y="-1232.67" Z="36.11907" />
+								 
+				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 20." LogColor="Lime" />				
+						<SetGrindArea><GrindArea>
+							<Factions>24,14,7,38,22,21</Factions>
+								<Hotspots>
+									<Hotspot X="-10804.34" Y="-1232.67" Z="36.11907" />
+									<Hotspot X="-10938.64" Y="-1262.905" Z="51.75391" />
+								    <Hotspot X="-10991.67" Y="-1146.609" Z="39.50811" />
+									<Hotspot X="-10998.58" Y="-974.9396" Z="65.35736" />
+									<Hotspot X="-11016.48" Y="-800.4901" Z="60.0729" />
+									<Hotspot X="-11043.25" Y="-626.5473" Z="27.49701" />
+									<Hotspot X="-10856.34" Y="-479.2597" Z="42.06155" />
+								    <Hotspot X="-10782.04" Y="-650.0756" Z="41.99237" />									
+								</Hotspots>
+						</GrindArea></SetGrindArea>					
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 26)" GoalText="Farming" />
+				</If>
+
+				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Morg Gnarltree" Entry="226" Type="Repair" X="-10590.63" Y="-1156.782" Z="30.05962" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="-10550.62" Y="-1157.743" Z="27.84249" />
+							</Mailboxes>
+						</SetMailbox>				
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					</If>
+					
+		</While>
+
+				<If Condition="Me.Level &gt;= 26 &amp;&amp; Me.Level &lt;= 28" >				
+					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="Message" Text="I am in the 26 to 29 bracket, changing to a new farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 			
