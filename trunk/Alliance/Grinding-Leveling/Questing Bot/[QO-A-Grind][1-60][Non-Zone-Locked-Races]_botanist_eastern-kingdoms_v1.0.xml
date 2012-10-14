@@ -560,7 +560,7 @@
 				<CustomBehavior File="Message" Text="Position check, Darkshire in Duskwood." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Darkshire." LogColor="Lime" />														
-					<RunTo X="-9226.454" Y="-2155.743" Z="63.73067" />
+					<RunTo X="-10515.98" Y="-1163.506" Z="28.10034" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
