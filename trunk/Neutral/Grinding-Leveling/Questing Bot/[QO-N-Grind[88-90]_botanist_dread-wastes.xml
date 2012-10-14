@@ -81,7 +81,7 @@
 		<While Condition="Me.Level &gt;= 88 &amp;&amp; Me.Level &lt;= 89" >	
 		
 																		<!-- dread wastes -->	
-				<CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				<CustomBehavior File="UserSettings" GroundMountFarmingMode="False" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" FindVendorsAutomatically="False" FindMountAutomatically="True" MountDistance="30" PullDistance="45" KillBetweenHotspots="True" LootRadius="5" LogoutForInactivity="True" />
 					
 				<CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />			  
 			    <If Condition="Me.ZoneId == 6138" >
