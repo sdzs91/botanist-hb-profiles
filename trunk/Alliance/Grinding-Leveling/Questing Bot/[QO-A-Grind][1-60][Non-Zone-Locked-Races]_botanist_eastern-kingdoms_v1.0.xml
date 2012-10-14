@@ -466,19 +466,16 @@
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
-		</While>				
+		</While>
+													<!-- mount training  -->		
 				
 				<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0" >				
 					<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 					<CustomBehavior File="Message" Text="I am level 20. I need to buy a mount and mount training." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				</If>
-			
-			    <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
-						Text="The profile will now train Journeyman Ridingfor you. Since this is MOP, and mounts are account bound, you should already have a ground mount to use after training. If this is the first level 20 character on your account, you will need to stop the profile. Go purchase Journeyman Riding and a mount. Then restart the profile in Stormwind." Title="WARNING" />
-			
-			              <!-- mount training  -->
+				</If>						   
+
 						  	
 				<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Silver &gt;= 450" >
 					<CustomBehavior File="Message" Text="Moving to the riding trainer Stormwind." LogColor="Orange" />
@@ -495,13 +492,67 @@
 			<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &gt;= 1" >					
 				<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="Message" Text="I am in the 20 to 22 bracket." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="Message" Text="Moving to the Stormwind flight master." LogColor="Lime" />
-					<RunTo X="-8837.934" Y="489.803" Z="109.6113" />
-				<CustomBehavior File="Message" Text="I have reached the Stormwind flight master." LogColor="Lime" />
-				<CustomBehavior File="Message" Text="Changing to a new farming location." LogColor="Lime" />				
+				<CustomBehavior File="Message" Text="I am in the 20 to 22 bracket and have learned journeyman riding." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="5000" />				
 			</If>
+			
+		<While Condition="Me.Level &gt;= 20 &amp;&amp; Me.Level &lt;= 21" >		
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="Message" Text="Position check, Lakeshire in Redridge Mountains." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Lakeshire in Redridge Mountains." LogColor="Lime" />														
+					<RunTo X="-9226.454" Y="-2155.743" Z="63.73067" />
+				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="SetHearthstone" MobId="6727"  X="-9226.454" Y="-2155.743" Z="63.73067" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
+					<RunTo X="-8770.997" Y="-2400.901" Z="155.9858" />
+								 
+				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 20." LogColor="Lime" />				
+						<SetGrindArea><GrindArea>
+							<Factions>40</Factions>
+								<Hotspots>
+									<Hotspot X="-8770.997" Y="-2400.901" Z="155.9858" />
+									<Hotspot X="-8681.627" Y="-2322.296" Z="155.9165" />
+									<Hotspot X="-8688.684" Y="-2241.953" Z="154.0114" />
+									<Hotspot X="-8693.383" Y="-2182.396" Z="156.5278" />
+									<Hotspot X="-8760.419" Y="-2259.266" Z="151.3942" />
+									<Hotspot X="-8819.688" Y="-2184.872" Z="138.845" />
+								</Hotspots>
+						</GrindArea></SetGrindArea>					
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 22)" GoalText="Farming" />
+				</If>
+
+				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Moving to repair, vendor and mail." LogColor="Lime" />						
+							
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Kara Adams" Entry="793" Type="Repair" X="-9247.732" Y="-2234.377" Z="63.93403" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="-9250.997" Y="-2144.485" Z="64.01987" />
+							</Mailboxes>
+						</SetMailbox>
+				
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					</If>
+					
+		</While>
+
+				<If Condition="Me.Level &gt;= 22 &amp;&amp; Me.Level &lt;= 23" >				
+					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="Message" Text="I am in the 22 to 23 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				</If>
 			
 			
 		                     	<!-- stop the bot -->				
