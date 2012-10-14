@@ -27,6 +27,8 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+	<Blackspot X="-8978.348" Y="-2009.766" Z="135.9593" Radius="15" />
+		<Blackspot X="-9159.795" Y="-2727.358" Z="88.68489" Radius="65" />
 		<Blackspot X="-11046.93" Y="900.192" Z="36.02385" Radius="5" />
 		<Blackspot X="-11129.44" Y="938.5775" Z="36.69337" Radius="5" />
 		<Blackspot X="-11132.55" Y="884.6815" Z="38.9172" Radius="5" />
@@ -61,12 +63,12 @@
 						
 							
 						
-	<While Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt;= 4" >
+		<While Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt;= 4" >
 	
-		<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
-		<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />
-		<CustomBehavior File="WaitTimer" WaitTime="3000" />
-		<CustomBehavior File="Message" Text="I am in the  1 to 4 bracket." LogColor="Lime" />
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+				<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+				<CustomBehavior File="Message" Text="I am in the  1 to 4 bracket." LogColor="Lime" />
 		
 				<CustomBehavior File="Message" Text="Position check, Northshire Valley" LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
@@ -108,25 +110,23 @@
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
-	</While>				
+		</While>				
 				
-			<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt;= 6" >
-				<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="Message" Text="I am in the 5 to 6 bracket, changing to a new farming location." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-			</If>	
+				<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt;= 6" >
+					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="Message" Text="I am in the 5 to 6 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				</If>	
 				
-	<While Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt;= 6" >
-		<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />		
-		
+		<While Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt;= 6" >
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Northshire Valley." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 					<If Condition="Me.X &gt; -9051.969 &amp;&amp; Me.Y &gt; -490.9697" >  
 						<CustomBehavior File="Message" Text="And, I'm in Northshire Valley. Moving to the new farming location.." LogColor="Lime" />
 							<RunTo X="-9023.669" Y="-332.8289" Z="73.90869" />							
 					</If>
-
 		 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 7." LogColor="Lime" />				
@@ -162,19 +162,19 @@
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
-	</While>				
+		</While>				
 				
-			<If Condition="Me.Level &gt;= 7 &amp;&amp; Me.Level &lt;= 8" >
-				<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />			
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="Message" Text="I am in the 7 to 8 bracket." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-			</If>
+				<If Condition="Me.Level &gt;= 7 &amp;&amp; Me.Level &lt;= 8" >
+					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />			
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="Message" Text="I am in the 7 to 8 bracket." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				</If>
 			
 			                             <!-- Elwyn forest -->
 
-	<While Condition="Me.Level &gt;= 7 &amp;&amp; Me.Level &lt;= 8" >		
-		<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+		<While Condition="Me.Level &gt;= 7 &amp;&amp; Me.Level &lt;= 8" >		
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Goldshire in Elwynn Forest" LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Goldshire in Elwynn Forest." LogColor="Lime" />														
@@ -229,17 +229,17 @@
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
-	</While>				
+		</While>				
 				
-			<If Condition="Me.Level &gt;= 9 &amp;&amp; Me.Level &lt;= 11" >
-				<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="Message" Text="I am in the 9 to 11 bracket, changing to a new farming location." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-			</If>
+				<If Condition="Me.Level &gt;= 9 &amp;&amp; Me.Level &lt;= 11" >
+					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="Message" Text="I am in the 9 to 11 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				</If>
 
-	<While Condition="Me.Level &gt;= 9 &amp;&amp; Me.Level &lt;= 11" >		
-		<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+		<While Condition="Me.Level &gt;= 9 &amp;&amp; Me.Level &lt;= 11" >		
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Goldshire in Elwynn Forest" LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />				
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Goldshire in Elwynn Forest." LogColor="Lime" />														
@@ -288,16 +288,17 @@
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
-	</While>				
+		</While>				
 				
-			<If Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >				
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="Message" Text="I am in the 12 to 13 bracket, moving to a new farming location." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-			</If>
+				 <If Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >				
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="Message" Text="I am in the 12 to 13 bracket, moving to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				 </If>
 			
-			<While Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >		
-		<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+		<While Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >
+			
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Sentinel Hill in Westfall." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Sentinel Hill in Westfall." LogColor="Lime" />														
@@ -346,17 +347,18 @@
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
-	</While>				
+		</While>				
 				
-			<If Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 17" >				
-				<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="Message" Text="I am in the 14 to 17 bracket, changing to a new farming location." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-			</If>
+				<If Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 17" >				
+					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="Message" Text="I am in the 14 to 17 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				</If>
 			
-	<While Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 17" >		
-		<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+		<While Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 17" >	
+	
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Sentinel Hill in Westfall." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Sentinel Hill in Westfall." LogColor="Lime" />														
@@ -405,40 +407,41 @@
 					
 	</While>				
 				
-			<If Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >				
-				<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="Message" Text="I am in the 18 to 20 bracket, changing to a new farming location." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-			</If>
+				<If Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >				
+					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="Message" Text="I am in the 18 to 20 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				</If>
 			
-			<While Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >		
-		<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Sentinel Hill in Westfall." LogColor="Lime" />
+	<While Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >		
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="Message" Text="Position check, Lakeshire in Redridge Mountains." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Sentinel Hill in Westfall." LogColor="Lime" />														
-					<RunTo X="-10650.82" Y="1165.563" Z="34.51858" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Lakeshire in Redridge Mountains." LogColor="Lime" />														
+					<RunTo X="-9226.454" Y="-2155.743" Z="63.73067" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-				<CustomBehavior File="SetHearthstone" MobId="8931"  X="-10653.28" Y="1166.431" Z="34.50514" />
+				<CustomBehavior File="SetHearthstone" MobId="6727"  X="-9226.454" Y="-2155.743" Z="63.73067" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-10949.56" Y="1007.602" Z="38.95934" />
+					<RunTo X="-9125.718" Y="-2463.905" Z="115.6448" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 20." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>19,189,40,18,22,20</Factions>
+							<Factions>19,14</Factions>
 								<Hotspots>
-									<Hotspot X="-10949.56" Y="1007.602" Z="38.95934" />
-									<Hotspot X="-11067.83" Y="1067.076" Z="36.77298" />
-									<Hotspot X="-11160.94" Y="1043.174" Z="35.50538" />
-									<Hotspot X="-11139.1" Y="916.3351" Z="38.81927" />
-									<Hotspot X="-11224.59" Y="854.4511" Z="51.09785" />
-									<Hotspot X="-11138.79" Y="677.0735" Z="35.20739" />
-									<Hotspot X="-11007.36" Y="793.0016" Z="36.64104" />
-									<Hotspot X="-11012.73" Y="869.9868" Z="36.33125" />
+									<Hotspot X="-9125.718" Y="-2463.905" Z="115.6448" />
+									<Hotspot X="-9059.819" Y="-2458.825" Z="126.512" />
+									<Hotspot X="-8958.528" Y="-2326.22" Z="132.4478" />
+									<Hotspot X="-8916.345" Y="-2219.972" Z="134.6617" />
+									<Hotspot X="-8886.418" Y="-2152.398" Z="132.4548" />
+									<Hotspot X="-9003.057" Y="-2094.328" Z="132.4492" />
+									<Hotspot X="-9116.589" Y="-2093.341" Z="124.3357" />
+									<Hotspot X="-9149.362" Y="-2242.414" Z="118.7237" />
+									<Hotspot X="-9133.709" Y="-2331.686" Z="117.2549" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 20)" GoalText="Farming" />
@@ -451,221 +454,51 @@
 							
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="William MacGregor" Entry="1668" Type="Repair" X="-10653.31" Y="996.5868" Z="32.87424" />
+								<Vendor Name="Kara Adams" Entry="793" Type="Repair" X="-9247.732" Y="-2234.377" Z="63.93403" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-10641.61" Y="1156.384" Z="33.32554" />
+								<Mailbox X="-9250.997" Y="-2144.485" Z="64.01987" />
 							</Mailboxes>
 						</SetMailbox>
 				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
-	</While>				
+		</While>				
 				
-			<If Condition="Me.Level == 20" >				
-				<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="Message" Text="I am level 20. I need to buy a mount and mount training." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-			</If>
+				<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0" >				
+					<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="Message" Text="I am level 20. I need to buy a mount and mount training." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				</If>
 			
-			              <!-- buy mount and training  -->
-						  
-		<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Silver &gt;= 450" >
-		
-				<If Condition="Me.Race == WoWRace.Human">
-					<CustomBehavior File="Message" Text="Moving to the Human riding trainer at Eastvale Logging Camp in Elwynn Forest." LogColor="Orange" />
-					<RunTo X="-8780.128" Y="380.0052" Z="100.8152" />
+			    <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="The profile will now train Journeyman Riding for you. Since this is MOP, and mounts are account bound, you should already have a ground mount to use after training. If this is the first level 20 character on your account, you will need to stop the profile. Go purchase Journeyman Riding and a mount. Then restart the profile in Stormwind." Title="WARNING" />
+			
+			              <!-- mount training  -->
+						  	
+				<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Silver &gt;= 450" >
+					<CustomBehavior File="Message" Text="Moving to the riding trainer Stormwind." LogColor="Orange" />
+					<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
 					<CustomBehavior File="Message" Text="I have reached the riding trainer. Training journeyman riding." LogColor="Orange" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="InteractWith" MobId="43693" WaitTime="1000" CollectionDistance="50" X="-8780.128" Y="380.0052" Z="100.8152" />
-					<CustomBehavior File="ForceTrainRiding" MobId="43693" />
-				    <CustomBehavior File="Message" Text="Purchasing a mount." LogColor="Orange" />
+					<CustomBehavior File="InteractWith" MobId="43769" WaitTime="1000" CollectionDistance="50" X="-8845.4" Y="502.653" Z="109.617" />
+					<CustomBehavior File="ForceTrainRiding" MobId="43769" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="InteractWith" MobId="43694" BuyItemId="2411" WaitTime="5000" CollectionDistance="50" X="-8780.128" Y="380.0052" Z="100.8152" />
-					<If Condition="(HasItem(2411))" >
-						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(2411)" />
-					</If>
 				</If>
 				
-				<If Condition="Me.Race == WoWRace.Gnome">
-				<CustomBehavior File="Message" Text="Moving to the Gnome riding trainer at Steelgrill's Depot in Dun Morogh." LogColor="Orange" />
-					<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="25" />
-						<RunTo X="-5454.171" Y="-621.048" Z="393.3968" />
-						<CustomBehavior File="Message" Text="I have reached the riding trainer. Training journeyman riding." LogColor="Orange" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="ForceTrainRiding" MobId="7954" />
-					<CustomBehavior File="Message" Text="Purchasing a mount." LogColor="Orange" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="InteractWith" MobId="7955" BuyItemId="8595" WaitTime="5000" X="-5454.171" Y="-621.048" Z="393.3968" />
-						<If Condition="(HasItem(8595))" >
-							<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(8595)" />
-						</If>
-					<CustomBehavior File="InteractWith" MobId="43701" NumOfTimes="1" CollectionDistance="1000" WaitTime="1000" X="-5664.08" Y="-497.684" Z="397.3409" /> <!-- kharanos flight path -->
-				</If>
-				
-				<If Condition="Me.Race == WoWRace.Dwarf">
-				<CustomBehavior File="Message" Text="Moving to the Dwarf riding trainer at Amberstill Ranch in Dun Morogh." LogColor="Orange" />
-					<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" PullDistance="25" />
-						<RunTo X="-5524.354" Y="-1349.868" Z="398.6641" />
-						<CustomBehavior File="Message" Text="I have reached the riding trainer. Training journeyman riding." LogColor="Orange" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="ForceTrainRiding" MobId="4772" />
-					<CustomBehavior File="Message" Text="Purchasing a mount." LogColor="Orange" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="InteractWith" MobId="1261" BuyItemId="5873" WaitTime="5000" X="-5539.55" Y="-1322.55" Z="398.8653" />
-						<If Condition="(HasItem(5873))" >
-							<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(5873)" />
-						</If>
-					<CustomBehavior File="InteractWith" MobId="43701" NumOfTimes="1" CollectionDistance="1000" WaitTime="1000" X="-5664.08" Y="-497.684" Z="397.3409" /> <!-- Kharanos FP Master -->
-				</If>
-				
-				<If Condition="Me.Race == WoWRace.NightElf">
-				 <!--  SW to rut'theran village to darnassus -->
-					<If Condition="(Me.MapId == 0)" >
-						<CustomBehavior File="Message" Text="Moving to the NightElf riding trainer at Darnassus in Teldrassil." LogColor="Orange" />
-						<CustomBehavior File="WaitTimer" WaitTime="5000" />
-						<CustomBehavior File="Message" Text="Moving to the Stormwind docks." LogColor="Orange" />
-						<RunTo X="-8642.231" Y="1327.733" Z="5.234008" />
-						<CustomBehavior File="Message" Text="I have reached the Stormwind docks. Taking the boat to Rut'theran Village." LogColor="Orange" />
-							<CustomBehavior File="UseTransport" TransportId="176310" 
-												WaitAtX="-8640.556" WaitAtY="1330.829" WaitAtZ="5.233207"
-												GetOffX="8177.54" GetOffY="1003.079" GetOffZ="6.646164" 
-												StandOnX="-8644.952" StandOnY="1348.11" StandOnZ="6.143094" 
-												TransportStartX="-8650.719" TransportStartY="1346.051" TransportStartZ="-0.0382334" 
-												TransportEndX="8162.587" TransportEndY="1005.365" TransportEndZ="0.0474023" />
-					</If>
-					<!-- portal from rut'theran village to darnassus -->
-					<If Condition="(Me.MapId == 1)" >
-						<While Condition="(Me.Z &lt; 100)" >
-						<CustomBehavior File="Message" Text="I have reached Rut'theran Village, moving to the Rut'theran Village portal, to Darnassus." LogColor="Orange" />
-							<RunTo X="8375.579" Y="997.6517" Z="27.45768" /> <!-- rut'theran village -->
-							<RunTo X="8386.943" Y="999.6256" Z="29.80114" /> <!-- portal  to darnassus -->
-						<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="{TimeRemaining}" />
-						</While>
-							<If Condition="(Me.Z &gt; 1000)" >
-								<CustomBehavior File="Message" Text="I have reached Darnassus, moving to the riding trainer." LogColor="Orange" />
-								<RunTo X="10129.78" Y="2526.595" Z="1324.828" />
-									<CustomBehavior File="Message" Text="I have reached the riding trainer. Training journeyman riding." LogColor="Orange" />
-									<CustomBehavior File="WaitTimer" WaitTime="5000" />
-						<CustomBehavior File="ForceTrainRiding" MobId="4753" />
-						<CustomBehavior File="Message" Text="Purchasing a mount." LogColor="Orange" />
-						<CustomBehavior File="WaitTimer" WaitTime="5000" />
-						<CustomBehavior File="InteractWith" MobId="4730" BuyItemId="8629" WaitTime="5000" X="10129.91" Y="2533.245" Z="1323.271" />
-							<If Condition="(HasItem(8629))" >
-								<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(8629)" />
-							</If>
-						<While Condition="(Me.Z &gt; 1000)" >
-							<CustomBehavior File="Message" Text="Moving to the Darnassus portal, to Rut'theran Village. " LogColor="Cornflowerblue" />
-								<RunTo X="9948.389" Y="2614.481" Z="1316.236" />
-								<CustomBehavior File="Message" Text="Taking the portal to Rut'theran Village." LogColor="Orange" />
-							<CustomBehavior File="MyCTM" X="9947.438" Y="2621.536" Z="1317.558" />
-							<CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
-						</While>
-							</If>
-						<If Condition="(Me.Z &lt; 100)" >
-							<CustomBehavior File="Message" Text="Moving to the docks." LogColor="Orange" />
-							<RunTo X="8180.102" Y="1002.678" Z="6.919619" />
-							<CustomBehavior File="Message" Text="Taking the boat to Stormwind." LogColor="Orange" />
-								<CustomBehavior File="UseTransport" TransportId="176310" 
-												WaitAtX="8177.54" WaitAtY="1003.079" WaitAtZ="6.646164" 
-												GetOffX="-8642.001" GetOffY="1330.353" GetOffZ="5.232954" 
-												StandOnX="8171.327" StandOnY="1005.99" StandOnZ="6.213342" 
-												TransportStartX="8162.587" TransportStartY="1005.365" TransportStartZ="0.005638145"
-												TransportEndX="-8650.719" TransportEndY="1346.051" TransportEndZ="-0.0382334" />
-						</If>
-						<CustomBehavior File="Message" Text="I have returned to Stormwind." LogColor="Lime" />
-					</If>
-				</If>
-				
-				<If Condition="Me.Race == WoWRace.Draenei">
-				<CustomBehavior File="Message" Text="Moving to the Draenei riding trainer at Azuremyst Isle in Exodar." LogColor="Orange" />
-					<!-- Get on at SW, off at Rut'theran Village (Darnassus) -->
-					<If Condition="(Me.MapId == 0)" >
-						<CustomBehavior File="Message" Text="Moving to the Stormwind docks." LogColor="Orange" />
-							<RunTo X="-8642.231" Y="1327.733" Z="5.234008" />
-							<CustomBehavior File="Message" Text="I have reached the Stormwind docks. Taking the boat to Rut'theran Village." LogColor="Orange" />
-								<CustomBehavior File="UseTransport" TransportId="176310" 
-												WaitAtX="-8640.556" WaitAtY="1330.829" WaitAtZ="5.233207"
-												GetOffX="8177.54" GetOffY="1003.079" GetOffZ="6.646164" 
-												StandOnX="-8644.952" StandOnY="1348.11" StandOnZ="6.143094" 
-												TransportStartX="-8650.719" TransportStartY="1346.051" TransportStartZ="-0.0382334" 
-												TransportEndX="8162.587" TransportEndY="1005.365" TransportEndZ="0.0474023" />
-					</If>
-					<!-- portal from rut'theran village to darnassus -->
-				 <If Condition="(Me.MapId == 1)" >
-					<While Condition="(Me.Z &lt; 100) &amp;&amp; (Me.Z &gt; 0)" >
-					<CustomBehavior File="Message" Text="I have reached Rut'theran Village, moving to the Rut'theran Village portal, to Darnassus." LogColor="Orange" />
-						<RunTo X="8375.579" Y="997.6517" Z="27.45768" /> <!-- rut'theran village -->
-						<RunTo X="8386.943" Y="999.6256" Z="29.80114" /> <!-- portal  to darnassus -->
-							<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="Waiting for port up {TimeRemaining}" />
-					</While>
-				  
-				 <If Condition="Me.ZoneId == 1657" > <!-- Darnassus -->
-					<CustomBehavior File="Message" Text="Taking the portal to Exodar." LogColor="Orange" />
-					<RunTo X="9655.252" Y="2509.33" Z="1331.598" />
-						<CustomBehavior File="InteractWith" MobId="207995" ObjectType="Gameobject" Range="5" X="9655.252" Y="2509.33" Z="1331.598" />
-						<CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for  {TimeRemaining}" />
-				 </If>
-				  
-				 <If Condition="Me.ZoneId == 3557" > <!-- Exodar -->
-					<CustomBehavior File="Message" Text="I have reached Exodar, moving to the riding trainer." LogColor="Orange" />
-						
-						<RunTo X="-3981.769" Y="-11929.14" Z="-0.2419412" />
-						<CustomBehavior File="Message" Text="I have reached the riding trainer. Training journeyman riding." LogColor="Orange" />
-						<CustomBehavior File="WaitTimer" WaitTime="5000" />
-							<CustomBehavior File="ForceTrainRiding" MobId="20914" />
-							<CustomBehavior File="Message" Text="Purchasing a mount." LogColor="Orange" />
-							<CustomBehavior File="WaitTimer" WaitTime="5000" />
-							<CustomBehavior File="InteractWith" MobId="17584" BuyItemId="28481" WaitTime="5000" CollectionDistance="50" X="-3981.769" Y="-11929.14" Z="-0.2419412" />
-								<If Condition="(HasItem(28481))" >
-									<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(28481)" />
-								</If>
 				 
-								<CustomBehavior File="Message" Text="Moving to Exodar's portal, to Darnassus" LogColor="Cornflowerblue" />			
-									<RunTo X="-4043.964" Y="-11570.73" Z="-138.4523" /> <!-- Exodar Portal to Darnassus -->
-										<CustomBehavior File="Message" Text="I have reached the portal. Taking the portal to Darnassus." LogColor="Cornflowerblue" />
-										<CustomBehavior File="InteractWith" MobId="207996" ObjectType="Gameobject" Range="5" NumOfTimes="1" CollectionDistance="1000" X="-4043.964" Y="-11570.73" Z="-138.4523" />
-										<CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
-				 </If>
-				 
-				 <While Condition="Me.ZoneId == 1657" > <!-- Darnassus -->
-				 <CustomBehavior File="Message" Text="I have reached Darnassus, taking the portal to Rut'theran Village" LogColor="Orange" />
-					<RunTo X="9945.16" Y="2610.053" Z="1316.28" /> <!-- darnassus -->
-					<RunTo X="9946.184" Y="2621.322" Z="1317.485" /> <!-- rut'theran village -->
-						<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="Waiting for port up {TimeRemaining}" />
-				 </While>
-					<If Condition="(Me.Z &lt; 100) &amp;&amp; (Me.Z &gt; 0)" >
-						<CustomBehavior File="Message" Text="Moving to the docks." LogColor="Orange" />
-							<RunTo X="8180.102" Y="1002.678" Z="6.919619" />
-							<CustomBehavior File="Message" Text="Taking the boat to Stormwind." LogColor="Orange" />
-							<CustomBehavior File="UseTransport" TransportId="176310" 
-											WaitAtX="8177.54" WaitAtY="1003.079" WaitAtZ="6.646164" 
-											GetOffX="-8642.001" GetOffY="1330.353" GetOffZ="5.232954" 
-											StandOnX="8171.327" StandOnY="1005.99" StandOnZ="6.213342" 
-											TransportStartX="8162.587" TransportStartY="1005.365" TransportStartZ="0.005638145"
-											TransportEndX="-8650.719" TransportEndY="1346.051" TransportEndZ="-0.0382334" />
-				  </If>
-				  <CustomBehavior File="Message" Text="I have returned to Stormwind." LogColor="Lime" />
-				  </If>
-				 </If>
-					<CustomBehavior File="UserSettings" UseMount="True" LootMobs="True" PullDistance="25" />
-
-				<CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" DoMail="True" />
-				
-		</If>
-						<!-- back to stormwind after getting a mount -->
 						
-			<If Condition="Me.Level &gt;= 20 &amp;&amp; Me.MapId == 0" >" >				
+			<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &gt;= 1" >					
 				<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				<CustomBehavior File="Message" Text="I am in the 20 to 22 bracket." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				<CustomBehavior File="Message" Text="Moving to the Stormwind flight master." LogColor="Lime" />
-				<RunTo X="-8837.934" Y="489.803" Z="109.6113" />
+					<RunTo X="-8837.934" Y="489.803" Z="109.6113" />
 				<CustomBehavior File="Message" Text="I have reached the Stormwind flight master." LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Changing to a new farming location." LogColor="Lime" />				
 			</If>

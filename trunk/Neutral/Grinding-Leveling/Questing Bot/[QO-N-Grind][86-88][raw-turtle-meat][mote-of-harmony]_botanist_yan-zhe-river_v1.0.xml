@@ -140,7 +140,7 @@
 										<Hotspot X="-570.3602" Y="12.88105" Z="134.6505" />										
 									</Hotspots>
 								</GrindArea></SetGrindArea>					
-								<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) (Me.Level &gt;= 89)" GoalText="Farming" />
+								<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) (Me.Level &gt;= 88)" GoalText="Farming" />
 							</If>
 					</If>
 				</If>
