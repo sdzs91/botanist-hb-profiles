@@ -1,1 +1,0 @@
-Hello, you now know how to svn.
