@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-Grind][86-88][raw-turtle-meat][mote-of-harmony]_botanist_yan-zhe-river_v1.0</Name>
+	<Name>[QO-N-Grind][raw-turtle-meat][mote-of-harmony]_botanist_yan-zhe-river</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -62,7 +62,7 @@
 		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This is an 86-88 leveling profile. You should be able to start this profile anywhere in Pandaria. This profile will farm the Riverbank Barbshell Turtles in Valley of the Four Winds. The profile will auto set your hearth where needed. Includes repair vendor and mailing. You will loot a lot of 'raw turtle meat' and 'motes of harmony' ." Title="WARNING" />
 						
 			
-		<While Condition="Me.Level &gt;= 86 &amp;&amp; Me.Level &lt;= 88" >
+		<While Condition="Me.Level &gt;= 86" >
 				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
 				<If Condition="Me.MapId == 870" >				 
 					<If Condition="Me.ZoneId != 5805" >
@@ -140,7 +140,7 @@
 										<Hotspot X="-570.3602" Y="12.88105" Z="134.6505" />										
 									</Hotspots>
 								</GrindArea></SetGrindArea>					
-								<GrindTo Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level &gt;= 88)" GoalText="Farming" />
+								<GrindTo Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; .30)" GoalText="Farming" />
 							</If>
 					</If>
 				</If>
@@ -170,10 +170,6 @@
 				
 		</While>
 			
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-				<CustomBehavior File="Message" Text="I have reached level 89. I'm stopping the bot" LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-				<CustomBehavior File="UserSettings" StopBot="true" />
 	
 		</QuestOrder>
 

@@ -4,8 +4,8 @@
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
    
-	<MinDurability>0.2</MinDurability>
-	<MinFreeBagSlots>0</MinFreeBagSlots>
+	<MinDurability>0.1</MinDurability>
+	<MinFreeBagSlots>1</MinFreeBagSlots>
 	
 	<MailGrey>False</MailGrey>
 	<MailWhite>False</MailWhite>
@@ -24,10 +24,15 @@
 	<AvoidMobs>
 		<AvoidMob Name="Training Dummy" Entry="44548" />
 		<AvoidMob Name="Thuros Lightfingers" Entry="61" />
+		<AvoidMob Name="Ritualist Tarak" Entry="43363" />
+		<AvoidMob Name="Overlord Barbarius" Entry="43369" />
+		 
 	</AvoidMobs>
 	
 	<Blackspots>
-	<Blackspot X="-8978.348" Y="-2009.766" Z="135.9593" Radius="15" />
+		<Blackspot X="-8819.688" Y="-2184.872" Z="138.845" />
+		<Blackspot X="-8694.362" Y="-2154.265" Z="157.2943" Radius="10" />
+		<Blackspot X="-8978.348" Y="-2009.766" Z="135.9593" Radius="15" />
 		<Blackspot X="-9159.795" Y="-2727.358" Z="88.68489" Radius="65" />
 		<Blackspot X="-11046.93" Y="900.192" Z="36.02385" Radius="5" />
 		<Blackspot X="-11129.44" Y="938.5775" Z="36.69337" Radius="5" />
@@ -94,8 +99,7 @@
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
-						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Moving to repair, vendor and mail." LogColor="Lime" />
-																			
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />																			
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Godric Rothgar" Entry="1213" Type="Repair" X="-8898.231" Y="-119.8379" Z="81.83279" />
@@ -105,8 +109,7 @@
 							<Mailboxes>
 								<Mailbox X="-8907.727" Y="-129.1731" Z="81.02128" />
 							</Mailboxes>
-						</SetMailbox>
-				
+						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
@@ -146,8 +149,7 @@
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
-						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Moving to repair, vendor and mail." LogColor="Lime" />						
-							
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />													
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Ot-Temmdo" Entry="56693" Type="Repair" X="-253.8247" Y="-2732.106" Z="-0.3309349" />
@@ -157,8 +159,7 @@
 							<Mailboxes>
 								<Mailbox X="-8907.727" Y="-129.1731" Z="81.02128" />
 							</Mailboxes>
-						</SetMailbox>
-				
+						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
@@ -213,8 +214,9 @@
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
-						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Moving to repair, vendor and mail." LogColor="Lime" />						
-							
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Corina Steele" Entry="54" Type="Repair" X="-9463.897" Y="94.90453" Z="58.32516" />
@@ -224,8 +226,7 @@
 							<Mailboxes>
 								<Mailbox X="-9455.414" Y="47.95955" Z="56.60914" />
 							</Mailboxes>
-						</SetMailbox>
-				
+						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
@@ -272,8 +273,9 @@
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
-						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Moving to repair, vendor and mail." LogColor="Lime" />						
-							
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Corina Steele" Entry="54" Type="Repair" X="-9463.897" Y="94.90453" Z="58.32516" />
@@ -283,8 +285,7 @@
 							<Mailboxes>
 								<Mailbox X="-9455.414" Y="47.95955" Z="56.60914" />
 							</Mailboxes>
-						</SetMailbox>
-				
+						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
@@ -331,8 +332,9 @@
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
-						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Moving to repair, vendor and mail." LogColor="Lime" />						
-							
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="William MacGregor" Entry="1668" Type="Repair" X="-10653.31" Y="996.5868" Z="32.87424" />
@@ -342,8 +344,7 @@
 							<Mailboxes>
 								<Mailbox X="-10641.61" Y="1156.384" Z="33.32554" />
 							</Mailboxes>
-						</SetMailbox>
-				
+						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
@@ -389,8 +390,9 @@
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
-						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Moving to repair, vendor and mail." LogColor="Lime" />						
-							
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="William MacGregor" Entry="1668" Type="Repair" X="-10653.31" Y="996.5868" Z="32.87424" />
@@ -400,8 +402,7 @@
 							<Mailboxes>
 								<Mailbox X="-10641.61" Y="1156.384" Z="33.32554" />
 							</Mailboxes>
-						</SetMailbox>
-				
+						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
@@ -450,8 +451,9 @@
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
-						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Moving to repair, vendor and mail." LogColor="Lime" />						
-							
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Kara Adams" Entry="793" Type="Repair" X="-9247.732" Y="-2234.377" Z="63.93403" />
@@ -461,8 +463,7 @@
 							<Mailboxes>
 								<Mailbox X="-9250.997" Y="-2144.485" Z="64.01987" />
 							</Mailboxes>
-						</SetMailbox>
-				
+						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
@@ -520,7 +521,7 @@
 									<Hotspot X="-8688.684" Y="-2241.953" Z="154.0114" />
 									<Hotspot X="-8693.383" Y="-2182.396" Z="156.5278" />
 									<Hotspot X="-8760.419" Y="-2259.266" Z="151.3942" />
-									<Hotspot X="-8819.688" Y="-2184.872" Z="138.845" />
+									
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 22)" GoalText="Farming" />
@@ -529,8 +530,9 @@
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
-						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Moving to repair, vendor and mail." LogColor="Lime" />						
-							
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Kara Adams" Entry="793" Type="Repair" X="-9247.732" Y="-2234.377" Z="63.93403" />
@@ -540,8 +542,7 @@
 							<Mailboxes>
 								<Mailbox X="-9250.997" Y="-2144.485" Z="64.01987" />
 							</Mailboxes>
-						</SetMailbox>
-				
+						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
