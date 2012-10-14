@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-Grind][85-90]_botanist_pearlfin-village-plus-zouchin-strand-plus-dread-wastes_v1.5</Name>
+	<Name>[QO-A-Grind][85-90][M+H]_botanist_pearlfin-village-plus-zouchin-strand-plus-dread-wastes</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -49,7 +49,7 @@
 		
 		<QuestOrder IgnoreCheckPoints="False" >
 		
-	    <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+	    <CustomBehavior File="UserSettings" MountDistance="30" LearnFlightPaths="True" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="True" HarvestMinerals="True" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="100" LogoutForInactivity="True" />
 		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
 						Text="This is a leveling profile. Includes mail and repair. The profile will auto set your hearthstone where it needs to be set. This profile combines three profiles, Pearlfin Village (85-86), Zouchin Strand (87-88) and Dread Waste (89-90). It will automaticall change zones at the appropriate level. I suggest you run my flight paths profile as soon as possible, if you haven't already done so or else you will die many deaths running to Dread Wastes." Title="WARNING" />
 						
@@ -177,7 +177,7 @@
 			
 			<!-- change profile to zouchin village  -->
 						
-			<While Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt;= 88" >		
+			
 				
 				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
 				<If Condition="Me.ZoneId == 1519" > 
@@ -224,9 +224,9 @@
 					</If>
 				</If>
 				
-				
+		<While Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt;= 88" >		
 										
-				<CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				<CustomBehavior File="UserSettings" MountDistance="30" LearnFlightPaths="True" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="True" HarvestMinerals="True" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="100" LogoutForInactivity="True" />
 					
                                              <!-- zouchin village  -->
 				<CustomBehavior File="Message" Text="Position check #4" LogColor="Lime" />			  
@@ -300,7 +300,7 @@
 			
 		                                       	<!-- change profiles dread wastes -->
 			
-			<While Condition="Me.Level &gt;= 89 &amp;&amp; Me.Level &lt; 90" >
+			<While Condition="Me.Level &gt; 88 &amp;&amp; Me.Level &lt;= 89" >
 			
 				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
 				<If Condition="Me.MapId == 870" >				 
@@ -328,7 +328,7 @@
 				</If>
 					
 																		<!-- dread wastes -->	
-				<CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				<CustomBehavior File="UserSettings" MountDistance="30" LearnFlightPaths="True" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="True" HarvestMinerals="True" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="50" LogoutForInactivity="True" />
 					
 				<CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />			  
 			    <If Condition="Me.ZoneId == 6138" >

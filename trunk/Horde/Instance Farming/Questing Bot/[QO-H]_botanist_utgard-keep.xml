@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A] Botanist Utgarde Keep v1.5</Name>
+	<Name>[QO-H} Botanist Utgarde Keep</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -58,18 +58,16 @@
 						<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth, repair and mail." LogColor="Yellow" />
 						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
-						<RunTo  X="1423.686" Y="-3232.819" Z="162.4644" />
 						<CustomBehavior File="Message" Text="Succesfully hearthed to Westguard, moving to the repair vendor, mailing and then flying back to Utgarde Keep." LogColor="Yellow" />						
 						
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Jhet Ironbeard" Entry="23908" Type="Repair" X="1399.233" Y="-3201.351" Z="160.9746" />
+								<Vendor Name="Orson Locke" Entry="24330" Type="Repair" X="418.2729" Y="-4653.623" Z="246.9195" />
 							</Vendors>
 						</SetVendor>
-						<RunTo  X="1423.686" Y="-3232.819" Z="162.4644" />
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="1417.15" Y="-3264.241" Z="165.0426" />
+								<Mailbox X="440.3733" Y="-4557.622" Z="245.5402" />
 							</Mailboxes>
 						</SetMailbox>
 			
@@ -82,7 +80,7 @@
 						<CustomBehavior File="ForcedDismount" />
 						<CustomBehavior File="Message" Text="I've reached the entrance to Utgarde Keep. Now running to the portal." LogColor="Yellow" />
 						<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />
-				    </If>
+				  </If>
 
 					<If Condition="Me.ZoneId != 495" > <!-- not in howling fjord -->
 						<If Condition="Me.ZoneId != 206" > <!-- not in utgarde keep -->

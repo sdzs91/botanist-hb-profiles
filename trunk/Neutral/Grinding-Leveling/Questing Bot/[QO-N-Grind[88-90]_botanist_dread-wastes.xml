@@ -57,7 +57,7 @@
 				<If Condition="Me.MapId == 870" >				 
 					<If Condition="Me.ZoneId != 6138" >
 						<CustomBehavior File="Message" Text="I am in Pandaria, but not in Dread Wastes running-flying to Klaxxi'vess." LogColor="Lime" />
-						<RunTo X="262.4349" Y="3149.81" Z="214.5022" DestName="Klaxxi'vess" />	
+							<RunTo X="263.1545" Y="3146.569" Z="214.5013" DestName="Klaxxi'vess" />		
 						<CustomBehavior File="Message" Text="I have reached Klaxxie'vess. " LogColor="Lime" />
 						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -70,7 +70,7 @@
 				<If Condition="Me.ZoneId == 6138" >
 					<If Condition="Me.X &lt; 75 || Me.X &gt; 310 || Me.Y &lt; 3095.547 || Me.Y &gt; 3349.551" >
 						<CustomBehavior File="Message" Text="I am in Dread Wastes, running-flying to Klaxxi'vess" LogColor="Lime" />
-						<RunTo X="262.4349" Y="3149.81" Z="214.5022" DestName="Klaxxi'vess" />	
+							<RunTo X="263.1545" Y="3146.569" Z="214.5013" DestName="Klaxxi'vess" />	
 						<CustomBehavior File="Message" Text="I have reached Klaxxie'vess. " LogColor="Lime" />
 						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="2000" />

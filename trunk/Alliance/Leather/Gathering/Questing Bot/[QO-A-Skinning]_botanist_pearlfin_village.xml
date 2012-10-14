@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-Grind[85-87+]_botanist_pearlfin_village_no-looting_v1.3</Name>
+	<Name>[QO-A-Grind[85-87+]_botanist_pearlfin_village</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -46,9 +46,9 @@
 		
 		<QuestOrder>
 		
-	    <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+	    <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="True" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
-						Text="This is a leveling profile. This profile will set your hearth in Pearlfin Village. Includes mail and repair. Looting is turned off by the profile to increase XP per hour. I suggest changing to another profile at leavel 87. 
+						Text="This is a leveling profile with skinning enabled. Most of the mobs are skinnable. This profile will set your hearth in Pearlfin Village. Includes mail and repair. I suggest changing to anoth profile at leavel 87 for a better yeild. 
 						Start the profile in Stormwind, Paw' Don Village or Pearlfin Village. The profile will farm the mobs outside of Pearlfin Village." Title="WARNING" />
 						
 			<While Condition="true" >
@@ -93,7 +93,7 @@
                               <!-- pearlfin village -->
 			    <CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />
 				<If Condition="Me.X &lt; -165 &amp;&amp; Me.Y &lt; -2471" >
-					<CustomBehavior File="Message" Text="I'm in or near Pearlfin Village. I'm not sure how I got here. Setting my hearth to be safe." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in or near Pearlfin Village. Moving to the farming area." LogColor="Lime" />
 					<CustomBehavior File="ForcedMount" MountType="Ground" />
 						<RunTo X="-220.0725" Y="-2707.749" Z="5.288094" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
@@ -102,7 +102,6 @@
 					<CustomBehavior File="WaitTimer" WaitTime="2000" />
 						<RunTo X="-263.0441" Y="-2699.548" Z="0.01589311" />
 					<CustomBehavior File="ForcedMount" MountType="Ground" />
-					<CustomBehavior File="Message" Text="Moving to the farming area." LogColor="Lime" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false"> 
 						<Hotspot X="-344.1688" Y="-2705.502" Z="0.7983278" />
 						<Hotspot X="-405.8037" Y="-2762.966" Z="9.950455" />

@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-GoTo]_botanist_pandaria-flight-paths_v1.0</Name>
+	<Name>[QO-N-GoTo]_botanist_pandaria-flight-paths</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -46,14 +46,90 @@
 		
 		<QuestOrder>
 		
-	    <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="True" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+	    <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" HarvestMinerals="False" HarvestHerbs="False" PullDistance="1"  KillBetweenHotspots="False"  FindVendorsAutomatically="True" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="40" ExpiryAction="InputEnabled_Continue" 
-						Text="You can run this profile as soon as your feet hit the ground in Pandaria. The runtime is approximately 45 minutes. There will be a few single mob encounters (until the last flight path, where the profile is designed for you to die approximately 3 times. This is anticipated for most classes). Which, should pose no problem for an 85. Especially if you have bought some MOP greens from the AH. This profile will learn the flight path's from Dawn's Blossom in the Jade Forest to Klaxxi'vess in Dread Wastes. Includes: using Whispercloud's Balloon to the Zouchin Village flight path. Then will hearth back to Dawn's Blosson and stop the bot. Start the profile anywhere in Jade Forest " Title="WARNING" />
+						Text="You can run this profile as soon as your feet hit the ground in Pandaria. The run time is approximately 45 minutes. There will be a few single mob encounters (until the last flight path, where the profile is designed for you to die approximately 3 times. This is anticipated for most classes). Which, should pose no problem for an 85. Especially if you have bought some MOP greens from the AH. This profile will learn the flight path's from Dawn's Blossom in the Jade Forest to Klaxxi'vess in Dread Wastes. Includes: using Whispercloud's Balloon to the Zouchin Village flight path. Then will hearth back to Dawn's Blosson and stop the bot. Start the profile anywhere in Jade Forest. The profile will need your assistance one time halfway through the cave after the 3rd flight master in Valley of the Four Winds." Title="WARNING" />
 						
 			<While Condition="true" >
 						
                               <!-- Jade Forest -->
-				
+				<If Condition="Me.ZoneId == 5785" >
+					<CustomBehavior File="Message" Text="Going to the innkeeper in Dawn's Blossom to set my Hearthstone." LogColor="Lime" />
+						<RunTo X="1599.626" Y="-1789.143" Z="260.9633" />
+						<RunTo X="1615.44" Y="-1743.081" Z="263.1203" />
+					<CustomBehavior File="Message" Text="Setting my Heartstone so I can hearth back when I am done.." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<CustomBehavior File="SetHearthstone" MobId="55809" X="1618.276" Y="-1740.436" Z="263.3519" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+						<RunTo X="1599.626" Y="-1789.143" Z="260.9633" />
+				</If>
+				<CustomBehavior File="Message" Text="Moving to the Pang's Stead flight master." LogColor="Lime" />
+					<RunTo X="523.0536" Y="-705.6851" Z="247.2467" />
+					<CustomBehavior File="Message" Text="Learning the Pang's Stead flight path." LogColor="Lime" />
+					<RunTo X="543.756" Y="-639.064" Z="257.5826" />
+					<CustomBehavior File="Message" Text="Moving to the Grassey Cline Flight Master." LogColor="Lime" />
+					<RunTo X="529.8577" Y="-595.139" Z="258.4104" />
+					<RunTo X="449.0804" Y="-291.4752" Z="204.8554" />
+					<CustomBehavior File="Message" Text="Learning the Grassey Cline flight path." LogColor="Lime" />
+					<RunTo X="457.3059" Y="-209.8931" Z="202.9876" />
+					<CustomBehavior File="Message" Text="Moving to the Tavern in the Mist Flight Master." LogColor="Lime" />
+					<RunTo X="495.2251" Y="-72.47599" Z="179.1802" /> <!-- stairs -->
+					<RunTo X="548.9385" Y="-95.44975" Z="220.1055" />
+					<RunTo X="586.0713" Y="-147.4507" Z="257.8523" />
+					<RunTo X="643.5919" Y="-153.6298" Z="305.6279" />
+					<RunTo X="724.4628" Y="-146.1159" Z="332.4592" />
+					<RunTo X="659.522" Y="-211.2781" Z="374.7611" />
+					<CustomBehavior File="Message" Text="Learning the Tavern in the Mist flight path." LogColor="Lime" />
+					<RunTo X="869.1459" Y="-196.1359" Z="416.6591" />
+					<CustomBehavior File="Message" Text="Moving to the Binan Village Flight Master." LogColor="Lime" />
+					<RunTo X="970.8969" Y="-104.355" Z="443.2514" />
+					<RunTo X="1082.924" Y="-128.2651" Z="475.4561" />  <!-- Boat -->
+					<RunTo X="1204.567" Y="-74.73999" Z="478.0556" />
+				<CustomBehavior File="MyCTM" X="1276.875" Y="-7.799084" Z="476.9055" />
+				<CustomBehavior File="MyCTM" X="1354.582" Y="30.76111" Z="476.2073" />
+				<CustomBehavior File="MyCTM" X="1403.508" Y="101.056" Z="484.9603" />
+				<CustomBehavior File="MyCTM" X="1430.676" Y="120.0005" Z="483.5252" />
+				<CustomBehavior File="MyCTM" X="1469.068" Y="128.8904" Z="480.9565" />
+				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="600" ExpiryAction="InputEnabled_Continue" 
+						Text="There is a group of mobs ahead that patrol sometimes. You will need to manually get past these mobs, exit the cave and learn the flight path from the Flight Trainer on the left. Then press continue while standing on the flight master. The profile will resume from there." Title="WARNING" />
+				<CustomBehavior File="ForcedMount" MountType="Ground" />
+				<CustomBehavior File="Message" Text="Moving to the Temple of the White Tiger Flight Master." LogColor="Lime" />
+				<CustomBehavior File="MyCTM" X="1706.246" Y="326.7131" Z="479.8691" />
+				<CustomBehavior File="MyCTM" X="1749.993" Y="323.4817" Z="478.0307" />
+				<CustomBehavior File="MyCTM" X="1804.188" Y="333.4225" Z="478.1265" />
+				<CustomBehavior File="MyCTM" X="1829.228" Y="375.8941" Z="481.8001" />					
+				<CustomBehavior File="MyCTM" X="1880.574" Y="440.2797" Z="483.497" />
+				<CustomBehavior File="MyCTM" X="1905.626" Y="500.8022" Z="483.548" />
+				<CustomBehavior File="MyCTM" X="2023.542" Y="577.8755" Z="482.132" />
+				<CustomBehavior File="MyCTM" X="1975.913" Y="820.6547" Z="488.3343" />
+					<RunTo X="2047.665" Y="920.954" Z="489.6747" />
+					<RunTo X="2048.81" Y="958.788" Z="491.046" />
+					<RunTo X="2104.565" Y="978.2137" Z="493.7843" />
+					<RunTo X="2164.676" Y="988.0469" Z="495.2032" />
+					<RunTo X="2180.963" Y="1005.032" Z="495.2797" />
+					<RunTo X="2179.942" Y="1059.61" Z="496.1229" />
+					<RunTo X="2214.773" Y="1105.303" Z="492.6537" />
+					<RunTo X="2224.901" Y="1141.507" Z="493.4811" />
+					<RunTo X="2279.712" Y="1164.666" Z="494.4517" />
+					<RunTo X="2360.929" Y="1028.239" Z="499.2063" />
+				<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+					<Hotspot X="2463.322" Y="857.7686" Z="509.5807" />
+					<Hotspot X="2611.717" Y="746.4107" Z="527.2924" />
+				</CustomBehavior>					
+					<RunTo X="2725.753" Y="754.9287" Z="539.516" />
+					<RunTo X="2830.199" Y="697.6251" Z="543.8558" />
+					<RunTo X="2998.027" Y="589.8729" Z="517.5172" />
+					<RunTo X="3137.625" Y="654.4998" Z="501.825" />
+					<RunTo X="3238.562" Y="644.8422" Z="533.9927" />
+					<RunTo X="3240.154" Y="572.7864" Z="543.671" />
+					<RunTo X="3265.002" Y="551.8066" Z="545.67" />
+					<RunTo X="3375.499" Y="504.0934" Z="578.2316" />
+					<RunTo X="3530.107" Y="410.4836" Z="586.9307" />
+					<RunTo X="3687.777" Y="371.5023" Z="596.2034" />
+					<RunTo X="3655.537" Y="415.4949" Z="607.5545" />
+					<RunTo X="3661.387" Y="469.5872" Z="635.1907" />
+					<RunTo X="3625.176" Y="505.2101" Z="630.7534" />
+					<RunTo X="3587.221" Y="585.428" Z="615.3387" />
 				<CustomBehavior File="Message" Text="Learning the Temple of the White Tiger flight path." LogColor="Lime" />
 					<RunTo X="3489.453" Y="681.3969" Z="609.3103" />
 				<CustomBehavior File="Message" Text="Moving to the Zouchin Village Flight Master." LogColor="Lime" />
@@ -133,15 +209,19 @@
 					<RunTo X="3063.016" Y="1190.918" Z="654.387" />
 				<CustomBehavior File="Message" Text="Learning the One Keg flight path." LogColor="Lime" />
 					<RunTo X="3126.358" Y="1224.912" Z="654.2394" />
-					<RunTo X="3040.372" Y="1264.113" Z="654.078" />
+					<RunTo X="3067.64" Y="1227.253" Z="654.0538" />
 				<CustomBehavior File="Message" Text="Moving to the Kota Basecamp Flight Master." LogColor="Lime" />
-					<RunTo X="2981.631" Y="1331.051" Z="643.3828" />
-					<RunTo X="2933.372" Y="1384.649" Z="649.5439" />
-					<RunTo X="2877.372" Y="1391.034" Z="641.6714" />
-					<RunTo X="2820.286" Y="1453.61" Z="641.8083" />
-					<RunTo X="2841.334" Y="1505.21" Z="641.5827" />
-					<RunTo X="2827.708" Y="1541.813" Z="644.7715" />
-					<RunTo X="2804.485" Y="1568.737" Z="653.3867" />
+					<RunTo X="3060.75" Y="1246.378" Z="654.5537" />
+					<RunTo X="3029.408" Y="1264.695" Z="651.2271" />
+					<RunTo X="2940.314" Y="1263.237" Z="642.0521" />
+					<RunTo X="2867.347" Y="1262.756" Z="641.4782" />
+					<RunTo X="2850.161" Y="1275.657" Z="642.2397" />
+					<RunTo X="2839.62" Y="1348.637" Z="643.6693" />
+					<RunTo X="2836.987" Y="1375.603" Z="643.7993" />
+					<RunTo X="2828.787" Y="1381.271" Z="643.8513" />
+					<RunTo X="2827.721" Y="1444.915" Z="641.809" />
+					<RunTo X="2834.67" Y="1491.008" Z="641.7127" />
+					<RunTo X="2806.517" Y="1559.689" Z="651.7041" />
 					<RunTo X="2799.635" Y="1614.661" Z="648.608" />
 					<RunTo X="2817.91" Y="1631.168" Z="643.0767" />
 					<RunTo X="2794.908" Y="1670.515" Z="642.0393" />

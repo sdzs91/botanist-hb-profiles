@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-Grind][flying](mote-of-spirit_skyshard_ancient-guo-lai-cache-key)_botanist_ruins-of-gou-lai_v1.0</Name>
+	<Name>[QO-N-Grind][Flying][mote-of-spirit]_botanist_klaxxi'vess</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -48,7 +48,7 @@
 		<QuestOrder>
 		
 	    
-		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will farm the Shao-Tien Precursors in Vale of the Eternal Blossoms for Motes of Spirit, Ancient Guo-Lai Cache Keys and Shyshards. The profile includes setting your hearth, mailing, vendor and repair. This profile will run indefinitely, be sure to set an alt to mail to in the settings and tools tab of Honorbuddy. Start the profile anywhere in Pandaria." Title="WARNING" />
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will farm the Yaks south of Klaxxi'vess for Mote's of Harmony. The profile includes setting your hearth, mailing, vendor and repair. This profile will run indefinitely, be sure to set an alt to mail to in the settings and tools tab of Honorbuddy." Title="WARNING" />
 						
 			
 			
@@ -87,29 +87,27 @@
 					<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
 					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="FlyTo" X="1183.979" Y="1917.854" Z="345.6529" />						
+					<CustomBehavior File="FlyTo" X="-974.8799" Y="3417.588" Z="53.22198" />						
 					<CustomBehavior File="ForcedDismount" />
 					</If>
 				</If>	
 
 				<CustomBehavior File="Message" Text="Position check #4" LogColor="Lime" />				
-				<If Condition="Me.ZoneId == 5840" >
-					<If Condition="Me.X &lt; 1200 &amp;&amp; Me.X &gt; 1150 &amp;&amp; Me.Y &gt; 1900 &amp;&amp; Me.Y &lt; 1950" >
+				<If Condition="Me.ZoneId == 6138" >
+					<If Condition="Me.X &lt; -950 &amp;&amp; Me.X &gt; -1000 &amp;&amp; Me.Y &gt; 3390 &amp;&amp; Me.Y &lt; 3430" >
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
 						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 						<CustomBehavior File="RunMacro" Macro="/sort bags" />
 							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >	
 								<SetGrindArea><GrindArea>
-								<Factions>2479</Factions>
+								<Factions>2136</Factions>
 									<Hotspots>
-										<Hotspot X="1264.002" Y="1908.462" Z="350.3524" />
-										<Hotspot X="1206.18" Y="1784.589" Z="346.0247" />
-										<Hotspot X="1313.531" Y="1742.037" Z="348.441" />
-										<Hotspot X="1434.928" Y="1627.857" Z="358.1226" />
-										<Hotspot X="1451.709" Y="1698.578" Z="347.5736" />
-										<Hotspot X="1351.06" Y="1732.425" Z="344.0704" />
-										<Hotspot X="1327.911" Y="1833.984" Z="348.8209" />
-										<Hotspot X="1286.273" Y="1893.26" Z="350.2992" />										
+										<Hotspot X="-946.674" Y="3342.101" Z="53.83543" />
+										<Hotspot X="-1023.441" Y="3450.41" Z="59.03754" />
+										<Hotspot X="-1123.53" Y="3444.432" Z="81.10793" />
+										<Hotspot X="-1181.975" Y="3332.206" Z="72.91269" />
+										<Hotspot X="-1140.162" Y="3304.114" Z="73.51857" />
+										<Hotspot X="-1044.398" Y="3320.828" Z="55.18684" />										
 									</Hotspots>
 								</GrindArea></SetGrindArea>					
 								<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30)" GoalText="Farming" />

@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-Grind][Flying][mote-of-spirit]_botanist_klaxxi'vess_v1.0</Name>
+	<Name>[QO-N-Grind][Flying][raw-turtle-meat]_botanist_the-briny-muck</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -24,9 +24,11 @@
 	<AvoidMobs>
 		<Mob Name="Pengsong" Entry="66587" />
 		<Mob Name="Amberscale Basilisk" Entry="66188" />
+		<Mob Name="Kyparite Pulverizer" Entry="65432" /> 
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="-829.0433" Y="4073.56" Z="0.1786803" Radius="40" />
 	</Blackspots>
 
 	<Mailboxes>
@@ -48,7 +50,7 @@
 		<QuestOrder>
 		
 	    
-		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will farm the Yaks south of Klaxxi'vess for Mote's of Harmony. The profile includes setting your hearth, mailing, vendor and repair. This profile will run indefinitely, be sure to set an alt to mail to in the settings and tools tab of Honorbuddy." Title="WARNING" />
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="Start the profile anywhere in Pandaria. This profile will farm the Brineshell Snapper's in The Briny Muck. The profile includes setting your hearth, mailing, vendor and repair. This profile will run indefinitely, be sure to set an alt to mail to in the settings and tools tab of Honorbuddy." Title="WARNING" />
 						
 			
 			
@@ -81,33 +83,48 @@
 										
 				<CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 					
-                                             <!-- dawns blossom  -->
+                                             <!-- klaxxi'vess  -->
 				<CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />			  
 			    <If Condition="Me.ZoneId == 6138" >
 					<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
 					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="FlyTo" X="-974.8799" Y="3417.588" Z="53.22198" />						
+					<CustomBehavior File="FlyTo" X="-903.7949" Y="3710.439" Z="-0.5413861" />						
 					<CustomBehavior File="ForcedDismount" />
 					</If>
 				</If>	
 
 				<CustomBehavior File="Message" Text="Position check #4" LogColor="Lime" />				
 				<If Condition="Me.ZoneId == 6138" >
-					<If Condition="Me.X &lt; -950 &amp;&amp; Me.X &gt; -1000 &amp;&amp; Me.Y &gt; 3390 &amp;&amp; Me.Y &lt; 3430" >
+					<If Condition="Me.X &lt; -885 &amp;&amp; Me.X &gt; -950 &amp;&amp; Me.Y &gt; 3690 &amp;&amp; Me.Y &lt; 3730" >
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
 						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 						<CustomBehavior File="RunMacro" Macro="/sort bags" />
-							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >	
+							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 								<SetGrindArea><GrindArea>
-								<Factions>2136</Factions>
+								<Factions>2575</Factions>
 									<Hotspots>
-										<Hotspot X="-946.674" Y="3342.101" Z="53.83543" />
-										<Hotspot X="-1023.441" Y="3450.41" Z="59.03754" />
-										<Hotspot X="-1123.53" Y="3444.432" Z="81.10793" />
-										<Hotspot X="-1181.975" Y="3332.206" Z="72.91269" />
-										<Hotspot X="-1140.162" Y="3304.114" Z="73.51857" />
-										<Hotspot X="-1044.398" Y="3320.828" Z="55.18684" />										
+										<Hotspot X="-916.9211" Y="3722.069" Z="-0.6991957" />
+										<Hotspot X="-777.6641" Y="3729.515" Z="-0.3817733" />
+										<Hotspot X="-732.2056" Y="3827.734" Z="-0.3812571" />
+										<Hotspot X="-655.1171" Y="3868.551" Z="-0.3817003" />
+										<Hotspot X="-740.6174" Y="4002.48" Z="0.6664352" />
+										<Hotspot X="-781.0639" Y="4095.332" Z="0.6700593" />
+										<Hotspot X="-766.515" Y="4188.212" Z="0.6330006" />
+										<Hotspot X="-815.949" Y="4260.937" Z="-0.1489724" />
+										<Hotspot X="-766.5777" Y="4364.6" Z="-0.07039881" />
+										<Hotspot X="-876.9835" Y="4523.124" Z="-0.3817015" />
+										<Hotspot X="-929.9996" Y="4536.943" Z="-0.3165464" />
+										<Hotspot X="-937.5903" Y="4401.295" Z="-0.3677889" />
+										<Hotspot X="-977.1068" Y="4305.625" Z="-1.289493" />
+										<Hotspot X="-942.3839" Y="4228.788" Z="-0.5044218" />
+										<Hotspot X="-973.41" Y="4167.517" Z="-0.4058746" />
+										<Hotspot X="-980.4118" Y="4069.807" Z="0.4365217" />
+										<Hotspot X="-1056.502" Y="3947.981" Z="0.5994486" />
+										<Hotspot X="-1145.614" Y="3949.017" Z="0.007299513" />
+										<Hotspot X="-1074.43" Y="3862.046" Z="-0.3813841" />
+										<Hotspot X="-980.9646" Y="3786.275" Z="-0.3817062" />
+										<Hotspot X="-948.8624" Y="3746.499" Z="-0.734406" />										
 									</Hotspots>
 								</GrindArea></SetGrindArea>					
 								<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30)" GoalText="Farming" />

@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-H] Botanist Blackrock Caverns Trash Farming v1.0</Name>
+	<Name>[QO-A} Botanist Blackrock Caverns Trash Farming</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -58,27 +58,26 @@
 		 <While Condition="true" >
 		 
 		                                             <!-- My vendor/hearth check -->
-		<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth,repair and mail." LogColor="Yellow" />
-			
-         <If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.5)" > <!-- Will go vendor/repair if needed -->
-			<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth,repair and mail." LogColor="Yellow" />
-            <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-            <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
-            <CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor." LogColor="Yellow" />						
-			<CustomBehavior File="FlyTo" X="-10408.5" Y="-3267.102" Z="20.38218" />						
-			<SetVendor>
-				<Vendors>
-					<Vendor Name="Gharash" Entry="8176" Type="Repair" X="-10406.97" Y="-3265.748" Z="21.892" />
-				</Vendors>
-			</SetVendor>						
-			<SetMailbox>
-				<Mailboxes>
-					<Mailbox X="-10461.58" Y="-3265.349" Z="20.17867" />
-				</Mailboxes>
-			</SetMailbox>
-			
-			<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />			
-        </If>		
+                <CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Yellow" />				
+		        <If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.5)" > <!-- Will go vendor/repair if needed -->
+					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth,repair and mail." LogColor="Yellow" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor." LogColor="Yellow" />						
+					<CustomBehavior File="FlyTo" X="-8424.836" Y="623.9324" Z="95.65045" />					
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Kaita Deepforge" Entry="5512" Type="Repair" X="-8432.998" Y="623.7123" Z="95.39394" />
+						</Vendors>
+					</SetVendor>
+					<RunTo X="-8423.765" Y="626.4225" Z="95.70643" />
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="-8362.001" Y="617.8207" Z="95.46107" />
+						</Mailboxes>
+					</SetMailbox>			
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+                </If>
 		 
 		 		<If Condition="Me.ZoneId != 4926" > <!--not in Blackrock Caverns -->
 					<If Condition="Me.ZoneId != 25" > <!--not in Blackrock Mountain -->
