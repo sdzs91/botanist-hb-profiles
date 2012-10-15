@@ -43,7 +43,7 @@
 	
 				<If Condition="Me.Level &gt;= 31" > 
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
-					<CustomBehavior File="Message" Text="Loadin....QO-A-Next-Gen-Grind-][85-90]_botanist_pangaea" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Loading....QO-A-Next-Gen-Grind-][85-90]_botanist_pangaea" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />	
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][85-90]_botanist_pangaea" />
 				</If>
