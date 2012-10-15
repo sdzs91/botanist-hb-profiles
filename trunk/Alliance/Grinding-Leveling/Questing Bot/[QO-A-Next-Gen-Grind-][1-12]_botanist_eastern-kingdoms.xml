@@ -68,7 +68,14 @@
 	<ClearVendor /><ClearMailbox />
 		
 	<QuestOrder IgnoreCheckPoints="False" >
-		
+	
+	
+				<If Condition="Me.Level &gt;= 12" >
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
+					<CustomBehavior File="Message" Text="Loadin....[QO-A-Next-Gen-Grind-][12-58]_botanist_eastern-kingdoms" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][12-58]_botanist_eastern-kingdoms" />
+				</If>
 				
 				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
 						Text="This WILL BE a 1-90 fully afkable leveling profile. It currently levels 1-31. It will consist of 6 profiles which will automatically load
