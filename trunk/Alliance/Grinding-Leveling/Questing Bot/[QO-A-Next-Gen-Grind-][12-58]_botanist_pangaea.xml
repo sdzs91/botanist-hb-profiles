@@ -552,10 +552,8 @@
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Booty Bay in The Cape of Stranglethorn." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				<CustomBehavior File="Message" Text="Since there is no mail box in Northern Stranglethorn, I'll set my hearthstone in Darkshire for now." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Booty Bay." LogColor="Lime" />														
-					<RunTo X="-10515.98" Y="-1163.506" Z="28.10034" />
+					<RunTo X="-14458.77" Y="492.9921" Z="15.12531" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
