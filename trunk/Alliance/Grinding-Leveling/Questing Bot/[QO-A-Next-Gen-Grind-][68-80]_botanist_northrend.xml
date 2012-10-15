@@ -1,0 +1,74 @@
+<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-Next-Gen-Grind-][68-80]_botanist_northrend</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>0.1</MinDurability>
+	<MinFreeBagSlots>1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites></TargetElites>
+	
+	<AvoidMobs>
+		<AvoidMob Name="Training Dummy" Entry="44548" />		 
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-12701.32" Y="-467.7607" Z="30.16452" Radius="30" />
+	</Blackspots>
+
+	<Mailboxes></Mailboxes>
+ 
+	<Vendors></Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems></ProtectedItems>
+	
+	<ClearVendor /><ClearMailbox />
+		
+	<QuestOrder IgnoreCheckPoints="False" >
+		
+				
+				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
+						Text="This WILL BE a 1-90 fully afkable leveling profile. It currently levels 1-31. It will consist of 6 profiles which will automatically load
+						in sequential order as needed. The user will be resposible for insuring that the toon has proper gear for it's current level, by what ever means. 
+						The profile will control all settings except food and water. Those two things will be user controled and the users resposibility. The profile will
+						train riding skill up to Expert Riding provided there is at least 250 gold in you bags." Title="WARNING" />
+						
+							
+						
+				<If Condition="Me.Level &gt;= 58 " >
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				
+					<CustomBehavior File="Message" Text="Checking profile rotation. Profile #2 [QO-A-Next-Gen-Grind-][58-68]_outlands ." LogColor="Lime" />						
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				</If>
+				
+				
+			
+
+
+		
+		
+			
+		                     	<!-- stop the bot -->
+								
+				<CustomBehavior File="Message" Text="Loading...[QO-A-Next-Gen-Grind-][68-80]_botanist_northrend level." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="5000" />				
+				<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][80-85]_botanist_cata" />
+				
+	</QuestOrder >			
+  
+ </HBProfile>
