@@ -65,7 +65,7 @@
 			
 		                     	<!-- change profile -->
 								
-				<If Condition="Me.Level == 31" > 
+				<If Condition="Me.Level &gt;= 31" >  
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
 					<CustomBehavior File="Message" Text="Loadin....[QO-A-Next-Gen-Grind-][80-85]_botanist_cata" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />						

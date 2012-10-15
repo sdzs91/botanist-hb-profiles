@@ -65,7 +65,7 @@
 			
 		                     	<!-- stop the bot -->
 								
-				<If Condition="Me.Level == 31" > 
+				<If Condition="Me.Level &gt;= 31" > 
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
 					<CustomBehavior File="Message" Text="Loadin....[QO-A-Next-Gen-Grind-][68-80]_botanist_northrend" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				

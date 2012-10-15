@@ -546,7 +546,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 			     
-				<If Condition="Me.Level == 31" > 
+				<If Condition="Me.Level &gt;= 31" > 
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
 					<CustomBehavior File="Message" Text="Loadin....QO-A-Next-Gen-Grind-][58-68]_botanist_outlands" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />	

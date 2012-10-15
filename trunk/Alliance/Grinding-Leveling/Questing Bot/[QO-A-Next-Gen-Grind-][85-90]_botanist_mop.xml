@@ -64,7 +64,7 @@
 		
 			
 		                     	<!-- stop the bot -->
-				<If Condition="Me.Level == 31" > 
+				<If Condition="Me.Level &gt;= 31" >  
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 		
 					<CustomBehavior File="Message" Text="Test complete. Stopping the bot." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				
