@@ -40,7 +40,6 @@
 		<Item Name="Elementium Lockbox" Entry="68729" />	
 	</ProtectedItems>
 	
-
 		<ClearVendor />
 		<ClearMailbox />
 		
@@ -48,7 +47,7 @@
 		
 	    <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" HarvestMinerals="False" HarvestHerbs="False" PullDistance="1"  KillBetweenHotspots="False"  FindVendorsAutomatically="True" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="40" ExpiryAction="InputEnabled_Continue" 
-						Text="You can run this profile as soon as your feet hit the ground in Pandaria. The run time is approximately 45 minutes. There will be a few single mob encounters (until the last flight path, where the profile is designed for you to die approximately 3 times. This is anticipated for most classes). Which, should pose no problem for an 85. Especially if you have bought some MOP greens from the AH. This profile will learn the flight path's from Dawn's Blossom in the Jade Forest to Klaxxi'vess in Dread Wastes. Includes: using Whispercloud's Balloon to the Zouchin Village flight path. Then will hearth back to Dawn's Blosson and stop the bot. Start the profile anywhere in Jade Forest. The profile will need your assistance one time halfway through the cave after the 3rd flight master in Valley of the Four Winds." Title="WARNING" />
+						Text="Don't go too far away. This profile will require your assistance once it reaches the Hidden Stairs in Valley of the Four Winds. You can run this profile as soon as your feet hit the ground in Pandaria. The run time is approximately 45 minutes. There will be a few single mob encounters (until the last flight path, where the profile is designed for you to die approximately 3 times. This is anticipated for most classes). Which, should pose no problem for an 85. Especially if you have bought some MOP greens from the AH. This profile will learn the flight path's from Dawn's Blossom in the Jade Forest to Klaxxi'vess in Dread Wastes. Includes: using Whispercloud's Balloon to the Zouchin Village flight path. Then will hearth back to Dawn's Blosson and stop the bot. Start the profile anywhere in Jade Forest. The profile will need your assistance one time halfway through the cave after the 3rd flight master in Valley of the Four Winds." Title="WARNING" />
 						
 			<While Condition="true" >
 						
