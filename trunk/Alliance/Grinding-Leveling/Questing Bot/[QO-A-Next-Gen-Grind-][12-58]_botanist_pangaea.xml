@@ -592,12 +592,12 @@
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Morg Gnarltree" Entry="226" Type="Repair" X="-10590.63" Y="-1156.782" Z="30.05962" />
+								<Vendor Name="Jutak" Entry="2843" Type="Repair" X="-14467.77" Y="468.375" Z="15.02453" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-10550.62" Y="-1157.743" Z="27.84249" />
+								<Mailbox X="-14420.45" Y="515.9802" Z="4.985206" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
