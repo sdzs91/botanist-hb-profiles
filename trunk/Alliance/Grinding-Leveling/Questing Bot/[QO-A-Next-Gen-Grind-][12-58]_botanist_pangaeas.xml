@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-Next-Gen-Grind-][1-60][Non-Zone-Locked-Races]_botanist_eastern-kingdoms</Name>
+	<Name>[QO-A-Next-Gen-Grind-][12-58]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -71,9 +71,9 @@
 	
 				<If Condition="Me.Level &gt;= 31" > 
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
-					<CustomBehavior File="Message" Text="Loadin....QO-A-Next-Gen-Grind-][58-68]_botanist_outlands" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Loadin....QO-A-Next-Gen-Grind-][58-68]_botanist_pangaea" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />	
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][58-68]_botanist_outlands" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][58-68]_botanist_pangaea" />
 				</If>
 		
 				
@@ -555,9 +555,9 @@
 			     
 				<If Condition="Me.Level &gt;= 31" > 
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
-					<CustomBehavior File="Message" Text="Loadin....QO-A-Next-Gen-Grind-][58-68]_botanist_outlands" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Loadin....QO-A-Next-Gen-Grind-][58-68]_botanist_pangaea" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />	
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][58-68]_botanist_outlands" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][58-68]_botanist_pangaea" />
 				</If>
 				
 	</QuestOrder >			

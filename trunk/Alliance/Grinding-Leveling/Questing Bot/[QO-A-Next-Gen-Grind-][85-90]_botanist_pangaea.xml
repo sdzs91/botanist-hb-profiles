@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-Next-Gen-Grind-][68-80]_botanist_northrend</Name>
+	<Name>[QO-A-Next-Gen-Grind-][85-90]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -40,13 +40,6 @@
 	<ClearVendor /><ClearMailbox />
 		
 	<QuestOrder IgnoreCheckPoints="False" >
-	
-				<If Condition="Me.Level &gt;= 31" > 
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
-					<CustomBehavior File="Message" Text="Loadin....QO-A-Next-Gen-Grind-][58-68]_botanist_outlands" LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />	
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][58-68]_botanist_outlands" />
-				</If>
 		
 				
 				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
@@ -59,7 +52,7 @@
 						
 				<If Condition="Me.Level &gt;= 58 " >
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				
-					<CustomBehavior File="Message" Text="Checking profile rotation. Profile #2 [QO-A-Next-Gen-Grind-][58-68]_outlands ." LogColor="Lime" />						
+					<CustomBehavior File="Message" Text="Checking profile rotation. Profile #6 [QO-A-Next-Gen-Grind-][85-90]_pangaea." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 				
@@ -70,14 +63,14 @@
 		
 		
 			
-		                     	<!-- change profile -->
-								
+		                     	<!-- stop the bot -->
 				<If Condition="Me.Level &gt;= 31" >  
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
-					<CustomBehavior File="Message" Text="Loadin....[QO-A-Next-Gen-Grind-][80-85]_botanist_cata" LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />						
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][80-85]_botanist_cata" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 		
+					<CustomBehavior File="Message" Text="Test complete. Stopping the bot." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				
+					<CustomBehavior File="UserSettings" StopBot="true" />
 				</If>
+				
 	</QuestOrder >			
   
  </HBProfile>

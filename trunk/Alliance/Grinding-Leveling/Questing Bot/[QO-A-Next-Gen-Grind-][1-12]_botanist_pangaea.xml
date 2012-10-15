@@ -72,9 +72,9 @@
 	
 				<If Condition="Me.Level &gt;= 12" >
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
-					<CustomBehavior File="Message" Text="Loadin....[QO-A-Next-Gen-Grind-][12-58]_botanist_eastern-kingdoms" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Loadin....[QO-A-Next-Gen-Grind-][12-58]_botanist_pangaea" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][12-58]_botanist_eastern-kingdoms" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][12-58]_botanist_pangaea" />
 				</If>
 				
 				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
@@ -310,9 +310,9 @@
 				
 				 <If Condition="Me.Level &gt;= 12" >
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
-					<CustomBehavior File="Message" Text="Loadin....[QO-A-Next-Gen-Grind-][12-58]_botanist_eastern-kingdoms" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Loadin....[QO-A-Next-Gen-Grind-][12-58]_botanist_pangaea" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][12-58]_botanist_eastern-kingdoms" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][12-58]_botanist_pangaea" />
 				</If>
 				
 	</QuestOrder >			
