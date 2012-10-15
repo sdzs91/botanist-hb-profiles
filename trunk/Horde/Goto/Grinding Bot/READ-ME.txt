@@ -1,6 +1,6 @@
 1° Open you WoW
 2° Open your HB and link it to your WoW
-3° Select " Questing " 
+3° Select " Grinding Bot " 
 4° Select " Load Profile " and select the desire profile from my package
 5° Hit " Start "
 6° After a few seconds, (with the newer profiles), you will get a Pop-Up windows with a count down. Please read it carefully, as you will get all explanations from the profile itself.
