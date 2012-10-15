@@ -545,8 +545,13 @@
 					<CustomBehavior File="Message" Text="I am in the 31 to 33 bracket, changing to a new farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
-			
-				<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][58-68]_botanist_outlands" />
+			     
+				<If Condition="Me.Level == 31" > 
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
+					<CustomBehavior File="Message" Text="Loadin....QO-A-Next-Gen-Grind-][58-68]_botanist_outlands" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />	
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][58-68]_botanist_outlands" />
+				</If>
 				
 	</QuestOrder >			
   

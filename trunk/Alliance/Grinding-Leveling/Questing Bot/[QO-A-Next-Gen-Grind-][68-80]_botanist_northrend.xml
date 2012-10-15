@@ -63,12 +63,14 @@
 		
 		
 			
-		                     	<!-- stop the bot -->
+		                     	<!-- change profile -->
 								
-				<CustomBehavior File="Message" Text="Loading...[QO-A-Next-Gen-Grind-][68-80]_botanist_northrend level." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />				
-				<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][80-85]_botanist_cata" />
-				
+				<If Condition="Me.Level == 31" > 
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
+					<CustomBehavior File="Message" Text="Loadin....[QO-A-Next-Gen-Grind-][80-85]_botanist_cata" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />						
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][80-85]_botanist_cata" />
+				</If>
 	</QuestOrder >			
   
  </HBProfile>

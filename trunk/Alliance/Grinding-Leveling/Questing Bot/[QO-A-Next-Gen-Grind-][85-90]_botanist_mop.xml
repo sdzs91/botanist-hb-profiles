@@ -64,10 +64,12 @@
 		
 			
 		                     	<!-- stop the bot -->
-								
-				<CustomBehavior File="Message" Text="Test complete. Stopping the bot." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />				
-				<CustomBehavior File="UserSettings" StopBot="true" />
+				<If Condition="Me.Level == 31" > 
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 		
+					<CustomBehavior File="Message" Text="Test complete. Stopping the bot." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				
+					<CustomBehavior File="UserSettings" StopBot="true" />
+				</If>
 				
 	</QuestOrder >			
   

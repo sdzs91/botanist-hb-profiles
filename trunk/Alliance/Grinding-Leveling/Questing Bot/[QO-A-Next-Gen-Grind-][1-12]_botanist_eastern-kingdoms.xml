@@ -301,9 +301,12 @@
 					
 		</While>				
 				
-				 <If Condition="Me.Level == 12" >				
-					
-				<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][12-58]_botanist_eastern-kingdoms" />
+				 <If Condition="Me.Level == 12" >
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
+					<CustomBehavior File="Message" Text="Loadin....[QO-A-Next-Gen-Grind-][12-58]_botanist_eastern-kingdoms" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][12-58]_botanist_eastern-kingdoms" />
+				</If>
 				
 	</QuestOrder >			
   
