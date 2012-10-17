@@ -118,7 +118,11 @@
 				
 				<If Condition="Me.ZoneId == 139 &amp;&amp; Me.MapId != 329" >
 					<If Condition="Me.X &gt; 2227.332 &amp;&amp; Me.X &lt; 2378.066 &amp;&amp; Me.Y &gt; -5427.272 &amp;&amp; Me.Y &lt; -5237.988" >
-						<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->				
+						<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->
+							<CustomBehavior File="WaitTimer" WaitTime="3000" />					
+							<CustomBehavior File="Message" Text="Deleting the garbage from my bags." LogColor="Lime" />
+							<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285" />
+							<CustomBehavior File="WaitTimer" WaitTime="5000" />
 							<CustomBehavior File="Message" Text="Checking my bag space and gear durability." LogColor="Lime" />
 							<CustomBehavior File="WaitTimer" WaitTime="2000" />
 							<CustomBehavior File="Message" Text="I have detected that I have less than 25 empty bag slots or that my gear is about to break. I'm going to hearth,repair and mail." LogColor="Lime" />
@@ -168,14 +172,20 @@
 							<CustomBehavior File="MyCTM" X="3236.772" Y="-4056.048" Z="108.4669" />
 							<CustomBehavior File="WaitTimer" WaitTime="15000" />
 						</If>
+				</If>
 				
 				<If Condition="Me.MapId == 329">
-					<CustomBehavior File="Message" Text="I have entered Stratholme." LogColor="Lime" />						
+					<CustomBehavior File="Message" Text="I have entered Stratholme." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />					
+					<CustomBehavior File="Message" Text="Deleting the garbage from my bags." LogColor="Lime" />
+					<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 					<RunTo X="3596.515" Y="-3654.521" Z="138.5111" />
 					<RunTo X="3622.403" Y="-3643.406" Z="138.51" />
 							
 						
-						
+					<CustomBehavior File="Message" Text="Opening the gate." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
 					<CustomBehavior File="InteractWith" MobId="175368" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3624.90845" Y="-3642.1626" Z="138.445114" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="3628.536" Y="-3640.215" Z="138.5518" />
@@ -526,31 +536,37 @@
 					<CustomBehavior File="Message" Text="Stopping the bot." LogColor="Lime" />
 					<CustomBehavior File="UserSettings" StopBot="true" />
 				</If>
-												
-				<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->
-					<CustomBehavior File="Message" Text="Deathcharger's Reins didn't drop." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="3000" />
-					<CustomBehavior File="Message" Text="Checking my bag space and gear durability." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="3000" />
-					<CustomBehavior File="Message" Text="I have detected that I have less than 25 empty bag slots or that my gear is about to break. I'm going to hearth,repair and mail. Then I'll run the dungeon again" LogColor="Lime" />
-					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
-					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor." LogColor="Lime" />												
-					<SetVendor>
-						<Vendors>
-							<Vendor Name="Vincent Randolph" Entry="47286" Type="Repair" X="2257.292" Y="-5293.229" Z="82.14259" />
-						</Vendors>
-					</SetVendor>						
-					<SetMailbox>
-						<Mailboxes>
-							<Mailbox X="2290.367" Y="-5320.899" Z="90.15194" />
-						</Mailboxes>
-					</SetMailbox>			
-					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
-				</If>
 				
 				<If Condition="Me.MapId == 329" >
 					<CustomBehavior File="Message" Text="Deathcharger's Reins didn't drop." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="Message" Text="Deleting the garbage from my bags." LogColor="Lime" />
+					<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="Message" Text="Checking my bag space and gear durability." LogColor="Lime" />
+					
+					<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->						
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<CustomBehavior File="Message" Text="I have detected that I have less than 25 empty bag slots or that my gear is about to break. I'm going to hearth,repair and mail. Then I'll run the dungeon again" LogColor="Lime" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor." LogColor="Lime" />												
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Vincent Randolph" Entry="47286" Type="Repair" X="2257.292" Y="-5293.229" Z="82.14259" />
+							</Vendors>
+						</SetVendor>						
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="2290.367" Y="-5320.899" Z="90.15194" />
+							</Mailboxes>
+						</SetMailbox>			
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 329" >
+					<CustomBehavior File="Message" Text="I have more than 25 empty slots in my bags and my gear is above 30 percent durability." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="3000" />
 					<CustomBehavior File="Message" Text="I am exiting the dugeon and running it again." LogColor="Lime" />
 					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" 
@@ -661,7 +677,8 @@
 						<RunTo X="3598.173" Y="-3653.897" Z="138.5109" />
 						<RunTo X="3594.656" Y="-3650.104" Z="138.5109" />
 					<CustomBehavior File="MyCTM" X="3589.552" Y="-3638.795" Z="138.4764" />
-					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+					<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285" />
 					<CustomBehavior File="Message" Text="I have exited the dungeon." LogColor="Lime" />						
 				</If>	
 					
