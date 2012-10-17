@@ -473,14 +473,14 @@
 				
 				
 
-				<If Condition="Me.Level &gt;= 28 &amp;&amp; Me.Level &lt;= 30" >				
+				<If Condition="Me.Level &gt;= 28 &amp;&amp; Me.Level &lt;= 31" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="Message" Text="I am in the 28 to 30 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 28 to 32 bracket, changing to a new farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 				
-		<While Condition="Me.Level &gt;= 28 &amp;&amp; Me.Level &lt;= 30" >		
+		<While Condition="Me.Level &gt;= 28 &amp;&amp; Me.Level &lt;= 31" >		
 				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
 								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
@@ -500,7 +500,7 @@
 					<RunTo X="-12494.61" Y="-514.6472" Z="15.5158" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 31." LogColor="Lime" />				
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 32." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>48,30,16</Factions>
 								<Hotspots>
@@ -514,7 +514,7 @@
 									<Hotspot X="-12744.07" Y="-895.3342" Z="54.43389" />									
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 31)" GoalText="Farming" />
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 32)" GoalText="Farming" />
 				</If>
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
@@ -538,14 +538,14 @@
 					
 		</While>
 
-				<If Condition="Me.Level &gt;= 31 &amp;&amp; Me.Level &lt;= 33" >				
+				<If Condition="Me.Level &gt;= 32 &amp;&amp; Me.Level &lt;= 33" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 					<CustomBehavior File="Message" Text="I am in the 31 to 33 bracket, changing to a new farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 				
-		<While Condition="Me.Level &gt;= 31 &amp;&amp; Me.Level &lt;= 32" >		
+		<While Condition="Me.Level &gt;= 32 &amp;&amp; Me.Level &lt;= 33" >		
 				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
 								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
@@ -563,7 +563,7 @@
 					<RunTo X="-14639.69" Y="296.1839" Z="3.397022" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 31." LogColor="Lime" />				
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 34." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>47,49,16,72,119,7,74</Factions>
 								<Hotspots>
@@ -581,7 +581,7 @@
 								    <Hotspot X="-14127.59" Y="442.0752" Z="4.210244" />									
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 33)" GoalText="Farming" />
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 34)" GoalText="Farming" />
 				</If>
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
@@ -605,10 +605,10 @@
 					
 		</While>
 
-				<If Condition="Me.Level &gt;= 33 &amp;&amp; Me.Level &lt;= 35" >				
+				<If Condition="Me.Level &gt;= 34 &amp;&amp; Me.Level &lt;= 36" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="Message" Text="I am in the 33 to 35 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 34 to 36 bracket, changing to a new farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>		
 			     
