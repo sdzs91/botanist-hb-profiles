@@ -222,30 +222,19 @@
 					</CustomBehavior>
 					<CustomBehavior File="InteractWith" MobId="175356" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3782.58057" Y="-3590.479" Z="143.987152" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="3784.668" Y="-3594.523" Z="144.6139" />
-						<Hotspot X="3787.591" Y="-3599.06" Z="144.6064" />
-						<Hotspot X="3793.053" Y="-3605.57" Z="145.1017" />
-						<Hotspot X="3800.047" Y="-3609.892" Z="145.3821" />
-						<Hotspot X="3807.819" Y="-3612.754" Z="145.4898" />
-						<Hotspot X="3816.001" Y="-3612.934" Z="145.5584" />
-						<Hotspot X="3823.16" Y="-3608.884" Z="145.5194" />
-						<Hotspot X="3827.552" Y="-3605.885" Z="145.5524" />
-						<Hotspot X="3835.874" Y="-3605.468" Z="145.1356" />
-						<Hotspot X="3844.254" Y="-3605.048" Z="144.634" />
-						<Hotspot X="3852.573" Y="-3603.962" Z="143.6599" />
-						<Hotspot X="3860.591" Y="-3601.517" Z="143.2421" />
-						<Hotspot X="3867.626" Y="-3597.978" Z="143.3761" />
-						<Hotspot X="3871.658" Y="-3590.801" Z="142.3965" />
-						<Hotspot X="3875.976" Y="-3583.567" Z="141.0779" />
-						<Hotspot X="3880.14" Y="-3576.591" Z="139.7217" />
-						<Hotspot X="3883.705" Y="-3569.038" Z="138.3979" />
-						<Hotspot X="3887.615" Y="-3561.622" Z="137.6358" />
-						<Hotspot X="3892.392" Y="-3555.117" Z="137.6248" />
-						<Hotspot X="3893.69" Y="-3550.222" Z="137.5683" />
-						<Hotspot X="3885.89" Y="-3548.716" Z="137.4465" />
-						<Hotspot X="3877.661" Y="-3546.69" Z="137.6097" />
-						<Hotspot X="3869.517" Y="-3545.905" Z="137.4573" />
-						<Hotspot X="3862.423" Y="-3541.909" Z="137.433" />
+						<Hotspot X="3784.096" Y="-3594.147" Z="144.5809" />
+						<Hotspot X="3789.941" Y="-3608.652" Z="145.721" />
+						<Hotspot X="3797.948" Y="-3621.475" Z="145.2366" />
+						<Hotspot X="3812.377" Y="-3626.021" Z="145.2022" />
+						<Hotspot X="3819.694" Y="-3612.656" Z="145.4903" />
+						<Hotspot X="3832.69" Y="-3603.971" Z="145.3638" />
+						<Hotspot X="3847.429" Y="-3601.276" Z="143.615" />
+						<Hotspot X="3862.557" Y="-3598.818" Z="143.1211" />
+						<Hotspot X="3873.922" Y="-3588.497" Z="142.3712" />
+						<Hotspot X="3880.527" Y="-3575.239" Z="139.4989" />
+						<Hotspot X="3887.546" Y="-3561.838" Z="137.6355" />
+						<Hotspot X="3881.294" Y="-3547.969" Z="137.4978" />
+						<Hotspot X="3866.422" Y="-3545.285" Z="137.4491" />
 					</CustomBehavior>
 					<CustomBehavior File="Message" Text="Pulling the first boss and clearing the Ziggurat." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="2000" />
