@@ -135,7 +135,7 @@
 				<If Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 17" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="Message" Text="I am in the 14 to 17 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 14 to 17 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 			
@@ -193,7 +193,7 @@
 				<If Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="Message" Text="I am in the 18 to 20 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 18 to 20 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 			
@@ -336,7 +336,7 @@
 				<If Condition="Me.Level &gt;= 22 &amp;&amp; Me.Level &lt;= 23" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="Message" Text="I am in the 22 to 25 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 22 to 25 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 				
@@ -399,7 +399,7 @@
 				<If Condition="Me.Level &gt;= 26 &amp;&amp; Me.Level &lt;= 27" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="Message" Text="I am in the 26 to 2 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 26 to 2 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 				
@@ -476,7 +476,7 @@
 				<If Condition="Me.Level &gt;= 28 &amp;&amp; Me.Level &lt;= 31" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="Message" Text="I am in the 28 to 32 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 28 to 32 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 				
@@ -541,7 +541,7 @@
 				<If Condition="Me.Level &gt;= 32 &amp;&amp; Me.Level &lt;= 33" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="Message" Text="I am in the 31 to 33 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 31 to 34 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 				
@@ -608,13 +608,13 @@
 				<If Condition="Me.Level &gt;= 34 &amp;&amp; Me.Level &lt;= 36" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="Message" Text="I am in the 34 to 36 bracket, changing to a new farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 34 to 36 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>		
 			     
 				 <!-- chnge this level to current level of script -->
 				 
-				<If Condition="Me.Level == 33" >
+				<If Condition="Me.Level == 34" >
 					<CustomBehavior File="Message" Text="This section is unscripted. Loading the next section." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
 					<CustomBehavior File="Message" Text="Loading....QO-A-Next-Gen-Grind-][58-68]_botanist_pangaea" LogColor="Lime" />
