@@ -48,7 +48,7 @@
 					<ClearMailbox />
 		
 					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="10" LogoutForInactivity="True" />
-					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" Text="This profile will farm Stratholme for Deathcharger's Reins. Start the profile anywhere in Eastern Kingdoms . The profile will handle your hearth, repairs and mail." Title="WARNING" />
+					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" Text="This profile will farm Stratholme for Deathcharger's Reins. Start the profile anywhere in Eastern Kingdoms . The profile will handle your hearth, repairs and mail. The profile will vendor any green's or blue's that are in you bags. I suggest emptying you bags of everything except a few stacks of food before running this profile." Title="WARNING" />
 		 
          <While Condition="true" >
 
