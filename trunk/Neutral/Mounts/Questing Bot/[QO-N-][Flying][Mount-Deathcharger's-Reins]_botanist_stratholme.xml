@@ -48,7 +48,7 @@
 					<ClearMailbox />
 		
 					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="10" LogoutForInactivity="True" />
-					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" Text="This profile will farm Stratholme for Deathcharger's Reins. Start the profile anywhere in Eastern Kingdoms . The profile will handle your hearth, repairs and mail. The profile will vendor any green's or blue's that are in you bags. I suggest emptying you bags of everything except a few stacks of food before running this profile." Title="WARNING" />
+					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" Text="This profile will farm Stratholme for Deathcharger's Reins. Start the profile anywhere in Eastern Kingdoms . The profile will handle your hearth, repairs and mail. The profile WILL VENDOR ANY BLUE'S OR GREEN'S THAT ARE IN YOUR BAGS. I suggest EMPTYING your bags of everything except a few stacks of food before running this profile." Title="WARNING" />
 		 
          <While Condition="true" >
 
@@ -486,6 +486,24 @@
 							<Hotspot X="4044.238" Y="-3446.492" Z="120.2458" />
 							<Hotspot X="4038.745" Y="-3449.923" Z="120.4431" />
 							<Hotspot X="4033.389" Y="-3443.501" Z="119.6911" />
+							<Hotspot X="4015.777" Y="-3428.139" Z="118.6227" />
+							<Hotspot X="4010.655" Y="-3429.867" Z="119.5684" />
+							<Hotspot X="4008.683" Y="-3437.523" Z="121.1479" />
+							<Hotspot X="4012.596" Y="-3444.231" Z="120.9205" />
+							<Hotspot X="4018.055" Y="-3440.741" Z="119.9925" />
+							<Hotspot X="4016.855" Y="-3432.715" Z="119.3678" />
+							<Hotspot X="4023.235" Y="-3433.804" Z="119.0537" />
+							<Hotspot X="4026.89" Y="-3441.158" Z="119.4115" />
+							<Hotspot X="4035.011" Y="-3442.143" Z="119.5161" />
+							<Hotspot X="4042.681" Y="-3438.949" Z="119.1163" />
+							<Hotspot X="4047.344" Y="-3432.158" Z="118.2385" />
+							<Hotspot X="4049.282" Y="-3424.2" Z="116.9527" />
+							<Hotspot X="4050.25" Y="-3415.982" Z="116.1551" />
+							<Hotspot X="4056.917" Y="-3412.65" Z="116.128" />
+							<Hotspot X="4064.789" Y="-3414.139" Z="116.3186" />
+							<Hotspot X="4067.278" Y="-3421.628" Z="116.8813" />
+							<Hotspot X="4060.082" Y="-3425.452" Z="117.3257" />
+							<Hotspot X="4053.419" Y="-3429.019" Z="117.8981" />
 							<Hotspot X="4032.021" Y="-3435.558" Z="118.7774" />
 							<Hotspot X="4034.193" Y="-3427.387" Z="117.4911" />
 							<Hotspot X="4028.698" Y="-3423.935" Z="117.0731" />
@@ -673,27 +691,13 @@
 					</CustomBehavior>
 						<RunTo X="3778.327" Y="-3580.445" Z="142.4818" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="3773.344" Y="-3581.088" Z="142.5137" />
-						<Hotspot X="3765.278" Y="-3582.739" Z="142.3714" />
-						<Hotspot X="3757.368" Y="-3584.901" Z="142.3714" />
-						<Hotspot X="3749.563" Y="-3588.27" Z="142.3699" />
-						<Hotspot X="3744.637" Y="-3590.594" Z="142.3699" />
-						<Hotspot X="3737.58" Y="-3594.735" Z="142.3683" />
-						<Hotspot X="3730.5" Y="-3598.852" Z="142.3683" />
-						<Hotspot X="3722.547" Y="-3601.164" Z="142.347" />
-						<Hotspot X="3714.255" Y="-3602.963" Z="141.4309" />
-						<Hotspot X="3706.003" Y="-3603.275" Z="140.3678" />
-						<Hotspot X="3697.788" Y="-3603.268" Z="139.1282" />
-						<Hotspot X="3689.504" Y="-3602.524" Z="138.2961" />
-						<Hotspot X="3681.244" Y="-3602.195" Z="137.5894" />
-						<Hotspot X="3672.995" Y="-3602.037" Z="137.132" />
-						<Hotspot X="3664.969" Y="-3604.759" Z="137.0206" />
-						<Hotspot X="3658.318" Y="-3609.645" Z="137.0977" />
-						<Hotspot X="3652.819" Y="-3615.813" Z="137.2718" />
-						<Hotspot X="3647.853" Y="-3622.483" Z="137.6384" />
-						<Hotspot X="3642.872" Y="-3629.174" Z="138.0683" />
-						<Hotspot X="3636.735" Y="-3634.67" Z="138.1827" />
-						<Hotspot X="3629.614" Y="-3638.961" Z="138.7975" />
+						<Hotspot X="3758.536" Y="-3585.478" Z="142.3711" />
+						<Hotspot X="3740.68" Y="-3595.116" Z="142.3696" />
+						<Hotspot X="3721.97" Y="-3602.738" Z="142.2861" />
+						<Hotspot X="3701.83" Y="-3604.459" Z="139.7285" />
+						<Hotspot X="3681.449" Y="-3604.634" Z="137.6527" />
+						<Hotspot X="3661.669" Y="-3610.521" Z="137.1319" />
+						<Hotspot X="3645.617" Y="-3623.053" Z="137.7222" />
 					</CustomBehavior>
 						<RunTo X="3629.614" Y="-3638.961" Z="138.7975" />						
 					<CustomBehavior File="WaitTimer" WaitTime="3000" />
