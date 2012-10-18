@@ -553,20 +553,11 @@
 					HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" 
 					LootRadius="10" LogoutForInactivity="True" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="4033.09" Y="-3402.977" Z="115.2694" />
-						<Hotspot X="4032.975" Y="-3408.431" Z="115.6118" />
-						<Hotspot X="4033.444" Y="-3416.924" Z="116.1637" />
-						<Hotspot X="4034.603" Y="-3425.058" Z="117.1126" />
-						<Hotspot X="4035.585" Y="-3433.262" Z="118.4139" />
-						<Hotspot X="4035.411" Y="-3441.526" Z="119.44" />
-						<Hotspot X="4036.334" Y="-3449.743" Z="120.4175" />
-						<Hotspot X="4037.261" Y="-3457.994" Z="120.9511" />
-						<Hotspot X="4037.086" Y="-3466.316" Z="121.6873" />
-						<Hotspot X="4037.138" Y="-3474.626" Z="121.7398" />
-						<Hotspot X="4038.296" Y="-3482.886" Z="121.7398" />
-						<Hotspot X="4038.131" Y="-3491.14" Z="121.7489" />
-						<Hotspot X="4036.561" Y="-3499.272" Z="121.7762" />
-						<Hotspot X="4039.955" Y="-3505.619" Z="121.7408" />
+						<Hotspot X="4034.594" Y="-3416.749" Z="116.1439" />
+						<Hotspot X="4035.719" Y="-3436.553" Z="118.8561" />
+						<Hotspot X="4036.891" Y="-3457.197" Z="120.9007" />
+						<Hotspot X="4038.05" Y="-3477.599" Z="121.7337" />
+						<Hotspot X="4039.945" Y="-3497.769" Z="121.7339" />
 						<Hotspot X="4041.189" Y="-3525.887" Z="122.1816" />
 						<Hotspot X="4034.017" Y="-3545" Z="124.4048" />
 						<Hotspot X="4015.127" Y="-3552.197" Z="124.373" />
