@@ -88,7 +88,7 @@
 							<RunTo X="3627.206" Y="-3640.699" Z="138.4589" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="Opening the gate." LogColor="Lime" />
-						<CustomBehavior File="InteractWith" MobId="175368" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3624.90845" Y="-3642.1626" Z="138.445114" />
+						<CustomBehavior File="InteractWith" MobId="175368" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime=".5" X="3624.90845" Y="-3642.1626" Z="138.445114" />
 							<RunTo X="3623.563" Y="-3643.059" Z="138.5102" />
 							<RunTo X="3598.173" Y="-3653.897" Z="138.5109" />
 							<RunTo X="3594.656" Y="-3650.104" Z="138.5109" />
@@ -196,7 +196,7 @@
 						
 					<CustomBehavior File="Message" Text="Opening the gate." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="InteractWith" MobId="175368" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3624.90845" Y="-3642.1626" Z="138.445114" />
+					<CustomBehavior File="InteractWith" MobId="175368" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime=".5" X="3624.90845" Y="-3642.1626" Z="138.445114" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="3628.536" Y="-3640.215" Z="138.5518" />
 						<Hotspot X="3641.778" Y="-3639.01" Z="138.5127" />
@@ -213,14 +213,14 @@
 						<RunTo X="3661.4" Y="-3617.082" Z="137.5251" />
 						<RunTo X="3684.45" Y="-3607.668" Z="137.989" />
 						<RunTo X="3724.066" Y="-3600.257" Z="142.335" />
-					<CustomBehavior File="InteractWith" MobId="175357" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3727.29126" Y="-3599.08252" Z="142.219528" />					
+					<CustomBehavior File="InteractWith" MobId="175357" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime=".5" X="3727.29126" Y="-3599.08252" Z="142.219528" />					
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="3731.949" Y="-3598.588" Z="142.3679" />
 						<Hotspot X="3759.372" Y="-3584.975" Z="142.3694" />
 						<Hotspot X="3777.282" Y="-3581.971" Z="142.5357" />
 						<Hotspot X="3781.592" Y="-3587.755" Z="143.6525" />
 					</CustomBehavior>
-					<CustomBehavior File="InteractWith" MobId="175356" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3782.58057" Y="-3590.479" Z="143.987152" />
+					<CustomBehavior File="InteractWith" MobId="175356" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime=".5" X="3782.58057" Y="-3590.479" Z="143.987152" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="3784.096" Y="-3594.147" Z="144.5809" />
 						<Hotspot X="3789.941" Y="-3608.652" Z="145.721" />
@@ -597,7 +597,7 @@
 						<RunTo X="3629.614" Y="-3638.961" Z="138.7975" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Opening the gate." LogColor="Lime" />
-					<CustomBehavior File="InteractWith" MobId="175368" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3624.90845" Y="-3642.1626" Z="138.445114" />
+					<CustomBehavior File="InteractWith" MobId="175368" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime=".5" X="3624.90845" Y="-3642.1626" Z="138.445114" />
 						<RunTo X="3623.563" Y="-3643.059" Z="138.5102" />
 						<RunTo X="3598.173" Y="-3653.897" Z="138.5109" />
 						<RunTo X="3594.656" Y="-3650.104" Z="138.5109" />
