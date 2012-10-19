@@ -45,20 +45,20 @@
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 					<CustomBehavior File="Message" Text="This section is unscripted. Loading the next section." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][68-80]_botanist_pangaea" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][68-80]_botanist_pangaea" />
 				</If>
 						
 				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
-						Text="This WILL BE a 1-90 fully afkable leveling profile. It currently levels 1-31. It will consist of 6 profiles which will automatically load in sequential order as needed. The user will be resposible for insuring that the toon has proper gear for it's current level, by what ever means. The profile will control all settings except food and water. Those two things will be user controled and the users resposibility. The profile will train riding skill up to Expert Riding provided there is at least 250 gold in you bags." Title="WARNING" />
+						Text="This WILL BE a 1-90 fully afkable leveling profile. It currently levels 1-41. It will consist of 6 profiles which will automatically load in sequential order as needed. The user will be resposible for insuring that the toon has proper gear for it's current level, by what ever means. The profile will control all settings except food and water. Those two things will be user controled and the users resposibility. The profile will train riding skill up to Expert Riding provided there is at least 250 gold in you bags." Title="WARNING" />
 						
 			
 		                     	<!-- change profile -->
 								
 				<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 79" > 
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
-					<CustomBehavior File="Message" Text="Loadin....[QO-A-Next-Gen-Grind-][68-80]_botanist_pangaea" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Loadin....[QO-A-Next-Gen-Grind][68-80]_botanist_pangaea" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />				
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind-][68-80]_botanist_pangaea" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][68-80]_botanist_pangaea" />
 				</If>
 				
 	</QuestOrder >			
