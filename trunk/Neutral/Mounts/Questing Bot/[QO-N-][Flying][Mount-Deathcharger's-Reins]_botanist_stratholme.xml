@@ -238,7 +238,7 @@
 						<CustomBehavior File="MyCTM" X="3843.961" Y="-3507.627" Z="144.2104" />
 						<CustomBehavior File="MyCTM" X="3852.348" Y="-3523.871" Z="144.2104" />
 						<CustomBehavior File="UserSettings" LootMobs="True" />						
-						<CustomBehavior File="MyCTM" X="3859.792" Y="-3532.222" Z="143.1989" />						
+						<RunTo X="3859.792" Y="-3532.222" Z="143.1989" />						
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="3879.457" Y="-3547.617" Z="137.5242" />
 						<Hotspot X="3889.153" Y="-3559.405" Z="137.6686" />
@@ -251,7 +251,7 @@
 						<Hotspot X="3807.169" Y="-3616.009" Z="145.346" />
 						<Hotspot X="3794.025" Y="-3608.398" Z="145.2405" />
 					</CustomBehavior>
-						<CustomBehavior File="MyCTM" X="3792.562" Y="-3608.934" Z="145.4716" />
+						<RunTo X="3792.562" Y="-3608.934" Z="145.4716" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="3796.368" Y="-3623.569" Z="145.4373" />
 						<Hotspot X="3802.062" Y="-3637.434" Z="146.316" />
@@ -287,7 +287,7 @@
 						<Hotspot X="3892.294" Y="-3673.779" Z="140.7655" />
 						<Hotspot X="3912.339" Y="-3670.348" Z="138.5399" />					
 					</CustomBehavior>
-						<CustomBehavior File="MyCTM"  X="3931.62" Y="-3652.841" Z="139.9942" />
+						<RunTo  X="3931.62" Y="-3652.841" Z="139.9942" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="3938.952" Y="-3651.708" Z="139.7825" />
 						<Hotspot X="3953.061" Y="-3647.496" Z="136.1178" />
@@ -317,7 +317,7 @@
 					<CustomBehavior File="MyCTM" X="4051.046" Y="-3661.507" Z="135.6548" />
 					<CustomBehavior File="MyCTM" X="4036.498" Y="-3648.509" Z="135.6548" />
 					<CustomBehavior File="UserSettings" LootMobs="True" />
-						<CustomBehavior File="MyCTM" X="4029.904" Y="-3644.998" Z="135.6548" />						
+						<RunTo X="4029.904" Y="-3644.998" Z="135.6548" />						
 					<CustomBehavior File="Message" Text="Moving to Slaughter Square." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
@@ -333,13 +333,13 @@
 						<Hotspot X="4040.044" Y="-3524.032" Z="122.0503" />
 						<Hotspot X="4040.259" Y="-3508.679" Z="121.539" />							
 						</CustomBehavior>
-							<CustomBehavior File="MyCTM" X="4039.88" Y="-3508.237" Z="121.5699" />
-							<CustomBehavior File="MyCTM" X="4037.777" Y="-3489.177" Z="121.75" />
+							<RunTo X="4039.88" Y="-3508.237" Z="121.5699" />
+							<RunTo X="4037.777" Y="-3489.177" Z="121.75" />
 				</If>
 					
 				<If Condition="Me.MapId == 329">
 					<If Condition="Me.Y &gt; -3504.201" >
-							<CustomBehavior File="MyCTM" X="4036.982" Y="-3468.954" Z="121.7396" />
+							<RunTo X="4036.982" Y="-3468.954" Z="121.7396" />
 						<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 							<Hotspot X="4034.236" Y="-3464.189" Z="121.459" />
 							<Hotspot X="4030.655" Y="-3456.906" Z="121.0268" />
