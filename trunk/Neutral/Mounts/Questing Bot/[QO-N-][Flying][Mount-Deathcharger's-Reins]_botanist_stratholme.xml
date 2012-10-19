@@ -121,7 +121,7 @@
 						<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />					
 							<CustomBehavior File="Message" Text="Deleting the garbage from my bags." LogColor="Lime" />
-							<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285" />
+							<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285,4608" />
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
 							<CustomBehavior File="Message" Text="Checking my bag space and gear durability." LogColor="Lime" />
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -172,7 +172,7 @@
 					<CustomBehavior File="Message" Text="I have entered Stratholme." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />					
 					<CustomBehavior File="Message" Text="Deleting the garbage from my bags." LogColor="Lime" />
-					<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285" />
+					<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285,4608" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<RunTo X="3592.842" Y="-3650.627" Z="138.5113" />
 						<RunTo X="3598.626" Y="-3653.662" Z="138.5113" />
@@ -444,7 +444,7 @@
 					<CustomBehavior File="Message" Text="Deathcharger's Reins didn't drop." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Deleting the garbage from my bags." LogColor="Lime" />
-					<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285" />
+					<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285,4608" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Checking my bag space and gear durability." LogColor="Lime" />
 					
