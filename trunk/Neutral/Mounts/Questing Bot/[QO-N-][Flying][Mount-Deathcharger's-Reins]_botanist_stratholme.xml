@@ -317,7 +317,7 @@
 					<CustomBehavior File="MyCTM" X="4051.046" Y="-3661.507" Z="135.6548" />
 					<CustomBehavior File="MyCTM" X="4036.498" Y="-3648.509" Z="135.6548" />
 					<CustomBehavior File="UserSettings" LootMobs="True" />
-						<RunTo X="4029.904" Y="-3644.998" Z="135.6548" />						
+					<CustomBehavior File="MyCTM" X="4029.904" Y="-3644.998" Z="135.6548" />						
 					<CustomBehavior File="Message" Text="Moving to Slaughter Square." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
