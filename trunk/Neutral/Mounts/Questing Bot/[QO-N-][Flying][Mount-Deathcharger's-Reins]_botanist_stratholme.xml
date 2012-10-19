@@ -64,7 +64,7 @@
 				<If Condition="Me.ZoneId == 139 &amp;&amp; Me.MapId != 329" > <!-- in EP not in Strat -->
 					<If Condition="Me.X &lt; 3187.217 || Me.X &gt; 3241.359 || Me.Y &gt; -4033.853 || Me.Y &lt; -4057.924" >  <!-- news of the gate entrance -->
 						<CustomBehavior File="Message" Text="I'm in Eastern Plaguelands, moving to the innkeep." LogColor="Lime" />
-						<CustomBehavior File="FlyTo" X="2289.299" Y="-5328.072" Z="90.75233" DestName="Lights Hope Chapel" />
+						<CustomBehavior File="FlyTo" X="2285.257" Y="-5323.889" Z="89.8182" DestName="Lights Hope Chapel" />
 						<CustomBehavior File="ForcedDismount" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 							<RunTo X="2294.876" Y="-5334.578" Z="90.7522" />
