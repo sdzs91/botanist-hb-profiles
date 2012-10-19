@@ -222,9 +222,9 @@
 					</CustomBehavior>
 					<CustomBehavior File="Message" Text="Pulling the first boss and clearing the Ziggurat." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<RunTo X="3857.987" Y="-3536.106" Z="141.4574" />
-						<RunTo X="3854.798" Y="-3529.62" Z="144.209" />
-						<RunTo X="3852.506" Y="-3525.211" Z="144.209" />
+						<CustomBehavior File="MyCTM" X="3857.987" Y="-3536.106" Z="141.4574" />
+						<CustomBehavior File="MyCTM" X="3854.798" Y="-3529.62" Z="144.209" />
+						<CustomBehavior File="MyCTM" X="3852.506" Y="-3525.211" Z="144.209" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="UserSettings" LootMobs="False" />
 						<CustomBehavior File="MyCTM" X="3843.91" Y="-3507.593" Z="144.2099" />
@@ -238,7 +238,7 @@
 						<CustomBehavior File="MyCTM" X="3843.961" Y="-3507.627" Z="144.2104" />
 						<CustomBehavior File="MyCTM" X="3852.348" Y="-3523.871" Z="144.2104" />
 						<CustomBehavior File="UserSettings" LootMobs="True" />						
-						<RunTo X="3859.792" Y="-3532.222" Z="143.1989" />						
+						<CustomBehavior File="MyCTM" X="3859.792" Y="-3532.222" Z="143.1989" />						
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="3879.457" Y="-3547.617" Z="137.5242" />
 						<Hotspot X="3889.153" Y="-3559.405" Z="137.6686" />
@@ -251,7 +251,7 @@
 						<Hotspot X="3807.169" Y="-3616.009" Z="145.346" />
 						<Hotspot X="3794.025" Y="-3608.398" Z="145.2405" />
 					</CustomBehavior>
-						<RunTo X="3792.562" Y="-3608.934" Z="145.4716" />
+						<CustomBehavior File="MyCTM" X="3792.562" Y="-3608.934" Z="145.4716" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="3796.368" Y="-3623.569" Z="145.4373" />
 						<Hotspot X="3802.062" Y="-3637.434" Z="146.316" />
@@ -263,10 +263,10 @@
 					</CustomBehavior>
 					<CustomBehavior File="Message" Text="Pulling the second boss and clearing the Ziggurat." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<RunTo X="3856.993" Y="-3705.232" Z="142.9963" />
-						<RunTo X="3855.271" Y="-3715.741" Z="148.0913" />
-						<RunTo  X="3854.406" Y="-3719.528" Z="148.0913" />
-						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="MyCTM" X="3856.993" Y="-3705.232" Z="142.9963" />
+					<CustomBehavior File="MyCTM" X="3855.271" Y="-3715.741" Z="148.0913" />
+					<CustomBehavior File="MyCTM"  X="3854.406" Y="-3719.528" Z="148.0913" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="UserSettings" LootMobs="False" />						
 					<CustomBehavior File="MyCTM" X="3849.992" Y="-3739.331" Z="148.0913" />
 					<CustomBehavior File="MyCTM" X="3842.671" Y="-3739.096" Z="148.0913" />
@@ -287,7 +287,7 @@
 						<Hotspot X="3892.294" Y="-3673.779" Z="140.7655" />
 						<Hotspot X="3912.339" Y="-3670.348" Z="138.5399" />					
 					</CustomBehavior>
-						<RunTo  X="3931.62" Y="-3652.841" Z="139.9942" />
+						<CustomBehavior File="MyCTM"  X="3931.62" Y="-3652.841" Z="139.9942" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="3938.952" Y="-3651.708" Z="139.7825" />
 						<Hotspot X="3953.061" Y="-3647.496" Z="136.1178" />
@@ -299,10 +299,10 @@
 					</CustomBehavior>	
 					<CustomBehavior File="Message" Text="Pulling the third boss and clearing the Ziggurat." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<RunTo X="4024.116" Y="-3638.03" Z="130.3624" />
-						<RunTo X="4029.995" Y="-3642.843" Z="135.4246" />
-						<RunTo X="4036.038" Y="-3647.79" Z="135.6552" />
-						<RunTo X="4037.172" Y="-3649.092" Z="135.6552" />
+						<CustomBehavior File="MyCTM" X="4024.116" Y="-3638.03" Z="130.3624" />
+						<CustomBehavior File="MyCTM" X="4029.995" Y="-3642.843" Z="135.4246" />
+						<CustomBehavior File="MyCTM" X="4036.038" Y="-3647.79" Z="135.6552" />
+						<CustomBehavior File="MyCTM" X="4037.172" Y="-3649.092" Z="135.6552" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="UserSettings" LootMobs="False" />
 					<CustomBehavior File="MyCTM" X="4051.88" Y="-3660.895" Z="135.6552" />
@@ -317,7 +317,7 @@
 					<CustomBehavior File="MyCTM" X="4051.046" Y="-3661.507" Z="135.6548" />
 					<CustomBehavior File="MyCTM" X="4036.498" Y="-3648.509" Z="135.6548" />
 					<CustomBehavior File="UserSettings" LootMobs="True" />
-						<RunTo X="4029.904" Y="-3644.998" Z="135.6548" />						
+						<CustomBehavior File="MyCTM" X="4029.904" Y="-3644.998" Z="135.6548" />						
 					<CustomBehavior File="Message" Text="Moving to Slaughter Square." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
@@ -333,13 +333,13 @@
 						<Hotspot X="4040.044" Y="-3524.032" Z="122.0503" />
 						<Hotspot X="4040.259" Y="-3508.679" Z="121.539" />							
 						</CustomBehavior>
-							<RunTo X="4039.88" Y="-3508.237" Z="121.5699" />
-							<RunTo X="4037.777" Y="-3489.177" Z="121.75" />
+							<CustomBehavior File="MyCTM" X="4039.88" Y="-3508.237" Z="121.5699" />
+							<CustomBehavior File="MyCTM" X="4037.777" Y="-3489.177" Z="121.75" />
 				</If>
 					
 				<If Condition="Me.MapId == 329">
 					<If Condition="Me.Y &gt; -3504.201" >
-							<RunTo X="4036.982" Y="-3468.954" Z="121.7396" />
+							<CustomBehavior File="MyCTM" X="4036.982" Y="-3468.954" Z="121.7396" />
 						<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 							<Hotspot X="4034.236" Y="-3464.189" Z="121.459" />
 							<Hotspot X="4030.655" Y="-3456.906" Z="121.0268" />
@@ -409,9 +409,9 @@
 							<Hotspot X="4032.487" Y="-3435.16" Z="118.7254" />
 						</CustomBehavior>
 						<CustomBehavior File="WaitTimer" WaitTime="15000" />
-							<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
+							<CustomBehavior File="MyCTM" X="4033.103" Y="-3400.689" Z="115.1268" />
 						<CustomBehavior File="WaitTimer" WaitTime="70000" />
-							<RunTo X="4032.77" Y="-3389.172" Z="119.7397" />
+							<CustomBehavior File="MyCTM" X="4032.77" Y="-3389.172" Z="119.7397" />
 						<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 			</If>
