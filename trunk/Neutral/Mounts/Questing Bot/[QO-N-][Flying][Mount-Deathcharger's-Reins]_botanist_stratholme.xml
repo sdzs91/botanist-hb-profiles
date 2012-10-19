@@ -486,10 +486,13 @@
 							<Hotspot X="4045.077" Y="-3407.346" Z="115.4338" />
 							<Hotspot X="4037.009" Y="-3405.505" Z="115.3809" />
 							<Hotspot X="4032.769" Y="-3398.301" Z="116.4897" />
+							<Hotspot X="4033.837" Y="-3447.323" Z="120.1565" />
 						</CustomBehavior>
-							<RunTo X="4032.769" Y="-3390.79" Z="119.7397" />
-						<CustomBehavior File="WaitTimer" WaitTime="75000" />
-							<RunTo X="4032.769" Y="-3390.79" Z="119.7397" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" />
+							<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
+						<CustomBehavior File="WaitTimer" WaitTime="70000" />
+							<RunTo X="4032.77" Y="-3389.172" Z="119.7397" />
+						<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</If>
 			</If>
 							
