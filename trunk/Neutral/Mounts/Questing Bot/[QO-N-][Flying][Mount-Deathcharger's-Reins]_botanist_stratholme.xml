@@ -525,11 +525,11 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Deleting the garbage from my bags." LogColor="Lime" />
 					<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285" />
-					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Checking my bag space and gear durability." LogColor="Lime" />
 					
 					<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->						
-						<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="I have detected that I have less than 25 empty bag slots or that my gear is about to break. I'm going to hearth,repair and mail. Then I'll run the dungeon again" LogColor="Lime" />
 						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
