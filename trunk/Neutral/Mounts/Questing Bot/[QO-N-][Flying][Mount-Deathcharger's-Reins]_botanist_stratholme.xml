@@ -105,7 +105,7 @@
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 							<RunTo X="2294.876" Y="-5334.578" Z="90.7522" />							
 						<CustomBehavior File="Message" Text="Setting my Heartstone with the innkeep." LogColor="Lime" />
-						<CustomBehavior File="WaitTimer" WaitTime="2000" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="SetHearthstone" MobId="16256"  X="2295.74" Y="-5336.82" Z="90.75285" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="I have set my Heartstone." LogColor="Lime" />
@@ -119,12 +119,12 @@
 				<If Condition="Me.ZoneId == 139 &amp;&amp; Me.MapId != 329" >
 					<If Condition="Me.X &gt; 2227.332 &amp;&amp; Me.X &lt; 2378.066 &amp;&amp; Me.Y &gt; -5427.272 &amp;&amp; Me.Y &lt; -5237.988" >
 						<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->
-							<CustomBehavior File="WaitTimer" WaitTime="3000" />					
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />					
 							<CustomBehavior File="Message" Text="Deleting the garbage from my bags." LogColor="Lime" />
 							<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285" />
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
 							<CustomBehavior File="Message" Text="Checking my bag space and gear durability." LogColor="Lime" />
-							<CustomBehavior File="WaitTimer" WaitTime="2000" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
 							<CustomBehavior File="Message" Text="I have detected that I have less than 25 empty bag slots or that my gear is about to break. I'm going to hearth,repair and mail." LogColor="Lime" />
 							<CustomBehavior File="Message" Text="Moving to repair,vendor and mail." LogColor="Lime" />											
 							<SetVendor>
@@ -166,21 +166,7 @@
 					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="GoThruPortal" Timeout="15000" X="3236.772" Y="-4056.048" Z="108.4669" />
-				</If>	
-					
-	<!--	 <While Condition="Me.ZoneId != 329" >		
-				<If Condition="Me.ZoneId != 329">
-					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-					<CustomBehavior File="MyCTM" X="3236.772" Y="-4056.048" Z="108.4669" />
-					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<If Condition="Me.ZoneId != 329">
-								<RunTo X="3232.103" Y="-4046.342" Z="108.4351" />
-							<CustomBehavior File="WaitTimer" WaitTime="15000" />	
-							<CustomBehavior File="MyCTM" X="3236.772" Y="-4056.048" Z="108.4669" />
-							<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						</If>
-				</If>			
-		</While>	-->		
+				</If>		
 																
 				<If Condition="Me.MapId == 329">
 					<CustomBehavior File="Message" Text="I have entered Stratholme." LogColor="Lime" />
