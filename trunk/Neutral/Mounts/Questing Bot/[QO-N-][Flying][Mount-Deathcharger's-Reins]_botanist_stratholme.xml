@@ -322,6 +322,7 @@
 					<CustomBehavior File="MyCTM" X="4051.88" Y="-3660.895" Z="135.6552" />
 					<CustomBehavior File="MyCTM" X="4047.596" Y="-3666.733" Z="135.6552" />
 					<CustomBehavior File="MyCTM" X="4047.874" Y="-3671.896" Z="132.6556" />
+					<CustomBehavior File="MyCTM" X="4053.627" Y="-3676.831" Z="132.6554" />
 					<CustomBehavior File="MyCTM" X="4063.082" Y="-3676.78" Z="132.6556" />
 					<CustomBehavior File="MyCTM" X="4068.928" Y="-3669.727" Z="132.6556" />
 					<CustomBehavior File="MyCTM" X="4068.266" Y="-3662.519" Z="132.6556" />
@@ -419,11 +420,7 @@
 							<Hotspot X="4055.803" Y="-3433.038" Z="118.6672" />
 							<Hotspot X="4054.226" Y="-3441.156" Z="119.8729" />
 							<Hotspot X="4046.846" Y="-3440.359" Z="119.4817" />
-							<Hotspot X="4046.077" Y="-3432.159" Z="118.1933" />
-							<Hotspot X="4049.756" Y="-3424.812" Z="117.0723" />
-							<Hotspot X="4054.836" Y="-3418.578" Z="116.5066" />
-							<Hotspot X="4052.848" Y="-3410.643" Z="115.8495" />
-							<Hotspot X="4045.077" Y="-3407.346" Z="115.4338" />
+							<Hotspot X="4032.487" Y="-3435.16" Z="118.7254" />
 						</CustomBehavior>
 						<CustomBehavior File="WaitTimer" WaitTime="15000" />
 							<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
