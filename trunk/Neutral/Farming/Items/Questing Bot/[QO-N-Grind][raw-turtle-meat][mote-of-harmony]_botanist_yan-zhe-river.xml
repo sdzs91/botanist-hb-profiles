@@ -22,6 +22,12 @@
 	<TargetElites>True</TargetElites>
 	
 	<AvoidMobs>
+	    <AvoidMob Name="Pengsong" Entry="66587" />
+		<AvoidMob Name="Amberscale Basilisk" Entry="66188" />
+		<AvoidMob Name="Kyparite Pulverizer" Entry="65432" />
+        <AvoidMob Name="King Spineclaw" Entry="66472" />
+		<AvoidMob Name="Captain Ripflesh" Entry="60767" />
+		<AvoidMob Name="Slingtail Fishripper" Entry="55195" />
 		<AvoidMob Name="Longfang Howler" Entry="56524" />
 		<AvoidMob Name="Mutated Silkmoth" Entry="57422" />
         <AvoidMob Name="Wildscale Hunter" Entry="58900" />
@@ -30,7 +36,6 @@
 		<AvoidMob Name="Twitchheel Hoarder" Entry="56538" />
 		<AvoidMob Name="Mushan Nomad" Entry="56523" />
 		<AvoidMob Name="Glade Hunter" Entry="57299" />
-		<AvoidMob Name="Mushan Nomad" Entry="56523"  />
 		<AvoidMob Name="Mushan Nomad" Entry="56523"  />
         <AvoidMob  Name="Frenzyhop" Entry="56514" />	
 	</AvoidMobs>
