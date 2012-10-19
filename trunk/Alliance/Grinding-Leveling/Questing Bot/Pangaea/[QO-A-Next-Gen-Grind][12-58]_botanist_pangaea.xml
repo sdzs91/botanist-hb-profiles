@@ -30,12 +30,10 @@
 		<AvoidMob Name="Kalaran the Annihilator" Entry="46859"  />
 	    <AvoidMob Name="Anathemus" Entry="2754" />
 		<AvoidMob Name="Stonard Kodo Beast" Entry="46748" />
-		<AvoidMob Name="Felscale Crawler" Entry="45087" />
-		<Blackspot X="2003.4" Y="-4467.55" Z="73.62361" Radius="200" />
-	  
+		<AvoidMob Name="Felscale Crawler" Entry="45087" />		
 	</AvoidMobs>
 	
-	<Blackspots>
+	<Blackspots> 
 		<Blackspot X="-239.8224" Y="-2559.555" Z="118.475" Radius="50" />
 		<Blackspot X="2003.4" Y="-4467.55" Z="73.62361" Radius="200" />
 	    <Blackspot X="-10977.1" Y="-2771.339" Z="4.886963" Radius="120" />
@@ -92,11 +90,16 @@
 	
 	<ClearVendor /><ClearMailbox />
 		
-	<QuestOrder IgnoreCheckPoints="False" >
+	<QuestOrder>
 			
+			
+				<If Condition="Me.Level &gt;= 58" > 
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][58-68]_botanist_pangaea" />
+				</If>
 				
 				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
-						Text="This WILL BE a 1-90 fully afkable leveling profile. It currently levels 1-41. It will consist of 6 profiles which will automatically load in sequential order as needed. The user will be resposible for insuring that the toon has proper gear for it's current level, by what ever means. The profile will control all settings except food and water. Those two things will be user controled and the users resposibility. The profile will train riding skill up to Expert Riding provided there is at least 250 gold in you bags." Title="WARNING" />
+						Text="This WILL BE a 1-90 fully afkable leveling profile. It currently levels 1-41 and 85-90 (if you start it in Jade Forest). It will consist of 8 profiles which will automatically load in sequential order as needed. The user will be resposible for insuring that the toon has proper gear for it's current level, by what ever means. The profile will control all settings except food and water. Those two things as well as gear will be user controled and the users resposibility. The profile will train riding skill up to Expert Riding ( slow flying ) provided there is at least 300 gold in you bags." Title="WARNING" />
 						
 			
 		<While Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >
