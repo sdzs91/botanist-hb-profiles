@@ -46,8 +46,8 @@
 		<QuestOrder>
 		
 	    <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" HarvestMinerals="False" HarvestHerbs="False" PullDistance="1"  KillBetweenHotspots="False"  FindVendorsAutomatically="True" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
-		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="40" ExpiryAction="InputEnabled_Continue" 
-						Text="This profile will learn the flight paths that you currently need." Title="WARNING" />
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="20" ExpiryAction="InputEnabled_Continue" 
+						Text="This is one of the flight path profiles used bt the Pangaea Project." Title="WARNING" />
 						
 		<While Condition="true" >
 						

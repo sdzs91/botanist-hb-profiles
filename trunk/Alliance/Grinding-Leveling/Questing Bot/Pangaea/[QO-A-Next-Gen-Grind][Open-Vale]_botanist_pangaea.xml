@@ -44,8 +44,8 @@
 	
 	<QuestOrder>
 	
-				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
-						Text="Don't go too far away. This profile will require your assistance once it reaches the first quest giver." Title="WARNING" />
+				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="20" ExpiryAction="InputEnabled_Continue" 
+						Text="This is one of the flight path profiles used bt the Pangaea Project." Title="WARNING" />
 			
 				
 				<CustomBehavior File="UserSettings" MountDistance="30" LearnFlightPaths="True" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="75" LogoutForInactivity="True" />
