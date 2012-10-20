@@ -14,6 +14,42 @@
 <QuestOrder>
 			
 
+			
+			<If Condition="Me.MapId == 0" >
+					<If Condition="((!HasQuest(29547)) &amp;&amp; (!IsQuestCompleted(29547)))" >
+						<CustomBehavior File="FlyTo" X="-8345.208" Y="639.4958" Z="95.79863" DestName="Stormwind Hero's Call Board" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" />
+					</If>
+			</If>
+			
+			<If Condition="Me.MapId == 0" >
+				<If Condition="((!HasQuest(29547)) &amp;&amp; (IsQuestCompleted(29547)))" >
+					<CustomBehavior File="FlyTo" X="-8199.543" Y="530.3414" Z="117.1778" DestName="Portal to Paw' don Village portal" />							
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="Taking the portal to Paw' don Village." LogColor="Lime" />
+					<CustomBehavior File="InteractWith" MobId="215457" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8194.47949" Y="528.112854" Z="117.290138" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="Message" Text="I've reached Paw' don Village." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
+				</If>
+			</If>
+			
+			<If Condition="Me.MapId == 0" >
+				<If Condition="Me.ZoneId == 1519" >
+					<If Condition="((!HasQuest(29547))" >						
+						<CustomBehavior File="Message" Text="." LogColor="Lime" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="60" ExpiryAction="InputEnabled_Continue" 
+						Text="Apparently, you have completed part of the quest line leading to Pandaria. Please complete the remaining quest until your feet are on the ground in Pandaria. Then restart the profile." Title="WARNING" />
+					</If>
+				</If>
+			</If>
+			
+			<If Condition="Me.MapId == 870" >
+				<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
+			</If>
+						
 				<If Condition="Me.ZoneId == 1519" > 
 					<If Condition="((HasQuest(29547)) &amp;&amp; (!IsQuestCompleted(29547)))" >
 							<CustomBehavior File="FlyTo" X="-8326.699" Y="283.287" Z="156.8326" DestName="Admiral Jes-Tereth" />
@@ -69,8 +105,8 @@
 
 				<If Condition="Me.MapId == 870" >
 					<If Condition="Me.ZoneId == 5785" >
-					<CustomBehavior File="ForcedMount" MountType="Ground" />
-					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<CustomBehavior File="ForcedMount" MountType="Ground" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />
 							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false"> 
 								<Hotspot X="-406.5822" Y="-1555.453" Z="34.36143" />
 								<Hotspot X="-406.1013" Y="-1618.601" Z="28.64371" />
@@ -78,9 +114,9 @@
 								<Hotspot X="-319.5256" Y="-1729.698" Z="46.14632" />
 							</CustomBehavior>
 								<RunTo X="-310.0143" Y="-1762.85" Z="61.59288" />
-						</If>
 					</If>
 				</If>
+
 				
 				<If Condition="Me.MapId == 870" >
 					<If Condition="Me.ZoneId == 5785" >

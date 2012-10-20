@@ -39,7 +39,15 @@
 		
 	<QuestOrder>
 				
-				<If Condition="Me.Level &gt;= 41 &amp;&amp; Me.Level &lt;= 89" >
+				<If Condition="Me.Level &gt;= 41 &amp;&amp; Me.Level &lt;= 84" >
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
+				</If>
+				
+				<If Condition="Me.Level == 85" >
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85]_[starting-quest-line]_botanist_pangaea" />
+				</If>
+				
+				<If Condition="Me.Level &gt;= 86" >
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
 				</If>
 				
