@@ -90,7 +90,8 @@
 				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />
 				<If Condition="Me.ZoneId == 5785" >
 					<If Condition="Me.X &gt; -165 || Me.Y &gt; -2471" >
-						<CustomBehavior File="Message" Text="I am in Jade Forest. Moving to Pearlfin Village." LogColor="Lime" />					
+						<CustomBehavior File="Message" Text="I am in Jade Forest. Getting the Paw' don Village flight path, then moving to Pearlfin Village.." LogColor="Lime" />
+							<RunTo X="-310.0143" Y="-1762.85" Z="61.59288" />
 							<RunTo X="-220.0725" Y="-2707.749" Z="5.288094" />
 						<CustomBehavior File="Message" Text="I have reached Pearlfin Village" LogColor="Lime" />
 					</If>

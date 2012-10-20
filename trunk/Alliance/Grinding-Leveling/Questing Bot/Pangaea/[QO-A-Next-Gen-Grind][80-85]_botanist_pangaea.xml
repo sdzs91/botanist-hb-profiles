@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-Next-Gen-Grind-][80-85]_botanist_pangaea</Name>
+	<Name>[QO-A-Next-Gen-Grind][80-85]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -38,45 +38,8 @@
 	<ClearVendor /><ClearMailbox />
 		
 	<QuestOrder>
-	
-				<If Condition="Me.Level == 85" >
-					<If Condition="((!HasQuest(29547)) &amp;&amp; (!IsQuestCompleted(29547)))" >
-						<CustomBehavior File="FlyTo" DestName="Pickup Quest" X="-8346.566" Y="639.5968" Z="95.38453" />
-						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for quest {TimeRemaining}" />
-							<If Condition="((HasQuest(29547)) &amp;&amp; (!IsQuestCompleted(29547)))" >
-								<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85]_[starting-quest-line]_botanist_pangaea" />	
-							</If>
-					</If>
-				</If>
-				<If Condition="Me.Level == 85" >
-					<If Condition="((!HasQuest(29547)) &amp;&amp; (IsQuestCompleted(29547)))" >
-						<CustomBehavior File="ForcedDismount" />
-						<CustomBehavior File="Message" Text="Taking the portal to Paw' don Village." LogColor="Lime" />
-						<CustomBehavior File="InteractWith" MobId="215457" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8194.47949" Y="528.112854" Z="117.290138" />
-						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
-					</If>
-				</If>
-		
 				
-				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
-						Text="This WILL BE a 1-90 fully afkable leveling profile. It currently levels 1-41 and 85-90 (if you start it in Jade Forest). It will consist of 8 profiles which will automatically load in sequential order as needed. The user will be resposible for insuring that the toon has proper gear for it's current level, by what ever means. The profile will control all settings except food and water. Those two things as well as gear will be user controled and the users resposibility. The profile will train riding skill up to Expert Riding ( slow flying ) provided there is at least 300 gold in you bags." Title="WARNING" />
-
-
-				<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt;= 84" >
-					<CustomBehavior File="Message" Text="This section hasn't been scripted yet." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />				 
-					<CustomBehavior File="Message" Text="Loading....[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />				
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
-				</If>
-				
-		                     	<!-- change profile -->
-								
-				<If Condition="Me.Level &gt;= 85 &amp;&amp; Me.Level &lt;= 89" >  
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />				 
-					<CustomBehavior File="Message" Text="Loading....[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />				
+				<If Condition="Me.Level &gt;= 41 &amp;&amp; Me.Level &lt;= 89" >
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
 				</If>
 				
