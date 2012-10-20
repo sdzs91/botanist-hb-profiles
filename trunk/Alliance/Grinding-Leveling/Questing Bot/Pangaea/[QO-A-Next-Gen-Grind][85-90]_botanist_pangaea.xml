@@ -77,16 +77,14 @@
 			
 				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
 				<If Condition="Me.ZoneId == 1519" > 
-					<CustomBehavior File="Message" Text="I'm in Stormwind. I am completeing the questline to go to Pandaria." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="-8199.543" Y="530.3414" Z="117.1778" DestName=" First Quest" />							
-					<CustomBehavior File="ForcedDismount" /> 
-					
-					<!-- pandaria opening quest will go here-->
-					
-					<CustomBehavior File="Message" Text="I've reached Paw' don Village." LogColor="Lime" />
-					<CustomBehavior File="Message" Text="Moving to Pearlfin Village." LogColor="Lime" />
-						<RunTo X="-220.0725" Y="-2707.749" Z="5.288094" />
-					<CustomBehavior File="Message" Text="I have reached Pearlfin Village." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I'm in Stormwind, flying to the Paw' don Village portal." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-8199.543" Y="530.3414" Z="117.1778" DestName="Portal to Paw' don Village portal" />							
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="Taking the portal to Paw' don Village." LogColor="Lime" />
+                    <CustomBehavior File="InteractWith" MobId="215457" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8194.47949" Y="528.112854" Z="117.290138" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="Message" Text="I've reached Paw' don Village." LogColor="Lime" /> 					
 				</If>
 
 				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />
