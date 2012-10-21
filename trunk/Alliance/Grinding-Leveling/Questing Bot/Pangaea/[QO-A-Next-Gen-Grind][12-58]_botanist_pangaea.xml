@@ -892,6 +892,7 @@
 					<RunTo X="2515.967" Y="-4746.156" Z="96.78388" />
 					<RunTo X="3143.536" Y="-4322.297" Z="129.3299" />
 					<RunTo X="2284.47" Y="-5323.674" Z="89.51148" />
+				</If>
 		</While>
 
 				<If Condition="Me.Level &gt;= 43 &amp;&amp; Me.Level &lt;= 44" >				
@@ -916,20 +917,21 @@
 				<CustomBehavior File="SetHearthstone" MobId="16256"  X="2295.74" Y="-5336.82" Z="90.75279" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="2716.441" Y="-4848.842" Z="85.02093" />
+					<RunTo X="3033.438" Y="-4331.768" Z="98.91806" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 45." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>21,14</Factions>
+							<Factions>7,14,21</Factions>
 								<Hotspots>
-									<Hotspot X="2716.441" Y="-4848.842" Z="85.02093" />
-									<Hotspot X="2725.101" Y="-4732.595" Z="75.44821" />
-									<Hotspot X="2715.792" Y="-4645.832" Z="81.68448" />
-									<Hotspot X="2816.428" Y="-4651.241" Z="88.91761" />
-									<Hotspot X="2892.316" Y="-4692.524" Z="86.24136" />
-									<Hotspot X="2865.637" Y="-4831.088" Z="100.3148" />
-									<Hotspot X="2812.155" Y="-4732.402" Z="77.07921" />								
+									<Hotspot X="3033.438" Y="-4331.768" Z="98.91806" />
+									<Hotspot X="2814.597" Y="-4272.174" Z="88.67224" />
+									<Hotspot X="2746.336" Y="-4198.623" Z="89.56605" />
+									<Hotspot X="2628.5" Y="-4152.983" Z="79.70138" />
+									<Hotspot X="2746.433" Y="-3875.082" Z="98.39162" />
+									<Hotspot X="2805.367" Y="-3838.504" Z="104.3988" />
+									<Hotspot X="2971.805" Y="-3953.08" Z="108.1908" />
+									<Hotspot X="3071.133" Y="-4090.854" Z="101.8098" />								
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 45)" GoalText="Farming" />

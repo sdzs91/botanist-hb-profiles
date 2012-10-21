@@ -45,20 +45,17 @@
 		
 		<QuestOrder>
 		
-	    <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" HarvestMinerals="False" HarvestHerbs="False" PullDistance="1"  KillBetweenHotspots="False"  FindVendorsAutomatically="True" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
-		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="20" ExpiryAction="InputEnabled_Continue" 
-						Text="This is one of the flight path profiles used bt the Pangaea Project." Title="WARNING" />
-						
+	    <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" HarvestMinerals="False" HarvestHerbs="False" PullDistance="1"  KillBetweenHotspots="False"  FindVendorsAutomatically="True" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />						
 		<While Condition="true" >
 						
 				<If Condition="Me.MapId == 870" >				 
 					<If Condition="Me.ZoneId == 5785" >
 						<If  Condition="Me.Level == 87" >
-							<CustomBehavior File="Message" Text="Moving to the Dawn's Blossom Dlight Master." LogColor="Lime" />
+							<CustomBehavior File="Message" Text="Moving to the Dawn's Blossom Flight Master." LogColor="Lime" />
 								<RunTo X="1599.626" Y="-1789.143" Z="260.9633" />
-							<CustomBehavior File="Message" Text="Moving to the Dawn's Blossom Dlight Master." LogColor="Lime" />
+							<CustomBehavior File="Message" Text="Learning the Dawn's Blossom flight path." LogColor="Lime" />
 								<RunTo X="1599.626" Y="-1789.143" Z="260.9633" />					
-							<CustomBehavior File="Message" Text="Moving to the Pang's Stead flight master." LogColor="Lime" />
+							<CustomBehavior File="Message" Text="Moving to the Pang's Stead Flight Master." LogColor="Lime" />
 								<RunTo X="523.0536" Y="-705.6851" Z="247.2467" />
 							<CustomBehavior File="Message" Text="Learning the Pang's Stead flight path." LogColor="Lime" />
 								<RunTo X="543.756" Y="-639.064" Z="257.5826" />
@@ -66,7 +63,7 @@
 								<RunTo X="529.8577" Y="-595.139" Z="258.4104" />
 								<RunTo X="449.0804" Y="-291.4752" Z="204.8554" />
 							<CustomBehavior File="Message" Text="Learning the Grassey Cline flight path." LogColor="Lime" />
-								<RunTo ="405.0258" Y="-62.77075" Z="172.2329" />
+								<RunTo X="405.0258" Y="-62.77075" Z="172.2329" />
 							<CustomBehavior File="Message" Text="Moving to the Halfhill Flight Master." LogColor="Lime" />
 								<RunTo X="-233.799" Y="606.9675" Z="167.2605" />
 							<CustomBehavior File="Message" Text="Learning the Halfhil flight path." LogColor="Lime" />	
