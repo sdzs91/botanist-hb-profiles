@@ -41,7 +41,7 @@
 		
 	<QuestOrder>
 	
-				<If Condition="Me.Level &gt;= 41 &amp;&amp; Me.Level &lt;= 89" >
+				<If Condition="Me.Level &gt;= 45 &amp;&amp; Me.Level &lt;= 89" >
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][80-85]_botanist_pangaea" />
 				</If>
 

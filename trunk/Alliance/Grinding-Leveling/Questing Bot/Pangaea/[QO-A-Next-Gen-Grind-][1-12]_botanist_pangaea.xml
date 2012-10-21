@@ -69,15 +69,12 @@
 		
 	<QuestOrder IgnoreCheckPoints="False" >
 	
-	
+				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
+						Text="This WILL BE a 1-90 fully afkable leveling profile compilation. It currently levels 1-45 and 85-90 (Includes the opening quest line for Pandaria). Levels 45-85 haven't been scripted yet. It will consist of 10 profiles which will automatically load in sequential order as needed. The user will be resposible for insuring that the toon has proper gear for it's current level, by what ever means. The profile will control all settings except food and water. Those two things as well as gear will be user controled and the users resposibility. The profile will train riding skill up to Expert Riding ( slow flying ) provided there is at least 300 gold in you bags. Please post any issues, complaints or in the ublikely event, successes on my Honorbuddy page at http://www.thebuddyforum.com/honorbuddy-forum/submitted-profiles/67052-botanist-profile-collection.html Update via svn at http://botanist-hb-profiles.googlecode.com/svn/trunk/. More levels are added daily." Title="WARNING" />
+		
 				<If Condition="Me.Level &gt;= 12" >			
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][12-58]_botanist_pangaea" />
 				</If>
-				
-				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
-						Text="This WILL BE a 1-90 fully afkable leveling profile. It currently levels 1-41 and 85-90 (Includes Pandaria opening quest line). It will consist of 10 profiles which will automatically load in sequential order as needed. The user will be resposible for insuring that the toon has proper gear for it's current level, by what ever means. The profile will control all settings except food and water. Those two things as well as gear will be user controled and the users resposibility. The profile will train riding skill up to Expert Riding ( slow flying ) provided there is at least 300 gold in you bags." Title="WARNING" />
-						
-							
 						
 		<While Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt;= 4" >
 	

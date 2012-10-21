@@ -56,18 +56,17 @@
 							<CustomBehavior File="Message" Text="Learning the Dawn's Blossom flight path." LogColor="Lime" />
 								<RunTo X="1599.626" Y="-1789.143" Z="260.9633" />					
 							<CustomBehavior File="Message" Text="Moving to the Pang's Stead Flight Master." LogColor="Lime" />
-								<RunTo X="523.0536" Y="-705.6851" Z="247.2467" />
+								<RunTo X="530.687" Y="-721.8248" Z="248.3259" />
 							<CustomBehavior File="Message" Text="Learning the Pang's Stead flight path." LogColor="Lime" />
-								<RunTo X="543.756" Y="-639.064" Z="257.5826" />
+								<RunTo X="519.7079" Y="-565.8562" Z="257.8145" />
 							<CustomBehavior File="Message" Text="Moving to the Grassey Cline Flight Master." LogColor="Lime" />
-								<RunTo X="529.8577" Y="-595.139" Z="258.4104" />
 								<RunTo X="449.0804" Y="-291.4752" Z="204.8554" />
 							<CustomBehavior File="Message" Text="Learning the Grassey Cline flight path." LogColor="Lime" />
 								<RunTo X="405.0258" Y="-62.77075" Z="172.2329" />
 							<CustomBehavior File="Message" Text="Moving to the Halfhill Flight Master." LogColor="Lime" />
 								<RunTo X="-233.799" Y="606.9675" Z="167.2605" />
 							<CustomBehavior File="Message" Text="Learning the Halfhil flight path." LogColor="Lime" />	
-								<RunTo X="-236.1961" Y="570.5912" Z="167.84" />
+								<RunTo X="-204.9718" Y="495.2273" Z="187.1902" />
 							<CustomBehavior File="WaitTimer" WaitTime="2000" />					
 								<If Condition="Me.MapId == 870" >				 
 									<If Condition="Me.ZoneId == 5805" >
