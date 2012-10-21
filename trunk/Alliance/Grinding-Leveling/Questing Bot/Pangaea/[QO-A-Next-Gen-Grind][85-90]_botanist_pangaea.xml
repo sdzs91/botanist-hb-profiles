@@ -133,7 +133,7 @@
 				<If Condition="Me.ZoneId == 5785" >
 					<CustomBehavior File="Message" Text="Position check #5." LogColor="Lime" />
 						<If Condition="Me.X &lt; 60.13237 &amp;&amp; Me.Y &lt; -2205.429" >
-							<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
+							<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until I resach level 87." LogColor="Lime" />
 							<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
 							<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 							<CustomBehavior File="RunMacro" Macro="/sort bags" />
