@@ -22,15 +22,16 @@
 	<TargetElites></TargetElites>
 	
 	<AvoidMobs>
-		<AvoidMob Name="Training Dummy" Entry="44548" />
-		<AvoidMob Name="Thuros Lightfingers" Entry="61" />
-		<AvoidMob Name="Ritualist Tarak" Entry="43363" />
-		<AvoidMob Name="Overlord Barbarius" Entry="43369" />
-		<AvoidMob Name="Blackrock Worg Captain" Entry="43341"  />
-		<AvoidMob Name="Kalaran the Annihilator" Entry="46859"  />
-	    <AvoidMob Name="Anathemus" Entry="2754" />
-		<AvoidMob Name="Stonard Kodo Beast" Entry="46748" />
-		<AvoidMob Name="Felscale Crawler" Entry="45087" />		
+		<Mob Name="Scorched Guardian" Entry="2726" />
+		<Mob Name="Training Dummy" Entry="44548" />
+		<Mob Name="Thuros Lightfingers" Entry="61" />
+		<Mob Name="Ritualist Tarak" Entry="43363" />
+		<Mob Name="Overlord Barbarius" Entry="43369" />
+		<Mob Name="Blackrock Worg Captain" Entry="43341"  />
+		<Mob Name="Kalaran the Annihilator" Entry="46859"  />
+		<Mob Name="Anathemus" Entry="2754" />
+		<Mob Name="Stonard Kodo Beast" Entry="46748" />
+		<Mob Name="Felscale Crawler" Entry="45087" />		
 	</AvoidMobs>
 	
 	<Blackspots>
@@ -104,7 +105,7 @@
 			
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Sentinel Hill in Westfall." LogColor="Lime" />  
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Sentinel Hill in Westfall." LogColor="Lime" />														
 					<RunTo X="-10650.82" Y="1165.563" Z="34.51858" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
@@ -155,16 +156,16 @@
 				
 				<If Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 17" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 14 to 17 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 			
 		<While Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 17" >	
 	
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Sentinel Hill in Westfall." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Sentinel Hill in Westfall." LogColor="Lime" />														
 					<RunTo X="-10650.82" Y="1165.563" Z="34.51858" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
@@ -213,15 +214,15 @@
 				
 				<If Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 18 to 20 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 			
 	<While Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >		
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Lakeshire in Redridge Mountains." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Lakeshire in Redridge Mountains." LogColor="Lime" />														
 					<RunTo X="-9226.454" Y="-2155.743" Z="63.73067" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
@@ -275,9 +276,9 @@
 				
 				<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0" >				
 					<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am level 20. I need to buy a mount and mount training." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>						   
 
 						  	
@@ -285,19 +286,19 @@
 					<CustomBehavior File="Message" Text="Moving to the riding trainer Stormwind." LogColor="Orange" />
 					<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
 					<CustomBehavior File="Message" Text="I have reached the riding trainer. Training journeyman riding." LogColor="Orange" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="43769" WaitTime="1000" CollectionDistance="50" X="-8845.4" Y="502.653" Z="109.617" />
 					<CustomBehavior File="ForceTrainRiding" MobId="43769" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
 				 
 						
 			<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &gt;= 1" >					
 				<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="I am in the 20 to 22 bracket and have learned journeyman riding." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />				
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />				
 			</If>
 			
 		<While Condition="Me.Level &gt;= 20 &amp;&amp; Me.Level &lt;= 21" >		
@@ -306,7 +307,7 @@
 								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Lakeshire in Redridge Mountains." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Lakeshire in Redridge Mountains." LogColor="Lime" />														
 					<RunTo X="-9226.454" Y="-2155.743" Z="63.73067" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
@@ -356,9 +357,9 @@
 
 				<If Condition="Me.Level &gt;= 22 &amp;&amp; Me.Level &lt;= 23" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 22 to 25 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
 		<While Condition="Me.Level &gt;= 22 &amp;&amp; Me.Level &lt;= 25" >		
@@ -367,7 +368,7 @@
 								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Darkshire in Duskwood." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Darkshire." LogColor="Lime" />														
 					<RunTo X="-10515.98" Y="-1163.506" Z="28.10034" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
@@ -419,9 +420,9 @@
 
 				<If Condition="Me.Level &gt;= 26 &amp;&amp; Me.Level &lt;= 27" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 26 to 2 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
 		<While Condition="Me.Level &gt;= 26 &amp;&amp; Me.Level &lt;= 27" >		
@@ -430,7 +431,7 @@
 								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Nesingwary's Expedition in Northern Stranglethorn." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Since there is no mail box in Northern Stranglethorn, I'll set my hearthstone in Darkshire for now." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Darkshire." LogColor="Lime" />														
@@ -496,9 +497,9 @@
 
 				<If Condition="Me.Level &gt;= 28 &amp;&amp; Me.Level &lt;= 31" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 28 to 32 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
 		<While Condition="Me.Level &gt;= 28 &amp;&amp; Me.Level &lt;= 31" >		
@@ -507,7 +508,7 @@
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Balia'mah Ruina in Northern Stranglethorn." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Since there is no mail box in Northern Stranglethorn, I'll set my hearthstone in Darkshire for now." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Darkshire." LogColor="Lime" />														
@@ -561,9 +562,9 @@
 
 				<If Condition="Me.Level &gt;= 32 &amp;&amp; Me.Level &lt;= 33" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 31 to 34 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
 		<While Condition="Me.Level &gt;= 32 &amp;&amp; Me.Level &lt;= 33" >		
@@ -572,7 +573,7 @@
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Booty Bay in The Cape of Stranglethorn." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Booty Bay." LogColor="Lime" />														
 					<RunTo X="-14458.77" Y="492.9921" Z="15.12531" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
@@ -628,9 +629,9 @@
 
 				<If Condition="Me.Level &gt;= 34 &amp;&amp; Me.Level &lt;= 35" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 34 to 36 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 
 		<While Condition="Me.Level &gt;= 34 &amp;&amp; Me.Level &lt;= 35" >		
@@ -639,7 +640,7 @@
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Aerie Peak in The Hinterlands." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Aerie Peak." LogColor="Lime" />														
 					<RunTo X="316.7757" Y="-2119.679" Z="121.8378" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
@@ -694,9 +695,9 @@
 
 				<If Condition="Me.Level &gt;= 36 &amp;&amp; Me.Level &lt;= 38" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 36 to 39 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
 		<While Condition="Me.Level &gt;= 36 &amp;&amp; Me.Level &lt;= 38" >		
@@ -705,7 +706,7 @@
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Chillwind Camp in Western Plaguelands." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Chillwind Camp." LogColor="Lime" />														
 					<RunTo X="943.2197" Y="-1447.792" Z="63.40036" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
@@ -763,9 +764,9 @@
 
 				<If Condition="Me.Level &gt;= 39 &amp;&amp; Me.Level &lt;= 40" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 39 to 41 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
 		<While Condition="Me.Level &gt;= 39 &amp;&amp; Me.Level &lt;= 40" >		
@@ -774,7 +775,7 @@
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Chillwind Camp in Western Plaguelands." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Chillwind Camp." LogColor="Lime" />														
 					<RunTo X="943.2197" Y="-1447.792" Z="63.40036" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
@@ -826,9 +827,9 @@
 
 				<If Condition="Me.Level &gt;= 41 &amp;&amp; Me.Level &lt;= 42" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 41 to 43 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
 		<While Condition="Me.Level &gt;= 41 &amp;&amp; Me.Level &lt;= 42" >		
@@ -837,7 +838,7 @@
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Light's Hope Chapel in Eastern Plaguelands." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Light's Hope Chapel." LogColor="Lime" />														
 					<RunTo X="2295.49" Y="-5334.323" Z="90.75345" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
@@ -893,9 +894,9 @@
 
 				<If Condition="Me.Level &gt;= 43 &amp;&amp; Me.Level &lt;= 44" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 43 to 45 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
 		<While Condition="Me.Level &gt;= 43 &amp;&amp; Me.Level &lt;= 44" >		
@@ -904,14 +905,14 @@
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Light's Hope Chapel in Eastern Plaguelands." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Light's Hope Chapel." LogColor="Lime" />														
 					<RunTo X="2295.49" Y="-5334.323" Z="90.75345" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="16256"  X="2295.74" Y="-5336.82" Z="90.75279" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
 					<RunTo X="3033.438" Y="-4331.768" Z="98.91806" />
 								 
@@ -934,7 +935,7 @@
 				</If>
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
@@ -954,20 +955,80 @@
 					
 		</While>
 
-				<If Condition="Me.Level &gt;= 45 &amp;&amp; Me.Level &lt;= 47" >				
+				<If Condition="Me.Level &gt;= 45 &amp;&amp; Me.Level &lt;= 46" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 45 to 47 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				</If>
+				
+		<While Condition="Me.Level &gt;= 45 &amp;&amp; Me.Level &lt;= 46" >		
+				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
+								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
+								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+								LogoutForInactivity="True" />					
+				<CustomBehavior File="Message" Text="Position check, Fuselight in Badlands." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Fuselight." LogColor="Lime" />														
+					<RunTo X="-6587.466" Y="-3924.855" Z="379.6115" />
+				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="SetHearthstone" MobId="48054"  X="-6584.51" Y="-3923.13" Z="379.5427" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
+					<RunTo X="-6633.793" Y="-4097.109" Z="264.3159" />
+								 
+				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 45." LogColor="Lime" />				
+						<SetGrindArea><GrindArea>
+							<Factions>16</Factions>
+								<Hotspots>
+									<Hotspot X="-6633.793" Y="-4097.109" Z="264.3159" />
+									<Hotspot X="-6798.36" Y="-4159.396" Z="266.3663" />
+									<Hotspot X="-6952.15" Y="-3989.729" Z="264.7964" />
+									<Hotspot X="-6862.365" Y="-3929.519" Z="264.844" />
+									<Hotspot X="-6686.398" Y="-4027.225" Z="265.5337" />								
+								</Hotspots>
+						</GrindArea></SetGrindArea>					
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 47)" GoalText="Farming" />
+				</If>
+
+				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Artie Steelbolt" Entry="48057" Type="Repair" X="-6600.45" Y="-3898.99" Z="379.1212" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="-6599.594" Y="-3929.296" Z="379.4118" />
+							</Mailboxes>
+						</SetMailbox>				
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					</If>
+					
+		</While>
+
+				<If Condition="Me.Level &gt;= 47 &amp;&amp; Me.Level &lt;= 48" >				
+					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am in the 47 to 49 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 			     
 				 <!-- chnge this level to current level of script -->
 				 
-				<If Condition="Me.Level &gt;= 45" >
+				<If Condition="Me.Level &gt;= 47" >
 					<CustomBehavior File="Message" Text="This section is unscripted. Loading the next section." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />				 
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />				 
 					<CustomBehavior File="Message" Text="Loading....QO-A-Next-Gen-Grind][58-68]_botanist_pangaea" LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />	
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][58-68]_botanist_pangaea" />
 				</If>
 				
