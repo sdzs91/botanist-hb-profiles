@@ -130,7 +130,7 @@
 		</While>				
 				
 				<If Condition="Me.MapId == 530" >
-					<If Condition="Me.Level == 60 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt; 225 &amp;&amp; Me.Silver &gt;= 2600" >				
+					<If Condition="Me.Level == 60 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt; 225 &amp;&amp; Me.Gold &gt;= 251" >				
 						<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="I am in the 60-62 bracket. I need flying mount training." LogColor="Lime" />
@@ -503,12 +503,12 @@
 					
 					
 				<If Condition="Me.MapId == 0" >
-					<If Condition="Me.Level == 68 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 225 &amp;&amp; Me.Silver &gt;= 25000" >				
+					<If Condition="Me.Level == 68 &amp;&amp; (!HasSpell(90267)) &amp;&amp; Me.Gold &gt;= 251" >				
 						<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Message" Text="I am level 68. I need flying mount training." LogColor="Lime" />
+						<CustomBehavior File="Message" Text="I am level 68. I need a Flight Master's License." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Message" Text="Moving to the riding trainer Stormwind." LogColor="Orange" />
+						<CustomBehavior File="Message" Text="Moving to the riding trainer in Stormwind." LogColor="Orange" />
 							<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
 						<CustomBehavior File="Message" Text="I have reached the riding trainer. Buying a Flight Master's License." LogColor="Orange" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -516,22 +516,22 @@
 						<CustomBehavior File="ForceTrainRiding" MobId="43769" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					</If>
-						<If Condition="Me.Level == 68 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 225" >					
+						<If Condition="Me.Level == 68 &amp;&amp; (HasSpell(90267))" >					
 							<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
 							<CustomBehavior File="Message" Text="I am in the 68 to 70 bracket and have a Flight Master's License." LogColor="Lime" />
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
 								<RunTo X="-8853.883" Y="538.7916" Z="105.9308" />
-							<CustomBehavior File="ForcedMount" MountType="Flying" />
-							<CustomBehavior File="FlyTo" X="-8291.008" Y="1405.078" Z="4.725736" />
 						</If>
 				</If>
 
 							<!-- ****************************************************** -->
-							
-				<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 79" >
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][68-80]_botanist_pangaea" />
-				</If>			
+				
+				<If Condition="Me.MapId == 0" >				
+					<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 79" >
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][Goto][Stormwind-Northrend]_botanist_pangaea" />
+					</If>
+				</If>		
 				
 	</QuestOrder >			
   

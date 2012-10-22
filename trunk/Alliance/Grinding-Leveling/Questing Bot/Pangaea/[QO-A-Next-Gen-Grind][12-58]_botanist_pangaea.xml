@@ -35,7 +35,8 @@
 	</AvoidMobs>
 	
 	<Blackspots>
-		<Blackspot X="-7137.478" Y="-2425.802" Z="240.801" Radius="60" />
+		<Blackspot X="-7036.757" Y="-2547.748" Z="252.024" Radius="3" />
+		<Blackspot X="-7137.478" Y="-2425.802" Z="240.801" Radius="50" />
 		<Blackspot X="2801.834" Y="-4730.452" Z="76.77521" Radius="200" />
 		<Blackspot X="2030.467" Y="-4495.556" Z="73.62353" Radius="250" />
 		<Blackspot X="-239.8224" Y="-2559.555" Z="118.475" Radius="50" />
@@ -48,7 +49,6 @@
 		<Blackspot X="-6668.112" Y="-1751.932" Z="259.7436" Radius="30" />
 	    <Blackspot X="-6971.354" Y="-1112.741" Z="238.1286" Radius="30" />
 		<Blackspot X="-6740.803" Y="-2530.427" Z="241.9482" Radius="100" />
-	    <Blackspot X="-7038.604" Y="-2506.52" Z="246.2232" Radius="35" />
 	    <Blackspot X="-7342.984" Y="-2275.711" Z="239.7346" Radius="15" />
 		<Blackspot X="1525.592" Y="-1610.12" Z="65.16791" Radius="200" />
 	    <Blackspot X="1387.082" Y="-1515.57" Z="59.16008" Radius="150" />
@@ -283,10 +283,10 @@
 				</If>						   
 
 						  	
-				<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Silver &gt;= 450" >
+				<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Gold &gt;= 5" >
 					<CustomBehavior File="Message" Text="Moving to the riding trainer Stormwind." LogColor="Orange" />
 					<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
-					<CustomBehavior File="Message" Text="I have reached the riding trainer. Training journeyman riding." LogColor="Orange" />
+					<CustomBehavior File="Message" Text="I have reached the riding trainer. Training Apprentice Riding." LogColor="Orange" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="43769" WaitTime="1000" CollectionDistance="50" X="-8845.4" Y="502.653" Z="109.617" />
 					<CustomBehavior File="ForceTrainRiding" MobId="43769" />
@@ -827,7 +827,7 @@
 		</While>
 		
 				<If Condition="Me.MapId == 0" >
-					<If Condition="Me.Level &gt;= 41 &amp;&amp; Me.Level &gt;= 58 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt; 150 &amp;&amp; Me.Silver &gt;= 5000" >				
+					<If Condition="Me.Level &gt;= 41 &amp;&amp; Me.Level &gt;= 58 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt; 150 &amp;&amp; Me.Gold &gt;= 50" >				
 						<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="I am level 41. I need mount training." LogColor="Lime" />
@@ -1032,7 +1032,7 @@
 					
 					<If Condition="Me.Level == 47" >				
 						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-							<RunTo X="-6572.361" Y="-3874.878" Z="390.9399" />							
+							<RunTo X="-6572.361" Y="-3874.878" Z="390.9399" />						
 					</If>
 					
 		</While>
@@ -1052,7 +1052,7 @@
 				<CustomBehavior File="Message" Text="Position check, Dragon's Mouth in Badlands." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Dragon's Mouth." LogColor="Lime" />														
-					<RunTo X="-6998.899" Y="-2537.884" Z="241.7137" />
+					<RunTo X="-7001.756" Y="-2538.377" Z="241.715" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1085,12 +1085,12 @@
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Fergus Gravelsmash" Entry="47937" Type="Repair" X="-7093.68" Y="-1268.31" Z="270.4859" />
+								<Vendor Name="'Snake' Sanders" Entry="48096" Type="Repair" X="-7041.03" Y="-2555.21" Z="252.3194" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-7111.56" Y="-1202.843" Z="306.9311" />
+								<Mailbox X="-7004.24" Y="-2540.408" Z="241.7146" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
