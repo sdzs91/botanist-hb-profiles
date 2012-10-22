@@ -297,7 +297,7 @@
 			<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &gt;= 1" >					
 				<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="I am in the 20 to 22 bracket and have learned journeyman riding." LogColor="Lime" />
+				<CustomBehavior File="Message" Text="I am in the 20 to 22 bracket and have learned Apprentice Riding." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />				
 			</If>
 			
@@ -808,8 +808,8 @@
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
-					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Leonard Porter" Entry="12942" Type="Repair" X="949.8846" Y="-1435.649" Z="62.5901" />
@@ -824,11 +824,27 @@
 					</If>
 					
 		</While>
+		
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.Level &gt;= 41 &amp;&amp; Me.Level &gt;= 58 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt; 150 &amp;&amp; Me.Silver &gt;= 5000" >				
+						<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am level 41. I need mount training." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="Moving to the riding trainer Stormwind." LogColor="Orange" />
+							<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
+						<CustomBehavior File="Message" Text="I have reached the riding trainer. Training Journeyman Riding." LogColor="Orange" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="InteractWith" MobId="43769" WaitTime="1000" CollectionDistance="50" X="-8845.4" Y="502.653" Z="109.6171" />
+						<CustomBehavior File="ForceTrainRiding" MobId="43769" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					</If>
+				</If>
 
-				<If Condition="Me.Level &gt;= 41 &amp;&amp; Me.Level &lt;= 42" >				
+				<If Condition="Me.Level &gt;= 41 &amp;&amp; Me.Level &lt;= 42 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 150" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the 41 to 43 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 41 to 43 bracket I trained Journeyman Riding, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
