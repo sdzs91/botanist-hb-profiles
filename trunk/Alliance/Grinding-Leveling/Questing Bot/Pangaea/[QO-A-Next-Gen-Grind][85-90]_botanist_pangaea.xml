@@ -67,7 +67,7 @@
 		
 		<If Condition="Me.Level &lt; 85" > 
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="Message" Text="Levels 45-85 haven't been scripted yet. Update vis svn at http://botanist-hb-profiles.googlecode.com/svn/trunk/. More levels are added daily. I am stopping the bot" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Levels 45-85 haven't been scripted yet. Update via svn at http://botanist-hb-profiles.googlecode.com/svn/trunk/. More levels are added daily. I am stopping the bot" LogColor="Lime" />
 					<CustomBehavior File="UserSettings" StopBot="true" />
 		</If>
 		
