@@ -46,13 +46,10 @@
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][80-85]_botanist_pangaea" />
 				</If>
 				
-				<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt;= 84" >
+				<If Condition="Me.Level &gt;= 80 " >
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][80-85]_botanist_pangaea" />
 				</If>
-				
-				<If Condition="Me.Level &gt;= 85 &amp;&amp; Me.Level &lt;= 89" >
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
-				</If>
+
 				
 				
 

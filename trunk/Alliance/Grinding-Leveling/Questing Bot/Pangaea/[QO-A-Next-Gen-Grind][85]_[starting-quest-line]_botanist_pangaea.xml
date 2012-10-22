@@ -13,7 +13,14 @@
     
 <QuestOrder>
 			
-
+			<If Condition="Me.Level &lt;= 84" >
+				<CustomBehavior File="Message" Text="Your character isn't high enough level for this section.." LogColor="Lime" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
+			</If>
+			
+			<If Condition="Me.Level &gt;= 86" >
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
+			</If>
 			
 			<If Condition="Me.MapId == 0" >
 					<If Condition="((!HasQuest(29547)) &amp;&amp; (!IsQuestCompleted(29547)))" >
