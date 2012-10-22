@@ -46,8 +46,7 @@
 		
 	<QuestOrder>
 	
-				<If Condition="Me.Level &gt;= 62 &amp;&amp; Me.Level &lt;= 67" >
-					<CustomBehavior File="Message" Text="I am in the 62-68 section. This section hasn't been scripted yet. Changing to next profile" LogColor="Lime" />
+				<If Condition="Me.Level &gt;= 68" >
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][68-80]_botanist_pangaea" />
 				</If>
 				
