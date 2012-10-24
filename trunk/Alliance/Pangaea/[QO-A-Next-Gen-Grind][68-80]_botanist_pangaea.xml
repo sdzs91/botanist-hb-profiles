@@ -26,6 +26,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="3730.601" Y="5146.666" Z="24.42983" Radius="50" />
 		<Blackspot X="2045.704" Y="6407.168" Z="48.45453" Radius="50" />
 	</Blackspots>
 
@@ -69,7 +70,7 @@
 				<CustomBehavior File="ForcedDismount" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 14." LogColor="Lime" />				
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 70." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>1917,15,1711</Factions>
 								<Hotspots>
@@ -86,7 +87,7 @@
 									<Hotspot X="2182.062" Y="5906.98" Z="64.09299" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level &gt;= 14)" GoalText="Farming" />
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 70)" GoalText="Farming" />
 				</If>
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
@@ -117,7 +118,141 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
-				<If Condition="Me.Level &gt;= 70 &amp;&amp; Me.Level &lt; 80" >
+		<While Condition="Me.MapId == 571 &amp;&amp; Me.Level &gt;= 70 &amp;&amp; Me.Level &lt;= 71" >
+					
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="Message" Text="Position check, Valiance Keep in Borean Tundra." LogColor="Lime" />  
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Valiance Keep in Westfall." LogColor="Lime" />														
+				<CustomBehavior File="FlyTo"  X="2256.638" Y="5202.188" Z="11.31015" />
+				<CustomBehavior File="ForcedDismount" />
+				<RunTo X="2280.506" Y="5206.809" Z="12.4944" />
+				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="SetHearthstone" MobId="25245"  X="2282.294" Y="5210.832" Z="12.49425" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
+					<RunTo X="2256.638" Y="5202.188" Z="11.31015" />
+				<CustomBehavior File="ForcedMount" MountType="Flying" />
+				<CustomBehavior File="FlyTo"  X="3275.325" Y="5439.385" Z="52.43922" />
+				<CustomBehavior File="ForcedDismount" />
+								 
+				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 72." LogColor="Lime" />				
+						<SetGrindArea><GrindArea>
+							<Factions>1990,190</Factions>
+								<Hotspots>
+									<Hotspot X="3275.325" Y="5439.385" Z="52.43922" />									
+									<Hotspot X="3299.276" Y="5334.421" Z="40.98475" />
+									<Hotspot X="3421.205" Y="5487.07" Z="69.27511" />
+									<Hotspot X="3523.924" Y="5303.594" Z="27.71567" />
+									<Hotspot X="3755.875" Y="5365.266" Z="34.22314" />
+									<Hotspot X="3882.128" Y="5386.388" Z="24.50966" />
+									<Hotspot X="3762.608" Y="5228.327" Z="25.60859" />
+									<Hotspot X="3593.32" Y="5170.178" Z="26.29511" />
+									<Hotspot X="3301.666" Y="5223.633" Z="26.85169" />
+								</Hotspots>
+						</GrindArea></SetGrindArea>					
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 72)" GoalText="Farming" />
+				</If>
+
+				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Broff Bombast" Entry="27011" Type="Food" X="2359.466" Y="5237.433" Z="7.713106" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="2259.917" Y="5199.533" Z="11.34422" />
+							</Mailboxes>
+						</SetMailbox>				
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					</If>
+					
+		</While>				
+				
+				<If Condition="Me.Level &gt;= 72 &amp;&amp; Me.Level &lt;= 73" >				
+					<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am in the 72 to 74 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				</If>
+				
+		<While Condition="Me.MapId == 571 &amp;&amp; Me.Level &gt;= 72 &amp;&amp; Me.Level &lt;= 73" >
+					
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="Message" Text="Position check, Valiance Keep in Borean Tundra." LogColor="Lime" />  
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Valiance Keep in Westfall." LogColor="Lime" />														
+				<CustomBehavior File="FlyTo"  X="2256.638" Y="5202.188" Z="11.31015" />
+				<CustomBehavior File="ForcedDismount" />
+				<RunTo X="2280.506" Y="5206.809" Z="12.4944" />
+				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="SetHearthstone" MobId="25245"  X="2282.294" Y="5210.832" Z="12.49425" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
+					<RunTo X="2256.638" Y="5202.188" Z="11.31015" />
+				<CustomBehavior File="ForcedMount" MountType="Flying" />
+				<CustomBehavior File="FlyTo"  X="3275.325" Y="5439.385" Z="52.43922" />
+				<CustomBehavior File="ForcedDismount" />
+								 
+				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 72." LogColor="Lime" />				
+						<SetGrindArea><GrindArea>
+							<Factions>1990,190</Factions>
+								<Hotspots>
+									<Hotspot X="3275.325" Y="5439.385" Z="52.43922" />									
+									<Hotspot X="3299.276" Y="5334.421" Z="40.98475" />
+									<Hotspot X="3421.205" Y="5487.07" Z="69.27511" />
+									<Hotspot X="3523.924" Y="5303.594" Z="27.71567" />
+									<Hotspot X="3755.875" Y="5365.266" Z="34.22314" />
+									<Hotspot X="3882.128" Y="5386.388" Z="24.50966" />
+									<Hotspot X="3762.608" Y="5228.327" Z="25.60859" />
+									<Hotspot X="3593.32" Y="5170.178" Z="26.29511" />
+									<Hotspot X="3301.666" Y="5223.633" Z="26.85169" />
+								</Hotspots>
+						</GrindArea></SetGrindArea>					
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 72)" GoalText="Farming" />
+				</If>
+
+				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Broff Bombast" Entry="27011" Type="Food" X="2359.466" Y="5237.433" Z="7.713106" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="2259.917" Y="5199.533" Z="11.34422" />
+							</Mailboxes>
+						</SetMailbox>				
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					</If>
+					
+		</While>				
+				
+				<If Condition="Me.Level &gt;= 72 &amp;&amp; Me.Level &lt;= 73" >				
+					<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am in the 72 to 74 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				</If>
+				
+				<If Condition="Me.Level &gt;= 72 &amp;&amp; Me.Level &lt; 80" >
 					<CustomBehavior File="Message" Text="This section is currently being scripted." LogColor="Lime" />
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][80-85]_botanist_pangaea" />
 				</If>
