@@ -1351,7 +1351,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 
-		<While Condition="Me.Level &gt;= 53 &amp;&amp; Me.Level &lt;= 54" >		
+		<While Condition="Me.Level &gt;= 53 &amp;&amp; Me.Level &lt; 54" >		
 				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
 								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
@@ -1410,7 +1410,7 @@
 		</While>
 
 				<If Condition="Me.Level &gt;= 54 &amp;&amp; Me.Level &lt;= 55" >				
-					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
+					<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 54 to 56 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
