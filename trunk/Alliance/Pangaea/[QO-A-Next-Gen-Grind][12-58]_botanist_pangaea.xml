@@ -35,6 +35,21 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="-9945.886" Y="-4092.969" Z="17.37486" Radius="5" />
+		<Blackspot X="-9966.697" Y="-4123.455" Z="19.12684" Radius="5" />
+		<Blackspot X="-10032.42" Y="-4118.155" Z="18.39956" Radius="5" />
+		<Blackspot X="-10066.46" Y="-4143.906" Z="18.24118" Radius="5" />
+		<Blackspot X="-10132.55" Y="-4159.717" Z="17.96589" Radius="5" />
+		<Blackspot X="-10126.8" Y="-4214.416" Z="18.40329" Radius="5" />
+		<Blackspot X="-10208.15" Y="-4243.649" Z="17.99107" Radius="5" />
+		<Blackspot X="-10275.73" Y="-4231.984" Z="21.97873" Radius="5" />
+		<Blackspot X="-10263.97" Y="-4179.06" Z="17.95983" Radius="5" />
+		<Blackspot X="-10230.38" Y="-4109.109" Z="17.572" Radius="5" />
+		<Blackspot X="-10184.65" Y="-4019.121" Z="18.58933" Radius="5" />
+		<Blackspot X="-10119.78" Y="-3990.301" Z="18.76582" Radius="5" />
+		<Blackspot X="-9875.237" Y="-4050.469" Z="18.791" Radius="5" />
+		<Blackspot X="-9805.711" Y="-3966.23" Z="18.24864" Radius="5" />
+		<Blackspot X="-9945.886" Y="-4092.969" Z="17.37486" Radius="6" />
 		<Blackspot X="-10203.35" Y="-4185.313" Z="22.28699" Radius="50" />
 		<Blackspot X="-10116.87" Y="-3223.714" Z="18.34932" Radius="5" />
 		<Blackspot X="-10145.03" Y="-2940.118" Z="19.06388" Radius="5" />
