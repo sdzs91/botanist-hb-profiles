@@ -58,7 +58,7 @@
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Valiance Keep in Borean Tundra." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Valiance Keep in Westfall." LogColor="Lime" />														
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Valiance Keep." LogColor="Lime" />														
 					<RunTo X="2280.506" Y="5206.809" Z="12.4944" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
@@ -124,9 +124,9 @@
 		<While Condition="Me.Level &gt;= 70 &amp;&amp; Me.Level &lt;= 71" >
 					
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Valiance Keep in Borean Tundra." LogColor="Lime" />  
+				<CustomBehavior File="Message" Text="Position check, Fizzcrank Airstrip in Borean Tundra." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Valiance Keep in Westfall." LogColor="Lime" />														
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Fizzcrank Airstrip." LogColor="Lime" />														
 				<CustomBehavior File="FlyTo" X="4160.617" Y="5280.846" Z="26.22425" />
 				<CustomBehavior File="ForcedDismount" />
 					<RunTo X="4176.722" Y="5280.369" Z="26.6932" />
@@ -195,9 +195,9 @@
 		<While Condition="Me.Level &gt;= 72 &amp;&amp; Me.Level &lt;= 73" >
 					
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Valiance Keep in Borean Tundra." LogColor="Lime" />  
+				<CustomBehavior File="Message" Text="Position check, Stars Rest in Dragon Blight." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Valiance Keep in Westfall." LogColor="Lime" />														
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Stars Rest." LogColor="Lime" />														
 				<CustomBehavior File="FlyTo"  X="3479.721" Y="2002.927" Z="64.89043" />
 				<CustomBehavior File="ForcedDismount" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
