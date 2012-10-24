@@ -58,18 +58,18 @@
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Valiance Keep in Borean Tundra." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Valiance Keep." LogColor="Lime" />														
-					<RunTo X="2280.506" Y="5206.809" Z="12.4944" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Valiance Keep." LogColor="Lime" />
+				<CustomBehavior File="FlyTo" X="2255.703" Y="5200.517" Z="11.31931" />				
+					<RunTo X="2280.506" Y="5206.809" Z="12.4944" />				
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="25245"  X="2282.294" Y="5210.832" Z="12.49425" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />							
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="2256.65" Y="5200.381" Z="11.3194" />
+					<RunTo X="2255.703" Y="5200.517" Z="11.31931" />	
 				<CustomBehavior File="ForcedMount" MountType="Flying" />
 				<CustomBehavior File="FlyTo" X="2079.877" Y="5734.425" Z="49.80082" />
-
 				<CustomBehavior File="ForcedDismount" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
