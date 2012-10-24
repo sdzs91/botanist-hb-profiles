@@ -1,0 +1,176 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N]_botanist_hyjal-summit_v1.1</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+
+	<Factions>9999</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will farm the first 8 waves of trash in Hyjal Summit. If you aren't hearthng before the first boss comes out, edit the timer on line 142 using Notepad ++. 1000=1 second It is probably best to hearth after the 7th wave." Title="WARNING" />
+         <While Condition="true" >
+
+					<If Condition="Me.ZoneId != 440" > <!-- not in tanaris -->
+						<If Condition="Me.ZoneId != 3606" > <!-- not in hyjal summit -->
+							<CustomBehavior File="Message" Text="I am flying to the Caverns of Time." LogColor="Yellow" />
+							<CustomBehavior File="FlyTo" X="-8197.547" Y="-4621.955" Z="132.8845" DestName="Caverns of Time" />							
+							<CustomBehavior File="MyCTM" X="-8171.417" Y="-4749.396" Z="42.86401" />
+							<CustomBehavior File="MyCTM" X="-8160.902" Y="-4821.994" Z="44.74049" />
+							<CustomBehavior File="MyCTM" X="-8182.592" Y="-4884.76" Z="36.57454" />
+							<CustomBehavior File="MyCTM" X="-8084.403" Y="-4894.447" Z="38.12021" />
+							<CustomBehavior File="MyCTM" X="-8092.977" Y="-4838.561" Z="-7.501665" />
+							<CustomBehavior File="MyCTM" X="-8131.453" Y="-4854.739" Z="-15.64863" />
+							<CustomBehavior File="MyCTM" X="-8152.667" Y="-4885.432" Z="-26.58541" />
+							<CustomBehavior File="MyCTM" X="-8095.609" Y="-4914.301" Z="-39.30358" />
+							<CustomBehavior File="MyCTM" X="-8071.747" Y="-4850.98" Z="-57.46482" />
+							<CustomBehavior File="MyCTM" X="-8101.462" Y="-4703.593" Z="-90.80865" />
+							<CustomBehavior File="MyCTM" X="-8312.373" Y="-4587.889" Z="-155.5294" />
+							<CustomBehavior File="MyCTM" X="-8468.118" Y="-4665.411" Z="-182.7755" />
+							<CustomBehavior File="MyCTM" X="-8522.229" Y="-4591.46" Z="-191.99" />
+							<CustomBehavior File="MyCTM" X="-8490.751" Y="-4477.78" Z="-165.2133" />
+							<CustomBehavior File="MyCTM" X="-8381.888" Y="-4374.357" Z="-184.017" />
+							<CustomBehavior File="MyCTM" X="-8217.845" Y="-4331.86" Z="-169.5572" />
+							<CustomBehavior File="MyCTM" X="-8183.807" Y="-4230.813" Z="-165.28" />
+							<CustomBehavior File="FlyTo" X="-8183.153" Y="-4193.935" Z="-170.8712" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="Message" Text="I've reached the entrance to Mount Hyjal." LogColor="Yellow" />
+							<RunTo X="-8176.99" Y="-4176.92" Z="-166.463" />
+                        </If>							
+					</If>
+
+					<If Condition="Me.ZoneId == 440" > <!-- in tanaris -->
+						<If Condition="Me.Y &lt; -4209.888 || Me.Y &gt; -4174.861 &amp;&amp; Me.X &lt; -8196.304 || Me.X &gt; -8164.905" > <!-- not outside the portal -->				
+							<CustomBehavior File="Message" Text="I am in Tanaris, but not close enough to the Hyjal Summit portal. I'm flying to the Caverns of Time." LogColor="Yellow" />
+							<CustomBehavior File="FlyTo" X="-8197.547" Y="-4621.955" Z="132.8845" DestName="Caverns of Time" />							
+							<CustomBehavior File="MyCTM" X="-8171.417" Y="-4749.396" Z="42.86401" />
+							<CustomBehavior File="MyCTM" X="-8160.902" Y="-4821.994" Z="44.74049" />
+							<CustomBehavior File="MyCTM" X="-8182.592" Y="-4884.76" Z="36.57454" />
+							<CustomBehavior File="MyCTM" X="-8084.403" Y="-4894.447" Z="38.12021" />
+							<CustomBehavior File="MyCTM" X="-8092.977" Y="-4838.561" Z="-7.501665" />
+							<CustomBehavior File="MyCTM" X="-8131.453" Y="-4854.739" Z="-15.64863" />
+							<CustomBehavior File="MyCTM" X="-8152.667" Y="-4885.432" Z="-26.58541" />
+							<CustomBehavior File="MyCTM" X="-8095.609" Y="-4914.301" Z="-39.30358" />
+							<CustomBehavior File="MyCTM" X="-8071.747" Y="-4850.98" Z="-57.46482" />
+							<CustomBehavior File="MyCTM" X="-8101.462" Y="-4703.593" Z="-90.80865" />
+							<CustomBehavior File="MyCTM" X="-8312.373" Y="-4587.889" Z="-155.5294" />
+							<CustomBehavior File="MyCTM" X="-8468.118" Y="-4665.411" Z="-182.7755" />
+							<CustomBehavior File="MyCTM" X="-8522.229" Y="-4591.46" Z="-191.99" />
+							<CustomBehavior File="MyCTM" X="-8490.751" Y="-4477.78" Z="-165.2133" />
+							<CustomBehavior File="MyCTM" X="-8381.888" Y="-4374.357" Z="-184.017" />
+							<CustomBehavior File="MyCTM" X="-8217.845" Y="-4331.86" Z="-169.5572" />
+							<CustomBehavior File="MyCTM" X="-8183.807" Y="-4230.813" Z="-165.28" />
+							<CustomBehavior File="FlyTo" X="-8183.153" Y="-4193.935" Z="-170.8712" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="Message" Text="I've reached the entrance to Mount Hyjal." LogColor="Yellow" />
+							<RunTo X="-8176.99" Y="-4176.92" Z="-166.463" />												
+					    </If>
+					</If>
+						   				  
+					<If Condition="Me.ZoneId == 3606" >
+						<CustomBehavior File="Message" Text="You started the bot with me inside Hyjal Summit. Running out to reset the dungeon." LogColor="Yellow" />
+						<RunTo X="4257.962" Y="-4230.431" Z="867.796" />
+						<CustomBehavior File="GoThruPortal" X="4267.044" Y="-4231.829" Z="866.8575" />
+						<CustomBehavior File="Message" Text="I'm back to the Caverns of Time." LogColor="Yellow" />
+						<RunTo X="-8176.99" Y="-4176.92" Z="-166.463" />
+					</If>
+					
+						                                     <!-- enters the dungeon -->
+	
+					<If Condition="Me.Y &gt; -4209.888 &amp;&amp; Me.Y &lt; -4174.861 &amp;&amp; Me.X &gt; -8196.304 &amp;&amp; Me.X &lt; -8164.905" >
+						<CustomBehavior File="Message" Text="I am resetting Hyjal Summit." LogColor="Yellow" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />				
+						<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />				
+						<CustomBehavior File="Message" Text="I have reset Hyjal Summit." LogColor="Yellow" />
+						<CustomBehavior File="MyCTM" X="-8166.965" Y="-4164.475" Z="-164.6564" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						
+					</If>							
+				
+				                                       <!-- hyjal summit Dungeon Script -->
+					<If Condition="Me.ZoneId == 3606" >
+						<CustomBehavior File="Message" Text="I've entered Hyjal Summit." LogColor="Yellow" />
+						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Yellow" />
+						<CustomBehavior File="RunMacro" Macro="/sort bags" />
+							<RunTo X="4219.645" Y="-4193.801" Z="868.8514" />										
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="20" ExpiryTime="180" ExpiryAction="InputDisabled_Continue" 
+						Text="This profile requires that your toon be in a level 8 or higher guild with the Hasty Hearth guild perk. The bot will wait here for 3 minutes so your hearthstone has time to reset between multiple runs. This is intentional." />					
+							<RunTo X="4172.862" Y="-4227.546" Z="869.1859" />
+						<CustomBehavior File="MyCTM"  X="4167.1" Y="-4227.386" Z="869.1863" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<RunTo X="5081.414" Y="-1789.27" Z="1322.106" />
+						<CustomBehavior File="InteractWith" MobId="17772"  GossipOptions="1" NumOfTimes="1"  X="5084.066" Y="-1789.027" Z="1322.569" />
+							<RunTo X="4988.249" Y="-1723.858" Z="1335.436" />
+						<CustomBehavior File="WaitTimer" WaitTime="475000" />
+							<RunTo X="4995.259" Y="-1791.266" Z="1328.358" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+							<RunTo X="-7093.222" Y="-3854.028" Z="9.173008" />
+					</If>
+					
+					<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Yellow" />
+					
+					<If Condition="(Me.FreeBagSlots &lt; 6) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->
+					
+						<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth, repair and mail." LogColor="Yellow" />
+																	
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Krinkle Goodsteel" Entry="5411" Type="Repair" X="-7232.01" Y="-3751.71" Z="9.09389" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="-7086.33" Y="-3851.048" Z="9.504718" />
+							</Mailboxes>
+						</SetMailbox>
+			
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					</If>
+				
+					
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+
