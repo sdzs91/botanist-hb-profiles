@@ -506,7 +506,7 @@
 					<If Condition="Me.Level == 68 &amp;&amp; (!HasSpell(90267)) &amp;&amp; Me.Gold &gt;= 251" >				
 						<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Message" Text="I am level 68. I need a Flight Master's License." LogColor="Lime" />
+						<CustomBehavior File="Message" Text="I am level 68. I need to purchase a Flight Master's License." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="Moving to the riding trainer in Stormwind." LogColor="Orange" />
 							<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
@@ -524,6 +524,29 @@
 								<RunTo X="-8853.883" Y="538.7916" Z="105.9308" />
 						</If>
 				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.Level == 68 &amp;&amp; (!HasSpell(54197)) &amp;&amp; Me.Gold &gt;= 251" >				
+						<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am level 68. I need to purchase Cold Weather Flying." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="Moving back to the riding trainer." LogColor="Orange" />
+							<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
+						<CustomBehavior File="Message" Text="I have returned to the riding trainer. Buying a Cold Weather Flying." LogColor="Orange" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="InteractWith" MobId="43769" WaitTime="1000" CollectionDistance="50" X="-8845.4" Y="502.653" Z="109.6171" />
+						<CustomBehavior File="ForceTrainRiding" MobId="43769" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					</If>
+						<If Condition="Me.Level == 68 &amp;&amp; (HasSpell(54197))" >					
+							<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="I am in the 68 to 70 bracket and have a Flight Master's License and Cold Weather Flying." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="-8853.883" Y="538.7916" Z="105.9308" />
+						</If>
+				</If>
 
 							<!-- ****************************************************** -->
 				
@@ -531,7 +554,13 @@
 					<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 79" >
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][Goto][Stormwind-Northrend]_botanist_pangaea" />
 					</If>
-				</If>		
+				</If>
+
+				<If Condition="Me.MapId == 571" >				
+					<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 79" >
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][68-80]_botanist_pangaea" />
+					</If>
+				</If>
 				
 	</QuestOrder >			
   
