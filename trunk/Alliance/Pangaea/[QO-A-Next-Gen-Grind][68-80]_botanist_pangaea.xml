@@ -172,12 +172,12 @@
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Broff Bombast" Entry="27011" Type="Food" X="2359.466" Y="5237.433" Z="7.713106" />
+								<Vendor Name="Willis Wobblewheel" Entry="26599" Type="Repair" X="4135.004" Y="5281.168" Z="25.08803" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="2259.917" Y="5199.533" Z="11.34422" />
+								<Mailbox X="4162.641" Y="5286.355" Z="26.35423" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
