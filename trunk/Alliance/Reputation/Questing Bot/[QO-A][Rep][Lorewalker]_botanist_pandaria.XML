@@ -172,10 +172,17 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				
 					<CustomBehavior File="Message" Text="Flying to object 14 of 45, The Birthplace of Liu Lang." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="-362.2928" Y="1881.664" Z="142.6818" />
-					<CustomBehavior File="ForcedDismount" />					
+					<CustomBehavior File="FlyTo" X="-438.198" Y="1884.467" Z="130.7955" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="MyCTM" X="-402.4382" Y="1904.434" Z="130.8225" />
+					<CustomBehavior File="MyCTM" X="-393.9362" Y="1905.526" Z="132.6246" />
+					<CustomBehavior File="MyCTM" X="-378.2479" Y="1904.375" Z="142.777" />
+					<CustomBehavior File="MyCTM" X="-380.4508" Y="1890.437" Z="142.6785" />
+					<CustomBehavior File="MyCTM" X="-374.2959" Y="1883.936" Z="142.679" />
+					<CustomBehavior File="MyCTM" X="-366.0311" Y="1884.248" Z="142.6809" />					
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="213459" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-365.4566" Y="1885.61975" Z="142.541809" />
+					<CustomBehavior File="MyCTM" X="-361.6782" Y="1881.497" Z="142.6809" />		
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					

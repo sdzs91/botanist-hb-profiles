@@ -172,10 +172,17 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				
 					<CustomBehavior File="Message" Text="Flying to object 14 of 45, The Birthplace of Liu Lang." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="-362.2928" Y="1881.664" Z="142.6818" />
-					<CustomBehavior File="ForcedDismount" />					
+					<CustomBehavior File="FlyTo" X="-438.198" Y="1884.467" Z="130.7955" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="MyCTM" X="-402.4382" Y="1904.434" Z="130.8225" />
+					<CustomBehavior File="MyCTM" X="-393.9362" Y="1905.526" Z="132.6246" />
+					<CustomBehavior File="MyCTM" X="-378.2479" Y="1904.375" Z="142.777" />
+					<CustomBehavior File="MyCTM" X="-380.4508" Y="1890.437" Z="142.6785" />
+					<CustomBehavior File="MyCTM" X="-374.2959" Y="1883.936" Z="142.679" />
+					<CustomBehavior File="MyCTM" X="-366.0311" Y="1884.248" Z="142.6809" />					
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="213459" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-365.4566" Y="1885.61975" Z="142.541809" />
+					<CustomBehavior File="MyCTM" X="-361.6782" Y="1881.497" Z="142.6809" />		
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					
@@ -491,30 +498,35 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="213417" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="2310.79175" Y="1686.4115" Z="506.116364" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
-					<CustomBehavior File="ForcedMount" MountType="Flying" />					
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+
+											<!-- faction change -->
 					<CustomBehavior File="Message" Text="I have collected all the objects. Flying to the mailbox to pick up the quest" LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="1624.65" Y="924.0049" Z="471.1836" />
+					<CustomBehavior File="FlyTo" X="1624.871" Y="924.1219" Z="471.1837" />
 					<CustomBehavior File="ForcedDismount" />
-						<RunTo X="1651.297" Y="935.2004" Z="470.9416" />
-					
+						<RunTo X="1653.021" Y="935.5201" Z="470.9519" />
 				    <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="20" ExpiryAction="InputEnabled_Continue" 
 						Text="Open the mailbox and accept all the quests from Lorewalker Cho. Once you have accepted all the quest, press continue on this window. Another popup will appear in a few minutes." Title="WARNING" />
 					
-						<RunTo X="1624.65" Y="924.0049" Z="471.1836" />
+											<!-- end of faction change -->
+
+						<RunTo X="1624.871" Y="924.1219" Z="471.1837" />
 					<CustomBehavior File="Message" Text="I am flying to Lorewalker Chon so you can turn in all the Lorewalker quest." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="FlyTo" X="1403.532" Y="423.9804" Z="548.2232" />
 					<CustomBehavior File="ForcedDismount" />	
 						<RunTo X="1448.614" Y="373.0621" Z="550.2213" />
 						
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="20" ExpiryAction="InputEnabled_Continue" 
-						Text="Talk to Lorewalker Cho and turn in all the Lorewalker quest, then press the continue button on this window.." Title="WARNING" />
+						Text="Talk to Lorewalker Cho and turn in all the Lorewalker quest, then press continue." Title="WARNING" />
 						
 						<RunTo X="1450.871" Y="399.0075" Z="548.0164" />
 						
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
 						Text="Talk to Tan Shin Tiao. You can now purchase your very own Disc of the Red Flying Cloud from her for 600 gold, as well as a few other items you may be interested in." Title="WARNING" />
 				
-					<CustomBehavior File="Message" Text="I have completed all my task. I am stopping the bot" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I have completed all my tasks. I am stopping the bot." LogColor="Lime" />
 					<CustomBehavior File="UserSettings" StopBot="true" />
 				</If>
 				
