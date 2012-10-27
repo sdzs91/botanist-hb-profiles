@@ -113,8 +113,9 @@
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					
-					<CustomBehavior File="Message" Text="Flying to object 8 of 45, Together, Amber ." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="846.9653" Y="3266.947" Z="217.8506" />	
+					<CustomBehavior File="Message" Text="Bypassing object 8 of 45, Amber for now. I don't believe it's needed because of extra's." LogColor="Lime" />
+				<!--	<CustomBehavior File="FlyTo" X="846.9653" Y="3266.947" Z="217.8506" />
+					<CustomBehavior File="UserSettings" PullDistance="15" />
 					<CustomBehavior File="ForcedDismount" />
 						<RunTo X="971.3874" Y="3297.421" Z="188.6829" />
 						<RunTo X="986.4339" Y="3341.258" Z="186.9955" />
@@ -129,7 +130,7 @@
 						<RunTo X="971.2192" Y="3297.2" Z="188.683" />
 						<RunTo X="971.2192" Y="3297.2" Z="188.683" />
 						<RunTo X="846.6061" Y="3267.636" Z="217.8155" />
-					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />		-->
 						
 					<CustomBehavior File="Message" Text="Flying to object 9 of 45, The Empress." LogColor="Lime" />
 					<CustomBehavior File="FlyTo" X="253.5525" Y="4241.532" Z="269.3446" />
