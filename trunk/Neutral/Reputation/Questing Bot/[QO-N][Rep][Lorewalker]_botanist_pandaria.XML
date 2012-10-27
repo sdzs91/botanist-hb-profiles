@@ -261,7 +261,39 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="213407" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-465.184021" Y="-866.4983" Z="237.577209" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />		
+					
+					<CustomBehavior File="Message" Text="Flying to object 23 of 45, A Most Famou Bill of Sale." LogColor="Lime" />
+					<CustomBehavior File="FlyTo"  X="-135.2023" Y="508.9935" Z="214.2094" />
+					<CustomBehavior File="ForcedDismount" />			
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="213460" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-137.5868" Y="518.7205" Z="214.06221" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+					
+					<CustomBehavior File="Message" Text="Flying to object 24 of 45, Waterspeakers." LogColor="Lime" />
+					<CustomBehavior File="FlyTo"  X="190.4408" Y="279.5112" Z="153.8097" />
+					<CustomBehavior File="ForcedDismount" />			
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="215780" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="186.7882" Y="276.204865" Z="155.2336" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />		-->
+					
+					<CustomBehavior File="Message" Text="Flying to object 24 of 45, Embracing the Passion." LogColor="Lime" />
+					<CustomBehavior File="FlyTo"  X="540.3134" Y="-582.4476" Z="258.3879" />
+					<CustomBehavior File="ForcedDismount" />			
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="215785" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="541.809" Y="-586.571167" Z="258.315948" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					
+					<CustomBehavior File="Message" Text="Flying to object 24 of 45, Watersmithing." LogColor="Lime" />
+					<CustomBehavior File="FlyTo"  X="540.3134" Y="-582.4476" Z="258.3879" />
+					<CustomBehavior File="ForcedDismount" />			
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="215785" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="541.809" Y="-586.571167" Z="258.315948" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						
 						
 				</If>
