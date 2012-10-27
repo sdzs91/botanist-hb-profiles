@@ -321,26 +321,13 @@
 					<CustomBehavior File="Message" Text="Moving to Slaughter Square." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="4021.1" Y="-3636.995" Z="128.8413" />
-						<Hotspot X="4012.028" Y="-3622.827" Z="129.6655" />
-						<Hotspot X="4007.975" Y="-3607.921" Z="130.3873" />
-						<Hotspot X="4000.893" Y="-3593.891" Z="129.2363" />
-						<Hotspot X="3996.403" Y="-3579.477" Z="127.7154" />
-						<Hotspot X="4005.131" Y="-3567.319" Z="126.7007" />
-						<Hotspot X="4014.177" Y="-3555.295" Z="124.8699" />
-						<Hotspot X="4026.48" Y="-3546.566" Z="124.1498" />
-						<Hotspot X="4039.512" Y="-3538.957" Z="123.9392" />
-						<Hotspot X="4040.044" Y="-3524.032" Z="122.0503" />
-						<Hotspot X="4040.259" Y="-3508.679" Z="121.539" />							
-						</CustomBehavior>
-							<RunTo X="4039.88" Y="-3508.237" Z="121.5699" />
-							<RunTo X="4037.777" Y="-3489.177" Z="121.75" />
-				</If>
-					
-				<If Condition="Me.MapId == 329">
-					<If Condition="Me.Y &gt; -3504.201" >
-							<RunTo X="4036.982" Y="-3468.954" Z="121.7396" />
-						<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+							<Hotspot X="4016.528" Y="-3627.832" Z="129.5301" />
+							<Hotspot X="4010.145" Y="-3608.531" Z="130.5684" />
+							<Hotspot X="3994.67" Y="-3588.861" Z="128.1143" />
+							<Hotspot X="3995.913" Y="-3574.861" Z="127.0692" />
+							<Hotspot X="4017.438" Y="-3519.826" Z="122.0364" />
+							<Hotspot X="4038.377" Y="-3506.949" Z="121.6989" />
+							<Hotspot X="4037.289" Y="-3469.208" Z="121.7346" />
 							<Hotspot X="4034.236" Y="-3464.189" Z="121.459" />
 							<Hotspot X="4030.655" Y="-3456.906" Z="121.0268" />
 							<Hotspot X="4028.507" Y="-3448.851" Z="120.3062" />
@@ -413,7 +400,7 @@
 						<CustomBehavior File="WaitTimer" WaitTime="70000" />
 							<CustomBehavior File="MyCTM" X="4032.77" Y="-3389.172" Z="119.7397" />
 						<CustomBehavior File="WaitTimer" WaitTime="5000" />
-				</If>
+
 			</If>
 							
 				<If Condition="Me.Y &gt; -3396.163" >
