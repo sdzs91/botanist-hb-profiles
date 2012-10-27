@@ -160,7 +160,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					
 					<CustomBehavior File="Message" Text="Flying to object 13 of 45, Pandaren Fighting Tactics." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="-546.2444" Y="2934.504" Z="166.2875" />
+					<CustomBehavior File="FlyTo" X="262.7561" Y="1941.791" Z="164.2995" />
 					<CustomBehavior File="ForcedDismount" />					
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="213413" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="260.9069" Y="1940.661" Z="164.0934" />
