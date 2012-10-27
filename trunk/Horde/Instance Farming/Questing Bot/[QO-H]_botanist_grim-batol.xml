@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A]_botanist_grim-batol</Name>
+	<Name>[QO-H]_botanist_grim-batol</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -229,12 +229,12 @@
 						
 					<SetVendor>
 						<Vendors>
-							<Vendor Name="Naka Scaleblade" Entry="49768" Type="Repair" X="-3675.151" Y="-5381.104" Z="35.76828" />
+							<Vendor Name="Naka Scaleblade" Entry="49768" Type="Repair" X="-3675.151" Y="-5381.104" Z="35.76855" />
 						</Vendors>
 					</SetVendor>
 					<SetMailbox>
 						<Mailboxes>
-							<Mailbox X="-3666.808" Y="-5279.758" Z="41.82626" />
+							<Mailbox X="-3667.149" Y="-5284.762" Z="41.16003" />
 						</Mailboxes>
 					</SetMailbox>
 			
