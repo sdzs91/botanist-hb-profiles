@@ -52,7 +52,7 @@
 
 				<If Condition="Me.MapId == 870" >
 					
-					<CustomBehavior File="Message" Text="Flying to object 1 of 45, The Emperor's Burden - Part 8." LogColor="Lime" />
+				<!--	<CustomBehavior File="Message" Text="Flying to object 1 of 45, The Emperor's Burden - Part 8." LogColor="Lime" />
 					<CustomBehavior File="FlyTo" X="1203.917" Y="739.2046" Z="378.6813" />				
 					<CustomBehavior File="ForcedDismount" />					
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />					
@@ -102,6 +102,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					
 					<CustomBehavior File="Message" Text="Flying to object 7 of 45, Together, The Emperor's Burden - Part 5." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="2159.895" Y="4872.222" Z="284.7274" />
 					<CustomBehavior File="FlyTo" X="2149.033" Y="4914.879" Z="198.5021" />	
 					<CustomBehavior File="ForcedDismount" />					
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -181,9 +182,86 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="213461" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-574.821167" Y="1322.13025" Z="148.584976" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+					
+					<CustomBehavior File="Message" Text="Flying to object 16 of 45, Last Stand." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-1130.342" Y="1392.327" Z="159.0051" />
+					<CustomBehavior File="FlyTo" X="-1091.485" Y="1455.389" Z="46.71098" />
+					<CustomBehavior File="FlyTo" X="-1029.125" Y="1412.908" Z="26.38648" />
+					<CustomBehavior File="ForcedDismount" />					
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="213330" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-1028.91663" Y="1409.86108" Z="26.3160172" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					
+					<CustomBehavior File="Message" Text="Flying to object 17 of 45, Origins." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-1285.801" Y="1513.927" Z="13.70662" />
+					<CustomBehavior File="ForcedDismount" />
+						<RunTo X="-1314.623" Y="1515.285" Z="14.7454" />				
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="215782" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-1317.58167" Y="1516.25867" Z="14.662199" />
+						<RunTo X="-1285.801" Y="1513.927" Z="13.70662" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					
+					<CustomBehavior File="Message" Text="Flying to object 18 of 45, The Emperor's Burden - Part 4." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-1669.845" Y="1051.714" Z="53.98597" />
+					<CustomBehavior File="FlyTo" X="-1777.346" Y="1045.374" Z="29.51971" />
+					<CustomBehavior File="ForcedDismount" />
+						<RunTo X="-1795.973" Y="1045.431" Z="20.72707" />	
+						<RunTo X="-1797.661" Y="1020.615" Z="19.05102" />
+						<RunTo X="-1809.835" Y="1012.296" Z="19.05102" />
+						<RunTo X="-1851.754" Y="1012.213" Z="19.05102" />
+						<RunTo X="-1878.752" Y="1015.527" Z="32.75482" />
+						<RunTo X="-1879.171" Y="1041.861" Z="46.98933" />
+						<RunTo X="-1876.943" Y="1050.359" Z="46.99107" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="213422" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-1880.23267" Y="1049.87671" Z="46.89179" />
+						<RunTo X="-1879.171" Y="1041.861" Z="46.98933" />
+						<RunTo X="-1878.752" Y="1015.527" Z="32.75482" />
+						<RunTo X="-1851.754" Y="1012.213" Z="19.05102" />
+						<RunTo X="-1809.835" Y="1012.296" Z="19.05102" />
+						<RunTo X="-1797.661" Y="1020.615" Z="19.05102" />
+						<RunTo X="-1795.973" Y="1045.431" Z="20.72707" />
+						<RunTo X="-1752.471" Y="1051.259" Z="29.52" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="FlyTo" X="-1726.437" Y="1053.255" Z="39.31944" />
+					<CustomBehavior File="FlyTo" X="-1661.342" Y="1053.39" Z="55.66248" />
+					
+					<CustomBehavior File="Message" Text="Flying to object 19 of 45, Hozen Maturity." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-2800.308" Y="500.8879" Z="6.274624" />
+					<CustomBehavior File="ForcedDismount" />
+						<RunTo X="-2848.35" Y="493.245" Z="7.441708" />				
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="211993" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-2850.22388" Y="491.300354" Z="7.55956173" />
+						<RunTo X="-2800.308" Y="500.8879" Z="6.274624" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					
+					<CustomBehavior File="Message" Text="Flying to object 20 of 45, The Lost Dynasty." LogColor="Lime" />
+					<CustomBehavior File="FlyTo"  X="-1103.08" Y="556.2552" Z="61.09808" />
+					<CustomBehavior File="ForcedDismount" />			
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="213332" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-1100.07117" Y="560.1858" Z="61.3001633" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					
+					<CustomBehavior File="Message" Text="Flying to object 21 of 45, Waiting for the Turtle." LogColor="Lime" />
+					<CustomBehavior File="FlyTo"  X="-1083.453" Y="-436.4205" Z="0.4878315" />
+					<CustomBehavior File="ForcedDismount" />			
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="215765" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-1078.94788" Y="-436.8941" Z="1.072219" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					
+					<CustomBehavior File="Message" Text="Flying to object 22 of 45, Quan Tou Kuo the Two Fisted." LogColor="Lime" />
+					<CustomBehavior File="FlyTo"  X="-474.4048" Y="-872.5658" Z="237.3153" />
+					<CustomBehavior File="ForcedDismount" />			
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="213407" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-465.184021" Y="-866.4983" Z="237.577209" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />		-->
 						
 						
 				</If>
