@@ -49,92 +49,86 @@
 		<While Condition="Me.Level &gt;= 90 &amp;&amp; (HasSpell(115913))" >
 		
 				 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="20" ExpiryAction="InputEnabled_Continue" 
-						Text="This profile with collect all 45 objects for the Lorewalker Achievements and Exalted Reputation. Afterwards you can purchase the Disc of the Red Flying Cloud from Tan Shin Tiao, Lorewalkers Quartermaster for 600 gold. This profile will encounter 1-3 level 90 mobs on a few occassions. You should use an approriate class-spec toon. After collecting all the objects, the profile will pause at the mailbox in Shrine of Seven Stars and a popup window will appear. Follow the instructions in the popup window." Title="WARNING" />
+						Text="This profile with collect all 45 objects for the Lorewalker Achievements and Exalted Reputation. It will require your asstance on objects #8, #35 and shortly after #45. DO NOT START THIS PROFILE IN DREAD WASTES OR THE VEILED STAIR. Afterwards you can purchase the Disc of the Red Flying Cloud from Tan Shin Tiao, Lorewalkers Quartermaster for 600 gold. This profile will encounter 1-3 level 90 mobs on a few occassions. You should use an approriate class-spec toon. After collecting all the objects, the profile will pause at the mailbox in Shrine of Seven Stars and a popup window will appear. Follow the instructions in the popup window." Title="WARNING" />
 	
 				 <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="True" PullDistance="10" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 
 				<If Condition="Me.MapId == 870" >
-					
-					<CustomBehavior File="Message" Text="Flying to object 1 of 45, The Emperor's Burden - Part 8." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="1203.917" Y="739.2046" Z="378.6813" />				
-					<CustomBehavior File="ForcedDismount" />					
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />					
-					<CustomBehavior File="InteractWith" MobId="213456" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1201.67883" Y="736.8924" Z="378.762421" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<If Condition="Me.ZoneId != 6138" >
+						<If Condition="Me.ZoneId != 6006" >
+							<CustomBehavior File="Message" Text="Flying to object 1 of 45, The Emperor's Burden - Part 8." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="1203.917" Y="739.2046" Z="378.6813" />				
+							<CustomBehavior File="ForcedDismount" />					
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />					
+							<CustomBehavior File="InteractWith" MobId="213456" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1201.67883" Y="736.8924" Z="378.762421" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
 
 
-					<CustomBehavior File="Message" Text="Flying to object 2 of 45, Always Remember." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="792.3481" Y="1141.063" Z="486.1395" />				
-					<CustomBehavior File="ForcedDismount" />					
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />					
-					<CustomBehavior File="InteractWith" MobId="213414" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="789.21875" Y="1140.94275" Z="486.065765" />
-					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-	
-					
-					<CustomBehavior File="Message" Text="Flying to object 3 of 45, The Thunder King." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="639.7067" Y="1465.937" Z="411.0282" />				
-					<CustomBehavior File="ForcedDismount" />					
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="InteractWith" MobId="213334" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="639.809" Y="1461.39929" Z="410.163727" />
-					<CustomBehavior File="ForcedMount" MountType="Flying" />					
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="Flying to object 2 of 45, Always Remember." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="792.3481" Y="1141.063" Z="486.1395" />				
+							<CustomBehavior File="ForcedDismount" />					
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />					
+							<CustomBehavior File="InteractWith" MobId="213414" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="789.21875" Y="1140.94275" Z="486.065765" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			
+							
+							<CustomBehavior File="Message" Text="Flying to object 3 of 45, The Thunder King." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="639.7067" Y="1465.937" Z="411.0282" />				
+							<CustomBehavior File="ForcedDismount" />					
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="InteractWith" MobId="213334" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="639.809" Y="1461.39929" Z="410.163727" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />					
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
 
-					<CustomBehavior File="Message" Text="Flying to object 4 of 45, Together, We Are Strong." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="1582.747" Y="1806.808" Z="428.6307" />			
-					<CustomBehavior File="ForcedDismount" />					
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="InteractWith" MobId="213416" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1585.8385" Y="1807.59033" Z="429.7133" />
-					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					
-					<CustomBehavior File="Message" Text="Flying to object 5 of 45, Trapped in a Strange Land." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="1772.523" Y="2250.935" Z="389.3281" />		
-					<CustomBehavior File="ForcedDismount" />					
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="InteractWith" MobId="213420" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1767.79858" Y="2249.85938" Z="389.319733" />
-					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					
-					<CustomBehavior File="Message" Text="Flying to object 6 of 45, Dominance." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="2640.348" Y="3322.379" Z="429.3964" />		
-					<CustomBehavior File="ForcedDismount" />					
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="InteractWith" MobId="213418" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="2644.32544" Y="3323.04785" Z="428.7822" />
-					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					
-					<CustomBehavior File="Message" Text="Flying to object 7 of 45, Together, The Emperor's Burden - Part 5." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="2159.895" Y="4872.222" Z="284.7274" />
-					<CustomBehavior File="FlyTo" X="2149.033" Y="4914.879" Z="198.5021" />	
-					<CustomBehavior File="ForcedDismount" />					
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="InteractWith" MobId="213445" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="2149.50879" Y="4910.10156" Z="198.6555" />
-					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					
-					<CustomBehavior File="Message" Text="Bypassing object 8 of 45, Amber for now. I don't believe it's needed because of extra's." LogColor="Lime" />
-				<!--	<CustomBehavior File="FlyTo" X="846.9653" Y="3266.947" Z="217.8506" />
-					<CustomBehavior File="UserSettings" PullDistance="15" />
-					<CustomBehavior File="ForcedDismount" />
-						<RunTo X="971.3874" Y="3297.421" Z="188.6829" />
-						<RunTo X="986.4339" Y="3341.258" Z="186.9955" />
-						<RunTo X="1020.856" Y="3353.008" Z="186.985" />
-						<RunTo X="1056.568" Y="3331.345" Z="186.9975" />					
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="InteractWith" MobId="213411" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1058.38892" Y="3328.34473" Z="187.16301" />					
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<RunTo X="1035.696" Y="3350.647" Z="186.9965" />
-						<RunTo X="998.3105" Y="3349.469" Z="186.9849" />
-						<RunTo X="983.4457" Y="3329.08" Z="187.0316" />
-						<RunTo X="971.2192" Y="3297.2" Z="188.683" />
-						<RunTo X="971.2192" Y="3297.2" Z="188.683" />
-						<RunTo X="846.6061" Y="3267.636" Z="217.8155" />
-					<CustomBehavior File="ForcedMount" MountType="Flying" />		-->
+							<CustomBehavior File="Message" Text="Flying to object 4 of 45, Together, We Are Strong." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="1582.747" Y="1806.808" Z="428.6307" />			
+							<CustomBehavior File="ForcedDismount" />					
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="InteractWith" MobId="213416" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1585.8385" Y="1807.59033" Z="429.7133" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							
+							<CustomBehavior File="Message" Text="Flying to object 5 of 45, Trapped in a Strange Land." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="1772.523" Y="2250.935" Z="389.3281" />		
+							<CustomBehavior File="ForcedDismount" />					
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="InteractWith" MobId="213420" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1767.79858" Y="2249.85938" Z="389.319733" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							
+							<CustomBehavior File="Message" Text="Flying to object 6 of 45, Dominance." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="2640.348" Y="3322.379" Z="429.3964" />		
+							<CustomBehavior File="ForcedDismount" />					
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="InteractWith" MobId="213418" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="2644.32544" Y="3323.04785" Z="428.7822" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							
+							<CustomBehavior File="Message" Text="Flying to object 7 of 45, Together, The Emperor's Burden - Part 5." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="2159.895" Y="4872.222" Z="284.7274" />
+							<CustomBehavior File="FlyTo" X="2149.033" Y="4914.879" Z="198.5021" />	
+							<CustomBehavior File="ForcedDismount" />					
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="InteractWith" MobId="213445" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="2149.50879" Y="4910.10156" Z="198.6555" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							
+							<CustomBehavior File="Message" Text="Flying to object 8 of 45, Amber." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="846.9653" Y="3266.947" Z="217.8506" />
+							<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="5" ExpiryAction="InputEnabled_BotStop" 
+								Text=" PRESS STOP!. Go to the back of this cavern and right click on object #8. Then return to here and restart the bot." Title="WARNING" />
+						</If>
+					</If>
+				</If>
+						
+						
+				<If Condition="Me.ZoneId == 6138" >		
 						
 					<CustomBehavior File="Message" Text="Flying to object 9 of 45, The Empress." LogColor="Lime" />
 					<CustomBehavior File="FlyTo" X="253.5525" Y="4241.532" Z="269.3446" />
-					<CustomBehavior File="ForcedDismount" />					
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="UserSettings" PullDistance="5" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="213412" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="252.1441" Y="4237.24463" Z="270.448669" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
@@ -368,7 +362,8 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="211990" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="2333.12671" Y="-390.199646" Z="341.382629" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />		
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					
 					
 					<CustomBehavior File="Message" Text="Flying to object 35 of 45, The Defiant." LogColor="Lime" />
 					<CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="True" PullDistance="4" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
@@ -382,11 +377,15 @@
 					<CustomBehavior File="MyCTM" X="1476.459" Y="-15.5934" Z="492.0014" />
 					<CustomBehavior File="MyCTM" X="1506.276" Y="-44.31619" Z="496.3478" />
 					<CustomBehavior File="MyCTM" X="1600.037" Y="5.155763" Z="500.2479" />
-					<CustomBehavior File="MyCTM" X="1638.126" Y="-16.96518" Z="482.5826" />					
-					<CustomBehavior File="ForcedDismount" />			
-					<CustomBehavior File="InteractWith" MobId="213328" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1639.51733" Y="-12.78993" Z="483.1293" />
-					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="MyCTM" X="1638.126" Y="-16.96518" Z="482.5826" />
+					<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="5" ExpiryAction="InputEnabled_BotStop" 
+								Text=" PRESS STOP!. Land below, kill the mob and right click on object # 35. Then get on your flying mount, return to here and restart the bot." Title="WARNING" />
+				</If>
+				
 					
+					
+				<If Condition="Me.ZoneId == 6006" >	
+				
 					<CustomBehavior File="Message" Text="Flying to object 36 of 45, Role Call." LogColor="Lime" />
 					<CustomBehavior File="MyCTM" X="1600.037" Y="5.155763" Z="500.2479" />
 					<CustomBehavior File="MyCTM" X="1506.276" Y="-44.31619" Z="496.3478" />
@@ -505,24 +504,25 @@
 					<CustomBehavior File="ForcedDismount" />
 					
 				    <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="20" ExpiryAction="InputEnabled_Continue" 
-						Text="Open the mailbox and accept all the quests from Lorewalker Cho. Once you have accepted all the quest, press continue on this window. Another popup will appear in a few minutes." Title="WARNING" />
-						
+						Text="DO NOT PRESS STOP! Open the mailbox and accept all the quests from Lorewalker Cho. Once you have accepted all the quest, press continue on this window. Another popup will appear in a few minutes." Title="WARNING" />					
+				</If>
+				
 					<CustomBehavior File="Message" Text="I am flying to Lorewalker Chon so you can turn in all the Lorewalker quest." LogColor="Lime" />
 					<CustomBehavior File="FlyTo" X="1403.532" Y="423.9804" Z="548.2232" />
 					<CustomBehavior File="ForcedDismount" />	
 						<RunTo X="1448.614" Y="373.0621" Z="550.2213" />
 						
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="20" ExpiryAction="InputEnabled_Continue" 
-						Text="Talk to Lorewalker Cho and turn in all the Lorewalker quest, then press the continue button on this window.." Title="WARNING" />
+						Text="DO NOT PRESS STOP! Talk to Lorewalker Cho and turn in all the Lorewalker quest, then press the continue button on this window.." Title="WARNING" />
 						
 						<RunTo X="1450.871" Y="399.0075" Z="548.0164" />
 						
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
-						Text="Talk to Tan Shin Tiao. You can now purchase your very own Disc of the Red Flying Cloud from her for 600 gold, as well as a few other items you may be interested in." Title="WARNING" />
+						Text="PRESS STOP! Talk to Tan Shin Tiao. You can now purchase your very own Disc of the Red Flying Cloud from her for 600 gold, as well as a few other items you may be interested in." Title="WARNING" />
 				
 					<CustomBehavior File="Message" Text="I have completed all my task. I am stopping the bot" LogColor="Lime" />
 					<CustomBehavior File="UserSettings" StopBot="true" />
-				</If>
+				
 				
 		</While>	
 
