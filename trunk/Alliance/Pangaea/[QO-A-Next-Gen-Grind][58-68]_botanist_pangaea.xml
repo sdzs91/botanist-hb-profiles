@@ -45,7 +45,8 @@
 	<ClearVendor /><ClearMailbox />
 		
 	<QuestOrder>
-	
+				<CustomBehavior File="UserSettings" MountDistance="10" UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+				
 				<If Condition="Me.Level &gt;= 68" >
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][68-80]_botanist_pangaea" />
 				</If>
@@ -89,7 +90,7 @@
 								
 		<While Condition="Me.MapId == 530 &amp;&amp; Me.ZoneId == 3483 &amp;&amp; Me.Level &gt;= 58 &amp;&amp; Me.Level &lt;= 59 &amp;&amp; Me.Y &gt;= 1073.369" >
 			
-				<CustomBehavior File="UserSettings" MountDistance="30" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="40" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="UserSettings" MountDistance="30" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Honor Hold in Hellfire Peninsula." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Honor Hold." LogColor="Lime" />														

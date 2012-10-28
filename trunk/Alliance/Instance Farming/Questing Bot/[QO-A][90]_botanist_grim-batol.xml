@@ -234,15 +234,27 @@
 					<RunTo X="-507.1113" Y="-498.1364" Z="271.9166" />
 					
 				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	<!-- 2nd grp -->
-					<Hotspot X="-564.0786" Y="-501.2019" Z="276.5973" />
-					<Hotspot X="-557.1368" Y="-495.9306" Z="276.5973" />
-					<Hotspot X="-544.4354" Y="-487.5458" Z="276.5973" />
-					<Hotspot X="-538.6346" Y="-493.5804" Z="276.8659" />
-					<Hotspot X="-534.1458" Y="-500.4723" Z="276.5972" />
+					<Hotspot X="-503.0424" Y="-503.5657" Z="271.9144" />
+					<Hotspot X="-497.3107" Y="-509.9887" Z="271.91" />
+					<Hotspot X="-491.9419" Y="-516.6317" Z="271.9085" />
+					<Hotspot X="-488.3588" Y="-524.3307" Z="271.9085" />
+					<Hotspot X="-496.6065" Y="-524.9453" Z="272.2698" />
+					<Hotspot X="-501.0232" Y="-531.7067" Z="271.9934" />
 				</CustomBehavior>	
-					<RunTo X="-531.7513" Y="-499.3022" Z="276.5973" />
+					<RunTo X="-501.0232" Y="-531.7067" Z="271.9934" />
 					
+					<RunTo X="-501.3414" Y="-479.3863" Z="273.2244" />
+					<RunTo X="-476.6899" Y="-510.9562" Z="271.9081" />
+					<RunTo X="-478.2496" Y="-561.1151" Z="271.9089" />
+					<RunTo X="-493.8376" Y="-576.3397" Z="271.9125" />
+				<CustomBehavior File="WaitTimer" WaitTime="20000" />
 					
+				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	<!-- 2nd grp -->
+					<Hotspot X="-514.7112" Y="-577.4517" Z="276.5894" />
+					<Hotspot X="-527.18" Y="-568.2152" Z="276.8658" />
+					<Hotspot X="-528.5939" Y="-559.4961" Z="276.5974" />
+				</CustomBehavior>	
+					<RunTo X="-528.5939" Y="-559.4961" Z="276.5974" />	
 					
 					
 					
