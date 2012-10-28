@@ -35,6 +35,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="-11637.89" Y="-3388.319" Z="18.40996" Radius="65" />
 		<Blackspot X="-9945.886" Y="-4092.969" Z="17.37486" Radius="5" />
 		<Blackspot X="-9966.697" Y="-4123.455" Z="19.12684" Radius="5" />
 		<Blackspot X="-10032.42" Y="-4118.155" Z="18.39956" Radius="5" />
@@ -1576,7 +1577,7 @@
 									<Hotspot X="-12028.2" Y="-3332.73" Z="-8.778812" />									
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 57)" GoalText="Farming" />
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 58)" GoalText="Farming" />
 				</If>
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />

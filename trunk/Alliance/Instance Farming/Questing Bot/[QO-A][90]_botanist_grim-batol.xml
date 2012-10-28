@@ -218,14 +218,59 @@
 				</CustomBehavior>
 					<RunTo X="-570.024" Y="-500.2858" Z="276.5973" />
 				
-				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="true">
-					<Hotspot X="-562.1556" Y="-501.8315" Z="276.5973" />
-					<Hotspot X="-555.2775" Y="-496.5263" Z="276.5973" />
-					<Hotspot X="-542.1469" Y="-488.7782" Z="276.5973" />
-					<Hotspot X="-539.2411" Y="-496.2978" Z="276.8449" />
-					<Hotspot X="-531.7513" Y="-499.3022" Z="276.5973" />
+				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false"> <!-- 1st grp -->
+					<Hotspot X="-564.0786" Y="-501.2019" Z="276.5973" />
+					<Hotspot X="-557.1368" Y="-495.9306" Z="276.5973" />
+					<Hotspot X="-544.4354" Y="-487.5458" Z="276.5973" />
+					<Hotspot X="-538.6346" Y="-493.5804" Z="276.8659" />
+					<Hotspot X="-534.1458" Y="-500.4723" Z="276.5972" />
 				</CustomBehavior>	
 					<RunTo X="-531.7513" Y="-499.3022" Z="276.5973" />
+					
+					<RunTo X="-563.636" Y="-476.4442" Z="276.5973" />
+					<RunTo X="-546.7367" Y="-469.8201" Z="276.5973" />
+					<RunTo X="-514.7665" Y="-470.607" Z="276.5973" />
+					<RunTo X="-499.9064" Y="-479.6935" Z="272.3347" />
+					<RunTo X="-507.1113" Y="-498.1364" Z="271.9166" />
+					
+				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	<!-- 2nd grp -->
+					<Hotspot X="-564.0786" Y="-501.2019" Z="276.5973" />
+					<Hotspot X="-557.1368" Y="-495.9306" Z="276.5973" />
+					<Hotspot X="-544.4354" Y="-487.5458" Z="276.5973" />
+					<Hotspot X="-538.6346" Y="-493.5804" Z="276.8659" />
+					<Hotspot X="-534.1458" Y="-500.4723" Z="276.5972" />
+				</CustomBehavior>	
+					<RunTo X="-531.7513" Y="-499.3022" Z="276.5973" />
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
                               <!-- turn around -->
 				
 				
