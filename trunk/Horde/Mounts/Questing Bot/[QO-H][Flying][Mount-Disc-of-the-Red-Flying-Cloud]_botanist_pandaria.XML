@@ -377,7 +377,6 @@
 					<CustomBehavior File="MyCTM" X="1476.459" Y="-15.5934" Z="492.0014" />
 					<CustomBehavior File="MyCTM" X="1506.276" Y="-44.31619" Z="496.3478" />
 					<CustomBehavior File="MyCTM" X="1600.037" Y="5.155763" Z="500.2479" />
-					<CustomBehavior File="MyCTM" X="1638.126" Y="-16.96518" Z="482.5826" />
 					<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="5" ExpiryAction="InputEnabled_BotStop" 
 								Text=" PRESS STOP!. Land below, kill the mob and right click on object # 35. Then get on your flying mount, return to here and restart the bot." Title="WARNING" />
 				</If>
