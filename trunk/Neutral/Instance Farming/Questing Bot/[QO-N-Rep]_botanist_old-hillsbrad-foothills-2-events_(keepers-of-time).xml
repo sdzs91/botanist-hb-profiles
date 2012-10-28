@@ -1,8 +1,8 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-Rep]_botanist_old-hillsbrad-foothills-2-events_(keepers-of-time)v1.0</Name>
+	<Name>[QO-N-Rep]_botanist_old-hillsbrad-foothills-2-events_(keepers-of-time)</Name>
    
 	<MinLevel>1</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<MaxLevel>101</MaxLevel>
    
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>0</MinFreeBagSlots>

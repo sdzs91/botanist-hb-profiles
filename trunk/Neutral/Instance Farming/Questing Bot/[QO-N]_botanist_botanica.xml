@@ -1,8 +1,8 @@
 ﻿<HBProfile creator="Botanist" version="1.3">
-	<Name>[QO-N} Botanist Botanica v1.5</Name>
+	<Name>[QO-N} Botanist Botanica</Name>
    
 	<MinLevel>1</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<MaxLevel>101</MaxLevel>
    
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>0</MinFreeBagSlots>

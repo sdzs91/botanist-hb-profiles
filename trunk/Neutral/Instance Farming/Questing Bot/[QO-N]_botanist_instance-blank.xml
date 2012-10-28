@@ -1,8 +1,8 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N]_botanist_grim-batol_v1.0</Name>
+	<Name>[QO-N]_botanist</Name>
    
 	<MinLevel>1</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<MaxLevel>101</MaxLevel>
    
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>0</MinFreeBagSlots>
