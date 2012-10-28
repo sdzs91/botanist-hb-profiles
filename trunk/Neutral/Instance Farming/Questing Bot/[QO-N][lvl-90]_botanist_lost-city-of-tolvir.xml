@@ -160,41 +160,33 @@
 				<RunTo X="-10863.4" Y="-1364.771" Z="15.35457" />
 				<RunTo X="-10867.52" Y="-1376.847" Z="15.35457" />
 				
-				<CustomBehavior File="Message" Text="I am waiting 5 seconds for DK's runes to regenerate." LogColor="Lime" />  
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />       
-				<CustomBehavior File="Message" Text="Casting Army of the Dead." LogColor="Lime" />
-				<CustomBehavior File="RunMacro" Macro="/cast Army of the Dead" />
-				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 				<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 					<Hotspot X="-10855.61" Y="-1407.148" Z="15.35645" />
 				</CustomBehavior>
-				<RunTo X="-10873.87" Y="-1499.401" Z="6.677712" />
+					<RunTo X="-10873.87" Y="-1499.401" Z="6.677712" />
 				<CustomBehavior File="ForcedDismount" />
 				
 				<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 					<Hotspot X="-10874.32" Y="-1500.173" Z="6.676936" />
 				</CustomBehavior>
-				<RunTo X="-10891.96" Y="-1497.884" Z="6.675454" />
+					<RunTo X="-10891.96" Y="-1497.884" Z="6.675454" />
 				<CustomBehavior File="ForcedDismount" />
 				
 				<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-					 <Hotspot X="-10940.95" Y="-1489.821" Z="6.707749" />
+					<Hotspot X="-10946.02" Y="-1474.274" Z="6.676815" />
 				</CustomBehavior>
 				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				
 				<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-					<Hotspot X="-10968.02" Y="-1482.202" Z="6.677754" />
+					<Hotspot X="-10963.14" Y="-1495.493" Z="6.677462" />
 				</CustomBehavior>
 				<CustomBehavior File="ForcedDismount" />
 												
 				<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-					<Hotspot X="-10962.59" Y="-1497.654" Z="6.677517" />
+					<Hotspot X="-10963.03" Y="-1558.747" Z="11.484" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
 				</CustomBehavior>
-				<CustomBehavior File="ForcedDismount" />
 				
-				<CustomBehavior File="ForcedMount" MountType="Ground" />
-				<RunTo X="-10962.73" Y="-1511.759" Z="11.4577" />
 				<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false"> 
 					<Hotspot X="-10959.51" Y="-1573.911" Z="6.228639" />
 					<Hotspot X="-10962.82" Y="-1556.441" Z="11.3949" />
@@ -261,12 +253,8 @@
 				
 				<CustomBehavior File="MyCTM" X="-11117.14" Y="-1426.858" Z="10.80734" />
 				<CustomBehavior File="ForcedDismount" />
-				<RunTo X="-11123.33" Y="-1407.861" Z="10.8075" />
+					<RunTo X="-11123.33" Y="-1407.861" Z="10.8075" />
                 
-				<CustomBehavior File="Message" Text="I am waiting 5 seconds for DK's runes to regenerate." LogColor="Lime" />  
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />       
-				<CustomBehavior File="Message" Text="Casting Army of the Dead." LogColor="Lime" />
-				<CustomBehavior File="RunMacro" Macro="/cast Army of the Dead" />
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 				<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 					<Hotspot X="-11157.51" Y="-1391.856" Z="10.80717" />
@@ -284,60 +272,42 @@
 				<CustomBehavior File="ForcedDismount" />
 				
 				<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-					<Hotspot X="-11123.13" Y="-1341.579" Z="10.80459" />
+					<Hotspot X="-11122.38" Y="-1335.053" Z="10.80592" />
 				</CustomBehavior>
 				<CustomBehavior File="ForcedMount" MountType="Ground" />
 				
-				<CustomBehavior File="RunMacro" Macro="/target Tol'vir Merchant" NumOfTimes="1"  />
 				<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-					<Hotspot X="-11096.43" Y="-1334.804" Z="10.80599" />
+					<Hotspot X="-11100.09" Y="-1337.575" Z="10.80694" />
+					<Hotspot X="-11091.59" Y="-1328.159" Z="10.80694" />
+					<Hotspot X="-11086.56" Y="-1313.529" Z="10.80675" />
+					<Hotspot X="-11075.66" Y="-1319.284" Z="10.80675" />
+					<Hotspot X="-11067.91" Y="-1328.466" Z="10.80696" />
+					<Hotspot X="-11056.08" Y="-1324.976" Z="10.80696" />
+					<Hotspot X="-11046.21" Y="-1318.132" Z="10.8065" />
+					<Hotspot X="-11034.19" Y="-1316.758" Z="10.8065" />
+					<Hotspot X="-11021.71" Y="-1317.211" Z="10.8065" />
+					<Hotspot X="-11013.24" Y="-1307.98" Z="10.8065" />
+					<Hotspot X="-11003.44" Y="-1315.345" Z="10.80773" />
+					<Hotspot X="-11002.09" Y="-1329.758" Z="10.80773" />
 				</CustomBehavior>
-				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="RunMacro" Macro="/target Tol'vir Merchant" NumOfTimes="1"  />
+
 				
 				
 				<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-				<Hotspot X="-11078.03" Y="-1320.19" Z="10.80695" />
+					<Hotspot X="-10999.9" Y="-1341.557" Z="10.80657" />
+					<Hotspot X="-10998.13" Y="-1356.933" Z="10.80657" />
+					<Hotspot X="-11003.77" Y="-1367.881" Z="10.80657" />
+					<Hotspot X="-10998.93" Y="-1379.324" Z="10.806" />
+					<Hotspot X="-11011.28" Y="-1379.341" Z="10.80531" />
+					<Hotspot X="-11023.39" Y="-1378.601" Z="10.80545" />
+					<Hotspot X="-11032.97" Y="-1371.037" Z="10.80545" />
+					<Hotspot X="-11035.03" Y="-1383.739" Z="10.80545" />
+					<Hotspot X="-11046.11" Y="-1378.012" Z="10.80723" />
+					<Hotspot X="-11053.52" Y="-1387.562" Z="10.80723" />
+					<Hotspot X="-11065.57" Y="-1388.164" Z="10.80723" />
+					<Hotspot X="-11076.92" Y="-1383.871" Z="10.88992" />
 				</CustomBehavior>
-				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="RunMacro" Macro="/target Tol'vir Merchant" NumOfTimes="1"  />
 								
-				<CustomBehavior File="ForcedMount" MountType="Ground" />
-				<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-					<Hotspot X="-11046.94" Y="-1318.198" Z="10.80667" />
-					<Hotspot X="-11021.8" Y="-1314.502" Z="10.80667" />
-					<Hotspot X="-11005.93" Y="-1308.902" Z="10.80667" />
-					<Hotspot X="-10982.87" Y="-1331.036" Z="10.80688" />
-				</CustomBehavior>
-				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="RunMacro" Macro="/target Tol'vir Merchant" NumOfTimes="1" />
-				
-				<CustomBehavior File="ForcedMount" MountType="Ground" />
-				<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-					<Hotspot X="-10995.04" Y="-1367.233" Z="10.80576" />
-					<Hotspot X="-11010" Y="-1368.795" Z="10.80576" />
-					<Hotspot X="-11003.1" Y="-1380.127" Z="10.80676" />
-				</CustomBehavior>
-				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="RunMacro" Macro="/target Tol'vir Merchant" NumOfTimes="1" />
-				
-				<CustomBehavior File="ForcedMount" MountType="Ground" />
-				<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-					<Hotspot X="-11006.5" Y="-1378.678" Z="10.79649" />
-					<Hotspot X="-11031.39" Y="-1377.097" Z="10.80538" />
-				</CustomBehavior>
-				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="RunMacro" Macro="/target Tol'vir Merchant" NumOfTimes="1" />
-				<RunTo X="-11030.81" Y="-1383.358" Z="10.80578" />
-				
-				<CustomBehavior File="ForcedMount" MountType="Ground" />
-				<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-					<Hotspot X="-11055.85" Y="-1384.955" Z="10.80704" />
-					<Hotspot X="-11076.2" Y="-1387.524" Z="10.80623" />
-				</CustomBehavior>
-				<CustomBehavior File="ForcedDismount" />
-				<CustomBehavior File="RunMacro" Macro="/target Tol'vir Merchant" NumOfTimes="1"  />
-				
 				                        <!-- route out -->
 				
 				<CustomBehavior File="ForcedMount" MountType="Ground" />
