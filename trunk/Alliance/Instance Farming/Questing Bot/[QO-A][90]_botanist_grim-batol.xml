@@ -47,8 +47,8 @@
 		 <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="True" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="True" />
 		 
 		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
-						Text="This profle is oriented towards an ilvl 390+ Blood Death Knight. If you aren't a BLOOD DEATH KNIGHT, THIS PROFILE MAY OR MAY NOT WORK FOR YOUR CLASS.
-						Alliance set your hearthstone @ Thundermar in Twilight Highlands." Title="WARNING" />
+						Text="This profle is oriented towards an ilvl 440+ Blood Death Knight. If you aren't a BLOOD DEATH KNIGHT, THIS PROFILE MAY OR MAY NOT WORK FOR YOUR CLASS.
+						Start the profile in Stormwind or Twilight Highlands. DO NOT start the profile outside the instance portal unless you manually set your hearthstone in Thundermar." Title="WARNING" />
 	
          <While Condition="true" >
 
@@ -72,7 +72,18 @@
 				<If Condition="Me.ZoneId == 4922" >
 					<If Condition="Me.Y &gt; -3439.181 || Me.Y &lt; -3462.127 &amp;&amp; Me.X &gt; -4051.118 || Me.X &lt; -4088.162" >
 							<If Condition="Me.MapId != 670">
-								<CustomBehavior File="Message" Text="I am in Twilight Highlands, but not near the Grim Batol portal. Flying to the portal." LogColor="Lime" />
+								<CustomBehavior File="Message" Text="I am in Twilight Highlands. Flying to Thundermar to set my hearthstone." LogColor="Lime" />
+								<CustomBehavior File="FlyTo" X="-3205.868" Y="-5040.199" Z="120.0562" />
+								<CustomBehavior File="ForcedDismount" />
+									<RunTo X="-3215.434" Y="-5042.934" Z="120.2144" />
+									<RunTo X="-3224.168" Y="-5048.066" Z="120.6241" />
+								<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+								<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<CustomBehavior File="SetHearthstone" MobId="49591"  X="-3226.321" Y="-5048.929" Z="120.6302" />
+								<CustomBehavior File="WaitTimer" WaitTime="1000" />
+									<RunTo X="-3215.434" Y="-5042.934" Z="120.2144" />
+									<RunTo X="-3205.868" Y="-5040.199" Z="120.0562" />
+								<CustomBehavior File="ForcedMount" MountType="Flying" />
 								<CustomBehavior File="FlyTo" X="-4094.062" Y="-3483.225" Z="297.7235" />
 								<CustomBehavior File="MyCTM" X="-4058.4" Y="-3450.03" Z="281.0914" />
 								<CustomBehavior File="Message" Text="I've reached Grim Batol." LogColor="Lime" />
