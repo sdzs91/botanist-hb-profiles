@@ -266,13 +266,14 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="213407" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-465.184021" Y="-866.4983" Z="237.577209" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />		
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
 					
 					<CustomBehavior File="Message" Text="Flying to object 23 of 45, A Most Famou Bill of Sale." LogColor="Lime" />
 					<CustomBehavior File="FlyTo"  X="-135.2023" Y="508.9935" Z="214.2094" />
 					<CustomBehavior File="ForcedDismount" />			
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="213460" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-137.5868" Y="518.7205" Z="214.06221" />
+					<CustomBehavior File="MyCTM" X="-131.4974" Y="509.277" Z="214.2104" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
 					
@@ -379,7 +380,7 @@
 					<CustomBehavior File="MyCTM" X="1600.037" Y="5.155763" Z="500.2479" />
 					<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="5" ExpiryAction="InputEnabled_BotStop" 
 								Text=" PRESS STOP!. Land below, kill the mob and right click on object # 35. Then get on your flying mount, return to here and restart the bot." Title="WARNING" />
-				</If>
+		<!--		</If>		-->
 				
 					
 					

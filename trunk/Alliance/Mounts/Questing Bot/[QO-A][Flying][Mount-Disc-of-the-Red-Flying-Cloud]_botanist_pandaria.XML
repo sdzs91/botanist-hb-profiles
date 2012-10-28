@@ -273,6 +273,7 @@
 					<CustomBehavior File="ForcedDismount" />			
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="213460" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-137.5868" Y="518.7205" Z="214.06221" />
+					<CustomBehavior File="MyCTM" X="-131.4974" Y="509.277" Z="214.2104" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
 					
