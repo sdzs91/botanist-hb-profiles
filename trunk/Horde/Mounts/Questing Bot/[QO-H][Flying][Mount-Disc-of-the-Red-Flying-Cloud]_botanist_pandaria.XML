@@ -512,7 +512,7 @@
 						<RunTo X="1448.614" Y="373.0621" Z="550.2213" />
 						
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="20" ExpiryAction="InputEnabled_Continue" 
-						Text="DO NOT PRESS STOP! Talk to Lorewalker Cho and turn in all the Lorewalker quest, then press the continue button on this window.." Title="WARNING" />
+						Text="DO NOT PRESS STOP! Talk to Lorewalker Cho and turn in all the Lorewalker quest, this will take quite awhile. Each quest takes about 2 minutes to turn in. Then press the continue button on this window.." Title="WARNING" />
 						
 						<RunTo X="1450.871" Y="399.0075" Z="548.0164" />
 						

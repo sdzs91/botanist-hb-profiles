@@ -513,12 +513,12 @@
 						<RunTo X="1448.614" Y="373.0621" Z="550.2213" />
 						
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="20" ExpiryAction="InputEnabled_Continue" 
-						Text="DO NOT PRESS STOP! Talk to Lorewalker Cho and turn in all the Lorewalker quest, then press the continue button on this window.." Title="WARNING" />
+						Text="DO NOT PRESS STOP! Talk to Lorewalker Cho and turn in all the Lorewalker quest, this will take quite awhile. Each quest takes about 2 minutes to turn in. Then press the continue button on this window.." Title="WARNING" />
 						
 						<RunTo X="1450.871" Y="399.0075" Z="548.0164" />
 						
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
-						Text="PRESS STOP! Talk to Tan Shin Tiao. You can now purchase your very own Disc of the Red Flying Cloud from her for 600 gold, as well as a few other items you may be interested in." Title="WARNING" />
+						Text="PRESS STOP! Talk to Tan Shin Tiao. You can now purchase your very own Disc of the Red Flying Cloud from her for 420 gold, as well as a few other items you may be interested in." Title="WARNING" />
 				
 					<CustomBehavior File="Message" Text="I have completed all my task. I am stopping the bot" LogColor="Lime" />
 					<CustomBehavior File="UserSettings" StopBot="true" />
