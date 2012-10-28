@@ -2,7 +2,7 @@
 	<Name>[QO-N][lvl-90]_botanist_lost-city-of-tolvir</Name>
    
 	<MinLevel>1</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<MaxLevel>101</MaxLevel>
    
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>0</MinFreeBagSlots>
@@ -290,9 +290,8 @@
 					<Hotspot X="-11003.44" Y="-1315.345" Z="10.80773" />
 					<Hotspot X="-11002.09" Y="-1329.758" Z="10.80773" />
 				</CustomBehavior>
-
-				
-				
+					<RunTo X="-11002.09" Y="-1329.758" Z="10.80773" />
+					
 				<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 					<Hotspot X="-10999.9" Y="-1341.557" Z="10.80657" />
 					<Hotspot X="-10998.13" Y="-1356.933" Z="10.80657" />
