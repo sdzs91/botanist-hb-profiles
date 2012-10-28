@@ -501,9 +501,7 @@
 						Text="DO NOT PRESS STOP! Open the mailbox and accept all the quests from Lorewalker Cho. Once you have accepted all the quest, press continue on this window. Another popup will appear in a few minutes." Title="WARNING" />
 						<RunTo X="1624.871" Y="924.1219" Z="471.1837" />
 											<!-- end of faction change -->
-
-						
-										
+											
 				</If>
 				
 					<CustomBehavior File="Message" Text="I am flying to Lorewalker Chon so you can turn in all the Lorewalker quest." LogColor="Lime" />

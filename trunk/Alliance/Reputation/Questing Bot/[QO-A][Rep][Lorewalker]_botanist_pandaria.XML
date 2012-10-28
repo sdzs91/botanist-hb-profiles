@@ -380,10 +380,8 @@
 					<CustomBehavior File="MyCTM" X="1600.037" Y="5.155763" Z="500.2479" />
 					<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="5" ExpiryAction="InputEnabled_BotStop" 
 								Text=" PRESS STOP!. Land below, kill the mob and right click on object # 35. Then get on your flying mount, return to here and restart the bot." Title="WARNING" />
-		<!--		</If>		-->
-				
-					
-					
+				</If>		
+									
 				<If Condition="Me.ZoneId == 6006" >	
 				
 					<CustomBehavior File="Message" Text="Flying to object 36 of 45, Role Call." LogColor="Lime" />
