@@ -2,7 +2,7 @@
 	<Name>[QO-A]_botanist_grim-batol</Name>
    
 	<MinLevel>1</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<MaxLevel>101</MaxLevel>
    
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>0</MinFreeBagSlots>
@@ -34,10 +34,10 @@
 	<Vendors>
 	</Vendors>
 
-	<Factions>14,16,2156</Factions>
+	<Factions></Factions>
 	
 	<ProtectedItems>
-	<Item Name="Elementium Lockbox" Entry="68729" />	
+		<Item Name="Elementium Lockbox" Entry="68729" />	
 	</ProtectedItems>
 	
 	<QuestOrder>
@@ -70,69 +70,58 @@
 				
 									  
 				<If Condition="Me.ZoneId == 4922" >
-					<If Condition="Me.Y &gt; -3439.181 || Me.Y &lt; -3462.127 &amp;&amp; Me.X &gt; -4051.118 || Me.X &lt; -4088.162" >
-							<If Condition="Me.MapId != 670">
-								<CustomBehavior File="Message" Text="I am in Twilight Highlands. Flying to Thundermar to set my hearthstone." LogColor="Lime" />
-								<CustomBehavior File="FlyTo" X="-3205.868" Y="-5040.199" Z="120.0562" />
-								<CustomBehavior File="ForcedDismount" />
-									<RunTo X="-3215.434" Y="-5042.934" Z="120.2144" />
-									<RunTo X="-3224.168" Y="-5048.066" Z="120.6241" />
-								<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
-								<CustomBehavior File="WaitTimer" WaitTime="1000" />
-								<CustomBehavior File="SetHearthstone" MobId="49591"  X="-3226.321" Y="-5048.929" Z="120.6302" />
-								<CustomBehavior File="WaitTimer" WaitTime="1000" />
-									<RunTo X="-3215.434" Y="-5042.934" Z="120.2144" />
-									<RunTo X="-3205.868" Y="-5040.199" Z="120.0562" />
-								<CustomBehavior File="ForcedMount" MountType="Flying" />
-								<CustomBehavior File="FlyTo" X="-4094.062" Y="-3483.225" Z="297.7235" />
-								<CustomBehavior File="MyCTM" X="-4058.4" Y="-3450.03" Z="281.0914" />
-								<CustomBehavior File="Message" Text="I've reached Grim Batol." LogColor="Lime" />
-								<CustomBehavior File="ForcedDismount" />
-							</If>
-					</If>
+					<If Condition="Me.Y &gt; -3439.181 || Me.Y &lt; -3462.127 || Me.X &gt; -4051.118 || Me.X &lt; -4088.162" >
+						<CustomBehavior File="Message" Text="I am in Twilight Highlands. Flying to Thundermar to set my hearthstone." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-3205.868" Y="-5040.199" Z="120.0562" />
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-3215.434" Y="-5042.934" Z="120.2144" />
+							<RunTo X="-3224.168" Y="-5048.066" Z="120.6241" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="49591"  X="-3226.321" Y="-5048.929" Z="120.6302" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="-3215.434" Y="-5042.934" Z="120.2144" />
+							<RunTo X="-3205.868" Y="-5040.199" Z="120.0562" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
+						<CustomBehavior File="FlyTo" X="-4094.062" Y="-3483.225" Z="297.7235" />
+						<CustomBehavior File="MyCTM" X="-4058.4" Y="-3450.03" Z="281.0914" />
+						<CustomBehavior File="Message" Text="I've reached Grim Batol." LogColor="Lime" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>	
 				</If>
 				
 				<If Condition="Me.MapId == 670">
 					<CustomBehavior File="Message" Text="You started the bot with me inside Grim Batol. hearthing out to reset the dungeon, if my hearth isn't on CD." LogColor="Lime" />					
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />
-						
-					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />						
-						<If Condition="Me.ZoneId == 4922" >
-							<If Condition="Me.MapId != 670">
-								<If Condition="Me.X &gt; -3257 &amp;&amp; Me.X &lt; -3161.286 &amp;&amp; Me.Y &gt; -5090.183 &amp;&amp; Me.Y &lt; -4957.68" >
-									<CustomBehavior File="Message" Text="I succesfully hearthed, checking my empty bag slot and gear durability." LogColor="Lime" />
-									<CustomBehavior File="WaitTimer" WaitTime="1000" />						
-										<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.4)" >					
-											<CustomBehavior File="WaitTimer" WaitTime="1000" />
-											<CustomBehavior File="Message" Text="I have detected that I have less than 25 empty bag slots or that my gear is below 40% durability. I'm going to repair, vendor and mail." LogColor="Lime" />
-												<RunTo X="-3215.434" Y="-5042.934" Z="120.2144" />
-												<RunTo X="-3205.868" Y="-5040.199" Z="120.0562" />
-											<SetVendor>
-												<Vendors>
-													<Vendor Name="Caelyb Coppercrag" Entry="49592" Type="Repair" X="-3177.95" Y="-5021.481" Z="121.2318" />
-												</Vendors>
-											</SetVendor>						
-											<SetMailbox>
-												<Mailboxes>
-													<Mailbox  X="-3205.643" Y="-5046.016" Z="120.3249" />
-												</Mailboxes>
-											</SetMailbox>			
-											<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
-										</If>	
-									<CustomBehavior File="Message" Text="I have more than 25 empty slots in my bags and my gear is above 40 percent durability." LogColor="Lime" />
-									<CustomBehavior File="WaitTimer" WaitTime="1000" />
-										<RunTo X="-3215.434" Y="-5042.934" Z="120.2144" />
-										<RunTo X="-3205.868" Y="-5040.199" Z="120.0562" />
-									<CustomBehavior File="ForcedMount" MountType="Flying" />
-									<CustomBehavior File="FlyTo" X="-4094.062" Y="-3483.225" Z="297.7235" />
-									<CustomBehavior File="MyCTM" X="-4058.4" Y="-3450.03" Z="281.0914" />
-									<CustomBehavior File="Message" Text="I've reached Grim Batol." LogColor="Lime" />
-									<CustomBehavior File="ForcedDismount" />	
-								</If>
-							</If>
+					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />										
+						<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.4)" >					
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="I have detected that I have less than 25 empty bag slots or that my gear is below 40% durability. I'm going to repair, vendor and mail." LogColor="Lime" />
+								<RunTo X="-3215.434" Y="-5042.934" Z="120.2144" />
+								<RunTo X="-3205.868" Y="-5040.199" Z="120.0562" />
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Caelyb Coppercrag" Entry="49592" Type="Repair" X="-3177.95" Y="-5021.481" Z="121.2318" />
+								</Vendors>
+							</SetVendor>						
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox  X="-3205.643" Y="-5046.016" Z="120.3249" />
+								</Mailboxes>
+							</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 						</If>
-				</If>	
+						
+							<CustomBehavior File="Message" Text="I have more than 25 empty slots in my bags and my gear is above 40 percent durability." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="-3215.434" Y="-5042.934" Z="120.2144" />
+								<RunTo X="-3205.868" Y="-5040.199" Z="120.0562" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="FlyTo" X="-4094.062" Y="-3483.225" Z="297.7235" />
+							<CustomBehavior File="MyCTM" X="-4058.4" Y="-3450.03" Z="281.0914" />
+							<CustomBehavior File="Message" Text="I've reached Grim Batol." LogColor="Lime" />
+							<CustomBehavior File="ForcedDismount" />	
+				</If>
 					
 				<If Condition="Me.MapId == 670">
 					<CustomBehavior File="Message" Text="My hearthstone is on CD, running out." LogColor="Lime" />
@@ -140,7 +129,7 @@
 					<CustomBehavior File="MyCTM" X="-624.155" Y="-189.365" Z="272.04" />
 					<CustomBehavior File="GoThruPortal" X="-629.6733" Y="-175.2985" Z="272.1489" />
 						<RunTo X="-4058.4" Y="-3450.03" Z="281.0914" />
-				</If>
+				</If>		
 				
 					
 
@@ -162,8 +151,8 @@
 				</If>
 
                                <!-- grim batol dungeon script -->
-				<If Condition="Me.MapId == 670">									   
-					<CustomBehavior File="MyCTM"  X="-617.1314" Y="-216.1342" Z="276.6051" />					
+									   
+					<CustomBehavior File="MyCTM" X="-617.1314" Y="-216.1342" Z="276.6051" />					
 						<RunTo X="-580.9396" Y="-238.0293" Z="276.5961" />
 						<RunTo X="-555.6025" Y="-238.0777" Z="276.3755" />
 						<RunTo X="-535.8945" Y="-253.9818" Z="276.3749" />
@@ -193,7 +182,7 @@
 						<RunTo X="-683.0737" Y="-405.6397" Z="268.7661" />
 						<RunTo X="-667.8325" Y="-425.9195" Z="268.7678" />
 						<RunTo X="-693.0126" Y="-431.4126" Z="269.1477" />
-						<RunTo X="-703.0278" Y="-441.4632" Z="269.1476" />  <!-- first boss -->
+						<RunTo X="-703.0278" Y="-441.4632" Z="269.1476" />  				 
 						
 						<RunTo X="-697.8062" Y="-443.9466" Z="269.1476" />
 						<RunTo X="-674.8155" Y="-454.8756" Z="269.1198" />
@@ -223,8 +212,8 @@
 					</CustomBehavior>		
 						<RunTo X="-538.8044" Y="-497.3131" Z="276.8659" />
 						
-						<Hotspot X="-543.8639" Y="-487.934" Z="276.5973" />
-						<Hotspot X="-546.4179" Y="-472.8824" Z="276.5973" />
+						<RunTo X="-543.8639" Y="-487.934" Z="276.5973" />
+						<RunTo X="-546.4179" Y="-472.8824" Z="276.5973" />
 					<CustomBehavior File="Message" Text="Waiting on the patrol." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="105000" />
 					
@@ -300,7 +289,7 @@
 						<RunTo X="-438.1122" Y="-679.9156" Z="268.6845" />
 						<RunTo X="-430.077" Y="-686.1022" Z="268.3989" />
 						<RunTo X="-418.0758" Y="-680.4874" Z="267.4481" />
-						<RunTo X="-405.4931" Y="-674.6392" Z="265.9008" /> <!-- third boss -->
+						<RunTo X="-405.4931" Y="-674.6392" Z="265.9008" /> 			
 						
 						<RunTo X="-423.3658" Y="-699.9878" Z="268.3843" />
 						<RunTo X="-434.2061" Y="-716.8464" Z="268.7675" />
@@ -342,12 +331,11 @@
 					<CustomBehavior File="Message" Text="I'm not pulling the last boss. Hearthing out to reset the instance." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />
-				</If>	
+					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />		
+
 					
 				<If Condition="Me.ZoneId == 4922" >
 					<If Condition="Me.MapId != 670">	
-						<If Condition="Me.X &gt; -3257 &amp;&amp; Me.X &lt; -3161.286 &amp;&amp; Me.Y &gt; -5090.183 &amp;&amp; Me.Y &lt; -4957.68" >
 								<CustomBehavior File="Message" Text="I succesfully hearthed, checking my empty bag slot and gear durability." LogColor="Lime" />
 								<CustomBehavior File="WaitTimer" WaitTime="1000" />						
 									<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.4)" >					
@@ -376,17 +364,16 @@
 								<CustomBehavior File="MyCTM" X="-4058.4" Y="-3450.03" Z="281.0914" />
 								<CustomBehavior File="Message" Text="I've reached Grim Batol." LogColor="Lime" />
 								<CustomBehavior File="ForcedDismount" />	
-						</If>
 					</If>
 				</If>
 				
-				<If Condition="Me.MapId == 725">
+				<If Condition="Me.MapId == 670">
 					<CustomBehavior File="Message" Text="My hearthstone is on CD, running out." LogColor="Lime" />
 						<RunTo X="851.3138" Y="986.474" Z="317.2632" />
 					<CustomBehavior File="MyCTM"  X="822.8583" Y="987.2787" Z="318.7843" />
 					<CustomBehavior File="WaitTimer" WaitTime="12000" />
 						<RunTo X="1023.72" Y="644.747" Z="156.672" />
-				</If>
+				</If>		
 				
 		
 		</While>
