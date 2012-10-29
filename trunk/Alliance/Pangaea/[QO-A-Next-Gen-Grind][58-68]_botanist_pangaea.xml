@@ -114,7 +114,7 @@
 					<RunTo X="-709.0675" Y="2272.38" Z="10.61307" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 14." LogColor="Lime" />				
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 60." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>14</Factions>
 								<Hotspots>
@@ -184,7 +184,8 @@
 				<CustomBehavior File="Message" Text="Position check, Honor Hold in Hellfire Peninsula." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Honor Hold." LogColor="Lime" />
-				<CustomBehavior File="FlyTo" X="-703.3922" Y="2731.59" Z="94.73353" />
+				<CustomBehavior File="FlyTo" X="-709.6539" Y="2694.197" Z="94.15855" />
+				<CustomBehavior File="ForcedDismount" />
 					<RunTo X="-709.5172" Y="2713.072" Z="94.72057" />
 					<RunTo X="-701.1599" Y="2713.358" Z="94.73618" />
 					<RunTo X="-703.0786" Y="2719.859" Z="94.72361" />
@@ -202,6 +203,7 @@
 					<RunTo X="-709.5172" Y="2713.072" Z="94.72057" />
 					<RunTo X="-709.5327" Y="2700.618" Z="94.40196" />
 					<RunTo X="-709.6478" Y="2696.723" Z="94.30025" />
+				<CustomBehavior File="ForcedMount" MountType="Flying" />
 				<CustomBehavior File="FlyTo" X="-663.8076" Y="2855.771" Z="49.21987" />
 				<CustomBehavior File="ForcedDismount" />
 				

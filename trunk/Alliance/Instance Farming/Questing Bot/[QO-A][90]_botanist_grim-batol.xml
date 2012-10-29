@@ -260,12 +260,41 @@
 					<RunTo X="-493.8376" Y="-576.3397" Z="271.9125" />
 				<CustomBehavior File="WaitTimer" WaitTime="20000" />
 					
-				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	<!-- 2nd grp -->
+				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	<!-- 3rd grp -->
 					<Hotspot X="-514.7112" Y="-577.4517" Z="276.5894" />
 					<Hotspot X="-527.18" Y="-568.2152" Z="276.8658" />
 					<Hotspot X="-528.5939" Y="-559.4961" Z="276.5974" />
 				</CustomBehavior>	
-					<RunTo X="-528.5939" Y="-559.4961" Z="276.5974" />	
+					<RunTo X="-528.5939" Y="-559.4961" Z="276.5974" />
+					
+					<RunTo X="-542.8193" Y="-575.4422" Z="276.5974" />
+					<RunTo X="-570.2185" Y="-558.3252" Z="276.5974" />
+					<RunTo X="-589.6634" Y="-587.6985" Z="276.8601" />
+					<RunTo X="-611.4191" Y="-606.8289" Z="276.5819" />
+					<RunTo X="-638.7343" Y="-593.0562" Z="276.578" />
+					<RunTo X="-667.2324" Y="-608.19" Z="269.0755" />
+					
+					<RunTo X="-700.3853" Y="-606.8894" Z="268.7656" />
+					<RunTo X="-680.1328" Y="-642.4926" Z="268.7675" />
+					<RunTo X="-700.5086" Y="-660.7018" Z="268.7675" />
+					<RunTo X="-680.4527" Y="-689.8654" Z="268.7682" />
+					<RunTo X="-657.9609" Y="-709.3756" Z="268.7654" />
+					<RunTo X="-624.3616" Y="-731.0011" Z="268.766" />
+					<RunTo X="-642.5135" Y="-721.1172" Z="268.766" />
+					<RunTo X="-628.3317" Y="-699.7324" Z="271.5097" />
+					<RunTo X="-627.2565" Y="-689.3539" Z="271.2938" />
+					<RunTo X="-611.6097" Y="-678.4474" Z="268.7672" />
+					<RunTo X="-637.3794" Y="-666.3599" Z="268.7673" />
+					<RunTo X="-613.5462" Y="-673.7462" Z="269.1198" />
+					<RunTo X="-593.8724" Y="-689.5472" Z="268.7675" />
+					<RunTo X="-567.6554" Y="-696.1711" Z="268.7675" />
+					<RunTo X="-534.3384" Y="-696.7354" Z="268.7675" />
+					<RunTo X="-474.7903" Y="-690.5535" Z="268.7682" />
+					
+					<RunTo X="-428.9649" Y="-676.1581" Z="268.5924" /> <!-- trigger -->
+					
+					
+
 					
 					
 					
@@ -289,11 +318,8 @@
 					
 					
 					
-					
-					
-					
-					
-					
+				<CustomBehavior File="Message" Text="Tesy complete. I'm stopping the bot" LogColor="Lime" />
+			<CustomBehavior File="UserSettings" StopBot="true" />	
                               <!-- turn around -->
 				
 				
