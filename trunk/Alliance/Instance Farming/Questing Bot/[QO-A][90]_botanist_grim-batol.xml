@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A]_botanist_grim-batol</Name>
+	<Name>[QO-A][90]_botanist_grim-batol</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -192,8 +192,6 @@
 						<RunTo X="-594.0905" Y="-468.6255" Z="276.7603" />
 						<RunTo X="-569.1431" Y="-473.4059" Z="276.5975" />
 						<RunTo X="-570.2363" Y="-498.5876" Z="276.5975" />
-						<RunTo X="-673.729" Y="-448.7221" Z="269.1209" />
-						<RunTo X="-657.1589" Y="-459.7546" Z="275.362" />
 						<RunTo X="-639.0905" Y="-468.5535" Z="276.3937" />
 						<RunTo X="-619.0812" Y="-464.1123" Z="276.5797" />
 						<RunTo X="-599.4098" Y="-468.1602" Z="276.691" />
