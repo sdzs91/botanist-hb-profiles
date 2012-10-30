@@ -22,7 +22,8 @@
 	<TargetElites>True</TargetElites>
 	
 	<AvoidMobs>
-
+		<Mob Name="Riverbed Crocolisk" Entry="45321" />
+		<Mob Name="Ferndweller Wasp" Entry="51712" />
 	</AvoidMobs>
 	
 	<Blackspots>
@@ -48,7 +49,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 		
-		 <CustomBehavior File="UserSettings" MountDistance="10" UseFlightPaths="False" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="10" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="30" LogoutForInactivity="True" />
+		 <CustomBehavior File="UserSettings" MountDistance="200" UseFlightPaths="False" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="10" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="30" LogoutForInactivity="True" />
 		 
 		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
 						Text="This profle will farm mobs in Uldum and level your character from level 80-85. The profile will set your hearthstone where needed. Includes mail, vendors and repair. Start the profile in Uldum." Title="WARNING" />
