@@ -27,10 +27,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
-		<Blackspot X="-10542.93" Y="-1154.612" Z="44.52074" Radius="25.58937" />
-		<Blackspot X="-10549.43" Y="-1186.771" Z="47.19433" Radius="24.14933" />
-		<Blackspot X="-10466.79" Y="-1184.821" Z="44.73012" Radius="23.18394" />
-		<Blackspot X="-10579.15" Y="-1152.658" Z="42.60501" Radius="16.66108" />
+		.<Blackspot X="-10629.73" Y="-1154.439" Z="28.60011" Radius="108.0845" Height="17.69487" />
 	</Blackspots>
 
 	<Mailboxes>
