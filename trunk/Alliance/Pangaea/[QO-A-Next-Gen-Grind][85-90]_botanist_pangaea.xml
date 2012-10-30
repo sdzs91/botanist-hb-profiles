@@ -4,8 +4,8 @@
 <MinLevel>1</MinLevel>
 <MaxLevel>91</MaxLevel>
 
-<MinDurability>0.2</MinDurability>
-<MinFreeBagSlots>0</MinFreeBagSlots>
+<MinDurability>-.1</MinDurability>
+<MinFreeBagSlots>-.1</MinFreeBagSlots>
 
 <MailGrey>False</MailGrey>
 <MailWhite>False</MailWhite>
@@ -57,7 +57,8 @@
 
 <Factions></Factions>
 
-<ProtectedItems>	
+<ProtectedItems>
+	<Item Name="Raw Turtle Meat" Entry="74837" />
 </ProtectedItems>
 	
 

@@ -207,19 +207,24 @@
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 				<CustomBehavior File="ForcedMount" MountType="Flying" />
-				<CustomBehavior File="FlyTo" X="3463.878" Y="-165.2834" Z="59.71683" />
+				<CustomBehavior File="FlyTo" XX="4682.289" Y="901.0406" Z="124.571" />
 				<CustomBehavior File="ForcedDismount" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 72." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>16,90,834</Factions>
+							<Factions>1692,1953</Factions>
 								<Hotspots>
-									<Hotspot X="3463.878" Y="-165.2834" Z="59.71683" />
-									<Hotspot X="3682.82" Y="-236.8152" Z="63.70487" />
-									<Hotspot X="3616.763" Y="-94.09138" Z="59.68811" />
-									<Hotspot X="3666.752" Y="-17.51234" Z="59.93844" />
-									<Hotspot X="3780.401" Y="-39.40746" Z="57.51857" />
+									<Hotspot X="4682.289" Y="901.0406" Z="124.571" />
+									<Hotspot X="4651.068" Y="858.8956" Z="113.7336" />
+									<Hotspot X="4667.043" Y="776.4513" Z="107.1452" />
+									<Hotspot X="4729.213" Y="796.8953" Z="129.3726" />
+									<Hotspot X="4697" Y="724.6553" Z="118.0724" />
+									<Hotspot X="4700.543" Y="642.1249" Z="119.0084" />
+									<Hotspot X="4598.563" Y="639.7985" Z="98.93495" />
+									<Hotspot X="4596.189" Y="723.9522" Z="95.31297" />
+									<Hotspot X="4596.099" Y="723.9362" Z="95.29659" />
+									<Hotspot X="4621.304" Y="883.0825" Z="107.2459" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 74)" GoalText="Farming" />
