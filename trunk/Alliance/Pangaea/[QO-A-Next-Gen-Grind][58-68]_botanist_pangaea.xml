@@ -326,26 +326,26 @@
 								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
 								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Temple of Telhamat in Hellfire Peninsula." LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Position check, Cenarian Refuge in Zangarmarsh." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Temple of Telhamat." LogColor="Lime" />
-				<CustomBehavior File="ForcedMount" MountType="Flying" />
-				<CustomBehavior File="FlyTo" X="-193.4128" Y="5517.53" Z="27.06006" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Cenarian Refuge." LogColor="Lime" />
+				<CustomBehavior File="FlyTo" X="-255.4042" Y="5405.141" Z="134.4326" />
+				<CustomBehavior File="FlyTo" X="-204.252" Y="5513.826" Z="21.67486" />
 				<CustomBehavior File="ForcedDismount" />
-					<RunTo X="-175.6245" Y="5527.471" Z="29.40796" />
+					<RunTo X="-176.4584" Y="5527.642" Z="29.40784" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="SetHearthstone" MobId="18907"  X="-174.478" Y="5529.211" Z="29.40781" />
+				<CustomBehavior File="SetHearthstone" MobId="18907"  X="-174.478" Y="5529.211" Z="29.40744" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-193.4128" Y="5517.53" Z="27.06006" />
+					<RunTo X="-204.252" Y="5513.826" Z="21.67486" />
 				<CustomBehavior File="ForcedMount" MountType="Flying" />
 				<CustomBehavior File="FlyTo" X="-1279.34" Y="6252.558" Z="48.82741" />
 				<CustomBehavior File="ForcedDismount" />
 								 
-				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 62." LogColor="Lime" />				
+				<If	Condition="(Me.FreeBagSlots &gt;= 5) &amp;&amp; (Me.LowestDurabilityPercent &gt;= .3)" GoalText="Farming" >
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 66." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>31,7,91</Factions>
 								<Hotspots>
@@ -363,7 +363,7 @@
 									<Hotspot X="-1344.765" Y="6359.515" Z="37.1656" />								
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 66)" GoalText="Farming" />
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .3) || (Me.Level == 66)" GoalText="Farming" />
 				</If>
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
@@ -374,12 +374,12 @@
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Talaara" Entry="19001" Type="Repair" X="105.5018" Y="4337.619" Z="101.466" />
+								<Vendor Name="Fedryen Swiftspear" Entry="17904" Type="Repair" X="-198.9696" Y="5490.686" Z="21.84626" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="191.564" Y="4326.677" Z="116.5685" />
+								<Mailbox X="-202.111" Y="5506.835" Z="22.09428" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
