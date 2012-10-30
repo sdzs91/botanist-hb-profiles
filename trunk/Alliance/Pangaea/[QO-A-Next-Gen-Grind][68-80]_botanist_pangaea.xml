@@ -207,7 +207,7 @@
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 				<CustomBehavior File="ForcedMount" MountType="Flying" />
-				<CustomBehavior File="FlyTo" XX="4682.289" Y="901.0406" Z="124.571" />
+				<CustomBehavior File="FlyTo" X="4682.289" Y="901.0406" Z="124.571" />
 				<CustomBehavior File="ForcedDismount" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
