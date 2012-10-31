@@ -167,11 +167,13 @@
 					<CustomBehavior File="Message" Text="I am pulling the second boss, High Botanist Freywinn............Good Luck!!!" LogColor="Yellow" />
 					<RunTo X="127.8433" Y="461.8587" Z="-2.933625" />
 					<RunTo X="159.3723" Y="493.6336" Z="-4.088019" />					
-					<RunTo X="69.146" Y="493.0288" Z="-5.650636" /> 				
+					<RunTo X="69.146" Y="493.0288" Z="-5.650636" />
+				<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 					<RunTo X="20.09344" Y="495.5688" Z="-5.614398" />
-					<RunTo X="-8.132909" Y="490.0638" Z="-5.420028" />
+					<RunTo X="-8.132909" Y="490.0638" Z="-5.420028" />					
 					<RunTo X="26.73346" Y="541.184" Z="-18.44732" />
 					<RunTo X="6.497409" Y="558.4009" Z="-18.1131" />
+				</CustomBehavior>	
 					<CustomBehavior File="Message" Text="I am pulling the third boss, Thorngrin the Tender............Good Luck!!!" LogColor="Yellow" />
 					<CustomBehavior File="MyCTM"  X="5.038355" Y="596.1082" Z="-15.15859" />
 					<CustomBehavior File="MyCTM" X="-8.698942" Y="555.3329" Z="-18.16251" />
