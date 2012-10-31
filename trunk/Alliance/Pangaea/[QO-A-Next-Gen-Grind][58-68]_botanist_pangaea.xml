@@ -465,7 +465,7 @@
 		<While Condition="Me.MapId == 530 &amp;&amp; Me.Level &gt;= 67 &amp;&amp; Me.Level &lt; 68" >		
 				<CustomBehavior File="UserSettings" FindMountAutomatically="True" UseRandomMount="True" UseMount="True" MountDistance="30"
 								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Ruuan Weald in Blade's Edge Mountains." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
