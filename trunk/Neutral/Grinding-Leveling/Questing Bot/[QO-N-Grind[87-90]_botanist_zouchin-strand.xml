@@ -87,8 +87,9 @@
 							<RunTo X="4414.427" Y="932.4247" Z="115.9814" />
 						<CustomBehavior File="Message" Text="I have reached Zouchin Village. " LogColor="Lime" />
 						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
-						<CustomBehavior File="WaitTimer" WaitTime="2000" />
-						<CustomBehavior File="SetHearthstone" MobId="60605" X="4417.924" Y="928.5174" Z="115.9788" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="60605" X="4417.924" Y="928.5174" Z="115.9785" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					</If>						
 				</If>
 				
