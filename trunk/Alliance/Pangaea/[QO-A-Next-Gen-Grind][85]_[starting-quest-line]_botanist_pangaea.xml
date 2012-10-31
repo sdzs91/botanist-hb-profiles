@@ -12,6 +12,13 @@
   <MailPurple>True</MailPurple>
     
 <QuestOrder>
+
+
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.Level &gt;= 85" >
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
+					</If>
+				</If>
 			
 				<If Condition="Me.Level &lt;= 84" >
 					<CustomBehavior File="Message" Text="Your character isn't high enough level for this section.." LogColor="Lime" />
