@@ -18,7 +18,7 @@
 
 	<QuestOrder>
 	
-		<CustomBehavior File="UserSettings" LearnFlightPaths="False" UseFlightPaths="False" />
+		<CustomBehavior File="UserSettings" UseFlightPaths="False" />
 		
 		
 				
@@ -27,26 +27,28 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the Stormwind docks." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="FlyTo" X="-8290.868" Y="1406.431" Z="4.716422" />
+					<CustomBehavior File="FlyTo" X="-8298.753" Y="1406.589" Z="4.407192" />
 					<CustomBehavior File="ForcedDismount" />
-					
-				<!--	<CustomBehavior File="UseTransport" TransportId="190536" 
-									WaitAtX="-8300.08" WaitAtY="1405.158" WaitAtZ="4.422395"
-									GetOffX="2234.375" GetOffY="5132.568" GetOffZ="5.343217"
-									TransportStartX="-8288.816" TransportStartY="1424.703" TransportStartZ="0.04" 
-									TransportEndX="2218.391" TransportEndY="5119.589" TransportEndZ="0.04" />	-->
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="20" ExpiryAction="InputEnabled_Continue" 
-						Text="The usetransport custum behavior is currently broke. You will need to manually move your character to the Valiance Keep docks in Borean Tundra, then press continue on this window." Title="WARNING" />
 				</If>
-			
+				
+		<While Condition="Me.MapId == 0" >
+					<RunTo X="-8298.753" Y="1406.589" Z="4.407192" />
+				<CustomBehavior File="Message" Text="Waiting for the boat." LogColor="Lime" />
+				<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+				<CustomBehavior File="RunMacro" Macro="/target Sailor Dawning" NumOfTimes="1" WaitTime="0"/>
+					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 31791">
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="Message" Text="Moving aboard the boat.." LogColor="Lime" />
+						<CustomBehavior File="MyCTM" X="-8294.163" Y="1424.834" Z="9.52632" />
+						<CustomBehavior File="WaitTimer" WaitTime="150000" />
+					</If>	
+		</While>				
+									
 				<If Condition="Me.MapId == 571" >
-						<RunTo X="2252.254" Y="5186.117" Z="11.44698" />
+						<CustomBehavior File="MyCTM" X="2231.088" Y="5131.143" Z="5.345" />
+							<RunTo X="2256.77" Y="5201.83" Z="11.31006" />
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][68-80]_botanist_pangaea" /> 			
 				</If>
-		
-		
-
-	  
+				
 	</QuestOrder>
 </HBProfile>
