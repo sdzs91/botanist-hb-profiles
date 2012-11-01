@@ -406,7 +406,7 @@
 				
 				<If Condition="Me.ZoneId != 3711" >	
 					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-					<CustomBehavior File="Message" Text="Position check, K3 in Stormpeaks." LogColor="Lime" />  
+					<CustomBehavior File="Message" Text="Position check, K3 in Storm Peaks." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at K3." LogColor="Lime" />			
 					<CustomBehavior File="FlyTo"  X="6122.84" Y="-1066.774" Z="402.7515" />
@@ -464,18 +464,63 @@
 					</If>
 					
 		</While>				
-				
-				<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt;= 81" >				
-					<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the 80 to 82 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<If Condition="Me.ZoneId == 67" >	
+					<If Condition="Me.Level == 80" >				
+						<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am level 80 and I am in Storm Peaks. I need to be in Stormwind. I am flying to Dalaran to use the portal." LogColor="Lime" />
+						<CustomBehavior File="FlyTo"  X="6131.93" Y="-1004.598" Z="532.6151" />
+						<CustomBehavior File="MyCTM" X="5921.711" Y="-643.0922" Z="531.2469" />
+						<CustomBehavior File="MyCTM" X="5811.247" Y="427.3254" Z="855.3436" />
+						<CustomBehavior File="MyCTM" X="5795.079" Y="551.1057" Z="833.0452" />
+						<CustomBehavior File="MyCTM" X="5763.245" Y="711.3987" Z="641.8599" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="5720.719" Y="724.3422" Z="641.5389" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am taking the portal to Storm Wind." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="190960" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5719.184" Y="719.6667" Z="641.727844" />
+						<CustomBehavior File="WaitTimer" WaitTime="20000" />
+					</If>
 				</If>
 				
+				<If Condition="Me.MapId == 571" >
+					<If Condition="Me.Level == 80" >
+						<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am level 80 and I am in Northrend. I need to be in Stormwind. I am flying to Dalaran to use the portal." LogColor="Lime" />
+						<CustomBehavior File="FlyTo"  X="5731.763" Y="1015.778" Z="174.4795" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="InteractWith" MobId="191230" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5731.57373" Y="1015.09253" Z="174.479324" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+							<RunTo X="5803.281" Y="626.3439" Z="647.5372" />
+							<RunTo X="5759.243" Y="677.8333" Z="642.776" />
+							<RunTo X="5720.719" Y="724.3422" Z="641.5389" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am taking the portal to Stormwind." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="190960" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5719.184" Y="719.6667" Z="641.727844" />
+						<CustomBehavior File="WaitTimer" WaitTime="20000" /> 
+					</If>
+				</If>
 				
-				
-				<If Condition="Me.Level &gt;= 80" >
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][80-85]_botanist_pangaea" />
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.Level == 80" >						
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am going to the Hero's Call Board." LogColor="Lime" />
+							<RunTo X="-9015.341" Y="874.0287" Z="148.616" />
+							<RunTo X="-8997.306" Y="861.0536" Z="128.5719" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />						
+						<CustomBehavior File="FlyTo"  X="-8345.691" Y="639.2832" Z="95.41733" />
+						<CustomBehavior File="Message" Text="I have reached the Hero's Call Board. I am changing profiles." LogColor="Lime" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>
+				</If>
+									
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.Level == 80" >
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][80-85]_botanist_pangaea" />
+					</If>
 				</If>
 
 	</QuestOrder >			
