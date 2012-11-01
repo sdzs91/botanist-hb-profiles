@@ -127,9 +127,13 @@
 						<Hotspot X="23.86395" Y="494.3275" Z="-5.651266" />
 						<Hotspot X="16.52566" Y="496.3853" Z="-5.472928" />
 						<Hotspot X="-1.81485" Y="482.0633" Z="-5.51902" />
+					</CustomBehavior>	
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
 						<Hotspot X="-14.41646" Y="483.4545" Z="-5.465045" />
 						<Hotspot X="-13.78432" Y="504.8542" Z="-5.312946" />
 						<Hotspot X="-3.33203" Y="517.0551" Z="-5.668747" />
+					</CustomBehavior>	
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
 						<Hotspot X="22.72995" Y="530.2422" Z="-13.43529" />
 						<Hotspot X="26.93126" Y="544.2721" Z="-18.40359" />
 						<Hotspot X="5.863776" Y="567.9385" Z="-17.98533" />

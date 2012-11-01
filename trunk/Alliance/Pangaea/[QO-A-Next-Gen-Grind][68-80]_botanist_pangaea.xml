@@ -78,7 +78,7 @@
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 70." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>1985,188</Factions>
+							<Factions>1985</Factions>
 								<Hotspots>
 									<Hotspot X="2380.729" Y="5630.006" Z="43.06765" />
 									<Hotspot X="2446.096" Y="5645.189" Z="50.87428" />
@@ -95,11 +95,16 @@
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="Moving to a safe place to hearth.." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2509.716" Y="5692.7" Z="70.78244" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Broff Bombast" Entry="27011" Type="Food" X="2359.466" Y="5237.433" Z="7.713106" />
+								<Vendor Name="Broff Bombast" Entry="27011" Type="Food" X="2359.466" Y="5237.433" Z="7.712817" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
