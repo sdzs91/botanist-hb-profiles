@@ -165,9 +165,7 @@
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />					
 					<If Condition="Me.ZoneId == 3523" >
-						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor and mailing." LogColor="Lime" />
-							<RunTo X="4096.851" Y="3031.967" Z="336.7292" />					
-						
+						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor and mailing." LogColor="Lime" />										
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Dealer Jadyan" Entry="19536" Type="Repair" X="4093.681" Y="3032.828" Z="336.7165" />
@@ -177,8 +175,7 @@
 							<Mailboxes>
 								<Mailbox X="4121.964" Y="3054.742" Z="339.3138" />
 							</Mailboxes>
-						</SetMailbox>
-			
+						</SetMailbox>			
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />							
 							<RunTo X="4122.288" Y="3045.95" Z="339.0876" />
 						<CustomBehavior File="Message" Text="Flying back to the The Botanica." LogColor="Lime" />
