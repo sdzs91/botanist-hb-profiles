@@ -166,7 +166,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />					
 					<If Condition="Me.ZoneId == 3523" >
 						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor and mailing." LogColor="Lime" />
-						<RunTo X="4096.851" Y="3031.967" Z="336.7292" />					
+							<RunTo X="4096.851" Y="3031.967" Z="336.7292" />					
 						
 						<SetVendor>
 							<Vendors>
