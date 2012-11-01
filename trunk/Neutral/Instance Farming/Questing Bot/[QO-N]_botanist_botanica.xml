@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.3">
-	<Name>[QO-N} Botanist Botanica</Name>
+	<Name>[QO-N]_botanist_botanica</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -10,13 +10,13 @@
 	<MailGrey>False</MailGrey>
 	<MailWhite>False</MailWhite>
 	<MailGreen>True</MailGreen>
-	<MailBlue>True</MailBlue>
+	<MailBlue>False</MailBlue>
 	<MailPurple>True</MailPurple>
    
 	<SellGrey>True</SellGrey>
 	<SellWhite>True</SellWhite>
-	<SellGreen>False</SellGreen>
-	<SellBlue>False</SellBlue>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
 	<SellPurple>False</SellPurple>
    
 	<TargetElites>True</TargetElites>
@@ -52,105 +52,54 @@
 
 		
 
-					<If Condition="Me.ZoneId != 3847" > <!-- not in the botanica -->
-						<If Condition="Me.ZoneId != 3523" > <!-- not in netherstorm -->
-							<CustomBehavior File="Message" Text="I am flying you to The Botanica in Netherstorm." LogColor="Lime" />
-							<CustomBehavior File="FlyTo" X="3049.753" Y="3688.444" Z="142.4143" DestName="The Botanica" />
-							<CustomBehavior File="ForcedDismount" />
-							<CustomBehavior File="Message" Text="I have reached Netherstorm. " LogColor="Lime" />
-								<RunTo X="3061.322" Y="3698.56" Z="142.3311" />
-							<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
-							<CustomBehavior File="WaitTimer" WaitTime="2000" />
-							<CustomBehavior File="SetHearthstone" MobId="19571"  X="3062.147" Y="3701.815" Z="142.479" />
-								<RunTo X="3049.753" Y="3688.444" Z="142.4143" />
-							<CustomBehavior File="ForcedMount" MountType="Flying" />							
-							<CustomBehavior File="FlyTo" X="3078.583" Y="3571.424" Z="226.7894"  DestName="Botanica" />
-							<CustomBehavior File="MyCTM" X="3191.386" Y="2038.22" Z="337.9593" />
-							<CustomBehavior File="MyCTM" X="3292.449" Y="1678.556" Z="287.9455" />
-							<CustomBehavior File="MyCTM" X="3346.596" Y="1568.179" Z="203.0069" />
-							<CustomBehavior File="FlyTo" X="3361.114" Y="1523.712" Z="179.69" DestName="Botanica" />
-							<CustomBehavior File="ForcedDismount" />
-								<RunTo X="3409.85" Y="1486.26" Z="182.837" />							
-                        </If>							
-					</If>
-						   
-					<If Condition="Me.ZoneId == 3523" > <!-- in netherstorm but not close to the portal -->
-						<If Condition="Me.Y &lt; 1484.451 || Me.Y &gt; 1532.849" >
-						    <CustomBehavior File="Message" Text="I am in Netherstorm. I will set my hearth then fly to Botanica." LogColor="Lime" />
-							<CustomBehavior File="FlyTo" X="3049.753" Y="3688.444" Z="142.4143" DestName="Set Hearthstone" />
-							<CustomBehavior File="ForcedDismount" />
-							<CustomBehavior File="Message" Text="I have reached Area52." LogColor="Lime" />
-								<RunTo X="3061.322" Y="3698.56" Z="142.3311" />
-							<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
-							<CustomBehavior File="WaitTimer" WaitTime="2000" />
-							<CustomBehavior File="SetHearthstone" MobId="19571"  X="3062.147" Y="3701.815" Z="142.479" />
-								<RunTo X="3049.753" Y="3688.444" Z="142.4143" />
-							<CustomBehavior File="ForcedMount" MountType="Flying" />							
-							<CustomBehavior File="FlyTo" X="3078.583" Y="3571.424" Z="226.7894"  DestName="Botanica" />
-							<CustomBehavior File="MyCTM" X="3191.386" Y="2038.22" Z="337.9593" />
-							<CustomBehavior File="MyCTM" X="3292.449" Y="1678.556" Z="287.9455" />
-							<CustomBehavior File="MyCTM" X="3346.596" Y="1568.179" Z="203.0069" />
-							<CustomBehavior File="FlyTo" X="3361.114" Y="1523.712" Z="179.69" DestName="Botanica" />
-							<CustomBehavior File="ForcedDismount" />
-								<RunTo X="3409.85" Y="1486.26" Z="182.837" />
-						</If>							
-					</If>						   
-					                              <!-- new use hearth vendor check -->					
-					<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Lime" />
-					
-					<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->
-					
-						<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth,repair and mail." LogColor="Lime" />
-						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
-						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor and mailing." LogColor="Lime" />
-                        <RunTo X="3048.566" Y="3687.351" Z="142.3556" />					
+				<If Condition="Me.ZoneId != 3847" > <!-- not in the botanica -->
+					<If Condition="Me.ZoneId != 3523" > <!-- not in netherstorm -->
+						<CustomBehavior File="Message" Text="I am flying to Netherstorm." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="4122.288" Y="3045.95" Z="339.0876" DestName="Innkeep" />
+						<CustomBehavior File="ForcedDismount" />							
+						<CustomBehavior File="Message" Text="I have reached the Stormspire in Netherstorm. " LogColor="Lime" />							
+					</If>							
+				</If>
+					   
+				<If Condition="Me.ZoneId == 3523" > <!-- in netherstorm but not close to the portal -->
+					<If Condition="Me.Y &lt; 1484.451 || Me.Y &gt; 1532.849" >
+						<CustomBehavior File="Message" Text="I am in Netherstorm. Moving to the innkeep." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="4122.288" Y="3045.95" Z="339.0876" DestName="Innkeep" />
+						<CustomBehavior File="ForcedDismount" />							
+						<CustomBehavior File="Message" Text="I have reached the Stormspire. " LogColor="Lime" />
+							<RunTo X="4114.546" Y="3063.049" Z="339.466" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="19531" X="4113.013" Y="3066.117" Z="339.4647" />
+							<RunTo X="4122.288" Y="3045.95" Z="339.0876" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />								
+						<CustomBehavior File="FlyTo" X="4156.971" Y="2944.005" Z="489.2647" />
+						<CustomBehavior File="MyCTM" X="4060.005" Y="2805.132" Z="597.4164" />
+						<CustomBehavior File="MyCTM" X="3392.446" Y="1639.349" Z="353.6405" />
+						<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>							
+				</If>						   
+					                            								  
+				<If Condition="Me.ZoneId == 3847" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside The Botanica. Running out to reset the dungeon." LogColor="Lime" />
+					<RunTo X="18.15054" Y="-6.392148" Z="-1.098385" />						
+					<CustomBehavior File="MyCTM" X="49.12993" Y="-37.6875" Z="-1.098833" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+					<RunTo X="3409.85" Y="1486.26" Z="182.837" />
+				</If>
 						
-						<SetVendor>
-							<Vendors>
-								<Vendor Name="Blazzle" Entry="28344" Type="Repair" X="3063.406" Y="3677.57" Z="142.6772" />
-							</Vendors>
-						</SetVendor>
-						<SetMailbox>
-							<Mailboxes>
-								<Mailbox X="3053.231" Y="3685.268" Z="142.3807" />
-							</Mailboxes>
-						</SetMailbox>
-			
-						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
-						
-			            <CustomBehavior File="Message" Text="Then flying to the The Botanica." LogColor="Lime" />
-						<CustomBehavior File="FlyTo" X="3078.583" Y="3571.424" Z="226.7894"  DestName="Botanica" />
-							<CustomBehavior File="MyCTM" X="3191.386" Y="2038.22" Z="337.9593" />
-							<CustomBehavior File="MyCTM" X="3292.449" Y="1678.556" Z="287.9455" />
-							<CustomBehavior File="MyCTM" X="3346.596" Y="1568.179" Z="203.0069" />
-							<CustomBehavior File="FlyTo" X="3361.114" Y="1523.712" Z="179.69" DestName="Botanica" />
-							<CustomBehavior File="ForcedDismount" />
-								<RunTo X="3409.85" Y="1486.26" Z="182.837" />
-				  </If>
-				  
-					<If Condition="Me.ZoneId == 3847" >
-						<CustomBehavior File="Message" Text="You started the bot with me inside The Botanica. Running out to reset the dungeon." LogColor="Lime" />
-						<RunTo X="18.15054" Y="-6.392148" Z="-1.098385" />						
-						<CustomBehavior File="MyCTM" X="49.12993" Y="-37.6875" Z="-1.098833" />
-						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
-						<RunTo X="3409.85" Y="1486.26" Z="182.837" />
-					</If>
-					
-						                                     <!-- enters the dungeon -->
-	
-									<If Condition="Me.X &gt; 3348.453 &amp;&amp; Me.X &lt; 3412.34" >
-										<CustomBehavior File="Message" Text="I am resetting The Botanica." LogColor="Lime" />
-										<CustomBehavior File="WaitTimer" WaitTime="5000" />				
-										<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
-										<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> <!-- Changes the instanceto to "normal" , if it was on "heroic" for the first run -->
-										<CustomBehavior File="Message" Text="I have reset The Botanica." LogColor="Lime" />										
-										<CustomBehavior File="MyCTM" X="3417.463" Y="1479.23" Z="182.837" /> 
-										<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
-										<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
-									</If>							
+				<If Condition="Me.X &gt; 3300 &amp;&amp; Me.X &lt; 3500 &amp;&amp; Me.Y &gt; 1300 &amp;&amp; Me.Y &lt; 1600" >
+					<CustomBehavior File="Message" Text="I am resetting The Botanica." LogColor="Lime" />		
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" />
+					<CustomBehavior File="Message" Text="I have reset The Botanica." LogColor="Lime" />										
+					<CustomBehavior File="MyCTM" X="3417.463" Y="1479.23" Z="182.837" /> 
+					<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+				</If>							
 				
-				                                       <!-- the botanica dungeon script -->
+								   <!-- the botanica dungeon script -->
 				<If Condition="Me.ZoneId == 3847" >
 					<CustomBehavior File="Message" Text="I have entered The Botanica." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -160,6 +109,7 @@
 						<RunTo X="0.1744751" Y="6.674797" Z="-1.528998" />
 						<RunTo X="-0.9503338" Y="149.7675" Z="-5.541402" />
 						<RunTo X="-0.8413836" Y="232.37" Z="-5.541402" />
+						<RunTo X="1.057338" Y="251.3286" Z="-5.494447" />
 						<RunTo X="-20.84214" Y="288.0858" Z="-1.847318" />
 						<RunTo X="125.4757" Y="280.319" Z="-5.421388" />
 						<CustomBehavior File="Message" Text="I am pulling the first boss, Commander Sarannis............Good Luck!!!" LogColor="Lime" />	
@@ -201,12 +151,49 @@
 						<RunTo  X="-141.5447" Y="391.8362" Z="-17.88303" />
 						<RunTo X="22.33521" Y="392.3839" Z="-27.97714" />
 					<CustomBehavior File="Message" Text="I am pulling the fifth boss, Warp Splinter............Good Luck!!!" LogColor="Lime" />
-					<CustomBehavior File="Message" Text="I am pulling the fifth boss, Warp Splinter............Good Luck!!!" LogColor="Lime" />
-					<RunTo X="49.85872" Y="392.0407" Z="-27.97714" />
+						<RunTo X="49.85872" Y="392.0407" Z="-27.97714" />
+					<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Lime" />
+				</If>		
+					
+										
+				<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" >					
+					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. I'm going to hearth,repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />					
+					<If Condition="Me.ZoneId == 3523" >
+						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor and mailing." LogColor="Lime" />
+						<RunTo X="3048.566" Y="3687.351" Z="142.3556" />					
+						
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Dealer Jadyan" Entry="19536" Type="Repair" X="4093.681" Y="3032.828" Z="336.7165" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="4121.964" Y="3054.742" Z="339.3138" />
+							</Mailboxes>
+						</SetMailbox>
+			
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />							
+							<RunTo X="4122.288" Y="3045.95" Z="339.0876" />
+						<CustomBehavior File="Message" Text="Flying back to the The Botanica." LogColor="Lime" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />								
+						<CustomBehavior File="FlyTo" X="4156.971" Y="2944.005" Z="489.2647" />
+						<CustomBehavior File="MyCTM" X="4060.005" Y="2805.132" Z="597.4164" />
+						<CustomBehavior File="MyCTM" X="3392.446" Y="1639.349" Z="353.6405" />
+						<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>	
+				</If>
+					
+				<If Condition="Me.ZoneId == 3847" >
+					<CustomBehavior File="Message" Text="I have detected that my bags have more than 15 empty slots and my gear has greater than 30% durability." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />					
 					<CustomBehavior File="Message" Text="Leaving the instance." LogColor="Lime" />
 					<CustomBehavior File="MyCTM" X="163.6523" Y="391.5363" Z="-36.56514" />
-					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
-					<RunTo X="3409.85" Y="1486.26" Z="182.837" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+						<RunTo X="3409.85" Y="1486.26" Z="182.837" />
 				</If>
 					
 		</While>
