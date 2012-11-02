@@ -104,6 +104,7 @@
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="FlyTo" X="5198.707" Y="-2217.754" Z="1265.584" />
 					<CustomBehavior File="ForcedDismount" />
+				</If>	
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 70." LogColor="Lime" />				

@@ -48,9 +48,6 @@
 				<If Condition="Me.Level &gt;= 80" >				
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][80-85]_botanist_pangaea" />
 				</If>
-				
-				</If>
-	
 			
 				<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 69" >				
 					<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
