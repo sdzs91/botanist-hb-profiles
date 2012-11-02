@@ -13,27 +13,29 @@
     
 <QuestOrder>
 
+				<If Condition="Me.Level &gt;= 81 &amp;&amp; Me.Level &lt;= 84" >
+					<CustomBehavior File="Message" Text="Levels 81-85 havent been scripted yet." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
+				</If>
 
 				<If Condition="Me.MapId == 870" >
 					<If Condition="Me.Level &gt;= 85" >
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
 					</If>
 				</If>
-			
-				<If Condition="Me.Level &lt;= 84" >
-					<CustomBehavior File="Message" Text="Your character isn't high enough level for this section.." LogColor="Lime" />
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
-				</If>
-				
+
 				<If Condition="Me.Level &gt;= 86" >
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
 				</If>
 				
 				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.Level == 85" >
 						<If Condition="((!HasQuest(29547)) &amp;&amp; (!IsQuestCompleted(29547)))" >
 							<CustomBehavior File="FlyTo" X="-8345.208" Y="639.4958" Z="95.79863" DestName="Stormwind Hero's Call Board" />
 							<CustomBehavior File="WaitTimer" WaitTime="15000" />
 						</If>
+					</If>
 				</If>
 				
 				<If Condition="Me.MapId == 0" >
@@ -59,42 +61,45 @@
 						</If>
 					</If>
 				</If>
+				
+				
 			
-						
-				<If Condition="Me.ZoneId == 1519" > 
-					<If Condition="((HasQuest(29547)) &amp;&amp; (!IsQuestCompleted(29547)))" >
-							<CustomBehavior File="FlyTo" X="-8326.699" Y="283.287" Z="156.8326" DestName="Admiral Jes-Tereth" />
-							<CustomBehavior File="ForcedDismount" />
-								<RunTo X="-8338.451" Y="274.2859" Z="157.3475" />
-							<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="Closing Cinematic {TimeRemaining}" />
-							<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
-							<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="Closing Cinematic {TimeRemaining}" />
-							<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
-							<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="Closing Cinematic {TimeRemaining}" />
-							<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
-						<TurnIn QuestName="The King's Command" QuestId="29547" TurnInName="Rell Nightwind" TurnInId="55789" X="-8459.021" Y="353.9254" Z="135.539" />
+				<If Condition="Me.Level == 85" >		
+					<If Condition="Me.ZoneId == 1519" > 
+						<If Condition="((HasQuest(29547)) &amp;&amp; (!IsQuestCompleted(29547)))" >
+								<CustomBehavior File="FlyTo" X="-8326.699" Y="283.287" Z="156.8326" DestName="Admiral Jes-Tereth" />
+								<CustomBehavior File="ForcedDismount" />
+									<RunTo X="-8338.451" Y="274.2859" Z="157.3475" />
+								<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="Closing Cinematic {TimeRemaining}" />
+								<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+								<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="Closing Cinematic {TimeRemaining}" />
+								<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+								<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="Closing Cinematic {TimeRemaining}" />
+								<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+							<TurnIn QuestName="The King's Command" QuestId="29547" TurnInName="Rell Nightwind" TurnInId="55789" X="-8459.021" Y="353.9254" Z="135.539" />
+						</If>
+					</If>				
+					<If Condition="((!HasQuest(29548)) &amp;&amp; (!IsQuestCompleted(29548)))" >
+								<RunTo X="-8456.767" Y="350.3568" Z="135.6791" />
+						<PickUp QuestName="The Mission" QuestId="29548" GiverName="Rell Nightwind" GiverId="55789" X="-8459.021" Y="353.9254" Z="135.539" />
+								<RunTo X="-8452.151" Y="345.9871" Z="135.8915" />
 					</If>
-				</If>				
-				<If Condition="((!HasQuest(29548)) &amp;&amp; (!IsQuestCompleted(29548)))" >
-							<RunTo X="-8456.767" Y="350.3568" Z="135.6791" />
-					<PickUp QuestName="The Mission" QuestId="29548" GiverName="Rell Nightwind" GiverId="55789" X="-8459.021" Y="353.9254" Z="135.539" />
-							<RunTo X="-8452.151" Y="345.9871" Z="135.8915" />
-				</If>
-				<If Condition="((HasQuest(29548)) &amp;&amp; (!IsQuestCompleted(29548)))" >
-						<CustomBehavior File="FlyTo" DestName="Turnin Quest" X="-8439.822" Y="391.2263" Z="202.2393" />
-						<CustomBehavior File="MyCTM" X="-7888.064" Y="1250.71" Z="388.5733" />
-						<CustomBehavior File="MyCTM" X="-7879.78" Y="1277.255" Z="358.4799" />
-						<CustomBehavior File="ForcedDismount" />
-						<CustomBehavior File="InteractWith" MobId="66292" NumOfTimes="1" CollectionDistance="30" ObjectType="Npc" X="-7879.8" Y="1279.516" Z="358.4773" />
-						<CustomBehavior File="RunMacro" Macro="/script SelectGossipOption(1)\n/script CloseGossip()" NumOfTimes="1" WaitTime="9000" />
-						<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
-						<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Cancel Cinematic {TimeRemaining}" />
-						<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
-						<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Cancel Cinematic {TimeRemaining}" />
-						<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
-						<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Cancel Cinematic {TimeRemaining}" />
-						<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
-					<TurnIn QuestName="The Mission!" QuestId="29548" TurnInName="Sky Admiral Rogers" TurnInId="66292" X="-667.888" Y="-1482.25" Z="130.1994" />						
+					<If Condition="((HasQuest(29548)) &amp;&amp; (!IsQuestCompleted(29548)))" >
+							<CustomBehavior File="FlyTo" DestName="Turnin Quest" X="-8439.822" Y="391.2263" Z="202.2393" />
+							<CustomBehavior File="MyCTM" X="-7888.064" Y="1250.71" Z="388.5733" />
+							<CustomBehavior File="MyCTM" X="-7879.78" Y="1277.255" Z="358.4799" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="InteractWith" MobId="66292" NumOfTimes="1" CollectionDistance="30" ObjectType="Npc" X="-7879.8" Y="1279.516" Z="358.4773" />
+							<CustomBehavior File="RunMacro" Macro="/script SelectGossipOption(1)\n/script CloseGossip()" NumOfTimes="1" WaitTime="9000" />
+							<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+							<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Cancel Cinematic {TimeRemaining}" />
+							<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+							<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Cancel Cinematic {TimeRemaining}" />
+							<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+							<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Cancel Cinematic {TimeRemaining}" />
+							<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+						<TurnIn QuestName="The Mission!" QuestId="29548" TurnInName="Sky Admiral Rogers" TurnInId="66292" X="-667.888" Y="-1482.25" Z="130.1994" />						
+					</If>
 				</If>
 				
 				<If Condition="Me.MapId == 870" >
