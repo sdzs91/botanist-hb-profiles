@@ -41,6 +41,10 @@
 					<CustomBehavior File="Message" Text="Levels 81-85 havent been scripted yet." LogColor="Lime" />
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85]_[starting-quest-line]_botanist_pangaea" />
 				</If>
+				
+				<If Condition="Me.Level &gt;= 85" >				
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
+				</If>
 		
 	<QuestOrder>
 				
