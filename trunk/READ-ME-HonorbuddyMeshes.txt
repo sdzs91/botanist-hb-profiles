@@ -2,10 +2,9 @@
 If you need mesh files, you can get them from my mesh svn at https://botanist-hb-meshes.googlecode.com/svn/trunk/
 
 These are the Honorbuddy meshes currently on my computer.
-They are up-to-date as of the last time I ran the bot in all the different the zones.
+They are up-to-date as of the last time I ran the bot in all the different zones.
 To use these meshes, click the Settings and Tools button in Honorbuddy.
-Change the Mesh directory in Honorbudyy to the botanist-hb-meshes folder.
-In the Mesh section on the top right of the Tools & Settings window, click the change button and browse to \botanist-hb-profiles\HonorbuddyMeshes and set it as your mesh directory.
+In the Mesh section on the top right of the Tools & Settings window, click the change button and browse to \botanist-hb-meshes and set it as your mesh directory.
 Close and restart Honorbuddy.
 
 ******Alternate method******
