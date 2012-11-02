@@ -289,9 +289,6 @@
 							<CustomBehavior File="Message" Text="Learning Sunset Brewgarden flight path." LogColor="Lime" />
 								<RunTo X="906.425" Y="3487.933" Z="229.4073" />		<!-- flight master kor'vess -->
 								<RunTo X="980.369" Y="3449.486" Z="257.0705" /> 
-							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
-									Text="Getting to the last flight master in 'Klaxxi'vess' from here will be a little risky and you may die. The profile is designed for you to die approximately 3 times. But, you should make it without to much difficulty." Title="WARNING" />
-
 								<RunTo X="924.0849" Y="3463.648" Z="238.2054" />
 							<CustomBehavior File="Message" Text="Moving to the Klaxxi'vess Flight Master." LogColor="Lime" />	
 								<RunTo X="874.4385" Y="3483.913" Z="223.4289" />
