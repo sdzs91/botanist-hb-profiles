@@ -108,7 +108,7 @@
 					<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 						<RunTo X="5531.539" Y="-3621.503" Z="1567.51" />	
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="FlyTo" X="4664.243" Y="-2068.369" Z="1227.004" />
+					<CustomBehavior File="FlyTo" X="4619.44" Y="-2197.485" Z="1156.687" />
 					<CustomBehavior File="ForcedDismount" />
 
 								 
@@ -117,8 +117,6 @@
 						<SetGrindArea><GrindArea>
 							<Factions>54,2146,2254,2147</Factions>
 								<Hotspots>
-									<Hotspot X="4699.242" Y="-2059.648" Z="1220.697" />
-									<Hotspot X="4725.036" Y="-2149.838" Z="1204.022" />
 									<Hotspot X="4619.44" Y="-2197.485" Z="1156.687" />
 									<Hotspot X="4529.502" Y="-2170.051" Z="1181" />
 									<Hotspot X="4673.056" Y="-2424.189" Z="1154.711" />
