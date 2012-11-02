@@ -22,6 +22,7 @@
 <TargetElites>True</TargetElites>
 
 <AvoidMobs>
+	<Mob Name="Waste Scavenger" Entry="66194" />
 	<Mob Name="Pengsong" Entry="66587" />
 	<Mob Name="Amberscale Basilisk" Entry="66188" />
 	<Mob Name="Kyparite Pulverizer" Entry="65432" />
@@ -37,7 +38,7 @@
 	<Mob Name="Mushan Nomad" Entry="56523" />
 	<Mob Name="Glade Hunter" Entry="57299" />
 	<Mob Name="Mushan Nomad" Entry="56523"  />
-	<Mob  Name="Frenzyhop" Entry="56514" />
+	<Mob Name="Frenzyhop" Entry="56514" />
 </AvoidMobs>
 
 <Blackspots>
