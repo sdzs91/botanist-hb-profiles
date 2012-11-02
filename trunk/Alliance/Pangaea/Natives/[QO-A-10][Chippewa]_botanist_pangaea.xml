@@ -47,7 +47,7 @@
 						
 		<While Condition="true" >
 				
-				<CustomBehavior File="UserSettings" MountDistance="5"  UseFlightPaths="False" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="10" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="5" LogoutForInactivity="True" />
+				<CustomBehavior File="UserSettings" MountDistance="5"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="5" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="5" LogoutForInactivity="True" />
 				
 				<If Condition="Me.MapId == 870" >				 
 					<If Condition="Me.ZoneId == 5805" >
@@ -323,18 +323,15 @@
 								<RunTo X="284.1896" Y="3219.052" Z="214.6587" />
 							<CustomBehavior File="Message" Text="Learning Klaxxi'vess flight path." LogColor="Lime" />	
 								<RunTo X="173.8018" Y="3155" Z="215.6849" />							
-								<If Condition="Me.MapId == 870" >				 
-									<If Condition="Me.ZoneId == 5805" >
-										<If  Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt;= 88" >					
-											<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
-												<CustomBehavior File="Message" Text="I have learned all the flight paths I need." LogColor="Lime" />
-												<CustomBehavior File="WaitTimer" WaitTime="1000" />
-												<CustomBehavior File="Message" Text="I am changing the profile to [QO-A-Next-Gen-Grind][85-90]_botanist_pangaea." LogColor="Lime" />
-												<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />						
-											</If>
-										</If>
-									</If>
+				 
+							<If Condition="Me.ZoneId == 5805" >				
+								<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
+									<CustomBehavior File="Message" Text="I have learned all the flight paths I need." LogColor="Lime" />
+									<CustomBehavior File="WaitTimer" WaitTime="1000" />
+									<CustomBehavior File="Message" Text="I am changing profiles." LogColor="Lime" />
+									<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />						
 								</If>
+							</If>
 						</If>
 					</If>
 				</If>

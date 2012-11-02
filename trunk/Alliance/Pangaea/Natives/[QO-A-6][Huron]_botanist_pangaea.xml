@@ -21,7 +21,8 @@
    
 	<TargetElites></TargetElites>
 	
-	<AvoidMobs>		 
+	<AvoidMobs>
+		<Mob Name="Nemesis" Entry="40340" />
 	</AvoidMobs>
 	
 	<Blackspots>
@@ -64,7 +65,7 @@
 					</If>
 				</If>	
 																					
-
+				<If Condition="Me.ZoneId == 493" >
 					<If Condition="((HasQuest(27726)) &amp;&amp; (!IsQuestCompleted(27726)))" >
 						<TurnIn QuestName="Hero's Call: Mount Hyjal!" QuestId="27726" TurnInName="Emissary Windsong" TurnInId="39865" X="7801.045" Y="-2430.96" Z="487.5915" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -75,14 +76,11 @@
 							<RunTo X="7791.602" Y="-2447.938" Z="487.1142" />
 						<CustomBehavior File="InteractWith" MobId="39140"  GossipOptions="1" NumOfTimes="1"  X="7791.06" Y="-2445.54" Z="489.5634" />
 						<CustomBehavior File="WaitTimer" WaitTime="120000" />
+							<RunTo X="5492.048" Y="-3565.874" Z="1569.248" />
+						<TurnIn QuestName="As Hyjal Burns" QuestId="25316" TurnInName="Ysera" TurnInId="40289" X="5490.67" Y="-3563.557" Z="1569.246" />
 					</If>
-					
-					<If Condition="((HasQuest(25316)) &amp;&amp; (!IsQuestCompleted(25316)))" >										
-							<RunTo X="7791.602" Y="-2447.938" Z="487.1142" />
-						<CustomBehavior File="InteractWith" MobId="39140"  GossipOptions="1" NumOfTimes="1"  X="7791.06" Y="-2445.54" Z="489.5634" />
-						<CustomBehavior File="WaitTimer" WaitTime="120000" />
-					</If>
-					
+				</If>	
+															
 				<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 81" >
 					<If Condition="Me.ZoneId == 616" >
 						<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
@@ -98,7 +96,9 @@
 					<CustomBehavior File="Message" Text="Position check, Nordrassil in Mount Hyjal." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at Nordrassil." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="5531.539" Y="-3621.503" Z="1567.51" />				
+					<CustomBehavior File="FlyTo" X="5560.186" Y="-3761.353" Z="1816.999" />
+					<CustomBehavior File="MyCTM" X="5530.041" Y="-3618.734" Z="1568.232" />	
+					<CustomBehavior File="ForcedDismount" />
 						<RunTo X="5515.52" Y="-3605.899" Z="1570.052" />			
 					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
@@ -108,20 +108,21 @@
 					<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 						<RunTo X="5531.539" Y="-3621.503" Z="1567.51" />	
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="FlyTo" X="5198.707" Y="-2217.754" Z="1265.584" />
+					<CustomBehavior File="FlyTo" X="4664.243" Y="-2068.369" Z="1227.004" />
 					<CustomBehavior File="ForcedDismount" />
 
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 81." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>2057</Factions>
+							<Factions>54,2146,2254,2147</Factions>
 								<Hotspots>
-									<Hotspot X="5149.644" Y="-2069.551" Z="1277.255" />
-									<Hotspot X="5106.83" Y="-2106.506" Z="1276.231" />
-									<Hotspot X="5021.807" Y="-2023.383" Z="1269.465" />
-									<Hotspot X="5098.399" Y="-2036.798" Z="1272.279" />
-									<Hotspot X="5122.021" Y="-2058.659" Z="1272.574" />
+									<Hotspot X="4699.242" Y="-2059.648" Z="1220.697" />
+									<Hotspot X="4725.036" Y="-2149.838" Z="1204.022" />
+									<Hotspot X="4619.44" Y="-2197.485" Z="1156.687" />
+									<Hotspot X="4529.502" Y="-2170.051" Z="1181" />
+									<Hotspot X="4673.056" Y="-2424.189" Z="1154.711" />
+									<Hotspot X="4633.034" Y="-2654.387" Z="1139.695" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 81)" GoalText="Farming" />
