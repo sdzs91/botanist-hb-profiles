@@ -47,7 +47,7 @@
 						<CustomBehavior File="ForcedMount" MountType="Ground" />
 						<CustomBehavior File="Message" Text="I've reached Paw' don Village." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
 					</If>
 				</If>
 				

@@ -64,14 +64,25 @@
 					</If>
 				</If>	
 																					
-				<If Condition="Me.ZoneId == 493" >
-					<TurnIn QuestName="Hero's Call: Mount Hyjal!" QuestId="27726" TurnInName="Emissary Windsong" TurnInId="39865" X="7801.045" Y="-2430.96" Z="487.5915" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+
+					<If Condition="((HasQuest(27726)) &amp;&amp; (!IsQuestCompleted(27726)))" >
+						<TurnIn QuestName="Hero's Call: Mount Hyjal!" QuestId="27726" TurnInName="Emissary Windsong" TurnInId="39865" X="7801.045" Y="-2430.96" Z="487.5915" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					</If>
+					
+					<If Condition="((!HasQuest(25316)) &amp;&amp; (!IsQuestCompleted(25316)))" >
+						<PickUp QuestName="As Hyjal Burns" QuestId="25316" GiverName="Emissary Windsong" GiverId="39865" X="7801.045" Y="-2430.96" Z="487.5918" />										
 							<RunTo X="7791.602" Y="-2447.938" Z="487.1142" />
 						<CustomBehavior File="InteractWith" MobId="39140"  GossipOptions="1" NumOfTimes="1"  X="7791.06" Y="-2445.54" Z="489.5634" />
-						<CustomBehavior File="WaitTimer" WaitTime="120000" />						
-				</If>
-										
+						<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					</If>
+					
+					<If Condition="((HasQuest(25316)) &amp;&amp; (!IsQuestCompleted(25316)))" >										
+							<RunTo X="7791.602" Y="-2447.938" Z="487.1142" />
+						<CustomBehavior File="InteractWith" MobId="39140"  GossipOptions="1" NumOfTimes="1"  X="7791.06" Y="-2445.54" Z="489.5634" />
+						<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					</If>
+					
 				<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 81" >
 					<If Condition="Me.ZoneId == 616" >
 						<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
@@ -81,13 +92,12 @@
 					</If>
 				</If>
 				
-		<While Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 81" >
+		<While Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 81 &amp;&amp; Me.ZoneId == 616" >
 				
-				<If Condition="Me.ZoneId == 616" >
 					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 					<CustomBehavior File="Message" Text="Position check, Nordrassil in Mount Hyjal." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="Moving to the innkeep at Valiance Keep." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Moving to the innkeep at Nordrassil." LogColor="Lime" />
 					<CustomBehavior File="FlyTo" X="5531.539" Y="-3621.503" Z="1567.51" />				
 						<RunTo X="5515.52" Y="-3605.899" Z="1570.052" />			
 					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
@@ -100,10 +110,10 @@
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="FlyTo" X="5198.707" Y="-2217.754" Z="1265.584" />
 					<CustomBehavior File="ForcedDismount" />
-				</If>	
+
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 70." LogColor="Lime" />				
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 81." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>2057</Factions>
 								<Hotspots>

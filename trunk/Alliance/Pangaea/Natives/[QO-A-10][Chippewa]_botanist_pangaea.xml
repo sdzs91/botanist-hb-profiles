@@ -84,8 +84,6 @@
 							<CustomBehavior File="MyCTM" X="1568.066" Y="215.3722" Z="475.2235" />
 							<CustomBehavior File="MyCTM" X="1576.846" Y="234.4473" Z="476.5842" />
 							<CustomBehavior File="MyCTM" X="1634.932" Y="258.6702" Z="476.7266" />
-							<CustomBehavior File="MyCTM" X="1657.334" Y="269.6743" Z="476.8093" />
-							<CustomBehavior File="MyCTM" X="1685.121" Y="300.6669" Z="478.4681" />
 							<CustomBehavior File="InteractWith" MobId="61474" NumOfTimes="1" CollectionDistance="30" ObjectType="Npc" X="1688.922" Y="299.474" Z="478.063" />						
 							<CustomBehavior File="ForcedMount" MountType="Ground" />
 							<CustomBehavior File="Message" Text="Moving to the Temple of the White Tiger Flight Master." LogColor="Lime" />
