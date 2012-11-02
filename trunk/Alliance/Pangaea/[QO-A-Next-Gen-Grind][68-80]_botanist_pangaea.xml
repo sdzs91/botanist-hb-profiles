@@ -26,6 +26,8 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="7098.957" Y="-2155.757" Z="761.4069" Radius="39.64452" />
+		<Blackspot X="7168.089" Y="-2221.811" Z="764.8173" Radius="56.59931" />
 		<Blackspot X="5265.818" Y="2829.863" Z="530.4611" Radius="390.5712" />
 		<Blackspot X="5920.104" Y="5489.115" Z="-81.18753" Radius="81.58227" />
 		<Blackspot X="5168.469" Y="-1597.311" Z="238.5316" Radius="50" />
@@ -478,7 +480,7 @@
 		<While Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 80" >
 				
 				<If Condition="Me.MapId == 571" >	
-					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 					<CustomBehavior File="Message" Text="Position check, K3 in Storm Peaks." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at K3." LogColor="Lime" />			
@@ -493,23 +495,23 @@
 					<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 						<RunTo X="6122.84" Y="-1066.774" Z="402.7515" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="FlyTo" X="8110.596" Y="-797.0529" Z="960.8826" />
+					<CustomBehavior File="FlyTo" X="7154.509" Y="-2134.216" Z="762.098" />
 					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="7200.662" Y="-2104.061" Z="767.1284" />
+					</CustomBehavior>
 				</If>
-				
-								 
+												 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 79." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>14</Factions>
+							<Factions>1712,1711</Factions>
 								<Hotspots>
-									<Hotspot X="8149.83" Y="-835.6871" Z="955.6595" />
-									<Hotspot X="8119.13" Y="-916.2537" Z="955.6646" />
-									<Hotspot X="8186.569" Y="-873.697" Z="956.1276" />
-									<Hotspot X="8237.451" Y="-888.144" Z="924.2869" />
-									<Hotspot X="8227.469" Y="-704.1004" Z="926.441" />
-									<Hotspot X="8276.655" Y="-1033.87" Z="923.8742" />
-									<Hotspot X="8148.492" Y="-1102.73" Z="923.874" />
+									<Hotspot X="7200.662" Y="-2104.061" Z="767.1284" />
+									<Hotspot X="7227.904" Y="-1976.756" Z="766.2302" />
+									<Hotspot X="7289.814" Y="-2001.424" Z="766.2178" />
+									<Hotspot X="7333.991" Y="-2081.395" Z="769.2742" />
+									<Hotspot X="7263.211" Y="-2132.19" Z="778.8481" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 80)" GoalText="Farming" />
