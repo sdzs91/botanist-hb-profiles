@@ -292,36 +292,43 @@
 								<RunTo X="924.0849" Y="3463.648" Z="238.2054" />
 							<CustomBehavior File="Message" Text="Moving to the Klaxxi'vess Flight Master." LogColor="Lime" />	
 								<RunTo X="874.4385" Y="3483.913" Z="223.4289" />
-								
-							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-								<Hotspot X="808.5947" Y="3432.937" Z="218.0729" />
-								<Hotspot X="762.6101" Y="3413.569" Z="214.9028" />
-							</CustomBehavior>
-							<CustomBehavior File="ForcedMount" MountType="Ground" />
-							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-								<Hotspot X="693.6539" Y="3369.382" Z="204.7814" />
-								<Hotspot X="586.2465" Y="3314.242" Z="218.2855" />
-							</CustomBehavior>
-							<CustomBehavior File="ForcedMount" MountType="Ground" />
-							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-								<Hotspot X="532.4313" Y="3355.302" Z="226.2881" />
-								<Hotspot X="505.2988" Y="3282.667" Z="246.3441" />
-							</CustomBehavior>
-							<CustomBehavior File="ForcedMount" MountType="Ground" />
-							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-								<Hotspot X="532.4313" Y="3355.302" Z="226.2881" />
-								<Hotspot X="505.2988" Y="3282.667" Z="246.3441" />
-							</CustomBehavior>
-							<CustomBehavior File="ForcedMount" MountType="Ground" />
-							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-								<Hotspot X="429.7971" Y="3256.106" Z="249.1814" />
-								<Hotspot X="350.6809" Y="3213.371" Z="232.2777" />
-							</CustomBehavior>
-								<RunTo X="284.1896" Y="3219.052" Z="214.6587" />
-							<CustomBehavior File="Message" Text="Learning Klaxxi'vess flight path." LogColor="Lime" />	
-								<RunTo X="173.8018" Y="3155" Z="215.6849" />							
-				 
-							<If Condition="Me.ZoneId == 5805" >				
+							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+								<Hotspot X="936.5988" Y="3455.247" Z="243.5071" />
+								<Hotspot X="925.0193" Y="3465.279" Z="238.1901" />
+								<Hotspot X="901.442" Y="3484.97" Z="228.6971" />
+								<Hotspot X="886.5604" Y="3482.907" Z="225.541" />
+								<Hotspot X="861.5265" Y="3466.332" Z="221.3426" />
+								<Hotspot X="837.2507" Y="3447.187" Z="221.2215" />
+								<Hotspot X="817.7053" Y="3442.601" Z="220.2993" />
+								<Hotspot X="787.5402" Y="3440.754" Z="217.6661" />
+								<Hotspot X="758.2228" Y="3431.881" Z="216.2778" />
+								<Hotspot X="742.0051" Y="3431.78" Z="216.1563" />
+								<Hotspot X="726.823" Y="3433.846" Z="214.5119" />
+								<Hotspot X="698.9316" Y="3444.937" Z="206.8439" />
+								<Hotspot X="669.4514" Y="3452.144" Z="211.7827" />
+								<Hotspot X="639.8464" Y="3445.584" Z="204.5585" />
+								<Hotspot X="619.9385" Y="3421.928" Z="208.7509" />
+								<Hotspot X="598.1223" Y="3400.784" Z="207.2731" />
+								<Hotspot X="582.5702" Y="3374.549" Z="211.4344" />
+								<Hotspot X="557.2795" Y="3357.329" Z="217.586" />
+								<Hotspot X="531.4463" Y="3342.637" Z="229.9056" />
+								<Hotspot X="535.6722" Y="3312.509" Z="241.7533" />
+								<Hotspot X="521.9338" Y="3287.497" Z="246.3397" />
+								<Hotspot X="496.3269" Y="3281.798" Z="245.7398" />
+								<Hotspot X="467.7769" Y="3271.285" Z="247.2085" />
+								<Hotspot X="439.9628" Y="3259.326" Z="247.8638" />
+								<Hotspot X="412.6702" Y="3246.517" Z="248.7524" />
+								<Hotspot X="384.922" Y="3233.211" Z="241.6874" />
+								<Hotspot X="361.8387" Y="3213.901" Z="236.4781" />
+								<Hotspot X="331.7098" Y="3212.478" Z="223.9816" />
+								<Hotspot X="302.6046" Y="3220.658" Z="215.2915" />
+								<Hotspot X="275.3365" Y="3207.03" Z="214.9423" />
+								<Hotspot X="251.1908" Y="3188.146" Z="215.275" />
+								<Hotspot X="222.6499" Y="3176.2" Z="214.2176" />
+								<Hotspot X="194.2717" Y="3165.227" Z="215.6174" />
+								<Hotspot X="178.6842" Y="3154.439" Z="215.3039" />
+							</CustomBehavior>			 
+							<If Condition="Me.ZoneId == 6138" >				
 								<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
 									<CustomBehavior File="Message" Text="I have learned all the flight paths I need." LogColor="Lime" />
 									<CustomBehavior File="WaitTimer" WaitTime="1000" />

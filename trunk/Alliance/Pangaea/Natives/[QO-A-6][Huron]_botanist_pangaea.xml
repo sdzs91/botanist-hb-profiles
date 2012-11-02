@@ -127,13 +127,16 @@
 				</If>
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Message" Text="Moving to a safe place to hearth.." LogColor="Lime" />
-						<CustomBehavior File="FlyTo" X="2509.716" Y="5692.7" Z="70.78244" />
+						<CustomBehavior File="Message" Text="Flying to a safe place to hearth." LogColor="Lime" />
 						<CustomBehavior File="ForcedMount" MountType="Flying" />
+						<CustomBehavior File="FlyTo" X="4603.502" Y="-2101.847" Z="1237.314" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="Using my hearthstone." LogColor="Lime" />		
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />													
@@ -144,7 +147,7 @@
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="5525.772" Y="-3627.229" Z="1567.193" />
+								<Mailbox X="5524.932" Y="-3626.49" Z="1567.201" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
