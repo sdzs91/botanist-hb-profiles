@@ -46,11 +46,13 @@
 	<QuestOrder>
 						
 		<While Condition="true" >
-						
+				
+				<CustomBehavior File="UserSettings" MountDistance="5"  UseFlightPaths="False" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="10" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="5" LogoutForInactivity="True" />
+				
 				<If Condition="Me.MapId == 870" >				 
 					<If Condition="Me.ZoneId == 5805" >
 						<If  Condition="Me.Level == 89" >
-							<CustomBehavior File="Message" Text="Moving to the Grassey Cline flight path." LogColor="Lime" />
+							<CustomBehavior File="Message" Text="Moving to the Grassy Cline flight path." LogColor="Lime" />
 								<RunTo X="460.54" Y="-100.467" Z="179.535" />
 								<RunTo X="479.1342" Y="-74.6549" Z="177.9635" />
 							<CustomBehavior File="Message" Text="Moving to the Tavern in the Mist Flight Master." LogColor="Lime" />
