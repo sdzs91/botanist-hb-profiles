@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-Next-Gen-Grind][Goto][Stormwind-Northrend]_botanist_pangaea</Name>
+	<Name>[QO-A-4][Shawnee]_botanist_pangaea</Name>
 	<MinLevel>58</MinLevel>
 	<MaxLevel>101</MaxLevel>
 	
@@ -17,6 +17,10 @@
 	<SellPurple>False</SellPurple>
 
 	<QuestOrder>
+	
+				<If Condition="Me.Level &gt; 68" >
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-5][Choctaw]_botanist_pangaea" />
+				</If>
 	
 		<CustomBehavior File="UserSettings" UseFlightPaths="False" />
 		
@@ -47,7 +51,7 @@
 				<If Condition="Me.MapId == 571" >
 						<CustomBehavior File="MyCTM" X="2231.088" Y="5131.143" Z="5.345" />
 							<RunTo X="2256.77" Y="5201.83" Z="11.31006" />
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][68-80]_botanist_pangaea" /> 			
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-5][Choctaw]_botanist_pangaea" /> 			
 				</If>
 				
 	</QuestOrder>

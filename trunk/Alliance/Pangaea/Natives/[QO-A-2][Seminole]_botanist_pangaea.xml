@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-Next-Gen-Grind][12-58]_botanist_pangaea</Name>
+	<Name>[QO-A-2][Seminole]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -164,7 +164,7 @@
 			
 				<If Condition="Me.Level &gt;= 58" > 
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][58-68]_botanist_pangaea" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-3][Cherokee]_botanist_pangaea" />
 				</If>
 
 		<While Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >
@@ -1601,8 +1601,9 @@
 					
 		</While>
 			     				 
-				<If Condition="Me.Level &gt;= 58" >
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][58-68]_botanist_pangaea" />
+				<If Condition="Me.Level &gt;= 58" > 
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-3][Cherokee]_botanist_pangaea" />
 				</If>
 				
 	</QuestOrder >			

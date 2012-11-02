@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-Next-Gen-Grind][58-68]_botanist_pangaea</Name>
+	<Name>[QO-A-3][Cherokee]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -48,12 +48,13 @@
 	<ClearVendor /><ClearMailbox />
 		
 	<QuestOrder>
-				<CustomBehavior File="UserSettings" MountDistance="10" UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
-				
+	
 				<If Condition="Me.Level &gt;= 68" >
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][68-80]_botanist_pangaea" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-4][Shawnee]_botanist_pangaea" />
 				</If>
-				
+	
+				<CustomBehavior File="UserSettings" MountDistance="10" UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+								
 				<If Condition="Me.Level &gt;= 58 &amp;&amp; Me.Level &lt;= 59" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -599,14 +600,15 @@
 							<!-- ****************************************************** -->
 				
 				<If Condition="Me.MapId == 0" >				
-					<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 79" >
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][Goto][Stormwind-Northrend]_botanist_pangaea" />
+					<If Condition="Me.Level &gt;= 68" >
+						<CustomBehavior File="LoadProfile" ProfileName="Natives\[QO-A-4][Shawnee]_botanist_pangaea" />
 					</If>
 				</If>
+				
 
 				<If Condition="Me.MapId == 571" >				
 					<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 79" >
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][68-80]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="Natives\[QO-A-5][Choctaw]_botanist_pangaea" />
 					</If>
 				</If>
 				

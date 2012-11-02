@@ -1,5 +1,5 @@
 <HBProfile>
-  <Name>[QO-A-Next-Gen-Grind][85]_[starting-quest-line]_botanist_pangaea</Name>
+  <Name>[QO-A-7][Comanche]_botanist_pangaea</Name>
 
   <MinDurability>0.1</MinDurability>
   <MinFreeBagSlots>1</MinFreeBagSlots>
@@ -14,19 +14,18 @@
 <QuestOrder>
 
 				<If Condition="Me.Level &gt;= 81 &amp;&amp; Me.Level &lt;= 84" >
-					<CustomBehavior File="Message" Text="Levels 81-85 havent been scripted yet." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
+				</If>
+				
+				<If Condition="Me.Level &gt;= 86" >
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
 				</If>
 
 				<If Condition="Me.MapId == 870" >
 					<If Condition="Me.Level &gt;= 85" >
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
 					</If>
-				</If>
-
-				<If Condition="Me.Level &gt;= 86" >
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
 				</If>
 				
 				<If Condition="Me.MapId == 0" >
@@ -112,7 +111,7 @@
 							<RunTo X="-515.4667" Y="-1654.243" Z="9.517327" />
 							<RunTo X="-421.7031" Y="-1620.125" Z="25.76715" />
 							<RunTo X="-323.265" Y="-1726.397" Z="46.1476" />
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
 					</If>
 				</If>
 					

@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>[QO-A-Goto][87+]_botanist_enter-vale-of-eternal-blossoms</Name>
+	<Name>[QO-A-11][Iroquois]_botanist_pangaea</Name>
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -44,8 +44,7 @@
 	
 	<QuestOrder>
 	
-				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="20" ExpiryAction="InputEnabled_Continue" 
-						Text="This is one of the flight path profiles used bt the Pangaea Project." Title="WARNING" />
+
 			
 				
 				<CustomBehavior File="UserSettings" MountDistance="30" LearnFlightPaths="True" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="75" LogoutForInactivity="True" />

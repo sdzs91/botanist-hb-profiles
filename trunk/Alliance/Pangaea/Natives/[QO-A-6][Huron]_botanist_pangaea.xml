@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-Next-Gen-Grind][80-85]_botanist_pangaea</Name>
+	<Name>[QO-A-6][Huron]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -37,15 +37,11 @@
 	
 	<ClearVendor /><ClearMailbox />
 	
-				<If Condition="Me.Level &gt;= 81 &amp;&amp; Me.Level &lt;= 84" >
+				<If Condition="Me.Level &gt;= 81" >
 					<CustomBehavior File="Message" Text="Levels 81-85 havent been scripted yet." LogColor="Lime" />
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85]_[starting-quest-line]_botanist_pangaea" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-7][Comanche]_botanist_pangaea" />
 				</If>
-				
-				<If Condition="Me.Level &gt;= 85" >				
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea" />
-				</If>
-		
+						
 	<QuestOrder>
 				
 				<If Condition="Me.MapId == 0" >
@@ -155,7 +151,7 @@
 				</If>
 				
 				<If Condition="Me.Level &gt;= 81" >
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][85]_[starting-quest-line]_botanist_pangaea" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-7][Comanche]_botanist_pangaea" />
 				</If>
 				
 	</QuestOrder>			

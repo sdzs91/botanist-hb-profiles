@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-Next-Gen-Grind][68-80]_botanist_pangaea</Name>
+	<Name>[QO-A-5][Choctaw]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -48,7 +48,7 @@
 	<QuestOrder>
 	
 				<If Condition="Me.Level &gt;= 80" >				
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][80-85]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-6][Huron]_botanist_pangaea" />
 				</If>
 			
 				<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 69" >				
@@ -593,7 +593,7 @@
 									
 				<If Condition="Me.MapId == 0" >
 					<If Condition="Me.Level == 80" >
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][80-85]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-6][Huron]_botanist_pangaea" />
 					</If>
 				</If>
 

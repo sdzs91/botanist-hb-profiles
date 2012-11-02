@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-<Name>[QO-A-Next-Gen-Grind][85-90]_botanist_pangaea</Name>
+<Name>[QO-A-8][Apache]_botanist_pangaea</Name>
    
 <MinLevel>1</MinLevel>
 <MaxLevel>91</MaxLevel>
@@ -67,11 +67,7 @@
 		
 	<QuestOrder>
 		
-		<If Condition="Me.Level &lt; 85" > 
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<CustomBehavior File="Message" Text="Levels 49-58, 68-80 and 80-85 haven't been scripted yet. Update via svn at http://botanist-hb-profiles.googlecode.com/svn/trunk/. More levels are added daily. I am stopping the bot" LogColor="Lime" />
-					<CustomBehavior File="UserSettings" StopBot="true" />
-		</If>
+
 		
 	    <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 						
@@ -196,9 +192,9 @@
 				<If Condition="Me.ZoneId == 5785" >
 					<If  Condition="Me.Level == 87" >
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Message" Text="I have reached level 87. I'm changing profiles to [QO-A-Next-Gen-Grind][Flight-Paths-1]_botanist_pangaea" LogColor="Lime" />
+						<CustomBehavior File="Message" Text="I have reached level 87. I'm changing profiles" LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][Flight-Paths-1]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-9][Ottawa]_botanist_pangaea" />
 					</If>	
 				</If>
 			</If>	
@@ -335,9 +331,9 @@
 				<If Condition="Me.ZoneId == 5805" >
 					<If  Condition="Me.Level == 89" >
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Message" Text="I have reached level 89. I'm changing profiles to [QO-A-Next-Gen-Grind][Flight-Paths-2]_botanist_pangaea" LogColor="Lime" />
+						<CustomBehavior File="Message" Text="I have reached level 89. I'm changing profiles." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-Next-Gen-Grind][Flight-Paths-2]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-10][Chippewa]_botanist_pangaea" />
 					</If>	
 				</If>
 			</If>	
@@ -466,7 +462,9 @@
 				<CustomBehavior File="RunMacro" Macro="/sort bags" />				
 			</While>
 			
-			<CustomBehavior File="Message" Text="I have reached level 90. I'm stopping the bot" LogColor="Lime" />
+			<CustomBehavior File="Message" Text="I have reached level 90.I am chnaging profiles." LogColor="Lime" />
+			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-11][Iroquois]_botanist_pangaea" />
 			<CustomBehavior File="UserSettings" StopBot="true" />
 	
 		</QuestOrder>			
