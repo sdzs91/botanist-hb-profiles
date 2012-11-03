@@ -289,10 +289,11 @@
 									<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 									<CustomBehavior File="RunMacro" Macro="/sort bags" />
 								</Hotspots>
-							</GrindArea></SetGrindArea>	
+								</GrindArea></SetGrindArea>	
 										
-						<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 84)" GoalText="Farming" />
-					</If>
+								<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 84)" GoalText="Farming" />
+							</If>
+					</If>		
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
