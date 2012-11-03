@@ -4,7 +4,7 @@
   <MinFreeBagSlots>1</MinFreeBagSlots>
   
   <MinLevel>1</MinLevel>
-  <MaxLevel>86</MaxLevel>
+  <MaxLevel>101</MaxLevel>
   <Factions>44</Factions>
   
   <MailGrey>False</MailGrey>
