@@ -2,7 +2,7 @@
 	<Name>[QO-A-6][Huron]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<MaxLevel>101</MaxLevel>
    
 	<MinDurability>0.1</MinDurability>
 	<MinFreeBagSlots>1</MinFreeBagSlots>
@@ -39,13 +39,14 @@
 	
 	<ProtectedItems></ProtectedItems>
 	
-	<ClearVendor /><ClearMailbox />
 	
-				<If Condition="Me.Level &gt;= 85" >
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-7][Comanche]_botanist_pangaea" />
-				</If>
+				
 						
 	<QuestOrder>
+	
+				<If Condition="Me.Level &gt; 85" >
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-7][Comanche]_botanist_pangaea" />
+				</If>
 				
 				<If Condition="Me.MapId == 0" >
 					<If Condition="Me.Level == 80" >

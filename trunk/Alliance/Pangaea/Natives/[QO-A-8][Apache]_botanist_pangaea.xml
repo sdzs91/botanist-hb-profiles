@@ -463,7 +463,7 @@
 				<CustomBehavior File="RunMacro" Macro="/sort bags" />				
 			</While>
 			
-			<CustomBehavior File="Message" Text="I have reached level 90.I am chnaging profiles." LogColor="Lime" />
+			<CustomBehavior File="Message" Text="I have reached level 90. I am changing profiles." LogColor="Lime" />
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-11][Iroquois]_botanist_pangaea" />
 			<CustomBehavior File="UserSettings" StopBot="true" />

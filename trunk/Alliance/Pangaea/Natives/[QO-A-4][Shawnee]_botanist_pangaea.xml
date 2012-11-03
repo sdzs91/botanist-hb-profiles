@@ -31,21 +31,33 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the Stormwind docks." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="FlyTo" X="-8298.753" Y="1406.589" Z="4.407192" />
+					<CustomBehavior File="FlyTo" X="-8300.08" Y="1405.158" Z="4.422395" />
 					<CustomBehavior File="ForcedDismount" />
 				</If>
 				
 		<While Condition="Me.MapId == 0" >
-					<RunTo X="-8298.753" Y="1406.589" Z="4.407192" />
+					<RunTo X="-8300.08" Y="1405.158" Z="4.422395" />
 				<CustomBehavior File="Message" Text="Waiting for the boat." LogColor="Lime" />
-				<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+				<If Condition="Me.MapId == 0" >
+				<!-- SW dock to Valiance Keep -->
+				<CustomBehavior File="UseTransport" TransportId="190536" 
+								WaitAtX="-8300.08" WaitAtY="1405.158" WaitAtZ="4.422395"
+								TransportStartX="-8288.816" TransportStartY="1424.703" TransportStartZ="0.04"
+								StandOnX="-8294.842" StandOnY="1421.358" StandOnZ="9.488697"
+								TransportEndX="2218.391" TransportEndY="5119.589" TransportEndZ="0.04"	
+								GetOffX="2234.375" GetOffY="5132.568" GetOffZ="5.343217" />								
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>
+			
+
+			<!--	<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
 				<CustomBehavior File="RunMacro" Macro="/target Sailor Dawning" NumOfTimes="1" WaitTime="0"/>
 					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 31791">
 						<CustomBehavior File="WaitTimer" WaitTime="10000" />
 						<CustomBehavior File="Message" Text="Moving aboard the boat.." LogColor="Lime" />
 						<CustomBehavior File="MyCTM" X="-8294.163" Y="1424.834" Z="9.52632" />
 						<CustomBehavior File="WaitTimer" WaitTime="150000" />
-					</If>	
+					</If>	-->
 		</While>				
 									
 				<If Condition="Me.MapId == 571" >
