@@ -1,8 +1,8 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-Grind][80-85]_botanist_uldum</Name>
+	<Name>[QO-N-Grind][83-85]_botanist_uldum</Name>
    
-	<MinLevel>80</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<MinLevel>83</MinLevel>
+	<MaxLevel>85</MaxLevel>
    
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>0</MinFreeBagSlots>
@@ -51,7 +51,7 @@
 		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
 						Text="This profle will farm mobs in Uldum and level your character from level 80-85. The profile will set your hearthstone where needed. Includes mail, vendors and repair. Start the profile in Uldum." Title="WARNING" />
 	
-        <While Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt;= 91" >
+        <While Condition="Me.Level &gt;= 83 &amp;&amp; Me.Level &lt;= 85" >
 										  
 				<If Condition="Me.ZoneId == 5034" >
 					<CustomBehavior File="Message" Text="I am in Uldum, Moving to the Ramkahen innkeep." LogColor="Lime" />
@@ -90,7 +90,7 @@
 									</Hotspots>
 								</GrindArea></SetGrindArea>	
 											
-							<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 91)" GoalText="Farming" />
+							<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 85)" GoalText="Farming" />
 							</If>
 					</If>
 				</If>

@@ -13,10 +13,7 @@
     
 <QuestOrder>
 
-				<If Condition="Me.Level &gt;= 81 &amp;&amp; Me.Level &lt;= 84" >
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
-				</If>
+
 				
 				<If Condition="Me.Level &gt;= 86" >
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
