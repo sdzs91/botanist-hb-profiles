@@ -176,7 +176,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
-		<While Condition="Me.Level &gt;= 81 &amp;&amp; Me.Level &lt; 82" >
+		<While Condition="Me.Level &gt;= 81 &amp;&amp; Me.Level &lt;= 82" >
 				
 					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 					<CustomBehavior File="Message" Text="Position check, Ramkahen in Uldum." LogColor="Lime" />  
@@ -198,7 +198,7 @@
 
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 82." LogColor="Lime" />				
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 83." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>14,16</Factions>
 								<Hotspots>
@@ -214,7 +214,7 @@
 									<Hotspot X="-9339.554" Y="-1246.971" Z="117.4671" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 82)" GoalText="Farming" />
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 83)" GoalText="Farming" />
 				</If>
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
@@ -246,14 +246,14 @@
 					
 		</While>				
 				
-				<If Condition="Me.Level &gt;= 82 &amp;&amp; Me.Level &lt;= 83" >				
+				<If Condition="Me.Level &gt;= 83 &amp;&amp; Me.Level &lt; 84" >				
 					<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the 82 to 84 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 83 to 84 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
-		<While Condition="Me.Level &gt;= 82 &amp;&amp; Me.Level &lt;= 83" >
+		<While Condition="Me.Level &gt;= 83 &amp;&amp; Me.Level &lt; 84" >
 				
 					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 					<CustomBehavior File="Message" Text="Position check, Ramkahen in Uldum." LogColor="Lime" />  

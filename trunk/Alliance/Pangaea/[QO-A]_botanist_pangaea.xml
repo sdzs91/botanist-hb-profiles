@@ -81,11 +81,11 @@
 	
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
 				<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="I am in the  1 to 4 bracket." LogColor="Lime" />
 		
 				<CustomBehavior File="Message" Text="Position check, Northshire Valley" LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<If Condition="Me.X &gt; -9051.969 &amp;&amp; Me.Y &gt; -490.9697" > 
 						<CustomBehavior File="Message" Text="And I'm in Northshire Valley. Moving to the first farming location." LogColor="Lime" />					
 							<RunTo X="-8854.119" Y="-109.3343" Z="80.58908" />
@@ -126,15 +126,15 @@
 				
 				<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt;= 6" >
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 5 to 6 bracket, changing to a new farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>	
 				
 		<While Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt;= 6" >
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Northshire Valley." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<If Condition="Me.X &gt; -9051.969 &amp;&amp; Me.Y &gt; -490.9697" >  
 						<CustomBehavior File="Message" Text="And, I'm in Northshire Valley. Moving to the new farming location.." LogColor="Lime" />
 							<RunTo X="-9023.669" Y="-332.8289" Z="73.90869" />							
@@ -156,7 +156,7 @@
 				</If>
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />													
 						<SetVendor>
@@ -176,9 +176,9 @@
 				
 				<If Condition="Me.Level &gt;= 7 &amp;&amp; Me.Level &lt;= 8" >
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />			
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 7 to 8 bracket." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 			
 			                             <!-- Elwyn forest -->
@@ -186,14 +186,14 @@
 		<While Condition="Me.Level &gt;= 7 &amp;&amp; Me.Level &lt;= 8" >		
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Goldshire in Elwynn Forest" LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Goldshire in Elwynn Forest." LogColor="Lime" />														
 					<RunTo X="-9465.371" Y="15.71644" Z="56.96337" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper." LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="295"  X="-9462.663" Y="16.19151" Z="56.96373" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 					<RunTo X="-9741.113" Y="192.4416" Z="50.55345" />
 								 
@@ -225,7 +225,7 @@
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Corina Steele" Entry="54" Type="Repair" X="-9463.897" Y="94.90453" Z="58.32516" />
@@ -243,22 +243,22 @@
 				
 				<If Condition="Me.Level &gt;= 9 &amp;&amp; Me.Level &lt;= 11" >
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 9 to 11 bracket, changing to a new farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 
 		<While Condition="Me.Level &gt;= 9 &amp;&amp; Me.Level &lt;= 11" >		
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Goldshire in Elwynn Forest" LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="5000" />				
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />				
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Goldshire in Elwynn Forest." LogColor="Lime" />														
 					<RunTo X="-9465.371" Y="15.71644" Z="56.96337" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="295"  X="-9462.663" Y="16.19151" Z="56.96373" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 					<RunTo X="-9724.451" Y="-669.4288" Z="45.19353" />
 								 
@@ -284,7 +284,7 @@
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Corina Steele" Entry="54" Type="Repair" X="-9463.897" Y="94.90453" Z="58.32516" />
