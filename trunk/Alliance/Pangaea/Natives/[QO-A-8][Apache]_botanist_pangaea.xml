@@ -62,9 +62,6 @@
 	<Item Name="Raw Turtle Meat" Entry="74837" />
 </ProtectedItems>
 	
-
-<ClearVendor />
-<ClearMailbox />
 		
 	<QuestOrder>
 		

@@ -38,13 +38,9 @@
 	<Mailboxes></Mailboxes>
  
 	<Vendors></Vendors>
-
-	<Factions></Factions>
 	
 	<ProtectedItems></ProtectedItems>
 	
-	<ClearVendor /><ClearMailbox />
-		
 	<QuestOrder>
 	
 				<If Condition="Me.Level &gt;= 80" >				
