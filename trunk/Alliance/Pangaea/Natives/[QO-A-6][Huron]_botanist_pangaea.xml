@@ -271,7 +271,7 @@
 					<CustomBehavior File="FlyTo" X="-11071.13" Y="-412.7263" Z="18.54023" />
 					<CustomBehavior File="ForcedDismount" />
 					
-					<If Condition="Me.X &gt; -11000 &amp;&amp; Me.X &lt; -10000 &amp;&amp; Me.Y &gt; -1300 &amp;&amp; Me.Y &lt; -1000" >
+					<If Condition="Me.X &gt; -11500 &amp;&amp; Me.X &lt; -10500 &amp;&amp; Me.Y &gt; -600 &amp;&amp; Me.Y &lt; -200" >
 						<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 84." LogColor="Lime" />
 						<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
 						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
