@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-Grind][flying][90-tank][mote-of-spirit]_botanist_the-clutches-of-shek'zeer</Name>
+	<Name>[QO-N-Grind][flying][90-tank][mote-of-spirit]_botanist_the-clutches-of-shek'zeer_[south] </Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -99,28 +99,27 @@
 					<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
 					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="FlyTo" X="621.0068" Y="3449.331" Z="210.1795" />						
+					<CustomBehavior File="FlyTo"  X="-361.2824" Y="2455.513" Z="148.3561" />				
 					<CustomBehavior File="ForcedDismount" />
 					</If>
 				</If>	
 
 				<CustomBehavior File="Message" Text="Position check #4" LogColor="Lime" />				
 				<If Condition="Me.ZoneId == 6138" >
-					<If Condition="Me.X &lt; 750 &amp;&amp; Me.X &gt; 500 &amp;&amp; Me.Y &gt; 3200 &amp;&amp; Me.Y &lt; 3600" >
+					<If Condition="Me.X &lt; -250 &amp;&amp; Me.X &gt; -450 &amp;&amp; Me.Y &gt; 2355 &amp;&amp; Me.Y &lt; 2555" >
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
 						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 						<CustomBehavior File="RunMacro" Macro="/sort bags" />
 							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >	
 								<SetGrindArea><GrindArea>
-								<Factions>2557,2550</Factions>
+								<Factions>2557,2550,14,2558</Factions>
 									<Hotspots>
-										<Hotspot X="568.5087" Y="3451.193" Z="209.0435" />
-										<Hotspot X="534.1282" Y="3522.849" Z="208.534" />
-										<Hotspot X="535.5749" Y="3570.843" Z="208.4995" />
-										<Hotspot X="533.2756" Y="3609.481" Z="208.5385" />
-										<Hotspot X="518.5419" Y="3646.042" Z="210.1368" />
-										<Hotspot X="485.7479" Y="3712.695" Z="214.7043" />
-										<Hotspot X="457.4903" Y="3793.671" Z="218.0164" />										
+										<Hotspot X="-354.9946" Y="2506.056" Z="142.8619" />
+										<Hotspot X="-350.8411" Y="2609.401" Z="138.0518" />
+										<Hotspot X="-305.3942" Y="2732.342" Z="136.6208" />
+										<Hotspot X="-273.3269" Y="2872.98" Z="128.2082" />
+										<Hotspot X="-235.8431" Y="3079.016" Z="123.264" />
+										<Hotspot X="-267.3302" Y="3175.207" Z="128.6368" />										
 									</Hotspots>
 								</GrindArea></SetGrindArea>					
 								<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30)" GoalText="Farming" />
