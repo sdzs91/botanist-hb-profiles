@@ -109,7 +109,10 @@
 					<RunTo X="876.0497" Y="309.8843" Z="503.0419" />
 					<RunTo X="908.4436" Y="343.5705" Z="506.0943" />
 								
-					<CustomBehavior File="Message" Text="I have reached the level 90 flying trainer. I'm stopping the bot" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I have reached the level 90 flying trainer. I hope this profile was satisfactory for you needs. Please show your appreciation for the many our of my time I put into this by donating at botanist1968@gmail.com" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am stopping the bot. Thank you for using my profiles, Botanist" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="UserSettings" StopBot="true" />
 				</If>
 				
