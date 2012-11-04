@@ -52,7 +52,7 @@
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="3819.135" Y="535.2518" Z="639.0074" />
 					</CustomBehavior>
-					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="600" ExpiryAction="InputEnabled_Continue" 
+					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryAction="InputEnabled_Continue" 
 							Text="Do not close this window or press continue. You will have to manually accepted this quest, then talk to Xuen, the big ghost cat beside you. After about 30 seconds you will be pulled into combat. You will then need to kill that mob as well as the next 2 mobs that spawn. Then turn in the quest and accept the next quest. Then press continue on this window or you can press stop and then restart the bot once you have completed this quest and accepted the next. The bot will control combat for you during this time. You just need to control movement and kite the mobs as the bot kills them. There is no hurry. This window has a 10 minute timer on it." Title="WARNING" />
 					
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
