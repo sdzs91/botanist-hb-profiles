@@ -26,6 +26,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="-10402.46" Y="-382.3114" Z="493.1646" Radius="100" />
 		<Blackspot X="-8964.688" Y="-1078.474" Z="145.2474" Radius="25" />
 		<Blackspot X="4650.589" Y="-2588.956" Z="1138.902" Radius="30" />
 		<Blackspot X="4539.567" Y="-2428.505" Z="1132.517" Radius="50" />
@@ -266,7 +267,7 @@
 					<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 						<RunTo X="-9430.78" Y="-959.8494" Z="111.0117" />	
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
-					<CustomBehavior File="FlyTo" X="-10480.85" Y="-1156.361" Z="44.13161" />
+					<CustomBehavior File="FlyTo" X="-11071.13" Y="-412.7263" Z="18.54023" />
 					<CustomBehavior File="ForcedDismount" />
 					
 					<If Condition="Me.X &gt; -11000 &amp;&amp; Me.X &lt; -10000 &amp;&amp; Me.Y &gt; -1300 &amp;&amp; Me.Y &lt; -1000" >
@@ -276,11 +277,14 @@
 						<CustomBehavior File="RunMacro" Macro="/sort bags" />
 							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >	
 								<SetGrindArea><GrindArea>
-								<Factions>16</Factions>
+								<Factions>38</Factions>
 									<Hotspots>
-										<Hotspot X="-10503.14" Y="-1174.505" Z="43.45898" />
-										<Hotspot X="-10502.17" Y="-1155.916" Z="43.36153" />
-										<Hotspot X="-10502.78" Y="-1135.114" Z="44.11236" />
+										<Hotspot X="-11071.13" Y="-412.7263" Z="18.54023" />
+										<Hotspot X="-10876.27" Y="-444.6223" Z="21.12066" />
+										<Hotspot X="-10771.35" Y="-180.0814" Z="22.36659" />
+										<Hotspot X="-10857.26" Y="-70.42871" Z="21.14468" />
+										<Hotspot X="-10992.14" Y="-73.10052" Z="15.56875" />
+										<Hotspot X="-11104.58" Y="-229.5681" Z="15.1555" />
 									<CustomBehavior File="Message" Text="End of the route. Starting over." LogColor="Lime" />
 									<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 									<CustomBehavior File="RunMacro" Macro="/sort bags" />
