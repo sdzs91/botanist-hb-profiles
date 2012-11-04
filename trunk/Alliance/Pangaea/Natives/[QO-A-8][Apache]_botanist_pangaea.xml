@@ -347,18 +347,8 @@
 			
 				<!-- *********************************************************************************** -->
 				
-				<If Condition="Me.MapId == 870" >
-					<If Condition="Me.ZoneId != 6138" >
-						<CustomBehavior File="Message" Text="I am not where I should be. Moving to Klaxxi'vess in the Dread Wastes." LogColor="Lime" />
-						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-							<RunTo X="262.4349" Y="3149.81" Z="214.5022" />
-						<CustomBehavior File="Message" Text="I have reached HalfHill. " LogColor="Lime" />
-					</If>
-				</If>	
-				
-			
-			<While Condition="Me.Level &gt; 88 &amp;&amp; Me.Level &lt;= 89" >				
-				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />		
+		<While Condition="Me.Level &gt; 88 &amp;&amp; Me.Level &lt;= 89" >				
+				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />		
 				<If Condition="Me.ZoneId == 6138" >
 					<If Condition="Me.X &lt; 75 || Me.X &gt; 310 || Me.Y &lt; 3095.547 || Me.Y &gt; 3349.551" >
 						<CustomBehavior File="Message" Text="I am in Dread Wastes, moving to Klaxxi'vess" LogColor="Lime" />
@@ -366,10 +356,20 @@
 						<CustomBehavior File="Message" Text="I have reached Klaxxie'vess. " LogColor="Lime" />
 					</If>
 				</If>
+				
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.ZoneId != 6138" >
+						<CustomBehavior File="Message" Text="I am not where I should be. Moving to Klaxxi'vess in the Dread Wastes." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="262.4349" Y="3149.81" Z="214.5022" />
+						<CustomBehavior File="Message" Text="I have reached Klaxxie'vess. " LogColor="Lime" />
+					</If>
+				</If>	
+				
 						
 				<CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 					
-				<CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />			  
+				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />			  
 			    <If Condition="Me.ZoneId == 6138" >
 					<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
 						<CustomBehavior File="Message" Text="I am in Klaxxi'vess, locating the innkeep." LogColor="Lime" />
@@ -389,7 +389,7 @@
 						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 						<CustomBehavior File="RunMacro" Macro="/sort bags" />
                                                         										
-				<If Condition="Me.ZoneId == 6138" >					
+				<If Condition="Me.ZoneId == 5842" >					
 					<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >	
 						<SetGrindArea><GrindArea>
 						<Factions>2156,,14,190,2111</Factions>
