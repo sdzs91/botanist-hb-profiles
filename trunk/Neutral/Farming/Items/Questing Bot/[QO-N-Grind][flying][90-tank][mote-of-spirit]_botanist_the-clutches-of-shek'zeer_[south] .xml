@@ -98,7 +98,6 @@
 			    <If Condition="Me.ZoneId == 6138" >
 					<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
 					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
-					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="FlyTo"  X="-361.2824" Y="2455.513" Z="148.3561" />				
 					<CustomBehavior File="ForcedDismount" />
 					</If>
@@ -137,12 +136,12 @@
 						
 					<SetVendor>
 						<Vendors>
-							<Vendor Name="Singegruff" Entry="56705" Type="Repair" X="1528.802" Y="-1806.385" Z="246.2007" />
+							<Vendor Name="Ambersmith Zikk" Entry="64599" Type="Repair" X="147.875" Y="3194.917" Z="214.7608" />
 						</Vendors>
 					</SetVendor>
 					<SetMailbox>
 						<Mailboxes>
-							<Mailbox X="1606.421" Y="-1794.48" Z="260.2998" />
+							<Mailbox X="267.4819" Y="3152.835" Z="214.5012" />
 						</Mailboxes>
 					</SetMailbox>
 			

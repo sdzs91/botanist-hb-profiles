@@ -393,9 +393,8 @@
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Message" Text="Flying to a safe place to hearth." LogColor="Lime" />
-						<CustomBehavior File="ForcedMount" MountType="Flying" />
-						<CustomBehavior File="FlyTo" X="-3283.555" Y="-5849.005" Z="148.7684" />
+						<CustomBehavior File="Message" Text="Running to a safe place to hearth." LogColor="Lime" />
+							<RunTo  X="-2951.27" Y="-5850.295" Z="139.0469" />
 						<CustomBehavior File="ForcedDismount" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="Using my hearthstone." LogColor="Lime" />		

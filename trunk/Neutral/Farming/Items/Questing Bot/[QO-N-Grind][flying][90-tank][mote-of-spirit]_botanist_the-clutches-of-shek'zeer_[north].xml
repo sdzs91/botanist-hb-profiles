@@ -138,12 +138,12 @@
 						
 					<SetVendor>
 						<Vendors>
-							<Vendor Name="Singegruff" Entry="56705" Type="Repair" X="1528.802" Y="-1806.385" Z="246.2007" />
+							<Vendor Name="Ambersmith Zikk" Entry="64599" Type="Repair" X="147.875" Y="3194.917" Z="214.7608" />
 						</Vendors>
 					</SetVendor>
 					<SetMailbox>
 						<Mailboxes>
-							<Mailbox X="1606.421" Y="-1794.48" Z="260.2998" />
+							<Mailbox X="267.4819" Y="3152.835" Z="214.5012" />
 						</Mailboxes>
 					</SetMailbox>
 			
