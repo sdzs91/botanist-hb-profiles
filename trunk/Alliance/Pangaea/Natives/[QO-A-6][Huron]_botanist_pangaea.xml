@@ -88,7 +88,7 @@
 				</If>
 
 				<If Condition="Me.MapId == 0" >
-					<If Condition="Me.Level &gt;= 80" >
+					<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt;= 83" >
 						<If Condition="((!HasQuest(25316)) &amp;&amp; (IsQuestCompleted(25316)))" >
 							<CustomBehavior File="FlyTo" X="-8345.691" Y="639.2832" Z="95.41733" />
 							<CustomBehavior File="ForcedDismount" />
