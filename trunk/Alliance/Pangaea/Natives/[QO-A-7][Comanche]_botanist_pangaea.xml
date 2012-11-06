@@ -100,9 +100,15 @@
 				
 				<If Condition="Me.MapId == 870" >
 					<If Condition="Me.ZoneId == 5785" >
-						<CustomBehavior File="MyCTM" X="-663.8898" Y="-1471.958" Z="130.5203" />
-						<CustomBehavior File="MyCTM" X="-646.6663" Y="-1460.604" Z="131.9791" />
-						<CustomBehavior File="MyCTM" X="-648.6606" Y="-1418.572" Z="-2.0467" />
+						<CustomBehavior File="MyCTM" X="-704.4305" Y="-1483.257" Z="130.4549" />
+						<CustomBehavior File="MyCTM" X="-732.1873" Y="-1490.647" Z="134.7712" />
+						<CustomBehavior File="MyCTM" X="-737.4378" Y="-1502.903" Z="134.7697" />
+						<CustomBehavior File="MyCTM" X="-741.1252" Y="-1495.995" Z="134.7728" />
+						<CustomBehavior File="MyCTM" X="-731.811" Y="-1457.887" Z="149.8249" />
+						<CustomBehavior File="MyCTM" X="-745.9075" Y="-1463.394" Z="149.827" />
+						<CustomBehavior File="MyCTM" X="-749.3347" Y="-1469.728" Z="151.2215" />
+						<CustomBehavior File="MyCTM" X="-770.1754" Y="-1484.477" Z="-4.839229" />
+						<CustomBehavior File="WaitTimer" WaitTime="5000" />
 							<RunTo X="-586.8501" Y="-1552.424" Z="9.925548" />
 						<CustomBehavior File="ForcedMount" MountType="Ground" />	
 							<RunTo X="-515.4667" Y="-1654.243" Z="9.517327" />
