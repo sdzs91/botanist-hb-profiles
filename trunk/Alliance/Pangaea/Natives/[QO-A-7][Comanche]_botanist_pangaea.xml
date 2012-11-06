@@ -13,7 +13,7 @@
     
 <QuestOrder>
 
-
+			<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="False" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="1" LogoutForInactivity="True" />
 				
 				<If Condition="Me.Level &gt;= 86" >
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
@@ -23,7 +23,7 @@
 					<If Condition="Me.Level &gt;= 85" >
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
 					</If>
-				</If>
+				</If> 
 				
 				<If Condition="Me.MapId == 0" >
 					<If Condition="Me.Level == 85" >
@@ -99,7 +99,8 @@
 				</If>
 				
 				<If Condition="Me.MapId == 870" >
-					<If Condition="Me.ZoneId == 5785" >
+					<CustomBehavior File="Message" Text="Jumping off the boat." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 						<CustomBehavior File="MyCTM" X="-704.4305" Y="-1483.257" Z="130.4549" />
 						<CustomBehavior File="MyCTM" X="-732.1873" Y="-1490.647" Z="134.7712" />
 						<CustomBehavior File="MyCTM" X="-737.4378" Y="-1502.903" Z="134.7697" />
@@ -115,7 +116,6 @@
 							<RunTo X="-421.7031" Y="-1620.125" Z="25.76715" />
 							<RunTo X="-323.265" Y="-1726.397" Z="46.1476" />
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
-					</If>
 				</If>
 					
 
