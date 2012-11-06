@@ -28,8 +28,9 @@
 		</Mailboxes>
 
 		<Blackspots>
+			<Blackspot X="1508.403" Y="4780.272" Z="142.8618" Radius="20" />
 			<Blackspot X="-90.37537" Y="3806.725" Z="153.826" Radius="40" />
-			.<Blackspot X="-864.4209" Y="2686.413" Z="130.561" Radius="10" />
+			<Blackspot X="-864.4209" Y="2686.413" Z="130.561" Radius="10" />
 			<Blackspot X="-1003.903" Y="2599.44" Z="141.9097" Radius="15" />
 			<Blackspot X="-835.8764" Y="2631.547" Z="130.6694" Radius="10" />
 			<Blackspot X="-662.5403" Y="2541.763" Z="131.4277" Radius="10" />
