@@ -23,11 +23,11 @@
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
 				</If>
 
-		<!--		<If Condition="Me.MapId == 870" >
+				<If Condition="Me.MapId == 870" >
 					<If Condition="Me.Level &gt;= 85" >
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
 					</If>
-				</If> 	-->
+				</If> 	
 				
 				<If Condition="Me.MapId == 0" >
 					<If Condition="Me.Level == 85" >
