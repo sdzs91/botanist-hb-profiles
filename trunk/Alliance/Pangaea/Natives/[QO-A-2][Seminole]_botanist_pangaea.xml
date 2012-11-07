@@ -35,6 +35,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="-26.68868" Y="-2808.906" Z="122.3759" Radius="75" />
 		<Blackspot X="-8802.814" Y="-2138.319" Z="151.6448" Radius="3.87016" />
 		<Blackspot X="-11637.89" Y="-3388.319" Z="18.40996" Radius="65" />
 		<Blackspot X="-9945.886" Y="-4092.969" Z="17.37486" Radius="5" />
