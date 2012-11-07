@@ -130,7 +130,7 @@
 										<RunTo X="5669.279" Y="2005.885" Z="798.0413" />
 										<CustomBehavior File="Message" Text="Opening the gate so I may enter the Forge of Souls." LogColor="Yellow" />
 										<CustomBehavior File="InteractWith" MobId="201759" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5672.1123" Y="2002.12964" Z="797.3859" />
-										<CustomBehavior File="MyCTM" X="5677.698" Y="1996.725" Z="798.0425" /> 
+										<CustomBehavior File="GoThruPortal" X="5677.698" Y="1996.725" Z="798.0425" /> 
 										<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Yellow" />
 										<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
 										<CustomBehavior File="Message" Text="Sorting my bags.......making them sexy :D  !!!" LogColor="Yellow" />
@@ -171,7 +171,7 @@
 					<CustomBehavior File="Message" Text="My work here is done. Running out so I can reset the dungeon." LogColor="Yellow" />					
 					<RunTo X="4970.951" Y="2239.131" Z="638.8701" />
 					<RunTo X="4916.663" Y="2186.1" Z="638.733" />
-					<CustomBehavior File="MyCTM" X="4925.349" Y="2170.892" Z="638.733" />
+					<CustomBehavior File="GoThruPortal" X="4925.349" Y="2170.892" Z="638.733" />
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
 					<RunTo  X="5669.279" Y="2005.885" Z="798.0413" />
 				</If>
