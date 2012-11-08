@@ -22,6 +22,7 @@
 	<TargetElites></TargetElites>
 	
 	<AvoidMobs>
+		<Mob Name="Cocooned Victim" Entry="42907" />
 		<Mob Name="Scorched Guardian" Entry="2726" />
 		<Mob Name="Training Dummy" Entry="44548" />
 		<Mob Name="Thuros Lightfingers" Entry="61" />
