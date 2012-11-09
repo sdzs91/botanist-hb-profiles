@@ -40,6 +40,9 @@
 	<QuestOrder>
 		<ClearVendor />
 		<ClearMailbox />
+		
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This profile will farm Tol'bard for embersilk cloth. In order to properly run this profile, you need a plugin like elixir or similar that will drink porions/flask. You need plenty of Potion's of Treasure Finding which the plugin should be configured to drink hourly. And your charcter needs to be a minimum of 450 Tailoring skill. You will also need the plugin Tidybags. Make sure that Tidybags is disabled. The profile will enable it when it needs to." Title="WARNING" />
 
 	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="20" KillBetweenHotspots="True" LogoutForInactivity="False" />
 	
@@ -129,10 +132,10 @@
 			<CustomBehavior File="Message" Text="Sorting my bags.......making them sexy :D  !!!" LogColor="Yellow" />
 			<CustomBehavior File="RunMacro" Macro="/sort bags" />
 			<CustomBehavior File="WaitTimer" WaitTime="15000"/>
-            <CustomBehavior File="EnablePlugin" Names="Tidy Bags 3 Reloaded" />
+            <CustomBehavior File="EnablePlugin" Names="Tidy Bags 3.6 Reloaded" />
 			<CustomBehavior File="Message" Text="Tidy Bags has been enabled." LogColor="Yellow" />
 			<CustomBehavior File="WaitTimer" WaitTime="80000"/>
-			<CustomBehavior File="DisablePlugin" Names="Tidy Bags 3 Reloaded" />
+			<CustomBehavior File="DisablePlugin" Names="Tidy Bags 3.6 Reloaded" />
 			<CustomBehavior File="Message" Text="Tidy Bags has been disabled." LogColor="Yellow" />						
 						
 			<SetVendor>
