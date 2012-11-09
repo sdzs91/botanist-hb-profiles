@@ -62,9 +62,18 @@
 						Text="This profle will farm Windward Tigers on Windward Isle in the Jade Forest. The profile will set your hearthstone where needed. Includes mail, vendors and repair. Start the profile anywhere in Pandaria." Title="WARNING" />
 	
         <While Condition="Me.Level &gt;= 90" >
+		
+				<If Condition="Me.ZoneId == 5785" >
+					<If Condition="Me.X &gt; 1851.818 &amp;&amp; Me.X &lt; 3031.793 &amp;&amp; Me.Y &gt; -3246.499 &amp;&amp; Me.Y &lt; -2648.172" >
+						<CustomBehavior File="Message" Text="I am on or near Windward Isle, I am routing around the no-fly zone to reach the mainland." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2442.425" Y="-2778.516" Z="210.3244" />
+						<CustomBehavior File="MyCTM" X="2005.549" Y="-2666.271" Z="263.6648" />
+						<CustomBehavior File="MyCTM" X="1837.623" Y="-2390.19" Z="374.3347" />
+					</If>
+				</If>
 										  
 				<If Condition="Me.MapId == 870" >
-					<CustomBehavior File="Message" Text="I am in Pandaria. Flying to Dawns Blossom." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the Pandaria mainland. Flying to Dawns Blossom." LogColor="Lime" />
 					<CustomBehavior File="FlyTo" X="1596.147" Y="-1797.069" Z="259.9726" />
 					<CustomBehavior File="Message" Text="I've reached Dawns Blossom." LogColor="Lime" />
 					<CustomBehavior File="ForcedDismount" />
@@ -99,7 +108,7 @@
 					<CustomBehavior File="MyCTM"  X="2804.32" Y="-2857.321" Z="22.49767" />
 					<CustomBehavior File="MyCTM"  X="2765.799" Y="-2951.428" Z="15.80516" />
 					<CustomBehavior File="MyCTM"  X="2685.825" Y="-2909.552" Z="4.897027" />
-					<CustomBehavior File="MyCTM"  X="2671.531" Y="-2903.333" Z="4.081089" />
+					<CustomBehavior File="FlyTo" X="2671.531" Y="-2903.333" Z="4.081089" />
 					<CustomBehavior File="ForcedDismount" />								
 					<CustomBehavior File="Message" Text="Checking my coordinates." LogColor="Lime" />
 						<If Condition="Me.X &gt; 2500 &amp;&amp; Me.X &lt; 2800 &amp;&amp; Me.Y &gt; -3100 &amp;&amp; Me.Y &lt; -2750" >
