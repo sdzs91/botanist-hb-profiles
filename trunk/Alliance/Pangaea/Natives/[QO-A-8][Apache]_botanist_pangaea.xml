@@ -23,6 +23,7 @@
 
 <AvoidMobs>
 	<Mob Name="Waste Scavenger" Entry="66194" />
+	<Mob Name="Slingtail Fishripper" Entry="55195" />
 	<Mob Name="Pengsong" Entry="66587" />
 	<Mob Name="Amberscale Basilisk" Entry="66188" />
 	<Mob Name="Kyparite Pulverizer" Entry="65432" />
