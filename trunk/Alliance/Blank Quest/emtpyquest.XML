@@ -10,15 +10,15 @@
   <MailPurple>True</MailPurple>
     
 <QuestOrder>
-<SetGrindArea>
-      <GrindArea>
-        <TargetMinLevel>1</TargetMinLevel>
-        <TargetMaxLevel>93</TargetMaxLevel>
-	<Factions>9999</Factions>
-       <Hotspots>
-  	</Hotspots>
-      </GrindArea>
+
+	<SetGrindArea>
+		<GrindArea>
+		<Factions>9999</Factions>
+			<Hotspots>
+			</Hotspots>
+		</GrindArea>
     </SetGrindArea>
-<GrindTo Level="60" />
+	<GrindTo Level="60" />
+	
 </QuestOrder>
 </HBProfile>
