@@ -25,6 +25,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="801.3157" Y="-2020.946" Z="59.14861" Radius="45" />
 		<Blackspot X="2003.698" Y="-90.13161" Z="390.919" Radius="45" />
 		<Blackspot X="1065.516" Y="-1484.407" Z="96.77965" Radius="50" />
 		<Blackspot X="1515.955" Y="-568.2357" Z="307.7042" Radius="50" />
@@ -32,9 +33,11 @@
 	</Blackspots>
 
 	<Mailboxes>
+		<Mailbox X="1605.956" Y="-1793.005" Z="260.1776" />
 	</Mailboxes>
  
 	<Vendors>
+		<Vendor Name="Singegruff" Entry="56705" Type="Repair" X="1528.802" Y="-1806.385" Z="246.2002" />
 	</Vendors>
 
 	<Factions></Factions>
