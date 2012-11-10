@@ -57,7 +57,7 @@
 						<CustomBehavior File="Message" Text="I am flying to Netherstorm." LogColor="Lime" />
 						<CustomBehavior File="FlyTo" X="4122.288" Y="3045.95" Z="339.0876" DestName="Innkeep" />
 						<CustomBehavior File="ForcedDismount" />							
-						<CustomBehavior File="Message" Text="I have reached the Stormspire in Netherstorm. " LogColor="Lime" />							
+						<CustomBehavior File="Message" Text="I have reached the Stormspire in Netherstorm." LogColor="Lime" />							
 					</If>							
 				</If>
 					   
