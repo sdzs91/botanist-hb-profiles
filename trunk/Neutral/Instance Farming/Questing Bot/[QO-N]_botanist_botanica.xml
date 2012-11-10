@@ -177,10 +177,10 @@
 							</Mailboxes>
 						</SetMailbox>			
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />							
-							<RunTo X="4122.288" Y="3045.95" Z="339.0876" />
+							<RunTo X="4127.095" Y="3041.461" Z="338.2968" />
 						<CustomBehavior File="Message" Text="Flying back to the The Botanica." LogColor="Lime" />
 						<CustomBehavior File="ForcedMount" MountType="Flying" />								
-						<CustomBehavior File="FlyTo" X="4156.971" Y="2944.005" Z="489.2647" />
+						<CustomBehavior File="FlyTo" X="4117.656" Y="2999.828" Z="492.1" />
 						<CustomBehavior File="MyCTM" X="4060.005" Y="2805.132" Z="597.4164" />
 						<CustomBehavior File="MyCTM" X="3392.446" Y="1639.349" Z="353.6405" />
 						<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />
