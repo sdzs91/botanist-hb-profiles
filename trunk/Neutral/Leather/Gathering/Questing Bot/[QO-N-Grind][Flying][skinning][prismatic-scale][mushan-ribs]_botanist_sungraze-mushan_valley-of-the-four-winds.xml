@@ -111,11 +111,9 @@
 				<If Condition="Me.ZoneId == 5805" >
 					<If Condition="Me.X &gt; 150 &amp;&amp; Me.X &lt; 400 &amp;&amp; Me.Y &gt; -1000 &amp;&amp; Me.Y &lt; -700" >
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
-						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
-						<CustomBehavior File="RunMacro" Macro="/sort bags" />
 							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 								<SetGrindArea><GrindArea>
-								<Factions>7</Factions>
+								<Factions>7,2260</Factions>
 									<Hotspots>
 										<Hotspot X="236.5891" Y="-876.6082" Z="238.3074" />
 										<Hotspot X="130.7516" Y="-812.0088" Z="244.3322" />
@@ -144,7 +142,7 @@
 								
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-		        <If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+		        <If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 					<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />
