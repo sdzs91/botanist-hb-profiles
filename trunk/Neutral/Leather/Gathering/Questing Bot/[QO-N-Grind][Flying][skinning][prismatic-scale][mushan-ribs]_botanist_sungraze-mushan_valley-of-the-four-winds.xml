@@ -25,14 +25,9 @@
 		<AvoidMob Name="Plainshawk" Entry="58910" />
 		<AvoidMob Name="Longfang Howler" Entry="56524" />
 		<AvoidMob Name="Mutated Silkmoth" Entry="57422" />
-        <AvoidMob Name="Wildscale Hunter" Entry="58900" />
 		<AvoidMob Name="Softshell Snapling" Entry="63060" />
-		<AvoidMob Name="Wildscale Poacher" Entry="58899" />
 		<AvoidMob Name="Twitchheel Hoarder" Entry="56538" />
-		<AvoidMob Name="Mushan Nomad" Entry="56523" />
-		<AvoidMob Name="Glade Hunter" Entry="57299" />
-		<AvoidMob Name="Mushan Nomad" Entry="56523"  />
-		<AvoidMob Name="Mushan Nomad" Entry="56523"  />		 
+		<AvoidMob Name="Thieving Plainshawk" Entry="56034"   />		 
 	</AvoidMobs>
 	
 	<Blackspots>
@@ -112,7 +107,7 @@
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
 							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 								<SetGrindArea><GrindArea>
-								<Factions>7,2260</Factions>
+								<Factions>7,2260,16,14</Factions>
 									<Hotspots>
 										<Hotspot X="236.5891" Y="-876.6082" Z="238.3074" />
 										<Hotspot X="130.7516" Y="-812.0088" Z="244.3322" />
@@ -131,10 +126,14 @@
 										<Hotspot X="-846.5538" Y="323.623" Z="150.347" />
 										<Hotspot X="-873.0419" Y="693.9942" Z="159.2397" />
 										<Hotspot X="-826.9858" Y="866.9109" Z="152.5254" />
-										<Hotspot X="-875.097" Y="1175.795" Z="143.1561" />									
+										<Hotspot X="-875.097" Y="1175.795" Z="143.1561" />
+										<Hotspot X="-1054.451" Y="1485.332" Z="150.6276" />
+										<Hotspot X="-747.7358" Y="1533.178" Z="150.2258" />	
+										<Hotspot X="-743.7971" Y="1700.081" Z="152.7358" />
+										<Hotspot X="-648.9296" Y="1803.828" Z="145.181" />
+										<Hotspot X="-505.658" Y="1857.842" Z="137.8207" />										
 									</Hotspots>
 								</GrindArea></SetGrindArea>	
-								<CustomBehavior File="FlyTo" X="236.5891" Y="-876.6082" Z="238.3074" />
 								<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30)" GoalText="Farming" />
 							</If>
 					</If>
