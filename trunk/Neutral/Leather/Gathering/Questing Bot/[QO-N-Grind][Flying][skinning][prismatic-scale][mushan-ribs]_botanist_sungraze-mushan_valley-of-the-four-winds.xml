@@ -45,7 +45,7 @@
 	<Vendors>
 	</Vendors>
 
-	<Factions></Factions>
+	<Factions>2260</Factions>
 	
 	<ProtectedItems>
 		<Item Name="Elementium Lockbox" Entry="68729" />
@@ -80,9 +80,8 @@
 				<If Condition="Me.ZoneId == 5805" >
 					
 						<CustomBehavior File="Message" Text="I am in Valley of the Four Winds, moving to the innkeeper in Halfhill" LogColor="Lime" />
-							<CustomBehavior File="FlyTo" X="-195.414" Y="409.0086" Z="165.5139" DestName="HalfHill" />
+							<CustomBehavior File="FlyTo" X="-204.9184" Y="495.6101" Z="187.1923" DestName="HalfHill" />
 							<CustomBehavior File="ForcedDismount" />
-							<RunTo X="-204.9184" Y="495.6101" Z="187.1923" DestName="HalfHill" />
 							<RunTo X="-226.3131" Y="514.6094" Z="190.9428" DestName="Innkeeper" />	
 						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -134,7 +133,8 @@
 										<Hotspot X="-826.9858" Y="866.9109" Z="152.5254" />
 										<Hotspot X="-875.097" Y="1175.795" Z="143.1561" />									
 									</Hotspots>
-								</GrindArea></SetGrindArea>					
+								</GrindArea></SetGrindArea>	
+								<CustomBehavior File="FlyTo" X="236.5891" Y="-876.6082" Z="238.3074" />
 								<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30)" GoalText="Farming" />
 							</If>
 					</If>
@@ -145,7 +145,7 @@
 		        <If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 					<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />
 					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />						
 						
 					<SetVendor>
