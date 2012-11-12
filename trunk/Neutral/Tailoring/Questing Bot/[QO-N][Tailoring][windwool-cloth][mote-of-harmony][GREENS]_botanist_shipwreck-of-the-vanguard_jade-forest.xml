@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][Tailoring][windward-cloth][mote-of-harmony][GREENS]_botanist_shipwreck-of-the-vanguard_jade-forest</Name>
+	<Name>[QO-N][Tailoring][windwool-cloth][mote-of-harmony][GREENS]_botanist_shipwreck-of-the-vanguard_jade-forest</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -70,7 +70,6 @@
 			 <While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" > 
 
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
-						<Hotspot X="-555.4863" Y="-2107.704" Z="1.441501" />
 						<Hotspot X="-533.9221" Y="-2095.366" Z="2.752152" />
 						<Hotspot X="-527.3692" Y="-2070.459" Z="3.357847" />
 						<Hotspot X="-489.9641" Y="-2075.683" Z="4.057713" />
@@ -90,11 +89,12 @@
 					</CustomBehavior>
 						<RunTo  X="-572.0258" Y="-1982.063" Z="2.116826" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-590.3008" Y="-2004.265" Z="3.905131" />
 						<Hotspot X="-580.6666" Y="-2007.514" Z="7.73323" />
 						<Hotspot X="-563.3649" Y="-2014.493" Z="0.6627366" />
-						<Hotspot X="-516.6345" Y="-1984.453" Z="5.072057" />
 					</CustomBehavior>						
-					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-516.6345" Y="-1984.453" Z="5.072057" />					
 						<Hotspot X="-514.5848" Y="-2026.91" Z="1.443304" />
 						<Hotspot X="-510.8903" Y="-2049.206" Z="0.842253" />
 						<Hotspot X="-474.8445" Y="-2023.168" Z="4.657523" />				
