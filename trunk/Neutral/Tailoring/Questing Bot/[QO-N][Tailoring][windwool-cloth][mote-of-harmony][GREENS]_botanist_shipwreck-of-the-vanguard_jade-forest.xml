@@ -14,7 +14,7 @@
 	<MailPurple>True</MailPurple>
    
 	<SellGrey>True</SellGrey>
-	<SellWhite>True</SellWhite>
+	<SellWhite>False</SellWhite>
 	<SellGreen>False</SellGreen>
 	<SellBlue>False</SellBlue>
 	<SellPurple>False</SellPurple>
@@ -132,7 +132,7 @@
 					</SetVendor>
 					<SetMailbox>
 						<Mailboxes>
-							<Mailbox X="-9428.854" Y="-968.5951" Z="111.0117" />
+							<Mailbox X="1605.99" Y="-1793.644" Z="260.2055" />
 						</Mailboxes>
 					</SetMailbox>
 			
