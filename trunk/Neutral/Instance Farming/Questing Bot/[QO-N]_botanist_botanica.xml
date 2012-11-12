@@ -45,7 +45,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+	<CustomBehavior File="UserSettings" MountDistance="10"  UseFlightPaths="False" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
 	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will endlessly farm Botanica. It will set your hearthstone to Area52 in Netherstorm. For best results, start the profile in Netherstorm. Make sure you set an alt to mail to in the settings and tools window of HB. This profile will only venor greys and trash. Feel free to send Paypal donations to botanist1968@gmail.com Donations keep more profiles coming." Title="WARNING" />
 	
          <While Condition="true" >
@@ -71,10 +71,11 @@
 						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="SetHearthstone" MobId="19531" X="4113.013" Y="3066.117" Z="339.4647" />
-							<RunTo X="4122.288" Y="3045.95" Z="339.0876" />
+							<RunTo X="4123.394" Y="2984.207" Z="350.9583" />
+						<CustomBehavior File="Message" Text="Flying back to the The Botanica." LogColor="Lime" />
 						<CustomBehavior File="ForcedMount" MountType="Flying" />								
-						<CustomBehavior File="FlyTo" X="4156.971" Y="2944.005" Z="489.2647" />
-						<CustomBehavior File="MyCTM" X="4060.005" Y="2805.132" Z="597.4164" />
+						<CustomBehavior File="FlyTo" X="4123.394" Y="2984.207" Z="360.5022" />
+						<CustomBehavior File="MyCTM" X="4035.896" Y="2924.724" Z="504.3072" />
 						<CustomBehavior File="MyCTM" X="3392.446" Y="1639.349" Z="353.6405" />
 						<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />
 						<CustomBehavior File="ForcedDismount" />
@@ -166,7 +167,9 @@
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />					
 					<If Condition="Me.ZoneId == 3523" >
-						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor and mailing." LogColor="Lime" />										
+						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor and mailing." LogColor="Lime" />	
+							<RunTo X="4124.52" Y="3040.198" Z="338.1801" />
+							<RunTo X="4095.914" Y="3032.706" Z="336.72" />									
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Dealer Jadyan" Entry="19536" Type="Repair" X="4093.681" Y="3032.828" Z="336.7165" />
@@ -178,11 +181,11 @@
 							</Mailboxes>
 						</SetMailbox>			
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />							
-							<RunTo X="4127.095" Y="3041.461" Z="338.2968" />
+							<RunTo X="4123.394" Y="2984.207" Z="350.9583" />
 						<CustomBehavior File="Message" Text="Flying back to the The Botanica." LogColor="Lime" />
 						<CustomBehavior File="ForcedMount" MountType="Flying" />								
-						<CustomBehavior File="FlyTo" X="4117.656" Y="2999.828" Z="492.1" />
-						<CustomBehavior File="MyCTM" X="4060.005" Y="2805.132" Z="597.4164" />
+						<CustomBehavior File="FlyTo" X="4123.394" Y="2984.207" Z="360.5022" />
+						<CustomBehavior File="MyCTM" X="4035.896" Y="2924.724" Z="504.3072" />
 						<CustomBehavior File="MyCTM" X="3392.446" Y="1639.349" Z="353.6405" />
 						<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />
 						<CustomBehavior File="ForcedDismount" />
