@@ -105,8 +105,10 @@
 						<Hotspot X="-494.8096" Y="-2079.589" Z="4.138973" />
 					</CustomBehavior>						
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="-526.632" Y="-2089.123" Z="2.75382" />
-						<Hotspot X="-537.4949" Y="-2074.481" Z="-1.524548" />
+						<Hotspot X="-493.2433" Y="-2079.95" Z="4.367471" />
+						<Hotspot X="-537.3654" Y="-2077.894" Z="-0.7647384" />
+						<Hotspot X="-533.7443" Y="-2096.437" Z="2.844152" />
+						<Hotspot X="-539.6201" Y="-2094.417" Z="1.832944" />
 					</CustomBehavior>	
 			</While>        
 		
