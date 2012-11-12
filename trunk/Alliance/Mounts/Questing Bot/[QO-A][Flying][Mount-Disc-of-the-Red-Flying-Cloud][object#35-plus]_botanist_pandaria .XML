@@ -67,10 +67,10 @@
 					<CustomBehavior File="MyCTM" X="1873.564" Y="262.3522" Z="515.9251" />					
 					<CustomBehavior File="FlyTo" X="2159.894" Y="182.3377" Z="478.1308" />
 					<CustomBehavior File="ForcedDismount" />
-					<RunTo X="2135.869" Y="177.2965" Z="479.2195" />
+						<RunTo X="2135.869" Y="177.2965" Z="479.2195" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="215783" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="2131.79517" Y="178.322922" Z="479.1393" />
-					<RunTo X="2159.894" Y="182.3377" Z="478.1308" />
+						<RunTo X="2159.894" Y="182.3377" Z="478.1308" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />		
 
