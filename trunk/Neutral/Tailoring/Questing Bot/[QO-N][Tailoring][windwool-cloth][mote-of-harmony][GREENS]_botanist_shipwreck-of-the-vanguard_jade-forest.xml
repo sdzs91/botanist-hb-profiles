@@ -69,19 +69,21 @@
 				</If>
 				
 			 <While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" > 
-					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-530.7186" Y="-2096.845" Z="3.193005" />
 						<Hotspot X="-532.928" Y="-2098.139" Z="3.129783" />
 						<Hotspot X="-523.3669" Y="-2069.486" Z="5.576784" />
 						<Hotspot X="-488.3821" Y="-2075.84" Z="4.214225" />
 					</CustomBehavior>
 						<RunTo X="-488.3821" Y="-2075.84" Z="4.214225" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
-						<Hotspot X="-476.4874" Y="-2024.597" Z="4.898629" />
-						<Hotspot X="-512.6368" Y="-2052.034" Z="0.6971074" />
-						<Hotspot X="-516.8508" Y="-2006.718" Z="2.310907" />
-						<Hotspot X="-515.7543" Y="-1987.254" Z="4.663866" />
+						<Hotspot X="-474.9366" Y="-2022.933" Z="4.655071" />
+						<Hotspot X="-512.3381" Y="-2051.359" Z="0.7199796" />
+						<Hotspot X="-516.5682" Y="-2007.942" Z="2.128942" />
+						<Hotspot X="-536.3716" Y="-2003.645" Z="2.322945" />
+						<Hotspot X="-513.312" Y="-1990.747" Z="4.10236" />
 					</CustomBehavior>
-						<RunTo  X="-515.7543" Y="-1987.254" Z="4.663866" />
+						<RunTo X="-513.312" Y="-1990.747" Z="4.10236" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
 						<Hotspot X="-542.7688" Y="-2006.122" Z="2.332628" />
 						<Hotspot X="-564.1681" Y="-2010.197" Z="2.100606" />
@@ -92,6 +94,7 @@
 						<RunTo X="-570.6558" Y="-1981.463" Z="2.168126" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-517.9626" Y="-2007.909" Z="2.099705" />
+						<Hotspot X="-474.4379" Y="-2026.267" Z="4.640857" />
 						<Hotspot X="-482.1122" Y="-2019.892" Z="4.515737" />
 						<Hotspot X="-471.2749" Y="-2052.822" Z="4.37807" />
 					</CustomBehavior>
@@ -104,14 +107,13 @@
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-526.632" Y="-2089.123" Z="2.75382" />
 						<Hotspot X="-537.4949" Y="-2074.481" Z="-1.524548" />
-					</CustomBehavior>
-						<RunTo X="-532.928" Y="-2098.139" Z="3.129783" />	
+					</CustomBehavior>	
 			</While>        
 		
 		        <If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" > 
 					
 					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Moving to a safe place to hearth." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="-580.7869" Y="-2123.615" Z="1.394473" />
+					<CustomBehavior File="FlyTo" X="-596.7596" Y="-2203.252" Z="33.27237" />
 					<CustomBehavior File="ForcedDismount" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
