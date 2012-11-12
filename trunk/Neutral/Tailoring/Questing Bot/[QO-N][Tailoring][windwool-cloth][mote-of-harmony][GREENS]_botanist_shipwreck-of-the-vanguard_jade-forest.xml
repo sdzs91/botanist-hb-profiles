@@ -101,9 +101,9 @@
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-526.632" Y="-2089.123" Z="2.75382" />
 						<Hotspot X="-537.4949" Y="-2074.481" Z="-1.524548" />
-						<Hotspot X="-549.3403" Y="-2039.837" Z="2.436596" />				
+						<Hotspot X="-541.6172" Y="-2057.364" Z="-1.586661" />			
 					</CustomBehavior>
-						<RunTo  X="-549.3403" Y="-2039.837" Z="2.436596" />	
+						<RunTo  X="-541.6172" Y="-2057.364" Z="-1.586661" />	
 			</While>        
 		
 		        <If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" > 
