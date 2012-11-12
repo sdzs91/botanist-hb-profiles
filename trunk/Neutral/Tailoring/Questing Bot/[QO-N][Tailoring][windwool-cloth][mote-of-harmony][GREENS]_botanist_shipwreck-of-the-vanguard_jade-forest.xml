@@ -57,12 +57,12 @@
 					<CustomBehavior File="FlyTo" X="1596.147" Y="-1797.069" Z="259.9726" />
 					<CustomBehavior File="Message" Text="I've reached Dawns Blossom." LogColor="Lime" />
 					<CustomBehavior File="ForcedDismount" />
-						<RunTo  X="1617.317" Y="-1744.572" Z="263.1204" />
+						<RunTo X="1617.317" Y="-1744.572" Z="263.1204" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="SetHearthstone" MobId="55809"  X="1620.29" Y="-1740.795" Z="263.3519" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<RunTo  X="1596.147" Y="-1797.069" Z="259.9726" />
+						<RunTo X="1596.147" Y="-1797.069" Z="259.9726" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="FlyTo" X="-580.7869" Y="-2123.615" Z="1.394473" />
 					<CustomBehavior File="ForcedDismount" />
@@ -74,7 +74,7 @@
 						<Hotspot X="-523.3669" Y="-2069.486" Z="5.576784" />
 						<Hotspot X="-488.3821" Y="-2075.84" Z="4.214225" />
 					</CustomBehavior>
-						<RunTo  X="-488.3821" Y="-2075.84" Z="4.214225" />
+						<RunTo X="-488.3821" Y="-2075.84" Z="4.214225" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
 						<Hotspot X="-476.4874" Y="-2024.597" Z="4.898629" />
 						<Hotspot X="-512.6368" Y="-2052.034" Z="0.6971074" />
@@ -89,11 +89,14 @@
 						<Hotspot X="-591.631" Y="-2004.302" Z="3.757617" />
 						<Hotspot X="-570.6558" Y="-1981.463" Z="2.168126" />
 					</CustomBehavior>
-						<RunTo  X="-570.6558" Y="-1981.463" Z="2.168126" />
+						<RunTo X="-570.6558" Y="-1981.463" Z="2.168126" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-517.9626" Y="-2007.909" Z="2.099705" />
 						<Hotspot X="-482.1122" Y="-2019.892" Z="4.515737" />
 						<Hotspot X="-471.2749" Y="-2052.822" Z="4.37807" />
+					</CustomBehavior>
+						<RunTo X="-471.2749" Y="-2052.822" Z="4.37807" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-517.1943" Y="-2072.98" Z="1.60302" />
 						<Hotspot X="-494.8096" Y="-2079.589" Z="4.138973" />
 						<Hotspot X="-494.8096" Y="-2079.589" Z="4.138973" />
@@ -102,7 +105,7 @@
 						<Hotspot X="-526.632" Y="-2089.123" Z="2.75382" />
 						<Hotspot X="-537.4949" Y="-2074.481" Z="-1.524548" />
 					</CustomBehavior>
-						<RunTo  X="-532.928" Y="-2098.139" Z="3.129783" />	
+						<RunTo X="-532.928" Y="-2098.139" Z="3.129783" />	
 			</While>        
 		
 		        <If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" > 
