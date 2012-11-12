@@ -45,7 +45,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 		
-		 <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+		 <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="True" />
 		 
 		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
 						Text="This profle will farm the Wreck of the Vanguard area in Jade forest for Motes of Harmony and Windwoll Cloth. The profile will auto set your hearthstone at Dawn's Blossom in Jade Forest. Incluse repair and mail. Start the profile anywhere in Pandaria." Title="WARNING" />
@@ -76,7 +76,7 @@
 						<Hotspot X="-488.3821" Y="-2075.84" Z="4.214225" />
 						<Hotspot X="-498.2255" Y="-2063.276" Z="3.070229" />
 					</CustomBehavior>
-						<RunTo X="-488.3821" Y="-2075.84" Z="4.214225" />
+
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
 						<Hotspot X="-474.9366" Y="-2022.933" Z="4.655071" />
 						<Hotspot X="-512.3381" Y="-2051.359" Z="0.7199796" />
@@ -84,7 +84,7 @@
 						<Hotspot X="-536.3716" Y="-2003.645" Z="2.322945" />
 						<Hotspot X="-513.312" Y="-1990.747" Z="4.10236" />
 					</CustomBehavior>
-						<RunTo X="-513.312" Y="-1990.747" Z="4.10236" />
+
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
 						<Hotspot X="-542.7688" Y="-2006.122" Z="2.332628" />
 						<Hotspot X="-564.1681" Y="-2010.197" Z="2.100606" />
@@ -92,19 +92,20 @@
 						<Hotspot X="-591.631" Y="-2004.302" Z="3.757617" />
 						<Hotspot X="-570.6558" Y="-1981.463" Z="2.168126" />
 					</CustomBehavior>
-						<RunTo X="-570.6558" Y="-1981.463" Z="2.168126" />
+
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-517.9626" Y="-2007.909" Z="2.099705" />
 						<Hotspot X="-474.4379" Y="-2026.267" Z="4.640857" />
 						<Hotspot X="-482.1122" Y="-2019.892" Z="4.515737" />
 						<Hotspot X="-471.2749" Y="-2052.822" Z="4.37807" />
 					</CustomBehavior>
-						<RunTo X="-471.2749" Y="-2052.822" Z="4.37807" />
+
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-517.1943" Y="-2072.98" Z="1.60302" />
 						<Hotspot X="-494.8096" Y="-2079.589" Z="4.138973" />
 						<Hotspot X="-494.8096" Y="-2079.589" Z="4.138973" />
-					</CustomBehavior>						
+					</CustomBehavior>
+					
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-493.2433" Y="-2079.95" Z="4.367471" />
 						<Hotspot X="-537.3654" Y="-2077.894" Z="-0.7647384" />
