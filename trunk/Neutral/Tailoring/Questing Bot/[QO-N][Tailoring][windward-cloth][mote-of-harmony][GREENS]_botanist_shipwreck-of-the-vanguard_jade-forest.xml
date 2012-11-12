@@ -1,0 +1,143 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][Tailoring][windward-cloth][mote-of-harmony][GREENS]_botanist_shipwreck-of-the-vanguard_jade-forest</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>14,16,2156</Factions>
+	
+	<ProtectedItems>
+	<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+		 
+		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This profle will farm the Wreck of the Vanguard area in Jade forest for Motes of Harmony and Windwoll Cloth. The profile will auto set your hearthstone at Dawn's Blossom in Jade Forest. Incluse repair and mail. Start the profile anywhere in Pandaria." Title="WARNING" />
+	
+		<While Condition="true" >
+		
+				<If Condition="Me.MapId == 870" >
+					<CustomBehavior File="Message" Text="I am in Pandaria. Flying to Dawns Blossom." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="1596.147" Y="-1797.069" Z="259.9726" />
+					<CustomBehavior File="Message" Text="I've reached Dawns Blossom." LogColor="Lime" />
+					<CustomBehavior File="ForcedDismount" />
+						<RunTo  X="1617.317" Y="-1744.572" Z="263.1204" />
+					<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="SetHearthstone" MobId="55809"  X="1620.29" Y="-1740.795" Z="263.3519" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<RunTo  X="1596.147" Y="-1797.069" Z="259.9726" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="FlyTo" X="-580.7869" Y="-2123.615" Z="1.394473" />
+					<CustomBehavior File="ForcedDismount" />
+				</If>
+				
+			 <While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" > 
+
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-555.4863" Y="-2107.704" Z="1.441501" />
+						<Hotspot X="-533.9221" Y="-2095.366" Z="2.752152" />
+						<Hotspot X="-527.3692" Y="-2070.459" Z="3.357847" />
+						<Hotspot X="-489.9641" Y="-2075.683" Z="4.057713" />
+					</CustomBehavior>
+						<RunTo  X="-489.9641" Y="-2075.683" Z="4.057713" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-474.8445" Y="-2023.168" Z="4.657523" />
+						<Hotspot X="-510.8903" Y="-2049.206" Z="0.842253" />
+						<Hotspot X="-514.5848" Y="-2026.91" Z="1.443304" />
+						<Hotspot X="-516.6345" Y="-1984.453" Z="5.072057" />
+					</CustomBehavior>
+						<RunTo  X="-516.6345" Y="-1984.453" Z="5.072057" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-563.3649" Y="-2014.493" Z="0.6627366" />
+						<Hotspot X="-580.6666" Y="-2007.514" Z="7.73323" />
+						<Hotspot X="-572.0258" Y="-1982.063" Z="2.116826" />
+					</CustomBehavior>
+						<RunTo  X="-572.0258" Y="-1982.063" Z="2.116826" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-580.6666" Y="-2007.514" Z="7.73323" />
+						<Hotspot X="-563.3649" Y="-2014.493" Z="0.6627366" />
+						<Hotspot X="-516.6345" Y="-1984.453" Z="5.072057" />
+					</CustomBehavior>						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-514.5848" Y="-2026.91" Z="1.443304" />
+						<Hotspot X="-510.8903" Y="-2049.206" Z="0.842253" />
+						<Hotspot X="-474.8445" Y="-2023.168" Z="4.657523" />				
+					</CustomBehavior>
+						<RunTo  X="-474.8445" Y="-2023.168" Z="4.657523" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-489.9641" Y="-2075.683" Z="4.057713" />
+						<Hotspot X="-527.3692" Y="-2070.459" Z="3.357847" />
+						<Hotspot X="-533.9221" Y="-2095.366" Z="2.752152" />					
+					</CustomBehavior>
+						<RunTo  X="-533.9221" Y="-2095.366" Z="2.752152" />	
+			</While>        
+		
+		        <If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" > 
+					
+					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Moving to a safe place to hearth." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-580.7869" Y="-2123.615" Z="1.394473" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />
+						<RunTo X="1527.293" Y="-1804.106" Z="246.1985" />
+						
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Singegruff" Entry="56705" Type="Repair" X="1528.802" Y="-1806.385" Z="246.2001" />
+						</Vendors>
+					</SetVendor>
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="-9428.854" Y="-968.5951" Z="111.0117" />
+						</Mailboxes>
+					</SetMailbox>
+			
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+				</If>
+
+		</While> 
+		
+	
+	</QuestOrder>
+
+
+</HBProfile>
+
