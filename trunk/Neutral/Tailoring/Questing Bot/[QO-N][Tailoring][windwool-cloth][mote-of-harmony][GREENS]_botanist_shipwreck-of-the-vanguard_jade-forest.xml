@@ -70,42 +70,40 @@
 			 <While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" > 
 
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
-						<Hotspot X="-533.9221" Y="-2095.366" Z="2.752152" />
-						<Hotspot X="-527.3692" Y="-2070.459" Z="3.357847" />
-						<Hotspot X="-489.9641" Y="-2075.683" Z="4.057713" />
+						<Hotspot X="-532.928" Y="-2098.139" Z="3.129783" />
+						<Hotspot X="-523.3669" Y="-2069.486" Z="5.576784" />
+						<Hotspot X="-488.3821" Y="-2075.84" Z="4.214225" />
 					</CustomBehavior>
-						<RunTo  X="-489.9641" Y="-2075.683" Z="4.057713" />
+						<RunTo  X="-488.3821" Y="-2075.84" Z="4.214225" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
-						<Hotspot X="-474.8445" Y="-2023.168" Z="4.657523" />
-						<Hotspot X="-510.8903" Y="-2049.206" Z="0.842253" />
-						<Hotspot X="-514.5848" Y="-2026.91" Z="1.443304" />
-						<Hotspot X="-516.6345" Y="-1984.453" Z="5.072057" />
+						<Hotspot X="-476.4874" Y="-2024.597" Z="4.898629" />
+						<Hotspot X="-512.6368" Y="-2052.034" Z="0.6971074" />
+						<Hotspot X="-516.8508" Y="-2006.718" Z="2.310907" />
+						<Hotspot X="-515.7543" Y="-1987.254" Z="4.663866" />
 					</CustomBehavior>
-						<RunTo  X="-516.6345" Y="-1984.453" Z="5.072057" />
+						<RunTo  X="-515.7543" Y="-1987.254" Z="4.663866" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
-						<Hotspot X="-563.3649" Y="-2014.493" Z="0.6627366" />
-						<Hotspot X="-580.6666" Y="-2007.514" Z="7.73323" />
-						<Hotspot X="-572.0258" Y="-1982.063" Z="2.116826" />
+						<Hotspot X="-542.7688" Y="-2006.122" Z="2.332628" />
+						<Hotspot X="-564.1681" Y="-2010.197" Z="2.100606" />
+						<Hotspot X="-578.822" Y="-2006.802" Z="7.485023" />
+						<Hotspot X="-591.631" Y="-2004.302" Z="3.757617" />
+						<Hotspot X="-570.6558" Y="-1981.463" Z="2.168126" />
 					</CustomBehavior>
-						<RunTo  X="-572.0258" Y="-1982.063" Z="2.116826" />
+						<RunTo  X="-570.6558" Y="-1981.463" Z="2.168126" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="-590.3008" Y="-2004.265" Z="3.905131" />
-						<Hotspot X="-580.6666" Y="-2007.514" Z="7.73323" />
-						<Hotspot X="-563.3649" Y="-2014.493" Z="0.6627366" />
+						<Hotspot X="-517.9626" Y="-2007.909" Z="2.099705" />
+						<Hotspot X="-482.1122" Y="-2019.892" Z="4.515737" />
+						<Hotspot X="-471.2749" Y="-2052.822" Z="4.37807" />
+						<Hotspot X="-517.1943" Y="-2072.98" Z="1.60302" />
+						<Hotspot X="-494.8096" Y="-2079.589" Z="4.138973" />
+						<Hotspot X="-494.8096" Y="-2079.589" Z="4.138973" />
 					</CustomBehavior>						
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="-516.6345" Y="-1984.453" Z="5.072057" />					
-						<Hotspot X="-514.5848" Y="-2026.91" Z="1.443304" />
-						<Hotspot X="-510.8903" Y="-2049.206" Z="0.842253" />
-						<Hotspot X="-474.8445" Y="-2023.168" Z="4.657523" />				
+						<Hotspot X="-526.632" Y="-2089.123" Z="2.75382" />
+						<Hotspot X="-537.4949" Y="-2074.481" Z="-1.524548" />
+						<Hotspot X="-549.3403" Y="-2039.837" Z="2.436596" />				
 					</CustomBehavior>
-						<RunTo  X="-474.8445" Y="-2023.168" Z="4.657523" />
-					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
-						<Hotspot X="-489.9641" Y="-2075.683" Z="4.057713" />
-						<Hotspot X="-527.3692" Y="-2070.459" Z="3.357847" />
-						<Hotspot X="-533.9221" Y="-2095.366" Z="2.752152" />					
-					</CustomBehavior>
-						<RunTo  X="-533.9221" Y="-2095.366" Z="2.752152" />	
+						<RunTo  X="-549.3403" Y="-2039.837" Z="2.436596" />	
 			</While>        
 		
 		        <If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" > 
