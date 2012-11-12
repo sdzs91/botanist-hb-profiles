@@ -93,7 +93,8 @@
 					<CustomBehavior File="Message" Text="I am resetting The Botanica." LogColor="Lime" />		
 					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
 					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" />
-					<CustomBehavior File="Message" Text="I have reset The Botanica." LogColor="Lime" />										
+					<CustomBehavior File="Message" Text="I have reset The Botanica." LogColor="Lime" />
+					 <RunTo X="3409.85" Y="1486.26" Z="182.837" />
 					<CustomBehavior File="MyCTM" X="3417.463" Y="1479.23" Z="182.837" /> 
 					<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
