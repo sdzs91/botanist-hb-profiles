@@ -160,7 +160,7 @@
 						<Hotspot X="4968.359" Y="2241.644" Z="638.8665" />
 					</CustomBehavior>
 					<RunTo X="4913.471" Y="2207.761" Z="638.7343" />
-					<CustomBehavior File="MyCTM" X="4925.383" Y="2170.461" Z="638.733" />
+					<CustomBehavior File="GoThruPortal" X="4925.383" Y="2170.461" Z="638.733" />
 					<CustomBehavior File="WaitTimer" WaitTime="10000" />
 					<RunTo  X="5667.65" Y="2007.45" Z="798.041" />
 				</If>
