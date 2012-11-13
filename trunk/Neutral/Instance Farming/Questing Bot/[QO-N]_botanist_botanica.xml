@@ -72,8 +72,7 @@
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="SetHearthstone" MobId="19531" X="4113.013" Y="3066.117" Z="339.4647" />
 							<RunTo X="4123.394" Y="2984.207" Z="350.9583" />
-						<CustomBehavior File="Message" Text="Flying back to the The Botanica." LogColor="Lime" />
-						<CustomBehavior File="ForcedMount" MountType="Flying" />								
+						<CustomBehavior File="Message" Text="Flying back to the The Botanica." LogColor="Lime" />							
 						<CustomBehavior File="FlyTo" X="4123.394" Y="2984.207" Z="360.5022" />
 						<CustomBehavior File="MyCTM" X="4035.896" Y="2924.724" Z="504.3072" />
 						<CustomBehavior File="MyCTM" X="3392.446" Y="1639.349" Z="353.6405" />
