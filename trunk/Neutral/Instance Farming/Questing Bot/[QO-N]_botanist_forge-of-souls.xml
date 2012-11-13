@@ -99,8 +99,8 @@
 					<CustomBehavior File="Message" Text="I have reset the Forge of Souls." LogColor="Lime" />
 					<RunTo X="5669.279" Y="2005.885" Z="798.0413" />
 					<CustomBehavior File="Message" Text="Opening the gate so I may enter the Forge of Souls." LogColor="Lime" />
-					<CustomBehavior File="InteractWith" MobId="201759" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5672.1123" Y="2002.12964" Z="797.3859" />
-					<CustomBehavior File="GoThruPortal" X="5677.698" Y="1996.725" Z="798.0425" /> 
+					<CustomBehavior File="InteractWith" MobId="201759" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="5672.1123" Y="2002.12964" Z="797.3859" />
+					<CustomBehavior File="MyCTM" X="5677.698" Y="1996.725" Z="798.0425" /> 
 					<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
 					<CustomBehavior File="Message" Text="Sorting my bags.......making them sexy :D  !!!" LogColor="Lime" />
