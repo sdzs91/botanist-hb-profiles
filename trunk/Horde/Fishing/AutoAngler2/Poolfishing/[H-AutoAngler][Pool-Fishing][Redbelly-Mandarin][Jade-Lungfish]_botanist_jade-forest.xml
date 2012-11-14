@@ -33,11 +33,11 @@
 	</Blackspots>
 
 	<Mailboxes>
-		<Mailbox X="1651.078" Y="935.8311" Z="470.9403" />
+		<Mailbox X="1605.956" Y="-1793.005" Z="260.1776" />
 	</Mailboxes>
  
 	<Vendors>
-		<Vendor Name="Joan Tremblay" Entry="64114" Type="Repair" X="1700.556" Y="919.2535" Z="470.9462" />
+		<Vendor Name="Singegruff" Entry="56705" Type="Repair" X="1528.802" Y="-1806.385" Z="246.2002" />
 	</Vendors>
 
 	<Factions></Factions>
