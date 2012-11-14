@@ -100,7 +100,7 @@
 					</CustomBehavior>
 
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="-471.2749" Y="-2052.822" Z="4.37807" />
+						<Hotspot X="-474.9883" Y="-2027.721" Z="4.569475" />
 						<Hotspot X="-517.1943" Y="-2072.98" Z="1.60302" />
 						<Hotspot X="-494.8096" Y="-2079.589" Z="4.138973" />
 					</CustomBehavior>
