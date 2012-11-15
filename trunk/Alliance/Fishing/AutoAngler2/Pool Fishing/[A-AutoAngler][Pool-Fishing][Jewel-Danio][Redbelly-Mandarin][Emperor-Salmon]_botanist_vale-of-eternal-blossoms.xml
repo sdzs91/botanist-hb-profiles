@@ -22,9 +22,12 @@
 	<TargetElites>True</TargetElites>
 	
 	<AvoidMobs>
+	<Mob Name="Shadowmaster Sydow" Entry="63240" />
+	 
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="1138.294" Y="1448.345" Z="342.9453" Radius="30" />
 		<Blackspot X="1172.958" Y="335.4991" Z="434.2923" Radius="20" />
 		<Blackspot X="1452.185" Y="616.9977" Z="403.3035" Radius="30" />
 		<Blackspot X="801.3157" Y="-2020.946" Z="59.14861" Radius="45" />
