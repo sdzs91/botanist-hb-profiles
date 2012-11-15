@@ -4,8 +4,8 @@
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
    
-	<MinDurability>0.1</MinDurability>
-	<MinFreeBagSlots>1</MinFreeBagSlots>
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
 	
 	<MailGrey>False</MailGrey>
 	<MailWhite>False</MailWhite>
@@ -30,7 +30,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
-
+		<Blackspot X="351.9265" Y="-4747.049" Z="12.24206" Radius="10" />
 	</Blackspots>
 
 	<Mailboxes></Mailboxes>
@@ -46,7 +46,7 @@
 	<QuestOrder>
 	
 				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 
-						Text="This WILL BE a 1-90 fully afkable leveling profile. This profile currently levels characters 1-12. Levels 1-6 start the profile in Valley of Trials in Durator. (Includes the opening quest line for Mount Hyjal and Pandaria and opening the gate leading into Vale of the Eternal Blossom). Pangaea consist of 11 profiles which will automatically interchange as called. The user will be resposible for insuring that the toon has proper gear for it's current level. BOA's will make a tremendous difference in the leveling time. The profile will control all settings except food and water (you won't be able to change the user settings). Those two things as well as gear will be user controled and the users resposibility. The profile will train the following riding skills, WHICH IT REQUIRES to run, ( Apprentice Riding [5g] + Journeyman Riding [50g] + Expert Riding [250g] + Flight Master's License [250g] + Cold Weather Flying [250g] ) Your character will loot most if not all the gold it will need, but keep an eye on it or add gold when you start the profile. The profile assumes you already have account bound mounts and will not purchase any new mounts. If this is your first character on the account, you will need to purchase mounts at the appropriate levels. Updates will only be offered via svn at http://botanist-hb-profiles.googlecode.com/svn/trunk/." Title="WARNING" />
+						Text="This WILL BE a 1-90 fully afkable leveling profile. This profile currently levels characters 1-12. Levels 1-6 start the profile in Valley of Trials in Durotor. (Includes the opening quest line for Mount Hyjal and Pandaria and opening the gate leading into Vale of the Eternal Blossom). Pangaea consist of 11 profiles which will automatically interchange as called. The user will be resposible for insuring that the toon has proper gear for it's current level. BOA's will make a tremendous difference in the leveling time. The profile will control all settings except food and water (you won't be able to change the user settings). Those two things as well as gear will be user controled and the users resposibility. The profile will train the following riding skills, WHICH IT REQUIRES to run, ( Apprentice Riding [5g] + Journeyman Riding [50g] + Expert Riding [250g] + Flight Master's License [250g] + Cold Weather Flying [250g] ) Your character will loot most if not all the gold it will need, but keep an eye on it or add gold when you start the profile. The profile assumes you already have account bound mounts and will not purchase any new mounts. If this is your first character on the account, you will need to purchase mounts at the appropriate levels. Updates will only be offered via svn at http://botanist-hb-profiles.googlecode.com/svn/trunk/." Title="WARNING" />
 		
 				<If Condition="Me.Level &gt;= 12" >			
 					<CustomBehavior File="LoadProfile" ProfileName="Natives\[QO-A-2][Seminole]_botanist_pangaea" />
@@ -59,7 +59,7 @@
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="I am in the  1 to 3 bracket." LogColor="Lime" />
 		
-				<CustomBehavior File="Message" Text="Position check, Valley of Trials" LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Position check, Valley of Trials in Durotar" LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<If Condition="Me.X &gt; -790.7588 &amp;&amp; Me.X &lt; -151.7464 &amp;&amp; Me.Y &gt; -4595.388 &amp;&amp; Me.Y &lt; -4090.012" > 
 						<CustomBehavior File="Message" Text="I'm in Valley of Trials. Moving to the first farming location." LogColor="Lime" />					
@@ -106,7 +106,7 @@
 				
 		<While Condition="Me.Level &gt;= 3 &amp;&amp; Me.Level &lt;= 5" >
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Valley of Trials." LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Position check, Valley of Trials in Durotar." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<If Condition="Me.X &gt; -790.7588 &amp;&amp; Me.X &lt; -151.7464 &amp;&amp; Me.Y &gt; -4595.388 &amp;&amp; Me.Y &lt; -4090.012" > 
 						<CustomBehavior File="Message" Text="I'm in Valley of Trials. Moving to the new farming location.." LogColor="Lime" />
@@ -156,7 +156,7 @@
 			
 		<While Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt;= 7" >		
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Razor Hill in Durator" LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Position check, Razor Hill in Durotar" LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Razor Hill." LogColor="Lime" />														
 					<RunTo X="338.7665" Y="-4687.898" Z="16.48967" />
@@ -216,7 +216,7 @@
 
 		<While Condition="Me.Level &gt;= 8 &amp;&amp; Me.Level &lt;= 10" >		
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Razor Hill in Durator" LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Position check, Razor Hill in Durotar" LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Razor Hill." LogColor="Lime" />														
 					<RunTo X="338.7665" Y="-4687.898" Z="16.48967" />
@@ -251,6 +251,10 @@
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="Moving to a safe place to use my hearthstone." LogColor="Lime" />
+							<RunTo X="1102.736" Y="-4946.589" Z="15.60144" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />	
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
@@ -277,7 +281,7 @@
 
 		<While Condition="Me.Level &gt;= 11 &amp;&amp; Me.Level &lt; 12" >		
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Razor Hill in Durator" LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Position check, Razor Hill in Durotar" LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Razor Hill." LogColor="Lime" />														
 					<RunTo X="338.7665" Y="-4687.898" Z="16.48967" />
