@@ -35,7 +35,9 @@
 
 	<Mailboxes></Mailboxes>
  
-	<Vendors></Vendors>
+	<Vendors>
+		<Vendor Name="Innkeeper Grosk" Entry="6928" Type="Food" X="340.3629" Y="-4686.287" Z="16.48972" />
+	</Vendors>
 
 	<Factions></Factions>
 	
