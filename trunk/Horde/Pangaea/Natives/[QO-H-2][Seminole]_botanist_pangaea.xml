@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-2][Seminole]_botanist_pangaea</Name>
+	<Name>[QO-H-2][Seminole]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -31,13 +31,15 @@
 
 	<Mailboxes></Mailboxes>
  
-	<Vendors></Vendors>
+	<Vendors>
+		<Vendor Name="Innkeeper Boorand Plainswind" Entry="3934" Type="Food" X="-407.1227" Y="-2645.225" Z="96.22307" />
+	</Vendors>
 	
 	<ProtectedItems></ProtectedItems>
 		
 	<QuestOrder>
 	
-				<If Condition="Me.Level &gt;= 12" > 
+				<If Condition="Me.Level &gt;= 14" > 
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Levels 12-90 haven't been scripted yet. I am stopping the bot" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -51,32 +53,42 @@
 				</If>
 
 		<While Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >
+		
+				<If Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >				
+					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am in the 12 to 14 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 			
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Sentinel Hill in Westfall." LogColor="Lime" />  
+				<CustomBehavior File="Message" Text="Position check, The Crossroads in Northern Barrens." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Sentinel Hill in Westfall." LogColor="Lime" />														
-					<RunTo X="-10650.82" Y="1165.563" Z="34.51858" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at The Crossroads." LogColor="Lime" />														
+					<RunTo X="-411.9601" Y="-2645.91" Z="96.22313" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-				<CustomBehavior File="SetHearthstone" MobId="8931"  X="-10653.28" Y="1166.431" Z="34.50514" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="SetHearthstone" MobId="3934"  X="-407.1227" Y="-2645.225" Z="96.22307" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-10068.68" Y="932.5858" Z="35.1198" />
+					<RunTo X="-468.7146" Y="-2860.216" Z="92.12209" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 14." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>189,14,38,20,73</Factions>
+							<Factions>189,16,48,130</Factions>
 								<Hotspots>
-									<Hotspot X="-10068.68" Y="932.5858" Z="35.1198" />
-									 <Hotspot X="-10201.4" Y="1017.193" Z="36.52847" />
-									 <Hotspot X="-9923.991" Y="1222.103" Z="42.37767" />
-									 <Hotspot X="-9903.853" Y="1655.223" Z="32.74086" />
-									 <Hotspot X="-10028.72" Y="1541.581" Z="43.26708" />
-									 <Hotspot X="-10070.36" Y="1325.623" Z="45.27948" />
-									 <Hotspot X="-10157.1" Y="1115.275" Z="37.01828" />
+									<Hotspot X="-468.7146" Y="-2860.216" Z="92.12209" />
+									<Hotspot X="-631.54" Y="-3061.821" Z="93.98103" />
+									<Hotspot X="-675.8709" Y="-3155.591" Z="91.96278" />
+									<Hotspot X="-904.6843" Y="-3278.224" Z="92.42561" />
+									<Hotspot X="-1069.698" Y="-3088.423" Z="95.106" />
+									<Hotspot X="-1080.709" Y="-2889.221" Z="91.72631" />
+									<Hotspot X="-1011.187" Y="-2727.623" Z="93.38665" />
+									<Hotspot X="-898.9561" Y="-2609.681" Z="91.66737" />
+									<Hotspot X="-811.0004" Y="-2489.765" Z="92.38117" />
+									<Hotspot X="-736.1958" Y="-2687.921" Z="91.99149" />
+									<Hotspot X="-638.1968" Y="-2750.392" Z="94.50246" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level &gt;= 14)" GoalText="Farming" />
@@ -90,18 +102,25 @@
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="William MacGregor" Entry="1668" Type="Repair" X="-10653.31" Y="996.5868" Z="32.87424" />
+								<Vendor Name="Halija Whitestrider" Entry="3486" Type="Repair" X="-539.8406" Y="-2672.23" Z="95.78741" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-10641.61" Y="1156.384" Z="33.32554" />
+								<Mailbox X="-446.5757" Y="-2649.36" Z="95.7204" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
 					
-		</While>				
+		</While>
+
+				<If Condition="Me.Level &gt;= 14" > 
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Levels 14-90 haven't been scripted yet. I am stopping the bot" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+				</If>
 				
 				<If Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 17" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
