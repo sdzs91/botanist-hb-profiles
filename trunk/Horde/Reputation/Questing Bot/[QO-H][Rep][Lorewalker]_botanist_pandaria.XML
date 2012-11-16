@@ -491,6 +491,14 @@
 						<RunTo X="3030.792" Y="1990.487" Z="645.3058" />
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					
+					<CustomBehavior File="Message" Text="Flying to object 45 of 45, Yaungol Tactics." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="2312.269" Y="1692.898" Z="507.2332" />
+					<CustomBehavior File="ForcedDismount" />			
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="213417" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="2310.79175" Y="1686.4115" Z="506.116364" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
 
 											<!-- faction change -->
 					<CustomBehavior File="Message" Text="I have collected all the objects. Flying to the mailbox to pick up the quest" LogColor="Lime" />
