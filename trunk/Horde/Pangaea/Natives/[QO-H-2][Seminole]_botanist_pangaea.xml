@@ -41,7 +41,7 @@
 	
 				<If Condition="Me.Level &gt;= 14" > 
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="Levels 12-90 haven't been scripted yet. I am stopping the bot" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Levels 14-90 haven't been scripted yet. I am stopping the bot" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="UserSettings" StopBot="true" />
 				</If>
@@ -49,10 +49,12 @@
 			
 				<If Condition="Me.Level &gt;= 58" > 
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-3][Cherokee]_botanist_pangaea" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-H-3][Cherokee]_botanist_pangaea" />
 				</If>
 
 		<While Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >
+					
+					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="60" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
 		
 				<If Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
@@ -60,18 +62,18 @@
 					<CustomBehavior File="Message" Text="I am in the 12 to 14 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 			
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, The Crossroads in Northern Barrens." LogColor="Lime" />  
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at The Crossroads." LogColor="Lime" />														
-					<RunTo X="-411.9601" Y="-2645.91" Z="96.22313" />
-				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
-				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="SetHearthstone" MobId="3934"  X="-407.1227" Y="-2645.225" Z="96.22307" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-468.7146" Y="-2860.216" Z="92.12209" />
+					<CustomBehavior File="Message" Text="Position check, The Crossroads in Northern Barrens." LogColor="Lime" />  
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Moving to the innkeep at The Crossroads." LogColor="Lime" />														
+						<RunTo X="-411.9601" Y="-2645.91" Z="96.22313" />
+					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="SetHearthstone" MobId="3934"  X="-407.1227" Y="-2645.225" Z="96.22307" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
+						<RunTo X="-468.7146" Y="-2860.216" Z="92.12209" />
+				</If>	
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 14." LogColor="Lime" />				
@@ -122,14 +124,14 @@
 					<CustomBehavior File="UserSettings" StopBot="true" />
 				</If>
 				
-				<If Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 17" >				
+				<If Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 15" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the 14 to 17 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 14 to 16 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 			
-		<While Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 17" >	
+		<While Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 16" >	
 	
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Sentinel Hill in Westfall." LogColor="Lime" />
@@ -1519,7 +1521,7 @@
 			     				 
 				<If Condition="Me.Level &gt;= 58" > 
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-3][Cherokee]_botanist_pangaea" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-H-3][Cherokee]_botanist_pangaea" />
 				</If>
 				
 	</QuestOrder >			
