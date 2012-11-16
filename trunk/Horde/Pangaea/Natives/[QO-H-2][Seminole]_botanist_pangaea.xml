@@ -142,7 +142,7 @@
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 16." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>189,73,14</Factions>
+							<Factions>189,73,14,16</Factions>
 								<Hotspots>
 									<Hotspot X="-6.376197" Y="-1575.942" Z="96.61546" />
 									<Hotspot X="4.763151" Y="-1449.346" Z="95.52138" />
