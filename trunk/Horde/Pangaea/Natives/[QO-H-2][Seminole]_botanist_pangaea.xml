@@ -33,6 +33,7 @@
  
 	<Vendors>
 		<Vendor Name="Innkeeper Boorand Plainswind" Entry="3934" Type="Food" X="-407.1227" Y="-2645.225" Z="96.22307" />
+
 	</Vendors>
 	
 	<ProtectedItems></ProtectedItems>
