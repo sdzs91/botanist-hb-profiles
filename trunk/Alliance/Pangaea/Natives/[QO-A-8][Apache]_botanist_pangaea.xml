@@ -22,6 +22,12 @@
 <TargetElites>True</TargetElites>
 
 <AvoidMobs>
+	<Mob Name="Malayan Quillrat" Entry="64784" />
+	<Mob Name="Longfang Cub" Entry="58891" />
+	<Mob Name="Longfang Den-Mother" Entry="58890" />
+	<Mob Name="Longfang Patriarch" Entry="58889" />
+	<Mob Name="Marsh Fiddler" Entry="64786" />
+	<Mob Name="Bandicoon" Entry="63062" />
 	<Mob Name="Plainshawk" Entry="58910" />
 	<Mob Name="Waste Scavenger" Entry="66194" />
 	<Mob Name="Slingtail Fishripper" Entry="55195" />
@@ -44,6 +50,8 @@
 </AvoidMobs>
 
 <Blackspots>
+	<Blackspot X="-735.3983" Y="2156.017" Z="113.0787" Radius="45" />
+	<Blackspot X="-283.666" Y="702.1057" Z="158.3632" Radius="45" />
 	<Blackspot X="219.0633" Y="-17.66842" Z="164.284" Radius="45" />
 	<Blackspot X="374.5782" Y="3430.849" Z="221.1782" Radius="20" />
 	<Blackspot X="-95.53642" Y="-301.9591" Z="144.8068" Radius="25" />
@@ -219,61 +227,43 @@
 				
 				<If Condition="Me.MapId == 870" >
 					<If Condition="Me.ZoneId != 5805" >
-						<CustomBehavior File="Message" Text="I am not where I should be. Moving to Halfhill in Valley of the Four Winds." LogColor="Lime" />
+						<CustomBehavior File="Message" Text="I am not where I should be. Moving to Stoneplow in Valley of the Four Winds." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-							<RunTo X="-226.3131" Y="514.6094" Z="190.9428" />
-						<CustomBehavior File="Message" Text="I have reached HalfHill. " LogColor="Lime" />
+							<RunTo X="-367.7149" Y="1903.293" Z="142.782" />
+						<CustomBehavior File="Message" Text="I have reached Stoneplow. " LogColor="Lime" />
 					</If>	
 				</If>	
-		
-				<If Condition="Me.ZoneId == 5805" >
-					<If Condition="Me.X &lt; -317.1932 || Me.X &gt; -42.4191 || Me.Y &lt; 384.9974 || Me.Y &gt; 672.6077" >
-						<CustomBehavior File="Message" Text="Position check Halfhill in Valley of the Four Winds" LogColor="Lime" />							
-						<CustomBehavior File="Message" Text="I am in Valley of the Four Winds, moving to Halfhill." LogColor="Lime" />
-							<RunTo X="-195.414" Y="409.0086" Z="165.5139" DestName="HalfHill" />
-							<RunTo X="-204.9184" Y="495.6101" Z="187.1923" DestName="HalfHill" />
-							<RunTo X="-226.3131" Y="514.6094" Z="190.9428" DestName="Innkeeper" />
-						<CustomBehavior File="Message" Text="I have reached HalfHill. " LogColor="Lime" />						
-					</If>
-				</If>
-						
-										
-				<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+												
+				<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="40" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 					
-                                             <!-- halfhill  -->
-				<CustomBehavior File="Message" Text="Position check #4" LogColor="Lime" />			  
+                                             <!-- stoneplow  -->			  
 			    <If Condition="Me.ZoneId == 5805" >
-					<If Condition="Me.X &gt; -317.1932 &amp;&amp; Me.X &lt; -42.4191 &amp;&amp; Me.Y &gt; 384.9974 &amp;&amp; Me.Y &lt; 672.6077" >
-					<CustomBehavior File="Message" Text="Position check Halfhill in Valley of the Four Winds" LogColor="Lime" />							
-					<CustomBehavior File="Message" Text="I am in Halfhill." LogColor="Lime" />
-						<RunTo X="-226.7411" Y="513.8851" Z="190.9431" />
+					<CustomBehavior File="Message" Text="Position check Stoneplow in Valley of the Four Winds" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am moving to the innkeep in Stoneplaw." LogColor="Lime" />
+						<RunTo X="-367.7149" Y="1903.293" Z="142.782" />
 					<CustomBehavior File="Message" Text="I have located the innkeep." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="SetHearthstone" MobId="59582"  X="-226.3131" Y="514.6094" Z="190.9428" />
+					<CustomBehavior File="SetHearthstone" MobId="62878" X="-365.9896" Y="1905.672" Z="142.8073" />
 					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
-					<RunTo X="-201.9071" Y="496.0877" Z="187.1821" />
+						<RunTo X="-405.9331" Y="1905.617" Z="130.7406" />
 					<CustomBehavior File="ForcedMount" MountType="Ground" />					
-						<RunTo X="-488.3603" Y="1883.277" Z="136.052" />						
+						<RunTo X="-642.9532" Y="2101.67" Z="122.2971" />						
 					<CustomBehavior File="ForcedDismount" />
-					</If>
 				</If>	
 
 				<CustomBehavior File="Message" Text="Position check #5" LogColor="Lime" />				
 				<If Condition="Me.ZoneId == 5805" >
-					<If Condition="Me.X &gt; -600 &amp;&amp; Me.X &lt; -400 &amp;&amp; Me.Y &gt; 1750 &amp;&amp; Me.Y &lt; 2000" >
+					<If Condition="Me.X &gt; -800 &amp;&amp; Me.X &lt; -400 &amp;&amp; Me.Y &gt; 2050 &amp;&amp; Me.Y &lt; 2200" >
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
 						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 						<CustomBehavior File="RunMacro" Macro="/sort bags" />
 							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 								<SetGrindArea><GrindArea>
-								<Factions>2136,1711,31</Factions>
+								<Factions>2136,1711,31.16</Factions>
 									<Hotspots>
-										<Hotspot X="-488.3603" Y="1883.277" Z="136.052" />
-										<Hotspot X="-614.5988" Y="1758.796" Z="148.5799" />
-										<Hotspot X="-741.25" Y="1907.064" Z="148.6365" />
-										<Hotspot X="-593.7509" Y="2077.136" Z="122.8228" />
 										<Hotspot X="-642.9532" Y="2101.67" Z="122.2971" />
 										<Hotspot X="-766.9165" Y="2182.763" Z="110.7894" />
 										<Hotspot X="-1003.966" Y="2138.319" Z="97.75099" />
@@ -298,7 +288,7 @@
 						
 					<SetVendor>
 						<Vendors>
-							<Vendor Name="Trader Jambeezi" Entry="59583" Type="Repair" X="-208.7705" Y="494.7552" Z="187.1559" />
+							<Vendor Name="Spademender Yumba" Entry="67052" Type="Repair" X="-437.3083" Y="1907.863" Z="136.274" />
 						</Vendors>
 					</SetVendor>
 					<SetMailbox>
