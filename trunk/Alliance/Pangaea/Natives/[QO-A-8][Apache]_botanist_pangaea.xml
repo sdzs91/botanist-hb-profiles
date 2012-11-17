@@ -22,6 +22,7 @@
 <TargetElites>True</TargetElites>
 
 <AvoidMobs>
+	<Mob Name="Plainshawk" Entry="58910" />
 	<Mob Name="Waste Scavenger" Entry="66194" />
 	<Mob Name="Slingtail Fishripper" Entry="55195" />
 	<Mob Name="Pengsong" Entry="66587" />
@@ -70,7 +71,7 @@
 		
 
 		
-	    <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+	    <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 						
 		<While Condition="Me.Level &gt;= 85 &amp;&amp; Me.Level &lt;= 86" >
 			
@@ -237,7 +238,7 @@
 				</If>
 						
 										
-				<CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" NinjaSkin="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 					
                                              <!-- halfhill  -->
 				<CustomBehavior File="Message" Text="Position check #4" LogColor="Lime" />			  
@@ -245,9 +246,7 @@
 					<If Condition="Me.X &gt; -317.1932 &amp;&amp; Me.X &lt; -42.4191 &amp;&amp; Me.Y &gt; 384.9974 &amp;&amp; Me.Y &lt; 672.6077" >
 					<CustomBehavior File="Message" Text="Position check Halfhill in Valley of the Four Winds" LogColor="Lime" />							
 					<CustomBehavior File="Message" Text="I am in Halfhill." LogColor="Lime" />
-						<RunTo X="-195.414" Y="409.0086" Z="165.5139" DestName="HalfHill" />
-						<RunTo X="-204.9184" Y="495.6101" Z="187.1923" DestName="HalfHill" />
-						<RunTo X="-226.3131" Y="514.6094" Z="190.9428" DestName="Innkeeper" />
+						<RunTo X="-226.7411" Y="513.8851" Z="190.9431" />
 					<CustomBehavior File="Message" Text="I have located the innkeep." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
@@ -256,24 +255,32 @@
 					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
 					<RunTo X="-201.9071" Y="496.0877" Z="187.1821" />
 					<CustomBehavior File="ForcedMount" MountType="Ground" />					
-						<RunTo X="391.6059" Y="59.33038" Z="153.7619" />						
+						<RunTo X="-488.3603" Y="1883.277" Z="136.052" />						
 					<CustomBehavior File="ForcedDismount" />
 					</If>
 				</If>	
 
 				<CustomBehavior File="Message" Text="Position check #5" LogColor="Lime" />				
 				<If Condition="Me.ZoneId == 5805" >
-					<If Condition="Me.X &gt; 300 &amp;&amp; Me.X &lt; 400 &amp;&amp; Me.Y &gt; -50 &amp;&amp; Me.Y &lt; 150" >
+					<If Condition="Me.X &gt; -600 &amp;&amp; Me.X &lt; -400 &amp;&amp; Me.Y &gt; 1750 &amp;&amp; Me.Y &lt; 2000" >
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
 						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 						<CustomBehavior File="RunMacro" Macro="/sort bags" />
 							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 								<SetGrindArea><GrindArea>
-								<Factions>190</Factions>
+								<Factions>2136,1711,31</Factions>
 									<Hotspots>
-										<Hotspot X="391.6059" Y="59.33038" Z="153.7619" />
-										<Hotspot X="329.1539" Y="20.77847" Z="148.8918" />
-										<Hotspot X="218.7237" Y="60.04001" Z="157.2372" />										
+										<Hotspot X="-488.3603" Y="1883.277" Z="136.052" />
+										<Hotspot X="-614.5988" Y="1758.796" Z="148.5799" />
+										<Hotspot X="-741.25" Y="1907.064" Z="148.6365" />
+										<Hotspot X="-593.7509" Y="2077.136" Z="122.8228" />
+										<Hotspot X="-642.9532" Y="2101.67" Z="122.2971" />
+										<Hotspot X="-766.9165" Y="2182.763" Z="110.7894" />
+										<Hotspot X="-1003.966" Y="2138.319" Z="97.75099" />
+										<Hotspot X="-848.1108" Y="2300.464" Z="128.8687" />
+										<Hotspot X="-892.6559" Y="2350.207" Z="141.5543" />
+										<Hotspot X="-1028.572" Y="2447.183" Z="136.883" />
+										<Hotspot X="-1001.229" Y="2200.564" Z="76.73149" />										
 									</Hotspots>
 								</GrindArea></SetGrindArea>					
 								<GrindTo Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 89)" GoalText="Farming" />
@@ -347,7 +354,7 @@
 				</If>	
 				
 						
-				<CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 					
 				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />			  
 			    <If Condition="Me.ZoneId == 6138" >

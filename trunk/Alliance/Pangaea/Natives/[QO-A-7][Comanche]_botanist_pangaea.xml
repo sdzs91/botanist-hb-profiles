@@ -17,7 +17,7 @@
     
 <QuestOrder>
 
-			<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="False" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="1" LogoutForInactivity="True" />
+			<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="False" LootMobs="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="1" LogoutForInactivity="True" />
 				
 				<If Condition="Me.Level &gt;= 86" >
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
