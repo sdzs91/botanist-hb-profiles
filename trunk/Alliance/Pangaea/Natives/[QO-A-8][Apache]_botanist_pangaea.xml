@@ -43,6 +43,7 @@
 </AvoidMobs>
 
 <Blackspots>
+	<Blackspot X="219.0633" Y="-17.66842" Z="164.284" Radius="45" />
 	<Blackspot X="374.5782" Y="3430.849" Z="221.1782" Radius="20" />
 	<Blackspot X="-95.53642" Y="-301.9591" Z="144.8068" Radius="25" />
 	<Blackspot X="-120.8431" Y="-2286.674" Z="29.21791" Radius="130" />
@@ -255,46 +256,24 @@
 					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
 					<RunTo X="-201.9071" Y="496.0877" Z="187.1821" />
 					<CustomBehavior File="ForcedMount" MountType="Ground" />					
-						<RunTo X="-208.3782" Y="464.9368" Z="183.2101" />
-						<RunTo X="-188.5535" Y="389.7429" Z="164.4367" />
-						<RunTo X="-89.83597" Y="401.7436" Z="161.2644" />
-						<RunTo X="-82.92226" Y="374.7879" Z="157.1354" />
-						<RunTo X="-76.03757" Y="333.5833" Z="156.3562" />
-						<RunTo X="-47.08356" Y="273.0041" Z="161.7249" />
-						<RunTo X="-69.37505" Y="237.7293" Z="164.1913" />
-						<RunTo X="-87.48814" Y="181.3528" Z="161.6842" />
-						<RunTo X="-102.5371" Y="115.7616" Z="156.9712" />
-						<RunTo X="-107.1582" Y="66.14912" Z="156.9833" />
-						<RunTo X="-91.53532" Y="4.479858" Z="157.0869" />
-						<RunTo X="-81.361" Y="-38.22497" Z="159.2296" />
-						<RunTo X="-124.555" Y="-80.80018" Z="161.6625" />
-						<RunTo X="-138.959" Y="-138.1101" Z="157.7825" />
-						<RunTo X="-131.3346" Y="-195.7316" Z="142.3448" />
-						<RunTo X="-131.1474" Y="-274.7755" Z="143.262" />						
+						<RunTo X="391.6059" Y="59.33038" Z="153.7619" />						
 					<CustomBehavior File="ForcedDismount" />
 					</If>
 				</If>	
 
 				<CustomBehavior File="Message" Text="Position check #5" LogColor="Lime" />				
 				<If Condition="Me.ZoneId == 5805" >
-					<If Condition="Me.X &gt; -150 &amp;&amp; Me.X &lt; -100 &amp;&amp; Me.Y &gt; -300 &amp;&amp; Me.Y &lt; -250" >
+					<If Condition="Me.X &gt; 300 &amp;&amp; Me.X &lt; 400 &amp;&amp; Me.Y &gt; -50 &amp;&amp; Me.Y &lt; 150" >
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
 						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 						<CustomBehavior File="RunMacro" Macro="/sort bags" />
 							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 								<SetGrindArea><GrindArea>
-								<Factions>190,2260</Factions>
+								<Factions>190</Factions>
 									<Hotspots>
-										<Hotspot X="-137.3051" Y="-281.3094" Z="143.1764" />
-										<Hotspot X="-214.9102" Y="-229.6488" Z="141.1053" />
-										<Hotspot X="-296.3012" Y="-227.4752" Z="140.0547" />
-										<Hotspot X="-375.4568" Y="-178.6988" Z="138.9251" />
-										<Hotspot X="-308.5356" Y="-117.7204" Z="137.5318" />
-										<Hotspot X="-379.0725" Y="-21.21877" Z="137.7972" />
-										<Hotspot X="-417.5618" Y="-68.63344" Z="135.9419" />
-										<Hotspot X="-486.3855" Y="-64.1402" Z="136.7783" />
-										<Hotspot X="-458.6921" Y="23.97962" Z="136.0884" />
-										<Hotspot X="-570.3602" Y="12.88105" Z="134.6505" />										
+										<Hotspot X="391.6059" Y="59.33038" Z="153.7619" />
+										<Hotspot X="329.1539" Y="20.77847" Z="148.8918" />
+										<Hotspot X="218.7237" Y="60.04001" Z="157.2372" />										
 									</Hotspots>
 								</GrindArea></SetGrindArea>					
 								<GrindTo Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 89)" GoalText="Farming" />
