@@ -216,7 +216,7 @@
 									<Hotspot X="433.9135" Y="-1556.706" Z="91.66671" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level &gt;= 20)" GoalText="Farming" />
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 20)" GoalText="Farming" />
 				</If>
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
@@ -239,7 +239,7 @@
 					</If>
 					
 					
-					<If  Condition="Me.Level == 20" >
+					<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0" >
 						<CustomBehavior File="Message" Text="I'm  hearthing to The Crossroads." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
