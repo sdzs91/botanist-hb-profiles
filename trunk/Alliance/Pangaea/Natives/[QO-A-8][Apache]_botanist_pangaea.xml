@@ -66,6 +66,7 @@
 </Mailboxes>
 
 <Vendors>
+	<Vendor Name="Nan the Mason Mug" Entry="62878" Type="Food" X="-365.9896" Y="1905.672" Z="142.8074" />
 </Vendors>
 
 <Factions></Factions>
