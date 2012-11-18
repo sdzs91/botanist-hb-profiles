@@ -22,12 +22,18 @@
 	<TargetElites></TargetElites>
 	
 	<AvoidMobs>
+		<Mob Name="Talrendis Defender" Entry="36816"  />
+		<Mob Name="Talrendis Sentinel" Entry="36914"  />
+		<Mob Name="Talrendis Lorekeeper" Entry="36849"  />
+		<Mob Name="Talrendis Glaive Thrower" Entry="36890" />
+		<Mob Name="Talrendis Glaive Thrower" Entry="36890" />
 		<mOB Name="Bloodtooth Guard" Entry="3932" />
 		<Mob Name="Raging Ancient" Entry="33688"  />
 		<Mob Name="Cocooned Victim" Entry="42907" />		
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="3005.54" Y="-4150.188" Z="101.7313" Radius="200" />
 		<Blackspot X="1765.613" Y="-1500.96" Z="97.54259" Radius="37.40597" />
 		<Blackspot X="2143.298" Y="-2508.737" Z="82.04033" Radius="50" />
 		<Blackspot X="790.506" Y="-1346.269" Z="90.5699" Radius="60" />
@@ -387,12 +393,12 @@
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Morg Gnarltree" Entry="226" Type="Repair" X="-10590.63" Y="-1156.782" Z="30.05962" />
+								<Vendor Name="Burkrum" Entry="6028" Type="Repair" X="2346.262" Y="-2582.214" Z="103.0934" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-10550.62" Y="-1157.743" Z="27.84249" />
+								<Mailbox X="2331.225" Y="-2544.33" Z="101.8888" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
@@ -424,7 +430,6 @@
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 					<RunTo X="3006.809" Y="-3690.077" Z="111.8801" />
 								 
-				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 27." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>50</Factions>
@@ -437,7 +442,6 @@
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 27)" GoalText="Farming" />
-				</If>
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -447,12 +451,12 @@
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Morg Gnarltree" Entry="226" Type="Repair" X="-10590.63" Y="-1156.782" Z="30.05962" />
+								<Vendor Name="Burkrum" Entry="6028" Type="Repair" X="2346.262" Y="-2582.214" Z="103.0934" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-10550.62" Y="-1157.743" Z="27.84249" />
+								<Mailbox X="2331.225" Y="-2544.33" Z="101.8888" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
