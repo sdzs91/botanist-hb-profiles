@@ -53,9 +53,9 @@
 		
 	<QuestOrder>
 	
-				<If Condition="Me.Level &gt;= 31" > 
+				<If Condition="Me.Level &gt;= 35" > 
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="Levels 31-90 haven't been scripted yet. I am stopping the bot" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Levels 35-90 haven't been scripted yet. I am stopping the bot" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="UserSettings" StopBot="true" />
 				</If>
