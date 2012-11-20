@@ -33,6 +33,9 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+	<Blackspot X="-425.0494" Y="1741.59" Z="125.8921" Radius="43.25447" />
+		<Blackspot X="-357.3745" Y="1860.926" Z="123.5528" Radius="20" />
+		<Blackspot X="-428.8185" Y="1715.314" Z="128.3018" Radius="20" />
 		<Blackspot X="2954.735" Y="-3274.088" Z="157.7391" Radius="150" />
 		<Blackspot X="2802.5" Y="-3813.127" Z="83.69786" Radius="50" />
 		<Blackspot X="3005.54" Y="-4150.188" Z="101.7313" Radius="200" />
@@ -612,33 +615,30 @@
 				<CustomBehavior File="Message" Text="Position check, Shadowprey Village in Desolace." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Shadowprey Village." LogColor="Lime" />
-					<RunTo X="-1614.522" Y="3117.269" Z="44.02023" />
+					<RunTo X="-1623.056" Y="3105.684" Z="39.15242" />
 				<CustomBehavior File="MyCTM"  X="-1608.241" Y="3126.607" Z="47.69505" />
 				<CustomBehavior File="MyCTM" X="-1594.073" Y="3148.53" Z="46.95821" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-				<CustomBehavior File="SetHearthstone" MobId="11106"  X="-1592.844" Y="3150.267" Z="46.95861" />
+				<CustomBehavior File="SetHearthstone" MobId="11106" X="-1592.844" Y="3150.267" Z="46.95861" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 					<RunTo X="-1609.168" Y="3124.936" Z="47.71942" />
 				<CustomBehavior File="MyCTM" X="-1614.748" Y="3117.042" Z="43.9462" />
-					<RunTo X="-572.3922" Y="1885.483" Z="96.05356" />
+					<RunTo X="-542.7305" Y="1832.64" Z="95.1594" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 33." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>554,413,73,49,91</Factions>
 								<Hotspots>
-									<Hotspot X="-572.3922" Y="1885.483" Z="96.05356" />
-									<Hotspot X="-507.7203" Y="1720.077" Z="102.9193" />
-									<Hotspot X="-460.3816" Y="1716.569" Z="124.0722" />
-									<Hotspot X="-413.5523" Y="1722.286" Z="129.9226" />
-									<Hotspot X="-434.5969" Y="1797.783" Z="127.1006" />
-									<Hotspot X="-362.5302" Y="1848.748" Z="122.5341" />
-									<Hotspot X="-426.0911" Y="1656.682" Z="107.9238" />
-									<Hotspot X="-294.8704" Y="1629.367" Z="103.8374" />
-									<Hotspot X="-207.2395" Y="1674.352" Z="101.3369" />									
+									<Hotspot X="-542.7305" Y="1832.64" Z="95.1594" />
+									<Hotspot X="-507.8085" Y="1716.134" Z="102.2873" />
+									<Hotspot X="-464.1636" Y="1691.144" Z="116.6524" />
+									<Hotspot X="-399.7711" Y="1638.156" Z="107.8973" />
+									<Hotspot X="-278.8224" Y="1629.113" Z="98.72164" />
+									<Hotspot X="-209.7333" Y="1679.47" Z="102.7492" />									
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 33)" GoalText="Farming" />
@@ -650,8 +650,8 @@
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />
-						<RunTo X="-1605.549" Y="3130.342" Z="47.63057" />
-						<RunTo X="-1613.816" Y="3118.615" Z="44.68277" />					
+					<CustomBehavior File="MyCTM" X="-1605.227" Y="3130.559" Z="47.5806" />
+					<CustomBehavior File="MyCTM" X="-1627.414" Y="3098.688" Z="35.67897" />				
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Hae'Wilani" Entry="12045" Type="Repair" X="-1677.031" Y="3073.266" Z="34.53806" />
@@ -681,14 +681,18 @@
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Shadowprey Village in Desolace." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Booty Bay." LogColor="Lime" />														
-					<RunTo X="-1594.59" Y="3147.227" Z="46.95834" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Shadowprey Village." LogColor="Lime" />
+					<RunTo X="-1623.056" Y="3105.684" Z="39.15242" />
+				<CustomBehavior File="MyCTM"  X="-1608.241" Y="3126.607" Z="47.69505" />
+				<CustomBehavior File="MyCTM" X="-1594.073" Y="3148.53" Z="46.95821" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-				<CustomBehavior File="SetHearthstone" MobId="11106"  X="-1592.844" Y="3150.267" Z="46.95861" />
+				<CustomBehavior File="SetHearthstone" MobId="11106" X="-1592.844" Y="3150.267" Z="46.95861" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
+				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
+					<RunTo X="-1609.168" Y="3124.936" Z="47.71942" />
+				<CustomBehavior File="MyCTM" X="-1614.748" Y="3117.042" Z="43.9462" />					
 					<RunTo X="-14639.69" Y="296.1839" Z="3.397022" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
