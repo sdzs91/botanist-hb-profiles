@@ -115,6 +115,14 @@
 					</If>						
 				</If>
 				
+				<If Condition="Me.MapId == 870" >				 
+					<If Condition="Me.ZoneId == 5785" >
+						<CustomBehavior File="Message" Text="I am in Pandaria, and in Jade Forest moving to Pearlfin Village." LogColor="Lime" />
+							<RunTo X="-220.0725" Y="-2707.749" Z="5.288094" />	
+						<CustomBehavior File="Message" Text="I have reached Pearlfin Village" LogColor="Lime" />
+					</If>						
+				</If>
+				
                               <!-- pearlfin village -->
 			    <CustomBehavior File="Message" Text="Position check #4" LogColor="Lime" />
 				<If Condition="Me.X &lt; -165 &amp;&amp; Me.Y &lt; -2471" >
