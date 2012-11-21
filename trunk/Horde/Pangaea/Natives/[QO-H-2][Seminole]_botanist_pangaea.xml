@@ -758,7 +758,7 @@
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Camp Mojache in Ferales." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Chillwind Camp." LogColor="Lime" />														
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Camp Mojache." LogColor="Lime" />														
 					<RunTo X="-4457.738" Y="243.4559" Z="39.10747" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
@@ -829,7 +829,7 @@
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Camp Mojache in Ferales." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Chillwind Camp." LogColor="Lime" />														
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Camp Mojache." LogColor="Lime" />														
 					<RunTo X="-4457.738" Y="243.4559" Z="39.10747" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
@@ -900,7 +900,7 @@
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Camp Mojache in Ferales." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Chillwind Camp." LogColor="Lime" />														
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Camp Mojache." LogColor="Lime" />														
 					<RunTo X="-4457.738" Y="243.4559" Z="39.10747" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
