@@ -945,7 +945,7 @@
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
 					<RunTo X="2089.243" Y="-5213.541" Z="81.63377" />
 								 
-				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
+
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 43." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>7</Factions>
@@ -960,7 +960,7 @@
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 43)" GoalText="Farming" />
-				</If>
+
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
