@@ -984,6 +984,7 @@
 									TransportEndX="-14277.7451" TransportEndY="581.605347" TransportEndZ="-0.263047"	
 									GetOffX="-14279.87" GetOffY="568.1874" GetOffZ="6.537854" />								
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<RunTo X="-14446.41" Y="508.5225" Z="26.2288" />
 				</If>
 				
 				<If Condition="Me.Level &gt;= 40 &amp;&amp; Me.Level &lt;= 41" >				
