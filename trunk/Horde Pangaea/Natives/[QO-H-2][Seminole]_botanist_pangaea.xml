@@ -974,17 +974,25 @@
 				</If>
 				
 				<If Condition="Me.MapId == 1 &amp;&amp; Me.Level &gt;= 40" >
-					<CustomBehavior File="Message" Text="I am flying to Ratchet so I can take the boat to Eastern Kingdoms." LogColor="Lime" />
-						<RunTo X="-995.7379" Y="-3828.415" Z="5.627558" />
-					<CustomBehavior File="Message" Text="I have reached Ratchet, waiting for the boat." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
+								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
+								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+								LogoutForInactivity="True" />
+					<CustomBehavior File="Message" Text="I have reached level 40 going to Ratchet and taking the boat to Eastern Kingdoms." LogColor="Lime" />
+						<RunTo X="-898.1926" Y="-3771.714" Z="11.65175" />
+					<CustomBehavior File="MyCTM" X="-891.7751" Y="-3757.442" Z="12.71711" />
+					<CustomBehavior File="MyCTM" X="-946.7653" Y="-3736.416" Z="6.301844" />
+					<CustomBehavior File="MyCTM" X="-996.6861" Y="-3827.494" Z="5.569682" />
+					<CustomBehavior File="Message" Text="I have reached the docks, waiting for the boat." LogColor="Lime" />
 					<CustomBehavior File="UseTransport" TransportId="20808" 
-									WaitAtX="-995.7379" WaitAtY="-3828.415" WaitAtZ="5.627558"
-									TransportStartX="-1005.6134" TransportStartY="-3843.70264" TransportStartZ="0.462118953"
-									StandOnX="-998.9708" StandOnY="-3843.648" StandOnZ="6.033175"
-									TransportEndX="-14277.7451" TransportEndY="581.605347" TransportEndZ="-0.263047"	
-									GetOffX="-14279.87" GetOffY="568.1874" GetOffZ="6.537854" />								
+									WaitAtX="-996.6861" WaitAtY="-3827.494" WaitAtZ="5.569682"
+									TransportStartX="-1005.6134" TransportStartY="-3916.16479" TransportStartZ="5.41283"
+									StandOnX="-999.033" StandOnY="-3844.277" StandOnZ="6.071807"
+									TransportEndX="-14277.7451" TransportEndY="582.86615" TransportEndZ="0.0291947555"	
+									GetOffX="-14280.88" GetOffY="289.4938" GetOffZ="7.057753" />								
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<RunTo X="-14446.41" Y="508.5225" Z="26.2288" />
+						<RunTo X="2083.118" Y="277.4027" Z="57.04179" />
+						<RunTo X="2274.508" Y="372.1335" Z="35.54865" />
 				</If>
 				
 				<If Condition="Me.Level &gt;= 40 &amp;&amp; Me.Level &lt;= 41" >				
