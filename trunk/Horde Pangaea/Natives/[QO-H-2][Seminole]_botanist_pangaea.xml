@@ -986,22 +986,34 @@
 					<CustomBehavior File="Message" Text="I have reached the docks, waiting for the boat." LogColor="Lime" />
 					<CustomBehavior File="UseTransport" TransportId="20808" 
 									WaitAtX="-996.6861" WaitAtY="-3827.494" WaitAtZ="5.569682"
-									TransportStartX="-1005.6134" TransportStartY="-3916.16479" TransportStartZ="5.41283"
-									StandOnX="-999.033" StandOnY="-3844.277" StandOnZ="6.071807"
+									TransportStartX="-1005.6134" TransportStartY="-3841.64771" TransportStartZ="-0.155773342"
+									StandOnX="-996.3264" StandOnY="-3833.847" StandOnZ="5.859357"
 									TransportEndX="-14277.7451" TransportEndY="582.86615" TransportEndZ="0.0291947555"	
-									GetOffX="-14280.88" GetOffY="289.4938" GetOffZ="7.057753" />								
+									GetOffX="-14280.35" GetOffY="567.7872" GetOffZ="6.666009" />								
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<RunTo X="2083.118" Y="277.4027" Z="57.04179" />
-						<RunTo X="2274.508" Y="372.1335" Z="35.54865" />
+						<RunTo X="-14280.35" Y="567.7872" Z="6.666009" />
+						<RunTo X="-14446.39" Y="508.1287" Z="26.22744" />
+						<RunTo X="-12412.12" Y="207.9873" Z="31.55598" />
+					<CustomBehavior File="Message" Text="I have reached the zeplelin, waiting for it to arrive.." LogColor="Lime" />
+					<CustomBehavior File="UseTransport" TransportId="176495" 
+									WaitAtX="-12407.59" WaitAtY="195.234" WaitAtZ="32.07232"
+									TransportStartX="-12406.6553" TransportStartY="211.83" TransportStartZ="49.6984367"
+									StandOnX="-12402.09" StandOnY="204.3907" StandOnZ="32.1782"
+									TransportEndX="2062.59888" TransportEndY="235.26" TransportEndZ="117.73"	
+									GetOffX="2059.222" GetOffY="239.8452" GetOffZ="99.76638" />								
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<RunTo X="2274.189" Y="370.8476" Z="35.53295" />
 				</If>
 				
-				<If Condition="Me.Level &gt;= 40 &amp;&amp; Me.Level &lt;= 41" >				
-					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the 40 to 41 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.Level &gt;= 40 &amp;&amp; Me.Level &lt;= 41" >				
+						<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am in the 40 to 41 bracket, changing to the newest farming location." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					</If>			
 				</If>
-			
+				
 		<While Condition="Me.Level &gt;= 40 &amp;&amp; Me.Level &lt;= 41" >		
 				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
 								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
