@@ -1014,7 +1014,7 @@
 					</If>			
 				</If>
 				
-		<While Condition="Me.Level &gt;= 40 &amp;&amp; Me.Level &lt;= 41" >		
+		<While Condition="Me.Level &gt;= 40 &amp;&amp; Me.Level &lt; 41" >		
 				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
 								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
