@@ -974,35 +974,37 @@
 				</If>
 				
 				<If Condition="Me.MapId == 1 &amp;&amp; Me.Level &gt;= 40" >
-					<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
-								LogoutForInactivity="True" />
-					<CustomBehavior File="Message" Text="I have reached level 40 going to Ratchet and taking the boat to Eastern Kingdoms." LogColor="Lime" />
-						<RunTo X="-898.1926" Y="-3771.714" Z="11.65175" />
-					<CustomBehavior File="MyCTM" X="-891.7751" Y="-3757.442" Z="12.71711" />
-					<CustomBehavior File="MyCTM" X="-946.7653" Y="-3736.416" Z="6.301844" />
-					<CustomBehavior File="MyCTM" X="-996.6861" Y="-3827.494" Z="5.569682" />
-					<CustomBehavior File="Message" Text="I have reached the docks, waiting for the boat." LogColor="Lime" />
-					<CustomBehavior File="UseTransport" TransportId="20808" 
-									WaitAtX="-996.6861" WaitAtY="-3827.494" WaitAtZ="5.569682"
-									TransportStartX="-1005.6134" TransportStartY="-3841.64771" TransportStartZ="-0.155773342"
-									StandOnX="-996.3264" StandOnY="-3833.847" StandOnZ="5.859357"
-									TransportEndX="-14277.7451" TransportEndY="582.86615" TransportEndZ="0.0291947555"	
-									GetOffX="-14280.35" GetOffY="567.7872" GetOffZ="6.666009" />								
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<RunTo X="-14280.35" Y="567.7872" Z="6.666009" />
-						<RunTo X="-14446.39" Y="508.1287" Z="26.22744" />
-						<RunTo X="-12412.12" Y="207.9873" Z="31.55598" />
-					<CustomBehavior File="Message" Text="I have reached the zeplelin, waiting for it to arrive.." LogColor="Lime" />
-					<CustomBehavior File="UseTransport" TransportId="176495" 
-									WaitAtX="-12407.59" WaitAtY="195.234" WaitAtZ="32.07232"
-									TransportStartX="-12406.6553" TransportStartY="211.83" TransportStartZ="49.6984367"
-									StandOnX="-12402.09" StandOnY="204.3907" StandOnZ="32.1782"
-									TransportEndX="2062.59888" TransportEndY="235.26" TransportEndZ="117.73"	
-									GetOffX="2059.222" GetOffY="239.8452" GetOffZ="99.76638" />								
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<RunTo X="2274.189" Y="370.8476" Z="35.53295" />
+					<If Condition="Me.Level &lt;= 44" >
+						<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
+									UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
+									PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+									LogoutForInactivity="True" />
+						<CustomBehavior File="Message" Text="I have reached level 40 going to Ratchet and taking the boat to Eastern Kingdoms." LogColor="Lime" />
+							<RunTo X="-898.1926" Y="-3771.714" Z="11.65175" />
+						<CustomBehavior File="MyCTM" X="-891.7751" Y="-3757.442" Z="12.71711" />
+						<CustomBehavior File="MyCTM" X="-946.7653" Y="-3736.416" Z="6.301844" />
+						<CustomBehavior File="MyCTM" X="-996.6861" Y="-3827.494" Z="5.569682" />
+						<CustomBehavior File="Message" Text="I have reached the docks, waiting for the boat." LogColor="Lime" />
+						<CustomBehavior File="UseTransport" TransportId="20808" 
+										WaitAtX="-996.6861" WaitAtY="-3827.494" WaitAtZ="5.569682"
+										TransportStartX="-1005.6134" TransportStartY="-3841.64771" TransportStartZ="-0.155773342"
+										StandOnX="-996.3264" StandOnY="-3833.847" StandOnZ="5.859357"
+										TransportEndX="-14277.7451" TransportEndY="582.86615" TransportEndZ="0.0291947555"	
+										GetOffX="-14280.35" GetOffY="567.7872" GetOffZ="6.666009" />								
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="-14280.35" Y="567.7872" Z="6.666009" />
+							<RunTo X="-14446.39" Y="508.1287" Z="26.22744" />
+							<RunTo X="-12412.12" Y="207.9873" Z="31.55598" />
+						<CustomBehavior File="Message" Text="I have reached the zeplelin, waiting for it to arrive.." LogColor="Lime" />
+						<CustomBehavior File="UseTransport" TransportId="176495" 
+										WaitAtX="-12407.59" WaitAtY="195.234" WaitAtZ="32.07232"
+										TransportStartX="-12406.6553" TransportStartY="211.83" TransportStartZ="49.6984367"
+										StandOnX="-12402.09" StandOnY="204.3907" StandOnZ="32.1782"
+										TransportEndX="2062.59888" TransportEndY="235.26" TransportEndZ="117.73"	
+										GetOffX="2059.222" GetOffY="239.8452" GetOffZ="99.76638" />								
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="2274.189" Y="370.8476" Z="35.53295" />
+					</If>
 				</If>
 				
 				<If Condition="Me.MapId == 0" >
@@ -1242,7 +1244,7 @@
 				<CustomBehavior File="SetHearthstone" MobId="7733"  X="-7069.17" Y="-3854.53" Z="9.852296" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="-6633.793" Y="-4097.109" Z="264.3159" />
+					<RunTo X="-8795.632" Y="-3562.917" Z="10.27086" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 47." LogColor="Lime" />				
