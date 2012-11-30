@@ -1358,7 +1358,7 @@
 				<CustomBehavior File="SetHearthstone" MobId="7733"  X="-7069.17" Y="-3854.53" Z="9.852296" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="-7175.429" Y="-1116.764" Z="241.9803" />
+					<RunTo X="-9407.565" Y="-2573.991" Z="11.74712" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 50." LogColor="Lime" />				
