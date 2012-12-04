@@ -92,7 +92,7 @@
 								<CustomBehavior File="Message" Text="Moving to Thrallmar." LogColor="Lime" />
 									<RunTo X="-179.2167" Y="1028.686" Z="54.17134" />
 								<CustomBehavior File="WaitTimer" WaitTime="1000" />
-									<RunTo X="188.5732" Y="2613.322" Z="87.28364" />
+									<RunTo X="167.606" Y="2644.138" Z="86.27419" />
 							</If>	
 						</If>
 					</If>
@@ -104,7 +104,6 @@
 				<CustomBehavior File="Message" Text="Position check, Thrallmar in Hellfire Peninsula." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Honor Hold." LogColor="Lime" />
-					<RunTo X="167.606" Y="2644.138" Z="86.27419" />
 					<RunTo X="188.5732" Y="2613.322" Z="87.28364" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
