@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-3][Cherokee]_botanist_pangaea</Name>
+	<Name>[QO-H-3][Cherokee]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -46,8 +46,8 @@
 		
 	<QuestOrder>
 	
-				<If Condition="Me.Level &gt;= 58" >
-					<CustomBehavior File="Message" Text="The 58-90 section has not been scripted yet. Stopping the bot." LogColor="Lime" />
+				<If Condition="Me.Level &gt;= 60" >
+					<CustomBehavior File="Message" Text="The 60-90 section has not been scripted yet. Stopping the bot." LogColor="Lime" />
 					<CustomBehavior File="UserSettings" StopBot="true" />
 				</If>
 				
@@ -65,30 +65,34 @@
 				</If>
 				
 				<If Condition="Me.Level == 58" >
-					<If Condition="Me.MapId == 0" >
+					<If Condition="Me.MapId == 1" >
 						<CustomBehavior File="Message" Text="Position check, Dark Portal in Badlands." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Message" Text="Moving to the Dark Portal." LogColor="Lime" />
-							<RunTo X="-11891.18" Y="-3206.353" Z="-14.80993" />
-						<CustomBehavior File="Message" Text="I have reached the Dark Portal." LogColor="Lime" />
-						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Message" Text="I am taking the portal to Outlands." LogColor="Lime" />
-						<CustomBehavior File="GoThruPortal" Timeout="15000" X="-11908.99" Y="-3210.626" Z="-14.75229" />					
+						<CustomBehavior File="Message" Text="Going to Orgrimmar and taking the portal to Blasted Lands." LogColor="Lime" />
+							<RunTo X="-6811.209" Y="836.3549" Z="49.83052" />	
+							<RunTo X="1798.27" Y="-4363.27" Z="102.5216" />					
+						<CustomBehavior File="Message" Text="I have reached Orgrimmar, moving to the portal." LogColor="Lime" />
+							<RunTo X="1685.938" Y="-4126.875" Z="66.34236" />
+						<CustomBehavior File="Message" Text="Taking the portal to Blasted Lands." LogColor="Yellow" />
+						<CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1685.18" Y="-4123.42" Z="66.3376" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="TimeRemaining}" />
+						<CustomBehavior File="ForcedMount" MountType="Ground" />
+						<CustomBehavior File="Message" Text="Moving to the Dark Portal." LogColor="Yellow" />
+							<RunTo X="-11900.5" Y="-3208.187" Z="-14.75661" />
+						<CustomBehavior File="GoThruPortal" X="-11909.67" Y="-3208.747" Z="-14.78602" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+							<RunTo X="-179.2167" Y="1028.686" Z="54.17134" />
+						<CustomBehavior File="Message" Text="I've reached Hellfire Peninsula." LogColor="Yellow" />					
 					</If>
 					<If Condition="Me.MapId == 530" >
 						<If Condition="Me.ZoneId == 3483" >
 							<If Condition="Me.Y &lt;= 1073.369" >
 								<CustomBehavior File="Message" Text="I'm in Outlands, near the Dark Portal." LogColor="Lime" />
 								<CustomBehavior File="WaitTimer" WaitTime="1000" />
-								<CustomBehavior File="Message" Text="Moving to Honor Hold." LogColor="Lime" />
-									<RunTo X="-321.0454" Y="1027.51" Z="54.16175" />
+								<CustomBehavior File="Message" Text="Moving to Thrallmar." LogColor="Lime" />
+									<RunTo X="-179.2167" Y="1028.686" Z="54.17134" />
 								<CustomBehavior File="WaitTimer" WaitTime="1000" />
-									<RunTo X="-709.5327" Y="2700.618" Z="94.40196" />
-									<RunTo X="-709.5172" Y="2713.072" Z="94.72057" />
-									<RunTo X="-701.1599" Y="2713.358" Z="94.73618" />
-									<RunTo X="-703.0786" Y="2719.859" Z="94.72361" />
-									<RunTo X="-703.3922" Y="2731.59" Z="94.73353" />
-									<RunTo X="-706.0537" Y="2739.496" Z="94.73383" />	
+									<RunTo X="188.5732" Y="2613.322" Z="87.28364" />
 							</If>	
 						</If>
 					</If>
@@ -97,42 +101,36 @@
 		<While Condition="Me.MapId == 530 &amp;&amp; Me.ZoneId == 3483 &amp;&amp; Me.Level &gt;= 58 &amp;&amp; Me.Level &lt;= 59 &amp;&amp; Me.Y &gt;= 1073.369" >
 			
 				<CustomBehavior File="UserSettings" MountDistance="30" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Honor Hold in Hellfire Peninsula." LogColor="Lime" />  
+				<CustomBehavior File="Message" Text="Position check, Thrallmar in Hellfire Peninsula." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Honor Hold." LogColor="Lime" />														
-					<RunTo X="-709.5327" Y="2700.618" Z="94.40196" />
-					<RunTo X="-709.5172" Y="2713.072" Z="94.72057" />
-					<RunTo X="-701.1599" Y="2713.358" Z="94.73618" />
-					<RunTo X="-703.0786" Y="2719.859" Z="94.72361" />
-					<RunTo X="-703.3922" Y="2731.59" Z="94.73353" />
-					<RunTo X="-706.0537" Y="2739.496" Z="94.73383" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Honor Hold." LogColor="Lime" />
+					<RunTo X="167.606" Y="2644.138" Z="86.27419" />
+					<RunTo X="188.5732" Y="2613.322" Z="87.28364" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="SetHearthstone" MobId="16826"  X="-708.8713" Y="2739.131" Z="94.7338" />
+				<CustomBehavior File="SetHearthstone" MobId="16602" X="190.8758" Y="2610.927" Z="87.28393" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-703.3922" Y="2731.59" Z="94.73353" />
-					<RunTo X="-703.0786" Y="2719.859" Z="94.72361" />
-					<RunTo X="-701.1599" Y="2713.358" Z="94.73618" />
-					<RunTo X="-709.5172" Y="2713.072" Z="94.72057" />
-					<RunTo X="-709.5327" Y="2700.618" Z="94.40196" />
-					<RunTo X="-709.0675" Y="2272.38" Z="10.61307" />
+					<RunTo X="167.606" Y="2644.138" Z="86.27419" />					
+					<RunTo X="170.7345" Y="2460.86" Z="57.30331" />
 								 
-				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 60." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>14</Factions>
+							<Factions>90,954</Factions>
 								<Hotspots>
-									<Hotspot X="-709.0675" Y="2272.38" Z="10.61307" />
-									<Hotspot X="-788.7392" Y="2288.585" Z="-15.78392" />
-									<Hotspot X="-870.8683" Y="2347.495" Z="-13.58277" />
-									<Hotspot X="-882.1555" Y="2456.836" Z="-12.6611" />
-									<Hotspot X="-916.4967" Y="2534.521" Z="7.613861" />
+									<Hotspot X="170.7345" Y="2460.86" Z="57.30331" />
+									<Hotspot X="275.6422" Y="2327.693" Z="61.6575" />
+									<Hotspot X="260.5729" Y="2167.643" Z="46.83998" />
+									<Hotspot X="314.904" Y="2023.258" Z="39.84716" />
+									<Hotspot X="139.3517" Y="2035.113" Z="48.53663" />
+									<Hotspot X="102.8742" Y="2184.773" Z="91.15447" />
+									<Hotspot X="62.13692" Y="2262.722" Z="74.1552" />
+									<Hotspot X="88.5484" Y="2372.083" Z="59.91449" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 60)" GoalText="Farming" />
-				</If>
+
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -140,19 +138,15 @@
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />
-							<RunTo X="-703.3922" Y="2731.59" Z="94.73353" />
-							<RunTo X="-703.0786" Y="2719.859" Z="94.72361" />
-							<RunTo X="-701.1599" Y="2713.358" Z="94.73618" />
-							<RunTo X="-709.5172" Y="2713.072" Z="94.72057" />
-							<RunTo X="-709.5327" Y="2700.618" Z="94.40196" />
+							<RunTo X="183.1994" Y="2605.912" Z="87.28409" />
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Humphry" Entry="16823" Type="Repair" X="-717.3172" Y="2607.582" Z="91.01124" />
+								<Vendor Name="Reagan Mancuso" Entry="22225" Type="Repair" X="179.7871" Y="2605.4" Z="87.28393" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-706.7772" Y="2698.136" Z="94.37333" />
+								<Mailbox X="171.0333" Y="2625.656" Z="87.1362" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
@@ -166,12 +160,12 @@
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="I am in the 60-62 bracket. I need flying mount training." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Message" Text="Moving to the riding trainer Honor Hold." LogColor="Orange" />
-							<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
+						<CustomBehavior File="Message" Text="Moving to the riding trainer in Thrallmar." LogColor="Orange" />
+							<RunTo X="48.61081" Y="2741.33" Z="85.25377" />
 						<CustomBehavior File="Message" Text="I have reached the riding trainer. Training journeyman riding." LogColor="Orange" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="InteractWith" MobId="35100" WaitTime="1000" CollectionDistance="50" X="-677.5347" Y="2736.305" Z="93.90825" />
-						<CustomBehavior File="ForceTrainRiding" MobId="35100" />
+						<CustomBehavior File="InteractWith" MobId="35093" WaitTime="1000" CollectionDistance="50" X="45.09896" Y="2741.531" Z="85.17034" />
+						<CustomBehavior File="ForceTrainRiding" MobId="35093" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					</If>
 						<If Condition="Me.Level == 60 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 225" >					
@@ -180,6 +174,11 @@
 							<CustomBehavior File="Message" Text="I am in the 60 to 62 bracket and have learned Expert Riding." LogColor="Lime" />
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />				
 						</If>
+				</If>
+				
+				<If Condition="Me.Level &gt;= 60" >
+					<CustomBehavior File="Message" Text="The 60-90 section has not been scripted yet. Stopping the bot." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
 				</If>
 				
 		<While Condition="Me.MapId == 530 &amp;&amp; Me.Level &gt;= 60 &amp;&amp; Me.Level &lt;= 61" >		
