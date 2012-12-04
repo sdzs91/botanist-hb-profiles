@@ -255,7 +255,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
-		<While Condition="Me.MapId == 530 &amp;&amp; Me.Level &gt;= 62 &amp;&amp; Me.Level &lt;= 63" >		
+		<While Condition="Me.Level &gt;= 62 &amp;&amp; Me.Level &lt;= 63" >		
 				<CustomBehavior File="UserSettings" FindMountAutomatically="True" UseRandomMount="True" UseMount="True" MountDistance="30"
 								UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
 								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
@@ -320,7 +320,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
-		<While Condition="Me.MapId == 530 &amp;&amp; Me.Level &gt;= 64 &amp;&amp; Me.Level &lt;= 65" >		
+		<While Condition="Me.Level &gt;= 64 &amp;&amp; Me.Level &lt;= 65" >		
 				<CustomBehavior File="UserSettings" FindMountAutomatically="True" UseRandomMount="True" UseMount="True" MountDistance="30"
 								UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
 								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
