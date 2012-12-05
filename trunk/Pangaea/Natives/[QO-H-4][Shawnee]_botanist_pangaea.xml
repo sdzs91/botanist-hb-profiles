@@ -18,6 +18,11 @@
 
 	<QuestOrder>
 	
+				<If Condition="Me.Level &gt;= 68" >
+					<CustomBehavior File="Message" Text="Level 68-90 have not been scripted yet. Stopping the bot." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+				</If>
+	
 				<If Condition="Me.Level &gt; 68" >
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-5][Choctaw]_botanist_pangaea" />
 				</If>
