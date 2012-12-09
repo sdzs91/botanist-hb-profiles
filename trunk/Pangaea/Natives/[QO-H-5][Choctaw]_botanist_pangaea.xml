@@ -26,7 +26,8 @@
 	</AvoidMobs>
 	
 	<Blackspots>
-	<Blackspot X="4570.342" Y="730.9821" Z="92.18278" Radius="30" />
+		<Blackspot X="2508.881" Y="5692.293" Z="70.77988" Radius="40" />
+		<Blackspot X="4570.342" Y="730.9821" Z="92.18278" Radius="30" />
 		<Blackspot X="7098.957" Y="-2155.757" Z="761.4069" Radius="39.64452" />
 		<Blackspot X="7168.089" Y="-2221.811" Z="764.8173" Radius="56.59931" />
 		<Blackspot X="5265.818" Y="2829.863" Z="530.4611" Radius="390.5712" />
@@ -70,7 +71,7 @@
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 					<RunTo X="2734.137" Y="6092.194" Z="75.48111" />	
 				<CustomBehavior File="ForcedMount" MountType="Flying" />
-				<CustomBehavior File="FlyTo" X="2380.729" Y="5630.006" Z="43.06765" />
+				<CustomBehavior File="FlyTo" X="2416.541" Y="5605.887" Z="44.02058" />
 				<CustomBehavior File="ForcedDismount" />
 								 
 				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
@@ -78,7 +79,7 @@
 						<SetGrindArea><GrindArea>
 							<Factions>1985</Factions>
 								<Hotspots>
-									<Hotspot X="2380.729" Y="5630.006" Z="43.06765" />
+									<Hotspot X="2416.541" Y="5605.887" Z="44.02058" />
 									<Hotspot X="2446.096" Y="5645.189" Z="50.87428" />
 									<Hotspot X="2569.236" Y="5632.882" Z="39.94718" />
 									<Hotspot X="2674.489" Y="5554.955" Z="42.96707" />

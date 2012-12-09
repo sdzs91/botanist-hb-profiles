@@ -62,7 +62,8 @@
 				
 									
 				<If Condition="Me.MapId == 571" >
-						<RunTo X="2818.891" Y="6168.541" Z="121.8571" />
+					<CustomBehavior File="FlyTo" X="2745.699" Y="6103.045" Z="77.71205" />
+					<CustomBehavior File="ForcedDismount" />
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-H-5][Choctaw]_botanist_pangaea" /> 			
 				</If>
 				
