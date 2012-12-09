@@ -22,6 +22,7 @@
 <TargetElites>True</TargetElites>
 
 <AvoidMobs>
+	<Mob Name="Eshelon" Entry="50772" />
 	<Mob Name="Malayan Quillrat" Entry="64784" />
 	<Mob Name="Longfang Cub" Entry="58891" />
 	<Mob Name="Longfang Den-Mother" Entry="58890" />
@@ -335,61 +336,58 @@
 				<!-- *********************************************************************************** -->
 				
 		<While Condition="Me.Level &gt; 88 &amp;&amp; Me.Level &lt;= 89" >				
-				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />		
-				<If Condition="Me.ZoneId == 6138" >
-					<If Condition="Me.X &lt; 75 || Me.X &gt; 310 || Me.Y &lt; 3095.547 || Me.Y &gt; 3349.551" >
-						<CustomBehavior File="Message" Text="I am in Dread Wastes, moving to Klaxxi'vess" LogColor="Lime" />
-							<RunTo X="262.4349" Y="3149.81" Z="214.5022" DestName="Klaxxi'vess" />	
-						<CustomBehavior File="Message" Text="I have reached Klaxxie'vess. " LogColor="Lime" />
+				
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.ZoneId != 5842" >
+						<CustomBehavior File="Message" Text="I am not where I should be. Moving to Shado-Pan Garrison." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="1846.229" Y="4271.746" Z="148.8683" />
+						<CustomBehavior File="Message" Text="I have reached Shado-Pan Garrison. " LogColor="Lime" />
+					</If>
+				</If>
+
+				<If Condition="Me.ZoneId == 5842" >
+					<If Condition="Me.X &lt; 1700 || Me.X &gt; 2000 || Me.Y &lt; 4100 || Me.Y &gt; 4400" >
+						<RunTo X="1846.229" Y="4271.746" Z="148.8683" />
 					</If>
 				</If>
 				
-				<If Condition="Me.MapId == 870" >
-					<If Condition="Me.ZoneId != 6138" >
-						<CustomBehavior File="Message" Text="I am not where I should be. Moving to Klaxxi'vess in the Dread Wastes." LogColor="Lime" />
-						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-							<RunTo X="262.4349" Y="3149.81" Z="214.5022" />
-						<CustomBehavior File="Message" Text="I have reached Klaxxie'vess. " LogColor="Lime" />
-					</If>
-				</If>	
-				
-						
 				<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 					
 				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />			  
-			    <If Condition="Me.ZoneId == 6138" >
-					<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
-						<CustomBehavior File="Message" Text="I am in Klaxxi'vess, locating the innkeep." LogColor="Lime" />
-							<RunTo X="262.4349" Y="3149.81" Z="214.5022" DestName="Innkeep" />	
+			    <If Condition="Me.ZoneId == 5842" >
+					<If Condition="Me.X &gt; 1700 &amp;&amp; Me.X &lt; 2000 &amp;&amp; Me.Y &gt; 4100 &amp;&amp; Me.Y &lt; 4400" >
+						<CustomBehavior File="Message" Text="I am in Shado-Pan Garrison, locating the innkeep." LogColor="Lime" />
+							<RunTo X="1846.229" Y="4271.746" Z="148.8683" />	
 						<CustomBehavior File="Message" Text="I have located the innkeep." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="SetHearthstone" MobId="65220"  X="263.1545" Y="3146.569" Z="214.501" />
+						<CustomBehavior File="SetHearthstone" MobId="62874" X="1846.069" Y="4274.018" Z="148.8683" />
 						<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the newest farming area." LogColor="Lime" />
+						<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 						<CustomBehavior File="ForcedMount" MountType="Ground" />
-							<RunTo X="1695.34" Y="2864.444" Z="296.5063" />						
+							<RunTo X="1247.622" Y="3034.192" Z="228.9766" />						
 						<CustomBehavior File="ForcedDismount" />
 					</If>
 				</If>
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until I'm level 90." LogColor="Lime" />
+						<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 						<CustomBehavior File="RunMacro" Macro="/sort bags" />
                                                         										
 				<If Condition="Me.ZoneId == 5842" >					
 					<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >	
 						<SetGrindArea><GrindArea>
-						<Factions>2156,,14,190,2111</Factions>
-							<Hotspots>							
-								<Hotspot X="1695.34" Y="2864.444" Z="296.5063" />
-								<Hotspot X="1889.8" Y="2801.719" Z="291.8619" />
-								<Hotspot X="1890.861" Y="2992.171" Z="291.2375" />
-								<Hotspot X="1938.865" Y="3179.01" Z="264.3776" />
-								<Hotspot X="2002.379" Y="3373.811" Z="264.6633" />
-								<Hotspot X="1857.21" Y="3332.705" Z="264.4382" />
-								<Hotspot X="1875.801" Y="3209.898" Z="265.8098" />
-								<Hotspot X="1815.896" Y="3014.461" Z="291.232" />
-								<Hotspot X="1774.088" Y="2952.94" Z="291.4115" />
+						<Factions>16</Factions>
+							<Hotspots>
+								<Hotspot X="1247.622" Y="3034.192" Z="228.9766" />
+								<Hotspot X="1342.859" Y="3029.985" Z="216.0804" />
+								<Hotspot X="1279.08" Y="3066.561" Z="194.7839" />							
+								<Hotspot X="1221.437" Y="3082.319" Z="178.4888" />
+								<Hotspot X="1158.627" Y="3137.627" Z="160.0783" />
+								<Hotspot X="1241.757" Y="3205.215" Z="164.9604" />
+								<Hotspot X="1172.622" Y="3379.271" Z="152.8946" />
 							</Hotspots>
 						</GrindArea></SetGrindArea>					
 						<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 90)" GoalText="Farming" />
@@ -397,7 +395,7 @@
 				</If>
 								
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 		        <If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 					<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
@@ -406,12 +404,12 @@
 						
 					<SetVendor>
 						<Vendors>
-							<Vendor Name="Ambersmith Zikk" Entry="64599" Type="Repair" X="147.875" Y="3194.917" Z="214.7608" />
+							<Vendor Name="Rushi the Fox" Entry="64595" Type="Repair" X="1855.366" Y="4272.189" Z="148.8683" />
 						</Vendors>
 					</SetVendor>
 					<SetMailbox>
 						<Mailboxes>
-							<Mailbox X="267.2124" Y="3153.323" Z="214.5013" />
+							<Mailbox X="1851.017" Y="4271.693" Z="148.8683" />
 						</Mailboxes>
 					</SetMailbox>
 			

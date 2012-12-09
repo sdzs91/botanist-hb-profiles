@@ -48,7 +48,7 @@
 	<QuestOrder>
 					
 				<If Condition="Me.Level &gt;= 68" >
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-4][Shawnee]_botanist_pangaea" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-H-4][Shawnee]_botanist_pangaea" />
 				</If>
 	
 				<CustomBehavior File="UserSettings" MountDistance="10" UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
@@ -291,7 +291,7 @@
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-599.0236" Y="4152.285" Z="65.37119" />
+								<Mailbox X="-598.9399" Y="4150.254" Z="65.40289" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
@@ -330,7 +330,7 @@
 				<CustomBehavior File="FlyTo" X="-1279.34" Y="6252.558" Z="48.82741" />
 				<CustomBehavior File="ForcedDismount" />
 								 
-				<If	Condition="(Me.FreeBagSlots &gt;= 5) &amp;&amp; (Me.LowestDurabilityPercent &gt;= .3)" GoalText="Farming" >
+
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 66." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>31,7,91</Factions>
@@ -350,7 +350,7 @@
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .3) || (Me.Level == 66)" GoalText="Farming" />
-				</If>
+
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -403,7 +403,7 @@
 				<CustomBehavior File="FlyTo" X="2154.868" Y="6026.35" Z="137.6873" />
 				<CustomBehavior File="ForcedDismount" />
 								 
-				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
+
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 67." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>1804,16</Factions>
@@ -420,7 +420,7 @@
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 67)" GoalText="Farming" />
-				</If>
+
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -572,15 +572,15 @@
 							<!-- ****************************************************** -->
 				
 				<If Condition="Me.MapId == 1" >				
-					<If Condition="Me.Level &gt;= 68" >
-						<CustomBehavior File="LoadProfile" ProfileName="Natives\[QO-A-4][Shawnee]_botanist_pangaea" />
+					<If Condition="Me.Level == 68" >
+						<CustomBehavior File="LoadProfile" ProfileName="Natives\[QO-H-4][Shawnee]_botanist_pangaea" />
 					</If>
 				</If>
 				
 
 				<If Condition="Me.MapId == 571" >				
 					<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 79" >
-						<CustomBehavior File="LoadProfile" ProfileName="Natives\[QO-A-5][Choctaw]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="Natives\[QO-H-5][Choctaw]_botanist_pangaea" />
 					</If>
 				</If>
 				

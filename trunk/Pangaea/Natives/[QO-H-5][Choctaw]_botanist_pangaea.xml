@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-5][Choctaw]_botanist_pangaea</Name>
+	<Name>[QO-H-5][Choctaw]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -45,7 +45,7 @@
 	<QuestOrder>
 	
 				<If Condition="Me.Level &gt;= 80" >				
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-6][Huron]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-H-6][Huron]_botanist_pangaea" />
 				</If>
 			
 				<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 69" >				
@@ -56,20 +56,19 @@
 				</If>
 				
 		<While Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 69" >
-					
+		<!--	<CustomBehavior File="UserSettings" StopBot="true" />	-->
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Valiance Keep in Borean Tundra." LogColor="Lime" />  
+				<CustomBehavior File="Message" Text="Position check, Warsong Hold in Borean Tundra." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Valiance Keep." LogColor="Lime" />
-				<CustomBehavior File="FlyTo" X="2255.703" Y="5200.517" Z="11.31931" />				
-					<RunTo X="2280.506" Y="5206.809" Z="12.4944" />				
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Warsong Hold." LogColor="Lime" />			
+					<RunTo X="2801.091" Y="6152.535" Z="84.69434" />			
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-				<CustomBehavior File="SetHearthstone" MobId="25245"  X="2282.294" Y="5210.832" Z="12.49425" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />							
+				<CustomBehavior File="WaitTimer" WaitTime="21000" />
+				<CustomBehavior File="SetHearthstone" MobId="25278" X="2803.702" Y="6154.502" Z="84.79224" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />							
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="2255.703" Y="5200.517" Z="11.31931" />	
+					<RunTo X="2734.137" Y="6092.194" Z="75.48111" />	
 				<CustomBehavior File="ForcedMount" MountType="Flying" />
 				<CustomBehavior File="FlyTo" X="2380.729" Y="5630.006" Z="43.06765" />
 				<CustomBehavior File="ForcedDismount" />
@@ -191,6 +190,8 @@
 					<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 72 to 73 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Levels 72-90 have not been scripted yet. Stopping the bot" LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				

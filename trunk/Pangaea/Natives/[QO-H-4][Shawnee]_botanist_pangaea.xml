@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-4][Shawnee]_botanist_pangaea</Name>
+	<Name>[QO-H-4][Shawnee]_botanist_pangaea</Name>
 	<MinLevel>58</MinLevel>
 	<MaxLevel>101</MaxLevel>
 	
@@ -17,57 +17,53 @@
 	<SellPurple>False</SellPurple>
 
 	<QuestOrder>
-	
-				<If Condition="Me.Level &gt;= 68" >
-					<CustomBehavior File="Message" Text="Level 68-90 have not been scripted yet. Stopping the bot." LogColor="Lime" />
-					<CustomBehavior File="UserSettings" StopBot="true" />
-				</If>
-	
+		
 				<If Condition="Me.Level &gt; 68" >
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-5][Choctaw]_botanist_pangaea" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-H-5][Choctaw]_botanist_pangaea" />
 				</If>
 	
 		<CustomBehavior File="UserSettings" UseFlightPaths="False" />
 		
-		
-				
-				<If Condition="Me.MapId == 0" >
-					<CustomBehavior File="Message" Text="I need to take the boat to Northrend." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="Moving to the Stormwind docks." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="FlyTo" X="-8300.08" Y="1405.158" Z="4.422395" />
-					<CustomBehavior File="ForcedDismount" />
+				<If Condition="Me.MapId == 530" >
+					<If Condition="Me.Level == 68 &amp;&amp; Me.ZoneId == 3522" >
+						<CustomBehavior File="FlyTo" X="2979.485" Y="5485.754" Z="383.1029" />					
+						<CustomBehavior File="MyCTM" X="1823.031" Y="5636.104" Z="498.2995" />					
+						<CustomBehavior File="MyCTM" X="1292.576" Y="5661.905" Z="493.7638" />
+						<CustomBehavior File="MyCTM" X="301.6021" Y="5240.892" Z="291.5005" />
+						<CustomBehavior File="MyCTM" X="-226.3755" Y="4694.747" Z="326.2285" />
+						<CustomBehavior File="MyCTM" X="-255.8759" Y="1380.526" Z="326.2285" />					
+						<CustomBehavior File="FlyTo" X="-161.4113" Y="968.5099" Z="54.28123" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="InteractWith" MobId="195140" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-161.317764" Y="965.409851" Z="54.29044" />
+						<CustomBehavior File="WaitTimer" WaitTime="20000" />
+							<RunTo X="1742.455" Y="-4297.627" Z="14.53881" />
+					</If>		
 				</If>
 				
-		<While Condition="Me.MapId == 0" >
-					<RunTo X="-8300.08" Y="1405.158" Z="4.422395" />
-				<CustomBehavior File="Message" Text="Waiting for the boat." LogColor="Lime" />
-				<If Condition="Me.MapId == 0" >
-				<!-- SW dock to Valiance Keep -->
-				<CustomBehavior File="UseTransport" TransportId="190536" 
-								WaitAtX="-8300.08" WaitAtY="1405.158" WaitAtZ="4.422395"
-								TransportStartX="-8288.816" TransportStartY="1424.703" TransportStartZ="0.04"
-								StandOnX="-8294.842" StandOnY="1421.358" StandOnZ="9.488697"
-								TransportEndX="2218.391" TransportEndY="5119.589" TransportEndZ="0.04"	
-								GetOffX="2234.375" GetOffY="5132.568" GetOffZ="5.343217" />								
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			</If>
+				<If Condition="Me.MapId == 1" >
+					<CustomBehavior File="Message" Text="I need to take Zeppelin Northrend." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				</If>
+									
+				<If Condition="Me.MapId == 1" >
+						<CustomBehavior File="FlyTo" X="1748.178" Y="-4271.429" Z="156.7331" />
+						<CustomBehavior File="MyCTM" X="1762.645" Y="-4286.081" Z="133.1075" />
+					<CustomBehavior File="ForcedDismount" />	
+					<CustomBehavior File="Message" Text="Waiting for the Zeppelin." LogColor="Lime" />
+					<CustomBehavior File="UseTransport" TransportId="186238"
+								WaitAtX="1763.203" WaitAtY="-4284.529" WaitAtZ="133.1072" 
+								TransportStartX="1775.066" TransportStartY="-4299.745" TransportStartZ="151.0326" 
+								StandOnX="1770.22" StandOnY="-4292.056" StandOnZ="133.1872"
+								TransportEndX="2837.90" TransportEndY="6187.44" TransportEndZ="140.16"	
+								GetOffX="2836.319" GetOffY="6184.29" GetOffZ="121.9199" />								
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				</If>
 			
-
-			<!--	<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
-				<CustomBehavior File="RunMacro" Macro="/target Sailor Dawning" NumOfTimes="1" WaitTime="0"/>
-					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 31791">
-						<CustomBehavior File="WaitTimer" WaitTime="10000" />
-						<CustomBehavior File="Message" Text="Moving aboard the boat.." LogColor="Lime" />
-						<CustomBehavior File="MyCTM" X="-8294.163" Y="1424.834" Z="9.52632" />
-						<CustomBehavior File="WaitTimer" WaitTime="150000" />
-					</If>	-->
-		</While>				
+				
 									
 				<If Condition="Me.MapId == 571" >
-						<CustomBehavior File="FlyTo" X="2255.703" Y="5200.517" Z="11.31931" />
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-5][Choctaw]_botanist_pangaea" /> 			
+						<RunTo X="2818.891" Y="6168.541" Z="121.8571" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-H-5][Choctaw]_botanist_pangaea" /> 			
 				</If>
 				
 	</QuestOrder>
