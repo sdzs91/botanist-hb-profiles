@@ -26,6 +26,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="2630.742" Y="5766.109" Z="99.2227" Radius="0" />
 		<Blackspot X="2508.881" Y="5692.293" Z="70.77988" Radius="40" />
 		<Blackspot X="4570.342" Y="730.9821" Z="92.18278" Radius="30" />
 		<Blackspot X="7098.957" Y="-2155.757" Z="761.4069" Radius="39.64452" />
@@ -61,7 +62,9 @@
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Warsong Hold in Borean Tundra." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Warsong Hold." LogColor="Lime" />			
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Warsong Hold." LogColor="Lime" />
+				<CustomBehavior File="FlyTo" X="2745.699" Y="6103.045" Z="77.71205" />
+				<CustomBehavior File="ForcedDismount" />
 					<RunTo X="2801.091" Y="6152.535" Z="84.69434" />			
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
@@ -69,22 +72,26 @@
 				<CustomBehavior File="SetHearthstone" MobId="25278" X="2803.702" Y="6154.502" Z="84.79224" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />							
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="2734.137" Y="6092.194" Z="75.48111" />	
+					<RunTo X="2744.547" Y="6096.886" Z="77.12262" />
 				<CustomBehavior File="ForcedMount" MountType="Flying" />
-				<CustomBehavior File="FlyTo" X="2416.541" Y="5605.887" Z="44.02058" />
+				<CustomBehavior File="FlyTo" X="2725.72" Y="6082.935" Z="105.4176" />
+				<CustomBehavior File="FlyTo" X="2949.404" Y="5912.083" Z="113.5843" />
 				<CustomBehavior File="ForcedDismount" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 70." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>1985</Factions>
+							<Factions>1985,21</Factions>
 								<Hotspots>
-									<Hotspot X="2416.541" Y="5605.887" Z="44.02058" />
-									<Hotspot X="2446.096" Y="5645.189" Z="50.87428" />
-									<Hotspot X="2569.236" Y="5632.882" Z="39.94718" />
-									<Hotspot X="2674.489" Y="5554.955" Z="42.96707" />
-									<Hotspot X="2602.559" Y="5551.554" Z="37.73247" />
-									<Hotspot X="2467.02" Y="5560.015" Z="40.14601" />
+									<Hotspot X="2949.404" Y="5912.083" Z="113.5843" />
+									<Hotspot X="2930.295" Y="5815.738" Z="118.8869" />
+									<Hotspot X="2849.901" Y="5807.213" Z="101.0243" />
+									<Hotspot X="2686.194" Y="5894.922" Z="90.3765" />
+									<Hotspot X="2562.298" Y="5994.493" Z="94.43491" />
+									<Hotspot X="2425.38" Y="6010.892" Z="95.68574" />
+									<Hotspot X="2395.908" Y="6107.429" Z="85.538" />
+									<Hotspot X="2265.665" Y="5982.366" Z="104.5309" />
+									<Hotspot X="2329.591" Y="5890.13" Z="95.23849" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 70)" GoalText="Farming" />
@@ -126,24 +133,24 @@
 		<While Condition="Me.Level &gt;= 70 &amp;&amp; Me.Level &lt;= 71" >
 					
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Fizzcrank Airstrip in Borean Tundra." LogColor="Lime" />  
+				<CustomBehavior File="Message" Text="Position check, Bor' gorok Outpost in Borean Tundra." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Fizzcrank Airstrip." LogColor="Lime" />														
-				<CustomBehavior File="FlyTo" X="4160.617" Y="5280.846" Z="26.22425" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Bor' gorok Outpost." LogColor="Lime" />														
+				<CustomBehavior File="FlyTo" X="4499.77" Y="5723.701" Z="81.23464" />
 				<CustomBehavior File="ForcedDismount" />
-					<RunTo X="4176.722" Y="5280.369" Z="26.6932" />
+					<RunTo X="4508.524" Y="5709.848" Z="81.53186" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-				<CustomBehavior File="SetHearthstone" MobId="26596" X="4178.471" Y="5278.223" Z="26.69456" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="SetHearthstone" MobId="27069" X="4506.357" Y="5707.318" Z="81.52099" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="4160.617" Y="5280.846" Z="26.22425" />
+					<RunTo X="4499.77" Y="5723.701" Z="81.23464" />
 				<CustomBehavior File="ForcedMount" MountType="Flying" />
 				<CustomBehavior File="FlyTo"  X="3805.584" Y="5143.246" Z="-1.51449" />
 				<CustomBehavior File="ForcedDismount" />
 								 
-				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
+
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 72." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>16,189</Factions>
@@ -164,7 +171,7 @@
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 72)" GoalText="Farming" />
-				</If>
+
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -174,12 +181,12 @@
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Willis Wobblewheel" Entry="26599" Type="Repair" X="4135.004" Y="5281.168" Z="25.08803" />
+								<Vendor Name="Drigoth" Entry="27067" Type="Repair" X="4510.52" Y="5703.353" Z="81.54047" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="4162.641" Y="5286.355" Z="26.35423" />
+								<Mailbox X="4503.753" Y="5719.003" Z="81.49468" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
