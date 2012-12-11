@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-6][Huron]_botanist_pangaea</Name>
+	<Name>[QO-H-6][Huron]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -41,17 +41,20 @@
 						
 	<QuestOrder>
 	
-				<If Condition="Me.Level &gt; 85" >
-					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-7][Comanche]_botanist_pangaea" />
+				<If Condition="Me.Level &gt;= 80" >
+					<CustomBehavior File="Message" Text="Levels 80-90 have not been scripted yet. Stopping the bot" LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<!-- <CustomBehavior File="LoadProfile" ProfileName="[QO-H-7][Comanche]_botanist_pangaea" />	-->
 				</If>
 				
 				<If Condition="Me.Level == 85" >
 					<If Condition="Me.MapId == 870" >
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-7][Comanche]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-H-7][Comanche]_botanist_pangaea" />
 					</If>
 				</If>
 				
-				<If Condition="Me.MapId == 0" >
+				<If Condition="Me.MapId == 1" >
 					<If Condition="Me.Level == 80" >
 						<CustomBehavior File="FlyTo" X="-8345.691" Y="639.2832" Z="95.41733" />
 						<CustomBehavior File="Message" Text="Picking up the quest, Hero's Call: Mount Hyjal!." LogColor="Lime" />						
@@ -423,7 +426,7 @@
 					<If Condition="Me.MapId == 0" >
 						<CustomBehavior File="ForcedDismount" />
 						<CustomBehavior File="FlyTo" X="-8345.208" Y="639.4958" Z="95.79863" />
-						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-7][Comanche]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-H-7][Comanche]_botanist_pangaea" />
 					</If>
 				</If>
 				
