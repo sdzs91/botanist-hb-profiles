@@ -73,9 +73,10 @@
 					
 		<While Condition="Me.Level &gt;= 85 &amp;&amp; Me.Level &lt;= 86" >
 			
-				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
+				
 				<If Condition="Me.MapId == 1" >
 					<If Condition="((!HasQuest(29612)) &amp;&amp; (IsQuestCompleted(29612)))" >
+						<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
 						<CustomBehavior File="Message" Text="I am in Kalimdor, moving to the Honeydew Village portal." LogColor="Lime" />
 						<CustomBehavior File="FlyTo" X="2018.66" Y="-4700.018" Z="28.56328" />							
 						<CustomBehavior File="ForcedDismount" />
@@ -101,9 +102,10 @@
 				</If>
 				
                               <!-- honeydew village -->
-			    <CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />
-				<If Condition="Me.X &gt; 2868.62 &amp;&amp; Me.Y &gt; -654.9963" >
-					<CustomBehavior File="Message" Text="I'm in or near Honeydew Village. I'm not sure how I got here. Setting my hearth to be safe." LogColor="Lime" />
+			    
+				<If Condition="Me.ZoneId == 5785" >
+					<CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I'm in Jade Forest. I'm not sure how I got here. Setting my hearth in Honeydew Village to be safe." LogColor="Lime" />
 					<CustomBehavior File="ForcedMount" MountType="Ground" />
 						<RunTo X="3029.59" Y="-551.4306" Z="248.189" />
 						<RunTo X="3031.165" Y="-541.5078" Z="249.0275" />						
@@ -125,7 +127,7 @@
 							<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 							<CustomBehavior File="RunMacro" Macro="/sort bags" />	
 									<SetGrindArea><GrindArea>
-									<Factions>190,2478</Factions>
+									<Factions>2478,14,16</Factions>
 										<Hotspots>
 											<Hotspot X="2976.226" Y="-1367.368" Z="245.7172" />
 											<Hotspot X="2967.51" Y="-1451.281" Z="244.1403" />
