@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-10][Chippewa]_botanist_pangaea</Name>
+	<Name>[QO-H-10][Chippewa]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -333,7 +333,7 @@
 									<CustomBehavior File="Message" Text="I have learned all the flight paths I need." LogColor="Lime" />
 									<CustomBehavior File="WaitTimer" WaitTime="1000" />
 									<CustomBehavior File="Message" Text="I am changing profiles." LogColor="Lime" />
-									<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />						
+									<CustomBehavior File="LoadProfile" ProfileName="[QO-H-8][Apache]_botanist_pangaea" />						
 								</If>
 							</If>
 						</If>

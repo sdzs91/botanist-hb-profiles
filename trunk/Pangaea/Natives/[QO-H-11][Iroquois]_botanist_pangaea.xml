@@ -1,5 +1,5 @@
 <HBProfile>
-	<Name>[QO-A-11][Iroquois]_botanist_pangaea</Name>
+	<Name>[QO-H-11][Iroquois]_botanist_pangaea</Name>
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
   
@@ -47,6 +47,8 @@
 
 			
 				<If Condition="Me.MapId == 870" >
+					<CustomBehavior File="Message" Text="Opening the Vale hasn't been scripted yet. Stopping the bot." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
 					<CustomBehavior File="UserSettings" MountDistance="30" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="75" LogoutForInactivity="True" />
 						<RunTo X="3669.161" Y="542.5462" Z="639.6909" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">

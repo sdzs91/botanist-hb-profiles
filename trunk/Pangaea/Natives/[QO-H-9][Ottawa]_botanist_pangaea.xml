@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-9][Ottawa]_botanist_pangaea</Name>
+	<Name>[QO-H-9][Ottawa]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -71,8 +71,8 @@
 											<If Condition="Me.X &gt; -317.1932 &amp;&amp; Me.X &lt; -42.4191 &amp;&amp; Me.Y &gt; 384.9974 &amp;&amp; Me.Y &lt; 672.6077" >
 												<CustomBehavior File="Message" Text="I have learned all the flight paths I need for now." LogColor="Lime" />
 												<CustomBehavior File="WaitTimer" WaitTime="2000" />
-												<CustomBehavior File="Message" Text="I am changing the profile to [QO-A-Next-Gen-Grind][85-90]_botanist_pangaea." LogColor="Lime" />
-												<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
+												<CustomBehavior File="Message" Text="I am changing the profiles." LogColor="Lime" />
+												<CustomBehavior File="LoadProfile" ProfileName="[QO-H-8][Apache]_botanist_pangaea" />
 											</If>
 										</If>
 									</If>

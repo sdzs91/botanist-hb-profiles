@@ -41,14 +41,11 @@
 						
 	<QuestOrder>
 	
-				<If Condition="Me.Level &gt;= 80" >
-					<CustomBehavior File="Message" Text="Levels 80-90 have not been scripted yet. Stopping the bot" LogColor="Lime" />
-					<CustomBehavior File="UserSettings" StopBot="true" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<!-- <CustomBehavior File="LoadProfile" ProfileName="[QO-H-7][Comanche]_botanist_pangaea" />	-->
+				<If Condition="Me.Level &gt; 85" >
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-H-7][Comanche]_botanist_pangaea" />
 				</If>
 				
-				<If Condition="Me.Level == 85" >
+				<If Condition="Me.Level &gt;= 85" >
 					<If Condition="Me.MapId == 870" >
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-H-7][Comanche]_botanist_pangaea" />
 					</If>
@@ -56,27 +53,27 @@
 				
 				<If Condition="Me.MapId == 1" >
 					<If Condition="Me.Level == 80" >
-						<CustomBehavior File="FlyTo" X="-8345.691" Y="639.2832" Z="95.41733" />
-						<CustomBehavior File="Message" Text="Picking up the quest, Hero's Call: Mount Hyjal!." LogColor="Lime" />						
+						<CustomBehavior File="FlyTo" X="1597.686" Y="-4371.337" Z="21.20002" />
+						<CustomBehavior File="Message" Text="Picking up the quest, Warchief's Command: Mount Hyjal!." LogColor="Lime" />						
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						
-						<If Condition="((!HasQuest(27726)) &amp;&amp; (!IsQuestCompleted(27726)))" >
-									<RunTo X="-8345.691" Y="639.2832" Z="95.41733" />
-							<PickUp QuestName="Hero's Call: Mount Hyjal!" QuestId="27726" GiverName="Hero's Call Board" GiverId="206294" X="-8341.77" Y="641.756958" Z="95.8576" />
+						<If Condition="((!HasQuest(27721)) &amp;&amp; (!IsQuestCompleted(27721)))" >
+									<RunTo X="1597.686" Y="-4371.337" Z="21.20002" />
+							<PickUp QuestName="Warchief's Command: Mount Hyjal!" QuestId="27721" GiverName="Warchief's Command Board" GiverId="206109" X="1600.98962" Y="-4369.73975" Z="21.0694" />
 								<CustomBehavior File="WaitTimer" WaitTime="1000" />
 								<CustomBehavior File="ForcedMount" MountType="Flying" />
-								<CustomBehavior File="FlyTo" X="-8336.112" Y="284.5871" Z="156.8328" />
+								<CustomBehavior File="FlyTo" X="1900.494" Y="-4203.093" Z="37.15815" />
 								<CustomBehavior File="ForcedDismount" />
 								<CustomBehavior File="WaitTimer" WaitTime="1000" />
-								<CustomBehavior File="InteractWith" MobId="15187"  GossipOptions="1" NumOfTimes="1"  X="-8338.654" Y="286.2708" Z="156.8326" />
-								<CustomBehavior File="WaitTimer" WaitTime="10000" />
+								<CustomBehavior File="InteractWith" MobId="15188"  GossipOptions="1" NumOfTimes="1"  X="1896.11" Y="-4200.94" Z="37.2414" />
+								<CustomBehavior File="WaitTimer" WaitTime="12000" />
 						</If>
 					</If>
 				</If>	
 																					
 				<If Condition="Me.ZoneId == 493" >
-					<If Condition="((HasQuest(27726)) &amp;&amp; (!IsQuestCompleted(27726)))" >
-						<TurnIn QuestName="Hero's Call: Mount Hyjal!" QuestId="27726" TurnInName="Emissary Windsong" TurnInId="39865" X="7801.045" Y="-2430.96" Z="487.5915" />
+					<If Condition="((HasQuest(27721)) &amp;&amp; (!IsQuestCompleted(27721)))" >
+						<TurnIn QuestName="Warchief's Command: Mount Hyjal!" QuestId="27721" TurnInName="Emissary Windsong" TurnInId="39865" X="7801.045" Y="-2430.96" Z="487.5915" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					</If>
 					
@@ -342,16 +339,29 @@
 				</If>
 				
 				<If Condition="Me.MapId == 1" >
-					<CustomBehavior File="Message" Text="The new farming location is in Twilight Highlands. I am flying to Mount Hyjal to use the portal to Stormwind." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="5563.192" Y="-3845.674" Z="1747.819" />
-					<CustomBehavior File="MyCTM" X="5544.713" Y="-3593.849" Z="1567.968" />
-					<CustomBehavior File="Message" Text="I have reached the portal to stormwind. I am using the portal" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="The new farming location is in Twilight Highlands. I am flying to Mount Hyjal to use the portal to Orgrimmar." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="5587.067" Y="-3732.609" Z="1753.634" />
+					<CustomBehavior File="MyCTM" X="5506.901" Y="-3628.595" Z="1567.002" />
+					<CustomBehavior File="Message" Text="I have reached the portal to Orgrimmar. I am using the portal" LogColor="Lime" />
 					<CustomBehavior File="ForcedDismount" />
-					<CustomBehavior File="InteractWith" MobId="209080" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5541.02344" Y="-3587.677" Z="1567.95544" />
+					<CustomBehavior File="InteractWith" MobId="209081" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5503.81152" Y="-3624.66675" Z="1567.54224" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
-					<CustomBehavior File="ForcedMount" MountType="Flying" />
 				</If>
-
+				
+				<If Condition="Me.MapId == 1" >
+					<CustomBehavior File="FlyTo" X="1853.676" Y="-4405.566" Z="163.4607" />
+					<CustomBehavior File="MyCTM" X="1841.801" Y="-4388.78" Z="135.2327" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="UseTransport"
+								TransportId="164871"
+								WaitAtX="1839.842" WaitAtY="-4387.801" WaitAtZ="135.233" 
+								TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+								TransportEndX="2062.376" TransportEndY="292.998047" TransportEndZ="114.670547"
+								StandOnX="1837.141" StandOnY="-4387.305" StandOnZ="135.0463" 
+								GetOffX="2068.327" GetOffY="286.5359" GetOffZ="97.0316" 
+								/>
+				</If>	
+					
 		<While Condition="Me.Level &gt;= 84 &amp;&amp; Me.Level &lt; 85" >
 				
 				<If Condition="Me.MapId == 0" >
@@ -359,22 +369,22 @@
 					<CustomBehavior File="Message" Text="Position check, Thundermar in Twilight Highlands." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at Thundermar." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="-3205.445" Y="-5039.569" Z="119.9723" />
+					<CustomBehavior File="FlyTo" X="-3671.42" Y="-5280.236" Z="41.64518" />
 					<CustomBehavior File="ForcedDismount" />
-						<RunTo X="-3223.979" Y="-5047.88" Z="120.625" />			
+						<RunTo X="-3664.375" Y="-5249.419" Z="42.13861" />			
 					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="SetHearthstone" MobId="49591" X="-3226.321" Y="-5048.929" Z="120.6304" />
+					<CustomBehavior File="SetHearthstone" MobId="49762" X="-3663.24" Y="-5246.885" Z="42.13963" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />							
 					<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-						<RunTo X="-3205.445" Y="-5039.569" Z="119.9723" />	
+						<RunTo X="-3671.42" Y="-5280.236" Z="41.64518" />	
 					<CustomBehavior File="ForcedMount" MountType="Flying" />
 					<CustomBehavior File="FlyTo" X="-3133.713" Y="-5766.556" Z="109.4522" />
 					<CustomBehavior File="ForcedDismount" />
 
 								 
-					<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
+
 						<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 85." LogColor="Lime" />				
 							<SetGrindArea><GrindArea>
 								<Factions>15,2358</Factions>
@@ -389,7 +399,7 @@
 									</Hotspots>
 							</GrindArea></SetGrindArea>					
 						<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 85)" GoalText="Farming" />
-					</If>
+
 
 						<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -406,12 +416,12 @@
 					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Caelyb Coppercrag" Entry="49592" Type="Repair" X="-3177.95" Y="-5021.481" Z="121.2318" />
+								<Vendor Name="Naka Scaleblade" Entry="49768" Type="Repair" X="-3675.151" Y="-5381.104" Z="35.76842" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-3205.219" Y="-5046.167" Z="120.3005" />
+								<Mailbox X="-3667.667" Y="-5281.196" Z="41.80183" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
@@ -424,8 +434,15 @@
 				
 				<If Condition="Me.Level &gt;= 85" >
 					<If Condition="Me.MapId == 0" >
-						<CustomBehavior File="ForcedDismount" />
-						<CustomBehavior File="FlyTo" X="-8345.208" Y="639.4958" Z="95.79863" />
+					<CustomBehavior File="Message" Text="I have reached level 85. I need to take the zeppelin back to Orgrimmar. Flying to Tirisfal Glades." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2066.182" Y="283.5452" Z="97.03185" />
+					<CustomBehavior File="Message" Text="I have reached the Zeppelin. I am waiting for it to arrive.." LogColor="Lime" />	
+					<CustomBehavior File="UseTransport" TransportId="164871"
+												WaitAtX="2070.155" WaitAtY="289.2588" WaitAtZ="97.0315" 
+												TransportStartX="2062.376" TransportStartY="292.998" TransportStartZ="114.973"
+												StandOnX="2067.979" StandOnY="295.2747" StandOnZ="97.23677" 
+												TransportEndX="1833.509" TransportEndY="-4391.543" TransportEndZ="152.7679"
+												GetOffX="1840.225" GetOffY="-4390.912" GetOffZ="135.2337" />
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-H-7][Comanche]_botanist_pangaea" />
 					</If>
 				</If>
