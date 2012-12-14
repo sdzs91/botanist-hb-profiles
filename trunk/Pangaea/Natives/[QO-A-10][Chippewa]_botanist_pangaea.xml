@@ -277,59 +277,21 @@
 								<RunTo X="1533.95" Y="2783.291" Z="300.7063" />
 							<CustomBehavior File="Message" Text="Learning the Gao-Ran Battlefront flight path." LogColor="Lime" />	
 								<RunTo X="1438.155" Y="2801.717" Z="302.0239" />
-							<CustomBehavior File="Message" Text="Moving to the Sunset Brewgarden Flight Master." LogColor="Lime" />
-								<RunTo X="1509.184" Y="2773.727" Z="297.546" />
-								<RunTo X="1482.111" Y="3161.114" Z="303.8871" />
-								<RunTo X="1532.003" Y="3409.943" Z="268.8632" />
-								<RunTo X="1523.677" Y="3533.221" Z="226.4677" />
-								<RunTo X="1343.39" Y="3588.538" Z="226.7116" />
-								<RunTo X="1109.226" Y="3716.542" Z="247.8403" />
-								<RunTo X="1032.514" Y="3744.593" Z="252.6348" />
-								<RunTo X="972.3077" Y="3664.871" Z="257.4521" />
-							<CustomBehavior File="Message" Text="Learning Sunset Brewgarden flight path." LogColor="Lime" />
-								<RunTo X="906.425" Y="3487.933" Z="229.4073" />		<!-- flight master kor'vess -->
-								<RunTo X="980.369" Y="3449.486" Z="257.0705" /> 
-								<RunTo X="924.0849" Y="3463.648" Z="238.2054" />
-							<CustomBehavior File="Message" Text="Moving to the Klaxxi'vess Flight Master." LogColor="Lime" />	
-								<RunTo X="874.4385" Y="3483.913" Z="223.4289" />
-							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
-								<Hotspot X="936.5988" Y="3455.247" Z="243.5071" />
-								<Hotspot X="925.0193" Y="3465.279" Z="238.1901" />
-								<Hotspot X="901.442" Y="3484.97" Z="228.6971" />
-								<Hotspot X="886.5604" Y="3482.907" Z="225.541" />
-								<Hotspot X="861.5265" Y="3466.332" Z="221.3426" />
-								<Hotspot X="837.2507" Y="3447.187" Z="221.2215" />
-								<Hotspot X="817.7053" Y="3442.601" Z="220.2993" />
-								<Hotspot X="787.5402" Y="3440.754" Z="217.6661" />
-								<Hotspot X="758.2228" Y="3431.881" Z="216.2778" />
-								<Hotspot X="742.0051" Y="3431.78" Z="216.1563" />
-								<Hotspot X="726.823" Y="3433.846" Z="214.5119" />
-								<Hotspot X="698.9316" Y="3444.937" Z="206.8439" />
-								<Hotspot X="669.4514" Y="3452.144" Z="211.7827" />
-								<Hotspot X="639.8464" Y="3445.584" Z="204.5585" />
-								<Hotspot X="619.9385" Y="3421.928" Z="208.7509" />
-								<Hotspot X="598.1223" Y="3400.784" Z="207.2731" />
-								<Hotspot X="582.5702" Y="3374.549" Z="211.4344" />
-								<Hotspot X="557.2795" Y="3357.329" Z="217.586" />
-								<Hotspot X="531.4463" Y="3342.637" Z="229.9056" />
-								<Hotspot X="535.6722" Y="3312.509" Z="241.7533" />
-								<Hotspot X="521.9338" Y="3287.497" Z="246.3397" />
-								<Hotspot X="496.3269" Y="3281.798" Z="245.7398" />
-								<Hotspot X="467.7769" Y="3271.285" Z="247.2085" />
-								<Hotspot X="439.9628" Y="3259.326" Z="247.8638" />
-								<Hotspot X="412.6702" Y="3246.517" Z="248.7524" />
-								<Hotspot X="384.922" Y="3233.211" Z="241.6874" />
-								<Hotspot X="361.8387" Y="3213.901" Z="236.4781" />
-								<Hotspot X="331.7098" Y="3212.478" Z="223.9816" />
-								<Hotspot X="302.6046" Y="3220.658" Z="215.2915" />
-								<Hotspot X="275.3365" Y="3207.03" Z="214.9423" />
-								<Hotspot X="251.1908" Y="3188.146" Z="215.275" />
-								<Hotspot X="222.6499" Y="3176.2" Z="214.2176" />
-								<Hotspot X="194.2717" Y="3165.227" Z="215.6174" />
-								<Hotspot X="178.6842" Y="3154.439" Z="215.3039" />
+							<CustomBehavior File="Message" Text="Moving to the Rensai's Watchpost Flight Master." LogColor="Lime" />
+								<RunTo X="1542.4" Y="2933.587" Z="296.1713" />
+								<RunTo X="1485.682" Y="3145.365" Z="301.281" />
+								<RunTo X="1515.966" Y="3311.167" Z="296.7372" />
+								<RunTo X="1549.402" Y="3464.602" Z="249.9292" />
+								<RunTo X="1577.197" Y="3705.973" Z="221.3605" />
+							<CustomBehavior File="Message" Text="Learning the Rensai's Watchpost flight path." LogColor="Lime" />
+								<RunTo X="1564.497" Y="3950.532" Z="226.9056" />
+							<CustomBehavior File="Message" Text="Moving to the Rensai's Watchpost Flight Master." LogColor="Lime" />
+								<RunTo X="1699.928" Y="4091.514" Z="174.4809" />
+							<CustomBehavior File="Message" Text="Learning the Shado-pan flight path." LogColor="Lime" />	
+								<RunTo X="1770.517" Y="4192.769" Z="154.6866" />
 							</CustomBehavior>			 
-							<If Condition="Me.ZoneId == 6138" >				
-								<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
+							<If Condition="Me.ZoneId == 5842" >				
+								<If Condition="Me.X &gt; 1724.094 &amp;&amp; Me.X &lt; 1885.932 &amp;&amp; Me.Y &gt; 4142.689 &amp;&amp; Me.Y &lt; 4270.093" >
 									<CustomBehavior File="Message" Text="I have learned all the flight paths I need." LogColor="Lime" />
 									<CustomBehavior File="WaitTimer" WaitTime="1000" />
 									<CustomBehavior File="Message" Text="I am changing profiles." LogColor="Lime" />
