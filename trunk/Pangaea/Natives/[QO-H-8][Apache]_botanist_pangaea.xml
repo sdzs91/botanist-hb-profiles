@@ -74,7 +74,7 @@
 					
 		
 			
-				
+		<While Condition="Me.Level &gt;= 85 &amp;&amp; Me.Level &lt;= 86" >		
 				<If Condition="Me.MapId == 1" >
 					<If Condition="((!HasQuest(29612)) &amp;&amp; (IsQuestCompleted(29612)))" >
 						<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
@@ -107,7 +107,7 @@
 						<RunTo X="2505.9" Y="-1590.89" Z="400.868" />
 				</If>	
                               <!-- honeydew village -->
-		<While Condition="Me.Level &gt;= 85 &amp;&amp; Me.Level &lt;= 86" >		    
+		    
 				<If Condition="Me.ZoneId == 5785" >
 					<CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />
 					<CustomBehavior File="Message" Text="I'm at the Tian Monestary. I am flying to Honeydew Village to set my hearth." LogColor="Lime" />
