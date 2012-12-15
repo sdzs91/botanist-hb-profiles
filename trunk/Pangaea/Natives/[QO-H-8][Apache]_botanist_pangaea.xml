@@ -107,7 +107,7 @@
 						<RunTo X="2505.9" Y="-1590.89" Z="400.868" />
 				</If>	
                               <!-- honeydew village -->
-		<While Condition="Me.Level &gt;= 85 &amp;&amp; Me.Level &lt;= 87" >		    
+		<While Condition="Me.Level &gt;= 85 &amp;&amp; Me.Level &lt;= 86" >		    
 				<If Condition="Me.ZoneId == 5785" >
 					<CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />
 					<CustomBehavior File="Message" Text="I'm at the Tian Monestary. I am flying to Honeydew Village to set my hearth." LogColor="Lime" />
@@ -127,7 +127,7 @@
 				</If>		
 													
 				<If Condition="Me.ZoneId == 5785" >
-					<If  Condition="Me.Level &gt;= 85 &amp;&amp; Me.Level &lt;= 87" >
+					<If  Condition="Me.Level &gt;= 85 &amp;&amp; Me.Level &lt;= 86" >
 							<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until I resach level 87." LogColor="Lime" />
 									<SetGrindArea><GrindArea>
 									<Factions>2478,14,16,190</Factions>
@@ -143,7 +143,7 @@
 											<Hotspot X="2768.673" Y="-1937.693" Z="213.7027" />
 									</Hotspots>
 								</GrindArea></SetGrindArea>												
-							<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 88)" GoalText="Farming" />
+							<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 87)" GoalText="Farming" />
 					</If>
 				</If>
 								
