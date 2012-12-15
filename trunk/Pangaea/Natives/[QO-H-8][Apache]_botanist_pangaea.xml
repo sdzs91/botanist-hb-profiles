@@ -242,7 +242,8 @@
 										<Hotspot X="-344.5022" Y="2308.912" Z="116.4603" />
 										<Hotspot X="-285.4609" Y="2320.905" Z="122.0909" />
 										<Hotspot X="-189.657" Y="2171.012" Z="113.7955" />
-										<Hotspot X="-340.1443" Y="2215.333" Z="114.1111" />										
+										<Hotspot X="-340.1443" Y="2215.333" Z="114.1111" />
+										<Hotspot X="-164.5742" Y="2298.775" Z="165.7897" />
 									</Hotspots>
 								</GrindArea></SetGrindArea>					
 								<GrindTo Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 89)" GoalText="Farming" />
