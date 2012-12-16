@@ -2,7 +2,7 @@
 	<Name>[QO-H-10][Chippewa]_botanist_pangaea</Name>
    
 	<MinLevel>1</MinLevel>
-	<MaxLevel>91</MaxLevel>
+	<MaxLevel>101</MaxLevel>
    
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>0</MinFreeBagSlots>
@@ -306,8 +306,7 @@
 							<CustomBehavior File="Message" Text="Moving to the Rensai's Watchpost Flight Master." LogColor="Lime" />
 								<RunTo X="1699.928" Y="4091.514" Z="174.4809" />
 							<CustomBehavior File="Message" Text="Learning the Shado-pan flight path." LogColor="Lime" />	
-								<RunTo X="1770.517" Y="4192.769" Z="154.6866" />
-							</CustomBehavior>			 
+								<RunTo X="1770.517" Y="4192.769" Z="154.6866" />		 
 							<If Condition="Me.ZoneId == 5842" >				
 								<If Condition="Me.X &gt; 1724.094 &amp;&amp; Me.X &lt; 1885.932 &amp;&amp; Me.Y &gt; 4142.689 &amp;&amp; Me.Y &lt; 4270.093" >
 									<CustomBehavior File="Message" Text="I have learned all the flight paths I need." LogColor="Lime" />
@@ -324,3 +323,4 @@
 	
 	</QuestOrder>
 
+</HBProfile>
