@@ -44,6 +44,7 @@
 </AvoidMobs>
 
 <Blackspots>
+	<Blackspot X="2930.903" Y="-1645.666" Z="252.8335" Radius="50" />
 	<Blackspot X="374.5782" Y="3430.849" Z="221.1782" Radius="20" />
 	<Blackspot X="-95.53642" Y="-301.9591" Z="144.8068" Radius="25" />
 	<Blackspot X="-120.8431" Y="-2286.674" Z="29.21791" Radius="130" />
@@ -121,7 +122,7 @@
 						<RunTo X="3029.59" Y="-551.4306" Z="248.189" />
 					<CustomBehavior File="ForcedMount" MountType="Ground" />
 					<CustomBehavior File="Message" Text="Moving to the farming area." LogColor="Lime" />
-						<RunTo X="2976.226" Y="-1367.368" Z="245.7172" />
+						<RunTo X="2973.958" Y="-1365.864" Z="245.9139" />
 					<CustomBehavior File="ForcedDismount" />
 					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>						
 				</If>		
@@ -132,15 +133,10 @@
 									<SetGrindArea><GrindArea>
 									<Factions>2478,14,16,190</Factions>
 										<Hotspots>
-											<Hotspot X="2976.226" Y="-1367.368" Z="245.7172" />
-											<Hotspot X="2967.51" Y="-1451.281" Z="244.1403" />
-											<Hotspot X="2848.26" Y="-1464.94" Z="278.194" />
-											<Hotspot X="2953.554" Y="-1559.137" Z="253.0611" />
-											<Hotspot X="2941.678" Y="-1645.881" Z="252.833" />
-											<Hotspot X="2868.268" Y="-1658.248" Z="254.2688" />
-											<Hotspot X="2898.093" Y="-1798.38" Z="233.9524" />
-											<Hotspot X="2871.751" Y="-1935.161" Z="213.3033" />
-											<Hotspot X="2768.673" Y="-1937.693" Z="213.7027" />
+											<Hotspot X="2973.958" Y="-1365.864" Z="245.9139" />
+											<Hotspot X="2970.014" Y="-1452.175" Z="244.1403" />
+											<Hotspot X="2845.543" Y="-1465.968" Z="278.4506" />
+											<Hotspot X="2946.463" Y="-1548.329" Z="252.9818" />
 									</Hotspots>
 								</GrindArea></SetGrindArea>												
 							<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 87)" GoalText="Farming" />
@@ -239,6 +235,8 @@
 									<Hotspots>
 										<Hotspot X="-356.5824" Y="2161.057" Z="110.1687" />
 										<Hotspot X="-491.2369" Y="2160.3" Z="106.54" />
+										<Hotspot X="-466.7996" Y="2278.56" Z="137.3876" />
+										<Hotspot X="-426.246" Y="2307.155" Z="133.2817" />
 										<Hotspot X="-344.5022" Y="2308.912" Z="116.4603" />
 										<Hotspot X="-285.4609" Y="2320.905" Z="122.0909" />
 										<Hotspot X="-189.657" Y="2171.012" Z="113.7955" />
