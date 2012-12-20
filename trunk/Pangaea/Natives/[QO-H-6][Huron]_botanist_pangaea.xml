@@ -53,23 +53,24 @@
 				
 				<If Condition="Me.MapId == 1" >
 					<If Condition="Me.Level == 80" >
-						<CustomBehavior File="FlyTo" X="1597.686" Y="-4371.337" Z="21.20002" />
-						<CustomBehavior File="Message" Text="Picking up the quest, Warchief's Command: Mount Hyjal!." LogColor="Lime" />						
-						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						
 						<If Condition="((!HasQuest(27721)) &amp;&amp; (!IsQuestCompleted(27721)))" >
-									<RunTo X="1597.686" Y="-4371.337" Z="21.20002" />
-							<PickUp QuestName="Warchief's Command: Mount Hyjal!" QuestId="27721" GiverName="Warchief's Command Board" GiverId="206109" X="1600.98962" Y="-4369.73975" Z="21.0694" />
-								<CustomBehavior File="WaitTimer" WaitTime="1000" />
-								<CustomBehavior File="ForcedMount" MountType="Flying" />
-								<CustomBehavior File="FlyTo" X="1900.494" Y="-4203.093" Z="37.15815" />
-								<CustomBehavior File="ForcedDismount" />
-								<CustomBehavior File="WaitTimer" WaitTime="1000" />
-								<CustomBehavior File="InteractWith" MobId="15188"  GossipOptions="1" NumOfTimes="1"  X="1896.11" Y="-4200.94" Z="37.2414" />
-								<CustomBehavior File="WaitTimer" WaitTime="12000" />
+							<CustomBehavior File="Message" Text="Picking up the quest, Warchief's Command: Mount Hyjal!." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="1597.686" Y="-4371.337" Z="21.20002" />												
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<PickUp QuestName="Warchief's Command: Mount Hyjal!" QuestId="27721" GiverName="Warchief's Command Board" GiverId="206109" X="1600.98962" Y="-4369.73975" Z="21.0694" />
+									<CustomBehavior File="WaitTimer" WaitTime="1000" />
+									<CustomBehavior File="ForcedMount" MountType="Flying" />
+									<CustomBehavior File="FlyTo" X="1900.494" Y="-4203.093" Z="37.15815" />
+									<CustomBehavior File="ForcedDismount" />
+									<CustomBehavior File="WaitTimer" WaitTime="1000" />
+									<CustomBehavior File="InteractWith" MobId="15188"  GossipOptions="1" NumOfTimes="1"  X="1896.11" Y="-4200.94" Z="37.2414" />
+									<CustomBehavior File="WaitTimer" WaitTime="12000" />
 						</If>
 					</If>
-				</If>	
+				</If>
+
+
+				
 																					
 				<If Condition="Me.ZoneId == 493" >
 					<If Condition="((HasQuest(27721)) &amp;&amp; (!IsQuestCompleted(27721)))" >
@@ -87,14 +88,16 @@
 					</If>
 				</If>
 
-				<If Condition="Me.MapId == 0" >
+				<If Condition="Me.MapId == 1" >
 					<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt;= 83" >
-						<If Condition="((!HasQuest(25316)) &amp;&amp; (IsQuestCompleted(25316)))" >
-							<CustomBehavior File="FlyTo" X="-8345.691" Y="639.2832" Z="95.41733" />
-							<CustomBehavior File="ForcedDismount" />
-							<CustomBehavior File="InteractWith" MobId="207692" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8212.33" Y="399.020844" Z="117.27298" />
-							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
-							<CustomBehavior File="ForcedMount" MountType="Flying" />
+						<If Condition="((!HasQuest(27721)) &amp;&amp; (IsQuestCompleted(27721)))" >
+							<If Condition="Me.ZoneId != 616" >
+								<CustomBehavior File="FlyTo" X="2043.905" Y="-4392.25" Z="98.31613" />
+								<CustomBehavior File="ForcedDismount" />
+								<CustomBehavior File="InteractWith" MobId="207688" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="2042.752" Y="-4395.662" Z="97.93639" />
+								<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+								<CustomBehavior File="ForcedMount" MountType="Flying" />
+							</If>
 						</If>
 					</If>
 				</If>	
@@ -341,30 +344,34 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
-				<If Condition="Me.MapId == 1" >
-					<CustomBehavior File="Message" Text="The new farming location is in Twilight Highlands. I am flying to Mount Hyjal to use the portal to Orgrimmar." LogColor="Lime" />
-					<CustomBehavior File="FlyTo" X="5587.067" Y="-3732.609" Z="1753.634" />
-					<CustomBehavior File="MyCTM" X="5506.901" Y="-3628.595" Z="1567.002" />
-					<CustomBehavior File="Message" Text="I have reached the portal to Orgrimmar. I am using the portal" LogColor="Lime" />
-					<CustomBehavior File="ForcedDismount" />
-					<CustomBehavior File="InteractWith" MobId="209081" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5503.81152" Y="-3624.66675" Z="1567.54224" />
-					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+				<If Condition="Me.Level &gt;= 84 &amp;&amp; Me.Level &lt; 85" >
+					<If Condition="Me.MapId == 1" >
+						<CustomBehavior File="Message" Text="The new farming location is in Twilight Highlands. I am flying to Mount Hyjal to use the portal to Orgrimmar." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="5587.067" Y="-3732.609" Z="1753.634" />
+						<CustomBehavior File="MyCTM" X="5506.901" Y="-3628.595" Z="1567.002" />
+						<CustomBehavior File="Message" Text="I have reached the portal to Orgrimmar. I am using the portal" LogColor="Lime" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="InteractWith" MobId="209081" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5503.81152" Y="-3624.66675" Z="1567.54224" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+					</If>	
 				</If>
 				
-				<If Condition="Me.MapId == 1" >
-					<CustomBehavior File="FlyTo" X="1853.676" Y="-4405.566" Z="163.4607" />
-					<CustomBehavior File="MyCTM" X="1841.801" Y="-4388.78" Z="135.2327" />
-					<CustomBehavior File="ForcedDismount" />
-					<CustomBehavior File="UseTransport"
-								TransportId="164871"
-								WaitAtX="1839.842" WaitAtY="-4387.801" WaitAtZ="135.233" 
-								TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
-								TransportEndX="2062.376" TransportEndY="292.998047" TransportEndZ="114.670547"
-								StandOnX="1837.141" StandOnY="-4387.305" StandOnZ="135.0463" 
-								GetOffX="2068.327" GetOffY="286.5359" GetOffZ="97.0316" 
-								/>
-				</If>	
-					
+				<If Condition="Me.Level &gt;= 84 &amp;&amp; Me.Level &lt; 85" >
+					<If Condition="Me.MapId == 1" >
+						<CustomBehavior File="FlyTo" X="1853.676" Y="-4405.566" Z="163.4607" />
+						<CustomBehavior File="MyCTM" X="1841.801" Y="-4388.78" Z="135.2327" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UseTransport"
+									TransportId="164871"
+									WaitAtX="1839.842" WaitAtY="-4387.801" WaitAtZ="135.233" 
+									TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+									TransportEndX="2062.376" TransportEndY="292.998047" TransportEndZ="114.670547"
+									StandOnX="1837.141" StandOnY="-4387.305" StandOnZ="135.0463" 
+									GetOffX="2068.327" GetOffY="286.5359" GetOffZ="97.0316" 
+									/>
+					</If>	
+				</If>
+				
 		<While Condition="Me.Level &gt;= 84 &amp;&amp; Me.Level &lt; 85" >
 				
 				<If Condition="Me.MapId == 0" >
