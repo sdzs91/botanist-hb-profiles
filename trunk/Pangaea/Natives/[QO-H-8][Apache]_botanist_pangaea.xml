@@ -230,7 +230,6 @@
 				<If Condition="Me.ZoneId == 5805" >
 					<If Condition="Me.X &gt; -500 &amp;&amp; Me.X &lt; -250 &amp;&amp; Me.Y &gt; 2050 &amp;&amp; Me.Y &lt; 2250" >
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
-							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
 								<SetGrindArea><GrindArea>
 								<Factions>2550</Factions>
 									<Hotspots>
@@ -246,7 +245,6 @@
 									</Hotspots>
 								</GrindArea></SetGrindArea>					
 								<GrindTo Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 89)" GoalText="Farming" />
-							</If>
 					</If>
 				</If>
 								
