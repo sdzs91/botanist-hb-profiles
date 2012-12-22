@@ -154,7 +154,7 @@
 							<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
 							<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 							<CustomBehavior File="RunMacro" Macro="/sort bags" />
-								<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >	
+	
 									<SetGrindArea><GrindArea>
 									<Factions>2156,14</Factions>
 										<Hotspots>
@@ -172,15 +172,12 @@
 											<Hotspot X="-495.6545" Y="-2637.533" Z="3.939788" />
 											<Hotspot X="-510.8303" Y="-2723.596" Z="4.987854" />
 											<Hotspot X="-494.292" Y="-2797.351" Z="-0.4589391" />
-										<CustomBehavior File="Message" Text="End of the route. Starting over." LogColor="Lime" />
-										<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
-										<CustomBehavior File="RunMacro" Macro="/sort bags" />
 									</Hotspots>
 								</GrindArea></SetGrindArea>	
 											
 							<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 87)" GoalText="Farming" />
-							</If>
-					</If>
+
+						</If>
 				</If>
 								
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
@@ -267,11 +264,9 @@
 				
 				<CustomBehavior File="Message" Text="Position check #5" LogColor="Lime" />				
 				<If Condition="Me.ZoneId == 5805" >
-					<If Condition="Me.X &gt; -500 &amp;&amp; Me.X &lt; -250 &amp;&amp; Me.Y &gt; 2050 &amp;&amp; Me.Y &lt; 2250" >
+					<If Condition="Me.X &gt; -100 &amp;&amp; Me.X &lt; 50 &amp;&amp; Me.Y &gt; 2050 &amp;&amp; Me.Y &lt; 2250" >
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
-						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
-						<CustomBehavior File="RunMacro" Macro="/sort bags" />
-							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
+
 								<SetGrindArea><GrindArea>
 								<Factions>2550</Factions>
 									<Hotspots>
@@ -284,7 +279,7 @@
 									</Hotspots>
 								</GrindArea></SetGrindArea>					
 								<GrindTo Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 89)" GoalText="Farming" />
-							</If>
+
 					</If>
 				</If>
 								

@@ -46,6 +46,12 @@
 				</If>
 				
 				<If Condition="Me.Level &gt;= 85" >
+					<If Condition="Me.MapId == 1" >
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-H-7][Comanche]_botanist_pangaea" />
+					</If>
+				</If>
+				
+				<If Condition="Me.Level &gt;= 85" >
 					<If Condition="Me.MapId == 870" >
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-H-7][Comanche]_botanist_pangaea" />
 					</If>
