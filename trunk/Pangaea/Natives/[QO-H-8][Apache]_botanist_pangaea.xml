@@ -22,6 +22,7 @@
 <TargetElites>True</TargetElites>
 
 <AvoidMobs>
+	<Mob Name="Ik'thik Wingblade" Entry="57196" />
 	<Mob Name="Plainshawk" Entry="58910" />
 	<Mob Name="Waste Scavenger" Entry="66194" />
 	<Mob Name="Slingtail Fishripper" Entry="55195" />
