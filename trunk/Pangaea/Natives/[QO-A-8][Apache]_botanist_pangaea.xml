@@ -150,12 +150,10 @@
 				<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>										
 				<If Condition="Me.ZoneId == 5785" >
 					<CustomBehavior File="Message" Text="Position check #5." LogColor="Lime" />
-						<If Condition="Me.X &lt; 60.13237 &amp;&amp; Me.Y &lt; -2205.429" >
 							<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until I resach level 87." LogColor="Lime" />
 							<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
 							<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
-							<CustomBehavior File="RunMacro" Macro="/sort bags" />
-	
+							<CustomBehavior File="RunMacro" Macro="/sort bags" />	
 									<SetGrindArea><GrindArea>
 									<Factions>2156,14</Factions>
 										<Hotspots>
@@ -177,8 +175,6 @@
 								</GrindArea></SetGrindArea>	
 											
 							<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 87)" GoalText="Farming" />
-
-						</If>
 				</If>
 								
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
