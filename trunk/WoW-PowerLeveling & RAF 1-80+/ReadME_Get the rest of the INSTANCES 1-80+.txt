@@ -6,7 +6,7 @@ Please visit my new Webpage to get access to all my:
 
 WEBSITE : https://sites.google.com/site/wowpowerlevelingraf180/home
 
-ADD ME TO SKYPE : botanist68
+ADD ME TO SKYPE : Botanist68
 
-I look forward to hear from you.
+I look forward to hearing from you.
 Botanist :-)
