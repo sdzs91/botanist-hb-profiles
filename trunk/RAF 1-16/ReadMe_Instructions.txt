@@ -1,21 +1,3 @@
-								** NOTICE WARNING **
-Install tortoise svn and do a svn checkout from this svn https://botanist-hb-meshes.googlecode.com/svn/trunk/
-
-These are the Honorbuddy meshes currently on my computer.
-They are up-to-date as of the last time I ran the bot in all the different zones.
-To use these meshes, click the Settings and Tools button in Honorbuddy.
-In the Mesh section on the top right of the Tools & Settings window, click the change button and browse to \botanist-hb-meshes and set it as your mesh directory.
-Close and restart Honorbuddy.
-
-******Alternate method******
-Close Honorbuddy
-Copy all the files in the botanist-hb-meshes folder.
-Browse to where your meshes are stored. By default C:\Users\Your User Account Name\AppData\Local\HonorbuddyMeshes
-Paste the copied meshes into the HonorbuddyMeshes folder.
-Overwrite any existing meshes you currently have.
-Restart Honorbuddy.
-****************************
-
 
 There are numerous Popup windows used throughout these profiles
 The popup windows are used to synchronize all of the characters in the party
