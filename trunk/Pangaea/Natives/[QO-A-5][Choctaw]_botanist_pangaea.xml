@@ -74,8 +74,8 @@
 				<CustomBehavior File="FlyTo" X="2380.729" Y="5630.006" Z="43.06765" />
 				<CustomBehavior File="ForcedDismount" />
 								 
-				<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 70." LogColor="Lime" />				
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 70." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" UseMount="False"  />
 						<SetGrindArea><GrindArea>
 							<Factions>1985</Factions>
 								<Hotspots>
@@ -88,7 +88,7 @@
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 70)" GoalText="Farming" />
-				</If>
+					<CustomBehavior File="UserSettings" UseMount="False"  />
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
