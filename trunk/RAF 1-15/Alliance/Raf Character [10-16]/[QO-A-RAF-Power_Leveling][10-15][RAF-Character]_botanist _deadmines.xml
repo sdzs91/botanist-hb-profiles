@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-RAF-Power_Leveling][10-15][RAF-Character]_botanist _deadmines</Name>
+	<Name>[QO-A-RAF-Power_Leveling][10-15][RAF-Character]_botanist _deadmines</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -25,6 +25,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		
 	</Blackspots>
 
 	<Mailboxes>
@@ -170,7 +171,7 @@
 					<If Condition="Me.Y &gt; 1653.415 &amp;&amp; Me.Y &lt; 1678.776 &amp;&amp; Me.X &lt; -11201.54 &amp;&amp; Me.X &gt; -11213.74" >
 						<If Condition="Me.Level &gt;= 15" >
 							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
-								Text="RAF Characters - This character has reached the appropriate level to run Stockades. Please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed." Title="WARNING" />
+								Text="**********RAF Character - This character has reached the appropriate level to run Stockades. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
 						</If>
 						<CustomBehavior File="WaitTimer" WaitTime="10000" />
 						<CustomBehavior File="MyCTM" X="-11208.34" Y="1680.56" Z="23.87232" />
@@ -196,15 +197,15 @@
 					<CustomBehavior File="Message" Text="Waiting 50 seconds, before Helix Gearbreaker." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="50000" />
 						<RunTo X="-289.9587" Y="-534.3184" Z="49.43781" />
-					<CustomBehavior File="Message" Text="Waiting 70 seconds, door after Helix Gearbreaker." LogColor="Lime" />	
+					<CustomBehavior File="Message" Text="Waiting 90 seconds, door after Helix Gearbreaker." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="70000" />
 						<RunTo X="-245.4633" Y="-578.7188" Z="51.14853" />
 					<CustomBehavior File="Message" Text="Waiting 20 seconds, top door." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="20000" />					
 					<CustomBehavior File="InteractWith" MobId="17154" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="-242.96521" Y="-578.561035" Z="51.1366043" />
 						<RunTo X="-183.4286" Y="-565.2609" Z="51.23046" />
-					<CustomBehavior File="Message" Text="Waiting 35 seconds, ramp." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="30000" />	
+					<CustomBehavior File="Message" Text="Waiting 40 seconds, ramp." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="40000" />	
 						<RunTo X="-172.945" Y="-580.1882" Z="19.3131" />
 					<CustomBehavior File="Message" Text="Waiting 55 seconds, bottom door." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="55000" />

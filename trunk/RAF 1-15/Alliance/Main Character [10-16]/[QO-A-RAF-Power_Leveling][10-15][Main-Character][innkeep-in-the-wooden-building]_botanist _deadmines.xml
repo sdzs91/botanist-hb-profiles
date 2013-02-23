@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-RAF-Power_Leveling][10-16][Main-Character][innkeep-in-the-tower]_botanist _deadmines</Name>
+	<Name>[QO-A-RAF-Power_Leveling][10-15][Main-Character][innkeep-in-the-wooden-building]_botanist _deadmines</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -22,11 +22,13 @@
 	<TargetElites>True</TargetElites>
 	
 	<AvoidMobs>
+		<Mob Name="Mining Powder" Entry="48284" />	
 		<Mob Name="Summon Enabler Stalker" Entry="53488" />	
 		<Mob Name="Mining Powder" Entry="48284" />	
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="-140.0314" Y="-405.6042" Z="58.6548" Radius="1" />
 	</Blackspots>
 
 	<Mailboxes>
@@ -49,15 +51,15 @@
 					<If Condition="Me.ZoneId != 40">
 						<If Condition="Me.ZoneId != 1581">
 							<CustomBehavior File="Message" Text="Flying to Westfall." LogColor="Lime" />
-							<CustomBehavior File="FlyTo" X="-10510.34" Y="1053.079" Z="59.25743" />							
+							<CustomBehavior File="FlyTo" X="-10640.08" Y="1157.555" Z="33.34619" />							
 							<CustomBehavior File="ForcedDismount" />
-								<RunTo X="-10503.31" Y="1031.031" Z="60.52037" />
+								<RunTo X="-10650.05" Y="1165.21" Z="34.5228" />
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
 							<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
-							<CustomBehavior File="SetHearthstone" MobId="8931" X="-10501.87" Y="1028.536" Z="60.52414" />
+							<CustomBehavior File="SetHearthstone" MobId="8931" X="-10653.28" Y="1166.431" Z="34.50462" />
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
-								<RunTo X="-10510.34" Y="1053.079" Z="59.25743" />	
+								<RunTo X="-10640.08" Y="1157.555" Z="33.34619" />	
 							<CustomBehavior File="FlyTo" X="-11065.5" Y="1530.04" Z="43.20776" />	
 							<CustomBehavior File="ForcedDismount" />
 							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
@@ -76,15 +78,15 @@
 				<If Condition="Me.MapId == 0" >
 					<If Condition="Me.ZoneId == 40">
 						<If Condition="Me.Y &lt; 1653.415 || Me.Y &gt; 1678.776 || Me.X &gt; -11201.54 || Me.X &lt; -11213.74" >
-							<CustomBehavior File="FlyTo" X="-10510.34" Y="1053.079" Z="59.25743" />							
+							<CustomBehavior File="FlyTo" X="-10640.08" Y="1157.555" Z="33.34619" />							
 							<CustomBehavior File="ForcedDismount" />
-								<RunTo X="-10503.31" Y="1031.031" Z="60.52037" />
+								<RunTo X="-10650.05" Y="1165.21" Z="34.5228" />
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
 							<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
-							<CustomBehavior File="SetHearthstone" MobId="8931" X="-10501.87" Y="1028.536" Z="60.52414" />
+							<CustomBehavior File="SetHearthstone" MobId="8931" X="-10653.28" Y="1166.431" Z="34.50462" />
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
-								<RunTo X="-10510.34" Y="1053.079" Z="59.25743" />	
+								<RunTo X="-10640.08" Y="1157.555" Z="33.34619" />	
 							<CustomBehavior File="FlyTo" X="-11054.54" Y="1517.896" Z="43.04135" />	
 							<CustomBehavior File="ForcedDismount" />
 							
@@ -164,28 +166,30 @@
 					</CustomBehavior>
 						<RunTo X="-192.3704" Y="-449.936" Z="54.43877" />
 					<CustomBehavior File="WaitTimer" WaitTime="3000" />	
-					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="-189.784" Y="-467.1871" Z="54.14226" />
-						<Hotspot X="-188.2088" Y="-477.5831" Z="54.04776" />
-						<Hotspot X="-193.7357" Y="-491.501" Z="53.59171" />
-						<Hotspot X="-188.2225" Y="-501.9361" Z="52.63238" />
-						<Hotspot X="-173.4403" Y="-503.5245" Z="54.3697" />
-						<Hotspot X="-158.6151" Y="-506.9561" Z="53.33582" />
-						<Hotspot X="-151.9234" Y="-519.7235" Z="52.64346" />
-						<Hotspot X="-148.083" Y="-530.6323" Z="50.72704" />
-						<Hotspot X="-155.5192" Y="-523.9391" Z="51.84337" />
-						<Hotspot X="-157.7648" Y="-509.6339" Z="53.32336" />
-						<Hotspot X="-172.3126" Y="-504.9801" Z="54.03728" />
-						<Hotspot X="-183.1392" Y="-494.7179" Z="53.77271" />
-						<Hotspot X="-185.4037" Y="-479.5077" Z="54.04181" />
-						<Hotspot X="-187.618" Y="-489.5293" Z="54.04743" />
-						<Hotspot X="-191.561" Y="-503.5848" Z="53.07443" />
-						<Hotspot X="-206.5777" Y="-506.1066" Z="51.77118" />
-						<Hotspot X="-218.6082" Y="-497.679" Z="48.9954" />
-						<Hotspot X="-228.4447" Y="-485.8205" Z="48.69048" />
-						<Hotspot X="-243.1284" Y="-482.5194" Z="48.82872" />
-						<Hotspot X="-257.6659" Y="-482.5565" Z="49.44861" />	
-					</CustomBehavior>
+
+						<RunTo X="-189.784" Y="-467.1871" Z="54.14226" />
+						<RunTo X="-188.2088" Y="-477.5831" Z="54.04776" />
+						<RunTo X="-193.7357" Y="-491.501" Z="53.59171" />
+						<RunTo X="-188.2225" Y="-501.9361" Z="52.63238" />
+						<RunTo X="-173.4403" Y="-503.5245" Z="54.3697" />
+						<RunTo X="-158.6151" Y="-506.9561" Z="53.33582" />
+						<RunTo X="-151.9234" Y="-519.7235" Z="52.64346" />
+						<RunTo X="-148.083" Y="-530.6323" Z="50.72704" />
+						<RunTo X="-155.5192" Y="-523.9391" Z="51.84337" />
+						<RunTo X="-157.7648" Y="-509.6339" Z="53.32336" />
+						<RunTo X="-172.3126" Y="-504.9801" Z="54.03728" />
+						<RunTo X="-183.1392" Y="-494.7179" Z="53.77271" />
+						<RunTo X="-185.4037" Y="-479.5077" Z="54.04181" />
+						<RunTo X="-187.618" Y="-489.5293" Z="54.04743" />
+						<RunTo X="-191.561" Y="-503.5848" Z="53.07443" />
+						<RunTo X="-206.5777" Y="-506.1066" Z="51.77118" />
+						<RunTo X="-218.6082" Y="-497.679" Z="48.9954" />
+						<RunTo X="-221.0848" Y="-488.52" Z="48.67664" />
+						<RunTo X="-220.3154" Y="-487.7871" Z="48.71264" />
+						<RunTo X="-228.4447" Y="-485.8205" Z="48.69048" />
+						<RunTo X="-243.1284" Y="-482.5194" Z="48.82872" />
+						<RunTo X="-257.6659" Y="-482.5565" Z="49.44861" />
+
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 						<RunTo X="-236.2353" Y="-487.9076" Z="49.08236" />
 						<RunTo X="-221.6066" Y="-487.2557" Z="48.64436" />
@@ -209,6 +213,7 @@
 					<CustomBehavior File="RunMacro" Macro="/tar Lumbering Oaf" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-276.0996" Y="-483.5373" Z="48.68264" />
+						<Hotspot X="-290.0585" Y="-490.4711" Z="49.87199" />
 						<Hotspot X="-301.8099" Y="-516.5173" Z="51.66095" />
 						<Hotspot X="-298.8353" Y="-511.4071" Z="50.1995" />
 						<Hotspot X="-300.0636" Y="-505.8767" Z="49.38919" />
@@ -220,23 +225,16 @@
 						<RunTo X="-268.1307" Y="-482.5477" Z="49.19214" />
 					<CustomBehavior File="RunMacro" Macro="/tar Helix Gearbreaker" />
                     <CustomBehavior File="RunMacro" Macro="/startattack Helix Gearbreaker" />				
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />					
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+					<CustomBehavior File="RunMacro" Macro="/tar Helix Gearbreaker" />
+                    <CustomBehavior File="RunMacro" Macro="/startattack Helix Gearbreaker" />				
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+					<CustomBehavior File="RunMacro" Macro="/tar Helix Gearbreaker" />
+                    <CustomBehavior File="RunMacro" Macro="/startattack Helix Gearbreaker" />				
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
 					<CustomBehavior File="InteractWith" MobId="17153" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="-262.713745" Y="-482.361084" Z="49.43531" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<RunTo X="-236.1777" Y="-487.8994" Z="49.06504" />
-						<RunTo X="-221.3111" Y="-488.3875" Z="48.66448" />
-						<RunTo X="-217.8235" Y="-501.9218" Z="50.72" />
-						<RunTo X="-203.1093" Y="-505.856" Z="52.55297" />
-						<RunTo X="-194.7503" Y="-503.9905" Z="53.12782" />
-						<RunTo X="-187.8999" Y="-498.649" Z="53.25089" />
-						<RunTo X="-187.9169" Y="-484.1383" Z="54.04883" />
-						<RunTo X="-188.2279" Y="-498.6577" Z="53.23177" />
-						<RunTo X="-201.2225" Y="-507.153" Z="52.61467" />
-						<RunTo X="-217.5841" Y="-499.497" Z="49.43636" />
-						<RunTo X="-227.9175" Y="-485.524" Z="48.7048" />
-						<RunTo X="-264.5385" Y="-482.2472" Z="49.43893" />
-						<RunTo X="-278.3078" Y="-486.6031" Z="48.90814" />
-						<RunTo X="-290.2424" Y="-532.2775" Z="49.42587" />					
+						<RunTo X="-289.9005" Y="-544.0559" Z="49.44535" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-289.9005" Y="-544.0559" Z="49.44535" />
 						<Hotspot X="-285.073" Y="-553.1115" Z="49.44674" />
@@ -288,8 +286,6 @@
 					</CustomBehavior>
 						<RunTo X="-210.2982" Y="-568.5117" Z="20.97688" />
 					<CustomBehavior File="WaitTimer" WaitTime="20000" />
-					<CustomBehavior File="RunMacro" Macro="/tar Foe Reaper 5000" />
-                    <CustomBehavior File="RunMacro" Macro="/startattack Foe Reaper 5000" />
 						<RunTo X="-210.2982" Y="-568.5117" Z="20.97688" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-177.7443" Y="-579.2161" Z="19.31002" />
@@ -386,12 +382,16 @@
 						<Hotspot X="-42.51555" Y="-796.2142" Z="39.34597" />
 						<Hotspot X="-50.37585" Y="-808.059" Z="42.48419" />
 						<Hotspot X="-64.6426" Y="-812.5276" Z="41.13737" />
-						<Hotspot X="-65.20602" Y="-827.4488" Z="41.10626" />
-						<Hotspot X="-66.64298" Y="-836.0909" Z="40.99702" />
-						<Hotspot X="-64.4062" Y="-829.6852" Z="41.19949" />
+						<Hotspot X="-64.02697" Y="-818.9523" Z="41.17456" />
+						<Hotspot X="-77.51983" Y="-814.5038" Z="39.95203" />
 					</CustomBehavior>
-						<Runto X="-64.4062" Y="-829.6852" Z="41.19949" />
-					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<Runto X="-64.02697" Y="-818.9523" Z="41.17456" />
+						
+						<Runto X="-65.20986" Y="-834.1615" Z="41.13401" />
+					<CustomBehavior File="WaitTimer" WaitTime="20000" />	<!-- last boss -->
+					
+					
+					
 						<RunTo X="-99.09794" Y="-666.1941" Z="7.416621" />
 						<RunTo X="-100.8408" Y="-656.0048" Z="7.422353" />
 						<RunTo X="-238.5866" Y="-578.6992" Z="51.20921" />
