@@ -95,7 +95,7 @@
 				</If>
 
 				<If Condition="Me.MapId == 1" >
-					<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt;= 83" >
+					<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 81" >
 						<If Condition="((!HasQuest(27721)) &amp;&amp; (IsQuestCompleted(27721)))" >
 							<If Condition="Me.ZoneId != 616" >
 								<CustomBehavior File="FlyTo" X="2043.905" Y="-4392.25" Z="98.31613" />
@@ -373,8 +373,7 @@
 									TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
 									TransportEndX="2062.376" TransportEndY="292.998047" TransportEndZ="114.670547"
 									StandOnX="1837.141" StandOnY="-4387.305" StandOnZ="135.0463" 
-									GetOffX="2068.327" GetOffY="286.5359" GetOffZ="97.0316" 
-									/>
+									GetOffX="2068.327" GetOffY="286.5359" GetOffZ="97.0316" />
 					</If>	
 				</If>
 				
