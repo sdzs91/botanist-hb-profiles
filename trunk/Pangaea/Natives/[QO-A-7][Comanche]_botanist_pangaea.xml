@@ -1,4 +1,4 @@
-<HBProfile>
+ <HBProfile>
   <Name>[QO-A-7][Comanche]_botanist_pangaea</Name>
 
   <MinDurability>0.1</MinDurability>
@@ -20,7 +20,7 @@
 			<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="False" LootMobs="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="1" LogoutForInactivity="True" />
 				
 				<If Condition="Me.MapId == 870" >
-					<If Condition="Me.Level &gt; 85" >
+					<If Condition="Me.Level &gt;= 85" >
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
 					</If>
 				</If>
