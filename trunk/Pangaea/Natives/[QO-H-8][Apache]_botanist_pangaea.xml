@@ -22,6 +22,7 @@
 <TargetElites>True</TargetElites>
 
 <AvoidMobs>
+	<Mob Name="Ik'thik Slicewing" Entry="59832" />
 	<Mob Name="Ik'thik Wingblade" Entry="57196" />
 	<Mob Name="Plainshawk" Entry="58910" />
 	<Mob Name="Waste Scavenger" Entry="66194" />
@@ -45,6 +46,8 @@
 </AvoidMobs>
 
 <Blackspots>
+	<Blackspot X="-467.7988" Y="2229.845" Z="115.4755" Radius="3" />
+	<Blackspot X="-321.1942" Y="2316.815" Z="118.5929" Radius="45" />
 	<Blackspot X="1208.913" Y="3324.285" Z="158.7656" Radius="10" />
 	<Blackspot X="2930.903" Y="-1645.666" Z="252.8335" Radius="50" />
 	<Blackspot X="374.5782" Y="3430.849" Z="221.1782" Radius="20" />

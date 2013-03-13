@@ -57,7 +57,7 @@
 				
 		<While Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 69" >
 					
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True"  HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True"  HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Valiance Keep in Borean Tundra." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Valiance Keep." LogColor="Lime" />
@@ -125,7 +125,7 @@
 				
 		<While Condition="Me.Level &gt;= 70 &amp;&amp; Me.Level &lt;= 71" >
 					
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Fizzcrank Airstrip in Borean Tundra." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Fizzcrank Airstrip." LogColor="Lime" />														
@@ -196,7 +196,7 @@
 				
 		<While Condition="Me.Level &gt;= 72 &amp;&amp; Me.Level &lt; 73" >
 					
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Stars Rest in Dragon Blight." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Stars Rest." LogColor="Lime" />														
@@ -262,7 +262,7 @@
 				
 		<While Condition="Me.Level &gt;= 73 &amp;&amp; Me.Level &lt;= 74" >
 					
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, The Argent Stand in Zul' drak." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at The Argent Stand." LogColor="Lime" />														
@@ -325,7 +325,7 @@
 				
 		<While Condition="Me.Level &gt;= 75 &amp;&amp; Me.Level &lt;= 77" >
 					
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Nesingwary Base Camp in Sholazar Basin." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Nesingwary Base Camp." LogColor="Lime" />														
@@ -390,7 +390,7 @@
 				
 		<While Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 79" >
 				<If Condition="Me.ZoneId == 3711" >	
-					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+					<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 					<CustomBehavior File="Message" Text="Position check, K3 in Stormpeaks." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at K3." LogColor="Lime" />
@@ -407,7 +407,7 @@
 				</If>
 				
 				<If Condition="Me.ZoneId != 3711" >	
-					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+					<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 					<CustomBehavior File="Message" Text="Position check, K3 in Storm Peaks." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at K3." LogColor="Lime" />			
@@ -477,7 +477,7 @@
 		<While Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 80" >
 				
 				<If Condition="Me.MapId == 571" >	
-					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+					<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 					<CustomBehavior File="Message" Text="Position check, K3 in Storm Peaks." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at K3." LogColor="Lime" />			

@@ -47,7 +47,7 @@
 						
 		<While Condition="true" >
 				
-				<CustomBehavior File="UserSettings" MountDistance="5"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="5" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="5" LogoutForInactivity="True" />
+				<CustomBehavior File="UserSettings" MountDistance="60" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="5" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="5" LogoutForInactivity="True" />
 				
 				<If Condition="Me.MapId == 870" >				 
 					<If  Condition="Me.Level == 89" >

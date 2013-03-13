@@ -108,7 +108,7 @@
 				
 		<While Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 81 &amp;&amp; Me.ZoneId == 616" >
 				
-					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+					<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 					<CustomBehavior File="Message" Text="Position check, Nordrassil in Mount Hyjal." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at Nordrassil." LogColor="Lime" />
@@ -183,7 +183,7 @@
 				
 		<While Condition="Me.Level &gt;= 81 &amp;&amp; Me.Level &lt; 83" >
 				
-					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+					<CustomBehavior File="UserSettings" MountDistance="60" UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 					<CustomBehavior File="Message" Text="Position check, Ramkahen in Uldum." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at Ramkahen." LogColor="Lime" />
@@ -260,7 +260,7 @@
 				
 		<While Condition="Me.Level &gt;= 83 &amp;&amp; Me.Level &lt; 84" >
 				
-					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True"  HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+					<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True"  HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 					<CustomBehavior File="Message" Text="Position check, Ramkahen in Uldum." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at Ramkahen." LogColor="Lime" />
@@ -353,7 +353,7 @@
 		<While Condition="Me.Level &gt;= 84 &amp;&amp; Me.Level &lt; 85" >
 				
 				<If Condition="Me.MapId == 0" >
-					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True"  HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+					<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True"  HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 					<CustomBehavior File="Message" Text="Position check, Thundermar in Twilight Highlands." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at Thundermar." LogColor="Lime" />

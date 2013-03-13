@@ -17,7 +17,7 @@
     
 <QuestOrder>
 
-			<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="False" LootMobs="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="1" LogoutForInactivity="True" />
+			<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="False" LootMobs="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="1" LogoutForInactivity="True" />
 				
 				<If Condition="Me.MapId == 870" >
 					<If Condition="Me.Level &gt;= 85" >
