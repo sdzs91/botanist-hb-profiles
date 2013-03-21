@@ -1348,7 +1348,7 @@
 				</If>
 
 		<While Condition="Me.Level &gt;= 53 &amp;&amp; Me.Level &lt; 54" >		
-				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" 60MountDistance="60"
+				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" MountDistance="60"
 								UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />					
