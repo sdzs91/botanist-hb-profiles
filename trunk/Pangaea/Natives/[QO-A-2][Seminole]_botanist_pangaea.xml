@@ -298,16 +298,13 @@
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="6727"  X="-9226.454" Y="-2155.743" Z="63.73067" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-9481.074" Y="-2267.897" Z="75.18123" />
-					<RunTo X="-9678.368" Y="-2420.276" Z="57.61195" />
-					<RunTo X="-9476.815" Y="-2841.501" Z="65.29008" />
-					<RunTo X="-9280.052" Y="-2825.908" Z="87.23463" />
-					<RunTo X="-9205.815" Y="-3009.652" Z="95.46476" />
-					<RunTo X="-9212.467" Y="-3307.106" Z="100.1846" />
-					<RunTo X="-9393.298" Y="-3460.238" Z="94.62257" />
-					<RunTo X="-9456.487" Y="-3415.561" Z="76.90974" />
-					<RunTo X="-9548.928" Y="-3323.59" Z="37.5894" />
+				<CustomBehavior File="Message" Text="Moving to the new farming location, Jared." LogColor="Lime" />
+					<RunTo X="-9202.769" Y="-2342.259" Z="85.48305" />
+					<RunTo X="-9172.963" Y="-2632.588" Z="104.5079" />
+					<RunTo X="-9158.006" Y="-2945.502" Z="93.1116" />
+					<RunTo X="-9243.035" Y="-3342.566" Z="100.0966" />
+					<RunTo X="-9353.268" Y="-3432.311" Z="90.69847" />
+					<RunTo X="-9450.334" Y="-3421.177" Z="78.86421" />
 				<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 20." LogColor="Lime" />				
 					<SetGrindArea><GrindArea>
 						<Factions>18</Factions>
