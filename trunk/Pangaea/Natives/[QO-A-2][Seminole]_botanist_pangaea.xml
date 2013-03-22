@@ -288,7 +288,7 @@
 				</If>
 			
 	<While Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >		
-				<CustomBehavior File="UserSettings" MountDistance="60" UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="UserSettings" MountDistance="60" UseFlightPaths="False" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Lakeshire in Redridge Mountains." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Lakeshire in Redridge Mountains." LogColor="Lime" />														
@@ -308,16 +308,16 @@
 					<RunTo X="-9393.298" Y="-3460.238" Z="94.62257" />
 					<RunTo X="-9456.487" Y="-3415.561" Z="76.90974" />
 					<RunTo X="-9548.928" Y="-3323.59" Z="37.5894" />
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 20." LogColor="Lime" />				
-						<SetGrindArea><GrindArea>
-							<Factions>18</Factions>
-								<Hotspots>
-									<Hotspot X="-9548.928" Y="-3323.59" Z="37.5894" />
-									<Hotspot X="-9483.931" Y="-3321.154" Z="7.614015" />
-									<Hotspot X="-9445.974" Y="-3339.68" Z="6.459505" />
-								</Hotspots>
-						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 20)" GoalText="Farming" />
+				<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 20." LogColor="Lime" />				
+					<SetGrindArea><GrindArea>
+						<Factions>18</Factions>
+							<Hotspots>
+								<Hotspot X="-9548.928" Y="-3323.59" Z="37.5894" />
+								<Hotspot X="-9483.931" Y="-3321.154" Z="7.614015" />
+								<Hotspot X="-9445.974" Y="-3339.68" Z="6.459505" />
+							</Hotspots>
+					</GrindArea></SetGrindArea>					
+				<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 20)" GoalText="Farming" />
 
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
