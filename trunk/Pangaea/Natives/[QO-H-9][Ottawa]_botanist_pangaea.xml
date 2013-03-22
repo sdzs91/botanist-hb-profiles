@@ -46,38 +46,36 @@
 		<While Condition="true" >
 						
 				<If Condition="Me.MapId == 870" >				 
-					<If Condition="Me.ZoneId == 5785" >
-						<If  Condition="Me.Level == 87" >
-							<CustomBehavior File="Message" Text="Moving to the Dawn's Blossom Flight Master." LogColor="Lime" />
-								<RunTo X="1599.626" Y="-1789.143" Z="260.9633" />
-							<CustomBehavior File="Message" Text="Learning the Dawn's Blossom flight path." LogColor="Lime" />
-								<RunTo X="1599.626" Y="-1789.143" Z="260.9633" />					
-							<CustomBehavior File="Message" Text="Moving to the Pang's Stead Flight Master." LogColor="Lime" />
-								<RunTo X="530.687" Y="-721.8248" Z="248.3259" />
-							<CustomBehavior File="Message" Text="Learning the Pang's Stead flight path." LogColor="Lime" />
-								<RunTo X="519.7079" Y="-565.8562" Z="257.8145" />
-							<CustomBehavior File="Message" Text="Moving to the Grassey Cline Flight Master." LogColor="Lime" />
-								<RunTo X="449.0804" Y="-291.4752" Z="204.8554" />
-							<CustomBehavior File="Message" Text="Learning the Grassey Cline flight path." LogColor="Lime" />
-								<RunTo X="405.0258" Y="-62.77075" Z="172.2329" />
-							<CustomBehavior File="Message" Text="Moving to the Halfhill Flight Master." LogColor="Lime" />
-								<RunTo X="-233.799" Y="606.9675" Z="167.2605" />
-							<CustomBehavior File="Message" Text="Learning the Halfhil flight path." LogColor="Lime" />	
-								<RunTo X="-204.9718" Y="495.2273" Z="187.1902" />
-							<CustomBehavior File="WaitTimer" WaitTime="2000" />					
-								<If Condition="Me.MapId == 870" >				 
-									<If Condition="Me.ZoneId == 5805" >
-										<If  Condition="Me.Level &gt;= 87" >
-											<If Condition="Me.X &gt; -317.1932 &amp;&amp; Me.X &lt; -42.4191 &amp;&amp; Me.Y &gt; 384.9974 &amp;&amp; Me.Y &lt; 672.6077" >
-												<CustomBehavior File="Message" Text="I have learned all the flight paths I need for now." LogColor="Lime" />
-												<CustomBehavior File="WaitTimer" WaitTime="2000" />
-												<CustomBehavior File="Message" Text="I am changing the profiles." LogColor="Lime" />
-												<CustomBehavior File="LoadProfile" ProfileName="[QO-H-8][Apache]_botanist_pangaea" />
-											</If>
-										</If>
-									</If>
-								</If>
-						</If>
+					<If  Condition="Me.Level &gt;= 87" >
+						<CustomBehavior File="Message" Text="Moving to the Dawn's Blossom Flight Master." LogColor="Lime" />
+							<RunTo X="1599.626" Y="-1789.143" Z="260.9633" />
+						<CustomBehavior File="Message" Text="Learning the Dawn's Blossom flight path." LogColor="Lime" />
+							<RunTo X="1599.626" Y="-1789.143" Z="260.9633" />					
+						<CustomBehavior File="Message" Text="Moving to the Pang's Stead Flight Master." LogColor="Lime" />
+							<RunTo X="530.687" Y="-721.8248" Z="248.3259" />
+						<CustomBehavior File="Message" Text="Learning the Pang's Stead flight path." LogColor="Lime" />
+							<RunTo X="519.7079" Y="-565.8562" Z="257.8145" />
+						<CustomBehavior File="Message" Text="Moving to the Grassey Cline Flight Master." LogColor="Lime" />
+							<RunTo X="449.0804" Y="-291.4752" Z="204.8554" />
+						<CustomBehavior File="Message" Text="Learning the Grassey Cline flight path." LogColor="Lime" />
+							<RunTo X="405.0258" Y="-62.77075" Z="172.2329" />
+						<CustomBehavior File="Message" Text="Moving to the Tavern in the Mist Flight Master." LogColor="Lime" />
+							<RunTo X="495.2251" Y="-72.47599" Z="179.1802" /> <!-- stairs -->
+						<CustomBehavior File="Message" Text="Learning the Tavern in the Mist flight path." LogColor="Lime" />
+							<RunTo X="784.899" Y="-203.67" Z="402.192" />
+						<CustomBehavior File="Message" Text="Moving to the Binan Village Flight Master." LogColor="Lime" />
+							<RunTo X="1610.286" Y="251.9558" Z="477.2577" />
+						<CustomBehavior File="Message" Text="Learning the Binan Village flight path." LogColor="Lime" />
+							<RunTo X="1690.11" Y="303.958" Z="478.5869" />
+						<CustomBehavior File="Message" Text="Moving to the One Keg Flight Master." LogColor="Lime" />
+							<RunTo X="2922.102" Y="1140.1" Z="611.7402" />
+						<CustomBehavior File="Message" Text="Learning the One Keg flight path." LogColor="Lime" />
+							<RunTo X="3124.52" Y="1224.28" Z="654.231" />	
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+						<CustomBehavior File="Message" Text="I have learned all the flight paths I need for now." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am changing the profile to [QO-H-8][Apache]_botanist_pangaea." LogColor="Lime" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-H-8][Apache]_botanist_pangaea" />
 					</If>
 				</If>
 			</While>

@@ -50,66 +50,9 @@
 				<CustomBehavior File="UserSettings" MountDistance="60" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="5" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="5" LogoutForInactivity="True" />
 				
 				<If Condition="Me.MapId == 870" >				 
-					<If  Condition="Me.Level == 89" >
-						<CustomBehavior File="Message" Text="Moving to the Grassy Cline flight path." LogColor="Lime" />
-							<RunTo X="460.54" Y="-100.467" Z="179.535" />
-							<RunTo X="479.1342" Y="-74.6549" Z="177.9635" />
-						<CustomBehavior File="Message" Text="Moving to the Tavern in the Mist Flight Master." LogColor="Lime" />
-							<RunTo X="495.2251" Y="-72.47599" Z="179.1802" /> <!-- stairs -->
-							<RunTo X="548.9385" Y="-95.44975" Z="220.1055" />
-							<RunTo X="586.0713" Y="-147.4507" Z="257.8523" />
-							<RunTo X="643.5919" Y="-153.6298" Z="305.6279" />
-							<RunTo X="724.4628" Y="-146.1159" Z="332.4592" />
-							<RunTo X="659.522" Y="-211.2781" Z="374.7611" />
-						<CustomBehavior File="Message" Text="Learning the Tavern in the Mist flight path." LogColor="Lime" />
-							<RunTo X="869.1459" Y="-196.1359" Z="416.6591" />
-						<CustomBehavior File="Message" Text="Moving to the Binan Village Flight Master." LogColor="Lime" />
-							<RunTo X="970.8969" Y="-104.355" Z="443.2514" />
-							<RunTo X="1082.924" Y="-128.2651" Z="475.4561" />  <!-- Boat -->
-							<RunTo X="1204.567" Y="-74.73999" Z="478.0556" />
-						<CustomBehavior File="MyCTM" X="1276.875" Y="-7.799084" Z="476.9055" />
-						<CustomBehavior File="MyCTM" X="1354.582" Y="30.76111" Z="476.2073" />
-						<CustomBehavior File="MyCTM" X="1403.508" Y="101.056" Z="484.9603" />
-						<CustomBehavior File="MyCTM" X="1430.676" Y="120.0005" Z="483.5252" />
-						<CustomBehavior File="MyCTM" X="1469.068" Y="128.8904" Z="480.9565" />
-						<CustomBehavior File="MyCTM" X="1524.74" Y="127.0089" Z="474.3631" />
-						<CustomBehavior File="MyCTM" X="1532.051" Y="135.092" Z="475.3219" />
-						<CustomBehavior File="MyCTM" X="1535.136" Y="143.9682" Z="475.4007" />
-						<CustomBehavior File="MyCTM" X="1524.821" Y="172.6403" Z="477.2556" />
-						<CustomBehavior File="MyCTM" X="1527.631" Y="192.4096" Z="477.326" />
-						<CustomBehavior File="MyCTM" X="1562.553" Y="210.3415" Z="475.5883" />
-						<CustomBehavior File="MyCTM" X="1568.066" Y="215.3722" Z="475.2235" />
-						<CustomBehavior File="MyCTM" X="1576.846" Y="234.4473" Z="476.5842" />
-						<CustomBehavior File="MyCTM" X="1634.932" Y="258.6702" Z="476.7266" />
-						<CustomBehavior File="InteractWith" MobId="61474" NumOfTimes="1" CollectionDistance="30" ObjectType="Npc" X="1688.922" Y="299.474" Z="478.063" />						
+					<If  Condition="Me.Level == 89" >						
 						<CustomBehavior File="ForcedMount" MountType="Ground" />
 						<CustomBehavior File="Message" Text="Moving to the Temple of the White Tiger Flight Master." LogColor="Lime" />
-						<CustomBehavior File="MyCTM" X="1706.246" Y="326.7131" Z="479.8691" />
-						<CustomBehavior File="MyCTM" X="1749.993" Y="323.4817" Z="478.0307" />
-						<CustomBehavior File="MyCTM" X="1804.188" Y="333.4225" Z="478.1265" />
-						<CustomBehavior File="MyCTM" X="1829.228" Y="375.8941" Z="481.8001" />					
-						<CustomBehavior File="MyCTM" X="1880.574" Y="440.2797" Z="483.497" />
-						<CustomBehavior File="MyCTM" X="1905.626" Y="500.8022" Z="483.548" />
-						<CustomBehavior File="MyCTM" X="2023.542" Y="577.8755" Z="482.132" />
-						<CustomBehavior File="MyCTM" X="1975.913" Y="820.6547" Z="488.3343" />
-							<RunTo X="2047.665" Y="920.954" Z="489.6747" />
-							<RunTo X="2048.81" Y="958.788" Z="491.046" />
-							<RunTo X="2104.565" Y="978.2137" Z="493.7843" />
-							<RunTo X="2164.676" Y="988.0469" Z="495.2032" />
-							<RunTo X="2180.963" Y="1005.032" Z="495.2797" />
-							<RunTo X="2179.942" Y="1059.61" Z="496.1229" />
-							<RunTo X="2214.773" Y="1105.303" Z="492.6537" />
-							<RunTo X="2224.901" Y="1141.507" Z="493.4811" />
-							<RunTo X="2279.712" Y="1164.666" Z="494.4517" />
-							<RunTo X="2360.929" Y="1028.239" Z="499.2063" />
-						<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
-							<Hotspot X="2463.322" Y="857.7686" Z="509.5807" />
-							<Hotspot X="2611.717" Y="746.4107" Z="527.2924" />
-						</CustomBehavior>					
-							<RunTo X="2725.753" Y="754.9287" Z="539.516" />
-							<RunTo X="2830.199" Y="697.6251" Z="543.8558" />
-							<RunTo X="2998.027" Y="589.8729" Z="517.5172" />
-							<RunTo X="3137.625" Y="654.4998" Z="501.825" />
 							<RunTo X="3238.562" Y="644.8422" Z="533.9927" />
 							<RunTo X="3240.154" Y="572.7864" Z="543.671" />
 							<RunTo X="3265.002" Y="551.8066" Z="545.67" />
@@ -154,51 +97,7 @@
 							<RunTo X="4304.605" Y="941.5417" Z="116.9282" />
 						<CustomBehavior File="Message" Text="Learning the Zouchin Village flight path." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="5000" />
-						<CustomBehavior File="Message" Text="Taking the flight path back to Temple of the White Tiger." LogColor="Lime" />				
-							<RunTo X="3504.04" Y="690.677" Z="608.185" />
-						<CustomBehavior File="Message" Text="Moving to the One Keg Flight Master." LogColor="Lime" />
-							<RunTo X="3492.702" Y="686.851" Z="608.4149" />
-							<RunTo X="3504.813" Y="644.3418" Z="609.3101" />
-							<RunTo X="3526.999" Y="635.1072" Z="608.1644" />
-							<RunTo X="3586.688" Y="586.2806" Z="615.2383" />
-							<RunTo X="3616.124" Y="523.5682" Z="617.9463" />
-							<RunTo X="3624.255" Y="506.6577" Z="630.957" />
-							<RunTo X="3663.232" Y="465.5059" Z="635.2031" />
-							<RunTo X="3666.086" Y="446.4374" Z="621.6351" />
-							<RunTo X="3664.76" Y="436.119" Z="621.0192" />
-							<RunTo X="3658.731" Y="415.631" Z="607.7686" />
-							<RunTo X="3685.885" Y="389.5201" Z="599.7195" />
-							<RunTo X="3681.01" Y="367.3502" Z="596.1646" />
-							<RunTo X="3625.988" Y="378.7317" Z="595.1488" />
-							<RunTo X="3522.687" Y="412.3465" Z="586.9313" />
-							<RunTo X="3448.485" Y="441.614" Z="586.5806" />
-							<RunTo X="3429.108" Y="464.584" Z="579.0836" />
-							<RunTo X="3377.339" Y="501.4652" Z="578.9382" />
-							<RunTo X="3305.727" Y="580.1395" Z="554.8228" />
-							<RunTo X="3269.521" Y="550.9655" Z="544.9716" />
-							<RunTo X="3247.84" Y="548.6466" Z="545.6694" />
-							<RunTo X="3238.879" Y="573.7782" Z="543.5685" />
-							<RunTo X="3233.169" Y="644.9582" Z="532.6683" />
-							<RunTo X="3138.81" Y="653.3215" Z="501.7087" />
-							<RunTo X="3038.983" Y="617.8627" Z="508.8434" />
-							<RunTo X="3028.596" Y="689.5617" Z="527.2018" />
-							<RunTo X="3075.712" Y="747.382" Z="527.5028" />
-							<RunTo X="3096.447" Y="754.8915" Z="527.4816" />
-							<RunTo X="3110.41" Y="786.327" Z="527.8192" />
-							<RunTo X="3136.183" Y="801.2054" Z="528.071" />
-							<RunTo X="3155.473" Y="837.7671" Z="532.3038" />
-							<RunTo X="3141.102" Y="876.3799" Z="544.639" />
-							<RunTo X="3115.387" Y="899.575" Z="555.0684" />
-							<RunTo X="2990.582" Y="892.6358" Z="577.2273" />
-							<RunTo X="2973.02" Y="905.4921" Z="578.537" />
-							<RunTo X="2916.955" Y="969.1447" Z="575.5521" />
-							<RunTo X="2877.133" Y="1015.601" Z="588.8896" />
-							<RunTo X="2888.389" Y="1098.184" Z="601.6965" />
-							<RunTo X="2924.205" Y="1139.433" Z="612.0303" />
-							<RunTo X="3014.048" Y="1168.813" Z="640.0284" />
-							<RunTo X="3063.016" Y="1190.918" Z="654.387" />
-						<CustomBehavior File="Message" Text="Learning the One Keg flight path." LogColor="Lime" />
-							<RunTo X="3126.358" Y="1224.912" Z="654.2394" />
+						<CustomBehavior File="Message" Text="Taking the flight path back to One Keg." LogColor="Lime" />				
 							<RunTo X="3067.64" Y="1227.253" Z="654.0538" />
 						<CustomBehavior File="Message" Text="Moving to the Kota Basecamp Flight Master." LogColor="Lime" />
 							<RunTo X="3060.75" Y="1246.378" Z="654.5537" />
