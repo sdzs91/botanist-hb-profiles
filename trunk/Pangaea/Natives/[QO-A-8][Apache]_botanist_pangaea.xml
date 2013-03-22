@@ -22,6 +22,7 @@
 <TargetElites>True</TargetElites>
 
 <AvoidMobs>
+	<Mob Name="Suspicious Snow Pile" Entry="59967" />
 	<Mob Name="Ik'thik Slicewing" Entry="59832" />
 	<Mob Name="Ik'thik Wingblade" Entry="57196" />
 	<Mob Name="Plainshawk" Entry="58910" />
@@ -249,7 +250,7 @@
 					<CustomBehavior File="Message" Text="Position check One Keg in Kun-Lai Summit" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am moving to the innkeep in One Keg." LogColor="Lime" />
-						<RunTo X="3111.531" Y="1246.429" Z="654.8526" />
+						<RunTo X="3111.423" Y="1248.592" Z="656.2395" />
 					<CustomBehavior File="Message" Text="I have located the innkeep." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
