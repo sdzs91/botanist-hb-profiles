@@ -242,7 +242,7 @@
 					</If>	
 				</If>	
 												
-				<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="60" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 					
                                              <!-- one keg  -->			  
 			    <If Condition="Me.ZoneId == 5841" >
