@@ -299,12 +299,34 @@
 				<CustomBehavior File="SetHearthstone" MobId="6727"  X="-9226.454" Y="-2155.743" Z="63.73067" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-9202.769" Y="-2342.259" Z="85.48305" />
-					<RunTo X="-9172.963" Y="-2632.588" Z="104.5079" />
-					<RunTo X="-9158.006" Y="-2945.502" Z="93.1116" />
-					<RunTo X="-9243.035" Y="-3342.566" Z="100.0966" />
-					<RunTo X="-9353.268" Y="-3432.311" Z="90.69847" />
-					<RunTo X="-9450.334" Y="-3421.177" Z="78.86421" />
+					<RunTo X="-9257.211" Y="-2148.589" Z="64.04065" />
+				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="true">
+					<Hotspot X="-9272.411" Y="-2241.704" Z="63.97412" />
+					<Hotspot X="-9186.249" Y="-2362.023" Z="90.25811" />
+					<Hotspot X="-9122.395" Y="-2633.208" Z="112.9846" />
+				</CustomBehavior>
+				<CustomBehavior File="UserSettings" PullDistance="5" />
+				<CustomBehavior File="MyCTM" X="-9107.6" Y="-2684.273" Z="90.75308" />
+				<CustomBehavior File="MyCTM" X="-9092.731" Y="-2728.944" Z="94.20008" />
+				<CustomBehavior File="MyCTM" X="-9120.215" Y="-2758.649" Z="92.36841" />
+				<CustomBehavior File="MyCTM" X="-9128.671" Y="-2784.336" Z="93.75533" />
+				<CustomBehavior File="MyCTM" X="-9135.444" Y="-2788.326" Z="98.96947" />
+				<CustomBehavior File="MyCTM" X="-9174.078" Y="-2815.295" Z="93.4206" />
+				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="true">
+					<Hotspot X="-9152.684" Y="-2878.456" Z="93.48038" />
+					<Hotspot X="-9154.836" Y="-2949.333" Z="93.42805" />
+					<Hotspot X="-9197.306" Y="-3012.43" Z="94.39108" />
+					<Hotspot X="-9176.914" Y="-3105.777" Z="97.1796" />
+					<Hotspot X="-9183.092" Y="-3175.147" Z="100.3469" />
+					<Hotspot X="-9209.907" Y="-3234.264" Z="100.3673" />
+					<Hotspot X="-9196.784" Y="-3292.728" Z="99.25132" />
+					<Hotspot X="-9241.135" Y="-3347.225" Z="99.99529" />
+					<Hotspot X="-9255.855" Y="-3369.908" Z="100.3778" />
+					<Hotspot X="-9398.461" Y="-3406.911" Z="87.44594" />
+					<Hotspot X="-9445.697" Y="-3423.668" Z="80.15531" />
+				</CustomBehavior>
+					<RunTo X="-9548.928" Y="-3323.59" Z="37.5894" />
+				<CustomBehavior File="UserSettings" PullDistance="25" />	
 				<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 20." LogColor="Lime" />				
 					<SetGrindArea><GrindArea>
 						<Factions>18</Factions>
