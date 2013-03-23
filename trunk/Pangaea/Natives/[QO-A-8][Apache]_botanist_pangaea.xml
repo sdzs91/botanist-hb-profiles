@@ -233,6 +233,24 @@
 		                   <!-- ********************************************************************************************************** -->	
 									
 		<While Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt;= 88" >
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.ZoneId == 5785 || Me.ZoneId == 5805" >
+						<CustomBehavior File="Message" Text="Moving to the Grassey Cline Flight Master." LogColor="Lime" />
+							<RunTo X="405.0258" Y="-62.77075" Z="172.2329" />
+						<CustomBehavior File="Message" Text="Moving to the Tavern in the Mist Flight Master." LogColor="Lime" />
+							<RunTo X="495.2251" Y="-72.47599" Z="179.1802" /> <!-- stairs -->
+						<CustomBehavior File="Message" Text="Learning the Tavern in the Mist flight path." LogColor="Lime" />
+							<RunTo X="784.899" Y="-203.67" Z="402.192" />
+						<CustomBehavior File="Message" Text="Moving to the Binan Village Flight Master." LogColor="Lime" />
+							<RunTo X="1610.286" Y="251.9558" Z="477.2577" />
+						<CustomBehavior File="Message" Text="Learning the Binan Village flight path." LogColor="Lime" />
+							<RunTo X="1690.11" Y="303.958" Z="478.5869" />
+						<CustomBehavior File="Message" Text="Moving to the One Keg Flight Master." LogColor="Lime" />
+							<RunTo X="2922.102" Y="1140.1" Z="611.7402" />
+						<CustomBehavior File="Message" Text="Learning the One Keg flight path." LogColor="Lime" />
+							<RunTo X="3124.52" Y="1224.28" Z="654.231" />
+					</If>	
+				</If>		
 				
 				<If Condition="Me.MapId == 870" >
 					<If Condition="Me.ZoneId != 5841" >
