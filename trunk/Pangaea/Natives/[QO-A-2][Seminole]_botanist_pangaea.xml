@@ -249,7 +249,7 @@
 								 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 16." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>189,19</Factions>
+							<Factions>189,19,39</Factions>
 								<Hotspots>
 									<Hotspot X="-9455.706" Y="-2319.699" Z="66.94684" />
 									<Hotspot X="-9523.883" Y="-2362.289" Z="68.61036" />
@@ -309,7 +309,7 @@
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 18." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>40,90,18,189,19</Factions>
+							<Factions>40,90,18,189,19,39</Factions>
 								<Hotspots>
 									<Hotspot X="-9622.59" Y="-2611.198" Z="58.6996" />
 									<Hotspot X="-9592.662" Y="-2687.184" Z="58.38448" />
@@ -369,7 +369,7 @@
 					<Hotspot X="-9186.249" Y="-2362.023" Z="90.25811" />
 					<Hotspot X="-9122.395" Y="-2633.208" Z="112.9846" />
 				</CustomBehavior>
-				<CustomBehavior File="UserSettings" PullDistance="5" />
+				<CustomBehavior File="UserSettings" PullDistance="10" />
 				<CustomBehavior File="MyCTM" X="-9107.6" Y="-2684.273" Z="90.75308" />
 				<CustomBehavior File="MyCTM" X="-9092.731" Y="-2728.944" Z="94.20008" />
 				<CustomBehavior File="MyCTM" X="-9120.215" Y="-2758.649" Z="92.36841" />
@@ -393,7 +393,7 @@
 				<CustomBehavior File="UserSettings" PullDistance="25" />	
 				<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 20." LogColor="Lime" />				
 					<SetGrindArea><GrindArea>
-						<Factions>18</Factions>
+						<Factions>189,39,40</Factions>
 							<Hotspots>
 								<Hotspot X="-9548.928" Y="-3323.59" Z="37.5894" />
 								<Hotspot X="-9483.931" Y="-3321.154" Z="7.614015" />
@@ -439,7 +439,7 @@
 						  	
 				<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Gold &gt;= 5" >
 					<CustomBehavior File="Message" Text="Moving to the riding trainer Stormwind." LogColor="Orange" />
-					<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
+						<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
 					<CustomBehavior File="Message" Text="I have reached the riding trainer. Training Apprentice Riding." LogColor="Orange" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="43769" WaitTime="1000" CollectionDistance="50" X="-8845.4" Y="502.653" Z="109.617" />
@@ -859,7 +859,14 @@
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Aerie Peak in The Hinterlands." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Aerie Peak." LogColor="Lime" />														
+				<If Condition="Me.ZoneId == 5287" >
+					<CustomBehavior File="Message" Text="I am in Stranglethorn Vale, moving to the flight master and flying to Wetlands." LogColor="Lime" />
+					<RunTo X="-14473" Y="464.15" Z="36.43" /> <!-- bb flight master -->
+					
+					<RunTo  X="-4109.508" Y="-2739.919" Z="19.20033" /> <!-- wetlands flight master -->
+				</If>	
+				
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Aerie Peak in the Hinterlands." LogColor="Lime" />														
 					<RunTo X="316.7757" Y="-2119.679" Z="121.8378" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
