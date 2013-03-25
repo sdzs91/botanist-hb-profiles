@@ -348,7 +348,7 @@
 		</While>
 			
 			<If Condition="Me.MapId == 870" >				 
-				<If Condition="Me.ZoneId == 5805" >
+				<If Condition="Me.ZoneId != 5842" >
 					<If  Condition="Me.Level == 89" >
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="I have reached level 89. I'm changing profiles." LogColor="Lime" />

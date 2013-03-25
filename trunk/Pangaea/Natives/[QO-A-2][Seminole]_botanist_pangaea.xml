@@ -22,6 +22,8 @@
 	<TargetElites></TargetElites>
 	
 	<AvoidMobs>
+		<Mob Name="Cauldron Lord Soulwrath" Entry="11078" />
+		<Mob Name="King Mukla" Entry="1559" />
 		<Mob Name="Sin'Dall" Entry="729" />
 		<Mob Name="Cocooned Victim" Entry="42907" />
 		<Mob Name="Scorched Guardian" Entry="2726" />
@@ -37,6 +39,8 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="1678.812" Y="-2276.823" Z="58.90885" Radius="30" />
+		<Blackspot X="-499.5869" Y="-3838.531" Z="230.5589" Radius="15" />
 		<Blackspot X="-11830.34" Y="212.5177" Z="17.63339" Radius="30" />
 		<Blackspot X="-9559.761" Y="-2603.544" Z="54.63371" Radius="30" />
 		<Blackspot X="-8802.475" Y="-2142.861" Z="152.4201" Radius="3" />
@@ -713,14 +717,14 @@
 				
 				
 
-				<If Condition="Me.Level &gt;= 28 &amp;&amp; Me.Level &lt;= 31" >				
+				<If Condition="Me.Level &gt;= 28 &amp;&amp; Me.Level &lt;= 29" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the 28 to 32 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 28 to 30 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
-		<While Condition="Me.Level &gt;= 28 &amp;&amp; Me.Level &lt;= 31" >		
+		<While Condition="Me.Level &gt;= 28 &amp;&amp; Me.Level &lt;= 29" >		
 				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" MountDistance="60"
 								UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
@@ -740,7 +744,7 @@
 					<RunTo X="-12494.61" Y="-514.6472" Z="15.5158" />
 								 
 
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 32." LogColor="Lime" />				
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 30." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>48,30,16</Factions>
 								<Hotspots>
@@ -754,7 +758,7 @@
 									<Hotspot X="-12744.07" Y="-895.3342" Z="54.43389" />									
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 32)" GoalText="Farming" />
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 30)" GoalText="Farming" />
 
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
@@ -777,15 +781,14 @@
 					</If>
 					
 		</While>
-
-				<If Condition="Me.Level &gt;= 32 &amp;&amp; Me.Level &lt;= 33" >				
+				<If Condition="Me.Level &gt;= 30 &amp;&amp; Me.Level &lt;= 31" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the 32 to 34 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 30 to 32 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 				
-		<While Condition="Me.Level &gt;= 32 &amp;&amp; Me.Level &lt;= 33" >		
+		<While Condition="Me.Level &gt;= 30 &amp;&amp; Me.Level &lt;= 31" >		
 				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" MountDistance="60"
 								UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
@@ -800,28 +803,23 @@
 				<CustomBehavior File="SetHearthstone" MobId="6807"  X="-14457.73" Y="495.3478" Z="15.12675" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="-14639.69" Y="296.1839" Z="3.397022" />
+					<RunTo X="-14580.4" Y="-110.6395" Z="2.615263" />
 								 
-
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 34." LogColor="Lime" />				
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 32." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>47,49,16,72,119,7,74</Factions>
+							<Factions>72,16</Factions>
 								<Hotspots>
-									<Hotspot X="-14639.69" Y="296.1839" Z="3.397022" />
-								    <Hotspot X="-14216.54" Y="215.998" Z="11.60023" />
-								    <Hotspot X="-14026.19" Y="200.519" Z="13.38833" />
-								    <Hotspot X="-13955" Y="120.6938" Z="14.73391" />
-								    <Hotspot X="-13883.76" Y="-52.8908" Z="27.44912" />
-								    <Hotspot X="-13829.57" Y="-149.7624" Z="15.58549" />
-								    <Hotspot X="-13791.16" Y="123.5736" Z="22.22287" />
-								    <Hotspot X="-13655.8" Y="281.5858" Z="39.43233" />
-								    <Hotspot X="-13696.39" Y="557.6444" Z="19.28177" />
-								    <Hotspot X="-13859.59" Y="648.2197" Z="12.94509" />
-								    <Hotspot X="-13952.76" Y="521.1376" Z="37.04623" />
-								    <Hotspot X="-14127.59" Y="442.0752" Z="4.210244" />									
+									<Hotspot X="-14580.4" Y="-110.6395" Z="2.615263" />
+									<Hotspot X="-14529.6" Y="-193.4816" Z="11.43273" />
+									<Hotspot X="-14554.6" Y="-388.8985" Z="5.191243" />
+									<Hotspot X="-14638.37" Y="-386.2253" Z="8.544575" />
+									<Hotspot X="-14681.08" Y="-462.8062" Z="0.7203637" />
+									<Hotspot X="-14792.84" Y="-441.217" Z="1.961794" />
+									<Hotspot X="-14818.95" Y="-330.0103" Z="3.80352" />
+									<Hotspot X="-14768.62" Y="-169.2485" Z="4.78455" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 34)" GoalText="Farming" />
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 32)" GoalText="Farming" />
 
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
@@ -845,26 +843,24 @@
 					
 		</While>
 
-				<If Condition="Me.Level &gt;= 34 &amp;&amp; Me.Level &lt;= 35" >				
+				<If Condition="Me.Level &gt;= 32 &amp;&amp; Me.Level &lt;= 33" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the 34 to 36 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 32 to 34 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
-
-		<While Condition="Me.Level &gt;= 34 &amp;&amp; Me.Level &lt;= 35" >		
+				
+		<While Condition="Me.Level &gt;= 32 &amp;&amp; Me.Level &lt;= 33" >		
 				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" MountDistance="60"
 								UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
 								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Aerie Peak in The Hinterlands." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<If Condition="Me.ZoneId == 5287" >
-					<CustomBehavior File="Message" Text="I am in Stranglethorn Vale, moving to the flight master and flying to Wetlands." LogColor="Lime" />
-					<RunTo X="-14473" Y="464.15" Z="36.43" /> <!-- bb flight master -->
-					
-					<RunTo  X="-4109.508" Y="-2739.919" Z="19.20033" /> <!-- wetlands flight master -->
-				</If>	
+					<If Condition="Me.ZoneId != 47" >
+						<CustomBehavior File="Message" Text="Moving to Ironforge, then running to The Hinterlands." LogColor="Lime" />
+							<RunTo X="-4821.78" Y="-1155.44" Z="502.21" /> <!-- ironforge flight master -->
+					</If>	
 				
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Aerie Peak in the Hinterlands." LogColor="Lime" />														
 					<RunTo X="316.7757" Y="-2119.679" Z="121.8378" />
@@ -874,27 +870,35 @@
 				<CustomBehavior File="SetHearthstone" MobId="7744"  X="320.059" Y="-2119.22" Z="121.8395" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="-826.1176" Y="-2412.328" Z="64.66367" />
+					<RunTo X="-298.978" Y="-4129.71" Z="136.4704" />
 								 
 
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 36." LogColor="Lime" />				
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 34." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>18,14,8,22,5,654,7,87,5,68,795</Factions>
+							<Factions>795,38</Factions>
 								<Hotspots>
-								    <Hotspot X="-264.0752" Y="-3304.926" Z="131.8115" />
-								    <Hotspot X="-120.2158" Y="-3407.242" Z="125.5071" />
-								    <Hotspot X="-79.86553" Y="-3401.068" Z="119.2434" />
-								    <Hotspot X="148.9321" Y="-3340.397" Z="117.0639" />
-								    <Hotspot X="273.4206" Y="-3262.534" Z="113.5487" />
-								    <Hotspot X="299.911" Y="-3075.645" Z="118.2281" />
-								    <Hotspot X="277.912" Y="-2995.728" Z="114.4639" />
-								    <Hotspot X="155.5975" Y="-2914.344" Z="110.1295" />
-								    <Hotspot X="212.4767" Y="-2323.166" Z="111.192" />
-								    <Hotspot X="195.6168" Y="-2230.445" Z="98.8603" />
-								    <Hotspot X="179.8548" Y="-2159.438" Z="100.7023" />									
+									<Hotspot X="-298.978" Y="-4129.71" Z="136.4704" />
+									<Hotspot X="-292.5335" Y="-4208.535" Z="136.6637" />
+									<Hotspot X="-334.0887" Y="-4092.291" Z="152.6015" />
+									<Hotspot X="-221.7036" Y="-4083.873" Z="151.9833" />
+									<Hotspot X="-234.7772" Y="-4037.195" Z="174.0585" />
+									<Hotspot X="-354.5406" Y="-4043.499" Z="174.0736" />
+									<Hotspot X="-394.9268" Y="-4181.271" Z="174.0723" />
+									<Hotspot X="-472.4576" Y="-4177.346" Z="195.0647" />
+									<Hotspot X="-445.9639" Y="-4048.246" Z="195.1363" />
+									<Hotspot X="-227.2527" Y="-3973.255" Z="195.4196" />
+									<Hotspot X="-234.3077" Y="-3909.108" Z="215.8611" />
+									<Hotspot X="-376.8088" Y="-3899.441" Z="215.8609" />
+									<Hotspot X="-527.3131" Y="-4032.746" Z="215.8612" />
+									<Hotspot X="-529.5917" Y="-4167.794" Z="215.6248" />
+									<Hotspot X="-602.781" Y="-4135.07" Z="238.3711" />
+									<Hotspot X="-676.6605" Y="-4017.604" Z="238.2356" />
+									<Hotspot X="-549.3419" Y="-3854.791" Z="230.5652" />
+									<Hotspot X="-389.4802" Y="-3812.193" Z="238.0929" />
+									<Hotspot X="-202.8751" Y="-3832.131" Z="238.3518" />									
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 36)" GoalText="Farming" />
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 34)" GoalText="Farming" />
 
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
@@ -918,7 +922,76 @@
 					
 		</While>
 
-				<If Condition="Me.Level &gt;= 36 &amp;&amp; Me.Level &lt;= 38" >				
+				<If Condition="Me.Level &gt;= 34 &amp;&amp; Me.Level &lt;= 35" >				
+					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am in the 34 to 36 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				</If>
+
+		<While Condition="Me.Level &gt;= 34 &amp;&amp; Me.Level &lt;= 35" >		
+				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" MountDistance="60"
+								UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
+								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+								LogoutForInactivity="True" />						
+				<CustomBehavior File="Message" Text="Position check, Chillwind Camp in Western Plaguelands." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="Message" Text="Moving to the innkeep at Chillwind Camp." LogColor="Lime" />														
+					<RunTo X="943.2197" Y="-1447.792" Z="63.40036" />
+				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="SetHearthstone" MobId="46269"  X="942.109" Y="-1446.09" Z="63.39738" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
+					<RunTo X="1098.51" Y="-1387.309" Z="71.39101" />
+								 
+
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 36." LogColor="Lime" />				
+						<SetGrindArea><GrindArea>
+							<Factions>16,44,312,38,19,312,22</Factions>
+								<Hotspots>
+									<Hotspot X="1098.51" Y="-1387.309" Z="71.39101" />
+									<Hotspot X="1144.768" Y="-1212.477" Z="72.37875" />
+									<Hotspot X="1243.928" Y="-1176.665" Z="61.21187" />
+									<Hotspot X="1307.887" Y="-1237.494" Z="62.5781" />
+									<Hotspot X="1446.03" Y="-1230.546" Z="60.48546" />
+									<Hotspot X="1445.834" Y="-1075.778" Z="71.66246" />
+									<Hotspot X="1573.207" Y="-890.2463" Z="66.79544" />
+									<Hotspot X="1662.923" Y="-864.2303" Z="65.93896" />
+									<Hotspot X="1792.886" Y="-926.3319" Z="70.70251" />
+									<Hotspot X="1738.569" Y="-968.6013" Z="72.47636" />
+									<Hotspot X="1734.598" Y="-1066.202" Z="68.26512" />
+									<Hotspot X="1670.353" Y="-1093.82" Z="64.809" />
+									<Hotspot X="1577.491" Y="-1146.791" Z="68.35725" />
+									<Hotspot X="1517.771" Y="-1199.908" Z="69.73431" />									
+								</Hotspots>
+						</GrindArea></SetGrindArea>					
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 36)" GoalText="Farming" />
+
+
+				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Leonard Porter" Entry="12942" Type="Repair" X="949.8846" Y="-1435.649" Z="62.5901" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="946.442" Y="-1460.034" Z="62.54815" />
+							</Mailboxes>
+						</SetMailbox>				
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					</If>
+					
+		</While>
+
+				<If Condition="Me.Level &gt;= 36 &amp;&amp; Me.Level &lt;= 37" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am in the 36 to 39 bracket, changing to the newest farming location." LogColor="Lime" />
@@ -940,27 +1013,16 @@
 				<CustomBehavior File="SetHearthstone" MobId="46269"  X="942.109" Y="-1446.09" Z="63.39738" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="1098.51" Y="-1387.309" Z="71.39101" />
+					<RunTo X="1691.805" Y="-2209.461" Z="60.25575" />
 								 
-
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 39." LogColor="Lime" />				
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 38." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>16,44,312,38,19,312,22</Factions>
+							<Factions>21</Factions>
 								<Hotspots>
-									<Hotspot X="1098.51" Y="-1387.309" Z="71.39101" />
-									<Hotspot X="1144.768" Y="-1212.477" Z="72.37875" />
-									<Hotspot X="1243.928" Y="-1176.665" Z="61.21187" />
-									<Hotspot X="1307.887" Y="-1237.494" Z="62.5781" />
-									<Hotspot X="1446.03" Y="-1230.546" Z="60.48546" />
-									<Hotspot X="1445.834" Y="-1075.778" Z="71.66246" />
-									<Hotspot X="1573.207" Y="-890.2463" Z="66.79544" />
-									<Hotspot X="1662.923" Y="-864.2303" Z="65.93896" />
-									<Hotspot X="1792.886" Y="-926.3319" Z="70.70251" />
-									<Hotspot X="1738.569" Y="-968.6013" Z="72.47636" />
-									<Hotspot X="1734.598" Y="-1066.202" Z="68.26512" />
-									<Hotspot X="1670.353" Y="-1093.82" Z="64.809" />
-									<Hotspot X="1577.491" Y="-1146.791" Z="68.35725" />
-									<Hotspot X="1517.771" Y="-1199.908" Z="69.73431" />									
+									<Hotspot X="1691.805" Y="-2209.461" Z="60.25575" />
+									<Hotspot X="1631.848" Y="-2287.431" Z="59.12328" />
+									<Hotspot X="1695.698" Y="-2354.956" Z="60.09939" />
+									<Hotspot X="1762.943" Y="-2279.823" Z="59.84469" /> 									
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 39)" GoalText="Farming" />
