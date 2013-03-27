@@ -22,6 +22,7 @@
 	<TargetElites></TargetElites>
 	
 	<AvoidMobs>
+		<Mob Name="Seeker Aqualon" Entry="14269" />
 		<Mob Name="Cauldron Lord Soulwrath" Entry="11078" />
 		<Mob Name="King Mukla" Entry="1559" />
 		<Mob Name="Sin'Dall" Entry="729" />
@@ -39,6 +40,9 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="-9457.098" Y="-3311.4" Z="4.661528" Radius="14.76301" />
+		<Blackspot X="-9604.104" Y="-3271.516" Z="48.01837" Radius="37.38659" />
+		<Blackspot X="-9673.664" Y="-3006.823" Z="52.85536" Radius="45" />
 		<Blackspot X="1678.812" Y="-2276.823" Z="58.90885" Radius="30" />
 		<Blackspot X="-499.5869" Y="-3838.531" Z="230.5589" Radius="15" />
 		<Blackspot X="-11830.34" Y="212.5177" Z="17.63339" Radius="30" />
@@ -178,7 +182,7 @@
 
 		<While Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >
 			
-				<CustomBehavior File="UserSettings" MountDistance="60" UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="UserSettings" MountDistance="60" UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="50" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Sentinel Hill in Westfall." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Sentinel Hill in Westfall." LogColor="Lime" />														
@@ -189,20 +193,20 @@
 				<CustomBehavior File="SetHearthstone" MobId="8931"  X="-10653.28" Y="1166.431" Z="34.50514" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-10068.68" Y="932.5858" Z="35.1198" />
+					<RunTo X="-10778.48" Y="957.4733" Z="41.96339" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 14." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>189,14,38,20,73</Factions>
+							<Factions>14,73,38</Factions>
 								<Hotspots>
-									<Hotspot X="-10068.68" Y="932.5858" Z="35.1198" />
-									 <Hotspot X="-10201.4" Y="1017.193" Z="36.52847" />
-									 <Hotspot X="-9923.991" Y="1222.103" Z="42.37767" />
-									 <Hotspot X="-9903.853" Y="1655.223" Z="32.74086" />
-									 <Hotspot X="-10028.72" Y="1541.581" Z="43.26708" />
-									 <Hotspot X="-10070.36" Y="1325.623" Z="45.27948" />
-									 <Hotspot X="-10157.1" Y="1115.275" Z="37.01828" />
+									<Hotspot X="-10778.48" Y="957.4733" Z="41.96339" />
+									<Hotspot X="-10822.43" Y="899.4329" Z="32.76308" />
+									<Hotspot X="-10693.07" Y="766.2779" Z="46.98366" />
+									<Hotspot X="-10819.15" Y="824.4052" Z="33.27655" />
+									<Hotspot X="-10828.86" Y="731.5012" Z="34.93524" />
+									<Hotspot X="-10885.85" Y="831.8834" Z="32.76427" />
+									<Hotspot X="-10908.34" Y="956.5885" Z="37.44214" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level &gt;= 14)" GoalText="Farming" />
@@ -238,7 +242,7 @@
 			
 		<While Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 15" >	
 	
-				<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Lakeshire in Redridge Mountains." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Lakeshire in Redridge Mountains." LogColor="Lime" />														
@@ -879,6 +883,7 @@
 								<Hotspots>
 									<Hotspot X="-298.978" Y="-4129.71" Z="136.4704" />
 									<Hotspot X="-292.5335" Y="-4208.535" Z="136.6637" />
+									<Hotspot X="-303.432" Y="-4189.289" Z="136.4372" />
 									<Hotspot X="-334.0887" Y="-4092.291" Z="152.6015" />
 									<Hotspot X="-221.7036" Y="-4083.873" Z="151.9833" />
 									<Hotspot X="-234.7772" Y="-4037.195" Z="174.0585" />
