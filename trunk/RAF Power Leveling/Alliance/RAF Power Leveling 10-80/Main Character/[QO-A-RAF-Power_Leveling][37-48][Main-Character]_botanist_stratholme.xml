@@ -1,0 +1,673 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-RAF-Power_Leveling][37-48][Main-Character]_botanist_stratholme</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Argent Crusader" Entry="45456" />
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="3914.505" Y="-3546.085" Z="135.0418" Radius="6.1735" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>1924,14</Factions>
+	
+	<ProtectedItems>
+		<Item Name="Deathcharger's Reins" Entry="13335" />
+		<Item Name="Runeblade of Baron Rivendare" Entry="13505" />
+	</ProtectedItems>
+	
+	<QuestOrder>
+					<ClearVendor />
+					<ClearMailbox />
+		
+					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="10" LogoutForInactivity="True" />
+					
+		 
+         
+		 
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.X &gt; -6642.138 &amp;&amp; Me.X &lt; -6618 &amp;&amp; Me.Y &lt; -3747.672 &amp;&amp; Me.Y &gt; -3775.467" >
+						<CustomBehavior File="Message" Text="I am outside the Uldaman portal. I need to fly to Light's Hope Chapel." LogColor="Lime" />
+						<CustomBehavior File="MyCTM" X="-6625.584" Y="-3766.409" Z="266.0891" />
+						<CustomBehavior File="MyCTM" X="-6636.48" Y="-3759.071" Z="265.7599" />
+						<CustomBehavior File="MyCTM" X="-6634.277" Y="-3724.905" Z="266.9658" />
+						<CustomBehavior File="MyCTM" X="-6616.287" Y="-3718.121" Z="268.8133" />
+						<CustomBehavior File="MyCTM" X="-6606.497" Y="-3695.98" Z="265.9462" />
+						<CustomBehavior File="FlyTo" X="2289.299" Y="-5328.072" Z="90.75233" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>	
+				</If>	
+						
+						
+				<If Condition="Me.ZoneId != 139 &amp;&amp; Me.MapId != 329" > <!-- not in eastern plaguelands not in stratholme -->						
+					<CustomBehavior File="Message" Text="I'm not in Eastern Plaguelands, flying to Lights Hope Chapel." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="2289.299" Y="-5328.072" Z="90.75233" DestName="Lights Hope Chapel" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<RunTo X="2294.876" Y="-5334.578" Z="90.7522" />
+				</If>
+				
+				
+				<If Condition="Me.ZoneId == 139 &amp;&amp; Me.MapId != 329" > <!-- in EP not in Strat -->
+					<If Condition="Me.X &lt; 3187.217 || Me.X &gt; 3241.359 || Me.Y &gt; -4033.853 || Me.Y &lt; -4057.924" >  <!-- news of the gate entrance -->
+						<CustomBehavior File="Message" Text="I'm in Eastern Plaguelands, moving to the innkeep." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2285.257" Y="-5323.889" Z="89.8182" DestName="Lights Hope Chapel" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="2294.876" Y="-5334.578" Z="90.7522" />
+					</If>	
+				</If>
+			
+				<If Condition="Me.MapId == 329">
+					<If Condition="Me.X &lt; 3627.395" >
+						<CustomBehavior File="Message" Text="You started the bot with me inside the entrance. I am exiting the dungeon." LogColor="Lime" />
+							<RunTo X="3598.173" Y="-3653.897" Z="138.5109" />
+							<RunTo X="3594.656" Y="-3650.104" Z="138.5109" />
+						<CustomBehavior File="MyCTM" X="3589.552" Y="-3638.795" Z="138.4764" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<CustomBehavior File="Message" Text="I have exited the dungeon." LogColor="Lime" />
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 329">
+					<If Condition="Me.X &gt; 3627.395" >
+						<CustomBehavior File="Message" Text="You started the bot with me inside the instance. I am exiting the dungeon." LogColor="Lime" />
+							<RunTo X="3627.206" Y="-3640.699" Z="138.4589" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="Opening the gate." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="175368" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3624.90845" Y="-3642.1626" Z="138.445114" />
+							<RunTo X="3623.563" Y="-3643.059" Z="138.5102" />
+							<RunTo X="3598.173" Y="-3653.897" Z="138.5109" />
+							<RunTo X="3594.656" Y="-3650.104" Z="138.5109" />
+						<CustomBehavior File="MyCTM" X="3589.552" Y="-3638.795" Z="138.4764" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<CustomBehavior File="Message" Text="I have exited the dungeon." LogColor="Lime" />
+						
+					</If>
+				</If>
+			
+				<If Condition="Me.ZoneId == 139 &amp;&amp; Me.MapId != 329" >
+					<If Condition="Me.X &gt; 2227.332 &amp;&amp; Me.X &lt; 2378.066 &amp;&amp; Me.Y &gt; -5427.272 &amp;&amp; Me.Y &lt; -5237.988" >
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am in Light's Hope Chapel. Locating the innkeep." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="2294.876" Y="-5334.578" Z="90.7522" />							
+						<CustomBehavior File="Message" Text="Setting my Heartstone with the innkeep." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="16256"  X="2295.74" Y="-5336.82" Z="90.75285" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I have set my Heartstone." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="2289.471" Y="-5328.48" Z="90.75286" />
+							<RunTo X="2281.309" Y="-5320.413" Z="88.86092" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					</If>
+				</If>
+				
+				<If Condition="Me.ZoneId == 139 &amp;&amp; Me.MapId != 329" >
+					<If Condition="Me.X &gt; 2227.332 &amp;&amp; Me.X &lt; 2378.066 &amp;&amp; Me.Y &gt; -5427.272 &amp;&amp; Me.Y &lt; -5237.988" >
+						<CustomBehavior File="FlyTo" X="3133.932" Y="-4354.479" Z="145.9537" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="Main Character - Press continue on this window first, then press continue on the RAF characters." Title="WARNING" />
+						<CustomBehavior File="FlyTo" X="3166.444" Y="-4233.983" Z="97.82156" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" UseMount="False" />
+							<RunTo X="3160.389" Y="-4222.059" Z="96.35991" />
+							<RunTo X="3164.883" Y="-4217.799" Z="94.48819" />
+							<RunTo X="3178.541" Y="-4191.696" Z="96.05982" />
+							<RunTo X="3177.463" Y="-4184.795" Z="94.05489" />
+							<CustomBehavior File="RunMacro" Macro="/tar Wretched Ranger" />
+                    <CustomBehavior File="RunMacro" Macro="/startattack Wretched Ranger" />				
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					
+							<RunTo X="3183.366" Y="-4186.484" Z="94.55066" />
+					<CustomBehavior File="RunMacro" Macro="/tar Wretched Woodsman" />
+                    <CustomBehavior File="RunMacro" Macro="/startattack Wretched Woodsman" />				
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+							<RunTo X="3168.762" Y="-4187.781" Z="94.72856" />
+							<RunTo X="3161.067" Y="-4153.657" Z="95.03041" />
+							<RunTo X="3154.605" Y="-4155.414" Z="96.64172" />
+							<RunTo X="3154.101" Y="-4149.533" Z="95.99455" />
+							<RunTo X="3149.621" Y="-4151.061" Z="96.65406" />
+							<RunTo X="3157.262" Y="-4151.832" Z="95.86582" />
+							<RunTo X="3149.046" Y="-4155.622" Z="97.67914" />
+					<CustomBehavior File="RunMacro" Macro="/tar Wretched Pathstrider" />
+                    <CustomBehavior File="RunMacro" Macro="/startattack Wretched Pathstrider" />				
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+							<RunTo X="3159.104" Y="-4156.722" Z="95.64138" />
+							<RunTo X="3151.573" Y="-4158.89" Z="97.80439" />
+							<RunTo X="3155.659" Y="-4115.158" Z="98.03387" />
+					<CustomBehavior File="RunMacro" Macro="/tar Monstrous Plaguebat" />
+                    <CustomBehavior File="RunMacro" Macro="/startattack Monstrous Plaguebat" />				
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+							<RunTo X="3159.646" Y="-4107.032" Z="102.67" />
+							<RunTo X="3153.614" Y="-4106.93" Z="98.2834" />
+							<RunTo X="3155.502" Y="-4102.378" Z="100.0497" />
+							<RunTo X="3155.459" Y="-4043.665" Z="103.7621" />
+							<RunTo X="3139.613" Y="-4047.037" Z="105.1513" />
+							<RunTo X="3165.773" Y="-3999.974" Z="109.7591" />
+							<RunTo X="3170.309" Y="-4043.282" Z="104.9822" />
+							<RunTo X="3159.154" Y="-4058.97" Z="101.8239" />
+							<RunTo X="3156.488" Y="-4047.752" Z="103.4509" />
+							<RunTo X="3159.025" Y="-4039.921" Z="103.9568" />
+							<RunTo X="3146.314" Y="-4047.014" Z="104.767" />
+							<RunTo X="3175.539" Y="-4039.376" Z="105.4958" />
+						<CustomBehavior File="UserSettings" UseMount="True" />	
+						<CustomBehavior File="Message" Text="Opening the gate.." LogColor="Lime" />
+							<RunTo X="3182.442" Y="-4039.105" Z="107.3712" />
+						<CustomBehavior File="InteractWith" MobId="175369" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3185.4812" Y="-4039.09937" Z="107.791389" />
+							<RunTo X="3185.573" Y="-4038.596" Z="107.9911" />
+							<RunTo X="3226.373" Y="-4036.854" Z="108.4222" />
+							<RunTo X="3233.06" Y="-4048.3" Z="108.442" />
+
+					</If>
+				</If>
+		
+		<While Condition="true" >
+		
+				<If Condition="Me.ZoneId == 139 &amp;&amp; Me.MapId != 329 &amp;&amp; Me.X &lt; 3239.871 &amp;&amp; Me.X &gt; 3184.693 &amp;&amp; Me.Y &lt; -4033.876 &amp;&amp; Me.Y &gt; -4050.978" > <!-- in eastern kingdoms in eastern plaguelands inside the gate-->
+					<CustomBehavior File="Message" Text="I'm inside the East Gate Service Entrance to Stratholme." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am resetting the dungeon." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />				
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<!--	<CustomBehavior File="GoThruPortal" Timeout="15000" X="3236.772" Y="-4056.048" Z="108.4669" />	-->
+					<CustomBehavior File="MyCTM" X="3233.484" Y="-4057.278" Z="108.467" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<RunTo X="3591.602" Y="-3645.726" Z="138.4989" />
+				</If>		
+																
+				<If Condition="Me.MapId == 329">
+					<CustomBehavior File="Message" Text="I have entered Stratholme." LogColor="Lime" />
+					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+						Text="Main Character - Press continue on this window first, then press continue on the RAF characters." Title="WARNING" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />					
+					<CustomBehavior File="Message" Text="Deleting the garbage from my bags." LogColor="Lime" />
+					<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285,4608" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<RunTo X="3592.842" Y="-3650.627" Z="138.5113" />
+						<RunTo X="3598.626" Y="-3653.662" Z="138.5113" />
+						<RunTo X="3610.909" Y="-3648.168" Z="138.5113" />
+						<RunTo X="3622.403" Y="-3643.406" Z="138.51" />						
+					<CustomBehavior File="Message" Text="Opening the gate." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="175368" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3624.90845" Y="-3642.1626" Z="138.445114" />
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="3628.536" Y="-3640.215" Z="138.5518" />
+						<Hotspot X="3641.778" Y="-3639.01" Z="138.5127" />
+						<Hotspot X="3659.161" Y="-3603.504" Z="136.9696" />
+						<Hotspot X="3671.745" Y="-3592.973" Z="137.1315" />
+						<Hotspot X="3711.208" Y="-3607.594" Z="141.2447" />
+						<Hotspot X="3684.45" Y="-3607.668" Z="137.989" />
+						<Hotspot X="3661.411" Y="-3613.698" Z="137.2019" />
+						<Hotspot X="3667.093" Y="-3624.899" Z="139.9525" />
+						<Hotspot X="3673.547" Y="-3632.984" Z="139.9443" />
+						<Hotspot X="3678.544" Y="-3630.957" Z="139.9443" />
+					</CustomBehavior>
+						<RunTo X="3674.085" Y="-3634.892" Z="139.9438" />
+						<RunTo X="3661.4" Y="-3617.082" Z="137.5251" />
+						<RunTo X="3684.45" Y="-3607.668" Z="137.989" />
+						<RunTo X="3724.066" Y="-3600.257" Z="142.335" />
+					<CustomBehavior File="InteractWith" MobId="175357" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3727.29126" Y="-3599.08252" Z="142.219528" />					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="3731.949" Y="-3598.588" Z="142.3679" />
+						<Hotspot X="3759.372" Y="-3584.975" Z="142.3694" />
+						<Hotspot X="3777.282" Y="-3581.971" Z="142.5357" />
+						<Hotspot X="3781.592" Y="-3587.755" Z="143.6525" />
+					</CustomBehavior>
+					<CustomBehavior File="InteractWith" MobId="175356" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3782.58057" Y="-3590.479" Z="143.987152" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="3795.344" Y="-3611.103" Z="145.3044" />
+						<Hotspot X="3810.171" Y="-3627.585" Z="145.2025" />
+						<Hotspot X="3811.73" Y="-3650.852" Z="146.8383" />
+						<Hotspot X="3809.339" Y="-3653.824" Z="147.2081" />
+						<Hotspot X="3832.4" Y="-3648.284" Z="145.8582" />
+						<Hotspot X="3842.575" Y="-3632.798" Z="146.4816" />
+						<Hotspot X="3818.59" Y="-3626.441" Z="145.2863" />
+						<Hotspot X="3853.366" Y="-3611.5" Z="145.0292" />
+						<Hotspot X="3833.904" Y="-3592.784" Z="145.0914" />
+						<Hotspot X="3871.281" Y="-3562.418" Z="138.0934" />
+						<Hotspot X="3855.379" Y="-3556.625" Z="139.7044" />
+						<Hotspot X="3886.693" Y="-3537.993" Z="138.6086" />
+						<Hotspot X="3865.315" Y="-3521.18" Z="137.2282" />
+					</CustomBehavior>
+					
+						<RunTo X="3864.809" Y="-3547.531" Z="137.5405" />
+					
+					<CustomBehavior File="Message" Text="Pulling the first boss and clearing the Ziggurat." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="MyCTM" X="3857.987" Y="-3536.106" Z="141.4574" />
+					<CustomBehavior File="MyCTM" X="3854.798" Y="-3529.62" Z="144.209" />
+					<CustomBehavior File="MyCTM" X="3852.506" Y="-3525.211" Z="144.209" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="UserSettings" LootMobs="False" />
+
+						<RunTo X="3843.91" Y="-3507.593" Z="144.2099" />
+
+						<RunTo X="3851.389" Y="-3500.981" Z="142.4611" />
+
+						<RunTo X="3847.451" Y="-3492.012" Z="141.2107" />
+
+						<RunTo X="3838.974" Y="-3489.44" Z="141.2107" />
+
+						<RunTo X="3830.809" Y="-3493.843" Z="141.2107" />
+
+						<RunTo X="3828.904" Y="-3500.067" Z="141.2107" />
+
+						<RunTo X="3833.17" Y="-3508.828" Z="141.6112" />
+
+						<RunTo X="3836.673" Y="-3509.856" Z="144.2104" />
+
+						<RunTo X="3843.961" Y="-3507.627" Z="144.2104" />
+
+						<RunTo X="3852.348" Y="-3523.871" Z="144.2104" />
+					<CustomBehavior File="UserSettings" LootMobs="False" />	
+					
+						<RunTo X="3865.351" Y="-3549.132" Z="137.5736" />
+						<RunTo X="3824.21" Y="-3631.151" Z="146.0595" />
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="3831.226" Y="-3659.902" Z="145.0474" />
+						<Hotspot X="3846.309" Y="-3656.883" Z="144.6962" />
+						<Hotspot X="3855.355" Y="-3663.469" Z="144.4592" />
+						<Hotspot X="3840.715" Y="-3668.551" Z="144.3646" />
+						<Hotspot X="3820.215" Y="-3685.225" Z="144.8193" />						
+						<Hotspot X="3821.893" Y="-3696.467" Z="143.6986" />
+						<Hotspot X="3828.051" Y="-3719.741" Z="141.6245" />
+						<Hotspot X="3827.628" Y="-3709.193" Z="142.8552" />
+						<Hotspot X="3835.74" Y="-3706.906" Z="142.3707" />
+						<Hotspot X="3835.781" Y="-3698.389" Z="142.7393" />
+						<Hotspot X="3861.531" Y="-3682.955" Z="142.8136" />
+						<Hotspot X="3890.892" Y="-3717.622" Z="142.9835" />
+						<Hotspot X="3883.785" Y="-3699.539" Z="143.6255" />
+						<Hotspot X="3879.66" Y="-3670.277" Z="142.9006" />
+						<Hotspot X="3903.282" Y="-3664.005" Z="139.7611" />
+						<Hotspot X="3886.826" Y="-3686" Z="142.4945" />
+						<Hotspot X="3890.545" Y="-3691.303" Z="143.6082" />						
+						<Hotspot X="3863.233" Y="-3680.835" Z="142.9816" />
+					</CustomBehavior>
+					
+						<RunTo X="3859.238" Y="-3693.707" Z="141.7953" />
+						
+					<CustomBehavior File="Message" Text="Pulling the second boss and clearing the Ziggurat." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="MyCTM" X="3856.993" Y="-3705.232" Z="142.9963" />
+					<CustomBehavior File="MyCTM" X="3855.271" Y="-3715.741" Z="148.0913" />
+					<CustomBehavior File="MyCTM"  X="3854.406" Y="-3719.528" Z="148.0913" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="UserSettings" LootMobs="False" />						
+
+						<RunTo X="3849.992" Y="-3739.331" Z="148.0913" />
+
+						<RunTo X="3842.671" Y="-3739.096" Z="148.0913" />
+
+						<RunTo X="3838.637" Y="-3741.968" Z="145.0917" />
+
+						<RunTo X="3836.824" Y="-3749.92" Z="145.0917" />
+
+						<RunTo X="3840.662" Y="-3756.624" Z="145.0917" />
+
+						<RunTo X="3849.744" Y="-3758.721" Z="145.0917" />
+						
+						<RunTo X="3856.106" Y="-3754.555" Z="145.0917" />
+
+						<RunTo X="3858.392" Y="-3746.065" Z="145.2855" />
+
+						<RunTo X="3855.504" Y="-3742.345" Z="148.0915" />
+
+						<RunTo X="3849.606" Y="-3740.113" Z="148.0915" />
+
+						<RunTo X="3855.138" Y="-3714.762" Z="148.0915" />
+					<CustomBehavior File="UserSettings" LootMobs="False" />
+					
+						<RunTo X="3858.499" Y="-3702.072" Z="141.276" />
+							
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="3859.238" Y="-3693.707" Z="141.7953" />
+						<Hotspot X="3894.684" Y="-3678.979" Z="141.2834" />
+						<Hotspot X="3923.471" Y="-3665.273" Z="138.7752" />
+						<Hotspot X="3938.089" Y="-3651.741" Z="139.879" />
+						<Hotspot X="3945.088" Y="-3639.316" Z="136.4099" />
+						<Hotspot X="3975.979" Y="-3648.836" Z="133.6613" />
+						<Hotspot X="3973.521" Y="-3647.799" Z="134.2263" />
+						<Hotspot X="3974.987" Y="-3624.436" Z="129.7937" />
+						<Hotspot X="4002.751" Y="-3639.058" Z="131.3077" />
+						<Hotspot X="4001.528" Y="-3607.247" Z="129.8279" />
+						<Hotspot X="4023.113" Y="-3619.174" Z="131.0457" />					
+					</CustomBehavior>
+						<RunTo X="4012.393" Y="-3628.117" Z="129.515" />
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="3938.952" Y="-3651.708" Z="139.7825" />
+						<Hotspot X="3953.061" Y="-3647.496" Z="136.1178" />
+						<Hotspot X="3966.069" Y="-3639.71" Z="132.8112" />
+						<Hotspot X="3977.561" Y="-3620.052" Z="129.9335" />
+						<Hotspot X="3978.615" Y="-3631.511" Z="130.164" />
+						<Hotspot X="3992.993" Y="-3636.529" Z="131.5849" />
+						<Hotspot X="4006.985" Y="-3630.091" Z="129.4143" />
+						<Hotspot X="4020.977" Y="-3635.735" Z="129.0086" />
+						<Hotspot X="3995.59" Y="-3617.795" Z="129.3715" />
+					</CustomBehavior>
+						<RunTo X="3995.59" Y="-3617.795" Z="129.3715" />
+					<CustomBehavior File="Message" Text="Pulling the third boss and clearing the Ziggurat." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="MyCTM" X="4024.116" Y="-3638.03" Z="130.3624" />
+					<CustomBehavior File="MyCTM" X="4029.995" Y="-3642.843" Z="135.4246" />
+					<CustomBehavior File="MyCTM" X="4036.038" Y="-3647.79" Z="135.6552" />
+					<CustomBehavior File="MyCTM" X="4037.172" Y="-3649.092" Z="135.6552" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="UserSettings" LootMobs="False" />
+
+						<RunTo X="4051.88" Y="-3660.895" Z="135.6552" />
+
+						<RunTo X="4047.596" Y="-3666.733" Z="135.6552" />
+
+						<RunTo X="4047.874" Y="-3671.896" Z="132.6556" />
+
+						<RunTo X="4053.627" Y="-3676.831" Z="132.6554" />
+
+						<RunTo X="4063.082" Y="-3676.78" Z="132.6556" />
+
+						<RunTo X="4068.928" Y="-3669.727" Z="132.6556" />
+
+						<RunTo X="4068.266" Y="-3662.519" Z="132.6556" />
+
+						<RunTo X="4061.969" Y="-3656.625" Z="132.6556" />
+
+						<RunTo X="4055.937" Y="-3657.228" Z="135.6548" />
+
+						<RunTo X="4051.046" Y="-3661.507" Z="135.6548" />
+
+						<RunTo X="4036.498" Y="-3648.509" Z="135.6548" />
+					<CustomBehavior File="UserSettings" LootMobs="False" />
+					<CustomBehavior File="MyCTM" X="4029.904" Y="-3644.998" Z="135.6548" />						
+					<CustomBehavior File="Message" Text="Moving to Slaughter Square." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					
+						<RunTo X="4021.725" Y="-3635.523" Z="128.893" />
+				
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="4000.368" Y="-3609.828" Z="129.633" />
+						<Hotspot X="4009.143" Y="-3593.087" Z="130.334" />
+						<Hotspot X="4002.073" Y="-3570.187" Z="126.9322" />
+						<Hotspot X="3993.453" Y="-3592.479" Z="128.2587" />
+						<Hotspot X="3979.809" Y="-3593.584" Z="128.4828" />
+						<Hotspot X="3954.293" Y="-3565.419" Z="129.8918" />
+						<Hotspot X="3970.166" Y="-3546.187" Z="126.2798" />
+						<Hotspot X="3995.523" Y="-3542.405" Z="124.2919" />
+						<Hotspot X="4002.586" Y="-3546.67" Z="123.7938" />
+						<Hotspot X="4000.322" Y="-3567.905" Z="126.5656" />
+						<Hotspot X="4019.845" Y="-3559.666" Z="126.1482" />
+						<Hotspot X="4016.182" Y="-3520.77" Z="122.0283" />
+						<Hotspot X="4055.857" Y="-3516.479" Z="122.1446" />
+						<Hotspot X="4068.232" Y="-3535.712" Z="122.7709" />
+					</CustomBehavior>
+					
+						<RunTo X="4037.834" Y="-3479.203" Z="121.7385" />
+	
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="4038.377" Y="-3506.949" Z="121.6989" />
+						<Hotspot X="4037.289" Y="-3469.208" Z="121.7346" />
+						<Hotspot X="4034.236" Y="-3464.189" Z="121.459" />
+						<Hotspot X="4030.655" Y="-3456.906" Z="121.0268" />
+						<Hotspot X="4028.507" Y="-3448.851" Z="120.3062" />
+						<Hotspot X="4032.045" Y="-3441.791" Z="119.5054" />
+						<Hotspot X="4038.914" Y="-3440.243" Z="119.2555" />
+						<Hotspot X="4044.238" Y="-3446.492" Z="120.2458" />
+						<Hotspot X="4038.745" Y="-3449.923" Z="120.4431" />
+						<Hotspot X="4033.389" Y="-3443.501" Z="119.6911" />
+						<Hotspot X="4015.777" Y="-3428.139" Z="118.6227" />
+						<Hotspot X="4010.655" Y="-3429.867" Z="119.5684" />
+						<Hotspot X="4008.683" Y="-3437.523" Z="121.1479" />
+						<Hotspot X="4012.596" Y="-3444.231" Z="120.9205" />
+						<Hotspot X="4018.055" Y="-3440.741" Z="119.9925" />
+						<Hotspot X="4016.855" Y="-3432.715" Z="119.3678" />
+						<Hotspot X="4023.235" Y="-3433.804" Z="119.0537" />
+						<Hotspot X="4026.89" Y="-3441.158" Z="119.4115" />
+						<Hotspot X="4035.011" Y="-3442.143" Z="119.5161" />
+						<Hotspot X="4042.681" Y="-3438.949" Z="119.1163" />
+						<Hotspot X="4047.344" Y="-3432.158" Z="118.2385" />
+						<Hotspot X="4049.282" Y="-3424.2" Z="116.9527" />
+						<Hotspot X="4050.25" Y="-3415.982" Z="116.1551" />
+						<Hotspot X="4056.917" Y="-3412.65" Z="116.128" />
+						<Hotspot X="4064.789" Y="-3414.139" Z="116.3186" />
+						<Hotspot X="4067.278" Y="-3421.628" Z="116.8813" />
+						<Hotspot X="4060.082" Y="-3425.452" Z="117.3257" />
+						<Hotspot X="4053.419" Y="-3429.019" Z="117.8981" />
+						<Hotspot X="4032.021" Y="-3435.558" Z="118.7774" />
+						<Hotspot X="4034.193" Y="-3427.387" Z="117.4911" />
+						<Hotspot X="4028.698" Y="-3423.935" Z="117.0731" />
+						<Hotspot X="4023.933" Y="-3430.933" Z="118.5453" />
+						<Hotspot X="4017.353" Y="-3435.498" Z="119.6285" />
+						<Hotspot X="4009.234" Y="-3436.733" Z="121.0067" />
+						<Hotspot X="4004.296" Y="-3430.388" Z="120.8087" />
+						<Hotspot X="4007.969" Y="-3422.993" Z="118.5337" />
+						<Hotspot X="4012.027" Y="-3415.488" Z="116.9815" />
+						<Hotspot X="4014.449" Y="-3407.576" Z="116.285" />
+						<Hotspot X="4012.606" Y="-3399.598" Z="115.9308" />
+						<Hotspot X="4005.991" Y="-3396.802" Z="116.4072" />
+						<Hotspot X="3999.387" Y="-3401.437" Z="117.3641" />
+						<Hotspot X="3994.469" Y="-3408.057" Z="118.1355" />
+						<Hotspot X="3992.73" Y="-3416.362" Z="119.2488" />
+						<Hotspot X="3997.212" Y="-3422.701" Z="120.1135" />
+						<Hotspot X="4004.637" Y="-3425.955" Z="119.7112" />
+						<Hotspot X="4011.882" Y="-3422.311" Z="117.9393" />
+						<Hotspot X="4016.445" Y="-3415.523" Z="116.6802" />
+						<Hotspot X="4024.089" Y="-3412.144" Z="116.133" />
+						<Hotspot X="4032.287" Y="-3410.462" Z="115.7516" />
+						<Hotspot X="4040.806" Y="-3408.969" Z="115.5879" />
+						<Hotspot X="4049.079" Y="-3407.519" Z="115.5073" />
+						<Hotspot X="4057.317" Y="-3406.027" Z="115.652" />
+						<Hotspot X="4064.004" Y="-3400.99" Z="115.6537" />
+						<Hotspot X="4071.257" Y="-3397.892" Z="115.6537" />
+						<Hotspot X="4073.46" Y="-3404.427" Z="115.6537" />
+						<Hotspot X="4068.182" Y="-3411.21" Z="116.079" />
+						<Hotspot X="4064.465" Y="-3418.272" Z="116.6021" />
+						<Hotspot X="4070.039" Y="-3423.603" Z="117.0471" />
+						<Hotspot X="4078.289" Y="-3422.438" Z="116.6871" />
+						<Hotspot X="4086.369" Y="-3422.446" Z="116.5541" />
+						<Hotspot X="4087.171" Y="-3430.463" Z="116.9142" />
+						<Hotspot X="4075.439" Y="-3397.016" Z="115.6532" />
+						<Hotspot X="4079.356" Y="-3433.077" Z="117.7616" />
+						<Hotspot X="4070.861" Y="-3433.317" Z="118.5215" />
+						<Hotspot X="4063.115" Y="-3430.706" Z="118.1885" />
+						<Hotspot X="4055.803" Y="-3433.038" Z="118.6672" />
+						<Hotspot X="4054.226" Y="-3441.156" Z="119.8729" />
+						<Hotspot X="4046.846" Y="-3440.359" Z="119.4817" />
+						<Hotspot X="4032.487" Y="-3435.16" Z="118.7254" />
+					</CustomBehavior>
+						<RunTo X="4032.487" Y="-3435.16" Z="118.7254" />
+					<CustomBehavior File="Message" Text="1 of 3." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+						<RunTo X="4032.487" Y="-3435.16" Z="118.7254" />
+					<CustomBehavior File="Message" Text="2 of 3." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+						<RunTo X="4032.487" Y="-3435.16" Z="118.7254" />
+					<CustomBehavior File="Message" Text="3 of 3." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					
+						<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
+					<CustomBehavior File="Message" Text="1 of 10." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="7000" />
+						<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
+					<CustomBehavior File="Message" Text="2 of 10." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="7000" />
+						<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
+					<CustomBehavior File="Message" Text="3 of 10." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="7000" />
+						<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
+					<CustomBehavior File="Message" Text="4 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="7000" />
+						<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
+					<CustomBehavior File="Message" Text="5 of 10." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="7000" />
+						<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
+					<CustomBehavior File="Message" Text="6 of 10." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="7000" />
+						<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
+					<CustomBehavior File="Message" Text="7 of 10" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="7000" />
+						<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
+					<CustomBehavior File="Message" Text="8 of 10." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="7000" />
+						<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
+					<CustomBehavior File="Message" Text="9 of 10." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="7000" />
+						<RunTo X="4033.103" Y="-3400.689" Z="115.1268" />
+					<CustomBehavior File="Message" Text="10 of 10." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="7000" />				
+						<RunTo X="4032.77" Y="-3389.172" Z="119.7397" />
+				</If>
+							
+				<If Condition="Me.Y &gt; -3396.163" >										
+						<RunTo X="4032.564" Y="-3381.163" Z="119.75" />
+						<RunTo X="4032.845" Y="-3363.982" Z="115.0513" />
+					<CustomBehavior File="Message" Text="Pulling Lord Aurius Rivendare. Good luck on your mount." LogColor="Lime" />
+						<RunTo X="4035.476" Y="-3337.201" Z="115.0595" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+						<RunTo X="4033.202" Y="-3370.377" Z="115.0627" />
+						<RunTo X="4032.582" Y="-3382.844" Z="119.751" />
+						<RunTo X="4033.113" Y="-3401.897" Z="115.2019" />
+				</If>
+
+				
+				<If Condition="HasItem(13335)" >
+					<CustomBehavior File="Message" Text="I have looted Deathcharger's Reins." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="Message" Text="Equipping Deathcharger's Reins." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Congrats on your maount." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="Message" Text="Stopping the bot." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+				</If>
+				
+				<If Condition="Me.MapId == 329" >
+					<CustomBehavior File="Message" Text="Deathcharger's Reins didn't drop." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Deleting the garbage from my bags." LogColor="Lime" />
+					<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285,4608" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Checking my bag space and gear durability." LogColor="Lime" />
+					
+					<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->						
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I have detected that I have less than 25 empty bag slots or that my gear is about to break. I'm going to hearth,repair and mail. Then I'll run the dungeon again" LogColor="Lime" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor." LogColor="Lime" />												
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Vincent Randolph" Entry="47286" Type="Repair" X="2257.292" Y="-5293.229" Z="82.14259" />
+							</Vendors>
+						</SetVendor>						
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="2290.367" Y="-5320.899" Z="90.15194" />
+							</Mailboxes>
+						</SetMailbox>			
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 329" >
+					<CustomBehavior File="Message" Text="I have more than 25 empty slots in my bags and my gear is above 30 percent durability." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am exiting the dugeon and running it again." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" 
+					HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" 
+					LootRadius="10" LogoutForInactivity="True" />
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="4034.594" Y="-3416.749" Z="116.1439" />
+						<Hotspot X="4035.719" Y="-3436.553" Z="118.8561" />
+						<Hotspot X="4036.891" Y="-3457.197" Z="120.9007" />
+						<Hotspot X="4038.05" Y="-3477.599" Z="121.7337" />
+						<Hotspot X="4039.945" Y="-3497.769" Z="121.7339" />
+						<Hotspot X="4041.189" Y="-3525.887" Z="122.1816" />
+						<Hotspot X="4034.017" Y="-3545" Z="124.4048" />
+						<Hotspot X="4015.127" Y="-3552.197" Z="124.373" />
+						<Hotspot X="4012.396" Y="-3571.832" Z="128.2051" />
+						<Hotspot X="3998.788" Y="-3586.54" Z="128.5589" />
+						<Hotspot X="4005.879" Y="-3605.789" Z="130.3189" />
+						<Hotspot X="4010.869" Y="-3625.895" Z="129.5543" />
+						<Hotspot X="3992.45" Y="-3634.481" Z="131.2393" />
+						<Hotspot X="3972.686" Y="-3630.2" Z="130.166" />
+						<Hotspot X="3958.623" Y="-3644.508" Z="133.6951" />
+						<Hotspot X="3939.615" Y="-3649.543" Z="139.3203" />
+					</CustomBehavior>
+							<RunTo X="3933.671" Y="-3649.359" Z="140.3094" />
+							<RunTo X="3918.544" Y="-3671.727" Z="138.5373" />
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="3912.952" Y="-3674.024" Z="139.0405" />
+						<Hotspot X="3894.319" Y="-3665.915" Z="140.6943" />
+						<Hotspot X="3874.343" Y="-3668.369" Z="143.7008" />
+						<Hotspot X="3853.916" Y="-3671.276" Z="144.0826" />
+						<Hotspot X="3836.021" Y="-3680.601" Z="144.2684" />
+						<Hotspot X="3825.843" Y="-3662.546" Z="145.6102" />
+						<Hotspot X="3815.921" Y="-3644.856" Z="146.3089" />
+						<Hotspot X="3805.429" Y="-3627.411" Z="145.2024" />
+						<Hotspot X="3794.562" Y="-3610.349" Z="145.3343" />
+						<Hotspot X="3784.279" Y="-3592.839" Z="144.6358" />
+					</CustomBehavior>
+						<RunTo X="3778.327" Y="-3580.445" Z="142.4818" />
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="3758.536" Y="-3585.478" Z="142.3711" />
+						<Hotspot X="3740.68" Y="-3595.116" Z="142.3696" />
+						<Hotspot X="3721.97" Y="-3602.738" Z="142.2861" />
+						<Hotspot X="3701.83" Y="-3604.459" Z="139.7285" />
+						<Hotspot X="3681.449" Y="-3604.634" Z="137.6527" />
+						<Hotspot X="3661.669" Y="-3610.521" Z="137.1319" />
+						<Hotspot X="3645.617" Y="-3623.053" Z="137.7222" />
+					</CustomBehavior>
+						<RunTo X="3629.614" Y="-3638.961" Z="138.7975" />						
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Opening the gate." LogColor="Lime" />
+					<CustomBehavior File="InteractWith" MobId="175368" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3624.90845" Y="-3642.1626" Z="138.445114" />
+						<RunTo X="3623.563" Y="-3643.059" Z="138.5102" />
+						<RunTo X="3598.173" Y="-3653.897" Z="138.5109" />
+						<RunTo X="3594.656" Y="-3650.104" Z="138.5109" />
+					<CustomBehavior File="MyCTM" X="3589.552" Y="-3638.795" Z="138.4764" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+					<CustomBehavior File="DeleteItems" Ids="3927,1645,3928,6149,7972,10285" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I have exited the dungeon." LogColor="Lime" />						
+				</If>	
+					
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

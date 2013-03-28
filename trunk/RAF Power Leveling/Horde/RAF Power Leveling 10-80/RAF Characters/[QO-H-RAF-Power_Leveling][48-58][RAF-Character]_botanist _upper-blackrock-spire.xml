@@ -1,0 +1,211 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H-RAF-Power_Leveling][48-58][RAF-Character]_botanist _upper-blackrock-spire</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="202.4744" Y="-420.869" Z="110.9131" Radius="14.15664" />
+		<Blackspot X="-10441.78" Y="-258.6545" Z="47.09528" Radius="163.9329" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>14,16,2156</Factions>
+	
+	<ProtectedItems>
+	<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" PullDistance="40" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+
+
+		 
+				<If Condition="Me.MapId == 1" >
+						<CustomBehavior File="Message" Text="I am in Kalimdor. I need to be in Eastern Kingdoms. Moving to Ratchet." LogColor="Lime" />
+						<RunTo X="-994.5389" Y="-3830.653" Z="5.595397" />							
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-994.5389" Y="-3830.653" Z="5.595397" />									
+						<CustomBehavior File="UseTransport" TransportId="20808" 
+											WaitAtX="-994.5389" WaitAtY="-3830.653" WaitAtZ="5.595397"
+											TransportStartX="-1005.613" TransportStartY="-3841.648" TransportStartZ="0.03330701"
+											StandOnX="-996.8519" StandOnY="-3834.72" StandOnZ="6.065099"
+											TransportEndX="-14277.74" TransportEndY="582.86" TransportEndZ="0.015"	
+											GetOffX="-14281.86" GetOffY="564.9252" GetOffZ="7.45587" />								
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="-14281.86" Y="564.9252" Z="7.45587" />
+				</If>
+
+				<If Condition="Me.ZoneId == 139 &amp;&amp; Me.X &lt; 3239.871 &amp;&amp; Me.X &gt; 3184.693 &amp;&amp; Me.Y &lt; -4033.876 &amp;&amp; Me.Y &gt; -4050.978" >
+						<RunTo X="3188.293" Y="-4039.94" Z="107.9916" />
+					<CustomBehavior File="InteractWith" MobId="175369" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3185.4812" Y="-4039.09937" Z="107.791389" />
+						<RunTo X="3174.617" Y="-4040.483" Z="105.481" />
+						<RunTo X="3135.281" Y="-4356.141" Z="133.4427" />
+				</If>	
+					
+					
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.Y &lt; -1232.614 || Me.Y &gt; -1213.534 || Me.X &gt; -7522.099 || Me.X &lt; -7545.701" >
+						<CustomBehavior File="Message" Text="I am in Eastern Kingdoms. Flying to Searing Gorge" LogColor="Lime" />
+							<RunTo X="-7120.945" Y="-1233.354" Z="290.0742" />							
+							<RunTo X="-7097.179" Y="-1288.359" Z="264.8408" />
+							<RunTo X="-7111.331" Y="-1292.404" Z="260.9809" />
+							<RunTo X="-7126.021" Y="-1294.85" Z="256.5188" />
+							<RunTo X="-7141.141" Y="-1292.104" Z="251.2118" />
+							<RunTo X="-7152.306" Y="-1282.135" Z="254.3812" />
+							<RunTo X="-7161.317" Y="-1269.58" Z="254.2485" />
+							<RunTo X="-7169.999" Y="-1256.88" Z="252.3296" />
+							<RunTo X="-7178.724" Y="-1244.224" Z="247.19" />
+							<RunTo X="-7189.897" Y="-1233.682" Z="245.8615" />
+							<RunTo X="-7195.31" Y="-1219.482" Z="246.8039" />
+							<RunTo X="-7197.217" Y="-1204.195" Z="248.5359" />
+							<RunTo X="-7197.971" Y="-1188.854" Z="248.2756" />
+							<RunTo X="-7199.033" Y="-1173.507" Z="247.6905" />
+							<RunTo X="-7198.324" Y="-1158.341" Z="248.2991" />
+							<RunTo X="-7194.028" Y="-1142.921" Z="245.1148" />
+							<RunTo X="-7189.27" Y="-1127.564" Z="242.8835" />
+							<RunTo X="-7186.011" Y="-1112.522" Z="242.5269" />
+							<RunTo X="-7186.385" Y="-1097.238" Z="242.1573" />
+							<RunTo X="-7195.351" Y="-1084.911" Z="242.3097" />
+							<RunTo X="-7207.874" Y="-1075.968" Z="243.0324" />
+							<RunTo X="-7222.662" Y="-1072.188" Z="244.4721" />
+							<RunTo X="-7238.131" Y="-1072.88" Z="250.6573" />
+							<RunTo X="-7253.333" Y="-1074.157" Z="259.658" />
+							<RunTo X="-7268.667" Y="-1073.434" Z="267.4628" />
+							<RunTo X="-7283.854" Y="-1071.021" Z="271.7382" />
+							<RunTo X="-7298.778" Y="-1067.077" Z="277.0371" />
+							<RunTo X="-7313.355" Y="-1073.213" Z="277.0699" />
+							<RunTo X="-7325.753" Y="-1082.296" Z="277.093" />
+							<RunTo X="-7338.256" Y="-1091.458" Z="277.3854" />
+							<RunTo X="-7350.001" Y="-1101.386" Z="277.2419" />
+							<RunTo X="-7361.578" Y="-1111.555" Z="277.8404" />
+							<RunTo X="-7368.542" Y="-1097.911" Z="277.8404" />
+							<RunTo X="-7384.112" Y="-1097.094" Z="278.0756" />
+							<RunTo X="-7399.022" Y="-1101.264" Z="278.0756" />
+							<RunTo X="-7412.304" Y="-1094.176" Z="278.0756" />
+							<RunTo X="-7415.323" Y="-1079.056" Z="276.8943" />
+							<RunTo X="-7421.735" Y="-1065.102" Z="274.7997" />
+							<RunTo X="-7435.969" Y="-1059.418" Z="271.7405" />
+							<RunTo X="-7451.116" Y="-1061.877" Z="268.2941" />
+							<RunTo X="-7466.077" Y="-1065.858" Z="265.8296" />
+							<RunTo X="-7480.829" Y="-1070.278" Z="265.172" />
+							<RunTo X="-7493.219" Y="-1078.911" Z="265.097" />
+							<RunTo X="-7494.846" Y="-1094.17" Z="265.5715" />
+							<RunTo X="-7493.268" Y="-1109.406" Z="266.0225" />
+							<RunTo X="-7492.819" Y="-1125.038" Z="265.6076" />
+							<RunTo X="-7495.413" Y="-1140.031" Z="265.0732" />
+							<RunTo X="-7502.123" Y="-1153.981" Z="269.7075" />
+							<RunTo X="-7502.519" Y="-1154.934" Z="269.7098" />
+						<CustomBehavior File="MyCTM" X="-7481.099" Y="-1163.595" Z="278.3291" />						
+						<CustomBehavior File="MyCTM" X="-7468.005" Y="-1165.901" Z="273.5431" />
+						<CustomBehavior File="MyCTM" X="-7468.93" Y="-1187.483" Z="274.2403" />
+						<CustomBehavior File="MyCTM" X="-7497.984" Y="-1197.316" Z="279.7406" />
+						<CustomBehavior File="MyCTM" X="-7519.286" Y="-1210.42" Z="289.9807" />
+						<CustomBehavior File="MyCTM" X="-7530.711" Y="-1209.178" Z="285.454" />
+						<CustomBehavior File="MyCTM" X="-7533.326" Y="-1215.684" Z="285.7172" />
+						<CustomBehavior File="MyCTM" X="-7524.65" Y="-1229.13" Z="285.731" />
+					</If>		
+				</If>	
+			
+				<If Condition="Me.ZoneId == 1583">
+					<CustomBehavior File="Message" Text="You started the bot with me inside Blackrock Spire. Running out to reset the dungeon." LogColor="Lime" />					
+						<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					<CustomBehavior File="GoThruPortal" X="76.84785" Y="-223.031" Z="49.84081" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<RunTo X="-7524.65" Y="-1229.13" Z="285.731" />
+				</If>
+		
+		 <While Condition="true" >
+											  
+				<If Condition="Me.ZoneId == 25" >														 
+					<If Condition="Me.Y &gt; -1232.614 &amp;&amp; Me.Y &lt; -1213.534 &amp;&amp; Me.X &lt; -7522.099 &amp;&amp; Me.X &gt; -7545.701" >
+						<If Condition="Me.Level &gt;= 58" >
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="**********RAF Character - This character has reached the appropriate level to run Hellfire Ramparts. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
+					</If>
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="MyCTM" X="-7521.762" Y="-1234.087" Z="285.7297" /> 
+						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<If Condition="Me.ZoneId == 1583">
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Press continue when you are ready to begin." Title="WARNING" />
+						</If>
+					</If>				
+				</If>
+
+                               <!-- blackrock spire dungeon script -->
+							   
+				<If Condition="Me.ZoneId == 1583">
+						<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					<CustomBehavior File="Message" Text="Waiting 165 seconds, entrance." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="165000" />
+						<RunTo X="36.50483" Y="-351.0449" Z="48.67935" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 1 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="39.85149" Y="-351.9539" Z="48.67553" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 2 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="36.50483" Y="-351.0449" Z="48.67935" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 3 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />	
+						<RunTo X="39.85149" Y="-351.9539" Z="48.67553" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 4 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="36.50483" Y="-351.0449" Z="48.67935" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 5 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="39.85149" Y="-351.9539" Z="48.67553" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 6 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="36.50483" Y="-351.0449" Z="48.67935" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 7 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="39.85149" Y="-351.9539" Z="48.67553" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 8 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="36.50483" Y="-351.0449" Z="48.67935" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 9 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />	
+						<RunTo X="39.85149" Y="-351.9539" Z="48.67553" />
+					<CustomBehavior File="Message" Text="Waiting 140 seconds, 10 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="140000" />
+					
+						<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					<CustomBehavior File="GoThruPortal" X="76.84785" Y="-223.031" Z="49.84081" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<RunTo X="-7524.65" Y="-1229.13" Z="285.731" />
+				</If>
+		</While>	
+	</QuestOrder>
+</HBProfile>
+

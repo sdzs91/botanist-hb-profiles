@@ -1,0 +1,510 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-RAF-Power_Leveling][30-37][Main-Character]_botanist _ uldaman</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />	
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-151.5376" Y="396.4401" Z="-37.62136" Radius="3" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+	<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" SkinMobs="False" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
+						
+
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.X &lt; -6642.138 || Me.X &gt; -6618 || Me.Y &gt; -3747.672 || Me.Y &lt; -3775.467" >
+						<CustomBehavior File="Message" Text="Moving to the innkeep." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-6604.441" Y="-3926.363" Z="378.9168" />							
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-6586.935" Y="-3924.635" Z="379.541" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="48054" X="-6584.51" Y="-3923.13" Z="379.5437" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="-6604.441" Y="-3926.363" Z="378.9168" />	
+						<CustomBehavior File="FlyTo" X="-5910.435" Y="-3313.322" Z="283.2991" />	
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="Main Character - Press continue on this window first, then press continue on the RAF characters." Title="WARNING" />
+						<CustomBehavior File="FlyTo" X="-6012.492" Y="-3320.513" Z="263.5093" />		
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" UseMount="False" LootMobs="False" SkinMobs="False" PullDistance="20" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
+							<RunTo X="-6012.492" Y="-3320.513" Z="263.5093" />
+						<CustomBehavior File="WaitTimer" WaitTime="5000" />
+							<RunTo X="-6009.687" Y="-3291.337" Z="264.9373" />
+							<RunTo X="-6011.833" Y="-3316.441" Z="263.5438" />
+							<RunTo X="-6010.21" Y="-3326.865" Z="267.6112" />
+							<RunTo X="-6024.274" Y="-3324.552" Z="263.1295" />
+							<RunTo X="-6002.491" Y="-3321.434" Z="264.9535" />
+							<RunTo X="-6036.324" Y="-3321.361" Z="259.7006" />
+							<RunTo X="-6058.873" Y="-3332.71" Z="258.8362" />
+							<RunTo X="-6062.691" Y="-3335.446" Z="258.2347" />
+							<RunTo X="-6072.816" Y="-3315.29" Z="256.3683" />
+							<RunTo X="-6080.502" Y="-3319.931" Z="255.9074" />
+							<RunTo X="-6086.759" Y="-3323.675" Z="254.8213" />
+							<RunTo X="-6088.158" Y="-3312.668" Z="256.453" />
+							<RunTo X="-6082.816" Y="-3311.656" Z="256.807" />
+							<RunTo X="-6085.97" Y="-3325.347" Z="254.4181" />
+							<RunTo X="-6095.425" Y="-3339.931" Z="253.7826" />
+							<RunTo X="-6099.07" Y="-3349.296" Z="255.8753" />
+							<RunTo X="-6111.491" Y="-3347.923" Z="254.0706" />
+							<RunTo X="-6114.213" Y="-3356.177" Z="255.6368" />
+							<RunTo X="-6114.672" Y="-3356.279" Z="255.6424" />
+							<RunTo X="-6137.606" Y="-3363.889" Z="247.9435" />
+							<RunTo X="-6158.49" Y="-3376.023" Z="243.0142" />
+							<RunTo X="-6149.042" Y="-3386.086" Z="246.0918" />
+							<RunTo X="-6148.563" Y="-3386.598" Z="246.4106" />
+							<RunTo X="-6141.69" Y="-3378.814" Z="248.9913" />
+							<RunTo X="-6145.569" Y="-3393.63" Z="248.8055" />
+							<RunTo X="-6141.924" Y="-3369.732" Z="246.7984" />
+							<RunTo X="-6169.689" Y="-3399.365" Z="240.8896" />
+							<RunTo X="-6172.247" Y="-3402.139" Z="239.9749" />
+							<RunTo X="-6179.283" Y="-3416.672" Z="239.019" />
+							<RunTo X="-6182.721" Y="-3421.396" Z="238.9256" />
+							<RunTo X="-6188.164" Y="-3427.518" Z="239.0388" />
+							<RunTo X="-6182.946" Y="-3411.394" Z="239.0659" />
+							<RunTo X="-6173.987" Y="-3416.943" Z="239.512" />
+							<RunTo X="-6201.017" Y="-3439.149" Z="238.5596" />
+							<RunTo X="-6218.674" Y="-3457.24" Z="242.3788" />
+							<RunTo X="-6221.89" Y="-3460.328" Z="244.2382" />
+							<RunTo X="-6229.875" Y="-3451.676" Z="238.5786" />
+							<RunTo X="-6220.921" Y="-3453.926" Z="240.1677" />
+							<RunTo X="-6213.632" Y="-3441.451" Z="238.2157" />
+							<RunTo X="-6222.911" Y="-3438.946" Z="237.8749" />
+							<RunTo X="-6240.75" Y="-3469.397" Z="243.4901" />
+							<RunTo X="-6261.678" Y="-3481.111" Z="250.9088" />
+							<RunTo X="-6285.305" Y="-3490.468" Z="251.9664" />
+							<RunTo X="-6308.985" Y="-3497.581" Z="248.0222" />
+							<RunTo X="-6331.946" Y="-3507.047" Z="243.0371" />
+							<RunTo X="-6353.056" Y="-3520.955" Z="244.0001" />
+							<RunTo X="-6369.796" Y="-3533.384" Z="258.0862" />
+							<RunTo X="-6383.498" Y="-3552.001" Z="268.8759" />
+							<RunTo X="-6394.715" Y="-3573.554" Z="276.3568" />
+							<RunTo X="-6411.611" Y="-3592.355" Z="276.6799" />
+							<RunTo X="-6433.173" Y="-3604.656" Z="273.4474" />
+							<RunTo X="-6456.944" Y="-3612.062" Z="270.852" />
+							<RunTo X="-6482.347" Y="-3611.815" Z="270.5893" />
+							<RunTo X="-6485.114" Y="-3610.116" Z="271.5035" />
+							<RunTo X="-6479.69" Y="-3630.041" Z="253.2359" />
+							<RunTo X="-6473.131" Y="-3650.896" Z="244.4736" />
+							<RunTo X="-6477.609" Y="-3653.549" Z="244.5294" />
+							<RunTo X="-6485.931" Y="-3653.454" Z="244.4968" />
+							<RunTo X="-6478.973" Y="-3644.61" Z="244.7345" />
+							<RunTo X="-6500.771" Y="-3643.811" Z="244.2005" />
+							<RunTo X="-6525.992" Y="-3641.086" Z="243.922" />
+							<RunTo X="-6544.159" Y="-3644.069" Z="245.1535" />
+							<RunTo X="-6530.353" Y="-3646.072" Z="244.823" />
+							<RunTo X="-6540.875" Y="-3636.39" Z="243.9003" />
+							<RunTo X="-6551.208" Y="-3640.853" Z="244.4126" />
+							<RunTo X="-6569.49" Y="-3656.67" Z="252.2722" />
+							<RunTo X="-6589.991" Y="-3669.102" Z="260.6218" />
+							<RunTo X="-6602.127" Y="-3690.344" Z="265.8343" />
+							<RunTo X="-6605.864" Y="-3695.183" Z="265.8681" />
+							
+							<CustomBehavior File="MyCTM" X="-6610.661" Y="-3704.972" Z="267.4866" />
+							<CustomBehavior File="MyCTM" X="-6616.192" Y="-3718.713" Z="268.899" />
+							<CustomBehavior File="MyCTM" X="-6630.354" Y="-3723.031" Z="267.4555" />
+							<CustomBehavior File="MyCTM" X="-6635.766" Y="-3737.958" Z="265.2828" />
+							<CustomBehavior File="MyCTM" X="-6635.251" Y="-3761.43" Z="265.876" />
+							<CustomBehavior File="MyCTM" X="-6619.671" Y="-3766.153" Z="266.3805" />
+					</If>	
+				</If>
+							
+				<If Condition="Me.ZoneId == 1337">
+					<CustomBehavior File="Message" Text="You started the bot with me inside Uldaman. Running out to reset the dungeon." LogColor="Lime" />
+						<RunTo X="-147.0043" Y="386.6589" Z="-38.87302" />
+					<CustomBehavior File="MyCTM" X="-180.2254" Y="389.5405" Z="-36.40934" />
+					<CustomBehavior File="MyCTM" X="-212.7889" Y="387.0172" Z="-38.75781" />
+					<CustomBehavior File="MyCTM" X="-213.1698" Y="378.6604" Z="-38.795" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<RunTo X="-6623.58" Y="-3766.707" Z="266.5673" />
+						<RunTo X="-6621.018" Y="-3766.552" Z="266.5887" />	
+				</If>	
+					
+		<While Condition="true" >									  
+				<If Condition="Me.ZoneId == 3" >														 
+					<If Condition="Me.X &gt; -6642.138 &amp;&amp; Me.X &lt; -6618 &amp;&amp; Me.Y &lt; -3747.672 &amp;&amp; Me.Y &gt; -3775.467" >
+						<CustomBehavior File="Message" Text="I am resetting the instance." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />				
+						<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
+						<CustomBehavior File="Message" Text="I have reset Uldaman." LogColor="Lime" />
+						<CustomBehavior File="MyCTM" X="-6616.537" Y="-3767.755" Z="266.4467" />
+						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<If Condition="Me.ZoneId == 1337">
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="Main Character - Press continue on this window first, then press continue on the RAF characters." Title="WARNING" />
+						</If>
+					</If>				
+				</If>
+
+                               <!-- uldaman dungeon script -->
+				<If Condition="Me.ZoneId == 1337">
+						<RunTo X="-187.0499" Y="389.706" Z="-37.74733" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+					<CustomBehavior File="InteractWith" MobId="124370" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="-185.393967" Y="389.598969" Z="-36.36605" />
+						<RunTo X="-170.0016" Y="389.3538" Z="-36.44214" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="MyCTM" X="-157.3373" Y="376.6672" Z="-37.80511" />
+					
+						<CustomBehavior File="MyCTM" X="-160.8963" Y="363.804" Z="-33.91676" />
+						<CustomBehavior File="MyCTM" X="-151.6818" Y="368.48" Z="-34.03808" />
+						<CustomBehavior File="MyCTM" X="-161.2178" Y="365.4824" Z="-34.02547" />
+						<CustomBehavior File="MyCTM" X="-152.5045" Y="384.8138" Z="-37.76558" />
+						
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-147.3237" Y="388.731" Z="-39.05802" />
+						<Hotspot X="-141.0955" Y="395.5547" Z="-39.72893" />
+						<Hotspot X="-138.9404" Y="380.5848" Z="-40.6296" />
+						<Hotspot X="-134.3941" Y="366.1309" Z="-42.58958" />
+						<Hotspot X="-127.7576" Y="360.9196" Z="-43.87497" />
+						<Hotspot X="-119.4863" Y="354.843" Z="-44.51242" />
+						<Hotspot X="-111.1642" Y="354.4612" Z="-45.94452" />
+						<Hotspot X="-116.1965" Y="348.2959" Z="-44.63017" />
+						<Hotspot X="-125.1709" Y="337.8436" Z="-44.32256" />
+						<Hotspot X="-129.9458" Y="331.2263" Z="-44.27108" />
+						<Hotspot X="-133.1167" Y="323.4424" Z="-44.12871" />
+						<Hotspot X="-141.4756" Y="312.9814" Z="-44.52647" />
+						<Hotspot X="-141.8548" Y="324.7976" Z="-44.52732" />
+						<Hotspot X="-149.38" Y="323.6093" Z="-48.17108" />
+						<Hotspot X="-161.5348" Y="324.6058" Z="-49.88256" />
+						<Hotspot X="-175.4057" Y="324.5634" Z="-51.64013" />
+						<Hotspot X="-182.4754" Y="319.1124" Z="-53.1213" />
+						<Hotspot X="-180.2699" Y="311.3209" Z="-52.95282" />
+						<Hotspot X="-182.3699" Y="302.0354" Z="-51.00816" />
+						<Hotspot X="-174.6308" Y="301.6333" Z="-53.22449" />
+						<Hotspot X="-170.8617" Y="287.0512" Z="-53.35145" />
+						<Hotspot X="-168.802" Y="296.7259" Z="-54.18533" />
+						<Hotspot X="-180.544" Y="303.9784" Z="-51.9654" />
+						<Hotspot X="-185.0979" Y="289.7491" Z="-47.96591" />
+						<Hotspot X="-190.8437" Y="275.6458" Z="-48.58346" />
+						<Hotspot X="-200.1035" Y="263.3282" Z="-49.61259" />
+						<Hotspot X="-210.0649" Y="256.8195" Z="-49.44786" />
+						<Hotspot X="-212.8946" Y="248.8044" Z="-48.96303" />
+						<Hotspot X="-213.0285" Y="233.3042" Z="-48.25346" />
+						<Hotspot X="-212.4344" Y="218.0313" Z="-47.04354" />
+						<Hotspot X="-220.2714" Y="215.9323" Z="-49.37304" />
+						<Hotspot X="-235.7713" Y="216.5994" Z="-49.48561" />
+						<Hotspot X="-236.6839" Y="225.2052" Z="-49.50026" />
+						<Hotspot X="-248.8922" Y="231.9636" Z="-46.27377" />
+						<Hotspot X="-245.0415" Y="221.1555" Z="-46.43746" />
+						<Hotspot X="-245.1954" Y="229.7262" Z="-47.37836" />
+						<Hotspot X="-246.3023" Y="245.0169" Z="-47.03109" />
+						<Hotspot X="-247.5034" Y="260.5008" Z="-49.96137" />
+						<Hotspot X="-248.451" Y="271.7491" Z="-50.37711" />
+						<Hotspot X="-245.4686" Y="264.2551" Z="-50.34651" />
+						<Hotspot X="-241.3266" Y="271.5937" Z="-50.34295" />
+						<Hotspot X="-238.7615" Y="263.8571" Z="-50.35372" />
+						<Hotspot X="-230.6576" Y="251.0604" Z="-49.44789" />
+						<Hotspot X="-229.6696" Y="235.6684" Z="-50.65893" />
+						<Hotspot X="-228.8586" Y="220.4132" Z="-49.66474" />
+						<Hotspot X="-229.8649" Y="205.0745" Z="-48.04093" />
+						<Hotspot X="-233.183" Y="197.2818" Z="-44.61673" />
+						<Hotspot X="-224.7585" Y="198.5939" Z="-45.06918" />
+						<Hotspot X="-227.8968" Y="190.9152" Z="-44.62714" />
+						<Hotspot X="-225.0735" Y="175.8548" Z="-44.62875" />
+						<Hotspot X="-227.1534" Y="162.3176" Z="-44.62875" />
+						<Hotspot X="-241.3064" Y="167.0869" Z="-44.62875" />
+						<Hotspot X="-256.2567" Y="169.7665" Z="-46.93233" />
+						<Hotspot X="-271.5114" Y="171.6976" Z="-47.4058" />
+						<Hotspot X="-283.3793" Y="165.5699" Z="-47.41016" />
+						<Hotspot X="-282.6858" Y="150.2706" Z="-47.40975" />
+						<Hotspot X="-283.1364" Y="139.729" Z="-47.22102" />
+						<Hotspot X="-298.518" Y="139.3095" Z="-46.37456" />
+						<Hotspot X="-307.748" Y="128.7599" Z="-46.76398" />
+						<Hotspot X="-317.0385" Y="119.128" Z="-48.58282" />
+						<Hotspot X="-331.2027" Y="116.3955" Z="-53.64456" />
+						<Hotspot X="-332.5493" Y="104.5871" Z="-55.59098" />
+						<Hotspot X="-333.0662" Y="92.49153" Z="-55.42859" />
+						<Hotspot X="-332.8075" Y="77.07941" Z="-51.23476" />
+						<Hotspot X="-335.9784" Y="84.5625" Z="-51.80815" />
+						<Hotspot X="-336.4299" Y="99.71614" Z="-56.15338" />
+						<Hotspot X="-350.0487" Y="101.2635" Z="-53.17552" />
+						<Hotspot X="-359.2547" Y="100.0834" Z="-53.02944" />
+						<Hotspot X="-344.9323" Y="102.7202" Z="-53.70311" />
+						<Hotspot X="-332.3237" Y="110.2051" Z="-54.58266" />
+						<Hotspot X="-337.9685" Y="124.0326" Z="-52.87307" />
+						<Hotspot X="-339.4208" Y="139.3929" Z="-49.70769" />
+						<Hotspot X="-351.9042" Y="138.1499" Z="-48.29911" />
+						<Hotspot X="-344.6736" Y="141.7417" Z="-48.78771" />
+						<Hotspot X="-339.704" Y="129.0931" Z="-51.97909" />
+						<Hotspot X="-330.4806" Y="117.3614" Z="-53.40062" />
+						<Hotspot X="-315.3018" Y="117.556" Z="-48.17731" />
+						<Hotspot X="-304.2201" Y="127.2599" Z="-46.75085" />
+						<Hotspot X="-298.1644" Y="140.4608" Z="-46.49765" />
+						<Hotspot X="-282.8082" Y="139.4447" Z="-47.40796" />
+						<Hotspot X="-267.5453" Y="138.5831" Z="-47.40572" />
+						<Hotspot X="-252.1136" Y="138.1223" Z="-46.71447" />
+						<Hotspot X="-236.6435" Y="137.6602" Z="-46.71447" />
+						<Hotspot X="-228.1908" Y="137.6593" Z="-46.71447" />
+						<Hotspot X="-213.0538" Y="137.5849" Z="-46.71447" />
+						<Hotspot X="-210.1031" Y="122.7857" Z="-46.71447" />
+						<Hotspot X="-209.3761" Y="107.5447" Z="-48.1053" />
+						<Hotspot X="-207.9041" Y="92.056" Z="-48.10503" />
+						<Hotspot X="-213.7159" Y="97.92383" Z="-48.10493" />
+						<Hotspot X="-211.5892" Y="113.2183" Z="-48.1064" />
+						<Hotspot X="-214.6599" Y="127.9708" Z="-46.71321" />
+						<Hotspot X="-221.9549" Y="138.0186" Z="-46.71321" />
+						<Hotspot X="-237.384" Y="137.8705" Z="-46.71321" />
+						<Hotspot X="-246.2094" Y="132.7266" Z="-46.71321" />
+						<Hotspot X="-245.9306" Y="117.2745" Z="-47.76778" />
+						<Hotspot X="-246.7161" Y="101.8563" Z="-48.11402" />
+						<Hotspot X="-247.0969" Y="86.38477" Z="-48.10438" />
+						<Hotspot X="-241.5758" Y="93.06998" Z="-48.12924" />
+						<Hotspot X="-244.3784" Y="108.2411" Z="-48.12755" />
+						<Hotspot X="-245.0068" Y="123.6931" Z="-46.71455" />
+						<Hotspot X="-239.8783" Y="136.6175" Z="-46.71398" />
+						<Hotspot X="-224.3971" Y="137.0617" Z="-46.71398" />
+						<Hotspot X="-208.8988" Y="137.6034" Z="-46.71398" />
+						<Hotspot X="-193.6646" Y="137.7794" Z="-47.40294" />
+						<Hotspot X="-178.172" Y="137.7647" Z="-47.40874" />
+						<Hotspot X="-172.6107" Y="150.3107" Z="-47.41155" />
+						<Hotspot X="-172.656" Y="165.7627" Z="-47.41155" />
+						<Hotspot X="-184.479" Y="169.7719" Z="-47.40745" />
+						<Hotspot X="-199.7305" Y="169.1647" Z="-46.89554" />
+						<Hotspot X="-215.2425" Y="168.8359" Z="-44.62959" />
+						<Hotspot X="-227.5466" Y="177.0499" Z="-44.62959" />
+						<Hotspot X="-228.7678" Y="192.2026" Z="-44.62812" />
+						<Hotspot X="-228.6836" Y="207.7483" Z="-49.55827" />
+						<Hotspot X="-228.6637" Y="223.0607" Z="-49.55327" />
+						<Hotspot X="-219.3023" Y="233.6328" Z="-50.4059" />
+						<Hotspot X="-209.4819" Y="245.1676" Z="-47.8502" />
+						<Hotspot X="-201.3245" Y="258.066" Z="-49.59687" />
+						<Hotspot X="-192.3473" Y="270.7292" Z="-49.43205" />
+						<Hotspot X="-186.4327" Y="284.6424" Z="-47.9738" />
+						<Hotspot X="-181.9455" Y="299.5321" Z="-50.73871" />
+						<Hotspot X="-180.0085" Y="309.4315" Z="-52.86276" />
+						<Hotspot X="-178.5802" Y="319.1494" Z="-52.84602" />
+						<Hotspot X="-166.8026" Y="325.6528" Z="-50.48527" />
+						<Hotspot X="-153.0496" Y="319.5399" Z="-48.84987" />
+						<Hotspot X="-141.68" Y="329.6713" Z="-44.74445" />
+						<Hotspot X="-133.5236" Y="330.2481" Z="-44.34736" />
+						<Hotspot X="-123.0012" Y="341.1753" Z="-44.70068" />
+						<Hotspot X="-120.8519" Y="351.4843" Z="-44.21303" />
+						<Hotspot X="-122.0988" Y="359.7846" Z="-44.50294" />
+						<Hotspot X="-122.1118" Y="360.0229" Z="-44.46554" />
+					</CustomBehavior>
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+						<RunTo X="-122.1118" Y="360.0229" Z="-44.46554" />
+					<CustomBehavior File="Message" Text="End of the first pull." LogColor="Lime" />	
+						<RunTo X="-122.4629" Y="342.5663" Z="-44.71721" />
+						<RunTo X="-127.7466" Y="336.5305" Z="-43.75781" />
+						<RunTo X="-140.0054" Y="327.0402" Z="-44.46783" />
+						<RunTo X="-142.5503" Y="315.5753" Z="-44.88673" />
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-140.7778" Y="302.7677" Z="-45.74805" />
+						<Hotspot X="-136.1858" Y="288.4129" Z="-46.01247" />
+						<Hotspot X="-128.3235" Y="275.147" Z="-45.99861" />
+						<Hotspot X="-124.3486" Y="260.1863" Z="-47.8576" />
+						<Hotspot X="-122.6748" Y="244.8392" Z="-48.1085" />
+						<Hotspot X="-126.5386" Y="237.3919" Z="-47.99568" />
+						<Hotspot X="-137.7493" Y="227.753" Z="-47.11035" />
+						<Hotspot X="-149.569" Y="224.075" Z="-47.02028" />
+						<Hotspot X="-162.728" Y="216.2888" Z="-48.85228" />
+						<Hotspot X="-162.4083" Y="201.5399" Z="-50.04039" />
+						<Hotspot X="-162.5408" Y="210.2249" Z="-49.95306" />
+						<Hotspot X="-154.5131" Y="221.4203" Z="-46.63226" />
+						<Hotspot X="-145.9572" Y="220.3228" Z="-46.3432" />
+						<Hotspot X="-140.3642" Y="226.2386" Z="-46.48875" />
+						<Hotspot X="-125.3085" Y="225.6187" Z="-48.83057" />
+						<Hotspot X="-119.5267" Y="212.8646" Z="-45.46624" />
+						<Hotspot X="-111.592" Y="199.6918" Z="-40.99753" />
+						<Hotspot X="-99.94423" Y="196.3305" Z="-39.57746" />
+						<Hotspot X="-92.72594" Y="203.8032" Z="-39.81678" />
+						<Hotspot X="-99.5524" Y="212.1809" Z="-41.34248" />
+						<Hotspot X="-89.3387" Y="221.9596" Z="-46.66711" />
+						<Hotspot X="-76.56385" Y="213.7365" Z="-49.7213" />
+						<Hotspot X="-64.32077" Y="205.4387" Z="-49.72746" />
+						<Hotspot X="-49.00204" Y="203.1669" Z="-48.32631" />
+						<Hotspot X="-41.88052" Y="213.877" Z="-48.32559" />
+						<Hotspot X="-40.93798" Y="229.3712" Z="-48.32602" />
+						<Hotspot X="-40.1754" Y="244.8656" Z="-48.3245" />
+						<Hotspot X="-39.80229" Y="260.3842" Z="-49.01869" />
+						<Hotspot X="-39.5282" Y="272.8398" Z="-48.99575" />
+						<Hotspot X="-39.75405" Y="264.7686" Z="-49.0187" />
+						<Hotspot X="-41.19003" Y="249.3031" Z="-48.32484" />
+						<Hotspot X="-42.11535" Y="233.8075" Z="-48.32617" />
+						<Hotspot X="-42.93972" Y="225.2939" Z="-48.32706" />
+						<Hotspot X="-56.52375" Y="221.8674" Z="-48.32475" />
+						<Hotspot X="-59.29632" Y="236.2291" Z="-48.32475" />
+						<Hotspot X="-74.09276" Y="236.9314" Z="-49.73667" />
+						<Hotspot X="-88.87527" Y="234.1325" Z="-49.72785" />
+						<Hotspot X="-88.56021" Y="249.2282" Z="-48.25429" />
+						<Hotspot X="-85.7971" Y="263.825" Z="-47.63061" />
+						<Hotspot X="-77.84879" Y="274.6776" Z="-47.63061" />
+						<Hotspot X="-91.45221" Y="279.1228" Z="-47.63061" />
+						<Hotspot X="-97.87515" Y="267.8487" Z="-47.63061" />
+						<Hotspot X="-86.79057" Y="271.4888" Z="-47.63061" />
+						<Hotspot X="-87.75713" Y="287.1296" Z="-47.63061" />
+						<Hotspot X="-88.34441" Y="302.442" Z="-50.28281" />
+						<Hotspot X="-90.23615" Y="317.6908" Z="-50.7761" />
+						<Hotspot X="-104.4425" Y="323.2212" Z="-48.39186" />
+						<Hotspot X="-111.7242" Y="318.7016" Z="-47.81591" />
+						<Hotspot X="-125.0434" Y="318.5692" Z="-44.58946" />
+						<Hotspot X="-131.6048" Y="324.1789" Z="-43.82472" />
+						<Hotspot X="-125.515" Y="337.2584" Z="-44.23708" />
+						<Hotspot X="-119.6041" Y="343.3033" Z="-44.71616" />
+						<Hotspot X="-115.4244" Y="350.797" Z="-44.76935" />
+						<Hotspot X="-122.5981" Y="357.8928" Z="-44.38629" />
+						<Hotspot X="-122.5981" Y="357.8928" Z="-44.38629" />
+					</CustomBehavior>
+						
+					<CustomBehavior File="Message" Text="End of the second pull." LogColor="Lime" />
+						<RunTo X="-113.9284" Y="356.4191" Z="-45.71894" />	
+					
+					<CustomBehavior File="Message" Text="Starting last pull." LogColor="Lime" />
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-113.9284" Y="356.4191" Z="-45.71894" />
+						<Hotspot X="-90.86522" Y="349.1546" Z="-49.7099" />
+						<Hotspot X="-68.63115" Y="361.4927" Z="-50.92842" />
+						<Hotspot X="-63.43344" Y="370.6021" Z="-50.04332" />
+						<Hotspot X="-79.57763" Y="374.8579" Z="-45.7782" />
+						<Hotspot X="-46.61422" Y="368.5209" Z="-49.20999" />
+						<Hotspot X="-40.49765" Y="351.6107" Z="-46.60527" />
+						<Hotspot X="-28.88844" Y="345.4021" Z="-44.00701" />
+						<Hotspot X="-18.60063" Y="328.4383" Z="-46.88637" />
+						<Hotspot X="-26.07093" Y="343.077" Z="-43.79215" />
+						<Hotspot X="-19.98677" Y="350.517" Z="-42.14153" />
+						<Hotspot X="-11.04227" Y="346.3442" Z="-41.02571" />
+						<Hotspot X="2.702502" Y="368.822" Z="-43.15576" />
+						<Hotspot X="-6.545182" Y="387.5803" Z="-43.67431" />
+						<Hotspot X="-2.752314" Y="383.2674" Z="-43.5121" />
+						<Hotspot X="6.777605" Y="395.8879" Z="-45.07005" />
+						<Hotspot X="13.31094" Y="397.0072" Z="-44.18576" />
+						<Hotspot X="23.75549" Y="406.7863" Z="-44.22577" />
+						<Hotspot X="-10.99905" Y="415.2726" Z="-46.80967" />
+						<Hotspot X="3.245036" Y="407.9514" Z="-47.28833" />
+						<Hotspot X="5.325635" Y="393.3065" Z="-45.00452" />
+						<Hotspot X="-4.462883" Y="382.2779" Z="-43.47485" />
+						<Hotspot X="1.868555" Y="364.8262" Z="-43.1802" />
+						<Hotspot X="28.2251" Y="356.7374" Z="-42.51007" />
+						<Hotspot X="29.33314" Y="376.9604" Z="-40.18739" />
+						<Hotspot X="28.91719" Y="357.2907" Z="-42.4773" />
+						<Hotspot X="42.31107" Y="343.3986" Z="-42.08538" />
+						<Hotspot X="27.9121" Y="327.6542" Z="-41.12727" />
+						<Hotspot X="5.331025" Y="328.9369" Z="-38.83952" />
+						<Hotspot X="19.93145" Y="325.7794" Z="-40.13482" />
+						<Hotspot X="27.79051" Y="312.8567" Z="-39.22178" />
+						<Hotspot X="41.91224" Y="308.3187" Z="-39.65663" />
+						<Hotspot X="51.64623" Y="334.7289" Z="-42.16451" />
+						<Hotspot X="36.49195" Y="363.2845" Z="-42.84984" />
+						<Hotspot X="44.69502" Y="308.9793" Z="-39.99931" />
+						<Hotspot X="25.83317" Y="310.7577" Z="-39.44088" />
+						<Hotspot X="26.52336" Y="293.2683" Z="-39.4591" />
+						<Hotspot X="4.068251" Y="280.9409" Z="-37.97028" />
+						<Hotspot X="4.125662" Y="258.7201" Z="-35.95733" />
+						<Hotspot X="13.30304" Y="226.4069" Z="-31.90284" />
+						<Hotspot X="24.5861" Y="217.563" Z="-31.12562" />
+						<Hotspot X="22.74119" Y="229.6978" Z="-31.57215" />
+						<Hotspot X="6.133148" Y="272.6446" Z="-36.31242" />
+						<Hotspot X="8.352033" Y="286.7939" Z="-38.65209" />
+						<Hotspot X="25.39123" Y="294.7637" Z="-40.01322" />
+						<Hotspot X="25.04349" Y="317.5351" Z="-39.68556" />
+						<Hotspot X="11.34584" Y="330.9706" Z="-39.09127" />
+						<Hotspot X="-18.45679" Y="318.7165" Z="-39.59377" />
+						<Hotspot X="-32.54587" Y="318.2996" Z="-41.59684" />
+						<Hotspot X="-29.31752" Y="300.1785" Z="-45.64591" />
+						<Hotspot X="-10.9074" Y="292.8488" Z="-47.02156" />
+						<Hotspot X="-16.23947" Y="275.9638" Z="-48.2267" />
+						<Hotspot X="-42.4264" Y="273.4323" Z="-49.01868" />
+						<Hotspot X="-41.38846" Y="238.4305" Z="-48.32598" />
+						<Hotspot X="-89.00581" Y="238.1263" Z="-49.72709" />
+						<Hotspot X="-89.45985" Y="306.7361" Z="-51.04618" />
+						<Hotspot X="-101.5404" Y="319.9194" Z="-49.26764" />
+						<Hotspot X="-133.6078" Y="320.8472" Z="-44.38518" />
+						<Hotspot X="-139.5417" Y="327.9814" Z="-44.40397" />
+						<Hotspot X="-119.2122" Y="346.8145" Z="-44.7241" />
+					</CustomBehavior>	
+
+				</If>									   
+								
+		        <If Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 
+					
+					<CustomBehavior File="Message" Text="I have detected that my gear is about to break. I'm going to hearth, repair and then return to the instance." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<If Condition="Me.ZoneId == 3" >
+						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor." LogColor="Lime" />												
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Artie Steelbolt" Entry="48057" Type="Repair" X="-6600.45" Y="-3898.99" Z="379.1222" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox  X="-6601.185" Y="-3929.376" Z="379.2067" />
+							</Mailboxes>
+						</SetMailbox>
+				
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+								
+							<CustomBehavior File="FlyTo" X="-6609.511" Y="-3694.632" Z="265.8924" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="MyCTM" X="-6610.661" Y="-3704.972" Z="267.4866" />
+							<CustomBehavior File="MyCTM" X="-6616.192" Y="-3718.713" Z="268.899" />
+							<CustomBehavior File="MyCTM" X="-6630.354" Y="-3723.031" Z="267.4555" />
+							<CustomBehavior File="MyCTM" X="-6635.766" Y="-3737.958" Z="265.2828" />
+							<CustomBehavior File="MyCTM" X="-6635.251" Y="-3761.43" Z="265.876" />
+							<CustomBehavior File="MyCTM" X="-6619.671" Y="-3766.153" Z="266.3805" />
+					</If>
+					<If Condition="Me.ZoneId == 1337">
+						<CustomBehavior File="Message" Text="My gear is broke and my hearth is on cool down. You need to repair my gear. Stopping the bot" LogColor="Yellow" />
+						<CustomBehavior File="UserSettings" StopBot="true" />
+					</If>
+				</If>
+				<If Condition="Me.ZoneId == 1337">
+					<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Lime" />
+						<RunTo X="-147.0043" Y="386.6589" Z="-38.87302" />
+					<CustomBehavior File="MyCTM" X="-180.2254" Y="389.5405" Z="-36.40934" />
+					<CustomBehavior File="MyCTM" X="-212.7889" Y="387.0172" Z="-38.75781" />
+					<CustomBehavior File="MyCTM" X="-213.1698" Y="378.6604" Z="-38.795" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<RunTo X="-6623.58" Y="-3766.707" Z="266.5673" />
+						<RunTo X="-6621.018" Y="-3766.552" Z="266.5887" />	
+				</If>		
+		</While>	
+	</QuestOrder>
+</HBProfile>
+

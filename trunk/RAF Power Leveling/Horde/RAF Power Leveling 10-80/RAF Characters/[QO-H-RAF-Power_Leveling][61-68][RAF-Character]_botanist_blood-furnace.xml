@@ -1,0 +1,158 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H-RAF-Power_Leveling][61-68][RAF-Character]_botanist_blood-furnace</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+	
+         
+
+				<If Condition="Me.MapId == 0" >
+					<CustomBehavior File="Message" Text="I am in Easter Kingdoms. I need to be in Outlands. Flying to the Dark Portal." LogColor="Lime" />
+					<RunTo X="-11821.79" Y="-3185.191" Z="67.65294" />
+					<CustomBehavior File="MyCTM" X="-11908.26" Y="-3209.201" Z="-14.8202" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+				</If>
+				
+									  
+				<If Condition="Me.MapId == 530" >
+					<If Condition="Me.Level &gt;= 60 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt; 225" >
+						<CustomBehavior File="Message" Text="Moving to the riding trainer to learn the flying skill." LogColor="Lime" />
+							<RunTo X="66.63744" Y="2725.792" Z="85.25083" />
+							<RunTo X="48.79066" Y="2740.699" Z="85.25155" />	
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Character - Press continue when you have purchased flight training and a mount." Title="WARNING" />
+							<RunTo X="85.63402" Y="2712.46" Z="86.36698" />
+						<CustomBehavior File="FlyTo" X="-684.6019" Y="2646.19" Z="180.2834" />
+						<CustomBehavior File="MyCTM" X="-280.593" Y="3126.894" Z="83.64497" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Character - Press continue after the main character has entered the instance." Title="WARNING" />						
+						<CustomBehavior File="MyCTM" X="-302.632" Y="3162.378" Z="31.71578" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 530" >
+					<If Condition="Me.Level &gt;= 60 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &gt;= 225" >
+						<If Condition="Me.Y &lt; 3127.325 || Me.Y &gt; 3174.571 || Me.X &lt; -334.2414 || Me.X &gt; -273.4398" >
+							<CustomBehavior File="Message" Text="I have already trained flying. Moving to Blood Furnace." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-265.6104" Y="3070.165" Z="95.83731" />
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Press continue after the main character has entered the instance." Title="WARNING" />						
+							<CustomBehavior File="MyCTM" X="-302.632" Y="3162.378" Z="31.71578" />
+							<CustomBehavior File="ForcedDismount" />
+						</If>
+					</If>	
+				</If>
+				
+				<If Condition="Me.ZoneId == 3713">
+					<CustomBehavior File="Message" Text="You started the bot with me inside Blood Furnace. running out to reset the dungeon." LogColor="Lime" />
+						<RunTo X="-4.093049" Y="17.00105" Z="-44.78368" />
+					<CustomBehavior File="MyCTM" X="-0.6576805" Y="25.28975" Z="-44.79793" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<RunTo X="-302.408" Y="3162.92" Z="31.7273" />
+				</If>
+		
+		<While Condition="true" >
+					
+				<If Condition="Me.ZoneId == 3483" >														 
+					<If Condition="Me.Y &gt; 3127.325 &amp;&amp; Me.Y &lt; 3174.571 &amp;&amp; Me.X &gt; -334.2414 &amp;&amp; Me.X &lt; -273.4398" >
+						<If Condition="Me.Level &gt;= 68" >
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="**********RAF Character - This character has reached the appropriate level to run Utgarde Keep. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
+					</If>
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="MyCTM" X="-306.4335" Y="3169.2" Z="29.85552" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Character - Press continue when you are ready to begin." Title="WARNING" />
+					</If>				
+				</If>
+
+                               <!-- blood furnace dungeon script -->
+				<If Condition="Me.ZoneId == 3713">
+							<RunTo X="1.842963" Y="-19.66361" Z="-42.38859" />
+					<CustomBehavior File="Message" Text="Waiting 165 seconds, entrance." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="165000" />
+					
+						<RunTo X="213.8306" Y="-82.85785" Z="9.589946" />
+					<CustomBehavior File="Message" Text="Waiting 60 seconds,top of the stairs." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="70000" />
+						
+						<RunTo X="327.58" Y="23.53721" Z="9.616049" />
+					<CustomBehavior File="Message" Text="Waiting 80 seconds,1st boss." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="80000" />
+					
+						<RunTo X="322.6479" Y="179.1734" Z="9.616657" />
+					<CustomBehavior File="Message" Text="Waiting 80 seconds, lab corridor." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="80000" />
+					
+						<RunTo X="375.5392" Y="196.8844" Z="9.594369" />
+					<CustomBehavior File="Message" Text="Waiting 85 seconds, 2nd boss." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="85000" />
+					
+						<RunTo X="464.5384" Y="60.40057" Z="9.613185" />
+						<RunTo X="456.0173" Y="37.36728" Z="9.597669" />
+					<CustomBehavior File="Message" Text="Waiting 125 seconds, after 2nd boss." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="125000" />
+					
+						<RunTo X="411.1566" Y="-116.6879" Z="9.039345" />
+					<CustomBehavior File="Message" Text="Waiting 100 seconds,top of ramp." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="80000" />
+				
+						<RunTo X="328.525" Y="-165.9249" Z="-25.50919" />
+					<CustomBehavior File="Message" Text="Waiting 30 seconds, last boss." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="30000" />
+															
+						<RunTo X="-4.093049" Y="17.00105" Z="-44.78368" />	<!-- exit -->
+					<CustomBehavior File="MyCTM" X="-0.2047417" Y="25.62052" Z="-44.80615" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+				</If>	
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+
