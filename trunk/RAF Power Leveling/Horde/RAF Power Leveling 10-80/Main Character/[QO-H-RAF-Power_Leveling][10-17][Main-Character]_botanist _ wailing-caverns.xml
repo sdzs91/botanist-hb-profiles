@@ -45,7 +45,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 		
-		 <CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" SkinMobs="False" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
+		 <CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" SkinMobs="False" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
 						
 
 				
@@ -66,7 +66,7 @@
 							Text="Main Character - Press continue on this window first, then press continue on the RAF characters. The booster will clear a path to Wailing Caverns." Title="WARNING" />
 						<CustomBehavior File="FlyTo" X="-806.6479" Y="-2398.099" Z="94.063" />		
 						<CustomBehavior File="ForcedDismount" />
-						<CustomBehavior File="UserSettings" UseMount="False" LootMobs="False" SkinMobs="False" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
+						<CustomBehavior File="UserSettings" UseMount="False" LootMobs="False" SkinMobs="False" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
 							<RunTo X="-799.1569" Y="-2391.188" Z="93.11855" />
 							<RunTo X="-807.579" Y="-2393.505" Z="94.44398" />
 							<RunTo X="-802.7736" Y="-2397.022" Z="93.57651" />
