@@ -47,7 +47,7 @@
 		 <CustomBehavior File="UserSettings" LootMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="True" />
 
 				<If Condition="Me.ZoneId == 25" >														 
-					<If Condition="Me.Y &gt; -1232.614 &amp;&amp; Me.Y &lt; -1213.534 &amp;&amp; Me.X &lt; -7522.099 &amp;&amp; Me.X &gt; -7545.701" >
+					<If Condition="Me.Y &gt; -1236.614 &amp;&amp; Me.Y &lt; -1213.534 &amp;&amp; Me.X &lt; -7500.099 &amp;&amp; Me.X &gt; -7545.701" >
 							<RunTo X="-7534.334" Y="-1213.745" Z="285.4166" />
 						<CustomBehavior File="MyCTM" X="-7520.588" Y="-1179.661" Z="257.8594" />
 							<RunTo X="-7508.373" Y="-1171.754" Z="260.581" />
@@ -79,7 +79,7 @@
 							<RunTo X="-7108.098" Y="-1264.553" Z="272.2821" />
 							<RunTo X="-7099.967" Y="-1251.233" Z="274.8603" />
 							<RunTo X="-7113.391" Y="-1234.633" Z="289.362" />
-							<RunTo X="-7123.107" Y="-1234.047" Z="290.2455" />
+							<RunTo X="-7123.107" Y="-1234.047" Z="290.2455" /> <!-- iron summit fp  searing gorge-->
 
 							<RunTo X="-11112.3" Y="-3435.74" Z="79.08883" />
 							<RunTo X="-11121.06" Y="-3481.092" Z="65.19508" />
