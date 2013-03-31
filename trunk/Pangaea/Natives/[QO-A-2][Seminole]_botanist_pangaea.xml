@@ -1522,15 +1522,20 @@
 				<CustomBehavior File="Message" Text="Position check, Bogpaddle in Swamp of sorrows." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Bogpaddle." LogColor="Lime" />
-					<RunTo X="-9781.64" Y="-3880.144" Z="21.6719" />
-				<CustomBehavior File="MyCTM" X="-9770.533" Y="-3881.105" Z="21.89175" />
-				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
+					<RunTo X="-9781.126" Y="-3880.323" Z="21.68007" />
+					<RunTo X="-9775.957" Y="-3880.347" Z="22.81789" />
+					<RunTo X="-9771.854" Y="-3880.667" Z="21.8914" />
+					<RunTo X="-9769.378" Y="-3879.968" Z="21.91374" />
+					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="47334" X="-9766.99" Y="-3879.23" Z="21.97333" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-				<CustomBehavior File="MyCTM" X="-9781.64" Y="-3880.144" Z="21.6719" />
+					<RunTo X="-9771.112" Y="-3880.178" Z="21.8905" />
+					<RunTo X="-9775.861" Y="-3880.29" Z="22.81776" />
+					<RunTo X="-9781.449" Y="-3880.615" Z="21.66606" />
+					<RunTo X="-9788.142" Y="-3880.92" Z="21.65564" />
 					<RunTo X="-9802.662" Y="-4026.277" Z="22.93485" />
 								 
 
@@ -1550,12 +1555,14 @@
 
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />
-					<CustomBehavior File="MyCTM" X="-9781.64" Y="-3880.144" Z="21.6719" />
+						<RunTo X="-9771.112" Y="-3880.178" Z="21.8905" />
+						<RunTo X="-9775.861" Y="-3880.29" Z="22.81776" />
+						<RunTo X="-9781.449" Y="-3880.615" Z="21.66606" />
+						<RunTo X="-9788.142" Y="-3880.92" Z="21.65564" />
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Dronk Drophammer" Entry="47059" Type="Repair" X="-9766.76" Y="-3901.64" Z="21.81341" />
