@@ -120,19 +120,17 @@
 								TransportEndX="2062.376" TransportEndY="292.998047" TransportEndZ="114.670547"
 								StandOnX="1835.301" StandOnY="-4390" StandOnZ="135.8167" 
 								GetOffX="2068.327" GetOffY="286.5359" GetOffZ="97.0316" />
-					<CustomBehavior File="UserSettings" UseMount="True"  />			
+					<CustomBehavior File="UserSettings" UseMount="True"  />
+						<RunTo X="2276.604" Y="373.3237" Z="35.18451" />	<!-- brill fp -->
 				</If>
 
 				<If Condition="Me.ZoneId != 139 &amp;&amp; Me.MapId != 329" > <!-- not in eastern plaguelands not in stratholme -->						
 					<CustomBehavior File="Message" Text="I'm not in Eastern Plaguelands, moving to Lights Hope Chapel." LogColor="Lime" />
-						<RunTo X="1765.002" Y="-1942.889" Z="75.27248" />
-						<RunTo X="1760.795" Y="-1976.078" Z="73.34248" />
-						<RunTo X="1757.333" Y="-2009.229" Z="67.34772" />
 						<RunTo X="1635.294" Y="-1176.731" Z="60.90366" /> <!-- road north of andorhal -->
 							
-							<RunTo X="1864.32" Y="-1755.82" Z="59.662" /> <!-- the menders stead fp wp -->
-							
-							<RunTo X="1935.97" Y="-2694.48" Z="61.9471" /> <!-- thondroril river fp ep -->
+						<RunTo X="1864.32" Y="-1755.82" Z="59.662" /> <!-- the menders stead fp wp -->
+						
+						<RunTo X="1935.97" Y="-2694.48" Z="61.9471" /> <!-- thondroril river fp ep -->
 							
 						<RunTo X="1922.551" Y="-2674.22" Z="60.40736" />
 					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
