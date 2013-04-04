@@ -18,7 +18,7 @@
 
 	<QuestOrder>
 	
-				<If Condition="Me.Level &gt; 68" >
+				<If Condition="Me.Level &gt;= 68" >
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-5][Choctaw]_botanist_pangaea" />
 				</If>
 	
