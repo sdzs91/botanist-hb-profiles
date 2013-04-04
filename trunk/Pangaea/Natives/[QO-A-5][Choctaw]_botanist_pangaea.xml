@@ -43,7 +43,79 @@
 	<ProtectedItems></ProtectedItems>
 	
 	<QuestOrder>
-	
+				
+				<If Condition="Me.MapId == 530" >
+					 <If Condition="Me.Level == 68 &amp;&amp; Me.ZoneId == 3522" >
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
+						<CustomBehavior File="FlyTo" X="2979.485" Y="5485.754" Z="383.1029" />					
+						<CustomBehavior File="MyCTM" X="1823.031" Y="5636.104" Z="498.2995" />					
+						<CustomBehavior File="MyCTM" X="1292.576" Y="5661.905" Z="493.7638" />
+						<CustomBehavior File="MyCTM" X="301.6021" Y="5240.892" Z="291.5005" />
+						<CustomBehavior File="MyCTM" X="-226.3755" Y="4694.747" Z="326.2285" />
+						<CustomBehavior File="MyCTM" X="-255.8759" Y="1380.526" Z="326.2285" />					
+						<CustomBehavior File="FlyTo" X="-337.5711" Y="967.147" Z="54.28538" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="InteractWith" MobId="195139" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-337.4917" Y="962.618835" Z="54.2885323" />
+						<CustomBehavior File="WaitTimer" WaitTime="20000" />
+							<RunTo X="-9018.014" Y="886.1372" Z="29.62132" />
+							<RunTo X="-9014.94" Y="873.326" Z="148.616" />
+							<RunTo X="-8996.494" Y="860.6661" Z="128.2636" />
+							<RunTo X="-8990.474" Y="801.9113" Z="102.9313" />
+							<RunTo X="-8910.56" Y="789.6812" Z="87.52702" />
+							<RunTo X="-8869.175" Y="759.4444" Z="96.9483" />
+							<RunTo X="-8825.28" Y="678.1121" Z="97.6619" />
+							<RunTo X="-8850.952" Y="658.6686" Z="97.04378" />
+							<RunTo X="-8847.097" Y="640.3441" Z="96.20716" />
+							<RunTo X="-8807.087" Y="599.3658" Z="96.77034" />
+							<RunTo X="-8824.117" Y="567.6611" Z="94.32451" />
+							<RunTo X="-8847.891" Y="527.1393" Z="105.9874" />
+							<RunTo X="-8855.257" Y="537.801" Z="105.9135" />
+							<RunTo X="-8872.258" Y="536.2416" Z="106.2818" />
+							<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
+					</If>	
+				</If>	
+					
+					
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.Level == 68 &amp;&amp; (!HasSpell(90267)) &amp;&amp; Me.Gold &gt;= 251" >				
+						<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am level 68. I need to purchase a Flight Master's License." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="Moving to the riding trainer in Stormwind." LogColor="Orange" />
+							<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
+						<CustomBehavior File="Message" Text="I have reached the riding trainer. Buying a Flight Master's License." LogColor="Orange" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="InteractWith" MobId="43769" WaitTime="1000" CollectionDistance="50" X="-8845.4" Y="502.653" Z="109.6171" />
+						<CustomBehavior File="ForceTrainRiding" MobId="43769" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="-8858.996" Y="491.6094" Z="109.61" />
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.Level == 68 &amp;&amp; (!HasSpell(54197)) &amp;&amp; Me.Gold &gt;= 251" >				
+						<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am level 68. I need to purchase Cold Weather Flying." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="Moving back to the riding trainer." LogColor="Orange" />
+							<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
+						<CustomBehavior File="Message" Text="I have returned to the riding trainer. Buying a Cold Weather Flying." LogColor="Orange" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="InteractWith" MobId="43769" WaitTime="1000" CollectionDistance="50" X="-8845.4" Y="502.653" Z="109.6171" />
+						<CustomBehavior File="ForceTrainRiding" MobId="43769" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />							
+					</If>
+						<If Condition="Me.Level == 68 &amp;&amp; (HasSpell(54197))" >					
+							<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="I am in the 68 to 70 bracket and have a Flight Master's License and Cold Weather Flying." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="-8854.163" Y="538.8571" Z="105.924" />
+						</If>
+				</If>
+				
 				<If Condition="Me.Level &gt;= 80" >				
 						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-6][Huron]_botanist_pangaea" />
 				</If>
