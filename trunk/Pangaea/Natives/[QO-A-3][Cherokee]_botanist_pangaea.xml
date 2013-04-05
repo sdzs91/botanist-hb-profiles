@@ -524,7 +524,7 @@
 			
 			
 				<If Condition="Me.MapId == 530" >
-					 <If Condition="Me.Level == 68 &amp;&amp; Me.ZoneId == 3522" >
+					 <If Condition="Me.Level &gt;= 68" >
 						<CustomBehavior File="ForcedMount" MountType="Flying" />
 						<CustomBehavior File="FlyTo" X="2979.485" Y="5485.754" Z="383.1029" />					
 						<CustomBehavior File="MyCTM" X="1823.031" Y="5636.104" Z="498.2995" />					
@@ -599,14 +599,14 @@
 				
 				<If Condition="Me.MapId == 0" >				
 					<If Condition="Me.Level &gt;= 68" >
-						<CustomBehavior File="LoadProfile" ProfileName="Natives\[QO-A-4][Shawnee]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-4][Shawnee]_botanist_pangaea" />
 					</If>
 				</If>
 				
 
 				<If Condition="Me.MapId == 571" >				
 					<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 79" >
-						<CustomBehavior File="LoadProfile" ProfileName="Natives\[QO-A-5][Choctaw]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-5][Choctaw]_botanist_pangaea" />
 					</If>
 				</If>
 				
