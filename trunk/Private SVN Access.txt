@@ -18,6 +18,8 @@ farming rare items & mobs
 farming instances
 farming rare hunter pets
 farming mounts
+goto profiles
+reputation profiles
 
 *** new MOP Rare profiles being added daily*** I will eventually make profiles to farm all the MOP rares
 
