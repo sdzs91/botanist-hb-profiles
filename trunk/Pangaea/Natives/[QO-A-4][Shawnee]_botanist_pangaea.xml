@@ -48,16 +48,6 @@
 								GetOffX="2234.375" GetOffY="5132.568" GetOffZ="5.343217" />								
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 			</If>
-			
-
-			<!--	<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
-				<CustomBehavior File="RunMacro" Macro="/target Sailor Dawning" NumOfTimes="1" WaitTime="0"/>
-					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 31791">
-						<CustomBehavior File="WaitTimer" WaitTime="10000" />
-						<CustomBehavior File="Message" Text="Moving aboard the boat.." LogColor="Lime" />
-						<CustomBehavior File="MyCTM" X="-8294.163" Y="1424.834" Z="9.52632" />
-						<CustomBehavior File="WaitTimer" WaitTime="150000" />
-					</If>	-->
 		</While>				
 									
 				<If Condition="Me.MapId == 571" >
