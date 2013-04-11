@@ -22,7 +22,6 @@
 <TargetElites>True</TargetElites>
 
 <AvoidMobs>
-	<Mob Name="Suspicious Snow Pile" Entry="59967" />
 	<Mob Name="Ik'thik Slicewing" Entry="59832" />
 	<Mob Name="Ik'thik Wingblade" Entry="57196" />
 	<Mob Name="Plainshawk" Entry="58910" />
@@ -55,6 +54,12 @@
 </AvoidMobs>
 
 <Blackspots>
+	<Blackspot X="3631.299" Y="1269.291" Z="653.234" Radius="5.985262" />
+	<Blackspot X="3560.663" Y="1195.238" Z="643.0008" Radius="3" />
+	<Blackspot X="3468.914" Y="1196.779" Z="655.7028" Radius="2" />
+	<Blackspot X="3469.996" Y="1200.579" Z="655.019" Radius="2" />
+	<Blackspot X="3470.398" Y="1207.317" Z="653.8775" Radius="2" />
+	<Blackspot X="3472.592" Y="1212.769" Z="652.9705" Radius="2" />
 	<Blackspot X="-467.7988" Y="2229.845" Z="115.4755" Radius="3" />
 	<Blackspot X="-321.1942" Y="2316.815" Z="118.5929" Radius="45" />
 	<Blackspot X="-735.3983" Y="2156.017" Z="113.0787" Radius="45" />
