@@ -269,12 +269,12 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am moving to the innkeep in One Keg." LogColor="Lime" />
 						<RunTo X="3107.004" Y="1240.477" Z="654.1243" />
-						<RunTo X="3113.838" Y="1247.292" Z="655.9031" />
+						<RunTo X="3111.714" Y="1245.319" Z="655.2067" />
 					<CustomBehavior File="Message" Text="I have located the innkeep." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="SetHearthstone" MobId="59688" X="3113.9" Y="1249.313" Z="654.8159" />
+					<CustomBehavior File="SetHearthstone" MobId="59688" X="3115.131" Y="1248.965" Z="654.8175" />
 					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
 						<RunTo X="3102.3" Y="1233.276" Z="654.0291" />
 					<CustomBehavior File="ForcedMount" MountType="Ground" />					
