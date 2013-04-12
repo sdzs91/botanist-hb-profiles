@@ -54,12 +54,7 @@
 </AvoidMobs>
 
 <Blackspots>
-	<Blackspot X="3631.299" Y="1269.291" Z="653.234" Radius="5.985262" />
-	<Blackspot X="3560.663" Y="1195.238" Z="643.0008" Radius="3" />
-	<Blackspot X="3468.914" Y="1196.779" Z="655.7028" Radius="2" />
-	<Blackspot X="3469.996" Y="1200.579" Z="655.019" Radius="2" />
-	<Blackspot X="3470.398" Y="1207.317" Z="653.8775" Radius="2" />
-	<Blackspot X="3472.592" Y="1212.769" Z="652.9705" Radius="2" />
+	<Blackspot X="3616.703" Y="1266.792" Z="751.9222" Radius="15" />
 	<Blackspot X="-467.7988" Y="2229.845" Z="115.4755" Radius="3" />
 	<Blackspot X="-321.1942" Y="2316.815" Z="118.5929" Radius="45" />
 	<Blackspot X="-735.3983" Y="2156.017" Z="113.0787" Radius="45" />
@@ -266,14 +261,15 @@
 					</If>	
 				</If>	
 												
-				<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="60" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 					
                                              <!-- one keg  -->			  
 			    <If Condition="Me.ZoneId == 5841" >
 					<CustomBehavior File="Message" Text="Position check One Keg in Kun-Lai Summit" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am moving to the innkeep in One Keg." LogColor="Lime" />
-						<RunTo X="3111.423" Y="1248.592" Z="656.2395" />
+						<RunTo X="3107.004" Y="1240.477" Z="654.1243" />
+						<RunTo X="3113.838" Y="1247.292" Z="655.9031" />
 					<CustomBehavior File="Message" Text="I have located the innkeep." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
@@ -282,47 +278,23 @@
 					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
 						<RunTo X="3102.3" Y="1233.276" Z="654.0291" />
 					<CustomBehavior File="ForcedMount" MountType="Ground" />					
-						<RunTo X="3378.068" Y="1147.688" Z="662.5552" />						
+						<RunTo X="3567.477" Y="1205.507" Z="749.8964" />						
 					<CustomBehavior File="ForcedDismount" />
 				</If>	
 								
 				<If Condition="Me.ZoneId == 5841" >
-					<If Condition="Me.X &gt; 3300 &amp;&amp; Me.X &lt; 3500 &amp;&amp; Me.Y &gt; 1100 &amp;&amp; Me.Y &lt; 1200" >
+					<If Condition="Me.X &gt; 3367 &amp;&amp; Me.X &lt; 3767 &amp;&amp; Me.Y &gt; 1105 &amp;&amp; Me.Y &lt; 1405" >
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll farm here until level 89." LogColor="Lime" />
 
 								<SetGrindArea><GrindArea>
 								<Factions>16</Factions>
 									<Hotspots>
-										<Hotspot X="3440.116" Y="1143.779" Z="658.0569" />
-										<Hotspot X="3480.341" Y="1141.856" Z="655.7875" />
-										<Hotspot X="3484.319" Y="1229.736" Z="646.3652" />
-										<Hotspot X="3529.169" Y="1247.961" Z="643.9778" />
-										<Hotspot X="3539.353" Y="1167.762" Z="644.3636" />
-										<Hotspot X="3552" Y="1143.812" Z="643.0504" />
-										<Hotspot X="3585.463" Y="1153.718" Z="646.89" />
-										<Hotspot X="3591.331" Y="1233.015" Z="646.5073" />
-										<Hotspot X="3615.45" Y="1217.526" Z="647.2829" />
-										<Hotspot X="3621.824" Y="1247.879" Z="651.7162" />
-										<Hotspot X="3653.523" Y="1287.917" Z="650.9756" />
-										<Hotspot X="3624.233" Y="1325.976" Z="653.459" />
-										<Hotspot X="3562.706" Y="1375.447" Z="657.5997" />
-										<Hotspot X="3579.115" Y="1290.602" Z="662.1426" />
-										<Hotspot X="3604.15" Y="1322.426" Z="645.9544" />
-										<Hotspot X="3553.754" Y="1322.366" Z="639.7126" />
-										<Hotspot X="3524.117" Y="1373.129" Z="637.2268" />
-										<Hotspot X="3472.087" Y="1351.428" Z="636.4719" />
-										<Hotspot X="3473.47" Y="1326.388" Z="636.4957" />
-										<Hotspot X="3502.226" Y="1313.405" Z="636.4721" />
-										<Hotspot X="3528.774" Y="1366.184" Z="638.5528" />
-										<Hotspot X="3534.21" Y="1307.131" Z="639.7778" />
-										<Hotspot X="3573.223" Y="1319.481" Z="639.1866" />
-										<Hotspot X="3638.133" Y="1307.679" Z="650.7383" />
-										<Hotspot X="3626.606" Y="1249.683" Z="652.1505" />
-										<Hotspot X="3567.331" Y="1229.403" Z="644.0782" />
-										<Hotspot X="3525.139" Y="1251.392" Z="643.9837" />
-										<Hotspot X="3481.614" Y="1224.186" Z="647.5463" />
-										<Hotspot X="3476.485" Y="1175.505" Z="657.2418" />
-										<Hotspot X="3460.935" Y="1148.44" Z="659.4768" />										
+										<Hotspot X="3613.052" Y="1232.17" Z="748.7611" />
+										<Hotspot X="3656.55" Y="1223.234" Z="764.6025" />
+										<Hotspot X="3650.805" Y="1266.753" Z="748.548" />
+										<Hotspot X="3620.986" Y="1296.657" Z="748.543" />
+										<Hotspot X="3586.486" Y="1268.313" Z="748.5186" />
+										<Hotspot X="3542.402" Y="1276.156" Z="751.582" />
 									</Hotspots>
 								</GrindArea></SetGrindArea>					
 								<GrindTo Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 89)" GoalText="Farming" />
