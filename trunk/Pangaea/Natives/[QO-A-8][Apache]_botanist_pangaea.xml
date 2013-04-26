@@ -242,10 +242,12 @@
 				
 				<If Condition="Me.MapId == 870" >
 					<If Condition="Me.ZoneId != 5841" >
-						<CustomBehavior File="Message" Text="I am not where I should be. Moving to One Keg in Kun-Lai Summit." LogColor="Lime" />
-						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-							<RunTo X="3124.52" Y="1224.28" Z="654.231" />
-						<CustomBehavior File="Message" Text="I have reached One Keg." LogColor="Lime" />
+						<If  Condition="Me.Level &lt; 89" >
+							<CustomBehavior File="Message" Text="I am not where I should be. Moving to One Keg in Kun-Lai Summit." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="3124.52" Y="1224.28" Z="654.231" />
+							<CustomBehavior File="Message" Text="I have reached One Keg." LogColor="Lime" />
+						</If>
 					</If>	
 				</If>
 
