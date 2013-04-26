@@ -414,12 +414,14 @@
 				</If>
 			</If>	
 			
-			<If Condition="Me.MapId == 870" >				 
+			<If Condition="Me.MapId == 870" >
+				<If Condition="Me.ZoneId == 5842" >
 					<If  Condition="Me.Level &gt; 88 &amp;&amp; Me.Level &lt;= 89" >
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="I am in the level 89-90 bracket, changing to the newest farming location " LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					</If>	
+					</If>
+				</If>	
 			</If>
 			
 				<!-- *********************************************************************************** -->
