@@ -347,6 +347,8 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am moving to the innkeep in One Keg." LogColor="Lime" />
 						<RunTo X="3103.922" Y="1236.845" Z="653.995" />
+					<CustomBehavior File="ForcedDismount" />	
+					<CustomBehavior File="UserSettings" UseMount="False" />	
 					<CustomBehavior File="MyCTM" X="3112.918" Y="1246.598" Z="656.0303" />
 						<RunTo X="3112.918" Y="1246.598" Z="656.0303" />
 					<CustomBehavior File="Message" Text="I have located the innkeep." LogColor="Lime" />
@@ -355,7 +357,8 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="SetHearthstone" MobId="59688" X="3115.131" Y="1248.965" Z="654.8175" />
 					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
-					<CustomBehavior File="MyCTM" X="3103.922" Y="1236.845" Z="653.995" />	
+					<CustomBehavior File="MyCTM" X="3103.922" Y="1236.845" Z="653.995" />
+					<CustomBehavior File="UserSettings" UseMount="True" />
 					<CustomBehavior File="ForcedMount" MountType="Ground" />					
 						<RunTo X="3567.477" Y="1205.507" Z="749.8964" />						
 					<CustomBehavior File="ForcedDismount" />
