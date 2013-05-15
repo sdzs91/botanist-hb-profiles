@@ -47,6 +47,7 @@
 </AvoidMobs>
 
 <Blackspots>
+	<Blackspot X="3554.579" Y="1268.245" Z="749.6678" Radius="35" />
 	<Blackspot X="3712.278" Y="1329.183" Z="756.7146" Radius="10" />
 	<Blackspot X="3616.703" Y="1266.792" Z="751.9222" Radius="15" />
 	<Blackspot X="-467.7988" Y="2229.845" Z="115.4755" Radius="3" />
@@ -239,6 +240,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am moving to the innkeep in One Keg." LogColor="Lime" />
 						<RunTo X="3102.521" Y="1235.528" Z="653.9722" />
+					<CustomBehavior File="ForcedDismount" />	
 					<CustomBehavior File="MyCTM" X="3112.496" Y="1246.227" Z="656.03" />
 						<RunTo X="3112.496" Y="1246.227" Z="656.03" />
 					<CustomBehavior File="Message" Text="I have located the innkeep." LogColor="Lime" />
@@ -313,17 +315,16 @@
 					<CustomBehavior File="Message" Text="Position check One Keg in Kun-Lai Summit" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am moving to the innkeep in One Keg." LogColor="Lime" />
-						<RunTo X="3102.521" Y="1235.528" Z="653.9722" />
-					<CustomBehavior File="MyCTM" X="3112.496" Y="1246.227" Z="656.03" />
-						<RunTo X="3112.496" Y="1246.227" Z="656.03" />
+						<RunTo X="3103.922" Y="1236.845" Z="653.995" />
+					<CustomBehavior File="MyCTM" X="3112.918" Y="1246.598" Z="656.0303" />
+						<RunTo X="3112.918" Y="1246.598" Z="656.0303" />
 					<CustomBehavior File="Message" Text="I have located the innkeep." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="SetHearthstone" MobId="59688" X="3115.131" Y="1248.965" Z="654.8175" />
 					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
-						<RunTo X="3112.496" Y="1246.227" Z="656.03" />
-					<CustomBehavior File="MyCTM" X="3102.521" Y="1235.528" Z="653.9722" />	
+					<CustomBehavior File="MyCTM" X="3103.922" Y="1236.845" Z="653.995" />	
 					<CustomBehavior File="ForcedMount" MountType="Ground" />					
 						<RunTo X="3567.477" Y="1205.507" Z="749.8964" />						
 					<CustomBehavior File="ForcedDismount" />
@@ -336,14 +337,14 @@
 								<SetGrindArea><GrindArea>
 								<Factions>16</Factions>
 									<Hotspots>
-										<Hotspot X="3602.78" Y="1222.711" Z="748.5472" />
-										<Hotspot X="3650.805" Y="1247.985" Z="748.5468" />
-										<Hotspot X="3656.291" Y="1220.906" Z="766.4832" />
-										<Hotspot X="3654.077" Y="1295.051" Z="748.547" />
-										<Hotspot X="3608.193" Y="1300.837" Z="748.4907" />
-										<Hotspot X="3577.361" Y="1270.693" Z="748.435" />
-										<Hotspot X="3543.265" Y="1277.319" Z="750.6649" />
-										<Hotspot X="3577.141" Y="1251.526" Z="748.8979" />
+										<Hotspot X="3590.818" Y="1228.029" Z="748.5464" />
+										<Hotspot X="3577.079" Y="1271.703" Z="748.4225" />
+										<Hotspot X="3609.639" Y="1297.801" Z="748.5103" />
+										<Hotspot X="3652.399" Y="1297.951" Z="748.5441" />
+										<Hotspot X="3652.16" Y="1246.899" Z="748.5466" />
+										<Hotspot X="3655.474" Y="1222.083" Z="765.7018" />
+										<Hotspot X="3645.693" Y="1244.062" Z="748.7117" />
+										<Hotspot X="3607.592" Y="1229.353" Z="748.5982" />
 									</Hotspots>
 								</GrindArea></SetGrindArea>					
 								<GrindTo Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 89)" GoalText="Farming" />
