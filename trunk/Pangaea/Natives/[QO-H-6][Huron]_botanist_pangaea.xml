@@ -88,7 +88,7 @@
 					<If Condition="((!HasQuest(25316)) &amp;&amp; (!IsQuestCompleted(25316)))" >
 						<PickUp QuestName="As Hyjal Burns" QuestId="25316" GiverName="Emissary Windsong" GiverId="39865" X="7801.045" Y="-2430.96" Z="487.5918" />										
 							<RunTo X="7791.602" Y="-2447.938" Z="487.1142" />
-						<CustomBehavior File="InteractWith" MobId="39140"  GossipOptions="1" NumOfTimes="1"  X="7791.06" Y="-2445.54" Z="489.5634" />
+						 <CustomBehavior File="MountVehOnly" VehicleMountId="39140" X="7791.06" Y="-2445.54" Z="489.5634" />
 						<CustomBehavior File="WaitTimer" WaitTime="120000" />
 							<RunTo X="5492.048" Y="-3565.874" Z="1569.248" />
 						<TurnIn QuestName="As Hyjal Burns" QuestId="25316" TurnInName="Ysera" TurnInId="40289" X="5490.67" Y="-3563.557" Z="1569.246" />

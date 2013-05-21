@@ -54,8 +54,9 @@
 				</If>
 				
 				<If Condition="Me.MapId == 0" >
-					<If Condition="Me.Level == 80" >
+					<If Condition="Me.Level &gt;= 80" >
 						<If Condition="((!HasQuest(27726)) &amp;&amp; (!IsQuestCompleted(27726)))" >
+						<CustomBehavior File="Message" Text="I don't have the quest Hero's Call: Mount Hyjal! and the quest isn't complete, flying to the Stormwind Call Board." LogColor="Lime" />
 						<CustomBehavior File="FlyTo" X="-8345.691" Y="639.2832" Z="95.41733" />
 						<CustomBehavior File="Message" Text="Picking up the quest, Hero's Call: Mount Hyjal!." LogColor="Lime" />						
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -71,33 +72,55 @@
 					</If>
 				</If>	
 																					
-				<If Condition="Me.ZoneId == 493" >
+				<If Condition="Me.MapId == 1" >
 					<If Condition="((HasQuest(27726)) &amp;&amp; (!IsQuestCompleted(27726)))" >
+						<CustomBehavior File="Message" Text="I am in Kalimdor, have the quest Hero's Call: Mount Hyjal!, but the quest isn't complete, flying to Emissary Windsong." LogColor="Lime" />
 						<TurnIn QuestName="Hero's Call: Mount Hyjal!" QuestId="27726" TurnInName="Emissary Windsong" TurnInId="39865" X="7801.045" Y="-2430.96" Z="487.5915" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					</If>
 					
 					<If Condition="((!HasQuest(25316)) &amp;&amp; (!IsQuestCompleted(25316)))" >
+						<CustomBehavior File="Message" Text="I am in Kalimdor, don't have the quest As Hyjal Burns, flying to Emissary Windsong." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="7795.045" Y="-2430.96" Z="487.5918" />
 						<PickUp QuestName="As Hyjal Burns" QuestId="25316" GiverName="Emissary Windsong" GiverId="39865" X="7801.045" Y="-2430.96" Z="487.5918" />										
 							<RunTo X="7791.602" Y="-2447.938" Z="487.1142" />
-						<CustomBehavior File="InteractWith" MobId="39140"  GossipOptions="1" NumOfTimes="1"  X="7791.06" Y="-2445.54" Z="489.5634" />
+						 <CustomBehavior File="MountVehOnly" VehicleMountId="39140" X="7791.06" Y="-2445.54" Z="489.5634" />
 						<CustomBehavior File="WaitTimer" WaitTime="120000" />
 							<RunTo X="5492.048" Y="-3565.874" Z="1569.248" />
 						<TurnIn QuestName="As Hyjal Burns" QuestId="25316" TurnInName="Ysera" TurnInId="40289" X="5490.67" Y="-3563.557" Z="1569.246" />
 					</If>
+					
+					<If Condition="((HasQuest(25316)) &amp;&amp; (!IsQuestCompleted(25316)))" >										
+						<CustomBehavior File="FlyTo" X="5492.048" Y="-3565.874" Z="1569.248" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<TurnIn QuestName="As Hyjal Burns" QuestId="25316" TurnInName="Ysera" TurnInId="40289" X="5490.67" Y="-3563.557" Z="1569.246" />
+					</If>
 				</If>
 
+				
 				<If Condition="Me.MapId == 0" >
-					<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt;= 83" >
+					<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 81" >
 						<If Condition="((!HasQuest(25316)) &amp;&amp; (IsQuestCompleted(25316)))" >
 							<CustomBehavior File="FlyTo" X="-8345.691" Y="639.2832" Z="95.41733" />
 							<CustomBehavior File="ForcedDismount" />
 							<CustomBehavior File="InteractWith" MobId="207692" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8212.33" Y="399.020844" Z="117.27298" />
 							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
-							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="FlyTo" X="5560.186" Y="-3761.353" Z="1816.999" />
+							<CustomBehavior File="MyCTM" X="5530.041" Y="-3618.734" Z="1568.232" />	
+							<CustomBehavior File="ForcedDismount" />
 						</If>
 					</If>
-				</If>	
+				</If>
+
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 8" >
+						<If Condition="((!HasQuest(25316)) &amp;&amp; (IsQuestCompleted(25316)))" >
+							<CustomBehavior File="FlyTo" X="5560.186" Y="-3761.353" Z="1816.999" />
+							<CustomBehavior File="MyCTM" X="5530.041" Y="-3618.734" Z="1568.232" />	
+							<CustomBehavior File="ForcedDismount" />
+						</If>
+					</If>
+				</If>
 															
 				<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 81" >
 					<If Condition="Me.ZoneId == 616" >

@@ -84,22 +84,22 @@
 						<RunTo X="-468.7146" Y="-2860.216" Z="92.12209" />
 				</If>	
 								 
-
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 14." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>189,16,48,130</Factions>
+							<Factions>109,16,189</Factions>
 								<Hotspots>
-									<Hotspot X="-468.7146" Y="-2860.216" Z="92.12209" />
-									<Hotspot X="-631.54" Y="-3061.821" Z="93.98103" />
-									<Hotspot X="-675.8709" Y="-3155.591" Z="91.96278" />
-									<Hotspot X="-904.6843" Y="-3278.224" Z="92.42561" />
-									<Hotspot X="-1069.698" Y="-3088.423" Z="95.106" />
-									<Hotspot X="-1080.709" Y="-2889.221" Z="91.72631" />
-									<Hotspot X="-1011.187" Y="-2727.623" Z="93.38665" />
-									<Hotspot X="-898.9561" Y="-2609.681" Z="91.66737" />
-									<Hotspot X="-811.0004" Y="-2489.765" Z="92.38117" />
-									<Hotspot X="-736.1958" Y="-2687.921" Z="91.99149" />
-									<Hotspot X="-638.1968" Y="-2750.392" Z="94.50246" />
+									<Hotspot X="-456.5745" Y="-2745.449" Z="91.66808" />
+									<Hotspot X="-520.5707" Y="-2927.085" Z="91.66718" />
+									<Hotspot X="-436.0891" Y="-2990.047" Z="91.66809" />
+									<Hotspot X="-404.1721" Y="-2894.036" Z="91.66705" />
+									<Hotspot X="-326.2059" Y="-2848.831" Z="93.80862" />
+									<Hotspot X="-246.9584" Y="-2844.798" Z="93.1992" />
+									<Hotspot X="-216.3938" Y="-2893.406" Z="91.66669" />
+									<Hotspot X="-204.2005" Y="-3002.33" Z="91.66669" />
+									<Hotspot X="-167.5618" Y="-3028.617" Z="91.66669" />
+									<Hotspot X="-110.4037" Y="-2959.18" Z="91.66669" />
+									<Hotspot X="-124.0816" Y="-2910.689" Z="91.66703" />
+									<Hotspot X="-188.8268" Y="-2847.24" Z="95.27299" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level &gt;= 14)" GoalText="Farming" />
@@ -138,7 +138,8 @@
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, The Crossroads in Northern Barrens." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="Moving to the innkeep at The Crossroads." LogColor="Lime" />														
+					<CustomBehavior File="Message" Text="Moving to the innkeep at The Crossroads." LogColor="Lime" />
+						<RunTo X="-435.1751" Y="-2650.56" Z="95.97669" />
 						<RunTo X="-411.9601" Y="-2645.91" Z="96.22313" />
 					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
@@ -146,19 +147,26 @@
 					<CustomBehavior File="SetHearthstone" MobId="3934"  X="-407.1227" Y="-2645.225" Z="96.22307" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-6.376197" Y="-1575.942" Z="96.61546" />
+						<RunTo X="-435.1751" Y="-2650.56" Z="95.97669" />
+						
+						<RunTo X="1160.199" Y="-3390.991" Z="91.66687" />
 								 
-
+						<RunTo X="-1400.051" Y="-2745.675" Z="91.66868" />
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 16." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>189,73,14,16</Factions>
+							<Factions>48,15,130</Factions>
 								<Hotspots>
-									<Hotspot X="-6.376197" Y="-1575.942" Z="96.61546" />
-									<Hotspot X="4.763151" Y="-1449.346" Z="95.52138" />
-									<Hotspot X="80.32227" Y="-1499.088" Z="92.22952" />
-									<Hotspot X="187.1216" Y="-1540.854" Z="91.66677" />
-									<Hotspot X="243.9399" Y="-1473.339" Z="91.84679" />
-									<Hotspot X="257.1107" Y="-1704.26" Z="92.82343" />
+									<Hotspot X="-1400.051" Y="-2745.675" Z="91.66868" />
+									<Hotspot X="-1328.591" Y="-2781.292" Z="93.05824" />
+									<Hotspot X="-1186.34" Y="-2766.566" Z="93.79799" />
+									<Hotspot X="-1109.301" Y="-2889.278" Z="93.68399" />
+									<Hotspot X="-1148.321" Y="-2973.72" Z="93.5559" />
+									<Hotspot X="-1108.36" Y="-3057.976" Z="93.60531" />
+									<Hotspot X="-1161.528" Y="-3136.426" Z="94.22322" />
+									<Hotspot X="-1254.918" Y="-3104.183" Z="92.80327" />
+									<Hotspot X="-1336.792" Y="-3083.695" Z="93.35221" />
+									<Hotspot X="-1399.735" Y="-2991.449" Z="93.43861" />
+									<Hotspot X="-1439.342" Y="-2872.802" Z="93.478" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level &gt;= 16)" GoalText="Farming" />
@@ -188,16 +196,17 @@
 				<If Condition="Me.Level &gt;= 16 &amp;&amp; Me.Level &lt;= 17" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the 16 to 20 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 16 to 18 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 			
-		<While Condition="Me.Level &gt;= 16 &amp;&amp; Me.Level &lt;= 19" >	
+	<While Condition="Me.Level &gt;= 16 &amp;&amp; Me.Level &lt;= 17" >	
 	
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="65" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, The Crossroads in Northern Barrens." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="Moving to the innkeep at The Crossroads." LogColor="Lime" />														
+					<CustomBehavior File="Message" Text="Moving to the innkeep at The Crossroads." LogColor="Lime" />
+						<RunTo X="-435.1751" Y="-2650.56" Z="95.97669" />
 						<RunTo X="-411.9601" Y="-2645.91" Z="96.22313" />
 					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
@@ -205,27 +214,84 @@
 					<CustomBehavior File="SetHearthstone" MobId="3934"  X="-407.1227" Y="-2645.225" Z="96.22307" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="317.0433" Y="-1487.663" Z="91.7004" />
+						<RunTo X="-435.1751" Y="-2650.56" Z="95.97669" />
+						
+						<RunTo X="1160.199" Y="-3390.991" Z="91.66687" />
 								 
+						<RunTo X="1097.458" Y="-3190.3" Z="83.35375" />
+					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 18." LogColor="Lime" />				
+						<SetGrindArea><GrindArea>
+							<Factions>47</Factions>
+								<Hotspots>
+									<Hotspot X="1097.458" Y="-3190.3" Z="83.35375" />
+									<Hotspot X="1102.145" Y="-3101.54" Z="83.11201" />
+									<Hotspot X="1078.827" Y="-3030.01" Z="82.29923" />
+									<Hotspot X="987.8383" Y="-3057.526" Z="82.53306" />
+									<Hotspot X="1026.923" Y="-3171.648" Z="82.54677" />
+								</Hotspots>
+						</GrindArea></SetGrindArea>					
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 18)" GoalText="Farming" />
 
+				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Halija Whitestrider" Entry="3486" Type="Repair" X="-539.8406" Y="-2672.23" Z="95.78741" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="-446.5757" Y="-2649.36" Z="95.7204" />
+							</Mailboxes>
+						</SetMailbox>				
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					</If>
+					
+		</While>			
+					
+			<If Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >				
+				<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="Message" Text="I am in the 18 to 20 bracket, changing to the newest farming location." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>		
+					
+					
+		<While Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >	
+	
+				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<CustomBehavior File="Message" Text="Position check, The Crossroads in Northern Barrens." LogColor="Lime" />  
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Moving to the innkeep at The Crossroads." LogColor="Lime" />
+						<RunTo X="-435.1751" Y="-2650.56" Z="95.97669" />
+						<RunTo X="-411.9601" Y="-2645.91" Z="96.22313" />
+					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="SetHearthstone" MobId="3934"  X="-407.1227" Y="-2645.225" Z="96.22307" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
+						<RunTo X="-435.1751" Y="-2650.56" Z="95.97669" />
+						
+						<RunTo X="1160.199" Y="-3390.991" Z="91.66687" />
+								 
+						<RunTo X="1097.458" Y="-3190.3" Z="83.35375" />
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 20." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>514,189</Factions>
+							<Factions>47</Factions>
 								<Hotspots>
-									<Hotspot X="317.0433" Y="-1487.663" Z="91.7004" />
-									<Hotspot X="420.0215" Y="-1462.811" Z="91.66688" />
-									<Hotspot X="466.485" Y="-1297.93" Z="92.7328" />
-									<Hotspot X="533.0667" Y="-1168.164" Z="91.67714" />
-									<Hotspot X="617.259" Y="-1294.351" Z="91.66673" />
-									<Hotspot X="751.7235" Y="-1282.491" Z="91.71874" />
-									<Hotspot X="791.988" Y="-1376.423" Z="92.26557" />
-									<Hotspot X="588.937" Y="-1465.679" Z="91.86275" />
-									<Hotspot X="612.2877" Y="-1597.266" Z="92.38526" />
-									<Hotspot X="433.9135" Y="-1556.706" Z="91.66671" />
+									<Hotspot X="1097.458" Y="-3190.3" Z="83.35375" />
+									<Hotspot X="1102.145" Y="-3101.54" Z="83.11201" />
+									<Hotspot X="1078.827" Y="-3030.01" Z="82.29923" />
+									<Hotspot X="987.8383" Y="-3057.526" Z="82.53306" />
+									<Hotspot X="1026.923" Y="-3171.648" Z="82.54677" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 20)" GoalText="Farming" />
-
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
@@ -244,37 +310,27 @@
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
-					</If>
-					
-					
-					<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0" >
-						<CustomBehavior File="Message" Text="I'm  hearthing to The Crossroads." LogColor="Lime" />
-						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />
-					</If>
+					</If>				
 	</While>
 				
-				<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0" >				
-					<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am level 20. I need to buy mount training." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				</If>						   
-
-						  	
-				<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Gold &gt;= 5" >
-					<CustomBehavior File="Message" Text="Moving to the riding trainer Orgrimarr." LogColor="Orange" />
-						<RunTo X="1799.491" Y="-4360.449" Z="102.4643" />
-					<CustomBehavior File="Message" Text="I have reached the riding trainer. Training Apprentice Riding." LogColor="Orange" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="InteractWith" MobId="44919" WaitTime="1000" CollectionDistance="50" X="1799.54" Y="-4357.09" Z="102.4017" />
-					<CustomBehavior File="ForceTrainRiding" MobId="44919" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				</If>
-				
-				 
-						
+			<If Condition="Me.Level &gt;= 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Gold &lt; 5" >				
+				<CustomBehavior File="Message" Text="I need riding traing, but don't have the gold for it. Stopping the bot" LogColor="Orange" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="UserSettings" StopBot="true" />
+			</If>						   
+			<If Condition="Me.Level &gt;= 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Gold &gt; 5" >
+				<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="Message" Text="I am level 20. I need to buy mount training." LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Moving to the riding trainer Orgrimarr." LogColor="Orange" />
+					<RunTo X="1799.491" Y="-4360.449" Z="102.4643" />
+				<CustomBehavior File="Message" Text="I have reached the riding trainer. Training Apprentice Riding." LogColor="Orange" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="InteractWith" MobId="44919" WaitTime="1000" CollectionDistance="50" X="1799.54" Y="-4357.09" Z="102.4017" />
+				<CustomBehavior File="ForceTrainRiding" MobId="44919" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>	
+					
 			<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &gt;= 1" >					
 				<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
