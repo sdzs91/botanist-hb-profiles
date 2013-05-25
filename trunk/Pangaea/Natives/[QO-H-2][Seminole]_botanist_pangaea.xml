@@ -22,6 +22,7 @@
 	<TargetElites></TargetElites>
 	
 	<AvoidMobs>
+		<Mob Name="Balboa" Entry="35759" />
 		<Mob Name="Talrendis Defender" Entry="36816"  />
 		<Mob Name="Talrendis Sentinel" Entry="36914"  />
 		<Mob Name="Talrendis Lorekeeper" Entry="36849"  />
@@ -250,7 +251,6 @@
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
-					
 		</While>			
 					
 			<If Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >				
@@ -258,37 +258,76 @@
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="I am in the 18 to 20 bracket, changing to the newest farming location." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				
 			</If>		
 					
 					
 		<While Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >	
 	
 				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, The Crossroads in Northern Barrens." LogColor="Lime" />  
+				<CustomBehavior File="Message" Text="Position check, innkeep @ Valley of Honor." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="Moving to the innkeep at The Crossroads." LogColor="Lime" />
-						<RunTo X="-435.1751" Y="-2650.56" Z="95.97669" />
-						<RunTo X="-411.9601" Y="-2645.91" Z="96.22313" />
+					<CustomBehavior File="Message" Text="Moving to the innkeep in Valley of Honor." LogColor="Lime" />
+						<RunTo X="1803.25" Y="-4366.241" Z="102.6268" />   <!-- org fp -->
+						<RunTo X="1923.806" Y="-4721.438" Z="35.85155" />	<!-- outside inn -->
+						<RunTo X="1919.088" Y="-4728.828" Z="38.93263" />
 					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="SetHearthstone" MobId="3934"  X="-407.1227" Y="-2645.225" Z="96.22307" />
+					<CustomBehavior File="SetHearthstone" MobId="46642" X="1916.46" Y="-4732.79" Z="38.93615" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-						<RunTo X="-435.1751" Y="-2650.56" Z="95.97669" />
+						<RunTo X="1923.806" Y="-4721.438" Z="35.85155" />
 						
-						<RunTo X="1160.199" Y="-3390.991" Z="91.66687" />
-								 
-						<RunTo X="1097.458" Y="-3190.3" Z="83.35375" />
+						<RunTo X="2526.215" Y="-4848.256" Z="145.9657" />	<!-- org gate -->
+						<RunTo X="2902.539" Y="-4981.987" Z="125.7175" />
+						<RunTo X="2991.695" Y="-4936.149" Z="127.5998" />
+						<RunTo X="3081.256" Y="-4888.665" Z="130.3821" />
+						<RunTo X="3168.931" Y="-4841.224" Z="138.6927" />
+						<RunTo X="3265.833" Y="-4833.521" Z="164.6409" />
+						<RunTo X="3365.144" Y="-4820.446" Z="149.7609" />
+						<RunTo X="3462.742" Y="-4798.139" Z="156.2951" />
+						<RunTo X="3563.829" Y="-4794.472" Z="160.7719" />
+						<RunTo X="3662.948" Y="-4809.978" Z="149.4228" />
+						<RunTo X="3740.158" Y="-4875.378" Z="144.3564" />
+						<RunTo X="3800.112" Y="-4956.635" Z="150.9849" />
+						<RunTo X="3771.41" Y="-5052.062" Z="169.0936" />
+						<RunTo X="3791.949" Y="-5150.629" Z="161.8241" />
+						<RunTo X="3838.153" Y="-5240.585" Z="155.7499" />
+						<RunTo X="3853.684" Y="-5340.48" Z="163.5735" />
+						<RunTo X="3889.686" Y="-5434.258" Z="173.0709" />
+						<RunTo X="3975.257" Y="-5485.009" Z="157.2043" />
+						<RunTo X="4073.253" Y="-5501.14" Z="138.9583" />
+						<RunTo X="4160.575" Y="-5547.255" Z="118.2603" />
+						<RunTo X="4222.685" Y="-5579.917" Z="118.2698" />
+						<RunTo X="4585.121" Y="-5594.937" Z="100.3901" />
+						
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 20." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
-							<Factions>47</Factions>
+							<Factions>14,7,90,2146</Factions>
 								<Hotspots>
-									<Hotspot X="1097.458" Y="-3190.3" Z="83.35375" />
-									<Hotspot X="1102.145" Y="-3101.54" Z="83.11201" />
-									<Hotspot X="1078.827" Y="-3030.01" Z="82.29923" />
-									<Hotspot X="987.8383" Y="-3057.526" Z="82.53306" />
-									<Hotspot X="1026.923" Y="-3171.648" Z="82.54677" />
+									<Hotspot X="4600.538" Y="-5676.712" Z="98.44154" />
+									<Hotspot X="4630.466" Y="-5824.146" Z="125.7249" />
+									<Hotspot X="4829.077" Y="-6028.605" Z="92.95131" />
+									<Hotspot X="4800.372" Y="-6143.297" Z="93.22897" />
+									<Hotspot X="4677.23" Y="-6215.936" Z="108.431" />
+									<Hotspot X="4496.52" Y="-6343.481" Z="124.1772" />
+									<Hotspot X="4420.818" Y="-6580.273" Z="104.3394" />
+									<Hotspot X="4432.931" Y="-6981.068" Z="94.45399" />
+									<Hotspot X="4501.556" Y="-7223.528" Z="100.4584" />
+									<Hotspot X="4638.09" Y="-7090.42" Z="104.6173" />
+									<Hotspot X="4886.455" Y="-7253.773" Z="125.2902" />
+									<Hotspot X="4881.096" Y="-7088.095" Z="109.7641" />
+									<Hotspot X="4840.909" Y="-6936.59" Z="95.39764" />
+									<Hotspot X="4673.259" Y="-6868.324" Z="133.4805" />
+									<Hotspot X="4497.704" Y="-6742.285" Z="101.6935" />
+									<Hotspot X="4552.666" Y="-6521.819" Z="96.50223" />
+									<Hotspot X="4602.043" Y="-6369.526" Z="122.0396" />
+									<Hotspot X="4735.448" Y="-6207.584" Z="108.668" />
+									<Hotspot X="4863.249" Y="-6058.416" Z="88.5808" />
+									<Hotspot X="4888.173" Y="-5887.447" Z="97.33425" />
+									<Hotspot X="4718.235" Y="-5623.93" Z="114.8088" />
+									<Hotspot X="4718.265" Y="-5552.904" Z="118.2723" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 20)" GoalText="Farming" />
@@ -301,12 +340,12 @@
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Halija Whitestrider" Entry="3486" Type="Repair" X="-539.8406" Y="-2672.23" Z="95.78741" />
+								<Vendor Name="Kiro" Entry="3359" Type="Repair" X="1898.271" Y="-4669.115" Z="35.2924" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-446.5757" Y="-2649.36" Z="95.7204" />
+								<Mailbox X="1911.794" Y="-4678.403" Z="35.14877" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
@@ -323,6 +362,8 @@
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="I am level 20. I need to buy mount training." LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Moving to the riding trainer Orgrimarr." LogColor="Orange" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
 					<RunTo X="1799.491" Y="-4360.449" Z="102.4643" />
 				<CustomBehavior File="Message" Text="I have reached the riding trainer. Training Apprentice Riding." LogColor="Orange" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
