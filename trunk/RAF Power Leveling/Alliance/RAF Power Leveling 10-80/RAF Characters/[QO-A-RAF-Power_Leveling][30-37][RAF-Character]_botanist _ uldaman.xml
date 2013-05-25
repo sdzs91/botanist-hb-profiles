@@ -136,7 +136,7 @@
 								Text="**********RAF Character - This character has reached the appropriate level to run Stratholme. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
 						</If>
 						<CustomBehavior File="WaitTimer" WaitTime="10000" />
-						<CustomBehavior File="MyCTM" X="-6616.537" Y="-3767.755" Z="266.4467" />
+						<CustomBehavior File="MyCTM" X="-6617.781" Y="-3763.264" Z="265.8623" />
 						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="15000" />
 						<If Condition="Me.ZoneId == 1337">
