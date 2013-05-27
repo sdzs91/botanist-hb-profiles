@@ -53,6 +53,7 @@
 				<If Condition="Me.MapId == 0" >
 					<If Condition="Me.X &lt; -6642.138 || Me.X &gt; -6618 || Me.Y &gt; -3747.672 || Me.Y &lt; -3775.467" >
 						<CustomBehavior File="Message" Text="Moving to Uldaman." LogColor="Lime" />
+							<RunTo X="-8838.43" Y="488.7621" Z="109.6096" />
 							<RunTo X="-5714.14" Y="-1578.64" Z="383.204" /> <!-- gol'bolar fp near if -->
 						
 							<RunTo X="-5425.581" Y="-2933.275" Z="347.5352" /> <!-- thelsamar fp-->							
