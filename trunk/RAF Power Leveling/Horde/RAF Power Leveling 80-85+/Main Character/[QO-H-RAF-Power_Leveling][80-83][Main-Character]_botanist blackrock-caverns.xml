@@ -139,10 +139,10 @@
 						<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
 						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
                         <CustomBehavior File="Message" Text="Blackrock Caverns has been reset." LogColor="Lime" />						
-						<CustomBehavior File="GoThruPortal" X="-7570.119" Y="-1330.23" Z="245.5394" />
-							<RunTo X="209.8923" Y="1125.509" Z="205.5691" />
-					
+					<!--	<CustomBehavior File="GoThruPortal" X="-7570.119" Y="-1330.23" Z="245.5394" />	-->
+						<CustomBehavior File="MyCTM" X="-7568.929" Y="-1330.149" Z="245.5389" />
 						<CustomBehavior File="Message" Text="I am waiting for the dungeon to load." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" />
 						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 							Text="Main Character - Press continue on this window first, then press continue on the RAF characters." Title="WARNING" />
                     </If>
