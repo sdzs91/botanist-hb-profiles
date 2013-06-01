@@ -166,7 +166,7 @@
 						<Hotspot X="95.85753" Y="-297.0305" Z="60.70204" />
 						<Hotspot X="96.43942" Y="-318.3985" Z="65.46348" />
 						<Hotspot X="96.14306" Y="-343.82" Z="60.70211" />
-						<Hotspot X="85.72282" Y="-360.6587" Z="60.70211" />
+						<Hotspot X="83.30924" Y="-356.9662" Z="60.70204" />
 						<Hotspot X="65.27963" Y="-342.8697" Z="60.70211" />
 						<Hotspot X="78.86509" Y="-343.7055" Z="60.70211" />
 						<Hotspot X="79.58678" Y="-324.016" Z="55.78226" />
@@ -325,52 +325,52 @@
 						<RunTo X="93.13277" Y="-419.8449" Z="110.9228" />
 						<RunTo X="87.12276" Y="-419.9743" Z="110.9241" />
 					<CustomBehavior File="UserSettings" PullDistance="15" />	
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 1 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 2 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 3 of 15." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 4 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 5 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 6 of 15." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 7 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 8 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 9 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 10 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 11 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 12 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 13 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 14 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="Message" Text="Waiting 15 seconds, 15 of 15." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="179.8937" Y="-418.4902" Z="110.4723" />
+						<RunTo X="179.6093" Y="-418.1441" Z="110.4723" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 					<CustomBehavior File="UserSettings" PullDistance="40" />
 						<RunTo X="105.0844" Y="-420.0851" Z="110.9228" />
@@ -398,9 +398,14 @@
 						<Hotspot X="9.453765" Y="-485.7973" Z="110.9327" />
 						<Hotspot X="12.37006" Y="-454.8495" Z="110.9403" />
 						<Hotspot X="25.51032" Y="-467.858" Z="110.955" />
-					</CustomBehavior>					
-						<RunTo  X="84.37505" Y="-552.9569" Z="110.9242" />
+					</CustomBehavior>
+					
+						<RunTo  X="84.37505" Y="-552.9569" Z="110.9242" />	<!-- the beast -->
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="MyCTM" X="32.87771" Y="-512.5882" Z="110.9461" />
+					<CustomBehavior File="MyCTM" X="33.11989" Y="-502.7303" Z="110.9499" />
 						<RunTo  X="33.52279" Y="-461.1625" Z="110.9528" />
+						
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="33.94608" Y="-438.2022" Z="110.9667" />
 						<Hotspot X="36.67104" Y="-384.9553" Z="110.7002" />
