@@ -47,7 +47,7 @@
 		
 	<QuestOrder>
 					
-				<If Condition="Me.Level &gt;= 68" >
+				<If Condition="Me.Level &gt; 68" >
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-H-4][Shawnee]_botanist_pangaea" />
 				</If>
 	
@@ -513,6 +513,7 @@
 			
 				<If Condition="Me.MapId == 530" >
 					 <If Condition="Me.Level == 68 &amp;&amp; Me.ZoneId == 3522" >
+						<CustomBehavior File="Message" Text="I am a level 68 Horde in Blades Edge Mountains. Moving to Orgrimmar." LogColor="Lime" />
 						<CustomBehavior File="ForcedMount" MountType="Flying" />
 						<CustomBehavior File="FlyTo" X="2979.485" Y="5485.754" Z="383.1029" />					
 						<CustomBehavior File="MyCTM" X="1823.031" Y="5636.104" Z="498.2995" />					
@@ -523,11 +524,23 @@
 						<CustomBehavior File="FlyTo" X="-161.4113" Y="968.5099" Z="54.28123" />
 						<CustomBehavior File="ForcedDismount" />
 						<CustomBehavior File="InteractWith" MobId="195140" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-161.317764" Y="965.409851" Z="54.29044" />
-						<CustomBehavior File="WaitTimer" WaitTime="20000" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" />
 							<RunTo X="1742.455" Y="-4297.627" Z="14.53881" />							
 					</If>	
 				</If>	
 					
+				<If Condition="Me.MapId == 530" >
+					 <If Condition="Me.Level == 68" >
+						<CustomBehavior File="Message" Text="I am a level 68 Horde somewhere in Outlands. Moving to Orgrimmar." LogColor="Lime" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
+						<CustomBehavior File="FlyTo" X="-255.8759" Y="1380.526" Z="326.2285" />					
+						<CustomBehavior File="FlyTo" X="-161.4113" Y="968.5099" Z="54.28123" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="InteractWith" MobId="195140" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-161.317764" Y="965.409851" Z="54.29044" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" />
+							<RunTo X="1742.455" Y="-4297.627" Z="14.53881" />							
+					</If>	
+				</If>	
 					
 				<If Condition="Me.MapId == 1" >
 					<If Condition="Me.Level == 68 &amp;&amp; (!HasSpell(90267)) &amp;&amp; Me.Gold &gt;= 251" >				
@@ -535,7 +548,7 @@
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="I am level 68. I need to purchase a Flight Master's License." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Message" Text="Moving to the riding trainer in Orgrimmar." LogColor="Orange" />
+						<CustomBehavior File="Message" Text="Moving to the riding trainer in Orgrimmar. Pay close attention. HonorBuddy likes to bug out when using the lifts on Orgrimmar." LogColor="Orange" />
 							<RunTo X="1797.776" Y="-4359.822" Z="102.4585" />
 					<CustomBehavior File="Message" Text="I have reached the riding trainer. Training Apprentice Riding." LogColor="Orange" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -552,7 +565,7 @@
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="I am level 68. I need to purchase Cold Weather Flying." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="Message" Text="Moving back to the riding trainer." LogColor="Orange" />
+						<CustomBehavior File="Message" Text="Moving back to the riding trainer. Pay close attention. HonorBuddy likes to bug out when using the lifts on Orgrimmar" LogColor="Orange" />
 							<RunTo X="1797.776" Y="-4359.822" Z="102.4585" />
 					<CustomBehavior File="Message" Text="I have reached the riding trainer. Training Apprentice Riding." LogColor="Orange" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -560,12 +573,19 @@
 					<CustomBehavior File="ForceTrainRiding" MobId="44919" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />							
 					</If>
+					
+					<If Condition="Me.MapId == 1" >
+						<If Condition="Me.X &lt; 1895.627 &amp;&amp; Me.X &gt; 1713.31 &amp;&amp; Me.Y &gt; -4440.429 &amp;&amp; Me.Y &lt; -4283.688 &amp;&amp; Me.Z &lt; 35" >
+							<CustomBehavior File="Message" Text="I am in the Cleft of Shadow in Orgrimmar, running out of the cavern ." LogColor="Lime" />
+							<RunTo X="1718.048" Y="-4342.479" Z="31.29943" />
+						</If>			
+					</If>
 						<If Condition="Me.Level == 68 &amp;&amp; (HasSpell(54197))" >					
 							<CustomBehavior File="Message" Text="Checking my current level." LogColor="Lime" />						
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
 							<CustomBehavior File="Message" Text="I am in the 68 to 70 bracket and have a Flight Master's License and Cold Weather Flying." LogColor="Lime" />
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
-								<RunTo X="1755.619" Y="-4275.622" Z="132.9907" />
+							<CustomBehavior File="FlyTo" X="1748.178" Y="-4271.429" Z="156.7331" />
 						</If>
 				</If>
 
@@ -573,14 +593,14 @@
 				
 				<If Condition="Me.MapId == 1" >				
 					<If Condition="Me.Level == 68" >
-						<CustomBehavior File="LoadProfile" ProfileName="Natives\[QO-H-4][Shawnee]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-H-4][Shawnee]_botanist_pangaea" />
 					</If>
 				</If>
 				
 
 				<If Condition="Me.MapId == 571" >				
 					<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt;= 79" >
-						<CustomBehavior File="LoadProfile" ProfileName="Natives\[QO-H-5][Choctaw]_botanist_pangaea" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-H-5][Choctaw]_botanist_pangaea" />
 					</If>
 				</If>
 				

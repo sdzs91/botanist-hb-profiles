@@ -46,8 +46,8 @@
 				</If>
 									
 				<If Condition="Me.MapId == 1" >
-						<CustomBehavior File="FlyTo" X="1748.178" Y="-4271.429" Z="156.7331" />
-						<CustomBehavior File="MyCTM" X="1762.645" Y="-4286.081" Z="133.1075" />
+					<CustomBehavior File="FlyTo" X="1748.178" Y="-4271.429" Z="156.7331" />
+					<CustomBehavior File="MyCTM" X="1762.645" Y="-4286.081" Z="133.1075" />
 					<CustomBehavior File="ForcedDismount" />	
 					<CustomBehavior File="Message" Text="Waiting for the Zeppelin." LogColor="Lime" />
 					<CustomBehavior File="UseTransport" TransportId="186238"
@@ -57,6 +57,9 @@
 								TransportEndX="2837.90" TransportEndY="6187.44" TransportEndZ="140.16"	
 								GetOffX="2836.319" GetOffY="6184.29" GetOffZ="121.9199" />								
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="UserSettings" UseMount="False" />
+						<RunTo X="2768.747" Y="6122.22" Z="91.24382" />
+						<RunTo X="2745.699" Y="6103.045" Z="77.71205" />
 				</If>
 			
 				

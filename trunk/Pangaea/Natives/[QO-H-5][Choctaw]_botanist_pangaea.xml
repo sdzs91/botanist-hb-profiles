@@ -70,13 +70,13 @@
 					<RunTo X="2801.091" Y="6152.535" Z="84.69434" />			
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="21000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="25278" X="2803.702" Y="6154.502" Z="84.79224" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />							
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="2744.547" Y="6096.886" Z="77.12262" />
-				<CustomBehavior File="ForcedMount" MountType="Flying" />
-				<CustomBehavior File="FlyTo" X="2725.72" Y="6082.935" Z="105.4176" />
+					<RunTo X="2745.699" Y="6103.045" Z="77.71205" />
+				<CustomBehavior File="ForcedMount" MountType="Flying" />	
+				<CustomBehavior File="FlyTo" X="2705.387" Y="6056.477" Z="168.7113" />
 				<CustomBehavior File="FlyTo" X="2949.404" Y="5912.083" Z="113.5843" />
 				<CustomBehavior File="ForcedDismount" />
 								 
