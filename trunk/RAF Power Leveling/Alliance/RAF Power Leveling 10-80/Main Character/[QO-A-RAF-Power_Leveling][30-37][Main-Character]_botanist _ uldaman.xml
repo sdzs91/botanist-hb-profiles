@@ -52,15 +52,17 @@
 				<If Condition="Me.MapId == 0" >
 					<If Condition="Me.X &lt; -6642.138 || Me.X &gt; -6618 || Me.Y &gt; -3747.672 || Me.Y &lt; -3775.467" >
 						<CustomBehavior File="Message" Text="Moving to the innkeep." LogColor="Lime" />
-						<CustomBehavior File="FlyTo" X="-6604.441" Y="-3926.363" Z="378.9168" />							
+						<CustomBehavior File="FlyTo" X="-5367.764" Y="-2948.176" Z="324.1993" />							
 						<CustomBehavior File="ForcedDismount" />
-							<RunTo X="-6586.935" Y="-3924.635" Z="379.541" />
+						<CustomBehavior File="UserSettings" UseMount="False" />
+							<RunTo X="-5375.64" Y="-2972.951" Z="323.1703" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-						<CustomBehavior File="SetHearthstone" MobId="48054" X="-6584.51" Y="-3923.13" Z="379.5437" />
+						<CustomBehavior File="SetHearthstone" MobId="6734" X="-5377.913" Y="-2973.908" Z="323.1688" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-							<RunTo X="-6604.441" Y="-3926.363" Z="378.9168" />	
+							<RunTo X="-5367.764" Y="-2948.176" Z="324.1993" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />	
 						<CustomBehavior File="FlyTo" X="-5910.435" Y="-3313.322" Z="283.2991" />	
 						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 							Text="Main Character - Press continue on this window first, then press continue on the RAF characters." Title="WARNING" />
@@ -465,16 +467,16 @@
 					<CustomBehavior File="Message" Text="I have detected that my gear is about to break. I'm going to hearth, repair and then return to the instance." LogColor="Lime" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />
-					<If Condition="Me.ZoneId == 3" >
+					<If Condition="Me.ZoneId == 38" >
 						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor." LogColor="Lime" />												
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Artie Steelbolt" Entry="48057" Type="Repair" X="-6600.45" Y="-3898.99" Z="379.1222" />
+								<Vendor Name="Morhan Coppertongue" Entry="167" Type="Repair" X="-5343.68" Y="-2932.134" Z="324.3618" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox  X="-6601.185" Y="-3929.376" Z="379.2067" />
+								<Mailbox  X="-5362.005" Y="-2952.996" Z="323.9872" />
 							</Mailboxes>
 						</SetMailbox>
 				
