@@ -133,9 +133,10 @@
 				<If Condition="Me.ZoneId == 1583">
 					<CustomBehavior File="Message" Text="You started the bot with me inside Blackrock Spire. Running out to reset the dungeon." LogColor="Lime" />					
 						<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
-					<CustomBehavior File="GoThruPortal" X="76.84785" Y="-223.031" Z="49.84081" />
+				<!--	<CustomBehavior File="GoThruPortal" X="76.84785" Y="-223.031" Z="49.84081" />	-->
+						<CustomBehavior File="MyCTM" X="76.13" Y="-223.305" Z="49.84028" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="-7524.65" Y="-1229.13" Z="285.731" />
+						<RunTo X="-7524.65" Y="-1229.13" Z="285.731" />	
 				</If>
 		
 		 <While Condition="true" >
@@ -448,7 +449,8 @@
 						<Hotspot X="79.65969" Y="-248.035" Z="60.22824" />
 					</CustomBehavior>
 						<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
-					<CustomBehavior File="GoThruPortal" X="76.84785" Y="-223.031" Z="49.84081" />
+				<!--	<CustomBehavior File="GoThruPortal" X="76.84785" Y="-223.031" Z="49.84081" />	-->
+						<CustomBehavior File="MyCTM" X="76.13" Y="-223.305" Z="49.84028" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
 						<RunTo X="-7524.65" Y="-1229.13" Z="285.731" />					
 				</If>
