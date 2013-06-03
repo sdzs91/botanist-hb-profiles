@@ -65,7 +65,7 @@
 				<CustomBehavior File="Message" Text="Position check, Warsong Hold in Borean Tundra." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Warsong Hold." LogColor="Lime" />
-				<CustomBehavior File="FlyTo" X="2745.699" Y="6103.045" Z="77.71205" />
+					<RunTo X="2745.699" Y="6103.045" Z="77.71205" />
 				<CustomBehavior File="ForcedDismount" />
 					<RunTo X="2801.091" Y="6152.535" Z="84.69434" />			
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
@@ -105,11 +105,13 @@
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="Moving to a safe place to hearth.." LogColor="Lime" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
 						<CustomBehavior File="FlyTo" X="2509.716" Y="5692.7" Z="70.78244" />
 						<CustomBehavior File="ForcedMount" MountType="Flying" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />
+						<RunTo X="2785.867" Y="6201.097" Z="83.75446" />
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Broff Bombast" Entry="27011" Type="Food" X="2359.466" Y="5237.433" Z="7.712817" />
@@ -122,7 +124,8 @@
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 					</If>
-					
+						<RunTo X="2785.867" Y="6201.097" Z="83.75446" />
+						<RunTo X="2803.576" Y="6159.063" Z="85.12028" />
 		</While>				
 				
 				<If Condition="Me.Level &gt;= 70 &amp;&amp; Me.Level &lt;= 71" >				
