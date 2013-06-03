@@ -65,9 +65,15 @@
 				<CustomBehavior File="Message" Text="Position check, Warsong Hold in Borean Tundra." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Warsong Hold." LogColor="Lime" />
-					<RunTo X="2745.699" Y="6103.045" Z="77.71205" />
-				<CustomBehavior File="ForcedDismount" />
-					<RunTo X="2801.091" Y="6152.535" Z="84.69434" />			
+				<If Condition="Me.X &gt; 2750.609 &amp;&amp; Me.X &lt; 2926.977 &amp;&amp; Me.Y &lt; 6273.094 &amp;&amp; Me.Y &gt; 6098.025" >
+					<RunTo X="2801.091" Y="6152.535" Z="84.69434" />
+				</If>
+				<If Condition="Me.X &lt; 2750.609 || Me.X &gt; 2926.977 || Me.Y &gt; 6273.094 || Me.Y &lt; 6098.025" >
+					<CustomBehavior File="FlyTo" X="2745.699" Y="6103.045" Z="77.71205" />
+					<CustomBehavior File="ForcedDismount" />
+						<RunTo X="2801.091" Y="6152.535" Z="84.69434" />
+				</If>
+				
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -80,7 +86,6 @@
 				<CustomBehavior File="FlyTo" X="2949.404" Y="5912.083" Z="113.5843" />
 				<CustomBehavior File="ForcedDismount" />
 								 
-
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 70." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>1985,21</Factions>

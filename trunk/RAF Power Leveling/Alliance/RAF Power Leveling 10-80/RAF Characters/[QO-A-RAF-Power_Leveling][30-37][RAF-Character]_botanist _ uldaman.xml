@@ -51,12 +51,27 @@
 
 				
 				<If Condition="Me.MapId == 0" >
-					<If Condition="Me.X &lt; -6642.138 || Me.X &gt; -6618 || Me.Y &gt; -3747.672 || Me.Y &lt; -3775.467" >
+					<If Condition="Me.Y &gt; 824.5202 &amp;&amp; Me.Y &lt; 847.8094 &amp;&amp; Me.X &lt; -8761.179 &amp;&amp; Me.X &gt; -8782.903" >
+						<CustomBehavior File="Message" Text="I am outside the Stockades portal. Moving to Thelsamar." LogColor="Lime" />
 						<CustomBehavior File="Message" Text="Moving to Uldaman." LogColor="Lime" />
-							<RunTo X="-8838.43" Y="488.7621" Z="109.6096" />
+							<RunTo X="-8841.06" Y="489.656" Z="109.607" />	<!-- sw fp -->
 							<RunTo X="-5714.14" Y="-1578.64" Z="383.204" /> <!-- gol'bolar fp near if -->
-						
-							<RunTo X="-5425.581" Y="-2933.275" Z="347.5352" /> <!-- thelsamar fp-->							
+							<RunTo X="-5425.581" Y="-2933.275" Z="347.5352" /> <!-- thelsamar fp-->
+					</If>	
+				</If>		
+							
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.Y &lt; 824.5202 || Me.Y &gt; 847.8094 || Me.X &gt; -8761.179 || Me.X &lt; -8782.903" >
+						<If Condition="Me.X &lt; -6166 || Me.X &gt; -5966 || Me.Y &gt; -2854 || Me.Y &lt; -3054" >
+							<CustomBehavior File="Message" Text="I'm not outside the Stockades portal nor the front entrance portal to Uldaman. Moving to Thelsamar." LogColor="Lime" />
+								<RunTo X="-5425.581" Y="-2933.275" Z="347.5352" />
+						</If>
+					</If>	
+				</If>		
+							
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.X &lt; -6642.138 || Me.X &gt; -6618 || Me.Y &gt; -3747.672 || Me.Y &lt; -3775.467" >
+						<CustomBehavior File="Message" Text="Moving to location where the booster is waiting." LogColor="Lime" />
 							<RunTo X="-5630.037" Y="-3194.339" Z="326.6409" />
 							<RunTo X="-5825.811" Y="-3304.185" Z="295.273" />
 							<RunTo X="-5867.324" Y="-3313.165" Z="263.8633" />
@@ -66,81 +81,68 @@
 							<RunTo X="-5935.82" Y="-3296.777" Z="230.9494" />
 							<RunTo X="-5952.666" Y="-3327.818" Z="258.2968" />
 						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
-							Text="RAF Character - Press continue on the level 90 first, then press continue on this window." Title="WARNING" />
+							Text="RAF Character - Press continue on the level 90 first, then press continue on this window. The Booster will attempt to clear a path into Uldaman." Title="WARNING" />
 							
-						<CustomBehavior File="Message" Text="Waiting 95 seconds, so the tank can kill the mobs in route to the instance." LogColor="Lime" />	
-						<CustomBehavior File="WaitTimer" WaitTime="95000" />
+						<CustomBehavior File="Message" Text="Waiting 90 seconds, so the booster can kill the mobs in route to the instance." LogColor="Lime" />	
+						<CustomBehavior File="WaitTimer" WaitTime="90000" />
 						
 						<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
-							<Hotspot X="-5967.213" Y="-3297.798" Z="258.9786" />
-							<Hotspot X="-5991.805" Y="-3297.191" Z="263.8261" />
-							<Hotspot X="-6024.922" Y="-3300.707" Z="260.8758" />
-							<Hotspot X="-6048.363" Y="-3312.047" Z="257.0286" />
-							<Hotspot X="-6066.154" Y="-3331.075" Z="256.4996" />
-							<Hotspot X="-6094.535" Y="-3348.646" Z="256.8256" />
-							<Hotspot X="-6124.82" Y="-3362.499" Z="253.7641" />
-							<Hotspot X="-6154.103" Y="-3379.019" Z="243.0722" />
-							<Hotspot X="-6178.79" Y="-3402.105" Z="239.5839" />
-							<Hotspot X="-6202.797" Y="-3425.271" Z="238.7912" />
-							<Hotspot X="-6226.146" Y="-3449.687" Z="238.3855" />
-							<Hotspot X="-6249.292" Y="-3473.736" Z="246.353" />
-							<Hotspot X="-6279.419" Y="-3487.873" Z="252.113" />
-							<Hotspot X="-6310.14" Y="-3500.81" Z="247.8952" />
-							<Hotspot X="-6339.722" Y="-3517.197" Z="241.7354" />
-							<Hotspot X="-6367.709" Y="-3535.203" Z="255.6442" />
+							<Hotspot X="-6002.7" Y="-3293.95" Z="263.913" />
+							<Hotspot X="-6056.798" Y="-3318.877" Z="256.3204" />
+							<Hotspot X="-6105.758" Y="-3275.93" Z="256.8756" />
+							<Hotspot X="-6108.063" Y="-3221.008" Z="259.3196" />
+							<Hotspot X="-6091.311" Y="-3183.143" Z="256.1721" />
 						</CustomBehavior>
-							<RunTo X="-6367.709" Y="-3535.203" Z="255.6442" />
-							<CustomBehavior File="Message" Text="Waiting 60 seconds, so the tank can kill the mobs in route to the instance." LogColor="Lime" />	
-							<CustomBehavior File="WaitTimer" WaitTime="60000" />
+						<CustomBehavior File="Message" Text="Waiting 60 seconds, so the booster can kill the mobs in route to the instance." LogColor="Lime" />	
+						<CustomBehavior File="WaitTimer" WaitTime="60000" />
 						
-						<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
-							<Hotspot X="-6387.624" Y="-3561.09" Z="273.241" />
-							<Hotspot X="-6398.826" Y="-3584.629" Z="274.0327" />
-							<Hotspot X="-6424.444" Y="-3597.367" Z="277.1527" />
-							<Hotspot X="-6446.971" Y="-3609.399" Z="273.0074" />
-							<Hotspot X="-6472.859" Y="-3613.091" Z="270.3653" />
-							<Hotspot X="-6494.454" Y="-3621.838" Z="260.5848" />
-							<Hotspot X="-6524.269" Y="-3637.471" Z="244.5018" />
-							<Hotspot X="-6555.433" Y="-3649.107" Z="247.4493" />
-							<Hotspot X="-6579.813" Y="-3656.796" Z="255.4198" />
-							<Hotspot X="-6594.606" Y="-3676.827" Z="263.7281" />
-							<Hotspot X="-6606.668" Y="-3694.658" Z="265.8773" />
-						</CustomBehavior>	
-							<RunTo X="-6609.511" Y="-3694.632" Z="265.8924" />							
-						<CustomBehavior File="MyCTM" X="-6610.661" Y="-3704.972" Z="267.4866" />
-						<CustomBehavior File="MyCTM" X="-6616.192" Y="-3718.713" Z="268.899" />
-						<CustomBehavior File="MyCTM" X="-6630.354" Y="-3723.031" Z="267.4555" />
-						<CustomBehavior File="MyCTM" X="-6635.766" Y="-3737.958" Z="265.2828" />
-						<CustomBehavior File="MyCTM" X="-6635.251" Y="-3761.43" Z="265.876" />
-						<CustomBehavior File="MyCTM" X="-6619.671" Y="-3766.153" Z="266.3805" />
-						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
-							Text="RAF Character - Press continue after the Main Character has entered the instance." Title="WARNING" />
+						<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+							<Hotspot X="-6091.887" Y="-3168.633" Z="255.1831" />
+							<Hotspot X="-6060.82" Y="-3148.125" Z="254.3234" />
+							<Hotspot X="-6080.002" Y="-3130.198" Z="253.8317" />
+							<Hotspot X="-6088.935" Y="-3123.991" Z="252.5964" />
+							<Hotspot X="-6083.677" Y="-3111.414" Z="251.6328" />
+							<Hotspot X="-6076.469" Y="-3091.06" Z="250.5569" />
+							<Hotspot X="-6066.441" Y="-3083.002" Z="250.2636" />
+							<Hotspot X="-6070.056" Y="-3071.719" Z="247.6829" />
+							<Hotspot X="-6073.781" Y="-3073.369" Z="245.8541" />
+							<Hotspot X="-6091.811" Y="-3077.519" Z="242.0625" />
+							<Hotspot X="-6088.217" Y="-3060.089" Z="239.321" />
+							<Hotspot X="-6080.632" Y="-3040.869" Z="233.867" />
+							<Hotspot X="-6089.51" Y="-3025.736" Z="232.04" />
+							<Hotspot X="-6073.743" Y="-3008.738" Z="231.0418" />
+							<Hotspot X="-6098.1" Y="-2984.573" Z="225.4329" />
+							<Hotspot X="-6095.188" Y="-2980.798" Z="225.689" />
+						</CustomBehavior>
+						<CustomBehavior File="Message" Text="Waiting  60 seconds, so the booster can kill the mobs in route to the instance." LogColor="Lime" />	
+						<CustomBehavior File="WaitTimer" WaitTime="60000" />
+						<CustomBehavior File="MyCTM" X="-6102.287" Y="-2965.22" Z="204.5955" />
+						<CustomBehavior File="MyCTM" X="-6084.705" Y="-2955.463" Z="204.4914" />
+						<CustomBehavior File="MyCTM" X="-6066.36" Y="-2954.85" Z="209.772" />						
 					</If>	
 				</If>
 							
 				<If Condition="Me.ZoneId == 1337">
 					<CustomBehavior File="Message" Text="You started the bot with me inside Uldaman. Running out to reset the dungeon." LogColor="Lime" />
-						<RunTo X="-138.8919" Y="379.5437" Z="-40.60999" />
-					<CustomBehavior File="MyCTM" X="-147.0043" Y="386.6589" Z="-38.87302" />
-					<CustomBehavior File="MyCTM" X="-180.2254" Y="389.5405" Z="-36.40934" />
-					<CustomBehavior File="MyCTM" X="-212.7889" Y="387.0172" Z="-38.75781" />
-					<CustomBehavior File="MyCTM" X="-213.1698" Y="378.6604" Z="-38.795" />
+						<RunTo X="-228.859" Y="46.1018" Z="-46.0186" />
+					<CustomBehavior File="MyCTM" X="-228.0997" Y="40.38066" Z="-46.0186" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="-6622.94" Y="-3766.851" Z="266.7042" />
+						<RunTo X="-6066.36" Y="-2954.85" Z="209.772" />	
 				</If>		
 					
 		<While Condition="true" >									  
 				<If Condition="Me.ZoneId == 3" >														 
-					<If Condition="Me.X &gt; -6642.138 &amp;&amp; Me.X &lt; -6618 &amp;&amp; Me.Y &lt; -3747.672 &amp;&amp; Me.Y &gt; -3775.467" >
+					<If Condition="Me.X &gt; -6166 &amp;&amp; Me.X &lt; -5966 &amp;&amp; Me.Y &lt; -2854 &amp;&amp; Me.Y &gt; -3054" >
 						<If Condition="Me.Level &gt;= 37" >
 							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 								Text="**********RAF Character - This character has reached the appropriate level to run Stratholme. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
 						</If>
 						<CustomBehavior File="WaitTimer" WaitTime="10000" />
-						<CustomBehavior File="MyCTM" X="-6617.781" Y="-3763.264" Z="265.8623" />
+						<CustomBehavior File="MyCTM" X="-6061.246" Y="-2954.784" Z="209.7705" />
 						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="15000" />
 						<If Condition="Me.ZoneId == 1337">
+								<RunTo X="-228.859" Y="46.1018" Z="-46.0186" />
 							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 								Text="RAF Character - Press continue on the level 90 first, then press continue on this window." Title="WARNING" />
 						</If>
@@ -149,40 +151,44 @@
 
                                <!-- uldaman dungeon script -->
 				<If Condition="Me.ZoneId == 1337">
-						<RunTo X="-212.0924" Y="390.9376" Z="-39.20156" />
-					<CustomBehavior File="Message" Text="Waiting 60 seconds, entrance." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="60000" />
-					
-						<RunTo X="-181.3049" Y="389.3813" Z="-36.40333" />
-						<RunTo X="-175.4927" Y="393.1555" Z="-36.42303" />
-					<CustomBehavior File="Message" Text="Waiting 120 seconds, 1 of 6." LogColor="Lime" />	
+						<RunTo X="-228.8112" Y="62.31809" Z="-46.03762" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 1 of 3." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-					<RunTo X="-175.6276" Y="384.5227" Z="-36.42303" />
-						<CustomBehavior File="Message" Text="Waiting 120 seconds, 2 of 6." LogColor="Lime" />	
+					<RunTo X="-229.1085" Y="69.45535" Z="-46.03762" />
+						<CustomBehavior File="Message" Text="Waiting 120 seconds, 2 of 3." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-175.4927" Y="393.1555" Z="-36.42303" />
-					<CustomBehavior File="Message" Text="Waiting 120 seconds, 3 of 6." LogColor="Lime" />	
+						<RunTo X="-218.4532" Y="60.95916" Z="-46.03762" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 3 of 3." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-					<RunTo X="-175.6276" Y="384.5227" Z="-36.42303" />
-						<CustomBehavior File="Message" Text="Waiting 120 seconds, 4 of 6." LogColor="Lime" />	
+					
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="30" AllowCombat="false">
+						<Hotspot X="-233.8912" Y="56.25757" Z="-46.03762" />
+						<Hotspot X="-234.1756" Y="63.72562" Z="-46.03762" />
+					</CustomBehavior>
+					
+						<RunTo X="-228.2517" Y="60.37064" Z="-46.03704" />
+					<CustomBehavior File="RunMacro" Macro="/Dance" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 1 of 3." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-175.4927" Y="393.1555" Z="-36.42303" />
-					<CustomBehavior File="Message" Text="Waiting 120 seconds, 5 of 6." LogColor="Lime" />	
+						<RunTo X="-228.1385" Y="54.84428" Z="-46.03704" />
+					<CustomBehavior File="RunMacro" Macro="/Dance" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 2 of 3." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-					<RunTo X="-175.6276" Y="384.5227" Z="-36.42303" />
-						<CustomBehavior File="Message" Text="Waiting 60 seconds, 6 of 6." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="60000" />
-										
-						<RunTo X="-181.3049" Y="389.3813" Z="-36.40333" />
-					<CustomBehavior File="MyCTM" X="-213.0343" Y="390.1713" Z="-39.20223" />
-					<CustomBehavior File="MyCTM" X="-213.1698" Y="378.6604" Z="-38.795" />
+						<RunTo X="-228.2517" Y="60.37064" Z="-46.03704" />
+					<CustomBehavior File="RunMacro" Macro="/Dance" />
+					<CustomBehavior File="Message" Text="Waiting 90 seconds, 1 of 3." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="90000" />
+					
+					<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Lime" />
+						<RunTo X="-228.859" Y="46.1018" Z="-46.0186" />
+					<CustomBehavior File="MyCTM" X="-228.0997" Y="40.38066" Z="-46.0186" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
-						<RunTo X="-6619.97" Y="-3765.74" Z="266.309" />
+						<RunTo X="-6066.36" Y="-2954.85" Z="209.772" />
 				</If>		
 		</While>	
 	</QuestOrder>
