@@ -242,27 +242,19 @@
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />
 					<If Condition="Me.ZoneId == 3483" >
-							<RunTo X="-703.2177" Y="2730.714" Z="94.73342" />
-							<RunTo X="-702.0753" Y="2713.297" Z="94.73727" />
-							<RunTo X="-709.7063" Y="2712.662" Z="94.72071" />
-							<RunTo X="-709.0151" Y="2695.506" Z="94.22942" />
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Fallesh Sunfallow" Entry="18997" Type="Repair" X="-587.4686" Y="4171.818" Z="65.9973" />
+								<Vendor Name="Humphry" Entry="16823" Type="Repair" X="-717.3172" Y="2607.582" Z="91.01124" />
 							</Vendors>
 						</SetVendor>						
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox   X="-598.4332" Y="4152.558" Z="65.41927" />
+								<Mailbox  X="-706.4096" Y="2697.286" Z="94.34798" />
 							</Mailboxes>
 						</SetMailbox>			
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
-							<RunTo X="-703.426" Y="2632.902" Z="90.6642" />
 						<CustomBehavior File="ForcedMount" MountType="Flying" />
-						<CustomBehavior File="FlyTo" X="-565.1251" Y="4131.472" Z="132.8009" />
-						<CustomBehavior File="MyCTM" X="-414.8417" Y="3173.668" Z="146.276" />
-						<CustomBehavior File="MyCTM" X="-342.9847" Y="3055.218" Z="72.97162" />
-						<CustomBehavior File="MyCTM" X="-282.0337" Y="3131.084" Z="46.1519" />
+						<CustomBehavior File="FlyTo" X="-282.0337" Y="3131.084" Z="46.1519" />
 						<CustomBehavior File="MyCTM" X="-302.5596" Y="3162.814" Z="31.72397" />
 						<CustomBehavior File="ForcedDismount" />
 						<CustomBehavior File="Message" Text="I've reached Hellfire Ramparts." LogColor="Lime" />

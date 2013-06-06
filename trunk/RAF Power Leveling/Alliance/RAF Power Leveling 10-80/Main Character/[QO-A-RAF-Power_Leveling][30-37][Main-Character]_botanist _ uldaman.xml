@@ -163,6 +163,7 @@
 		<While Condition="true" >									  
 				<If Condition="Me.ZoneId == 3" >														 
 					<If Condition="Me.X &gt; -6166 &amp;&amp; Me.X &lt; -5966 &amp;&amp; Me.Y &lt; -2854 &amp;&amp; Me.Y &gt; -3054" >
+							<RunTo X="-6066.36" Y="-2954.85" Z="209.772" />
 						<CustomBehavior File="Message" Text="I am resetting the instance." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />				
 						<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
@@ -357,14 +358,9 @@
 				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
 								
-							<CustomBehavior File="FlyTo" X="-6609.511" Y="-3694.632" Z="265.8924" />
-							<CustomBehavior File="ForcedDismount" />
-							<CustomBehavior File="MyCTM" X="-6610.661" Y="-3704.972" Z="267.4866" />
-							<CustomBehavior File="MyCTM" X="-6616.192" Y="-3718.713" Z="268.899" />
-							<CustomBehavior File="MyCTM" X="-6630.354" Y="-3723.031" Z="267.4555" />
-							<CustomBehavior File="MyCTM" X="-6635.766" Y="-3737.958" Z="265.2828" />
-							<CustomBehavior File="MyCTM" X="-6635.251" Y="-3761.43" Z="265.876" />
-							<CustomBehavior File="MyCTM" X="-6619.671" Y="-3766.153" Z="266.3805" />
+						<CustomBehavior File="FlyTo" X="-6091.437" Y="-3185.512" Z="256.2193" /> 		
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-6066.36" Y="-2954.85" Z="209.772" />
 					</If>
 					<If Condition="Me.ZoneId == 1337">
 						<CustomBehavior File="Message" Text="My gear is broke and my hearth is on cool down. You need to repair my gear. Stopping the bot" LogColor="Yellow" />
