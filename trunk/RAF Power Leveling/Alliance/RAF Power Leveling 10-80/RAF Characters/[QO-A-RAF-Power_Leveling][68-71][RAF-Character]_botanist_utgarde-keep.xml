@@ -137,7 +137,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="60000" />
 					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="18" AllowCombat="false">	
 						<Hotspot X="194.3203" Y="-78.8417" Z="18.61516" />
-						<Hotspot X="190.4419" Y="-67.77535" Z="18.61516" />	<!-- first pull -->
+						<Hotspot X="190.4419" Y="-67.77535" Z="18.61516" />	<!-- first pull entrance-->
 					</CustomBehavior>	
 										
 						<RunTo X="375.465" Y="52.95836" Z="24.67697" />
@@ -145,7 +145,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="80000" />
 					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="22" AllowCombat="false">	
 						<Hotspot X="386.7191" Y="75.98532" Z="30.74272" />
-						<Hotspot X="376.0556" Y="77.98386" Z="30.74272" />	<!-- 1st boss -->
+						<Hotspot X="376.0556" Y="77.98386" Z="30.74272" />	<!-- holding pens -->
 					</CustomBehavior>
 
 						<RunTo X="183.1574" Y="247.8867" Z="42.86717" />
@@ -153,26 +153,24 @@
 					<CustomBehavior File="WaitTimer" WaitTime="115000" />
 					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="18" AllowCombat="false">	
 						<Hotspot X="166.0811" Y="242.9787" Z="42.86717" />
-						<Hotspot X="173.7959" Y="251.5173" Z="42.86717" />
+						<Hotspot X="173.7959" Y="251.5173" Z="42.86717" />	<!-- exit of 1st boss -->
 					</CustomBehavior>
-
+						<RunTo X="102.7919" Y="102.4629" Z="65.44128" />
+					<CustomBehavior File="Message" Text="Waiting 20 seconds for the booster to aggro the first mobs in the pull." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="20000" />	<!-- bottom of the stairs -->
+					
 						<RunTo X="145.6866" Y="65.94433" Z="109.0059" />	<!-- top of the stairs -->
-					<CustomBehavior File="Message" Text="Waiting 80 seconds, trash pull." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="80000" />
+					<CustomBehavior File="Message" Text="Waiting 50 seconds, trash pull." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="60000" />
 					
 						<RunTo X="49.92257" Y="-24.35106" Z="118.7753" />	<!-- 2nd boss -->
 					<CustomBehavior File="Message" Text="Waiting 50 seconds, 2nd boss." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="50000" />
-					<!--	<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="18" AllowCombat="false">	
-							<Hotspot X="166.0811" Y="242.9787" Z="42.86717" />
-							<Hotspot X="173.7959" Y="251.5173" Z="42.86717" />
-						</CustomBehavior>	-->
 
 						<RunTo X="165.5589" Y="-3.590013" Z="135.0026" />	<!-- left cubicle after 2nd boss -->
 					<CustomBehavior File="Message" Text="Waiting 105 seconds, trash pull." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="105000" />
-					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="18
-					" AllowCombat="false">	
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="20" AllowCombat="false">	
 						<Hotspot X="168.981" Y="2.993599" Z="135.1255" />
 						<Hotspot X="172.2151" Y="-6.65027" Z="134.9038" />
 					</CustomBehavior>
@@ -192,9 +190,9 @@
 						<RunTo X="168.4676" Y="-170.1549" Z="180.5022" />
 						<RunTo X="169.3422" Y="-202.3585" Z="180.4936" />
 						<RunTo X="210.28" Y="-273.1629" Z="180.4717" />	<!-- last -->
-					<CustomBehavior File="Message" Text="Waiting 10 seconds, last boss." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="10000" />
-					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="16" AllowCombat="false">	
+					<CustomBehavior File="Message" Text="Waiting 2 seconds, last boss." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="20" AllowCombat="false">	
 						<Hotspot X="206.5077" Y="-274.7555" Z="180.4788" />
 						<Hotspot X="213.3191" Y="-270.2023" Z="180.4863" />
 					</CustomBehavior>

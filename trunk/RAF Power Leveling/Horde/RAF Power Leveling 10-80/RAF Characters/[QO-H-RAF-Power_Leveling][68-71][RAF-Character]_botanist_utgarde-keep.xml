@@ -147,46 +147,72 @@
 				</If>
 
 				<If Condition="Me.ZoneId == 206" >
-						<RunTo X="157.878" Y="-84.7025" Z="12.55168" />
-					<CustomBehavior File="Message" Text="Waiting 115 seconds, entrance." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="115000" />
-					
-						<RunTo X="305.3908" Y="-36.50899" Z="24.67863" />
-					<CustomBehavior File="Message" Text="Waiting 80 seconds, first room." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="80000" />
-					
-						<RunTo X="378.1773" Y="95.68344" Z="30.74204" />
-					<CustomBehavior File="Message" Text="Waiting 125 seconds, dragons." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="125000" />
-					
-						<RunTo X="287.7059" Y="240.436" Z="36.80545" />
-					<CustomBehavior File="Message" Text="Waiting 125 seconds, first boss." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="125000" />
-					
-						<RunTo  X="138.1819" Y="270.0242" Z="42.86707" />
-					<CustomBehavior File="Message" Text="Waiting 170 seconds, ghouls." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="170000" />
-					
-						<RunTo X="35.30883" Y="3.265961" Z="115.0294" />
-					<CustomBehavior File="Message" Text="Waiting 40 seconds, before 2nd boss." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="40000" />
-					
-						<RunTo X="222.8262" Y="-12.58687" Z="135.2041" />
-					<CustomBehavior File="Message" Text="Waiting 30 seconds, bottom of the stairs." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="30000" />
+						<RunTo X="175.0668" Y="-79.22336" Z="12.55175" />
+					<CustomBehavior File="Message" Text="Waiting 60 seconds, entrance." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="60000" />
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="18" AllowCombat="false">	
+						<Hotspot X="194.3203" Y="-78.8417" Z="18.61516" />
+						<Hotspot X="190.4419" Y="-67.77535" Z="18.61516" />	<!-- first pull entrance-->
+					</CustomBehavior>	
 										
-						<RunTo X="232.8656" Y="5.11948" Z="178.5074" />
-					<CustomBehavior File="Message" Text="Waiting 40 seconds, before balcony." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="40000" />
+						<RunTo X="375.465" Y="52.95836" Z="24.67697" />
+					<CustomBehavior File="Message" Text="Waiting 80 seconds, 1st boss." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="80000" />
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="22" AllowCombat="false">	
+						<Hotspot X="386.7191" Y="75.98532" Z="30.74272" />
+						<Hotspot X="376.0556" Y="77.98386" Z="30.74272" />	<!-- holding pens -->
+					</CustomBehavior>
+
+						<RunTo X="183.1574" Y="247.8867" Z="42.86717" />
+					<CustomBehavior File="Message" Text="Waiting 115 seconds, trash pull." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="115000" />
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="18" AllowCombat="false">	
+						<Hotspot X="166.0811" Y="242.9787" Z="42.86717" />
+						<Hotspot X="173.7959" Y="251.5173" Z="42.86717" />	<!-- exit of 1st boss -->
+					</CustomBehavior>
+						<RunTo X="102.7919" Y="102.4629" Z="65.44128" />
+					<CustomBehavior File="Message" Text="Waiting 20 seconds for the booster to aggro the first mobs in the pull." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="20000" />	<!-- bottom of the stairs -->
 					
-						<RunTo X="273.6007" Y="-151.6492" Z="190.1116" />
-					<CustomBehavior File="Message" Text="Waiting 35 seconds, balcony." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="35000" />
+						<RunTo X="145.6866" Y="65.94433" Z="109.0059" />	<!-- top of the stairs -->
+					<CustomBehavior File="Message" Text="Waiting 50 seconds, trash pull." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="60000" />
 					
-						<RunTo X="181.4948" Y="-223.9972" Z="180.4934" />
-					<CustomBehavior File="Message" Text="Waiting 100 seconds, last boss." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="100000" />
-															
+						<RunTo X="49.92257" Y="-24.35106" Z="118.7753" />	<!-- 2nd boss -->
+					<CustomBehavior File="Message" Text="Waiting 50 seconds, 2nd boss." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="50000" />
+
+						<RunTo X="165.5589" Y="-3.590013" Z="135.0026" />	<!-- left cubicle after 2nd boss -->
+					<CustomBehavior File="Message" Text="Waiting 105 seconds, trash pull." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="105000" />
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="20" AllowCombat="false">	
+						<Hotspot X="168.981" Y="2.993599" Z="135.1255" />
+						<Hotspot X="172.2151" Y="-6.65027" Z="134.9038" />
+					</CustomBehavior>
+
+						<RunTo X="200.1592" Y="-6.564821" Z="135.0571" />
+						<RunTo X="219.4429" Y="3.51626" Z="135.2001" />
+						<RunTo X="227.7422" Y="-7.443827" Z="135.2001" />
+						<RunTo X="183.9118" Y="-24.71114" Z="156.8799" />
+						<RunTo X="175.6857" Y="-10.21906" Z="156.8193" />
+						<RunTo X="215.0596" Y="8.687095" Z="178.5074" />
+						<RunTo X="231.9193" Y="9.101593" Z="178.5074" />
+						<RunTo X="243.8058" Y="-26.60386" Z="178.5031" />
+						<RunTo X="260.3194" Y="-75.29594" Z="190.448" />
+						<RunTo X="275.6629" Y="-143.3564" Z="190.3055" />
+						<RunTo X="233.9177" Y="-161.5636" Z="190.2775" />
+						<RunTo X="196.9321" Y="-157.2891" Z="189.9957" />
+						<RunTo X="168.4676" Y="-170.1549" Z="180.5022" />
+						<RunTo X="169.3422" Y="-202.3585" Z="180.4936" />
+						<RunTo X="210.28" Y="-273.1629" Z="180.4717" />	<!-- last -->
+					<CustomBehavior File="Message" Text="Waiting 2 seconds, last boss." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="20" AllowCombat="false">	
+						<Hotspot X="206.5077" Y="-274.7555" Z="180.4788" />
+						<Hotspot X="213.3191" Y="-270.2023" Z="180.4863" />
+					</CustomBehavior>
+
+					<CustomBehavior File="Message" Text="Leaving the instance so I can reset it." LogColor="Lime" />	
 						<Runto X="142.596" Y="-127.7582" Z="169.8036" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
                     <CustomBehavior File="Message" Text="I'm jumping off" LogColor="Lime" />					
@@ -200,10 +226,12 @@
 					<CustomBehavior File="MyCTM" X="182.3466" Y="-158.4426" Z="10.8668" />
 					<CustomBehavior File="MyCTM" X="209.9772" Y="-138.8611" Z="8.918727" />
 						<Runto X="195.6414" Y="-119.478" Z="8.71515" />
-						
-						<Runto X="157.878" Y="-84.7025" Z="12.55168" />	
-					<CustomBehavior File="GoThruPortal" X="147.5142" Y="-87.84807" Z="12.55168" />
-						<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+					<CustomBehavior File="Message" Text="Waiting 15 seconds." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />	
+					<CustomBehavior File="MyCTM" X="147.53" Y="-88.8372" Z="12.55168" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+					<CustomBehavior File="Message" Text="I'm outside Utgarde Keep's portal." LogColor="Lime" />
+						<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />
 				</If>
 				
 		</While>	
