@@ -240,10 +240,9 @@
 						<Hotspot X="321.8741" Y="174.6963" Z="9.615835" />
 						<Hotspot X="327.3043" Y="154.2247" Z="9.510319" />
 						<Hotspot X="328.3274" Y="82.14758" Z="9.61447" />
-						<Hotspot X="350.3888" Y="54.31242" Z="9.614555" />
-						<Hotspot X="354.04" Y="43.56761" Z="9.601658" />
-						<Hotspot X="349.2371" Y="43.16278" Z="9.621737" />
-						<Hotspot X="355.5578" Y="50.29951" Z="9.602414" />
+						<Hotspot X="305.8962" Y="62.14062" Z="9.616186" />
+						<Hotspot X="342.621" Y="63.45884" Z="9.615344" />
+						<Hotspot X="327.3102" Y="63.19853" Z="9.61394" />
 					</CustomBehavior>
 					<CustomBehavior File="Message" Text="End of third pull, the lab hall." LogColor="Lime" />
 					
