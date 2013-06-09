@@ -195,53 +195,32 @@
 					</CustomBehavior>
 						<RunTo X="-1215.216" Y="1536.974" Z="68.56582" />
 						<RunTo X="-1237.057" Y="1539.279" Z="90.27995" />
+						<RunTo X="-1236.788" Y="1541.511" Z="90.32333" />
 					
-					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="-1238.809" Y="1557.924" Z="91.08931" />
-						<Hotspot X="-1242.969" Y="1574.538" Z="91.23794" />
-						<Hotspot X="-1260.035" Y="1596.813" Z="92.04102" />
-						<Hotspot X="-1284.316" Y="1595.588" Z="91.77401" />
-						<Hotspot X="-1299.571" Y="1586.884" Z="91.78144" />
-						<Hotspot X="-1321.124" Y="1615.272" Z="91.22758" />
-						<Hotspot X="-1298.625" Y="1638.056" Z="91.74671" />
-						<Hotspot X="-1272.15" Y="1622.704" Z="91.68563" />
-						<Hotspot X="-1271.455" Y="1641.949" Z="91.63247" />
-						<Hotspot X="-1244.25" Y="1655.388" Z="92.81403" />
-						<Hotspot X="-1211.828" Y="1672.876" Z="93.1722" />
-						<Hotspot X="-1155.386" Y="1689.679" Z="91.45639" />
-						<Hotspot X="-1121.526" Y="1718.762" Z="89.37278" />
-						<Hotspot X="-1168.163" Y="1693.925" Z="91.58215" />
-						<Hotspot X="-1225.036" Y="1665.75" Z="92.59198" />
-						<Hotspot X="-1273.217" Y="1639.36" Z="91.65884" />
-						<Hotspot X="-1276.763" Y="1601.766" Z="91.77319" />
-						<Hotspot X="-1250.914" Y="1585.198" Z="91.15171" />
-						<Hotspot X="-1238.87" Y="1560.939" Z="91.03387" />
-						<Hotspot X="-1236.638" Y="1537.886" Z="90.38715" />
-						<Hotspot X="-1251.175" Y="1531.216" Z="88.83691" />
-						<Hotspot X="-1250.279" Y="1511.556" Z="82.56142" />
-						<Hotspot X="-1232.776" Y="1501.014" Z="74.89286" />
-						<Hotspot X="-1217.741" Y="1511.256" Z="68.53267" />
-						<Hotspot X="-1218.594" Y="1534.003" Z="68.51074" />
-						<Hotspot X="-1208.956" Y="1541.221" Z="68.53452" />
-						<Hotspot X="-1171.665" Y="1495.247" Z="68.45526" />
-						<Hotspot X="-1191.434" Y="1455.46" Z="68.45637" />
-						<Hotspot X="-1231.531" Y="1470.278" Z="68.56507" />
-						<Hotspot X="-1293.197" Y="1531.014" Z="68.59032" />
-						<Hotspot X="-1246.25" Y="1589.429" Z="68.50616" />
-						<Hotspot X="-1255.183" Y="1658.751" Z="67.60294" />
-						<Hotspot X="-1287.159" Y="1673.426" Z="68.73661" />
-						<Hotspot X="-1328.341" Y="1663.266" Z="68.82839" />
-						<Hotspot X="-1306.088" Y="1670.035" Z="65.65419" />
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-1241.226" Y="1570.434" Z="91.27397" />
+						<Hotspot X="-1258.31" Y="1596.797" Z="91.95538" />
+						<Hotspot X="-1261.923" Y="1594.38" Z="92.16961" />
+						<Hotspot X="-1282.059" Y="1597.541" Z="91.75027" />
+						<Hotspot X="-1297.189" Y="1589.679" Z="91.77014" />
+						<Hotspot X="-1316.828" Y="1616.842" Z="91.7486" />
+						<Hotspot X="-1301.179" Y="1635.782" Z="91.74712" />
+						<Hotspot X="-1278.879" Y="1635.432" Z="91.70171" />
+						<Hotspot X="-1269.402" Y="1643.128" Z="91.59703" />
+						<Hotspot X="-1166.541" Y="1700.283" Z="91.48155" />
+						<Hotspot X="-1122.836" Y="1719.42" Z="89.29845" />
+						<Hotspot X="-1165.955" Y="1694.258" Z="91.59409" />
+						<Hotspot X="-1279.577" Y="1637.123" Z="91.69607" />
+						<Hotspot X="-1279.723" Y="1636.52" Z="91.69985" />
+						<Hotspot X="-1295.098" Y="1632.454" Z="91.74713" />
+						<Hotspot X="-1311.306" Y="1641.548" Z="91.73354" />
+						<Hotspot X="-1331.473" Y="1667.943" Z="93.14402" />
+						<Hotspot X="-1349.314" Y="1687.574" Z="89.10004" />
+						<Hotspot X="-1329.379" Y="1665.191" Z="93.14527" />
 					</CustomBehavior>
-						<RunTo X="-1215.216" Y="1536.974" Z="68.56582" />
-						<RunTo X="-1237.057" Y="1539.279" Z="90.27995" />
-						<RunTo X="-1298.58" Y="1613.173" Z="91.75965" />
+						<RunTo X="-1329.379" Y="1665.191" Z="93.14527" />
 						
 					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="-1238.526" Y="1660.459" Z="92.54385" />
-						<Hotspot X="-1285.868" Y="1632.219" Z="91.74126" />
-						<Hotspot X="-1311.107" Y="1637.4" Z="91.74857" />
-						<Hotspot X="-1318.541" Y="1651.91" Z="91.62624" />
 						<Hotspot X="-1334.536" Y="1671.26" Z="92.72739" />
 						<Hotspot X="-1365.116" Y="1705.36" Z="83.60758" />
 						<Hotspot X="-1372.66" Y="1723.99" Z="82.8857" />
@@ -264,6 +243,7 @@
 						<RunTo X="-1319.639" Y="1648.569" Z="91.65906" />
 					<CustomBehavior File="MyCTM" X="-1353.296" Y="1645.285" Z="68.42854" />	
 					<CustomBehavior File="Message" Text="6 minute time out to avoid getting instance locked." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<CustomBehavior File="RunMacro" Macro="/dance" />
 					<CustomBehavior File="WaitTimer" WaitTime="360000" />
 					<CustomBehavior File="Message" Text="I have cleared the instance. Checking my empty bag slots and gear durability." LogColor="Lime" />

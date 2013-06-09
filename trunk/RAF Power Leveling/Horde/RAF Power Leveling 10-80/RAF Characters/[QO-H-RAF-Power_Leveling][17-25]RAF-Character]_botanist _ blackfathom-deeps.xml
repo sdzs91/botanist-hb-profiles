@@ -772,12 +772,8 @@
 
                                <!-- blackfathom deeps dungeon script -->
 				<If Condition="Me.MapId == 48">
-					<CustomBehavior File="Message" Text="Waiting 20 seconds, entrance." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="20000" />
-					
-						<RunTo X="-207.5463" Y="40.26146" Z="-52.31157" />
-					<CustomBehavior File="Message" Text="Waiting 60 seconds, before first water pool." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="60000" />
+					<CustomBehavior File="Message" Text="Waiting 80 seconds, entrance." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="80000" />
 						
 						<RunTo X="-264.4145" Y="67.30161" Z="-56.14176" />
 					<CustomBehavior File="Message" Text="Waiting 70 seconds, first water pool." LogColor="Lime" />	
