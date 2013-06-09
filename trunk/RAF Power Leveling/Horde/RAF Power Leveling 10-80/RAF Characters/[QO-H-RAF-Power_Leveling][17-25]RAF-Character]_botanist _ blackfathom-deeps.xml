@@ -760,9 +760,10 @@
 								Text="**********RAF Character - This character has reached the appropriate level to run Razorfen Kraul. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
 						</If>
 						<CustomBehavior File="WaitTimer" WaitTime="10000" />
-						<CustomBehavior File="MyCTM" X="4250.387" Y="749.9616" Z="-23.01888" />
+						<CustomBehavior File="MyCTM" X="4250.304" Y="749.9905" Z="-23.02605" />
 						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="15000" />
+							<RunTo X="-150.234" Y="106.594" Z="-39.779" />
 						<If Condition="Me.MapId == 48">
 							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 								Text="RAF Character - Press continue on the level 90 first, then press continue on this window." Title="WARNING" />
@@ -807,36 +808,18 @@
 					<CustomBehavior File="Message" Text="Waiting 180 seconds, 6 of 6." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="180000" />
 					
+					<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Lime" />
 					<CustomBehavior File="MyCTM" X="-333.6179" Y="84.05681" Z="-59.26818" />
 					<CustomBehavior File="MyCTM" X="-316.8011" Y="64.90762" Z="-59.95131" />
 					<CustomBehavior File="MyCTM" X="-296.152" Y="62.47462" Z="-59.95131" />
 					<CustomBehavior File="MyCTM" X="-270.3964" Y="74.26224" Z="-57.44088" />
 					<CustomBehavior File="MyCTM" X="-260.3348" Y="49.62009" Z="-55.17484" />
 					<CustomBehavior File="MyCTM" X="-251.2602" Y="36.21692" Z="-55.31155" />
-						
-	
-					<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Lime" />
-						<If Condition="Me.X &gt; -282.412" >
-								<RunTo X="-150.234" Y="106.594" Z="-39.77901" />
-							<CustomBehavior File="Message" Text="Waiting 25 seconds." LogColor="Lime" />	
-							<CustomBehavior File="WaitTimer" WaitTime="25000" />	
-							<CustomBehavior File="MyCTM" X="-150.9552" Y="114.0562" Z="-40.8544" />
-							<CustomBehavior File="WaitTimer" WaitTime="15000" />
-								<RunTo X="4248.14" Y="745.047" Z="-24.4963" />
-						</If>
-						<If Condition="Me.X &lt; -282.412" >
-							<CustomBehavior File="Message" Text="I am above the jumps, long run out." LogColor="Lime" />
-								<RunTo X="-441.8571" Y="201.1727" Z="-52.71484" />
-								<RunTo X="-407.3841" Y="169.4813" Z="-56.91191" />
-								<RunTo X="-288.5186" Y="82.56316" Z="-52.22119" />	
-							<CustomBehavior File="MyCTM" X="-240.8185" Y="34.64311" Z="-55.06627" />
-								<RunTo X="-150.234" Y="106.594" Z="-39.77901" />
-							<CustomBehavior File="Message" Text="Waiting 25 seconds." LogColor="Lime" />	
-							<CustomBehavior File="WaitTimer" WaitTime="25000" />	
-							<CustomBehavior File="MyCTM" X="-150.9552" Y="114.0562" Z="-40.8544" />
-							<CustomBehavior File="WaitTimer" WaitTime="15000" />
-								<RunTo X="4248.14" Y="745.047" Z="-24.4963" />
-						</If>
+						<RunTo X="-245.6908" Y="31.08263" Z="-55.24879" />
+						<RunTo X="-149.6901" Y="107.1229" Z="-39.62103" />
+					<CustomBehavior File="MyCTM" X="-149.7285" Y="113.4777" Z="-40.73384" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<RunTo X="4248.14" Y="745.047" Z="-24.4963" />
 				</If>		
 		
 		</While>	

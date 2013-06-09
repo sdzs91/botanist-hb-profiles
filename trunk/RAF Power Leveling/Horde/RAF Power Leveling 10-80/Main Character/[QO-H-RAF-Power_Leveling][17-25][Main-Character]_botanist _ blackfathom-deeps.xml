@@ -176,18 +176,22 @@
 				<If Condition="Me.MapId == 48">
 					<If Condition="Me.X &gt; -352.5026" >
 						<CustomBehavior File="Message" Text="You started the bot with me in Blackfathom Deeps. I am near the entrance, running out to reset." LogColor="Lime" />
-							<RunTo X="-357.0194" Y="74.93022" Z="-57.96977" />
-						<CustomBehavior File="MyCTM" X="-288.3418" Y="61.21531" Z="-59.8075" />	
-						<CustomBehavior File="MyCTM" X="-268.3517" Y="32.59225" Z="-58.44428" />
 							<RunTo X="-245.6908" Y="31.08263" Z="-55.24879" />
+							<RunTo X="-149.6901" Y="107.1229" Z="-39.62103" />
+						<CustomBehavior File="MyCTM" X="-149.7285" Y="113.4777" Z="-40.73384" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />
+							<RunTo X="4248.14" Y="745.047" Z="-24.4963" />
 					</If>
-						<CustomBehavior File="WaitTimer" WaitTime="5000" />
 					<If Condition="Me.X &lt; -352.5026" >
-						<CustomBehavior File="Message" Text="You started the bot with me in Blackfathom Deeps. I am above the jumps, long run out." LogColor="Lime" />
+						<CustomBehavior File="Message" Text="I am above the jumps." LogColor="Lime" />
 							<RunTo X="-288.5186" Y="82.56316" Z="-52.22119" />
 						<CustomBehavior File="MyCTM" X="-288.3418" Y="61.21531" Z="-59.8075" />	
 						<CustomBehavior File="MyCTM" X="-268.3517" Y="32.59225" Z="-58.44428" />
 							<RunTo X="-245.6908" Y="31.08263" Z="-55.24879" />
+							<RunTo X="-149.6901" Y="107.1229" Z="-39.62103" />
+						<CustomBehavior File="MyCTM" X="-149.7285" Y="113.4777" Z="-40.73384" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />
+							<RunTo X="4248.14" Y="745.047" Z="-24.4963" />
 					</If>
 				</If>
 				
@@ -202,7 +206,7 @@
 						<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />	
 						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
 						<CustomBehavior File="Message" Text="I have reset Blackfathom Deeps." LogColor="Lime" />
-						<CustomBehavior File="MyCTM" X="4250.387" Y="749.9616" Z="-23.01888" />
+						<CustomBehavior File="MyCTM" X="4250.304" Y="749.9905" Z="-23.02605" />
 						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="15000" />
 							<RunTo X="-150.234" Y="106.594" Z="-39.779" />
@@ -237,14 +241,19 @@
 					</CustomBehavior>
 						<RunTo X="-189.6269" Y="72.41666" Z="-48.64544" />
 						
-						<RunTo X="-182.3596" Y="55.27651" Z="-50.09306" />
-						<RunTo X="-250.094" Y="32.27918" Z="-55.30715" />
-						<RunTo X="-282.1291" Y="49.40219" Z="-67.05437" />
-						<RunTo X="-333.7641" Y="77.34957" Z="-59.8075" />
-						<RunTo X="-325.3813" Y="100.2552" Z="-58.7691" />
-						<RunTo X="-312.2584" Y="98.58179" Z="-58.87408" />
-						<RunTo X="-332.739" Y="98.72032" Z="-59.08542" />
-						<RunTo X="-334.3056" Y="83.15538" Z="-59.29288" />
+						<RunTo X="-266.9157" Y="33.50784" Z="-58.06705" />
+						
+					<CustomBehavior File="MyCTM" X="-281.1979" Y="46.98925" Z="-67.0153" />	
+					<CustomBehavior File="MyCTM" X="-310.6942" Y="63.39418" Z="-59.80751" />
+					<CustomBehavior File="MyCTM" X="-328.114" Y="70.66751" Z="-59.8075" />
+					<CustomBehavior File="MyCTM" X="-335.3923" Y="81.74883" Z="-59.79328" />
+					
+						<RunTo X="-330.1867" Y="95.93851" Z="-59.08392" />
+						<RunTo X="-319.9561" Y="102.2125" Z="-58.65718" />
+						<RunTo X="-311.1952" Y="95.12193" Z="-58.83924" />
+						<RunTo X="-324.9161" Y="101.2409" Z="-58.74074" />
+						<RunTo X="-331.5215" Y="94.29758" Z="-59.17643" />
+						<RunTo X="-333.6324" Y="82.30185" Z="-59.43855" />
 						
 					<CustomBehavior File="MyCTM" X="-356.6548" Y="73.96896" Z="-58.16689" />
 					<CustomBehavior File="MyCTM" X="-354.3861" Y="85.91518" Z="-50.8546" />
@@ -553,13 +562,15 @@
 						<Hotspot X="-412.8685" Y="193.4555" Z="-53.78661" />	
 						<Hotspot X="-399.4461" Y="178.7883" Z="-57.00768" />
 						<Hotspot X="-381.2211" Y="143.3321" Z="-54.82272" />
+						<Hotspot X="-361.9193" Y="139.1169" Z="-51.31935" />
+					<!--	<Hotspot X="-340.6038" Y="129.2941" Z="-50.00213" />
+						<Hotspot X="-319.1292" Y="124.7094" Z="-49.0629" />
+						<Hotspot X="-338.5668" Y="119.8697" Z="-50.67649" />	-->
 					</CustomBehavior>
-						<RunTo X="-381.2211" Y="143.3321" Z="-54.82272" />	
-					<CustomBehavior File="MyCTM" X="-341.1174" Y="124.0939" Z="-50.51524" />
-					<CustomBehavior File="MyCTM" X="-302.2415" Y="114.797" Z="-52.65873" />
+					<CustomBehavior File="Message" Text="Instance cleared, running out to reset." LogColor="Lime" />
+						<RunTo X="-305.9346" Y="115.4362" Z="-51.89851" />	
 					<CustomBehavior File="MyCTM" X="-288.6588" Y="80.51344" Z="-52.31723" />
-					<CustomBehavior File="MyCTM" X="-245.6908" Y="31.08263" Z="-55.24879" />	
-						
+					<CustomBehavior File="MyCTM" X="-245.6908" Y="31.08263" Z="-55.24879" />
 				</If>								   
 								
 		        <If Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 
@@ -645,20 +656,22 @@
 					</If>
 				</If>
 				<If Condition="Me.MapId == 48">
-					<If Condition="Me.X &gt; -282.412" >
-							<RunTo X="-150.234" Y="106.594" Z="-39.77901" />
-						<CustomBehavior File="MyCTM" X="-150.9552" Y="114.0562" Z="-40.8544" />
-						<CustomBehavior File="WaitTimer" WaitTime="15000" />
+					<If Condition="Me.X &gt; -352.5026" >
+							<RunTo X="-245.6908" Y="31.08263" Z="-55.24879" />
+							<RunTo X="-149.6901" Y="107.1229" Z="-39.62103" />
+						<CustomBehavior File="MyCTM" X="-149.7285" Y="113.4777" Z="-40.73384" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />
 							<RunTo X="4248.14" Y="745.047" Z="-24.4963" />
 					</If>
-						<CustomBehavior File="WaitTimer" WaitTime="5000" />
-					<If Condition="Me.X &lt; -282.412" >
-						<CustomBehavior File="Message" Text="I am above the jumps, long run out." LogColor="Lime" />
+					<If Condition="Me.X &lt; -352.5026" >
+						<CustomBehavior File="Message" Text="I am above the jumps." LogColor="Lime" />
 							<RunTo X="-288.5186" Y="82.56316" Z="-52.22119" />
-						<CustomBehavior File="MyCTM" X="-240.8185" Y="34.64311" Z="-55.06627" />
-							<RunTo X="-150.234" Y="106.594" Z="-39.77901" />
-						<CustomBehavior File="MyCTM" X="-150.9552" Y="114.0562" Z="-40.8544" />
-						<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<CustomBehavior File="MyCTM" X="-288.3418" Y="61.21531" Z="-59.8075" />	
+						<CustomBehavior File="MyCTM" X="-268.3517" Y="32.59225" Z="-58.44428" />
+							<RunTo X="-245.6908" Y="31.08263" Z="-55.24879" />
+							<RunTo X="-149.6901" Y="107.1229" Z="-39.62103" />
+						<CustomBehavior File="MyCTM" X="-149.7285" Y="113.4777" Z="-40.73384" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />
 							<RunTo X="4248.14" Y="745.047" Z="-24.4963" />
 					</If>
 				</If>		
