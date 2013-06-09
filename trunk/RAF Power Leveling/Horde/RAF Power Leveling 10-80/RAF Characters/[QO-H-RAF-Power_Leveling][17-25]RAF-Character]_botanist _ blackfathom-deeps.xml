@@ -805,8 +805,8 @@
 					<CustomBehavior File="WaitTimer" WaitTime="150000" />
 					
 						<RunTo X="-322.2383" Y="98.65414" Z="-58.67444" />
-					<CustomBehavior File="Message" Text="Waiting 180 seconds, 6 of 6." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="180000" />
+					<CustomBehavior File="Message" Text="Waiting 200 seconds, 6 of 6." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="200000" />
 					
 					<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Lime" />
 					<CustomBehavior File="MyCTM" X="-333.6179" Y="84.05681" Z="-59.26818" />
