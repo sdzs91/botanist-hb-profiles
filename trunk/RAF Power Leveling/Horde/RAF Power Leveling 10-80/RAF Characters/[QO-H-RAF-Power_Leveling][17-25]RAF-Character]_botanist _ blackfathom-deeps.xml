@@ -763,7 +763,7 @@
 						<CustomBehavior File="MyCTM" X="4250.304" Y="749.9905" Z="-23.02605" />
 						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="15000" />
-							<RunTo X="-150.234" Y="106.594" Z="-39.779" />
+							<RunTo X="-150.6137" Y="103.5056" Z="-40.39671" />
 						<If Condition="Me.MapId == 48">
 							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 								Text="RAF Character - Press continue on the level 90 first, then press continue on this window." Title="WARNING" />
