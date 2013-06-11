@@ -181,11 +181,11 @@
 				<If Condition="Me.ZoneId == 3562">
 					 <CustomBehavior File="UserSettings" LootMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" LogoutForInactivity="False" />
 				
-						<RunTo X="-1360.67" Y="1650.317" Z="68.43025" />
+						<RunTo X="-1360.688" Y="1650.664" Z="68.43818" />
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, entrance." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-1278.682" Y="1672.993" Z="68.63282" />
+						<RunTo X="-1342.816" Y="1640.156" Z="68.68669" />
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 1 of 5." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
@@ -193,22 +193,26 @@
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 2 of 5." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-1278.682" Y="1672.993" Z="68.63282" />
+						<RunTo X="-1349.791" Y="1654.5" Z="68.75284" />
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 3 of 5." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-1276.339" Y="1667.686" Z="68.77732" />
+						<RunTo X="-1351.504" Y="1646.688" Z="68.53915" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<CustomBehavior File="RunMacro" Macro="/dance" />	
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 4 of 5." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-1278.682" Y="1672.993" Z="68.63282" />
+						<RunTo X="-1353.464" Y="1648.266" Z="68.53889" />
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 5 of 5." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
 		
 						<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+					<CustomBehavior File="Message" Text="Adjustable 30 second timer.." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="30000" />	
 					<CustomBehavior File="MyCTM" X="-1358.9" Y="1635.161" Z="68.4994" />
-					<CustomBehavior File="WaitTimer" WaitTime="20000" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
 						<RunTo X="-363.436" Y="3078.43" Z="-15.00145" />
 				</If>	
 		</While>
