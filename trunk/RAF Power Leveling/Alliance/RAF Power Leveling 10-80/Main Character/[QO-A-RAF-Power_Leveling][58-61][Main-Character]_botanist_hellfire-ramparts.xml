@@ -227,8 +227,9 @@
 						<Hotspot X="-1379.411" Y="1712.988" Z="82.78085" />
 						<Hotspot X="-1345.286" Y="1685.677" Z="89.97701" />
 					</CustomBehavior>
-					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-						EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="17307"
+					<CustomBehavior File="TargetAndMoveToMob" MobId="17537" MoveWithinMaxRangeOfMob="1" WaitForNpcs="true" X="-1388.695" Y="1725.517" Z="82.21372" />
+				<!--	<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+						EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="17537"
 						EventX="-1409.63" EventY="1738.107" EventZ="81.07748"
 						MoveOutOfGroundEffectAuraId1="111111"
 						MoveAwayFromMobCastingSpellId1="111111"
@@ -236,16 +237,17 @@
 							<Safespots>
 								<Hotspot X="-1379.7" Y="1722.86" Z="82.64312" />
 							</Safespots>
-					</CustomBehavior>
+					</CustomBehavior>	-->
+						<RunTo X="-1423.524" Y="1741.323" Z="80.70603" />
 						<RunTo X="-1428.592" Y="1770.343" Z="81.96834" />	<!-- chest -->
 					<CustomBehavior File="InteractWith" MobId="185168" ObjectType="GameObject" X="-1429.80981" Y="1772.91589" Z="82.0765" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 						<RunTo X="-1319.639" Y="1648.569" Z="91.65906" />
 					<CustomBehavior File="MyCTM" X="-1353.296" Y="1645.285" Z="68.42854" />	
-					<CustomBehavior File="Message" Text="6 minute time out to avoid getting instance locked." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="4.5 minute time out to avoid getting instance locked." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<CustomBehavior File="RunMacro" Macro="/dance" />
-					<CustomBehavior File="WaitTimer" WaitTime="360000" />
+					<CustomBehavior File="WaitTimer" WaitTime="270000" />
 					<CustomBehavior File="Message" Text="I have cleared the instance. Checking my empty bag slots and gear durability." LogColor="Lime" />
 				</If>
 				
