@@ -53,11 +53,22 @@
 		<ClearVendor />
 		<ClearMailbox />
 		
-		 <CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" SkinMobs="False" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
-							
+		<CustomBehavior File="UserSettings" 
+						UseMount="True" 
+						LootMobs="False" 
+						SkinMobs="False" 
+						PullDistance="15" 
+						KillBetweenHotspots="True" 
+						FindVendorsAutomatically="False" 
+		/>
+		
 		<!-- Razorfen Downs MapID = 129 -->
 		<If Condition="Me.MapId == 129">
-			<CustomBehavior File="Message" Text="You started the bot with me inside Razorfen Downs. Running out to reset the dungeon." LogColor="Lime" />
+			<CustomBehavior File="Message" 
+							Text="You started the bot with me inside Razorfen Downs. Running out to reset the dungeon." 
+							LogColor="Cyan" 
+			/>
+			
 			<!-- Take us to the inside entrance of Razorfen Downs -->
 			<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
 			
@@ -77,7 +88,7 @@
 			<If Condition="Me.MapId == 1" >	
 				<!-- If we are directly outside the instance within our box -->
 				<If Condition="Me.X &gt; -4668 &amp;&amp; Me.X &lt; -4650 &amp;&amp; Me.Y &lt; -2515 &amp;&amp; Me.Y &gt; -2535" >
-					<CustomBehavior File="Message" Text="I am resetting the instance." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am resetting the instance." LogColor="Cyan" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />			
 					
 					<!-- Reset instance macro -->
@@ -87,10 +98,11 @@
 					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
 					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
 					
-					<CustomBehavior File="Message" Text="I have reset Razorfen Downs." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I have reset Razorfen Downs." LogColor="Cyan" />
 					<!-- Click to move inside the Razorfen Downs portal -->
 					<CustomBehavior File="MyCTM" X="-4661.685" Y="-2531.881" Z="82.09853" />
-					<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
+					
+					<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Cyan" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
 					
 					<!-- Run to the entrance point of the dungeon in case we borked -->
@@ -98,8 +110,14 @@
 					
 					<!-- We are inside Razorfen Downs and waiting for our RAF toons -->
 					<If Condition="Me.MapId == 129">
-						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
-							Text="Main Character - Press continue on this window first, then press continue on the RAF characters." Title="WARNING" />
+						<CustomBehavior File="UserDialog"
+										AllowBotStop="False" 
+										SoundCue="Exclamation" 
+										SoundCueInterval="15" 
+										ExpiryAction="InputEnabled_Continue" 
+										Text="Main Character - Press continue on this window first, then press continue on the RAF characters." 
+										Title="WARNING" 
+						/>
 					</If>
 				</If>				
 			</If>
@@ -259,15 +277,19 @@
 				<CustomBehavior File="MyCTM" X="2593.437" Y="1107.401" Z="51.29848" />
 				<CustomBehavior File="MyCTM" X="2592.424" Y="1116.676" Z="50.3953" />
 			</If>
-								
+			
 			<If Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 
 				
-				<CustomBehavior File="Message" Text="I have detected that my gear is about to break. I'm going to hearth, repair and then return to the instance." LogColor="Lime" />
+				<CustomBehavior File="Message" 
+								Text="I have detected that my gear is about to break. I'm going to hearth, 
+								repair and then return to the instance." 
+								LogColor="Cyan" 
+				/>
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 				<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />
 				
 				<If Condition="Me.ZoneId == 4709" >
-					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor." LogColor="Lime" />												
+					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor." LogColor="Cyan" />												
 					<SetVendor>
 						<Vendors>
 							<Vendor Name="Terndak" Entry="44287" Type="Repair" X="-3267.02" Y="-1714.96" Z="92.30528" />
@@ -289,7 +311,11 @@
 			
 				<!-- If we are inside Razorfen Downs, announce broken gear/hearth on CD -->
 				<If Condition="Me.MapId == 129">
-					<CustomBehavior File="Message" Text="My gear is broken and my Hearthstone is on cooldown. You need to repair my gear. Stopping the bot." LogColor="Yellow" />
+					<CustomBehavior File="Message" 
+									Text="My gear is broken and my Hearthstone is on cooldown. You need to repair my gear. Stopping the bot." 
+									LogColor="Yellow" 
+					/>
+					
 					<!-- Stop the bot -->
 					<CustomBehavior File="UserSettings" StopBot="true" />
 				</If>
@@ -297,7 +323,7 @@
 			
 			<!-- If we are inside Razorfen Downs, and we need to reset the instance, go outside to do so -->
 			<If Condition="Me.MapId == 129">
-				<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Cyan" />
 					<RunTo X="1942.27" Y="1544.23" Z="81.80499" />
 				<CustomBehavior File="MyCTM" X="1939.09" Y="1539.371" Z="82.28316" />
 				<CustomBehavior File="WaitTimer" WaitTime="15000" />

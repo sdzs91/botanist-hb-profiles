@@ -1,5 +1,5 @@
 <HBProfile creator="Wigglez" version="1.0">
-	<Name>Test</Name>
+	<Name>RAF Test</Name>
 
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -41,7 +41,7 @@
 			<ClearMailbox />
        
 	<QuestOrder>
-		<RunTo X="2482.217" Y="931.8148" Z="24.07447" />
+		<RunTo X="2566.987" Y="1076.467" Z="53.29106" />
 	</QuestOrder>
  
  

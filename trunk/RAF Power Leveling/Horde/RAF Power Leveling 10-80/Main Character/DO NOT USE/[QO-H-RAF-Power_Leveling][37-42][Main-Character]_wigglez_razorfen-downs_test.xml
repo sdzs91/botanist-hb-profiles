@@ -53,14 +53,187 @@
 		<ClearVendor />
 		<ClearMailbox />
 		
-		 <CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" SkinMobs="False" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
-							
+		 <CustomBehavior File="UserSettings" 
+						UseMount="True" 
+						LootMobs="False" 
+						SkinMobs="False" 
+						PullDistance="15" 
+						KillBetweenHotspots="True" 
+						FindVendorsAutomatically="False" 
+		/>
+		
 		<!-- Razorfen Downs MapID = 129 -->
+		
+		<!-- Run to the entrance point of the dungeon in case we borked -->
+			<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
+			
+			<!-- We are inside Razorfen Downs and waiting for our RAF toons -->
+			<If Condition="Me.MapId == 129">
+				<CustomBehavior File="UserDialog"
+								AllowBotStop="False" 
+								SoundCue="Exclamation" 
+								SoundCueInterval="15" 
+								ExpiryAction="InputEnabled_Continue" 
+								Text="Main Character - Press continue on this window first, then press continue on the RAF characters." 
+								Title="WARNING" 
+				/>
+			</If>
+
 			<!-- Razorfen Downs dungeon script -->
 			<If Condition="Me.MapId == 129">
+				<!-- Start killing mobs at entrance split paths for the RAF toons to freely move -->
+				<RunTo X="2593.656" Y="1094.422" Z="52.76355" />
+				<RunTo X="2594.197" Y="1068.351" Z="54.78174" />
+				<RunTo X="2596.717" Y="1046.794" Z="52.99905" />
+				<RunTo X="2587.239" Y="1034.541" Z="50.45595" />
+				<RunTo X="2596.642" Y="1047.351" Z="53.08182" />
+				<RunTo X="2592.649" Y="1077.084" Z="55.32593" />
+				<RunTo X="2567.209" Y="1076.699" Z="53.29073" />
+				<RunTo X="2562.727" Y="1053.946" Z="52.38416" />
+				<RunTo X="2545.251" Y="1044.483" Z="48.1476" />
+				<RunTo X="2516.337" Y="1049.056" Z="47.03361" />
+				<RunTo X="2502.772" Y="1055.651" Z="47.49592" />
+				<RunTo X="2470.811" Y="1059.736" Z="48.01048" />
+				<RunTo X="2463.768" Y="1072.858" Z="47.28634" />
+				<RunTo X="2439.797" Y="1083.415" Z="40.06434" />
+				<RunTo X="2421.806" Y="1088.736" Z="33.77335" />
+				<RunTo X="2397.354" Y="1092.109" Z="31.51738" />
+				<!-- Killed all mobs to the end of the right fork -->
 				
+				<!-- Continue running down the left fork and killing mobs to the Gong room -->
+				<RunTo X="2594.552" Y="1059.943" Z="54.70406" />
+				<RunTo X="2596.883" Y="1046.909" Z="53.02601" />
+				<RunTo X="2591.296" Y="1040.315" Z="51.68086" />
+				<RunTo X="2576.995" Y="1020.462" Z="51.65852" />
+				<RunTo X="2575.238" Y="1011.416" Z="53.01066" />
+				<RunTo X="2577.525" Y="1003.129" Z="53.5143" />
+				<RunTo X="2583.282" Y="997.1995" Z="54.14931" />
+				<RunTo X="2565.298" Y="1013.669" Z="52.21201" />
+				<RunTo X="2556.748" Y="1008.962" Z="52.06042" />
+				<RunTo X="2566.221" Y="1001.705" Z="52.12912" />
+				<RunTo X="2577.655" Y="1003.441" Z="53.52067" />
+				<RunTo X="2587.34" Y="993.5336" Z="54.36874" />
+				<RunTo X="2598.942" Y="979.293" Z="53.66655" />
+				<RunTo X="2594.696" Y="965.33" Z="52.61595" />
+				<RunTo X="2585.715" Y="960.5705" Z="52.06958" />
+				<RunTo X="2575.89" Y="963.1343" Z="51.50245" />
+				<RunTo X="2565.82" Y="967.2557" Z="51.09599" />
+				<RunTo X="2555.608" Y="970.9486" Z="50.63218" />
+				<RunTo X="2573.976" Y="944.5195" Z="53.43617" />
+				<RunTo X="2581.491" Y="957.9987" Z="52.13389" />
+				<RunTo X="2555.977" Y="971.3594" Z="50.58155" />
+				<RunTo X="2545.327" Y="977.6896" Z="50.11843" />
+				<RunTo X="2535.303" Y="967.6023" Z="49.54019" />
+				<RunTo X="2529.335" Y="955.3218" Z="49.40964" />
+				<RunTo X="2524.427" Y="942.876" Z="48.69112" />
+				<RunTo X="2519.305" Y="932.5555" Z="47.6069" />
+				<RunTo X="2500.342" Y="938.9844" Z="48.3476" />
+				<RunTo X="2524.213" Y="919.9486" Z="45.85094" />
+				<RunTo X="2545.531" Y="906.733" Z="46.35566" />
+				<RunTo X="2547.953" Y="891.5148" Z="47.70256" />
+				<RunTo X="2540.383" Y="877.9996" Z="47.73449" />
+				<RunTo X="2536.542" Y="869.9968" Z="47.67838" />
+				<RunTo X="2546.203" Y="856.8508" Z="51.24226" />
+				<!-- End of annoying mobs and we are in the Gong room, now we can pull everything past this point -->
 				
-			</If>	
+				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
+					<!-- Gong room and beyond -->
+					<Hotspot X="2503.448" Y="853.1336" Z="47.67831" />
+					<Hotspot X="2486.153" Y="826.8855" Z="43.77291" />
+					<Hotspot X="2488.275" Y="801.9139" Z="42.81416" />
+					<Hotspot X="2495.653" Y="787.8024" Z="39.4518" />
+					<Hotspot X="2524.236" Y="799.5428" Z="44.52291" />
+					<Hotspot X="2538.356" Y="779.9509" Z="47.12932" />
+					<Hotspot X="2552.79" Y="756.3746" Z="52.37435" />
+					<Hotspot X="2551.443" Y="740.5334" Z="54.05373" />
+					<Hotspot X="2532.209" Y="751.8354" Z="53.93359" />
+					<Hotspot X="2507.221" Y="735.9069" Z="54.14434" />
+					<Hotspot X="2480.888" Y="672.4268" Z="55.18749" />
+					<Hotspot X="2505.065" Y="688.1163" Z="53.85415" />
+					<Hotspot X="2516.646" Y="715.2311" Z="43.09797" />
+					<Hotspot X="2521.706" Y="738.215" Z="40.27785" />
+					<Hotspot X="2513.047" Y="755.3162" Z="39.58246" />
+					<Hotspot X="2494.436" Y="748.2026" Z="42.98889" />
+					<Hotspot X="2479.326" Y="745.7842" Z="46.08914" />
+					<Hotspot X="2475.273" Y="762.0706" Z="46.10012" />
+					<Hotspot X="2451.676" Y="778.7921" Z="43.57511" />
+					<Hotspot X="2442.879" Y="797.1273" Z="42.44165" />
+					<Hotspot X="2442.676" Y="818.2325" Z="42.21327" />
+					<Hotspot X="2445.221" Y="820.1485" Z="42.96271" />
+					<!-- Kill the run like hell pack next to the RAF toons on the cliff -->
+				</CustomBehavior>
+				
+				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
+					<!-- Start pulling more from where we left off near the RAF toons -->
+					<Hotspot X="2452.169" Y="860.8318" Z="37.71329" />
+					<Hotspot X="2461.07" Y="877.5758" Z="30.82215" />
+					<Hotspot X="2468.494" Y="894.0062" Z="28.13839" />
+					<Hotspot X="2468.752" Y="911.6584" Z="26.64383" />
+					<Hotspot X="2470.646" Y="929.9709" Z="24.05852" />
+					<Hotspot X="2478.069" Y="939.1139" Z="23.34018" />
+					<Hotspot X="2485.181" Y="934.9123" Z="24.15852" />
+					
+					<Hotspot X="2480.274" Y="952.3557" Z="23.4381" />
+					<Hotspot X="2478.127" Y="977.3281" Z="23.31221" />
+					<Hotspot X="2474.051" Y="993.47" Z="23.2562" />
+					<Hotspot X="2463.246" Y="1015.905" Z="24.32475" />
+					<Hotspot X="2450.68" Y="1032.207" Z="24.62236" />
+					<Hotspot X="2435.689" Y="1039.914" Z="24.42974" />
+					<Hotspot X="2409.884" Y="1043.162" Z="25.28456" />
+					<Hotspot X="2389.23" Y="1042.063" Z="24.48081" />
+					<Hotspot X="2365.564" Y="1036.436" Z="25.06921" />
+					<Hotspot X="2349.134" Y="1024.675" Z="25.2005" />
+					<Hotspot X="2339.335" Y="1007.155" Z="25.61659" />
+					<Hotspot X="2327.363" Y="983.6174" Z="26.19868" />
+					<Hotspot X="2324.202" Y="964.5687" Z="26.64705" />
+					<Hotspot X="2337.012" Y="938.5751" Z="27.51912" />
+					<Hotspot X="2353.786" Y="916.0768" Z="28.51436" />
+					<Hotspot X="2367.876" Y="917.0568" Z="29.05548" />
+					<Hotspot X="2379.652" Y="908.087" Z="28.83874" />
+					<Hotspot X="2410.977" Y="901.3299" Z="30.53709" />
+					<Hotspot X="2437.083" Y="927.3531" Z="34.40871" />
+					<Hotspot X="2449.704" Y="943.0898" Z="36.01645" />
+					<Hotspot X="2440.282" Y="947.5835" Z="35.74832" />
+					<Hotspot X="2453.567" Y="985.1902" Z="35.80747" />
+					<Hotspot X="2442.728" Y="1008.465" Z="38.5714" />
+					<Hotspot X="2422.012" Y="1020.299" Z="36.71323" />
+					<Hotspot X="2410.753" Y="1018.798" Z="36.89059" />
+					<Hotspot X="2411.926" Y="1025.7" Z="37.82219" />
+					<Hotspot X="2391.329" Y="1014.906" Z="37.81577" />
+					<Hotspot X="2367.374" Y="1007.265" Z="37.47975" />
+					<Hotspot X="2356.401" Y="976.8998" Z="39.21235" />
+					<Hotspot X="2344.787" Y="970.3234" Z="41.73317" />
+					<Hotspot X="2358.995" Y="946.0526" Z="42.06817" />
+					<Hotspot X="2394.848" Y="929.6461" Z="41.8373" />
+					<Hotspot X="2416.431" Y="930.2678" Z="44.18266" />
+					<Hotspot X="2425.673" Y="956.3217" Z="45.4635" />
+					<Hotspot X="2430.077" Y="981.1418" Z="48.07" />
+					<Hotspot X="2421.433" Y="997.7967" Z="49.34587" />
+					<Hotspot X="2379.408" Y="991.6299" Z="54.10276" />
+					<Hotspot X="2403.446" Y="961.3223" Z="55.08544" />
+					<Hotspot X="2401.845" Y="986.052" Z="58.41213" />
+					<!-- Finish of the spiral at the last boss, let's kill the mobs -->
+				</CustomBehavior>
+				
+				<!-- Manually take us to the exit -->
+				<CustomBehavior File="MyCTM" X="2380.92" Y="988.0463" Z="54.66792" />
+				<CustomBehavior File="MyCTM" X="2358.704" Y="996.6691" Z="38.76515" />
+				<CustomBehavior File="MyCTM" X="2344.971" Y="1008.997" Z="26.04872" />
+				<CustomBehavior File="MyCTM" X="2368.785" Y="1038.422" Z="25.10646" />
+				<CustomBehavior File="MyCTM" X="2386.043" Y="1059.557" Z="25.62585" />
+				<CustomBehavior File="MyCTM" X="2394.138" Y="1078.918" Z="30.44055" />
+				<CustomBehavior File="MyCTM" X="2405.404" Y="1092.748" Z="31.51882" />
+				<CustomBehavior File="MyCTM" X="2433.591" Y="1085.801" Z="37.73858" />
+				<CustomBehavior File="MyCTM" X="2455.412" Y="1075.595" Z="45.67426" />
+				<CustomBehavior File="MyCTM" X="2480.679" Y="1064.526" Z="47.59491" />
+				<CustomBehavior File="MyCTM" X="2512.503" Y="1050.632" Z="47.25129" />
+				<CustomBehavior File="MyCTM" X="2541.71" Y="1042.862" Z="47.16533" />
+				<CustomBehavior File="MyCTM" X="2561.854" Y="1052.051" Z="52.16872" />
+				<CustomBehavior File="MyCTM" X="2567.054" Y="1071.309" Z="53.27597" />
+				<CustomBehavior File="MyCTM" X="2590.133" Y="1084.857" Z="53.65691" />
+				<CustomBehavior File="MyCTM" X="2593.437" Y="1107.401" Z="51.29848" />
+				<CustomBehavior File="MyCTM" X="2592.424" Y="1116.676" Z="50.3953" />
+			</If>
 	</QuestOrder>
 </HBProfile>
 
