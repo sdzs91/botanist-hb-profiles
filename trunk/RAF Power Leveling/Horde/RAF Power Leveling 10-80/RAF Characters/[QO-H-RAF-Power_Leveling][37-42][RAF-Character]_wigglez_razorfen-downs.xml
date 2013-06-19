@@ -1,0 +1,178 @@
+﻿<HBProfile creator="Wigglez" version="1.0">
+	<Name>[QO-H-RAF-Power_Leveling][37-42][RAF-Character]_wigglez_razorfen-downs</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />	
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<CustomBehavior File="UserSettings" 
+						UseMount="True" 
+						MountDistance="10" 
+						UseFlightPaths="True" 
+						LootMobs="False" 
+						SkinMobs="False" 
+						PullDistance="1" 
+						KillBetweenHotspots="False" 
+						RessAtSpiritHealers="False" 
+						FindVendorsAutomatically="False" 
+		/>
+		
+		<!-- Razorfen Downs MapID = 129 -->
+		<If Condition="Me.MapId == 129">
+			<CustomBehavior File="Message" 
+							Text="You started the bot with me inside Razorfen Downs. Running out to reset the dungeon." 
+							LogColor="Cyan" 
+			/>
+			
+			<!-- Take us to the inside entrance of Razorfen Downs -->
+			<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
+			
+			<!-- Click to move through the portal -->
+			<CustomBehavior File="MyCTM" X="2592.609" Y="1116.474" Z="50.4133" />
+			
+			<!-- Wait outside for 15 seconds -->
+			<CustomBehavior File="WaitTimer" WaitTime="15000" />
+				
+			<!-- If for any reason we are not exactly outside of Razorfen Downs, take us there -->
+			<RunTo X="-4659.44" Y="-2527.94" Z="81.6564" />
+		</If>
+		
+		<!-- While we are outside of Razorfen Downs -->
+		<While Condition="true" >
+			<!-- If we are in Kalimdor -->
+			<If Condition="Me.MapId == 1" >				
+				<!-- If we are directly outside the instance within our box -->			
+				<If Condition="Me.X &gt; -4668 &amp;&amp; Me.X &lt; -4650 &amp;&amp; Me.Y &lt; -2515 &amp;&amp; Me.Y &gt; -2535" >
+					<!-- If we have reached the appropriate level or are higher than that, indicate by recommending next instance -->
+					<If Condition="Me.Level &gt;= 42" >
+						<CustomBehavior File="UserDialog" 
+										AllowBotStop="False" 
+										SoundCue="Exclamation" 
+										SoundCueInterval="15" 
+										ExpiryAction="InputEnabled_Continue" 
+										Text="**********RAF Character - This character has reached the appropriate level to run Blackrock Depths. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" 
+										Title="WARNING" 
+						/>
+					</If>
+					
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					
+					<!-- Click to move inside the Razorfen Downs portal -->
+					<CustomBehavior File="MyCTM" X="-4661.685" Y="-2531.881" Z="82.09853" />
+					
+					<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Cyan" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+					
+					<!-- Run to the entrance point of the dungeon in case we borked -->
+					<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
+					
+					<!-- We are inside Razorfen Downs and waiting to begin -->
+					<If Condition="Me.MapId == 129">
+						<CustomBehavior File="UserDialog" 
+										AllowBotStop="False" 
+										SoundCue="Exclamation" 
+										SoundCueInterval="15" 
+										ExpiryAction="InputEnabled_Continue" 
+										Text="RAF Character - Press continue on the level 90 first, then press continue on this window." 
+										Title="WARNING" 
+						/>
+					</If>
+				</If>
+			</If>
+
+			<!-- Razorfen Downs dungeon script -->
+			<If Condition="Me.MapId == 129">
+				<CustomBehavior File="Message" Text="We are at the entrance." LogColor="Cyan" />
+				<CustomBehavior File="Message" Text="Waiting for 80 seconds. 1 of 6." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="80000" />
+				<CustomBehavior File="Message" Text="Moving closer to the right fork clear." LogColor="Cyan" />
+				<RunTo X="2592.539" Y="1078.718" Z="55.19761" />
+				<RunTo X="2566.987" Y="1076.467" Z="53.29106" />
+				<RunTo X="2563.642" Y="1054.736" Z="52.54329" />
+				<RunTo X="2539.15" Y="1042.857" Z="46.68586" />
+				<RunTo X="2504.298" Y="1054.472" Z="47.52206" />
+				
+				<CustomBehavior File="Message" Text="Waiting for right fork to be cleared." LogColor="Cyan" />
+				<CustomBehavior File="Message" Text="Waiting for 120 seconds. 2 of 6." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="120000" />
+				
+				<CustomBehavior File="Message" Text="Moving to sit at ledge." LogColor="Cyan" />
+				<RunTo X="2479.77" Y="1065.873" Z="47.606" />
+				<RunTo X="2468.955" Y="1054.715" Z="48.25833" />
+				
+				<CustomBehavior File="Message" Text="Avoiding instance lock at this point, DO NOT TOUCH." LogColor="red" />
+				<CustomBehavior File="Message" Text="Waiting for 120 seconds. 3 of 6." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="120000" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 120 seconds. 4 of 6." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="120000" />
+				
+				<CustomBehavior File="Message" Text="The main has begun the final pack pull, moving to prepare for it." LogColor="Cyan" />
+				<RunTo X="2482.521" Y="1062.923" Z="47.53696" />
+				<RunTo X="2516.922" Y="1048.721" Z="46.99355" />
+				<RunTo X="2547.351" Y="1044.285" Z="48.81944" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 120 seconds. 5 of 6." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="120000" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 120 seconds. 6 of 6." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="120000" />
+				
+				<CustomBehavior File="Message" Text="We have sat around long enough for 12 minutes to accrue." LogColor="Cyan" />
+				
+				<CustomBehavior File="Message" Text="Moving back to the entrance." LogColor="Cyan" />
+				
+				<RunTo X="2563.788" Y="1057.905" Z="52.79597" />
+				<RunTo X="2572.287" Y="1076.014" Z="53.52202" />
+				<RunTo X="2594.468" Y="1083.311" Z="54.51912" />
+				
+				<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Cyan" />
+				<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
+				
+				<!-- run out the portal -->
+				<CustomBehavior File="MyCTM" X="2592.832" Y="1116.651" Z="50.39391" />
+			
+				<CustomBehavior File="WaitTimer" WaitTime="15000" />
+			</If>		
+		</While>	
+	</QuestOrder>
+</HBProfile>
+
