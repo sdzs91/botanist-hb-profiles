@@ -210,8 +210,8 @@
 				
 				<If Condition="Me.X &lt; -3338.677 &amp;&amp; Me.X &gt; -3383.088 &amp;&amp; Me.Y &gt; 4656.26 &amp;&amp; Me.Y &lt; 4745.877  " >
 					<If Condition="Me.Level &gt;= 68" >
-						<!--	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
-								Text="**********RAF Character - This character has reached the appropriate level to run Utgarde Keep. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />	-->
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="**********RAF Character - This character has reached the appropriate level to run Utgarde Keep. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
 					</If>
 					<CustomBehavior File="WaitTimer" WaitTime="10000" />
 						<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />

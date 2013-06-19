@@ -1,0 +1,104 @@
+﻿<HBProfile creator="Wigglez" version="1.0">
+	<Name>[QO-H-RAF-Power_Leveling][37-42][RAF-Character]_wigglez_razorfen-downs_test</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />	
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" SkinMobs="False" PullDistance="1" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
+							
+			<!-- Run to the entrance point of the dungeon in case we borked -->
+			<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
+			
+			<!-- We are inside Razorfen Downs and waiting to begin -->
+			
+		<!-- Razorfen Downs dungeon script -->
+			<If Condition="Me.MapId == 129">
+			
+				<CustomBehavior File="UserDialog" 
+								AllowBotStop="False" 
+								SoundCue="Exclamation" 
+								SoundCueInterval="15" 
+								ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Press continue on the level 90 first, then press continue on this window." 
+								Title="WARNING" 
+				/>
+				<CustomBehavior File="Message" Text="We are at the entrance." LogColor="Cyan" />
+				<CustomBehavior File="Message" Text="Waiting for 70 seconds." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="70000" />
+				<CustomBehavior File="Message" Text="Moving closer to the right fork clear." LogColor="Cyan" />
+				<RunTo X="2592.539" Y="1078.718" Z="55.19761" />
+				<RunTo X="2566.987" Y="1076.467" Z="53.29106" />
+				<RunTo X="2563.642" Y="1054.736" Z="52.54329" />
+				<RunTo X="2539.15" Y="1042.857" Z="46.68586" />
+				<RunTo X="2504.298" Y="1054.472" Z="47.52206" />
+				
+				<CustomBehavior File="Message" Text="Waiting for right fork to be cleared." LogColor="Cyan" />
+				<CustomBehavior File="Message" Text="Waiting for 125 seconds." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="125000" />
+				<CustomBehavior File="Message" Text="Moving to sit at ledge." LogColor="Cyan" />
+				<RunTo X="2479.77" Y="1065.873" Z="47.606" />
+				<RunTo X="2468.955" Y="1054.715" Z="48.25833" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 525 seconds." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="525000" />
+				<CustomBehavior File="Message" Text="Moving back to the entrance." LogColor="Cyan" />
+				<RunTo X="2482.521" Y="1062.923" Z="47.53696" />
+				<RunTo X="2516.922" Y="1048.721" Z="46.99355" />
+				<RunTo X="2547.351" Y="1044.285" Z="48.81944" />
+				<RunTo X="2563.788" Y="1057.905" Z="52.79597" />
+				<RunTo X="2572.287" Y="1076.014" Z="53.52202" />
+				<RunTo X="2594.468" Y="1083.311" Z="54.51912" />
+				
+				
+				<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Cyan" />
+				<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
+				
+				<!-- run out the portal -->
+				<CustomBehavior File="MyCTM" X="2592.832" Y="1116.651" Z="50.39391" />
+			
+				<CustomBehavior File="WaitTimer" WaitTime="15000" />
+				
+					
+			</If>
+	</QuestOrder>
+</HBProfile>
+
