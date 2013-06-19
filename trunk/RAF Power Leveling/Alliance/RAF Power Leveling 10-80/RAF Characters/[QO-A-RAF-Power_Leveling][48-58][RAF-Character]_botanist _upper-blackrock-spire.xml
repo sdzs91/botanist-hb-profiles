@@ -1,0 +1,298 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-RAF-Power_Leveling][48-58][RAF-Character]_botanist _upper-blackrock-spire</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="202.4744" Y="-420.869" Z="110.9131" Radius="14.15664" />
+		<Blackspot X="-10441.78" Y="-258.6545" Z="47.09528" Radius="163.9329" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>14,16,2156</Factions>
+	
+	<ProtectedItems>
+	<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" LootMobs="False" UseFlightPaths="True" SkinMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" LogoutForInactivity="True" />
+
+
+		 
+				<If Condition="Me.MapId == 1" >
+						<CustomBehavior File="Message" Text="I am in Kalimdor. I need to be in Eastern Kingdoms. Moving to Ratchet." LogColor="Lime" />
+						<RunTo X="-994.5389" Y="-3830.653" Z="5.595397" />							
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-994.5389" Y="-3830.653" Z="5.595397" />									
+						<CustomBehavior File="UseTransport" TransportId="20808" 
+											WaitAtX="-994.5389" WaitAtY="-3830.653" WaitAtZ="5.595397"
+											TransportStartX="-1005.613" TransportStartY="-3841.648" TransportStartZ="0.03330701"
+											StandOnX="-996.8519" StandOnY="-3834.72" StandOnZ="6.065099"
+											TransportEndX="-14277.74" TransportEndY="582.86" TransportEndZ="0.015"	
+											GetOffX="-14281.86" GetOffY="564.9252" GetOffZ="7.45587" />								
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="-14281.86" Y="564.9252" Z="7.45587" />
+				</If>
+
+				<If Condition="Me.ZoneId == 139 &amp;&amp; Me.X &lt; 3239.871 &amp;&amp; Me.X &gt; 3184.693 &amp;&amp; Me.Y &lt; -4033.876 &amp;&amp; Me.Y &gt; -4050.978" >
+						<RunTo X="3188.293" Y="-4039.94" Z="107.9916" />
+					<CustomBehavior File="InteractWith" MobId="175369" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="3185.4812" Y="-4039.09937" Z="107.791389" />
+						<RunTo X="3174.617" Y="-4040.483" Z="105.481" />
+						<RunTo X="3135.281" Y="-4356.141" Z="133.4427" />
+				</If>	
+					
+					
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.Y &lt; -1232.614 || Me.Y &gt; -1213.534 || Me.X &gt; -7522.099 || Me.X &lt; -7545.701" >
+						<CustomBehavior File="Message" Text="I am in Eastern Kingdoms. Flying to Searing Gorge" LogColor="Lime" />
+							<RunTo X="-6594.09" Y="-3401.18" Z="279.209" /> <!-- dustwind dig fp badlands-->
+						<CustomBehavior File="ForcedMount" MountType="Ground" />	
+						<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+							<Hotspot X="-6599.159" Y="-3387.026" Z="274.7857" />
+							<Hotspot X="-6593.275" Y="-3368.795" Z="264.4983" />
+							<Hotspot X="-6586.823" Y="-3335.81" Z="252.1393" />
+							<Hotspot X="-6580.633" Y="-3302.768" Z="243.7957" />
+							<Hotspot X="-6574.595" Y="-3269.732" Z="241.7519" />
+							<Hotspot X="-6569.362" Y="-3236.561" Z="244.1748" />
+							<Hotspot X="-6566.581" Y="-3202.968" Z="250.2976" />
+							<Hotspot X="-6561.161" Y="-3169.802" Z="256.3044" />
+							<Hotspot X="-6555.985" Y="-3136.681" Z="261.8692" />
+							<Hotspot X="-6555.444" Y="-3103.061" Z="267.5352" />
+							<Hotspot X="-6662.865" Y="-3013.406" Z="260.6129" />
+							<Hotspot X="-6680.733" Y="-3003.731" Z="256.9717" />
+							<Hotspot X="-6707.753" Y="-2991.293" Z="244.3087" />
+							<Hotspot X="-6734.112" Y="-2995.949" Z="242.7333" />
+							<Hotspot X="-6761.435" Y="-2981.177" Z="253.4967" />
+							<Hotspot X="-6777.497" Y="-2951.543" Z="252.9454" />
+							<Hotspot X="-6790.405" Y="-2920.892" Z="256.1951" />
+							<Hotspot X="-6786.821" Y="-2892.499" Z="248.0963" />
+							<Hotspot X="-6801.909" Y="-2863.336" Z="244.4031" />
+							<Hotspot X="-6834.295" Y="-2856.608" Z="243.2228" />
+							<Hotspot X="-6854.543" Y="-2831.314" Z="249.7895" />
+							<Hotspot X="-6857.438" Y="-2800.304" Z="251.7849" />
+							<Hotspot X="-6874.627" Y="-2788.149" Z="250.4179" />
+							<Hotspot X="-6889.042" Y="-2774.156" Z="250.476" />
+							<Hotspot X="-6904.438" Y="-2752.609" Z="249.9071" />
+							<Hotspot X="-6921.188" Y="-2727.996" Z="246.3878" />
+							<Hotspot X="-6923.114" Y="-2707.569" Z="243.0042" />
+							<Hotspot X="-6903.21" Y="-2688.888" Z="242.1285" />
+							<Hotspot X="-6889.598" Y="-2666.028" Z="242.3359" />
+							<Hotspot X="-6882.249" Y="-2637.747" Z="242.5689" />
+							<Hotspot X="-6882.972" Y="-2610.102" Z="243.4537" />
+							<Hotspot X="-6889.272" Y="-2589.444" Z="244.3576" />
+							<Hotspot X="-6897.02" Y="-2570.375" Z="243.8737" />
+							<Hotspot X="-6917.706" Y="-2550.081" Z="242.17" />
+							<Hotspot X="-6933.393" Y="-2537.473" Z="241.6679" />
+							<Hotspot X="-6963.271" Y="-2522.368" Z="241.6671" />
+							<Hotspot X="-6988.683" Y="-2520.365" Z="241.7161" />
+							<Hotspot X="-6991.311" Y="-2522.321" Z="241.7141" />
+						</CustomBehavior>
+							<RunTo X="-6991.311" Y="-2522.321" Z="241.7141" />
+							
+						<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+							<Hotspot X="-6988.615" Y="-2500.29" Z="241.9745" />
+							<Hotspot X="-6985.804" Y="-2466.701" Z="241.668" />
+							<Hotspot X="-6980.504" Y="-2433.472" Z="242.1491" />
+							<Hotspot X="-6971.977" Y="-2401.036" Z="240.7449" />
+							<Hotspot X="-6959.373" Y="-2369.957" Z="240.7436" />
+							<Hotspot X="-6944.636" Y="-2339.562" Z="240.7437" />
+							<Hotspot X="-6931.382" Y="-2308.614" Z="240.7437" />
+							<Hotspot X="-6918.93" Y="-2277.397" Z="240.7437" />
+							<Hotspot X="-6909.059" Y="-2245.12" Z="241.7523" />
+							<Hotspot X="-6905.039" Y="-2211.979" Z="250.5937" />
+							<Hotspot X="-6909.69" Y="-2185.836" Z="258.3003" />
+							<Hotspot X="-6919.007" Y="-2153.739" Z="268.3148" />
+							<Hotspot X="-6929.479" Y="-2121.866" Z="280.765" />
+							<Hotspot X="-6935.566" Y="-2095.116" Z="282.5317" />
+							<Hotspot X="-6941.931" Y="-2061.995" Z="283.0096" />
+							<Hotspot X="-6940.619" Y="-2028.741" Z="282.5905" />
+							<Hotspot X="-6937.463" Y="-1995.252" Z="282.4786" />
+							<Hotspot X="-6935.146" Y="-1966.465" Z="282.6579" />
+							<Hotspot X="-6926.638" Y="-1947.339" Z="280.1004" />
+							<Hotspot X="-6923.74" Y="-1928.297" Z="273.2155" />
+							<Hotspot X="-6913.938" Y="-1896.277" Z="263.2801" />
+							<Hotspot X="-6906.161" Y="-1878.133" Z="257.2109" />
+							<Hotspot X="-6902.829" Y="-1857.63" Z="251.3134" />
+							<Hotspot X="-6899.234" Y="-1824.334" Z="241.8131" />
+							<Hotspot X="-6901.023" Y="-1803.971" Z="240.744" />
+							<Hotspot X="-6896.27" Y="-1770.629" Z="242.1341" />
+							<Hotspot X="-6893.151" Y="-1737.131" Z="241.5986" />
+							<Hotspot X="-6898.464" Y="-1716.635" Z="240.8575" />
+							<Hotspot X="-6906.759" Y="-1684.043" Z="240.5668" />
+							<Hotspot X="-6912.348" Y="-1664.961" Z="243.972" />
+							<Hotspot X="-6928.575" Y="-1635.456" Z="243.5872" />
+							<Hotspot X="-6945.597" Y="-1610.305" Z="246.0834" />
+							<Hotspot X="-6960.068" Y="-1591.675" Z="244.7587" />
+							<Hotspot X="-6983.105" Y="-1566.988" Z="241.8444" />
+							<Hotspot X="-7009.99" Y="-1546.616" Z="241.6972" />
+							<Hotspot X="-7037.498" Y="-1527.672" Z="243.2914" />
+							<Hotspot X="-7063.647" Y="-1506.85" Z="240.5836" />
+							<Hotspot X="-7083.085" Y="-1500.403" Z="240.4126" />
+							<Hotspot X="-7106.759" Y="-1478.936" Z="240.7911" />
+							<Hotspot X="-7109.642" Y="-1458.859" Z="242.0691" />
+							<Hotspot X="-7112.587" Y="-1433.406" Z="242.7225" />
+							<Hotspot X="-7107.646" Y="-1400.065" Z="241.0551" />
+							<Hotspot X="-7108.727" Y="-1366.776" Z="241.0401" />
+							<Hotspot X="-7128.889" Y="-1340.667" Z="243.4581" />
+							<Hotspot X="-7147.303" Y="-1332.845" Z="246.2176" />
+							<Hotspot X="-7137.097" Y="-1314.563" Z="246.0743" />
+							<Hotspot X="-7111.436" Y="-1293.792" Z="260.6083" />
+							<Hotspot X="-7098.924" Y="-1277.985" Z="267.6554" />
+							<Hotspot X="-7097.902" Y="-1258.232" Z="272.4694" />
+							<Hotspot X="-7094.172" Y="-1242.848" Z="277.907" />
+							<Hotspot X="-7097.908" Y="-1278.364" Z="267.5092" />
+							<Hotspot X="-7112.96" Y="-1291.771" Z="260.6332" />
+							<Hotspot X="-7128.787" Y="-1304.686" Z="250.2204" />
+							<Hotspot X="-7147.76" Y="-1296.857" Z="249.5201" />
+							<Hotspot X="-7164.425" Y="-1275.01" Z="251.7901" />
+							<Hotspot X="-7178.879" Y="-1261.245" Z="248.1669" />
+							<Hotspot X="-7191.515" Y="-1236.631" Z="245.7623" />
+							<Hotspot X="-7193.981" Y="-1216.137" Z="246.9578" />
+							<Hotspot X="-7196.637" Y="-1182.289" Z="248.0801" />
+							<Hotspot X="-7194.152" Y="-1149.011" Z="246.1103" />
+							<Hotspot X="-7179.619" Y="-1118.57" Z="241.9798" />
+							<Hotspot X="-7177.233" Y="-1096.632" Z="240.8163" />
+							<Hotspot X="-7202.222" Y="-1074.546" Z="242.5128" />
+							<Hotspot X="-7235.629" Y="-1073.312" Z="249.358" />
+							<Hotspot X="-7267.343" Y="-1072.246" Z="266.9589" />
+							<Hotspot X="-7290.736" Y="-1066.346" Z="275.1806" />
+							<Hotspot X="-7318.028" Y="-1072.773" Z="277.0691" />
+							<Hotspot X="-7341.795" Y="-1091.283" Z="277.5568" />
+							<Hotspot X="-7362.723" Y="-1104.472" Z="277.8401" />
+							<Hotspot X="-7382.433" Y="-1098.247" Z="278.0755" />
+							<Hotspot X="-7409.577" Y="-1110.825" Z="278.0755" />
+							<Hotspot X="-7414.41" Y="-1087.485" Z="277.8032" />
+							<Hotspot X="-7433.387" Y="-1061.967" Z="272.4882" />
+							<Hotspot X="-7466.122" Y="-1066.846" Z="265.7791" />
+							<Hotspot X="-7491.972" Y="-1073.616" Z="265.0502" />
+							<Hotspot X="-7495.859" Y="-1093.304" Z="265.4971" />
+							<Hotspot X="-7491.998" Y="-1126.978" Z="265.5817" />
+						</CustomBehavior>
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-7503.66" Y="-1154.048" Z="269.252" />
+						<CustomBehavior File="MyCTM" X="-7480.886" Y="-1163.805" Z="278.4444" />
+						
+						<CustomBehavior File="MyCTM" X="-7470.056" Y="-1164.558" Z="273.2744" />
+						
+						<CustomBehavior File="MyCTM" X="-7469.265" Y="-1186.581" Z="273.9157" />
+						
+						<CustomBehavior File="MyCTM" X="-7480.061" Y="-1194.603" Z="278.3599" />
+						
+						<CustomBehavior File="MyCTM" X="-7501.622" Y="-1200.502" Z="281.8502" />
+						
+						<CustomBehavior File="MyCTM" X="-7517.264" Y="-1210.495" Z="290.9408" />
+						
+						<CustomBehavior File="MyCTM" X="-7530.776" Y="-1209.405" Z="285.4507" />
+						
+						<CustomBehavior File="MyCTM" X="-7534.965" Y="-1214.374" Z="285.4137" />
+						
+						<CustomBehavior File="MyCTM" X="-7524.65" Y="-1229.13" Z="285.731" />
+					</If>		
+				</If>	
+			
+				<If Condition="Me.ZoneId == 1583">
+					<CustomBehavior File="Message" Text="You started the bot with me inside Blackrock Spire. Running out to reset the dungeon." LogColor="Lime" />					
+						<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					<CustomBehavior File="GoThruPortal" X="76.84785" Y="-223.031" Z="49.84081" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<RunTo X="-7524.65" Y="-1229.13" Z="285.731" />
+				</If>
+		
+		 <While Condition="true" >
+											  
+				<If Condition="Me.ZoneId == 25" >														 
+					<If Condition="Me.Y &gt; -1236.614 &amp;&amp; Me.Y &lt; -1213.534 &amp;&amp; Me.X &lt; -7500.099 &amp;&amp; Me.X &gt; -7545.701" >
+						<If Condition="Me.Level &gt;= 58" >
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="**********RAF Character - This character has reached the appropriate level to run Hellfire Ramparts. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
+					</If>
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="MyCTM" X="-7521.762" Y="-1234.087" Z="285.7297" /> 
+						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<If Condition="Me.ZoneId == 1583">
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Press continue when you are ready to begin." Title="WARNING" />
+						</If>
+					</If>				
+				</If>
+
+                               <!-- blackrock spire dungeon script -->
+							   
+				<If Condition="Me.ZoneId == 1583">
+						<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					<CustomBehavior File="Message" Text="Waiting 165 seconds, entrance." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="165000" />
+						<RunTo X="36.50483" Y="-351.0449" Z="48.67935" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 1 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="39.85149" Y="-351.9539" Z="48.67553" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 2 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="36.50483" Y="-351.0449" Z="48.67935" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 3 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />	
+						<RunTo X="39.85149" Y="-351.9539" Z="48.67553" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 4 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="36.50483" Y="-351.0449" Z="48.67935" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 5 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="39.85149" Y="-351.9539" Z="48.67553" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 6 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="36.50483" Y="-351.0449" Z="48.67935" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 7 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="39.85149" Y="-351.9539" Z="48.67553" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 8 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						<RunTo X="36.50483" Y="-351.0449" Z="48.67935" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 9 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />	
+						<RunTo X="39.85149" Y="-351.9539" Z="48.67553" />
+					<CustomBehavior File="Message" Text="Waiting 140 seconds, 10 of 10." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="140000" />
+					
+						<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					<CustomBehavior File="Message" Text="Waiting 30 seconds." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="30000" />	
+					<CustomBehavior File="GoThruPortal" X="76.84785" Y="-223.031" Z="49.84081" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<RunTo X="-7524.65" Y="-1229.13" Z="285.731" />
+				</If>
+		</While>	
+	</QuestOrder>
+</HBProfile>
+
