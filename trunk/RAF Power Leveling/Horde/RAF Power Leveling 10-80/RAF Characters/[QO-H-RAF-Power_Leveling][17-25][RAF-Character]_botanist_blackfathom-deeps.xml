@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-H-RAF-Power_Leveling][17-25]RAF-Character]_botanist _ blackfathom-deeps</Name>
+	<Name>[QO-H-RAF-Power_Leveling][17-25][RAF-Character]_botanist _ blackfathom-deeps</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -48,7 +48,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 		
-		 <CustomBehavior File="UserSettings" UseMount="False" UseFlightPaths="True" LootMobs="False" SkinMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" />
+		 <CustomBehavior File="UserSettings" UseMount="False" MountDistance="30" UseFlightPaths="True" LootMobs="False" SkinMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" />
 				<If Condition="Me.ZoneId == 17" >														 
 					<If Condition="Me.X &gt; -742.2633 &amp;&amp; Me.X &lt; -712.625 &amp;&amp; Me.Y &lt; -2203.933 &amp;&amp; Me.Y &gt; -2232.507" >
 						<CustomBehavior File="Message" Text="Waiting 45 second for the tank to start clearing the trash." LogColor="Lime" />
@@ -104,8 +104,12 @@
 							<RunTo X="-866.4232" Y="-2044.547" Z="81.65127" />
 							<RunTo X="-877.1506" Y="-2048.052" Z="81.10653" />
 							
+							
 							<RunTo X="-441.8" Y="-2596.08" Z="96.06" />	<!-- cross roads fp -->
 							<RunTo X="1795.953" Y="-4362.05" Z="102.5067" />	<!-- 0rg fp -->
+							
+							<CustomBehavior File="UserSettings" UseMount="true" />
+							
 							<RunTo X="1985.379" Y="-4324.232" Z="88.47113" />
 						<CustomBehavior File="MyCTM" X="1967.863" Y="-4314.486" Z="20.72207" />
 							<RunTo X="1847.507" Y="-4240.003" Z="39.93163" />
@@ -771,47 +775,59 @@
 					</If>				
 				</If>
 
-                               <!-- blackfathom deeps dungeon script -->
+                <!-- blackfathom deeps dungeon script -->
 				<If Condition="Me.MapId == 48">
 					<CustomBehavior File="Message" Text="Waiting 80 seconds, entrance." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="80000" />
 						
-						<RunTo X="-264.4145" Y="67.30161" Z="-56.14176" />
+					<RunTo X="-160.8972" Y="77.59564" Z="-46.0715" />
+					<RunTo X="-195.9623" Y="47.303" Z="-52.69039" />
+					<RunTo X="-236.1606" Y="30.95604" Z="-54.72799" />
+					<RunTo X="-261.6381" Y="59.04369" Z="-55.6091" />
+
 					<CustomBehavior File="Message" Text="Waiting 70 seconds, first water pool." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="70000" />
 					
-					<CustomBehavior File="MyCTM" X="-266.2165" Y="65.95197" Z="-56.47453" />
 					<CustomBehavior File="MyCTM" X="-299.8195" Y="65.63107" Z="-59.83585" />
 					<CustomBehavior File="MyCTM" X="-316.6834" Y="64.10133" Z="-59.83585" />
 					<CustomBehavior File="MyCTM" X="-332.0847" Y="76.87205" Z="-59.85128" />
 					<CustomBehavior File="MyCTM" X="-330.5505" Y="92.59331" Z="-59.16409" />
+					
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 1 of 6." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 
-						<RunTo X="-322.2383" Y="98.65414" Z="-58.67444" />
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 2 of 6." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-330.5505" Y="92.59331" Z="-59.16409" />
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 3 of 6." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-322.2383" Y="98.65414" Z="-58.67444" />
+					<!-- Go up mountain -->
+					<CustomBehavior File="MyCTM" X="-342.8687" Y="73.32179" Z="-60.35067" />
+					<CustomBehavior File="MyCTM" X="-356.6548" Y="73.96896" Z="-58.16689" />
+					<CustomBehavior File="MyCTM" X="-354.3861" Y="85.91518" Z="-50.8546" />
+					<CustomBehavior File="MyCTM" X="-350.4613" Y="90.59668" Z="-46.50981" />
+					<CustomBehavior File="MyCTM" X="-351.8185" Y="96.67211" Z="-42.88773" />
+					<CustomBehavior File="MyCTM" X="-353.7418" Y="101.9532" Z="-45.69148" />
+					<CustomBehavior File="MyCTM" X="-343.1473" Y="109.0681" Z="-50.93742" />	
+				
 					<CustomBehavior File="Message" Text="Waiting 135 seconds, 4 of 6." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="135000" />
 					
-						<RunTo X="-330.5505" Y="92.59331" Z="-59.16409" />
+					<!-- run behind crab -->
+					<RunTo X="-348.4482" Y="130.4598" Z="-51.01258" />
+					
 					<CustomBehavior File="Message" Text="Waiting 150 seconds, 5 of 6." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="150000" />
 					
-						<RunTo X="-322.2383" Y="98.65414" Z="-58.67444" />
 					<CustomBehavior File="Message" Text="Waiting 200 seconds, 6 of 6." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="200000" />
 					
 					<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Lime" />
-					<CustomBehavior File="MyCTM" X="-333.6179" Y="84.05681" Z="-59.26818" />
-					<CustomBehavior File="MyCTM" X="-316.8011" Y="64.90762" Z="-59.95131" />
-					<CustomBehavior File="MyCTM" X="-296.152" Y="62.47462" Z="-59.95131" />
+					
+					<CustomBehavior File="MyCTM" X="-325.9338" Y="123.8784" Z="-48.83857" />
+					<CustomBehavior File="MyCTM" X="-300.2736" Y="108.4911" Z="-53.19324" />
+					<CustomBehavior File="MyCTM" X="-286.9364" Y="81.63596" Z="-52.23166" />
 					<CustomBehavior File="MyCTM" X="-270.3964" Y="74.26224" Z="-57.44088" />
 					<CustomBehavior File="MyCTM" X="-260.3348" Y="49.62009" Z="-55.17484" />
 					<CustomBehavior File="MyCTM" X="-251.2602" Y="36.21692" Z="-55.31155" />
