@@ -164,36 +164,41 @@
 					</If>				
 				</If>
 
-                               <!-- wailing caverns dungeon script -->
+                <!-- wailing caverns dungeon script -->
 				<If Condition="Me.ZoneId == 718">
-						<RunTo X="-128.5944" Y="130.6777" Z="-78.58882" />
-						<RunTo X="-111.9876" Y="145.7799" Z="-80.99899" />
+					<RunTo X="-128.5944" Y="130.6777" Z="-78.58882" />
+					<RunTo X="-111.9876" Y="145.7799" Z="-80.99899" />
+						
 					<CustomBehavior File="Message" Text="Waiting 60 seconds, entrance." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="60000" />
 					
-						<RunTo X="-73.57674" Y="197.007" Z="-93.90092" />
+					<RunTo X="-108.472" Y="176.1373" Z="-79.76105" />
+					<RunTo X="-98.36909" Y="188.1169" Z="-78.13828" />
+
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 1 of 6." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
-					
-						<RunTo X="-66.60383" Y="209.828" Z="-93.29095" />
+						
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 2 of 6." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
-					
-						<RunTo X="-73.57674" Y="197.007" Z="-93.90092" />
+						
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 3 of 6." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-66.60383" Y="209.828" Z="-93.29095" />
+					<RunTo X="-101.5838" Y="183.6692" Z="-78.64371" />
+						
 					<CustomBehavior File="Message" Text="Waiting 150 seconds, 4 of 6." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="150000" />
-					
-						<RunTo X="-73.57674" Y="197.007" Z="-93.90092" />
+						
 					<CustomBehavior File="Message" Text="Waiting 150 seconds, 5 of 6." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="150000" />
 					
-						<RunTo X="-57.57857" Y="218.7784" Z="-93.1654" />
+					<RunTo X="-98.36909" Y="188.1169" Z="-78.13828" />
+						
 					<CustomBehavior File="Message" Text="Waiting 180 seconds, 6 of 6." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="180000" />
+					
+					<RunTo X="-108.0924" Y="176.4949" Z="-79.66731" />
+					<RunTo X="-117.4995" Y="137.5508" Z="-79.87161" />
 					
 					<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Lime" />
 						<RunTo X="-158.441" Y="131.601" Z="-74.2552" />
