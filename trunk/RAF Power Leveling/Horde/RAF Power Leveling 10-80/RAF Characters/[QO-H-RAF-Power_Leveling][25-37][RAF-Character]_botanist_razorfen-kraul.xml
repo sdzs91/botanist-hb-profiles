@@ -27,6 +27,9 @@
 	
 	<Blackspots>
 		<Blackspot X="-151.5376" Y="396.4401" Z="-37.62136" Radius="3" />
+		
+		<!-- thorn -->
+		<Blackspot X="1984.781" Y="1597.669" Z="80.26634" Radius="1" />
 	</Blackspots>
 
 	<Mailboxes>
@@ -431,7 +434,7 @@
 			<If Condition="Me.MapId == 1 &amp;&amp; Me.ZoneId == 4709" >
 				<If Condition="Me.X &lt; -4487.559 || Me.X &gt; -4456.213 || Me.Y &gt; -1659.222 || Me.Y &lt; -1684.165" >	
 						<RunTo X="-3296.571" Y="-1699.824" Z="122.616" />	<!-- desolation hold fp -->
-					<CustomBehavior File="Message" Text="I'm in Southern Barrens, moving to Razorfin Kraul." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I'm in Southern Barrens, moving to Razorfen Kraul." LogColor="Lime" />
 						<RunTo X="-3206.444" Y="-1779.916" Z="92.03542" />
 					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-3206.444" Y="-1779.916" Z="92.03542" />
@@ -471,7 +474,10 @@
 			</If>
 							
 				<If Condition="Me.MapId == 47">
-					<CustomBehavior File="Message" Text="You started the bot with me inside Razorfin Kraul. Running out to reset the dungeon." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="You started the bot with me inside Razorfen Kraul. Running out to reset the dungeon." LogColor="Lime" />
+						<RunTo X="1993.591" Y="1602.518" Z="79.7886" />
+						<RunTo X="1963.732" Y="1599.89" Z="80.83046" />
+						<RunTo X="1952.363" Y="1589.551" Z="82.04544" />
 						<RunTo X="1942.27" Y="1544.23" Z="81.80499" />
 					<CustomBehavior File="MyCTM" X="1939.09" Y="1539.371" Z="82.28316" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
@@ -499,7 +505,7 @@
 					</If>				
 				</If>
 
-                               <!-- razorfin kraul dungeon script -->
+                               <!-- razorfen kraul dungeon script -->
 				<If Condition="Me.MapId == 47">
 					<CustomBehavior File="Message" Text="Waiting for 30 seconds, entrance." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
@@ -533,6 +539,9 @@
 					<CustomBehavior File="WaitTimer" WaitTime="240000" />
 					
 					<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Lime" />
+						<RunTo X="1993.591" Y="1602.518" Z="79.7886" />
+						<RunTo X="1963.732" Y="1599.89" Z="80.83046" />
+						<RunTo X="1952.363" Y="1589.551" Z="82.04544" />
 						<RunTo X="1942.27" Y="1544.23" Z="81.80499" />
 					<CustomBehavior File="MyCTM" X="1939.09" Y="1539.371" Z="82.28316" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" />
