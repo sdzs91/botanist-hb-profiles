@@ -489,7 +489,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="80000" />
 					
 					<CustomBehavior File="Message" Text="Moving back to the entrance." LogColor="Cyan" />
-					<RunTo X="2563.788" Y="1057.905" Z="52.79597" />
+						<RunTo X="457.4243" Y="30.63788" Z="-70.22366" />
 					
 					
 					<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Cyan" />

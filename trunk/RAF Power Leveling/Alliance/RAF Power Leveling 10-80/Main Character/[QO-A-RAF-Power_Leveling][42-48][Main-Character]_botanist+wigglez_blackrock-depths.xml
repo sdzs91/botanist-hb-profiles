@@ -44,14 +44,20 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-		<CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" LootRadius="1" PullDistance="45" KillBetweenHotspots="False" LogoutForInactivity="True" />
+		<CustomBehavior File="UserSettings" UseMount="True" LootRadius="1" LootMobs="False" PullDistance="45" KillBetweenHotspots="False" LogoutForInactivity="True" />
 		
-				<If Condition="Me.MapId == 1">	
-					<If Condition="Me.IsAlliance" >
-						<CustomBehavior File="Message" Text="I am Alliance in Kalimdor, flying to Ratchet." LogColor="Lime" />
-						<CustomBehavior File="FlyTo" X="-994.0004" Y="-3827.987" Z="5.634368" />						
-						<CustomBehavior File="ForcedDismount" />
-							<RunTo X="-994.0004" Y="-3827.987" Z="5.634368" />
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsHorde" >
+						<!-- in the rfd box -->
+						<If Condition="Me.X &gt; -4662.61 &amp;&amp; Me.X &lt; -4645.506 &amp;&amp; Me.Y &lt; -2507.382 &amp;&amp; Me.Y &gt; -2531.69" >
+							<CustomBehavior File="Message" Text="I am outside the RFD portal. Moving to Desolation Hold." LogColor="Lime" />
+							<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+								<Hotspot X="-4653.385" Y="-2515.733" Z="81.06604" />
+								<Hotspot X="-4646.364" Y="-2487.385" Z="83.6185" />
+							</CustomBehavior>
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="FlyTo" X="-994.0004" Y="-3827.987" Z="5.634368" /> <!-- dock -->
+							<CustomBehavior File="ForcedDismount" />
 						<CustomBehavior File="Message" Text="Waiting for the boat." LogColor="Lime" />	
 						<CustomBehavior File="UseTransport"
 							TransportId="20808"
@@ -61,97 +67,28 @@
 							StandOnX="-999.8182" StandOnY="-3833.799" StandOnZ="6.034274" 
 							GetOffX="-14280.22" GetOffY="567.6113" GetOffZ="6.696649" />
 								<RunTo X="-14280.22" Y="567.6113" Z="6.696649" />
-					</If>
-				</If>
-		
-				<If Condition="Me.MapId == 1" >
-					<If Condition="Me.IsHorde" >
-						<If Condition="Me.X &lt; 1895.627 &amp;&amp; Me.X &gt; 1713.31 &amp;&amp; Me.Y &gt; -4440.429 &amp;&amp; Me.Y &lt; -4283.688 &amp;&amp; Me.Z &lt; 35" >
-							<CustomBehavior File="Message" Text="I am in the Cleft of Shadow in Orgrimmar, moving to the Blastedlands portal." LogColor="Lime" />
-								<RunTo X="1771.456" Y="-4326.629" Z="-8.225829" />
-							<CustomBehavior File="Message" Text="Taking the portal to Blastedlands." LogColor="Lime" />
-							<CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1768.45" Y="-4325.86" Z="-8.3711" />
-							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
-							<CustomBehavior File="UserSettings" UseMount="True" />
-							<CustomBehavior File="FlyTo" X="-11777.51" Y="-3184.844" Z="85.53618" />
+								<RunTo X="-14288.75" Y="549.5802" Z="8.690898" /> <!-- bb dock -->
 						</If>
 					</If>		
 				</If>
 				
 				<If Condition="Me.MapId == 1" >
 					<If Condition="Me.IsHorde" >
-							<CustomBehavior File="Message" Text="I'm in Kalimdor, moving to the Blasted Lands portal." LogColor="Lime" />
-							<CustomBehavior File="FlyTo" X="1859.277" Y="-4249.897" Z="38.38978" />
+						<CustomBehavior File="FlyTo" X="-994.0004" Y="-3827.987" Z="5.634368" /> <!-- dock -->
 						<CustomBehavior File="ForcedDismount" />
-						<CustomBehavior File="UserSettings" UseMount="False" />
-							<RunTo X="1771.456" Y="-4326.629" Z="-8.225829" />
-						<CustomBehavior File="Message" Text="Taking the portal to Blastedlands." LogColor="Lime" />
-						<CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="1768.45" Y="-4325.86" Z="-8.3711" />
-						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
-						<CustomBehavior File="UserSettings" UseMount="True" />
-						<CustomBehavior File="FlyTo" X="-11777.51" Y="-3184.844" Z="85.53618" />
-					</If>	
+						<CustomBehavior File="Message" Text="Waiting for the boat." LogColor="Lime" />	
+						<CustomBehavior File="UseTransport"
+							TransportId="20808"
+							WaitAtX="-994.0004" WaitAtY="-3827.987" WaitAtZ="5.634368" 
+							TransportStartX="-1005.61346" TransportStartY="-3841.648" TransportStartZ="-0.0262415316"
+							TransportEndX="-14277.7451" TransportEndY="582.86615" TransportEndZ="-0.048539947"
+							StandOnX="-999.8182" StandOnY="-3833.799" StandOnZ="6.034274" 
+							GetOffX="-14280.22" GetOffY="567.6113" GetOffZ="6.696649" />
+								<RunTo X="-14280.22" Y="567.6113" Z="6.696649" />
+								<RunTo X="-14288.75" Y="549.5802" Z="8.690898" /> <!-- bb dock -->
+					</If>		
 				</If>
-				
-				<If Condition="Me.MapId == 0" >
-					<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.5)" > 
-						<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Moving to vendor and repair in Iron Summit." LogColor="Lime" />
-						 <CustomBehavior File="FlyTo" X="-7093.68" Y="-1268.31" Z="270.4857" />     
-						<SetVendor>
-							<Vendors>
-								<Vendor Name="Fergus Gravelsmash" Entry="47937" Type="Repair" X="-7093.68" Y="-1268.31" Z="270.4857" />
-							</Vendors>
-						</SetVendor>
-						<SetMailbox>
-							<Mailboxes>
-								<Mailbox X="-7112.374" Y="-1200.006" Z="306.9484" />
-							</Mailboxes>
-						</SetMailbox>
-						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
-					</If>
-				</If>
-				
-		 
-		
-				<If Condition="Me.MapId == 0" >
-					<If Condition="Me.X &gt; -7788.206 &amp;&amp; Me.X &lt; -7359.371 &amp;&amp; Me.Y &gt; -1237.015 &amp;&amp; Me.Y &lt; -951.3706 &amp;&amp; Me.Z &gt; 188" > <!--  inside blackrock mountain -->
-						<If Condition="Me.X &gt; -7538.875 || Me.X &lt; -7170.465 || Me.Y &gt; -1086.957 || Me.Y &lt; -856.9006" > <!-- not on lower level -->
-								<CustomBehavior File="Message" Text="I am in Blackrock Mountain, but not on the lower level, moving outside Blackrock Mountain." LogColor="Lime" />
-								<CustomBehavior File="WaitTimer" WaitTime="1000" />
-									<RunTo X="-7363.139" Y="-1103.15" Z="277.8397" />
-								<CustomBehavior File="ForcedMount" MountType="Flying" />	
-								<CustomBehavior File="FlyTo" X="-7112.657" Y="-1203.543" Z="306.6107" />
-								<CustomBehavior File="ForcedDismount" />
-									<RunTo X="-7084.238" Y="-1201.972" Z="324.1552" />
-								<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
-								<CustomBehavior File="WaitTimer" WaitTime="1000" />
-								<CustomBehavior File="SetHearthstone" MobId="47942" X="-7085.53" Y="-1202.19" Z="323.9871" />
-								<CustomBehavior File="WaitTimer" WaitTime="1000" />
-									<RunTo X="-7112.657" Y="-1203.543" Z="306.6107" />
-								<CustomBehavior File="ForcedMount" MountType="Flying" />	
-								<CustomBehavior File="FlyTo" X="-7350.796" Y="-1104.671" Z="293.8562" />
-								<CustomBehavior File="MyCTM" X="-7409.676" Y="-1100.668" Z="289.8604" />
-								<CustomBehavior File="MyCTM" X="-7418.046" Y="-1068.09" Z="284.8479" />
-								<CustomBehavior File="MyCTM" X="-7434.496" Y="-1059.474" Z="281.5124" />
-								<CustomBehavior File="MyCTM" X="-7483.129" Y="-1071.903" Z="266.0364" />
-								<CustomBehavior File="MyCTM" X="-7544.171" Y="-1095.415" Z="273.5811" />
-								<CustomBehavior File="MyCTM" X="-7568.178" Y="-1055.278" Z="207.2832" />
-								<CustomBehavior File="MyCTM" X="-7521.016" Y="-1049.576" Z="180.9109" />
-								<CustomBehavior File="ForcedDismount" />	
-									<RunTo X="-7515.541" Y="-1045.584" Z="182.3001" />
-									<RunTo X="-7451.127" Y="-1019.527" Z="171.7613" />
-									<RunTo X="-7414.272" Y="-995.5535" Z="173.9916" />
-									<RunTo X="-7390.003" Y="-995.6981" Z="172.3456" />
-									<RunTo X="-7393.121" Y="-944.5681" Z="169.9272" />
-									<RunTo X="-7360.169" Y="-927.6536" Z="166.8724" />
-									<RunTo X="-7286.041" Y="-911.7701" Z="165.3761" />
-									<RunTo X="-7230.5" Y="-905.0279" Z="165.3761" />
-									<RunTo X="-7198.273" Y="-907.4053" Z="165.4882" />
-									<RunTo X="-7178.41" Y="-922.152" Z="166.092" />
-						</If>	
-					</If>
-				</If>
-		
+
 				<If Condition="Me.MapId == 0" >
 					<If Condition="Me.X &lt; -7538.875 || Me.X &gt; -7170.465 || Me.Y &lt; -1086.957 || Me.Y &gt; -856.9006 || Me.Z &gt; 188" > <!-- not lower level -->
 						<If Condition="Me.X &gt; -7788.206 || Me.X &lt; -7359.371 || Me.Y &gt; -1237.015 || Me.Y &lt; -951.3706" > <!-- not inside blackrock mountain -->
@@ -177,6 +114,8 @@
 							<CustomBehavior File="MyCTM" X="-7521.016" Y="-1049.576" Z="180.9109" />
 							<CustomBehavior File="ForcedDismount" />	
 								<RunTo X="-7515.541" Y="-1045.584" Z="182.3001" />
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="Main Character - Wait until all your character reach this location, then press continue on this window first, then press continue on the RAF characters." Title="WARNING" />	
 								<RunTo X="-7451.127" Y="-1019.527" Z="171.7613" />
 								<RunTo X="-7414.272" Y="-995.5535" Z="173.9916" />
 								<RunTo X="-7390.003" Y="-995.6981" Z="172.3456" />
@@ -193,7 +132,10 @@
 				<If Condition="Me.MapId == 0" >
 					<If Condition="Me.X &gt; -7538.875 &amp;&amp; Me.X &lt; -7170.465 &amp;&amp; Me.Y &gt; -1086.957 &amp;&amp; Me.Y &lt; -856.9006 &amp;&amp; Me.Z &lt; 188" > <!-- lower level -->
 						<CustomBehavior File="Message" Text="I am on the lower level of BRD, running to the instance.." LogColor="Lime" />
-						<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<RunTo X="-7515.541" Y="-1045.584" Z="182.3001" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="Main Character - Wait until all your character reach this location, then press continue on this window first, then press continue on the RAF characters." Title="WARNING" />	
 							<RunTo X="-7178.41" Y="-922.152" Z="166.092" />
 					</If>
 				</If>

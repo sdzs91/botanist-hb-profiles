@@ -114,6 +114,8 @@
 							<CustomBehavior File="MyCTM" X="-7521.016" Y="-1049.576" Z="180.9109" />
 							<CustomBehavior File="ForcedDismount" />	
 								<RunTo X="-7515.541" Y="-1045.584" Z="182.3001" />
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="Main Character - Wait until all your character reach this location, then press continue on this window first, then press continue on the RAF characters." Title="WARNING" />	
 								<RunTo X="-7451.127" Y="-1019.527" Z="171.7613" />
 								<RunTo X="-7414.272" Y="-995.5535" Z="173.9916" />
 								<RunTo X="-7390.003" Y="-995.6981" Z="172.3456" />
@@ -130,7 +132,10 @@
 				<If Condition="Me.MapId == 0" >
 					<If Condition="Me.X &gt; -7538.875 &amp;&amp; Me.X &lt; -7170.465 &amp;&amp; Me.Y &gt; -1086.957 &amp;&amp; Me.Y &lt; -856.9006 &amp;&amp; Me.Z &lt; 188" > <!-- lower level -->
 						<CustomBehavior File="Message" Text="I am on the lower level of BRD, running to the instance.." LogColor="Lime" />
-						<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<RunTo X="-7515.541" Y="-1045.584" Z="182.3001" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="Main Character - Wait until all your character reach this location, then press continue on this window first, then press continue on the RAF characters." Title="WARNING" />	
 							<RunTo X="-7178.41" Y="-922.152" Z="166.092" />
 					</If>
 				</If>
