@@ -153,16 +153,16 @@
 		
 				<If Condition="Me.MapId == 0" >
 					<If Condition="Me.X &gt; -7191.958 &amp;&amp; Me.X &lt; -7174.033 &amp;&amp; Me.Y &lt; -911.2476 &amp;&amp; Me.Y &gt; -924.7545 &amp;&amp; Me.Z &lt; 188" > <!-- lower level -->
-						<CustomBehavior File="Message" Text="I am resetting the instance." LogColor="Lime" />
+						<CustomBehavior File="Message" Text="I am resetting the instance." LogColor="Cyan" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />				
 						<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />	
 						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />	
 						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
-						<CustomBehavior File="Message" Text="I have reset BRD." LogColor="Lime" />
+						<CustomBehavior File="Message" Text="I have reset BRD." LogColor="Cyan" />
 						<CustomBehavior File="MyCTM" X="-7177.727" Y="-927.1953" Z="166.9945" />
-						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
+						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Cyan" />
 						<CustomBehavior File="WaitTimer" WaitTime="12000" />
 						<If Condition="Me.ZoneId == 1584">
 							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
@@ -182,6 +182,7 @@
 				<RunTo X="463.9455" Y="15.63376" Z="-71.12003" />
 				<RunTo X="493.8814" Y="14.29045" Z="-70.35346" />
 				
+				
 				<!-- First Shadowforge Gate interact -->
 				<CustomBehavior File="InteractWith"
 								ObjectType="GameObject"
@@ -191,6 +192,9 @@
 								Y="16.012654"
 								Z="-70.47108" 
 				/>
+				
+				<RunTo X="525.9897" Y="19.44355" Z="-71.12934" />
+				<CustomBehavior File="TargetAndMoveToMob" MobId="8910" MoveWithinMaxRangeOfMob="1" WaitForNpcs="false" X="564.9453" Y="21.04286" Z="-70.8724" />
 				
 				<!-- Run to second Shadowforge Gate -->
 				<RunTo X="549.0819" Y="15.23989" Z="-70.5415" />
@@ -372,6 +376,15 @@
 					<Hotspot X="790.9261" Y="-171.0572" Z="-73.83243" />
 					<Hotspot X="775.9881" Y="-163.3236" Z="-73.39613" />
 					<Hotspot X="768.0562" Y="-173.1055" Z="-73.42426" />
+					
+					<Hotspot X="755.4637" Y="-170.5758" Z="-73.44707" />
+					<Hotspot X="727.8513" Y="-147.878" Z="-72.29369" />
+					<Hotspot X="767.3282" Y="-113.6997" Z="-72.78786" />
+					<Hotspot X="754.5887" Y="-136.3561" Z="-72.67804" />
+				</CustomBehavior>	
+					<RunTo X="754.5887" Y="-136.3561" Z="-72.67804" />
+				
+				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
 					<Hotspot X="720.3083" Y="-108.5936" Z="-71.72482" />
 					<Hotspot X="714.2939" Y="-88.58155" Z="-71.43625" />
 					<Hotspot X="737.4691" Y="-58.04246" Z="-71.84791" />
@@ -396,10 +409,11 @@
 					<Hotspot X="614.4135" Y="89.35307" Z="-73.87061" />
 					<Hotspot X="617.1122" Y="60.50677" Z="-73.24368" />
 					<Hotspot X="597.6805" Y="25.8686" Z="-72.84167" />
-					<Hotspot X="561.405" Y="21.78559" Z="-70.83342" />
-					<Hotspot X="531.9166" Y="20.26099" Z="-71.17487" />
+					<Hotspot X="618.9174" Y="2.075266" Z="-73.24271" />
+					<Hotspot X="629.7749" Y="-21.5928" Z="-73.24271" />
+					<Hotspot X="665.8781" Y="-71.42282" Z="-72.77967" />
 				</CustomBehavior>
-				<RunTo X="531.9166" Y="20.26099" Z="-71.17487" />
+					<RunTo X="629.7749" Y="-21.5928" Z="-73.24271" />
 				
 				<!-- Exit the instance -->
 			<!--	<CustomBehavior File="MyCTM" X="496.2452" Y="13.79263" Z="-70.13718" />
@@ -407,14 +421,14 @@
 				<CustomBehavior File="MyCTM" X="456.929" Y="34.0923" Z="-69.56173" />
 				<CustomBehavior File="MyCTM" X="456.7827" Y="38.22907" Z="-68.76939" />	-->
 				
-					<CustomBehavior File="Message" Text="I have completed BRD." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I have completed BRD." LogColor="Cyan" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="Checking my gears durability." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Checking my gears durability." LogColor="Cyan" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>	
 					
 			<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.5)" > 
-				<CustomBehavior File="Message" Text="I have detected that my gear is below 30% durability, hearthing out to repair in Iron Summit, then I will return to the instance." LogColor="Lime" />
+				<CustomBehavior File="Message" Text="I have detected that my gear is below 30% durability, hearthing out to repair in Iron Summit, then I will return to the instance." LogColor="Cyan" />
 				<If Condition="HasItem(6948)" >
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />
@@ -439,7 +453,7 @@
 					<CustomBehavior File="FlyTo" X="-7112.657" Y="-1203.543" Z="306.6107" />
 					<CustomBehavior File="ForcedDismount" />
 						<RunTo X="-7084.238" Y="-1201.972" Z="324.1552" />
-					<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Cyan" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="SetHearthstone" MobId="47942" X="-7085.53" Y="-1202.19" Z="323.9871" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -471,11 +485,11 @@
 
 			<If Condition="Me.ZoneId == 1584" >
 				<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
-					<CustomBehavior File="Message" Text="I have detected that my gear is above 30% durability, running out to reset." LogColor="Lime" />
-						<RunTo X="460.6402" Y="15.41037" Z="-71.11736" />
+					<CustomBehavior File="Message" Text="I have detected that my gear is above 30% durability, running out to reset." LogColor="Cyan" />
+						<RunTo X="456.929" Y="34.0923" Z="-69.56168" />
 					<CustomBehavior File="MyCTM" X="454.8344" Y="38.78323" Z="-68.91302" />					
 					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="{TimeRemaining}" />			
-					<CustomBehavior File="Message" Text="I have exited BRD." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I have exited BRD." LogColor="Cyan" />
 						<RunTo X="-7178.41" Y="-922.152" Z="166.092" />
 				</If>	
 			</If>
