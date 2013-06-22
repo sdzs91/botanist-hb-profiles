@@ -186,29 +186,30 @@
 				<If Condition="Me.ZoneId == 3562">
 					 <CustomBehavior File="UserSettings" LootMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" LogoutForInactivity="False" />
 				
-						<RunTo X="-1360.688" Y="1650.664" Z="68.43818" />
+						<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, entrance." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-1342.816" Y="1640.156" Z="68.68669" />
+						<RunTo X="-1362.731" Y="1650.449" Z="68.41384" />
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 1 of 5." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-1276.339" Y="1667.686" Z="68.77732" />
+						<RunTo X="-1352.189" Y="1646.189" Z="68.49637" />
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 2 of 5." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-1349.791" Y="1654.5" Z="68.75284" />
+						<RunTo X="-1344.134" Y="1639.631" Z="68.64944" />
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 3 of 5." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-1351.504" Y="1646.688" Z="68.53915" />
+						<RunTo X="-1343.195" Y="1653.991" Z="68.85973" />
 					<CustomBehavior File="WaitTimer" WaitTime="2000" />
 					<CustomBehavior File="RunMacro" Macro="/dance" />	
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 4 of 5." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
-						<RunTo X="-1353.464" Y="1648.266" Z="68.53889" />
+						<RunTo X="-1339.598" Y="1666.781" Z="68.48493" />
+
 					<CustomBehavior File="Message" Text="Waiting 120 seconds, 5 of 5." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="120000" />
 					
