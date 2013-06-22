@@ -44,7 +44,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 		
-		 <CustomBehavior File="UserSettings" UseMount="True" UseFlightPaths="True" LootMobs="False" SkinMobs="False" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
+		 <CustomBehavior File="UserSettings" UseMount="True" UseFlightPaths="True" LootRadius="1" LootMobs="False" SkinMobs="False" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
 						
 
 				

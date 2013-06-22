@@ -47,7 +47,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-	<CustomBehavior File="UserSettings" UseMount="True" MountDistance="20"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="1" LogoutForInactivity="True" />
+	<CustomBehavior File="UserSettings" UseMount="True" MountDistance="20" LootRadius="1" UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="1" LogoutForInactivity="True" />
 			 	
 
 				<If Condition="Me.MapId == 571" >

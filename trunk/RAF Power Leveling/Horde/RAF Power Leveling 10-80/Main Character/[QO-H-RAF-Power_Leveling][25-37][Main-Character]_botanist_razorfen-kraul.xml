@@ -47,7 +47,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 		
-		 <CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" SkinMobs="False" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
+		 <CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" LootRadius="1" SkinMobs="False" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
 						
 				<If Condition="Me.MapId == 1" >
 					<If Condition="Me.X &gt; 4236.979 &amp;&amp; Me.X &lt; 4259.337 &amp;&amp; Me.Y &lt; 748.4534 &amp;&amp; Me.Y &gt; 725.4507" >

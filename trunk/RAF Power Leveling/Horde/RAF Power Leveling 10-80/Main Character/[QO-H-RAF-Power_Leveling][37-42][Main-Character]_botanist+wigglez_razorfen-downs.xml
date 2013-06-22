@@ -64,9 +64,10 @@
 						SkinMobs="False" 
 						HarvestHerbs="False" 
 						HarvestMinerals="False" 
+						LootRadius="1"
 						PullDistance="45" 
 						KillBetweenHotspots="False" 
-						FindVendorsAutomatically="False" />
+						FindVendorsAutomatically="False" />				
 		
 		<If Condition="Me.MapId == 1">
 			<If Condition="Me.X &gt; -4487.559 &amp;&amp; Me.X &lt; -4456.213 &amp;&amp; Me.Y &lt; -1659.222 &amp;&amp; Me.Y &gt; -1684.165" >

@@ -44,7 +44,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-		<CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" PullDistance="45" KillBetweenHotspots="False" LogoutForInactivity="True" />
+		<CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" LootRadius="1" PullDistance="45" KillBetweenHotspots="False" LogoutForInactivity="True" />
 		
 				<If Condition="Me.MapId == 1">	
 					<If Condition="Me.IsAlliance" >
@@ -80,7 +80,7 @@
 				
 				<If Condition="Me.MapId == 1" >
 					<If Condition="Me.IsHorde" >
-							<CustomBehavior File="Message" Text="I'm in Orgrimmar, moving to the Blastedlands portal." LogColor="Lime" />
+							<CustomBehavior File="Message" Text="I'm in Kalimdor, moving to the Blasted Lands portal." LogColor="Lime" />
 							<CustomBehavior File="FlyTo" X="1859.277" Y="-4249.897" Z="38.38978" />
 						<CustomBehavior File="ForcedDismount" />
 						<CustomBehavior File="UserSettings" UseMount="False" />

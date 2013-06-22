@@ -46,7 +46,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-	<CustomBehavior File="UserSettings" UseMount="True" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="15" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+	<CustomBehavior File="UserSettings" UseMount="True" MountDistance="100" LootRadius="1" UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="15" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
 	
          		<If Condition="Me.MapId == 530" >
 					<CustomBehavior File="Message" Text="I am in Outlands. I need to be in Northrend. Taking the portal to Orgrimmar." LogColor="Lime" />

@@ -46,7 +46,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 		
-		 <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" LootChests="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
+		 <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" LootRadius="1" LootChests="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
 				<If Condition="Me.MapId == 0" >
 					<If Condition="Me.ZoneId != 40">
 						<If Condition="Me.ZoneId != 1581">
