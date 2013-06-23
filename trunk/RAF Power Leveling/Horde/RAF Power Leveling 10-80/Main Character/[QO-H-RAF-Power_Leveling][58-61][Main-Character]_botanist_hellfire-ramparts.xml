@@ -99,24 +99,49 @@
 						<CustomBehavior File="SetHearthstone" MobId="16602" X="190.8758" Y="2610.927" Z="87.2837" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 							<RunTo X="172.8413" Y="2636.39" Z="86.64891" />
-						<CustomBehavior File="FlyTo" X="-112.7542" Y="3032.297" Z="64.5687" />	
+						<CustomBehavior File="FlyTo" X="-484.5418" Y="3003.751" Z="79.76189" />
 						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
-							Text="Main Character - Wait for you RAF characters to get below. Then press continue on this window first, then on the RAF characters." Title="WARNING" />	
-						<CustomBehavior File="FlyTo" X="-164.6191" Y="3018.731" Z="-1.902666" />
+							Text="Main Character - Wait for you RAF characters to get below. Then press continue on this window first, then on the RAF characters." Title="WARNING" />
+						<CustomBehavior File="FlyTo" X="-436.0844" Y="3016.157" Z="-15.92508" />
 						<CustomBehavior File="ForcedDismount" />
 						<CustomBehavior File="UserSettings" UseMount="False" />
-							<RunTo X="-208.6157" Y="3030.57" Z="-4.119123" />
-							<RunTo X="-253.4829" Y="3044.06" Z="-1.56159" />
-							<RunTo X="-279.5524" Y="3050.658" Z="-4.379868" />
-							<RunTo X="-286.6188" Y="3028.612" Z="-7.369869" />
-							<RunTo X="-298.3967" Y="3032.741" Z="-12.18907" />
-							<RunTo X="-321.261" Y="3036.515" Z="-16.2675" />
-							<RunTo X="-339.7951" Y="3050" Z="-16.3995" />
-							<RunTo X="-363.436" Y="3078.43" Z="-15.00145" />
+							<RunTo X="-428.841" Y="3017.889" Z="-17.41154" />
+							<RunTo X="-408.9859" Y="3021.979" Z="-16.328" />
+							<RunTo X="-389.1283" Y="3026.23" Z="-16.14779" />
+							<RunTo X="-369.3355" Y="3031.424" Z="-16.32884" />
+							<RunTo X="-349.5745" Y="3036.057" Z="-14.64245" />
+							<RunTo X="-329.5862" Y="3039.978" Z="-16.63512" />
+							<RunTo X="-326.6534" Y="3040.517" Z="-16.59379" />
+							<RunTo X="-344.905" Y="3053.779" Z="-15.87088" />
+							<RunTo X="-358.3777" Y="3068.825" Z="-15.12147" />
+							<RunTo X="-362.1401" Y="3076.281" Z="-15.03093" />
+						<CustomBehavior File="UserSettings" UseMount="True" />	
 					</If>
 				</If>	
+	
+				<If Condition="Me.ZoneId == 3562">
+					<CustomBehavior File="Message" Text="You started the bot with me inside Hellfire Ramparts, I'm running out to reset the dungeon." LogColor="Lime" />								
+						<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+					<CustomBehavior File="MyCTM" X="-1360.037" Y="1635.543" Z="68.49658" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
+				</If>
 					
-	<!-- hellfire ramparts dungeon script -->
+		<While Condition="true" >
+		
+				<If Condition="Me.ZoneId == 3483" >														 
+					<If Condition="Me.Y &gt; 3057.441 &amp;&amp; Me.Y &lt; 3081.078 &amp;&amp; Me.X &gt; -368.0191 &amp;&amp; Me.X &lt; -354.5314" >
+						<CustomBehavior File="Message" Text="I am resetting the instance." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />				
+				    	<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />  
+						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
+						<CustomBehavior File="Message" Text="I have reset Hellfire Ramparts." LogColor="Lime" />
+						<CustomBehavior File="MyCTM" X="-364.7503" Y="3083.706" Z="-14.68035" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" />	
+					</If>				
+				</If>
+
+                               <!-- hellfire ramparts dungeon script -->
 				<If Condition="Me.ZoneId == 3562">
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 						Text="Main Character - Press continue on this window first, then press continue on the RAF characters." Title="WARNING" />
@@ -197,8 +222,9 @@
 						<Hotspot X="-1379.411" Y="1712.988" Z="82.78085" />
 						<Hotspot X="-1345.286" Y="1685.677" Z="89.97701" />
 					</CustomBehavior>
-					<CustomBehavior File="TargetAndMoveToMob" MobId="17537" MoveWithinMaxRangeOfMob="1" WaitForNpcs="true" X="-1388.695" Y="1725.517" Z="82.21372" />
-				<!--	<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+					
+					<CustomBehavior File="TargetAndMoveToMob" MobId="17537" MoveWithinMaxRangeOfMob="40" WaitForNpcs="false" />
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 						EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="17537"
 						EventX="-1409.63" EventY="1738.107" EventZ="81.07748"
 						MoveOutOfGroundEffectAuraId1="111111"
@@ -207,7 +233,8 @@
 							<Safespots>
 								<Hotspot X="-1379.7" Y="1722.86" Z="82.64312" />
 							</Safespots>
-					</CustomBehavior>	-->
+					</CustomBehavior>
+					
 						<RunTo X="-1423.524" Y="1741.323" Z="80.70603" />
 						<RunTo X="-1428.592" Y="1770.343" Z="81.96834" />	<!-- chest -->
 					<CustomBehavior File="InteractWith" MobId="185168" ObjectType="GameObject" X="-1429.80981" Y="1772.91589" Z="82.0765" />
