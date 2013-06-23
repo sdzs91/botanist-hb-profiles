@@ -150,20 +150,19 @@
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 						Text="Main Character - Press continue on this window first, then press continue on the RAF characters." Title="WARNING" />
 						
+						<RunTo X="-1344.766" Y="1653.25" Z="68.86888" />
+						<RunTo X="-1326.888" Y="1659.297" Z="69.01428" />
+						<RunTo X="-1328.949" Y="1665.482" Z="68.71418" />
+						<RunTo X="-1325.499" Y="1663.362" Z="68.69312" />
+						<RunTo X="-1302.301" Y="1670.512" Z="66.0277" />
+						<RunTo X="-1284.931" Y="1677.782" Z="68.54573" />
+						<RunTo X="-1285.857" Y="1670.925" Z="68.81026" />
+						<RunTo X="-1273.917" Y="1656.696" Z="69.07306" />
+						<RunTo X="-1245.19" Y="1647.236" Z="67.61657" />
+						<RunTo X="-1256.412" Y="1628.972" Z="68.58859" />
 						
 					<CustomBehavior File="Message" Text="I will pull all the mobs back to the entrance." LogColor="Lime" />	
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">	
-						<Hotspot X="-1344.766" Y="1653.25" Z="68.86888" />
-						<Hotspot X="-1326.888" Y="1659.297" Z="69.01428" />
-						<Hotspot X="-1328.949" Y="1665.482" Z="68.71418" />
-						<Hotspot X="-1325.499" Y="1663.362" Z="68.69312" />
-						<Hotspot X="-1302.301" Y="1670.512" Z="66.0277" />
-						<Hotspot X="-1284.931" Y="1677.782" Z="68.54573" />
-						<Hotspot X="-1285.857" Y="1670.925" Z="68.81026" />
-						<Hotspot X="-1273.982" Y="1668.681" Z="68.71101" />
-						<Hotspot X="-1269.316" Y="1654.013" Z="68.97079" />
-						<Hotspot X="-1243.558" Y="1646.674" Z="67.65363" />
-						<Hotspot X="-1248.753" Y="1646.51" Z="67.6959" />
 						<Hotspot X="-1242.876" Y="1616.946" Z="68.50874" />
 						<Hotspot X="-1256.954" Y="1585.761" Z="68.56223" />
 						<Hotspot X="-1265.318" Y="1560.76" Z="68.57436" />

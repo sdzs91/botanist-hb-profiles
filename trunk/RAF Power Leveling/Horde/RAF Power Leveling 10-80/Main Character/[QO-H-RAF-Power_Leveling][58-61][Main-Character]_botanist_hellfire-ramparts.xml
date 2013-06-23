@@ -116,47 +116,24 @@
 					</If>
 				</If>	
 					
-	<While Condition="true" >
-	
-				<If Condition="Me.ZoneId == 3562">
-					<CustomBehavior File="Message" Text="You started the bot with me inside Hellfire Ramparts, I'm running out to reset the dungeon." LogColor="Lime" />								
-						<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
-					<CustomBehavior File="MyCTM" X="-1358.9" Y="1635.161" Z="68.4994" />
-					<CustomBehavior File="WaitTimer" WaitTime="12000" />
-					<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
-				</If>
-																							  
-				<If Condition="Me.ZoneId == 3483" >														 
-					<If Condition="Me.Y &gt; 3057.441 &amp;&amp; Me.Y &lt; 3081.078 &amp;&amp; Me.X &gt; -368.0191 &amp;&amp; Me.X &lt; -354.5314" >
-						<CustomBehavior File="Message" Text="I am resetting the instance." LogColor="Lime" />
-						<CustomBehavior File="WaitTimer" WaitTime="1000" />				
-				    	<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />  
-						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
-						<CustomBehavior File="Message" Text="I have reset Hellfire Ramparts." LogColor="Lime" />
-						<CustomBehavior File="MyCTM" X="-364.7503" Y="3083.706" Z="-14.68035" />
-						<CustomBehavior File="WaitTimer" WaitTime="15000" />	
-					</If>				
-				</If>
-
-                               <!-- hellfire ramparts dungeon script -->
+	<!-- hellfire ramparts dungeon script -->
 				<If Condition="Me.ZoneId == 3562">
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 						Text="Main Character - Press continue on this window first, then press continue on the RAF characters." Title="WARNING" />
 						
+						<RunTo X="-1344.766" Y="1653.25" Z="68.86888" />
+						<RunTo X="-1326.888" Y="1659.297" Z="69.01428" />
+						<RunTo X="-1328.949" Y="1665.482" Z="68.71418" />
+						<RunTo X="-1325.499" Y="1663.362" Z="68.69312" />
+						<RunTo X="-1302.301" Y="1670.512" Z="66.0277" />
+						<RunTo X="-1284.931" Y="1677.782" Z="68.54573" />
+						<RunTo X="-1285.857" Y="1670.925" Z="68.81026" />
+						<RunTo X="-1273.917" Y="1656.696" Z="69.07306" />
+						<RunTo X="-1245.19" Y="1647.236" Z="67.61657" />
+						<RunTo X="-1256.412" Y="1628.972" Z="68.58859" />
 						
 					<CustomBehavior File="Message" Text="I will pull all the mobs back to the entrance." LogColor="Lime" />	
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">	
-						<Hotspot X="-1344.766" Y="1653.25" Z="68.86888" />
-						<Hotspot X="-1326.888" Y="1659.297" Z="69.01428" />
-						<Hotspot X="-1328.949" Y="1665.482" Z="68.71418" />
-						<Hotspot X="-1325.499" Y="1663.362" Z="68.69312" />
-						<Hotspot X="-1302.301" Y="1670.512" Z="66.0277" />
-						<Hotspot X="-1284.931" Y="1677.782" Z="68.54573" />
-						<Hotspot X="-1285.857" Y="1670.925" Z="68.81026" />
-						<Hotspot X="-1273.982" Y="1668.681" Z="68.71101" />
-						<Hotspot X="-1269.316" Y="1654.013" Z="68.97079" />
-						<Hotspot X="-1243.558" Y="1646.674" Z="67.65363" />
-						<Hotspot X="-1248.753" Y="1646.51" Z="67.6959" />
 						<Hotspot X="-1242.876" Y="1616.946" Z="68.50874" />
 						<Hotspot X="-1256.954" Y="1585.761" Z="68.56223" />
 						<Hotspot X="-1265.318" Y="1560.76" Z="68.57436" />
@@ -249,20 +226,20 @@
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />
 					<If Condition="Me.ZoneId == 3483" >
-							<RunTo X="179.7871" Y="2605.4" Z="87.28378" />
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Reagan Mancuso" Entry="22225" Type="Repair" X="179.7871" Y="2605.4" Z="87.28378" />
+								<Vendor Name="Humphry" Entry="16823" Type="Repair" X="-717.3172" Y="2607.582" Z="91.01124" />
 							</Vendors>
 						</SetVendor>						
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox  X="171.9886" Y="2625.045" Z="87.16518" />
+								<Mailbox  X="-706.4096" Y="2697.286" Z="94.34798" />
 							</Mailboxes>
 						</SetMailbox>			
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
-						
-						<CustomBehavior File="FlyTo" X="-363.436" Y="3078.43" Z="-15.00145" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
+						<CustomBehavior File="FlyTo" X="-282.0337" Y="3131.084" Z="46.1519" />
+						<CustomBehavior File="MyCTM" X="-302.5596" Y="3162.814" Z="31.72397" />
 						<CustomBehavior File="ForcedDismount" />
 						<CustomBehavior File="Message" Text="I've reached Hellfire Ramparts." LogColor="Lime" />
 						<CustomBehavior File="ForcedDismount" />
