@@ -192,6 +192,7 @@
 				<If Condition="Me.ZoneId == 3791">
 					<CustomBehavior File="Message" Text="You started the bot with me inside Sethekk Halls, running out to reset the dungeon." LogColor="Lime" />
 					<If Condition="Me.X &gt; -35.39141 &amp;&amp; Me.Z &gt; 10 " >
+						<CustomBehavior File="Message" Text="I am on the second floor, near the last boss, running to portal through the bosses door." LogColor="Lime" />
 							<RunTo X="44.99677" Y="286.6256" Z="25.01322" />
 							<RunTo X="44.72137" Y="142.0625" Z="0.02178714" />
 						<CustomBehavior File="WaitTimer" WaitTime="10000" />	
@@ -200,28 +201,23 @@
 							<RunTo X="43.03834" Y="7.287698" Z="0.007048465" />
 							<RunTo X="31.01099" Y="1.044048" Z="0.005493299" />
 							<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
-						<CustomBehavior File="GoThruPortal" X="-9.609837" Y="-1.029378" Z="0.006014266" />
-							<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
-					</If>	
-				</If>	
-				
-				<If Condition="Me.ZoneId == 3791">	
+					</If>
+					
 					<If Condition="Me.X &lt; -35.39141 &amp;&amp; Me.Z &gt; 10 " >
-							<RunTo X="-271.5393" Y="172.2147" Z="0.04492369" />
-							<RunTo X="31.01099" Y="1.044048" Z="0.005493299" />
-							<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
-						<CustomBehavior File="GoThruPortal" X="-9.609837" Y="-1.029378" Z="0.006014266" />
-							<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
-					</If>		
-				</If>		
-				
-				<If Condition="Me.ZoneId == 3791">	
-					<If Condition="Me.Z &lt; 10 " >
-							<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
-						<CustomBehavior File="GoThruPortal" X="-9.609837" Y="-1.029378" Z="0.006014266" />
-							<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
+						<CustomBehavior File="Message" Text="I am on the second floor, running down stair and to the portal." LogColor="Lime" />
+						<RunTo X="-271.5393" Y="172.2147" Z="0.04492369" />
+						<RunTo X="31.01099" Y="1.044048" Z="0.005493299" />
+						<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
 					</If>	
-				</If>	
+
+					<If Condition="Me.Z &lt; 10 " >
+						<CustomBehavior File="Message" Text="I am on the first floor, running to portal." LogColor="Lime" />
+						<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
+					</If>
+						
+						<CustomBehavior File="GoThruPortal" X="-9.609837" Y="-1.029378" Z="0.006014266" />
+							<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />		
+				</If>
 				
 		 <While Condition="true" >
 				
