@@ -220,10 +220,6 @@
 						<Hotspot X="-1379.411" Y="1712.988" Z="82.78085" />
 						<Hotspot X="-1345.286" Y="1685.677" Z="89.97701" />
 					</CustomBehavior>
-					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="-1334.536" Y="1671.26" Z="92.72739" />
-						<Hotspot X="-1365.116" Y="1705.36" Z="83.60758" />
-					</CustomBehavior>
 						<RunTo X="-1365.116" Y="1705.36" Z="83.60758" />
 					
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
