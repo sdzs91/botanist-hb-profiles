@@ -128,7 +128,7 @@
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 						Text="Main Character - Press continue on this window first, then press continue on the RAF characters." Title="WARNING" />
 					<CustomBehavior File="UserSettings" UseMount="False" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="20" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LogoutForInactivity="True" />
-						
+					
 					<CustomBehavior File="Message" Text="Making the first pull. I will bring the mobs back to the entrance." LogColor="Lime" />	
 					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="213.8321" Y="-70.14931" Z="24.67863" />
@@ -145,6 +145,7 @@
 						<Hotspot X="265.3538" Y="-44.06175" Z="24.67863" />
 						<Hotspot X="302.6844" Y="-32.29393" Z="24.67863" />
 						<Hotspot X="347.3361" Y="-43.15633" Z="24.00234" />
+						<Hotspot X="344.8769" Y="-56.28492" Z="22.75585" />
 						<Hotspot X="373.2949" Y="-47.87452" Z="22.75491" />
 						<Hotspot X="394.6169" Y="-24.34318" Z="22.75497" />
 						<Hotspot X="377.9221" Y="14.67487" Z="22.75498" />
@@ -257,11 +258,31 @@
 						<Hotspot X="100.3439" Y="58.76351" Z="109.0078" />
 					</CustomBehavior>
 					
-						<RunTo X="51.20044" Y="-24.84236" Z="118.7753" /> <!-- 3rd boss -->
+					
+					
+						<RunTo X="51.20044" Y="-24.84236" Z="118.7753" /> <!-- 2nd boss -->
 					<CustomBehavior File="Message" Text="Waiting 20 seconds for the RAF toons." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="20000" />
-					<CustomBehavior File="Message" Text="Making the fifth pull. I will kill the secon boss here." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Making the fifth pull. I will kill the second boss here." LogColor="Lime" />
 
+					<CustomBehavior File="TargetAndMoveToMob" MobId="24201" MoveWithinMaxRangeOfMob="35" WaitForNpcs="false" />
+					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 24201)">
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="24201"
+										EventX="112.0226" EventY="-40.28646" EventZ="118.8607"
+										MoveOutOfGroundEffectAuraId1="111111"
+										MoveAwayFromMobCastingSpellId1="111111"
+										MoveAwayFromMobWithAuraId1="111111">
+							<Safespots>
+								<Hotspot X="52.01812" Y="-25.90106" Z="118.7753" />
+							</Safespots>
+						</CustomBehavior>
+					</If>
+					<!--
+					<CustomBehavior File="TargetAndMoveToMob" MobId="24201" MoveWithinMaxRangeOfMob="1" WaitForNpcs="false" X="52.01812" Y="-25.90106" Z="118.7753" />
+					-->
+					
+					<!--
 					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 						EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="24201"
 						EventX="112.0226" EventY="-40.28646" EventZ="118.8607"
@@ -272,6 +293,7 @@
 								<Hotspot X="52.01812" Y="-25.90106" Z="118.7753" />
 							</Safespots>
 					</CustomBehavior>
+					-->
 						<RunTo X="154.7174" Y="-23.78415" Z="135.011" />
 					<CustomBehavior File="Message" Text="Waiting 20 seconds for the RAF toons." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="20000" />
@@ -303,17 +325,8 @@
 						<Hotspot X="261.4235" Y="-153.2237" Z="190.1335" />
 						<Hotspot X="277.0658" Y="-122.8666" Z="190.4109" />
 						<Hotspot X="256.5445" Y="-67.02887" Z="190.6269" />
-						<Hotspot X="240.962" Y="-20.18628" Z="178.5052" />
-						<Hotspot X="225.2987" Y="9.156299" Z="178.5067" />
-						<Hotspot X="177.5512" Y="-5.017673" Z="156.8184" />
-						<Hotspot X="176.266" Y="-24.61786" Z="156.8526" />
-						<Hotspot X="231.3211" Y="-8.736723" Z="135.1983" />
-						<Hotspot X="207.4466" Y="19.75471" Z="135.2157" />
-						<Hotspot X="205.1057" Y="-11.83536" Z="135.1085" />
-						<Hotspot X="209.9185" Y="-26.80951" Z="135.1802" />
-						<Hotspot X="198.2238" Y="-37.08967" Z="135.1541" />
+						
 					</CustomBehavior>
-						<RunTo X="241.268" Y="-21.52523" Z="178.5044" />
 						<RunTo X="258.525" Y="-68.95338" Z="190.6" />
 						<RunTo X="280.1768" Y="-123.3313" Z="190.4255" />
 						<RunTo X="263.9279" Y="-157.7875" Z="190.1811" />
