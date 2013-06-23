@@ -282,19 +282,18 @@
 					<CustomBehavior File="Message" Text="Making the fifth pull. I will kill the second boss here." LogColor="Lime" />
 
 					<CustomBehavior File="TargetAndMoveToMob" MobId="24201" MoveWithinMaxRangeOfMob="35" WaitForNpcs="false" />
-						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 24201)">
-							<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-											EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="24201"
-											EventX="112.0226" EventY="-40.28646" EventZ="118.8607"
-											MoveOutOfGroundEffectAuraId1="111111"
-											MoveAwayFromMobCastingSpellId1="111111"
-											MoveAwayFromMobWithAuraId1="111111">
+					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 24201)">
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="24201"
+										EventX="112.0226" EventY="-40.28646" EventZ="118.8607"
+										MoveOutOfGroundEffectAuraId1="111111"
+										MoveAwayFromMobCastingSpellId1="111111"
+										MoveAwayFromMobWithAuraId1="111111">
 							<Safespots>
-							 <Hotspot X="52.01812" Y="-25.90106" Z="118.7753" />
+								<Hotspot X="52.01812" Y="-25.90106" Z="118.7753" />
 							</Safespots>
-						</If>
-					 </CustomBehavior>
-					
+						</CustomBehavior>
+					</If>
 					<!--
 					<CustomBehavior File="TargetAndMoveToMob" MobId="24201" MoveWithinMaxRangeOfMob="1" WaitForNpcs="false" X="52.01812" Y="-25.90106" Z="118.7753" />
 					-->
