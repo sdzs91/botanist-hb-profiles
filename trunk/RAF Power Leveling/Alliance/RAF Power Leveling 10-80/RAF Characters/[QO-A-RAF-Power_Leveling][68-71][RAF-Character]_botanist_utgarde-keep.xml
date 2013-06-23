@@ -45,7 +45,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-	<CustomBehavior File="UserSettings" UseMount="True" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+	<CustomBehavior File="UserSettings" UseMount="True" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="1" LogoutForInactivity="True" />
 
          		<If Condition="Me.MapId == 530" >
 					<CustomBehavior File="Message" Text="I am in Outlands. I need to be in Northrend. I am taking the portal to Stormwind and then the boat from Menethil Harbor to Howling Fjord." LogColor="Lime" />
@@ -128,7 +128,7 @@
 				<If Condition="Me.ZoneId == 206" >
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 						Text="RAF Characters - Press continue on the Main Character first, then press continue on this window." Title="WARNING" />
-					<CustomBehavior File="UserSettings" UseMount="False" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+					<CustomBehavior File="UserSettings" UseMount="False" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LogoutForInactivity="True" />
 				</If>
 
 				<If Condition="Me.ZoneId == 206" >

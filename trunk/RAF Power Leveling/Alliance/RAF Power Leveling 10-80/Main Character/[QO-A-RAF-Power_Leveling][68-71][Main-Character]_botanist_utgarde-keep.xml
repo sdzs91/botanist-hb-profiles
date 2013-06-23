@@ -46,7 +46,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-	<CustomBehavior File="UserSettings" UseMount="True" MountDistance="100" LootRadius="1" UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="15" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+	<CustomBehavior File="UserSettings" UseMount="True" MountDistance="100" LootRadius="1" UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="15" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LogoutForInactivity="True" />
 	
          		<If Condition="Me.MapId == 530" >
 					<CustomBehavior File="Message" Text="I am in Outlands. I need to be in Northrend. Taking the portal to Stormwind.." LogColor="Lime" />
@@ -127,7 +127,7 @@
 				<If Condition="Me.ZoneId == 206" >
 					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 						Text="Main Character - Press continue on this window first, then press continue on the RAF characters." Title="WARNING" />
-					<CustomBehavior File="UserSettings" UseMount="False" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="20" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+					<CustomBehavior File="UserSettings" UseMount="False" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="20" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LogoutForInactivity="True" />
 						
 					<CustomBehavior File="Message" Text="Making the first pull. I will bring the mobs back to the entrance." LogColor="Lime" />	
 					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
@@ -356,7 +356,7 @@
 						<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />	
 											
 					<If Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; 0.3)" >
-						<CustomBehavior File="UserSettings" UseMount="True" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+						<CustomBehavior File="UserSettings" UseMount="True" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LogoutForInactivity="True" />
 						<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth, repair and mail." LogColor="Lime" />
 						<If Condition="HasItem(6948)" >
 							<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />

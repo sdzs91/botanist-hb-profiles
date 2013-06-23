@@ -96,7 +96,7 @@
 				</If>					
 				                                       <!-- gundrak script -->
 				<If Condition="Me.ZoneId == 4416" >
-					<CustomBehavior File="UserSettings" UseMount="False" MountDistance="20"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="1" LogoutForInactivity="True" />
+					<CustomBehavior File="UserSettings" UseMount="False" MountDistance="20"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LogoutForInactivity="True" />
 						<RunTo X="1886.632" Y="632.9327" Z="176.6945" />
 					<CustomBehavior File="Message" Text="Waiting 130 seconds, entrance." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="130000" />
@@ -120,7 +120,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="105000" />
 						<RunTo X="1915.572" Y="763.4315" Z="136.3664" />
 						<RunTo X="1949.069" Y="827.017" Z="135.2822" />						
-					<CustomBehavior File="UserSettings" UseMount="True" MountDistance="20"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="1" LogoutForInactivity="True" />
+					<CustomBehavior File="UserSettings" UseMount="True" MountDistance="20"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LogoutForInactivity="True" />
 						<RunTo X="1973.146" Y="835.0508" Z="135.254" /> <!-- exit -->
 					<CustomBehavior File="MyCTM" X="1980.249" Y="840.2476" Z="135.2105" />
 						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
