@@ -217,7 +217,6 @@
 				
 				<If Condition="Me.ZoneId == 3791">	
 					<If Condition="Me.Z &lt; 10 " >
-							<RunTo X="31.01099" Y="1.044048" Z="0.005493299" />
 							<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
 						<CustomBehavior File="GoThruPortal" X="-9.609837" Y="-1.029378" Z="0.006014266" />
 							<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
