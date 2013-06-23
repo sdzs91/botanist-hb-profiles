@@ -76,7 +76,7 @@
 						<CustomBehavior File="MyCTM" X="1839.576" Y="-4386.935" Z="135.2322" />
 						<CustomBehavior File="ForcedDismount" />
 						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
-							Text="RAF Character - Honorbuddy has big issues using this zeppelin. Use this zeppelin to Tristfal Glades. Once you are in Tristfall Glades get off the zeppelin, then press continue." Title="WARNING" />
+							Text="RAF Character - Honorbuddy has big issues using this zeppelin. Use this zeppelin to Tirisfal Glades. Once you are in Tirisfal Glades get off the zeppelin, then press continue." Title="WARNING" />
 					<!--	<CustomBehavior File="UseTransport"
 									TransportId="164871"
 									WaitAtX="1838.7" WaitAtY="-4386.035" WaitAtZ="135.2322" 
@@ -156,35 +156,43 @@
 					</CustomBehavior>	
 										
 						<RunTo X="375.465" Y="52.95836" Z="24.67697" />
-					<CustomBehavior File="Message" Text="Waiting 80 seconds, 1st boss." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="80000" />
+					<CustomBehavior File="Message" Text="Waiting 90 seconds, 1st boss." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="90000" />
 					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="22" AllowCombat="false">	
-						<Hotspot X="386.7191" Y="75.98532" Z="30.74272" />
-						<Hotspot X="376.0556" Y="77.98386" Z="30.74272" />	<!-- holding pens -->
+						<Hotspot X="364.6002" Y="47.72507" Z="24.67742" />
+						<Hotspot X="382.3837" Y="43.96711" Z="24.67742" />	<!-- holding pens -->
 					</CustomBehavior>
 
-						<RunTo X="183.1574" Y="247.8867" Z="42.86717" />
+						<!-- run into the first boss room -->
+						<RunTo X="193.9359" Y="234.0252" Z="40.81524" />
+						
 					<CustomBehavior File="Message" Text="Waiting 115 seconds, trash pull." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="115000" />
 					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="18" AllowCombat="false">	
-						<Hotspot X="166.0811" Y="242.9787" Z="42.86717" />
-						<Hotspot X="173.7959" Y="251.5173" Z="42.86717" />	<!-- exit of 1st boss -->
+						<Hotspot X="179.1512" Y="227.1047" Z="40.81645" />
+						<Hotspot X="191.1759" Y="240.4618" Z="40.81645" />	<!-- exit of 1st boss -->
 					</CustomBehavior>
+					
 						<RunTo X="102.7919" Y="102.4629" Z="65.44128" />
+						
 					<CustomBehavior File="Message" Text="Waiting 20 seconds for the booster to aggro the first mobs in the pull." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="20000" />	<!-- bottom of the stairs -->
 					
-						<RunTo X="145.6866" Y="65.94433" Z="109.0059" />	<!-- top of the stairs -->
+						<RunTo X="112.8219" Y="119.5147" Z="87.29726" />	<!-- stairs -->
+						
 					<CustomBehavior File="Message" Text="Waiting 50 seconds, trash pull." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="60000" />
 					
 						<RunTo X="49.92257" Y="-24.35106" Z="118.7753" />	<!-- 2nd boss -->
+						
 					<CustomBehavior File="Message" Text="Waiting 50 seconds, 2nd boss." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="50000" />
 
 						<RunTo X="165.5589" Y="-3.590013" Z="135.0026" />	<!-- left cubicle after 2nd boss -->
+						
 					<CustomBehavior File="Message" Text="Waiting 105 seconds, trash pull." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="105000" />
+					
 					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="20" AllowCombat="false">	
 						<Hotspot X="168.981" Y="2.993599" Z="135.1255" />
 						<Hotspot X="172.2151" Y="-6.65027" Z="134.9038" />
@@ -205,12 +213,10 @@
 						<RunTo X="168.4676" Y="-170.1549" Z="180.5022" />
 						<RunTo X="169.3422" Y="-202.3585" Z="180.4936" />
 						<RunTo X="210.28" Y="-273.1629" Z="180.4717" />	<!-- last -->
+						
 					<CustomBehavior File="Message" Text="Waiting 2 seconds, last boss." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="2000" />
-					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="20" AllowCombat="false">	
-						<Hotspot X="206.5077" Y="-274.7555" Z="180.4788" />
-						<Hotspot X="213.3191" Y="-270.2023" Z="180.4863" />
-					</CustomBehavior>
+					
 
 					<CustomBehavior File="Message" Text="Leaving the instance so I can reset it." LogColor="Lime" />	
 						<Runto X="142.596" Y="-127.7582" Z="169.8036" />
