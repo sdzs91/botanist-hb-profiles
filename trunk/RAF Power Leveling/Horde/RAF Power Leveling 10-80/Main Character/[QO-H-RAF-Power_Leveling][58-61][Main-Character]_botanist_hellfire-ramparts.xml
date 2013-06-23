@@ -99,22 +99,20 @@
 						<CustomBehavior File="SetHearthstone" MobId="16602" X="190.8758" Y="2610.927" Z="87.2837" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 							<RunTo X="172.8413" Y="2636.39" Z="86.64891" />
-						<CustomBehavior File="FlyTo" X="-484.5418" Y="3003.751" Z="79.76189" />
+						<CustomBehavior File="FlyTo" X="-115.7482" Y="3030.812" Z="43.5356" />
 						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 							Text="Main Character - Wait for you RAF characters to get below. Then press continue on this window first, then on the RAF characters." Title="WARNING" />
-						<CustomBehavior File="FlyTo" X="-436.0844" Y="3016.157" Z="-15.92508" />
+						<CustomBehavior File="FlyTo" X="-142.2411" Y="3021.092" Z="-1.425442" />
 						<CustomBehavior File="ForcedDismount" />
 						<CustomBehavior File="UserSettings" UseMount="False" />
-							<RunTo X="-428.841" Y="3017.889" Z="-17.41154" />
-							<RunTo X="-408.9859" Y="3021.979" Z="-16.328" />
-							<RunTo X="-389.1283" Y="3026.23" Z="-16.14779" />
-							<RunTo X="-369.3355" Y="3031.424" Z="-16.32884" />
-							<RunTo X="-349.5745" Y="3036.057" Z="-14.64245" />
-							<RunTo X="-329.5862" Y="3039.978" Z="-16.63512" />
-							<RunTo X="-326.6534" Y="3040.517" Z="-16.59379" />
-							<RunTo X="-344.905" Y="3053.779" Z="-15.87088" />
-							<RunTo X="-358.3777" Y="3068.825" Z="-15.12147" />
-							<RunTo X="-362.1401" Y="3076.281" Z="-15.03093" />
+							<RunTo X="-162.611" Y="3018.623" Z="-1.68549" />
+							<RunTo X="-279.7675" Y="3050.9" Z="-4.368855" />
+							<RunTo X="-284.6041" Y="3031.002" Z="-6.669682" />
+							<RunTo X="-317.6658" Y="3033.89" Z="-15.95055" />
+							<RunTo X="-421.3145" Y="3018.613" Z="-16.80376" />
+							<RunTo X="-331.4014" Y="3041.377" Z="-16.62462" />
+							<RunTo X="-352.1408" Y="3060.337" Z="-15.21031" />
+							<RunTo X="-363.436" Y="3078.43" Z="-15.00139" />
 						<CustomBehavior File="UserSettings" UseMount="True" />	
 					</If>
 				</If>	
