@@ -126,7 +126,7 @@
 					<CustomBehavior File="Message" Text="Moving closer to the pull." LogColor="Lime" />
 						<RunTo X="327.6431" Y="25.50112" Z="9.616175" />
 					<CustomBehavior File="Message" Text="Zigzagging to stay out of combat." LogColor="Lime" />	
-					<CustomBehavior File="RunLikeHell" NumOfTimes="54" AllowCombat="false">
+					<CustomBehavior File="RunLikeHell" NumOfTimes="62" AllowCombat="false">
 						<Hotspot X="331.5222" Y="21.8593" Z="9.62296" />
 						<Hotspot X="323.6601" Y="20.89449" Z="9.621283" />
 					</CustomBehavior>
