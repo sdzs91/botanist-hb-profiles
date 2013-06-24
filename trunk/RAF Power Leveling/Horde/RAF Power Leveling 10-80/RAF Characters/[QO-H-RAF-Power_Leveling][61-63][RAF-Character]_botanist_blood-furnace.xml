@@ -142,8 +142,8 @@
 					
 					<CustomBehavior File="Message" Text="Moving to the next wait point." LogColor="Lime" />
 						<RunTo X="349.7174" Y="10.82827" Z="9.610998" />
-					<CustomBehavior File="Message" Text="Waiting 120 seconds,  4 of 4." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="120000" />					
+					<CustomBehavior File="Message" Text="Waiting 150 seconds,  4 of 4." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="150000" />					
 					<CustomBehavior File="Message" Text="Eunning out to reset." LogColor="Lime" />
 						<RunTo X="-4.093049" Y="17.00105" Z="-44.78368" />
 					<CustomBehavior File="MyCTM" X="-0.6576805" Y="25.28975" Z="-44.79793" />
