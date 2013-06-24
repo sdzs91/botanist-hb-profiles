@@ -58,7 +58,7 @@
 								<RunTo X="-9005.403" Y="869.1169" Z="129.6929" />
 							<CustomBehavior File="Message" Text="Taking the portal to Blastedlands." LogColor="Lime" />
 							<CustomBehavior File="InteractWith" MobId="195141" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-9007.58" Y="871.8698" Z="129.6922" />
-							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+							<CustomBehavior File="WaitTimer" WaitTime="15000"  />
 							<CustomBehavior File="FlyTo" X="-11851.95" Y="-3196.791" Z="17.13597" />
 							<CustomBehavior File="MyCTM" X="-11913.63" Y="-3206.204" Z="-10.40761" />	<!-- dark portal -->
 							<CustomBehavior File="WaitTimer" WaitTime="10000" />
@@ -114,7 +114,7 @@
 								<RunTo X="1771.456" Y="-4326.629" Z="-8.225829" />
 							<CustomBehavior File="Message" Text="Taking the portal to Blastedlands." LogColor="Lime" />
 							<CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1768.45" Y="-4325.86" Z="-8.3711" />
-							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+							<CustomBehavior File="WaitTimer" WaitTime="15000"  />
 							<CustomBehavior File="UserSettings" UseMount="True" />
 							<CustomBehavior File="FlyTo" X="-11851.95" Y="-3196.791" Z="17.13597" />
 							<CustomBehavior File="MyCTM" X="-11911.02" Y="-3209.082" Z="-2.757394" />	<!-- dark portal -->
@@ -132,7 +132,7 @@
 							<RunTo X="1771.456" Y="-4326.629" Z="-8.225829" />
 						<CustomBehavior File="Message" Text="Taking the portal to Blastedlands." LogColor="Lime" />
 						<CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="1768.45" Y="-4325.86" Z="-8.3711" />
-						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000"  />
 						<CustomBehavior File="UserSettings" UseMount="True" />
 						<CustomBehavior File="FlyTo" X="-11851.95" Y="-3196.791" Z="17.13597" />
 						<CustomBehavior File="MyCTM" X="-11911.02" Y="-3209.082" Z="-2.757394" />	<!-- dark portal -->

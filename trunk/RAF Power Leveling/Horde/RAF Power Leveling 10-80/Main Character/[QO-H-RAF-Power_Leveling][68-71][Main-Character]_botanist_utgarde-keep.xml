@@ -116,7 +116,7 @@
 						<CustomBehavior File="Message" Text="You started the bot with me inside the Utgarde Keep. Running out to reset the dungeon." LogColor="Lime" />
 						<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
 						<CustomBehavior File="GoThruPortal" X="144.7174" Y="-88.65063" Z="12.55168" />
-						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000"  />
 						<CustomBehavior File="Message" Text="I'm outside Utgarde Keep's portal." LogColor="Lime" />
 							<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />	
 					</If>					 

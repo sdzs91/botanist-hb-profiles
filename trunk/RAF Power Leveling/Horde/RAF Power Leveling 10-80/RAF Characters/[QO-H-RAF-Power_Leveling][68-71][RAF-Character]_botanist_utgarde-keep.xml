@@ -121,7 +121,7 @@
 					<CustomBehavior File="Message" Text="You started the bot with me inside the Utgarde Keep. Running out to reset the dungeon." LogColor="Lime" />
 					<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
 					<CustomBehavior File="GoThruPortal" X="144.7174" Y="-88.65063" Z="12.55168" />
-					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000"  />
 					<CustomBehavior File="Message" Text="I'm outside Utgarde Keep's portal." LogColor="Lime" />
 					<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />	
 				</If>
@@ -134,7 +134,7 @@
 							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
 								Text="**********RAF Character - This character has reached the appropriate level to run Drak' Tharon Keep. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
 						</If>
-						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000"  />
 						<CustomBehavior File="GoThruPortal" X="1236.77" Y="-4860.844" Z="41.24859" /> 
 						<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
 					</If>
