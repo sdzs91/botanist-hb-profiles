@@ -46,8 +46,6 @@
 		
 		 <CustomBehavior File="UserSettings" LootMobs="False" PullDistance="25" LootRadius="1" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="True" />
 	
-         <While Condition="true" >
-
 				<If Condition="Me.MapId == 0" >
 					<CustomBehavior File="Message" Text="I am in Easter Kingdoms. I need to be in Outlands. Flying to the Dark Portal." LogColor="Lime" />
 					<CustomBehavior File="FlyTo" X="-11821.79" Y="-3185.191" Z="67.65294" />
@@ -103,7 +101,9 @@
 					<CustomBehavior File="WaitTimer" WaitTime="12000" />
 					<RunTo X="-302.408" Y="3162.92" Z="31.7273" />
 				</If>
-																							  
+					
+		<While Condition="true" >
+					
 				<If Condition="Me.ZoneId == 3483" >														 
 					<If Condition="Me.Y &gt; 3127.325 &amp;&amp; Me.Y &lt; 3174.571 &amp;&amp; Me.X &gt; -334.2414 &amp;&amp; Me.X &lt; -273.4398" >
 						<CustomBehavior File="Message" Text="I am resetting the instance." LogColor="Lime" />
@@ -217,6 +217,7 @@
 					</CustomBehavior>
 					<CustomBehavior File="Message" Text="End of second pull, The Maker." LogColor="Lime" />
 					
+						<RunTo X="327.4683" Y="128.7616" Z="9.615623" />
 						<RunTo X="326.1065" Y="160.0848" Z="9.54519" />
 					
 					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
@@ -237,67 +238,36 @@
 						<Hotspot X="434.7813" Y="186.214" Z="9.604053" />
 						<Hotspot X="459.6268" Y="180.629" Z="9.619503" />
 						<Hotspot X="483.7503" Y="174.765" Z="9.621414" />
-						<Hotspot X="473.2524" Y="176.9943" Z="9.61817" />
-						<Hotspot X="439.9362" Y="179.8322" Z="9.612198" />
-						<Hotspot X="399.1684" Y="184.9395" Z="9.601742" />
-						<Hotspot X="355.8839" Y="182.158" Z="9.613075" />
-						<Hotspot X="321.8741" Y="174.6963" Z="9.615835" />
-						<Hotspot X="327.3043" Y="154.2247" Z="9.510319" />
-						<Hotspot X="328.3274" Y="82.14758" Z="9.61447" />
-						<Hotspot X="350.3888" Y="54.31242" Z="9.614555" />
-						<Hotspot X="354.04" Y="43.56761" Z="9.601658" />
-						<Hotspot X="349.2371" Y="43.16278" Z="9.621737" />
-						<Hotspot X="355.5578" Y="50.29951" Z="9.602414" />
-					</CustomBehavior>
-					<CustomBehavior File="Message" Text="End of third pull, the lab hall." LogColor="Lime" />
-					
-						<RunTo X="460.1468" Y="169.6114" Z="9.615071" />
-					<CustomBehavior File="Message" Text="Waiting for the RAF toons." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="20000" />	
-						
-					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="456.077" Y="156.8094" Z="9.596142" />
-						<Hotspot X="456.191" Y="140.4249" Z="9.613005" />
-						<Hotspot X="456.3981" Y="118.458" Z="9.613091" />
-						<Hotspot X="483.2427" Y="124.3663" Z="9.617318" />
-						<Hotspot X="477.0736" Y="105.5457" Z="9.61471" />
-						<Hotspot X="481.8382" Y="85.58703" Z="9.622325" />
-						<Hotspot X="468.6821" Y="57.86794" Z="9.61245" />
-						<Hotspot X="454.3405" Y="49.32882" Z="9.617982" />
-						<Hotspot X="440.6087" Y="60.78244" Z="9.610888" />
-						<Hotspot X="431.7903" Y="99.7141" Z="9.621399" />
-						<Hotspot X="432.9222" Y="116.991" Z="9.620906" />
-						<Hotspot X="455.4931" Y="105.7864" Z="9.615309" />
-						<Hotspot X="455.532" Y="130.1248" Z="9.613914" /> 
+						<Hotspot X="455.7837" Y="136.5688" Z="9.613811" />
+						<Hotspot X="480.2761" Y="96.70288" Z="9.621422" />
+						<Hotspot X="469.4464" Y="59.93638" Z="9.610991" />
+						<Hotspot X="455.4332" Y="51.03013" Z="9.616289" />
+						<Hotspot X="435.1216" Y="84.17775" Z="9.620782" />
+						<Hotspot X="460.9199" Y="117.5764" Z="9.614512" />
+						<Hotspot X="465.5023" Y="86.97514" Z="9.616431" />
+						<Hotspot X="463.24" Y="70.97028" Z="9.616431" />
+						<Hotspot X="440.5754" Y="66.49932" Z="9.611997" />
+						<Hotspot X="432.3873" Y="63.14196" Z="9.606191" />
 					</CustomBehavior>	
 						
 						<RunTo X="456.0105" Y="64.52549" Z="9.613914" />
 					<CustomBehavior File="Message" Text="Opening the cell doors." LogColor="Lime" />
 					<CustomBehavior File="InteractWith" MobId="181982" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="456.0855" Y="60.3489151" Z="9.47833" />
 					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
-						<Hotspot X="454.516" Y="86.86672" Z="9.614012" />
-						<Hotspot X="455.7898" Y="142.9184" Z="9.606433" />
+						<Hotspot X="455.834" Y="67.86392" Z="9.615004" />
+						<Hotspot X="444.6729" Y="67.52101" Z="9.61554" />
+						<Hotspot X="435.347" Y="51.74779" Z="9.61925" />
 					</CustomBehavior>
 					
-						<RunTo X="455.7898" Y="142.9184" Z="9.606433" />
+						<RunTo X="435.347" Y="51.74779" Z="9.61925" />
 					<CustomBehavior File="WaitTimer" WaitTime="3000" />
-						<RunTo X="455.7898" Y="142.9184" Z="9.606433" />
-					<CustomBehavior File="WaitTimer" WaitTime="3000" />
-						<RunTo X="455.7898" Y="142.9184" Z="9.606433" />
-					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<RunTo X="435.347" Y="51.74779" Z="9.61925" />
 					
+						<RunTo X="456.213" Y="54.43913" Z="9.616556" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
 					
-						<RunTo X="455.4647" Y="115.1927" Z="9.614689" />
-					<CustomBehavior File="WaitTimer" WaitTime="30000" />
-					
-						<RunTo X="456.0587" Y="70.87966" Z="9.614689" />
-					<CustomBehavior File="Message" Text="End of third pull, the lab hall." LogColor="Lime" />	
-						<RunTo X="462.0246" Y="59.95555" Z="9.613837" />
-						
-						<RunTo X="455.8745" Y="39.32417" Z="9.61615" />
-					<CustomBehavior File="Message" Text="Waiting for the RAF toons." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="20000" />
-					
+						<RunTo X="455.8174" Y="40.91329" Z="9.616198" />
+					<CustomBehavior File="Message" Text="Killed the 2nd boss, entering the warlock room." LogColor="Lime" />	
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
 						<Hotspot X="457.9347" Y="21.98627" Z="9.552267" />
 						<Hotspot X="428.4455" Y="-19.71697" Z="9.685583" />
@@ -320,23 +290,18 @@
 						<Hotspot X="344.6682" Y="-167.1409" Z="-25.51233" />
 						<Hotspot X="310.8442" Y="-172.9304" Z="-25.51108" />
 						<Hotspot X="329.0842" Y="-192.7415" Z="-25.50822" />
-						<Hotspot X="360.8031" Y="-169.2958" Z="-23.88473" />
-						<Hotspot X="399.9839" Y="-143.28" Z="-5.195811" />
-						<Hotspot X="414.5763" Y="-78.00735" Z="9.624512" />
-						<Hotspot X="407.7983" Y="-65.38622" Z="9.6108" />
-						<Hotspot X="412.1584" Y="-108.4958" Z="9.606299" />
-						<Hotspot X="445.9807" Y="-83.10696" Z="9.569872" />
-						<Hotspot X="464.6718" Y="-84.63001" Z="9.559102" />
-						<Hotspot X="464.6868" Y="-67.92255" Z="9.549685" />
-						<Hotspot X="492.9633" Y="-50.65838" Z="9.558185" />
-						<Hotspot X="492.6093" Y="9.458169" Z="9.544993" />
+						<Hotspot X="327.5362" Y="-161.1561" Z="-25.51804" />
+						<Hotspot X="326.969" Y="-150.202" Z="-25.47604" />
+						<Hotspot X="337.3931" Y="-142.1644" Z="-25.41568" />
+						<Hotspot X="375.508" Y="-144.1772" Z="-25.11852" />
+						<Hotspot X="384.2235" Y="-136.7888" Z="-25.11206" />
+						<Hotspot X="369.2017" Y="-143.6044" Z="-25.18262" />
+						<Hotspot X="355.5131" Y="-141.3608" Z="-25.47119" />
+						<Hotspot X="347.4752" Y="-140.0157" Z="-25.42283" />
+						<Hotspot X="344.4755" Y="-146.7793" Z="-25.48334" />
 					</CustomBehavior>
-					<CustomBehavior File="Message" Text="End of fourth pull, all remaing adds." LogColor="Lime" />
-					
-						<RunTo X="328.731" Y="-167.6104" Z="-25.51017" />
-					<CustomBehavior File="Message" Text="Waiting for the RAF toons." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="20000" />	
-						
+					<CustomBehavior File="Message" Text="End of fourth pull, pulling the last boss." LogColor="Lime" />
+							
 						<RunTo X="316.5505" Y="-108.7969" Z="-24.68533" /> <!-- adds -->
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />	
 						<RunTo X="326.5804" Y="-86.60232" Z="-24.65648" />	<!-- boss -->
