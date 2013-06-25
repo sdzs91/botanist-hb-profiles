@@ -47,7 +47,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-	<CustomBehavior File="UserSettings" UseMount="True" MountDistance="20" LootRadius="1" UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="fALSE" RessAtSpiritHealers="False" FindVendorsAutomatically="fALSE" LootRadius="1" LogoutForInactivity="True" />
+	<CustomBehavior File="UserSettings" UseMount="True" MountDistance="20" LootRadius="1" UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="fALSE" RessAtSpiritHealers="False" FindVendorsAutomatically="fALSE" LogoutForInactivity="True" />
 			 	<If Condition="Me.MapId == 571" >
 					<If Condition="Me.X &lt; 1233 &amp;&amp; Me.X &gt; 1219 &amp;&amp; Me.Y &lt; -4850 &amp;&amp; Me.Y &gt; -4876" >
 						<CustomBehavior File="Message" Text="I am outside the Utgarde Keep portal, moving out of the keep." LogColor="Lime" />
@@ -315,7 +315,7 @@
 					<CustomBehavior File="UserSettings" UseMount="True" MountDistance="100"   LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" LogoutForInactivity="True" />	
 																
 					<If Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; 0.3)" >
-						<CustomBehavior File="UserSettings" UseMount="True" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+						<CustomBehavior File="UserSettings" UseMount="True" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LogoutForInactivity="True" />
 						<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth, repair and mail." LogColor="Lime" />
 						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 						<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />

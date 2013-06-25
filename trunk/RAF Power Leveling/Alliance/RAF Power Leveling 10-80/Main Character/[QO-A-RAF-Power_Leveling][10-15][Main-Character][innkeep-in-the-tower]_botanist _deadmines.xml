@@ -135,7 +135,7 @@
                                <!-- the deadmines dungeon script -->
 													   
 				<If Condition="Me.ZoneId == 1581">
-					 <CustomBehavior File="UserSettings" UseMount="False" LootMobs="False" SkinMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
+					 <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-23.32125" Y="-376.2307" Z="60.90421" />
 						<Hotspot X="-33.06363" Y="-374.3263" Z="58.93636" />
@@ -285,7 +285,8 @@
 						<Hotspot X="-210.18" Y="-568.1779" Z="20.97696" />
 					</CustomBehavior>
 						<RunTo X="-210.2982" Y="-568.5117" Z="20.97688" />
-					<CustomBehavior File="WaitTimer" WaitTime="20000" />
+					<CustomBehavior File="WaitTimer" WaitTime="30000" />
+					
 						<RunTo X="-210.2982" Y="-568.5117" Z="20.97688" />
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-177.7443" Y="-579.2161" Z="19.31002" />
@@ -311,6 +312,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<RunTo X="-101.284" Y="-653.9721" Z="7.422448" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />	
+					
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">			
 						<Hotspot X="-99.02342" Y="-658.9495" Z="7.422226" />
 						<Hotspot X="-98.81014" Y="-674.3585" Z="7.421044" />
@@ -329,12 +331,9 @@
 						<Hotspot X="-2.652072" Y="-780.1899" Z="9.951032" />
 						<Hotspot X="-14.20859" Y="-789.8606" Z="15.33831" />
 						<Hotspot X="-26.25278" Y="-799.5648" Z="19.33159" />
-						<Hotspot X="-18.19499" Y="-793.7365" Z="17.74216" />
-						<Hotspot X="-5.95795" Y="-784.5655" Z="11.07815" />
-						<Hotspot X="0.8052444" Y="-775.8753" Z="9.56134" />
-						<Hotspot X="0.8052444" Y="-775.8753" Z="9.56134" />
 					</CustomBehavior>
-						<RunTo X="0.8052444" Y="-775.8753" Z="9.56134" />
+						<RunTo X="-26.25278" Y="-799.5648" Z="19.33159" />
+						
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
 						<Hotspot X="-4.639512" Y="-783.4645" Z="10.33057" />
 						<Hotspot X="-12.38589" Y="-789.5203" Z="14.61463" />
@@ -380,26 +379,45 @@
 						<Hotspot X="-71.7127" Y="-790.9733" Z="39.27783" />
 						<Hotspot X="-56.27118" Y="-791.6086" Z="38.85359" />
 						<Hotspot X="-42.51555" Y="-796.2142" Z="39.34597" />
-						<Hotspot X="-50.37585" Y="-808.059" Z="42.48419" />
-						<Hotspot X="-64.6426" Y="-812.5276" Z="41.13737" />
-						<Hotspot X="-65.20602" Y="-827.4488" Z="41.10626" />
-						<Hotspot X="-66.64298" Y="-836.0909" Z="40.99702" />
-						<Hotspot X="-64.4062" Y="-829.6852" Z="41.19949" />
-						<Hotspot X="-77.51983" Y="-814.5038" Z="39.95203" />
+						<Hotspot X="-41.87161" Y="-798.449" Z="39.31561" />
+						<Hotspot X="-46.7347" Y="-806.4442" Z="42.8387" />
+						<Hotspot X="-67.93092" Y="-807.6219" Z="40.84772" />
+						<Hotspot X="-75.99245" Y="-819.9885" Z="40.09998" />
+						<Hotspot X="-87.23589" Y="-821.3015" Z="39.27588" />
+						<Hotspot X="-87.28718" Y="-816.9941" Z="39.21302" />
+						<Hotspot X="-80.25808" Y="-816.5072" Z="39.74567" />
+						<Hotspot X="-83.54121" Y="-819.3344" Z="39.50004" />
 					</CustomBehavior>
-						<Runto X="-64.4062" Y="-829.6852" Z="41.19949" />
+						<Runto X="-83.54121" Y="-819.3344" Z="39.50004" />
+						
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-76.72224" Y="-819.9684" Z="40.03604" />
+						<Hotspot X="-52.98059" Y="-809.5904" Z="42.22857" />
+						<Hotspot X="-46.43647" Y="-805.7599" Z="42.86917" />
+						<Hotspot X="-41.84914" Y="-797.2287" Z="39.33283" />
+						<Hotspot X="-38.3437" Y="-797.7328" Z="39.33328" />
+					</CustomBehavior>	
+						
+						<CustomBehavior File="MyCTM" X="-24.16962" Y="-797.9286" Z="19.44403" />
+						
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-1.975269" Y="-780.8501" Z="9.979088" />
+						<Hotspot X="-2.915008" Y="-755.7633" Z="8.806682" />
+						<Hotspot X="-24.06226" Y="-730.5344" Z="8.239679" />
+						<Hotspot X="-38.13719" Y="-728.6567" Z="8.894687" />
+						<Hotspot X="-81.72536" Y="-730.2523" Z="8.986619" />
+						<Hotspot X="-96.43546" Y="-717.0363" Z="8.583695" />
+						<Hotspot X="-102.1683" Y="-655.8776" Z="7.422467" />
+					</CustomBehavior>	
+						
 					<CustomBehavior File="WaitTimer" WaitTime="3000" />
-						<RunTo X="-99.09794" Y="-666.1941" Z="7.416621" />
-						<RunTo X="-100.8408" Y="-656.0048" Z="7.422353" />
 						<RunTo X="-238.5866" Y="-578.6992" Z="51.20921" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<!-- Interact will come out once followers are added -->
-					<CustomBehavior File="InteractWith" MobId="17154" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="-242.96521" Y="-578.561035" Z="51.1366043" />					
+					
 						<RunTo X="-26.83352" Y="-376.1732" Z="60.02905" />
-					<CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" SkinMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
+					<CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
 					<CustomBehavior File="MyCTM" X="-13.03915" Y="-386.0322" Z="62.78151" />	
 					<CustomBehavior File="GoThruPortal" X="-14.50672" Y="-389.0634" Z="63.28239" />
-					<!--<CustomBehavior File="WaitTimer" WaitTime="12000" />-->
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
 						<RunTo X="-11208" Y="1676.41" Z="24.5716" />
 				</If>
 		

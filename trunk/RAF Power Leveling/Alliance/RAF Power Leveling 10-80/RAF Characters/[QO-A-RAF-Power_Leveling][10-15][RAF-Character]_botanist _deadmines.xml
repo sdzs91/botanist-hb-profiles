@@ -203,16 +203,16 @@
 					<CustomBehavior File="Message" Text="Waiting 20 seconds, top door." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="20000" />					
 					<CustomBehavior File="InteractWith" MobId="17154" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="-242.96521" Y="-578.561035" Z="51.1366043" />
-						<RunTo X="-183.4286" Y="-565.2609" Z="51.23046" />
-					<CustomBehavior File="Message" Text="Waiting 40 seconds, ramp." LogColor="Lime" />	
-					<CustomBehavior File="WaitTimer" WaitTime="40000" />	
+						<RunTo X="-232.5456" Y="-579.0164" Z="51.22771" />
+					<CustomBehavior File="Message" Text="Waiting 60 seconds, ramp." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="60000" />	
 						<RunTo X="-172.945" Y="-580.1882" Z="19.3131" />
 					<CustomBehavior File="Message" Text="Waiting 55 seconds, bottom door." LogColor="Lime" />	
 					<CustomBehavior File="WaitTimer" WaitTime="55000" />
 						<RunTo X="-99.24007" Y="-650.1745" Z="6.978131" />
 						<RunTo X="-100.5887" Y="-668.5515" Z="7.422379" />
-					<CustomBehavior File="Message" Text="Waiting 220 seconds, ship's door." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="220000" />
+					<CustomBehavior File="Message" Text="Waiting 160 seconds, ship's door." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="160000" />
 					<!-- exit -->
 						<RunTo X="-101.284" Y="-653.9721" Z="7.422448" />
 						<RunTo X="-21.45555" Y="-376.0533" Z="60.81528" />
