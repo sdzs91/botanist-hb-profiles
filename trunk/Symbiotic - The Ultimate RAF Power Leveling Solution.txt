@@ -170,7 +170,7 @@ Grand total: 1105g
 
 
 [LIST]
-Until the 1-10 sections are complete, users [U]must[/U] level their RAF accounts to level 10 by whatever means.
+Until the level 1-10 sections are complete, users [U]must[/U] level their RAF accounts to level 10 by whatever means.
 [/LIST]
 [LIST]
 User [U]must[/U] set the hearthstone's of all RAF characters with [URL="http://www.wowhead.com/npc=6740/innkeeper-allison"]Innkeeper Allison[/URL] in Stormwind (Alliance) or [URL="http://www.wowhead.com/npc=6929/innkeeper-gryshka#."]Innkeeper Gryshka[/URL] in Orgrimmar (Horde).
@@ -367,8 +367,12 @@ Otherwise, the characters will advance to the next instance automatically !!!
 [/LIST]
 [/CODE]
 
+
+
 [URL="http://botanist-hb-profiles.googlecode.com/svn/trunk/"][COLOR="#0000FF"][SIZE=3]*** Click To Access The Public SVN ***[/SIZE][/COLOR][/URL]
 [/CENTER]
+
+
 
 Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] will need to contact me via skype and provide me their donor name or email for access to the new svn.
 
