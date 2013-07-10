@@ -1,0 +1,378 @@
+[CENTER]
+
+[B][SIZE=4][COLOR="#FF0000"]Coming Soon[/COLOR][/SIZE][/B]
+
+[B][SIZE=4][U][COLOR="#0000CD"]Symbiotic - The Ultimate RAF Power Leveling Solution[/COLOR][/U][/SIZE][/B]
+
+[B][SIZE=4][COLOR="#0000CD"]Creators - Botanist/Wigglez[/COLOR][/SIZE][/B]
+
+[URL="https://www.youtube.com/watch?feature=player_embedded&v=pvXMpfPb6Ok"][SIZE=3][COLOR="#0000CD"][B]How to RAF Accounts[/B][/COLOR][/SIZE][/URL]
+
+[video=youtube;v3ClQctgoj4]http://www.youtube.com/watch?v=v3ClQctgoj4[/video]
+
+[SIZE=3][COLOR="#800000"][B]Symbiotic - Blackfathom Deeps Trailer[/B][/COLOR][/SIZE]
+
+[B][SIZE=2][COLOR="#0000CD"]*** Watch the video in 1080 HD for better quality (If you have the bandwidth) ***[/COLOR][/SIZE][/B]
+
+[CODE]
+
+[SIZE=3]Please use the existing [COLOR="#FF0000"]RAF Power Leveling[/COLOR] profiles attached to this post or the public SVN until we have officially released [COLOR="#0000CD"]Symbiotic[/COLOR][/SIZE]
+
+
+
+[SIZE=4][COLOR="#0000CD"]Current Progress[/COLOR][/SIZE]
+
+[[COLOR="#008000"]✔[/COLOR]][COLOR="#0000CD"][QO-A][10-17] Deadmines[/COLOR]
+[[COLOR="#008000"]✔[/COLOR]][COLOR="#FF0000"][QO-H][10-17] Wailing Caverns[/COLOR]
+
+[[COLOR="#008000"]✔[/COLOR]][QO][17-25] Blackfathom Deeps 
+[[COLOR="#008000"]✔[/COLOR]][QO][25-37] Razorfen Kraul 
+[[COLOR="#008000"]✔[/COLOR]][QO][37-42] Razorfen Downs
+[[COLOR="#008000"]✔[/COLOR]][QO][42-48] Blackrock Depths
+[[COLOR="#008000"]✔[/COLOR]][QO][48-58] Blackrock Spire
+[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][58-61] Hellfire Ramparts
+[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][61-63] Blood Furnace
+[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][63-68] Sethekk Halls
+[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][68-71] Utgarde Keep
+[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][71-73] Drak'tharon Keep
+[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][73-75] Gundrak
+[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][75-80] Halls of Lightning
+
+[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][COLOR="#006400"][QO][80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
+[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][83-85] Lost City of Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP[/COLOR]
+
+[/CODE]
+
+
+
+
+
+
+
+
+
+
+
+[SIZE=3][COLOR="#FF0000"]*** Disclaimer ***[/COLOR][/SIZE]
+[SIZE=3][COLOR="#FF0000"]*** [U]READ THIS OR YOUR COMPUTER WILL BLOW UP[/U] ***[/COLOR][/SIZE]
+[CODE]
+
+
+
+
+
+[LIST]
+[*]When complete, these profiles will level your character from level 1 through 85, [COLOR="#0000CD"]fully automated[/COLOR] 
+[/LIST]
+
+[LIST]
+[*]We have not yet determined the total runtime. Present [B][U]guess-timate[/U][/B] would be 10-80 in less than 32 hours (including automated movement between instances)
+[/LIST]
+
+[LIST]
+[*][U]Under NO circumstances[/U] do we advise or suggest that you run these profiles [U]unattended[/U] or for [U]excessive amounts of time[/U].
+[/LIST]
+
+[LIST]
+[*][B][U][SIZE=2]If you, [U]as the user[/U], decide to go against this warning, you do so after being informed that we as the profile writers advise against it.[/SIZE][/U][/B]
+[/LISt]
+
+
+[COLOR="#FFFFFF"]Spacer[/COLOR]
+[/CODE]
+
+
+[B][SIZE=4][COLOR="#0000FF"] ***Prerequisites***[/COLOR][/SIZE][/B]
+[CODE]
+[SIZE=3]
+[LIST]
+[*]Due to an extensive use of the [URL="http://king-hb-svn.googlecode.com/svn/trunk/Leveling%20Profiles/Questing%20Behaviors/RunLikeHell.cs"]RunLikeHell[/URL] Custom Behavior, if at any time you stop the bot inside the instance
+[INDENT]
+you [U]must[/U] close and restart HonorBuddy to clear the memory !
+[/INDENT]
+[/LIST]
+
+[LIST]
+[*]You [U]must[/U] have 1 HonorBuddy session per character you intend to run the profiles on.
+[/LIST]
+
+[LIST]
+[*]The Booster [U]must[/U] be the leader of the party.
+[/LIST]
+
+[LIST]
+[*]All characters [U]must[/U] abide by the levels of the profiles.
+[INDENT]
+Booster - [U]Must[/U] be level 90
+RAF - [U]Must[/U] be level 1-85
+[/INDENT]
+[/LIST]
+
+[LIST]
+[*] The profiles [U]do not[/U] require your characters to be RAFed together, but you [U]will not[/U] receive the triple XP bonus unless they are.
+[*] If the characters are RAFed, the "raf" toons [U]must not[/U] be RAFed directly to the Booster.
+[*] In order to receive the triple XP bonus, your RAF toons [U]can't be[/U] more than four levels apart.
+[/LIST]
+
+[LIST]
+[*] Each RAF character [U]must[/U] have gold for riding and at least two mounts (one for ground, one for flight).
+[INDENT]
+Level 20 - Apprentice Riding (4g)
+Level 40 - Journeyman Riding (50g)
+Level 60 - Expert Riding (250g)
+Level 60 - Flight Master's License (250g)
+Level 68 - Cold Weather Flying (500g) 
+Total riding cost: 1054g
+
+Any blue ground mount (1g)
+Any blue flying mount (50g)
+Total mount cost: 51g
+
+Grand total: 1105g
+[/INDENT]
+[/LIST]
+
+[LIST]
+[*] The Booster [U]must[/U] have a Hearthstone - [B][I][U]OR[/U][/I][/B] - Innkeeper's Daughter present in their bags.
+[/LIST]
+
+[LIST]
+[*] At all times, the RAF's hearthstone [U]must[/U] be set in the proper location in order to have full functionality. 
+[INDENT]
+
+[COLOR="#0000CD"]Alliance RAF's [U]must[/U] have a hearthstone in their bags and that hearthstone [U]must[/U] be set to [URL="http://www.wowhead.com/npc=6740/innkeeper-allison"]Innkeeper Allison[/URL] in Stormwind. [/COLOR]
+[COLOR="#FF0000"]Horde RAF's [U]must[/U] have a hearthstone in their bags and that hearthstone [U]must[/U] be set to [URL="http://www.wowhead.com/npc=6929/innkeeper-gryshka#."]Innkeeper Gryshka[/URL] in Orgrimmar.[/COLOR]
+[/INDENT]
+[/LIST]
+
+[/SIZE]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[COLOR="#FFFFFF"]Spacer[/COLOR]
+[/CODE]
+
+[B][SIZE=4][COLOR="#0000CD"]*** Instructions ***[/COLOR][/SIZE][/B]
+[CODE]
+
+
+[LIST]
+Until the 1-10 sections are complete, users [U]must[/U] level their RAF accounts to level 10 by whatever means.
+[/LIST]
+[LIST]
+User [U]must[/U] set the hearthstone's of all RAF characters with [URL="http://www.wowhead.com/npc=6740/innkeeper-allison"]Innkeeper Allison[/URL] in Stormwind (Alliance) or [URL="http://www.wowhead.com/npc=6929/innkeeper-gryshka#."]Innkeeper Gryshka[/URL] in Orgrimmar (Horde).
+[/LIST]
+[LIST]
+Users [U]must[/U] invite all party members into the party. The Booster [U]must[/U] be the party leader.
+[/LIST]
+[LIST]
+If you are starting the profiles between levels 10 and 17, you [U]must[/U] start all your characters from Stormwind (Alliance) or Orgrimmar (Horde).
+[/LIST]
+[LIST]
+If you are starting the profiles > level 17, determine which profile you need to run ([COLOR="#0000CD"]Chart Below[/COLOR]) based on the lowest level character in the party.
+[/LIST]
+[Indent]
+[17-25] Blackfathom Deeps 
+
+[25-37] Razorfen Kraul 
+
+[37-42] Razorfen Downs
+
+[42-48] Blackrock Depths
+
+[48-58] Blackrock Spire
+
+[58-61] Hellfire Ramparts
+
+[61-63] Blood Furnace
+
+[63-68] Sethekk Halls
+
+[68-71] Utgarde Keep
+
+[71-73] Drak'tharon Keep
+
+[73-75] Gundrak
+
+[75-80] Halls of Lightning
+
+[80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
+
+[83-85] Lost City of Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
+[/INDENT]
+
+
+[LIST]
+You [U]must[/U] then move all your charcters 5 meters/yards away from the instance entrance portal you wish to begin.
+[/LIST]
+[LIST]
+Click load profile in the HonorBuddy UI. Browse to where you have the profiles stored. [COLOR="#0000CD"]Double[/COLOR] click the appropriate profile.
+[/LIST]
+[LIST]
+Once you have selected the appropriate profile on all you characters, start HonorBuddy on all of the party members. [COLOR="#0000CD"]Total[/COLOR] automation will begin from that point.
+[/LIST]
+
+
+
+
+
+
+[COLOR="#FFFFFF"]Spacer[/COLOR]
+[/CODE]
+
+
+
+[B][SIZE=4][COLOR="#0000CD"]*** INFORMATION ***[/COLOR][/SIZE][/B]
+[CODE]
+
+
+
+
+[LIST]
+[*] Should you have questions/problems/bug reports :
+[INDENT]
+Contact me via Skype by clicking my link ----> : [SIZE=3][URL="skype:Botanist68?add"][COLOR="#0000CD"]Botanist[/COLOR][/URL][/SIZE]
+
+[/INDENT]
+[/LIST]
+
+[LIST]
+[*] There will be two modes of operation:
+
+[INDENT]
+Full Automation - User starts the bots (where told) or on the continent where the appropriate instance is located, and allows the profiles to control everything !!!
+[/INDENT]
+
+[INDENT]
+Instance Automation - User manually moves all characters approximately 5 yrds away from the correct portal entrance, starts all characters from there. 
+[INDENT]
+User will need to stop the automated movement when the characters reach the appropriate level to advance to the next instance.
+[/INDENT]
+[INDENT]
+Otherwise, the characters will advance to the next instance automatically !!!
+[/INDENT]
+[/INDENT]
+[/LIST]
+
+
+
+[COLOR="#FFFFFF"]Spacer[/COLOR]
+[/CODE]
+
+
+[B][SIZE=4][COLOR="#0000CD"]*** Special Thanks To: ***[/COLOR][/SIZE][/B]
+[CODE]
+[LIST]
+[*]Wigglez - Has driven me crazy in the process, but has: (coded, contributed, tested, and deleted much of the code, the football, and argued about "huggy bear")
+[/LIST]
+[LIST]
+[*]chinajade - the diamond in the rough - HB Dev, Custom Behavior Creator, Friend
+[/LIST]
+[LIST]
+[*]Akna - Custom Behavior Creator - His custom behaviors are what automates most of the profiles.
+[/LIST]
+[LIST]
+[*]Kickazz - Well we might as well admit it, a god among men, longtime friend who has taught me much.
+[/LIST]
+[LIST]
+[*]Natfoth - HB Dev - Custom Routine Dev - Custom Behavior Dev - Friend (my last resort)
+[/LIST]
+[LIST]
+[*]Bossland - The Boss
+[/LIST]
+[LIST]
+[*]Apoc - The Brains
+[/LIST]
+[LIST]
+[*]The remaining HB Devs, Custom Routine Creators, Custom Behavior Creators, Forum Moderators, HonorBuddy Users
+[/LIST]
+[LIST]
+[*]The many people who originaly purchased these profiles before they became free.
+[/LIST]
+[LIST]
+[*]The many users whos complaints have brought it this far.
+[/LIST]
+
+[B][SIZE=3][COLOR="#0000CD"]*** Last But Not Least ! ***[/COLOR][/SIZE][/B]
+
+[LIST]
+[*]My woman, Tammy who has literally been ignored for weeks at at time during certain portions of this endeavor.
+[/LIST]
+
+
+
+[COLOR="#FFFFFF"]spacer[/COLOR]
+[/CODE]
+
+
+
+[SIZE=3][COLOR="#0000CD"][B]***** More examples of HonorBuddys abilities !!! *****[/B][/COLOR][/SIZE]
+[CODE]
+[LIST]
+[url=http://www.youtube.com/watch?v=aH56Q7KjXhE]Rogue Pickpocketing - Fire Camp Osul[/url] 
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=xg0LP-xm-0U][GoTo] Stormwind/orgrimmar To Dalaran[/url]    
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=X-FCwgKYd48]The Scale of the Sands - Reputation Farming[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=luaElLv876k]It's A Long Way To The Top[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=06tiJzE1lQ4]A Celestial Experience[/url] 
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=IaSM28ECqTQ]Instance Farming [90] Grim Batol[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=vUrGH8LIEB0]Instance Farming [85] Tol'vir[/url] 
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=g4e3NFjGzwo]Instance Farming [85] Blackrock Caverns[/url]  
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=L8Qx-HFlQW8]Instance Farming [85] Botanica[/url] 
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=6VybjbDPyYg]Instance Farning [85] Halls of Lightning[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=oAb6kwV6i2g]Instance Farning [85] Stonecore[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=JZiqxyubrhM]Korda Torros -  Forager's Gloves[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=v575AjGk-Zo]Deathcharger's Reins Stratholme[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=0QG8AnYKCi4]Instance Farming [90] Pit of Saron[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=drJgje2LYZY]Pangaea 87-88 2M XP/hr[/url]
+[/LIST]
+[/CODE]
+[/CENTER]
+
+Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] will need to contact me via skype and provide me their donor name or email for access to the new svn.
+
+[B][CENTER][COLOR="#FF0000"][SIZE=2]Many, many hours have went into this profile as well as many others. Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN.[/SIZE][/COLOR][/CENTER][/B]
+
+[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NQ9P6LUTG5QDN"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
+
+[URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL][/CENTER]

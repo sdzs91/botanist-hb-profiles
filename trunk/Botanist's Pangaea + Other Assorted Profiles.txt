@@ -1,0 +1,102 @@
+[CENTER][B][COLOR="#0000FF"][SIZE=5][I]Botanist's Pangaea [SIZE=6]+ [/SIZE]Other Assorted Profiles[/I][/SIZE][/COLOR][/B]
+
+Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] will need to contact me via skype and provide me their donor name or email for access to the new svn.[/CENTER]
+
+[QUOTE] [SIZE=3][COLOR="#008000"]Pangaea is an Alliance/Horde 1-90 100% AFKable profile. Starts in [COLOR="#0000CD"][SIZE=4][U]Northshire[/U] (Alliance)[/SIZE][/COLOR] or [COLOR="#FF0000"][SIZE=4][U]Valley of Trials[/U] (Horde)[/SIZE][/COLOR], ends at the Temple of the White Tiger. (Waits for assistance to complete the quest opening the gate to Vale of the Eternal Blossoms) Zone locked races can use this after leaving the starting zone. Pangaea is fully automated (sets hearth, uses hearth,  repairs, mails, vendors, uses boats/portals/flight paths, completes opening quest for Hyjal and Pandaria). Pangaea currently interchanges between 22 profiles as needed. The profile is made to work in conjunction with [URL="http://www.thebuddyforum.com/releases/30506-arelog-simple-free-relogger-buddy-products.html"][COLOR="#800000"]Arelog[/COLOR][/URL] (Arelog is not a requirement). Set Arelog to run this profile on your character(s) for approximately 6-8 hours per day and to Idle for 16-18 hours per day and forget about it. Come back in two weeks to your new level 90 character.[/COLOR] [/SIZE][/QUOTE]
+
+[CENTER] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/ku-xlarge_zps89bbd077.jpg[/IMG] 
+
+[B][SIZE=4][COLOR="#0000CD"]Pangaea 87-88 2m XP/hr[/COLOR][/SIZE][/B]
+
+[B][SIZE=4][COLOR="#0000CD"]View in 1080 HD [/COLOR][/SIZE][/B]
+
+[video=youtube;drJgje2LYZY]http://www.youtube.com/watch?v=drJgje2LYZY[/video]
+
+[SIZE=2][COLOR="#0000CD"]More Videos using HonorBuddy[/COLOR][/SIZE]
+
+[url=http://www.youtube.com/watch?v=aH56Q7KjXhE]Botanist Rogue Pickpocketing - Fire Camp Osul Long Route[/url] 
+[url=http://www.youtube.com/watch?v=xg0LP-xm-0U]Botanist [GoTo] Stormwind/orgrimmar To Dalaran[/url]    
+[url=http://www.youtube.com/watch?v=X-FCwgKYd48]Botanist The Scale of the Sands - Reputation Farming[/url]
+[url=http://www.youtube.com/watch?v=luaElLv876k]Botanist It's A Long Way To The Top[/url]
+[url=http://www.youtube.com/watch?v=06tiJzE1lQ4]Botanist A Celestial Experience[/url] 
+[url=http://www.youtube.com/watch?v=IaSM28ECqTQ]Botanist Instance Farming [90] Grim Batol[/url]
+[url=http://www.youtube.com/watch?v=vUrGH8LIEB0]Botanist Instance Farming [85] Tol'vir[/url] 
+[url=http://www.youtube.com/watch?v=g4e3NFjGzwo]Botanist Instance Farming [85] Blackrock Caverns[/url]  
+[url=http://www.youtube.com/watch?v=L8Qx-HFlQW8]Botanist Instance Farming [85] Botanica[/url] 
+[url=http://www.youtube.com/watch?v=6VybjbDPyYg]Botanist Instance Farning [85] Halls of Lightning[/url]
+[url=http://www.youtube.com/watch?v=oAb6kwV6i2g]Botanist Instance Farning [85] Stonecore[/url]
+[url=http://www.youtube.com/watch?v=JZiqxyubrhM]Korda Torros -  Forager's Gloves[/url]
+[url=http://www.youtube.com/watch?v=v575AjGk-Zo]Botanist Deathcharger's Reins Stratholme[/url]
+[url=http://www.youtube.com/watch?v=0QG8AnYKCi4]Botanist Instance Farming [90] Pit of Saron[/url]
+[url=http://www.youtube.com/watch?v=drJgje2LYZY]Pangaea 87-88 2M XP/hr[/url]
+
+[/CENTER]
+
+[QUOTE][B][COLOR="#0000FF"][SIZE=3]What It Does:[/SIZE][/COLOR][/B]
+
+[SIZE=3][COLOR="#008000"]Pangaea is a leveling profile that detects your faction/ level and automatically changes to the appropriate profile for your character. It is essentially a fancy griding profile written on the "Questing" bot base to allow much more functionality than a "Grinding" bot base profile. It does complete some quest, approximately (15) but, only the quest reqired for it to navigate in wow by opening portal or gates such as those leading into Vale of Eternal Blossoms .[/COLOR][/SIZE]  [/QUOTE]
+
+[QUOTE][B][LEFT][COLOR="#0000FF"][SIZE=3]Where To Get It:[/SIZE][/COLOR][/LEFT][/B]
+Download the zip file below. Or use my [URL="http://botanist-hb-profiles.googlecode.com/svn/trunk/"][COLOR="#0000FF"]SVN[/COLOR][/URL] with a SVN Client such as [URL="http://tortoisesvn.net/downloads.html"][COLOR="#0000FF"]Tortoise SVN[/COLOR][/URL] 
+[COLOR="#FF0000"]Those that download the zip file, be aware that it may contain bugs which have been updated on the SVN[/COLOR][/QUOTE]
+
+[QUOTE][COLOR="#0000CD"][B][COLOR="#0000CD"][SIZE=4]Support[/SIZE][/COLOR][/B]
+
+[SIZE=3]For those that are new to HonorBuddy, I provide support for [B][I][U]HonorBuddy setup[/U][/I][/B] as well as [B][U][I]support for all my profiles[/I][/U][/B]. For any support related issues, please add me to skype, Botanist68[/SIZE][/COLOR]
+[QUOTE]For those that wish to donate I have a [B][COLOR="#0000CD"]private SVN[/COLOR][/B] with approximately [COLOR="#0000CD"]575 profiles[/COLOR] I have written. Feel free to PM me for more details or send donations to [email]botanist1968@gmail.com[/email] via PayPal. If you donate, please PM me or add me to skype.
+
+[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NQ9P6LUTG5QDN"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL][/CENTER]
+[/QUOTE] 
+ [/QUOTE]
+
+[QUOTE][B][LEFT][COLOR="#0000FF"][SIZE=3]Requirements:[/SIZE][/COLOR][/LEFT][/B]
+1. The profile will require a total of 1005 gold for riding training. ( Apprentice Riding [5g level 20] + Journeyman Riding [50g level 40] + Expert Riding [250g level 60] + Flight Master's License [250g level 68] + Cold Weather Flying [500g level 68] ) Make sure you character has the appropriate amount of gold before they reach each threshold. All or the majority of riding cost will looted by your character.
+2. Use the Autoeqip plugin for Honorbuddy to equip looted gear. The better your characters gear, the faster it will  level. If possible, periodically purchase level appropriate gear, but it is not a requirement.
+3. DO NOT alter the profile structure.
+4. For people using the profile for the first time, make sure your character is on the appropriate continent for it's level. (Alliance 1-58 Eastern Kingdoms) (Horde 1-58 Kalimdor) (58-68 Outlands) (68-80 Northrend) (80-84 Kalimdor) (85 Eastern Kingdoms) (85+ Pandaria)
+[/QUOTE]
+
+[QUOTE][B][LEFT][COLOR="#0000FF"][SIZE=3]Directions[/SIZE][/COLOR][/LEFT][/B]
+1. Log into WoW.
+2. Log into Honorbuddy.
+3. Select Questing as the bot base.
+4. Click the load profile tab on the honorbuddy window.
+5. Browse to the \botanist-hb-profiles\Pangaea\ folder if you are using the SVN.
+6. Double click on  [QO]_botanist_pangaea .
+7. Make sure you have downloaded a Routine for your character. The default Honorbuddy Routine, Singular comes pre-installed with Honorbuddy.
+8, Make sure you are on the correct comtinent as instructed in the requirements above
+9. Click start on the honorbuddy window.
+10. Follow the instructions on the popup window that appears when you start the profile.
+[/QUOTE]
+
+[QUOTE]
+[COLOR="#0000FF"][SIZE=3][B]Courtesy Profiles
+[/B][/SIZE][/COLOR][I][COLOR="#0000CD"][SIZE=2]I have written many HB profiles over the years. Way too many to make individual pages for each. I will be posting some of those profiles on this page. 
+At no specific time, I will rotate new profiles and remove the old. Check back for the newest additions.[/SIZE][/COLOR][/I]
+
+[QUOTE][B][U][SIZE=2][COLOR="#0000CD"]Currently available profiles:[/COLOR][/SIZE][/U][/B]
+
+[B][SIZE=2][COLOR="#0000CD"][GB2-N-M+H]_botanist_jade-forrest_windward_isle
+[QO-N][flying][Aethis - Pool-Stirrer]_botanist_jade-forest
+[QO-N][flying][Ferdinand - Ook-Breaker-Mace]_botanist_jade-forest
+[QO-N][flying][Kor'nas Nightsavage - Darkstaff-of-Annihilation]_botanist_jade-forest
+[QO-N][flying][Krax'ik - Needlefang-Throatripper]_botanist_jade-forest
+[QO-N][flying][Mister - Ferocious-Ook-Breaker-Mace]_botanist_jade-forest
+[QO-N][flying][Morgrinn - *****fang-Fang*****er-Battlemace]_botanist_jade-forest
+[QO-N][flying][Sarnak - Fishsticker-Crossbow]_botanist_jade-forest
+[QO-N][flying][Urobi - Pathwalker-Greatstaff]_botanist_jade-forest 
+
+[/COLOR][/SIZE]
+[/B][/QUOTE][/QUOTE]
+
+
+[QUOTE][B]  [SIZE=3] [COLOR="#0000CD"][CENTER]Please report any bugs with an accurate description of the problem as well as a log. Bugs will be fixed ASAP.
+Before reporting bugs, please make sure you are using the latest version from the SVN.[/CENTER][/COLOR][/SIZE] [/B][/QUOTE]
+
+[B][CENTER][COLOR="#FF0000"][SIZE=2]Many, many hours have went into this profile as well as many others. Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN.[/SIZE][/COLOR][/CENTER][/B]
+
+[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NQ9P6LUTG5QDN"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
+
+[COLOR="#0000CD"][SIZE=4][B]OR[/B][/SIZE][/COLOR]
+
+[URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL][/CENTER]
