@@ -16,11 +16,22 @@
 
 [CODE]
 
-[SIZE=3]Please use the existing [COLOR="#FF0000"]RAF Power Leveling[/COLOR] profiles attached to this post or [URL="http://botanist-hb-profiles.googlecode.com/svn/trunk/"][COLOR="#0000FF"][SIZE=3]*** Click To Access The Public SVN ***[/SIZE][/COLOR][/URL] until we have officially released [COLOR="#0000CD"]Symbiotic[/COLOR][/SIZE]
 
+[LIST]
+[*]The entire structure, movement, internal instance code, and automation are currently being implemented or enhanced.
+[/LIST]
+[LIST]
+[*]We do not yet have an official release date for Symbiotic, but I expect it will be released in days, not weeks !!!
+[/LIST]
+[LIST]
+[*]Please use the pre-existing [COLOR="#FF0000"]RAF Power Leveling[/COLOR] profiles attached to this post or [URL="http://botanist-hb-profiles.googlecode.com/svn/trunk/"][COLOR="#0000FF"][SIZE=3]*** Click To Access the Public SVN ***[/SIZE][/COLOR][/URL]
+[INDENT]
+To access the SVN, you will need a SVN client software such as [URL="http://tortoisesvn.net/downloads.html"][COLOR="#0000CD"]Tortoise SVN[/COLOR][/URL]
+[/INDENT]
 
-
-[SIZE=4][COLOR="#0000CD"]Current Progress[/COLOR][/SIZE]
+[/LIST]
+[INDENT]
+[SIZE=3][COLOR="#0000CD"]Current Progress[/COLOR][/SIZE]
 
 [[COLOR="#008000"]✔[/COLOR]][COLOR="#0000CD"][QO-A][10-17] Deadmines[/COLOR]
 [[COLOR="#008000"]✔[/COLOR]][COLOR="#FF0000"][QO-H][10-17] Wailing Caverns[/COLOR]
@@ -40,17 +51,13 @@
 
 [[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][COLOR="#006400"][QO][80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
 [[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][83-85] Lost City of Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP[/COLOR]
+[/INDENT]
 
+
+
+
+[COLOR="#FFFFFF"]spacer[/COLOR]
 [/CODE]
-
-
-
-
-
-
-
-
-
 
 
 [SIZE=3][COLOR="#FF0000"]*** Disclaimer ***[/COLOR][/SIZE]
