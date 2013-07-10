@@ -16,7 +16,7 @@
 
 [CODE]
 
-[SIZE=3]Please use the existing [COLOR="#FF0000"]RAF Power Leveling[/COLOR] profiles attached to this post or the public SVN until we have officially released [COLOR="#0000CD"]Symbiotic[/COLOR][/SIZE]
+[SIZE=3]Please use the existing [COLOR="#FF0000"]RAF Power Leveling[/COLOR] profiles attached to this post or [URL="http://botanist-hb-profiles.googlecode.com/svn/trunk/"][COLOR="#0000FF"][SIZE=3]*** Click To Access The Public SVN ***[/SIZE][/COLOR][/URL] until we have officially released [COLOR="#0000CD"]Symbiotic[/COLOR][/SIZE]
 
 
 
