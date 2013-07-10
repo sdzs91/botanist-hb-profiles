@@ -6,7 +6,7 @@
 
 [B][SIZE=4][COLOR="#0000CD"]Creators - Botanist/Wigglez[/COLOR][/SIZE][/B]
 
-[URL="https://www.youtube.com/watch?feature=player_embedded&v=pvXMpfPb6Ok"][SIZE=3][COLOR="#0000CD"][B]How to RAF Accounts[/B][/COLOR][/SIZE][/URL]
+
 
 [video=youtube;v3ClQctgoj4]http://www.youtube.com/watch?v=v3ClQctgoj4[/video]
 
@@ -238,14 +238,13 @@ Once you have selected the appropriate profile on all you characters, start Hono
 [B][SIZE=4][COLOR="#0000CD"]*** INFORMATION ***[/COLOR][/SIZE][/B]
 [CODE]
 
-
-
-
+[LIST]
+[*][URL="https://www.youtube.com/watch?feature=player_embedded&v=pvXMpfPb6Ok"][SIZE=3][COLOR="#0000CD"][B]How to RAF Accounts[/B][/COLOR][/SIZE][/URL]
+[/LIST]
 [LIST]
 [*] Should you have questions/problems/bug reports :
 [INDENT]
 Contact me via Skype by clicking my link ----> : [SIZE=3][URL="skype:Botanist68?add"][COLOR="#0000CD"]Botanist[/COLOR][/URL][/SIZE]
-
 [/INDENT]
 [/LIST]
 
@@ -253,17 +252,17 @@ Contact me via Skype by clicking my link ----> : [SIZE=3][URL="skype:Botanist68?
 [*] There will be two modes of operation:
 
 [INDENT]
-Full Automation - User starts the bots (where told) or on the continent where the appropriate instance is located, and allows the profiles to control everything !!!
+[B][U]Full Automation[/U][/B] - User starts the bots (where told) or approximately 5 yrds away from the correct portal entrance, starts all characters from there, and allows the profiles to control everything !!!
 [/INDENT]
 
 [INDENT]
-Instance Automation - User manually moves all characters approximately 5 yrds away from the correct portal entrance, starts all characters from there. 
+[U][B]Instance Automation[/B][/U] - User manually moves all characters approximately 5 yrds away from the correct portal entrance, starts all characters from there. 
+[/INDENT]
 [INDENT]
 User will need to stop the automated movement when the characters reach the appropriate level to advance to the next instance.
 [/INDENT]
 [INDENT]
 Otherwise, the characters will advance to the next instance automatically !!!
-[/INDENT]
 [/INDENT]
 [/LIST]
 
