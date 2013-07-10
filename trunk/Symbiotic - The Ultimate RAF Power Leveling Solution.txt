@@ -308,7 +308,7 @@ Otherwise, the characters will advance to the next instance automatically !!!
 [B][SIZE=3][COLOR="#0000CD"]*** Last But Not Least ! ***[/COLOR][/SIZE][/B]
 
 [LIST]
-[*]My woman, Tammy who has literally been ignored for weeks at at time during certain portions of this endeavor.
+[*]My woman, Tammy who has literally been ignored for weeks at a time during certain portions of this endeavor.
 [/LIST]
 
 
@@ -366,6 +366,8 @@ Otherwise, the characters will advance to the next instance automatically !!!
 [url=http://www.youtube.com/watch?v=drJgje2LYZY]Pangaea 87-88 2M XP/hr[/url]
 [/LIST]
 [/CODE]
+
+[URL="http://botanist-hb-profiles.googlecode.com/svn/trunk/"][COLOR="#0000FF"][SIZE=3]*** Click To Access The Public SVN ***[/SIZE][/COLOR][/URL]
 [/CENTER]
 
 Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] will need to contact me via skype and provide me their donor name or email for access to the new svn.
