@@ -39,7 +39,7 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [[COLOR="#008000"]✔[/COLOR]][QO][37-42] Razorfen Downs
 [[COLOR="#008000"]✔[/COLOR]][QO][42-48] Blackrock Depths
 [[COLOR="#008000"]✔[/COLOR]][QO][48-60] Blackrock Spire
-[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][60-63] Blood Furnace
+[[COLOR="#008000"]✔[/COLOR]][QO][60-63] Blood Furnace
 [[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][63-68] Sethekk Halls
 [[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][68-71] Utgarde Keep
 [[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][71-73] Drak'tharon Keep
