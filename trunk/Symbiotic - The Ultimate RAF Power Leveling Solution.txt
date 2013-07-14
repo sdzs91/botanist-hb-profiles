@@ -41,8 +41,8 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [[COLOR="#008000"]✔[/COLOR]][QO][48-60] Blackrock Spire
 [[COLOR="#008000"]✔[/COLOR]][QO][60-63] Blood Furnace
 [[COLOR="#008000"]✔[/COLOR]][QO][63-68] Sethekk Halls
-[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][68-71] Utgarde Keep
-[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][71-73] Drak'tharon Keep
+[[COLOR="#008000"]✔[/COLOR]][QO][68-71] Utgarde Keep
+[[COLOR="#008000"]✔[/COLOR]][QO][71-73] Drak'tharon Keep
 [[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][73-75] Gundrak
 [[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][75-80] Halls of Lightning
 
@@ -120,11 +120,11 @@ RAF - [U]Must[/U] be level 1-85
 [LIST]
 [*] Each RAF character [U]must[/U] have gold for riding and at least two mounts (one for ground, one for flight).
 [INDENT]
-Level 20 - Apprentice Riding (4g)
-Level 40 - Journeyman Riding (50g)
-Level 60 - Expert Riding (250g)
-Level 60 - Flight Master's License (250g)
-Level 68 - Cold Weather Flying (500g) 
+Available @ Level 20 - Apprentice Riding (4g)
+Available @ Level 40 - Journeyman Riding (50g)
+Available @ Level 60 - Expert Riding (250g)  - mandatory trained  @ level 60
+Available @ Level 60 - Flight Master's License (250g) - mandatory trained  @ level 80
+Available @ Level 60 - Cold Weather Flying (500g) - mandatory trained @ level 68
 Total riding cost: 1054g
 
 Any blue ground mount (1g)
