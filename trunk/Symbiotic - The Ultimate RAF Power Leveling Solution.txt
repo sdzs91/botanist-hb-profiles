@@ -274,7 +274,7 @@ Users that have the [U]Cataclysm Expansion[/U] can stop the bots at level [B](77
 Doing so will [U]greatly[/U] increase XP/hr and [U]decrease leveling[/U] time between levels (77-80) !!!
 [/INDENT]
 [INDENT]
-Otherwise, the bots will continue to until level 80 in Halls of Lightning.
+Otherwise, the bots will continue until level 80 in Halls of Lightning.
 [/INDENT]
 
 [/LIST]
