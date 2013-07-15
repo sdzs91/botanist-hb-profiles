@@ -31,6 +31,9 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [INDENT]
 [SIZE=3][COLOR="#0000CD"]Current Progress[/COLOR][/SIZE]
 
+[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][COLOR="#0000CD"][QO-A][1-10]Northshire[/COLOR]
+[[COLOR="#008000"]✔[/COLOR]][COLOR="#FF0000"][QO-H][1-10]Valley of Trials[/COLOR]
+
 [[COLOR="#008000"]✔[/COLOR]][COLOR="#0000CD"][QO-A][10-17] Deadmines[/COLOR]
 [[COLOR="#008000"]✔[/COLOR]][COLOR="#FF0000"][QO-H][10-17] Wailing Caverns[/COLOR]
 
