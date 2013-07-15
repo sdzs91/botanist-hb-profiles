@@ -166,20 +166,17 @@ Grand total: 1105g
 
 
 [LIST]
-Until the level 1-10 sections are complete, users [U]must[/U] level their RAF accounts to level 10 by whatever means.
+If you are starting the profiles between levels 1 and 10, you [U]must[/U] start all your characters from [COLOR="#FF0000"](race starting)[/COLOR] zone, Stormwind (Alliance) or Orgrimmar (Horde).
 [/LIST]
-[LIST]
-User [U]must[/U] set the hearthstone's of all RAF characters with [URL="http://www.wowhead.com/npc=6740/innkeeper-allison"]Innkeeper Allison[/URL] in Stormwind (Alliance) or [URL="http://www.wowhead.com/npc=6929/innkeeper-gryshka#."]Innkeeper Gryshka[/URL] in Orgrimmar (Horde).
-[/LIST]
-[LIST]
-Users [U]must[/U] invite all party members into the party. The Booster [U]must[/U] be the party leader.
-[/LIST]
+
 [LIST]
 If you are starting the profiles between levels 10 and 17, you [U]must[/U] start all your characters from Stormwind (Alliance) or Orgrimmar (Horde).
 [/LIST]
+
 [LIST]
 If you are starting the profiles > level 17, determine which profile you need to run ([COLOR="#0000CD"]Chart Below[/COLOR]) based on the lowest level character in the party.
 [/LIST]
+
 [Indent]
 [17-25] Blackfathom Deeps 
 
@@ -210,15 +207,30 @@ If you are starting the profiles > level 17, determine which profile you need to
 
 
 [LIST]
+User [U]must[/U] set the hearthstone's of all RAF characters with [URL="http://www.wowhead.com/npc=6740/innkeeper-allison"]Innkeeper Allison[/URL] in Stormwind (Alliance) or [URL="http://www.wowhead.com/npc=6929/innkeeper-gryshka#."]Innkeeper Gryshka[/URL] in Orgrimmar (Horde).
+[/LIST]
+[LIST]
+Users [U]must[/U] invite all party members into the party. The Booster [U]must[/U] be the party leader.
+[/LIST]
+[LIST]
 You [U]must[/U] then move all your charcters 5 meters/yards away from the instance (entrance portal) you wish to begin.
 [/LIST]
-
 [LIST]
 Click load profile in the HonorBuddy UI. Browse to where you have the profiles stored. [COLOR="#0000CD"]Double[/COLOR] click the appropriate profile.
 [/LIST]
+[INDENT]
+Users may [U]opt[/U] to use the [QO][1-80]_raf-auto-loader [COLOR="#FF0000"](RAF Toons ONLY)[/COLOR] or manually select the first profile for the RAF characters.
+[/INDENT]
+[INDENT]
+Users must [U]manually[/U] select the first profile on the Booster.
+[/INDENT]
+[INDENT]
+Automation will begin from there.
+[/INDENT]
+
 
 [LIST]
-Once you have selected the appropriate profile on all you characters, start HonorBuddy on all of the party members. 
+Once you have selected the appropriate profile on all your characters, start HonorBuddy on all of the party members. 
 
 [INDENT][COLOR="#0000CD"][U]Complete[/U][/COLOR] automation will begin from that point.
 [/INDENT]
@@ -279,6 +291,12 @@ Otherwise, the bots will continue until level 80 in Halls of Lightning.
 
 [/LIST]
 
+[LIST]
+When the 1-10 sections are complete, users will be able to roll any [COLOR="#FF0000"](non zone-locked race)[/COLOR] level 1 class of character.
+[INDENT]
+The character will make its way to [COLOR="#0000CD"]Elwynn Forest[/COLOR]/[COLOR="#FF0000"]Durator[/COLOR] and grind to level 10 before setting its hearth in the right location for running Symbiotic.
+[/INDENT]
+[/LIST]
 
 
 [COLOR="#FFFFFF"]Spacer[/COLOR]
