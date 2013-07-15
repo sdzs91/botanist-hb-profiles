@@ -241,7 +241,7 @@ Once you have selected the appropriate profile on all you characters, start Hono
 [*][URL="https://www.youtube.com/watch?feature=player_embedded&v=pvXMpfPb6Ok"][SIZE=3][COLOR="#0000CD"][B]How to RAF Accounts[/B][/COLOR][/SIZE][/URL]
 [/LIST]
 [LIST]
-[*] Should you have questions/problems/bug reports :
+[*] Should you have questions that [SIZE=3][U][COLOR="#FF0000"]are not[/COLOR][/U][/SIZE] answered on this page or bug reports :
 [INDENT]
 Contact me via Skype by clicking my link ----> : [SIZE=3][URL="skype:Botanist68?add"][COLOR="#0000CD"]Botanist[/COLOR][/URL][/SIZE]
 [/INDENT]
@@ -268,13 +268,13 @@ Otherwise, the characters will advance to the next instance automatically !!!
 [LIST]
 [*][B][U][COLOR="#FF0000"]Important:[/COLOR][/U][/B]
 [INDENT]
-Users that have the Cataclysm Expansion can stop the bots at level 77 and change to the [QO-N][80-83]_blackrock-caverns profiles.
+Users that have the [U]Cataclysm Expansion[/U] can stop the bots at level [B](77)[/B] and change to the [QO-N][80-83]_blackrock-caverns profile.
 [/INDENT]
 [INDENT]
-Doing so will greatly increase XP/hr and decrease leveling time between levels 77-80 !!!
+Doing so will [U]greatly[/U] increase XP/hr and [U]decrease leveling[/U] time between levels (77-80) !!!
 [/INDENT]
 [INDENT]
-Otherwise, the bots will continue to level until level 80 in Halls of Lightning.
+Otherwise, the bots will continue to until level 80 in Halls of Lightning.
 [/INDENT]
 
 [/LIST]
