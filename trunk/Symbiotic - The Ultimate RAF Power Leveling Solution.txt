@@ -265,6 +265,20 @@ Otherwise, the characters will advance to the next instance automatically !!!
 [/INDENT]
 [/LIST]
 
+[LIST]
+[*][B][U][COLOR="#FF0000"]Important:[/COLOR][/U][/B]
+[INDENT]
+Users that have the Cataclysm Expansion can stop the bots at level 77 and change to the [QO-N][80-83]_blackrock-caverns profiles.
+[/INDENT]
+[INDENT]
+Doing so will greatly increase XP/hr and decrease leveling time between levels 77-80 !!!
+[/INDENT]
+[INDENT]
+Otherwise, the bots will continue to level until level 80 in Halls of Lightning.
+[/INDENT]
+
+[/LIST]
+
 
 
 [COLOR="#FFFFFF"]Spacer[/COLOR]
