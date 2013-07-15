@@ -43,7 +43,7 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [[COLOR="#008000"]✔[/COLOR]][QO][63-68] Sethekk Halls
 [[COLOR="#008000"]✔[/COLOR]][QO][68-71] Utgarde Keep
 [[COLOR="#008000"]✔[/COLOR]][QO][71-73] Drak'tharon Keep
-[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][73-75] Gundrak
+[[COLOR="#008000"]✔[/COLOR]][QO][73-75] Gundrak
 [[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][75-80] Halls of Lightning
 
 [[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][COLOR="#006400"][QO][80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
