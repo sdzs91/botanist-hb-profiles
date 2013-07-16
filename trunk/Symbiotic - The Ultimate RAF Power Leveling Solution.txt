@@ -298,6 +298,15 @@ the character will make its way to [COLOR="#0000CD"]Elwynn Forest[/COLOR]/[COLOR
 [/INDENT]
 [/LIST]
 
+[LIST]
+During testing, we noticed that HonorBuddy will give the following error if you intialize the bot while your character is in an instance.
+[/LIST]
+[LIST
+If you encounter this problem, move your characters outside the instance and then start HonorBuddy:
+[INDENT]
+"Object reference not set to an instance of an object"
+[/INDENT]
+[/LIST]
 
 [COLOR="#FFFFFF"]Spacer[/COLOR]
 [/CODE]
