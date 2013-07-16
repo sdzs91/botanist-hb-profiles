@@ -292,9 +292,9 @@ Otherwise, the bots will continue until level 80 in Halls of Lightning.
 [/LIST]
 
 [LIST]
-When the 1-10 sections are complete, users will be able to roll any [COLOR="#FF0000"](non zone-locked race)[/COLOR] level 1 class of character.
+When the 1-10 sections are complete, users will be able to create any [COLOR="#FF0000"](non zone-locked race)[/COLOR] level 1  character,
 [INDENT]
-The character will make its way to [COLOR="#0000CD"]Elwynn Forest[/COLOR]/[COLOR="#FF0000"]Durator[/COLOR] and grind to level 10 before setting its hearth in the right location for running Symbiotic.
+the character will make its way to [COLOR="#0000CD"]Elwynn Forest[/COLOR]/[COLOR="#FF0000"]Durator[/COLOR] and grind to level 10 before setting its hearth in the right location for running Symbiotic.
 [/INDENT]
 [/LIST]
 
