@@ -259,7 +259,7 @@ Once you have selected the appropriate profile on all your characters, start Hon
 [*]From the Booster account, invite all the characters into a party.
 [/LIST]
 [LIST]
-[*]Select the "questing' bot base on all your bots.
+[*]Select the "questing" bot base on all your bots.
 [/LIST]
 [LIST]
 [*]Load the Deadmines (Alliance) or Wailing Caverns (Horde) profile on the Booster.
