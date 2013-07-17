@@ -174,7 +174,7 @@ Grand total: 1105g
 
 
 [LIST]
-If you are starting the profiles between levels 1 and 10, you [U]must[/U] start all your characters from [COLOR="#FF0000"](race starting)[/COLOR] zone, Stormwind (Alliance) or Orgrimmar (Horde).
+If you are starting the profiles between levels 1 and 10, you [U]must[/U] start all your characters from the [COLOR="#FF0000"](race starting)[/COLOR] zone, Stormwind (Alliance) or Orgrimmar (Horde).
 [/LIST]
 
 [LIST]
@@ -245,6 +245,44 @@ Once you have selected the appropriate profile on all your characters, start Hon
 [/LIST]
 
 
+
+[CENTER][B][SIZE=4][COLOR="#0000CD"]*** 1-80 Full Automation ***[/COLOR][/SIZE][/B][/CENTER]
+
+
+[LIST]
+[*]Roll your level 1 characters.
+[/LIST]
+[LIST]
+[*]Put 1105g on each of the characters. The RAF characters must have a minimum of 5g to begin the profile.
+[/LIST]
+[LIST]
+[*]From the Booster account, invite all the characters into a party.
+[/LIST]
+[LIST]
+[*]Select the "questing' bot base on all your bots.
+[/LIST]
+[LIST]
+[*]Load the Deadmines (Alliance) or Wailing Caverns (Horde) profile on the Booster.
+[/LIST]
+[LIST]
+[*]Load the [QO][1-80]_raf-auto-loader on all the RAF characters.
+[/LIST]
+[LIST]
+[*]Start all your characters from that point.
+[/LIST]
+
+[INDENT]
+The Booster will fly to the rendezvous location and wait for the RAF toons to arrive.
+[/INDENT]
+[INDENT]
+The RAF characters will make their way to Stormwind or Orgrimmar and grind until level 5.
+[/INDENT]
+[INDENT]
+At level 5 the RAF characters will purchase gear and then continue grinding until level 10.
+[/INDENT]
+[INDENT]
+At level 10, the RAF characters will rendezvous with the Booster and automatically begin farming instances.
+[/INDENT]
 
 
 
