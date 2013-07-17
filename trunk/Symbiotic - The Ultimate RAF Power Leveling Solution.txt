@@ -31,7 +31,7 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [INDENT]
 [SIZE=3][COLOR="#0000CD"]Current Progress[/COLOR][/SIZE]
 
-[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][COLOR="#0000CD"][QO-A][1-10]Northshire[/COLOR]
+[[COLOR="#008000"]✔[/COLOR]][COLOR="#0000CD"][QO-A][1-10]Northshire[/COLOR]
 [[COLOR="#008000"]✔[/COLOR]][COLOR="#FF0000"][QO-H][1-10]Valley of Trials[/COLOR]
 
 [[COLOR="#008000"]✔[/COLOR]][COLOR="#0000CD"][QO-A][10-17] Deadmines[/COLOR]
@@ -118,6 +118,14 @@ RAF - [U]Must[/U] be level 1-85
 [*] The profiles [U]do not[/U] require your characters to be RAFed together, but you [U]will not[/U] receive the triple XP bonus unless they are.
 [*] If the characters are RAFed, the "raf" toons [U]must not[/U] be RAFed directly to the Booster.
 [*] In order to receive the triple XP bonus, your RAF toons [U]can't be[/U] more than four levels apart.
+[/LIST]
+
+[LIST]
+The 1-10 profiles will [U]require[/U] a minimum of 5g on you character, or they [U]will not[/U] run.
+[/LIST]
+
+[LIST]
+The 1-10 profiles will [U]require[/U] the user to enable the [U]Autoequip[/U] plugin (which comes default with HonorBuddy) to equip gear purchased at level 5..
 [/LIST]
 
 [LIST]
