@@ -92,9 +92,12 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [CODE]
 [SIZE=3]
 [LIST]
-[*]Due to an extensive use of the [URL="http://king-hb-svn.googlecode.com/svn/trunk/Leveling%20Profiles/Questing%20Behaviors/RunLikeHell.cs"]RunLikeHell[/URL] Custom Behavior, if at any time you stop the bot inside the instance
+[*]Due to an extensive use of the [URL="http://king-hb-svn.googlecode.com/svn/trunk/Leveling%20Profiles/Questing%20Behaviors/RunLikeHell.cs"]RunLikeHell[/URL] Custom Behavior,
 [INDENT]
-you [U]must[/U] close and restart HonorBuddy to clear the memory !
+if at any time you stop the bot inside the instance, you [U]must[/U] close and restart HonorBuddy to clear the memory ! 
+[/INDENT]
+[INDENT]
+You [U]must[/U] also exit the instance and manually reset it if any bosses were killed !!!
 [/INDENT]
 [/LIST]
 
@@ -173,6 +176,7 @@ Grand total: 1105g
 [CODE]
 
 
+[CENTER][B][SIZE=4][COLOR="#0000CD"]*** 1-80 Semi Automation ***[/COLOR][/SIZE][/B][/CENTER]
 [LIST]
 If you are starting the profiles between levels 1 and 10, you [U]must[/U] start all your characters from the [COLOR="#FF0000"](race starting)[/COLOR] zone, Stormwind (Alliance) or Orgrimmar (Horde).
 [/LIST]
@@ -301,7 +305,7 @@ At level 10, the RAF characters will rendezvous with the Booster and automatical
 [LIST]
 [*] Should you have questions that [SIZE=3][U][COLOR="#FF0000"]are not[/COLOR][/U][/SIZE] answered on this page or bug reports :
 [INDENT]
-Contact me via Skype by clicking my link ----> : [SIZE=3][URL="skype:Botanist68?add"][COLOR="#0000CD"]Botanist[/COLOR][/URL][/SIZE]
+[SIZE=4][COLOR="#0000CD"]Contact[/COLOR][/SIZE] me via [SIZE=4][COLOR="#0000CD"][U]Skype[/U][/COLOR][/SIZE] by clicking my link ----> : [SIZE=4][URL="skype:Botanist68?add"][COLOR="#0000CD"]Botanist[/COLOR][/URL][/SIZE]
 [/INDENT]
 [/LIST]
 
