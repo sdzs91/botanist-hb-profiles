@@ -49,7 +49,7 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [[COLOR="#008000"]✔[/COLOR]][QO][73-75] Gundrak
 [[COLOR="#008000"]✔[/COLOR]][QO][75-80] Halls of Lightning
 
-[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][COLOR="#006400"][QO][80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
+[[COLOR="#008000"]✔[/COLOR]][COLOR="#006400"][QO][80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
 [[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][83-85] Lost City of Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP[/COLOR]
 [/INDENT]
 
@@ -256,7 +256,7 @@ Once you have selected the appropriate profile on all your characters, start Hon
 [*]Put 1105g on each of the characters. The RAF characters must have a minimum of 5g to begin the profile.
 [/LIST]
 [LIST]
-[*]From the Booster account, invite all the characters into a party.
+[*]From the Booster's account, invite all the characters into a party. The Booster [U]must[/U] be the party leader.
 [/LIST]
 [LIST]
 [*]Select the "questing" bot base on all your bots.
@@ -462,7 +462,7 @@ If you encounter this problem, move your characters outside the instance and the
 
 Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] will need to contact me via skype and provide me their donor name or email for access to the new svn.
 
-[B][CENTER][COLOR="#FF0000"][SIZE=2]Many, many hours have went into this profile as well as many others. Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN.[/SIZE][/COLOR][/CENTER][/B]
+[B][CENTER][COLOR="#FF0000"][SIZE=2]Thousand's of hours (concept - coding - testing - recoding - updating - retesting - recoding - retesting) have went into these profiles, yet we are providing them to you for free. Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
 
 [CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NQ9P6LUTG5QDN"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
 
