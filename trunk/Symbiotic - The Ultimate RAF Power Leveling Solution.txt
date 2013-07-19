@@ -52,11 +52,6 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [[COLOR="#008000"]✔[/COLOR]][COLOR="#006400"][QO][80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
 [[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][83-85] Lost City of Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP[/COLOR]
 [/INDENT]
-
-
-
-
-[COLOR="#FFFFFF"]spacer[/COLOR]
 [/CODE]
 
 
@@ -83,9 +78,6 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [LIST]
 [*][B][U][SIZE=2]If you, [U]as the user[/U], decide to go against this warning, you do so after being informed that we as the profile writers advise against it.[/SIZE][/U][/B]
 [/LISt]
-
-
-[COLOR="#FFFFFF"]Spacer[/COLOR]
 [/CODE]
 
 [SIZE=3][COLOR="#FF0000"]*** Prerequisites ***[/COLOR][/SIZE]
@@ -161,23 +153,19 @@ Grand total: 1105g
 [COLOR="#FF0000"]Horde RAF's [U]must[/U] have a hearthstone in their bags and that hearthstone [U]must[/U] be set to [URL="http://www.wowhead.com/npc=6929/innkeeper-gryshka#."]Innkeeper Gryshka[/URL] in Orgrimmar.[/COLOR]
 [/INDENT]
 [/LIST]
-
 [/SIZE]
-
-
-
-
-
-
-[COLOR="#FFFFFF"]Spacer[/COLOR]
 [/CODE]
 
 [B][SIZE=4][COLOR="#0000CD"]*** Instructions ***[/COLOR][/SIZE][/B]
 [CODE]
-
-
+[LIST]
+[/LIST]
+[LIST]
+[/LIST]
 [CENTER][B][SIZE=4][COLOR="#0000CD"]*** 1-80 Semi Automation ***[/COLOR][/SIZE][/B][/CENTER]
 [LIST]
+
+
 If you are starting the profiles between levels 1 and 10, you [U]must[/U] start all your characters from the [COLOR="#FF0000"](race starting)[/COLOR] zone, Stormwind (Alliance) or Orgrimmar (Horde).
 [/LIST]
 
@@ -247,12 +235,14 @@ Once you have selected the appropriate profile on all your characters, start Hon
 [INDENT][COLOR="#0000CD"][U]Complete[/U][/COLOR] automation will begin from that point.
 [/INDENT]
 [/LIST]
-
-
-
-[CENTER][B][SIZE=4][COLOR="#0000CD"]*** 1-80 Full Automation ***[/COLOR][/SIZE][/B][/CENTER]
-
-
+[LIST]
+[/LIST]
+[LIST]
+[/LIST]
+[CENTER][B][SIZE=4][COLOR="#0000CD"]*** 1-80 Full Automation ***[/COLOR][/SIZE][/B][/CENTER][LIST]
+[/LIST]
+[LIST]
+[/LIST]
 [LIST]
 [*]Roll your level 1 characters.
 [/LIST]
@@ -287,11 +277,8 @@ At level 5 the RAF characters will purchase gear and then continue grinding unti
 [INDENT]
 At level 10, the RAF characters will rendezvous with the Booster and automatically begin farming instances.
 [/INDENT]
-
-
-
-
-[COLOR="#FFFFFF"]Spacer[/COLOR]
+[LIST]
+[/LIST]
 [/CODE]
 
 
@@ -351,14 +338,12 @@ the character will make its way to [COLOR="#0000CD"]Elwynn Forest[/COLOR]/[COLOR
 [LIST]
 During testing, we noticed that HonorBuddy will give the following error if you intialize the bot while your character is in an instance.
 [/LIST]
-[LIST
+[LIST]
 If you encounter this problem, move your characters outside the instance and then start HonorBuddy:
 [INDENT]
 "Object reference not set to an instance of an object"
 [/INDENT]
 [/LIST]
-
-[COLOR="#FFFFFF"]Spacer[/COLOR]
 [/CODE]
 
 
@@ -400,10 +385,6 @@ If you encounter this problem, move your characters outside the instance and the
 [LIST]
 [*]My woman, Tammy who has literally been ignored for weeks at a time during certain portions of this endeavor.
 [/LIST]
-
-
-
-[COLOR="#FFFFFF"]spacer[/COLOR]
 [/CODE]
 
 
