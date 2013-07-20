@@ -84,9 +84,9 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [CODE]
 [SIZE=3]
 [LIST]
-[*]Due to an extensive use of the [URL="http://king-hb-svn.googlecode.com/svn/trunk/Leveling%20Profiles/Questing%20Behaviors/RunLikeHell.cs"]RunLikeHell[/URL] Custom Behavior,
+[*]Due to an extensive use of the [URL="http://king-hb-svn.googlecode.com/svn/trunk/Leveling%20Profiles/Questing%20Behaviors/RunLikeHell.cs"]RunLikeHell[/URL] Custom Behavior:
 [INDENT]
-if at any time you stop the bot inside the instance, you [U]must[/U] close and restart HonorBuddy to clear the memory ! 
+If at any time you stop the bot inside the instance, you [U]must[/U] close and restart HonorBuddy to clear the memory ! 
 [/INDENT]
 [INDENT]
 You [U]must[/U] also exit the instance and manually reset it if any bosses were killed !!!
