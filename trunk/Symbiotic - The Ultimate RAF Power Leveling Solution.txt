@@ -317,13 +317,13 @@ Otherwise, the characters will advance to the next instance automatically !!!
 [LIST]
 [*][B][U][COLOR="#FF0000"]Important:[/COLOR][/U][/B]
 [INDENT]
-Users that have the [U]Cataclysm Expansion[/U] can stop the bots at level [B](77)[/B] and change to the [QO-N][80-83]_blackrock-caverns profile.
+Two packages will be available : [SIZE=3][COLOR="#0000CD"][B]1-80 Battle Chest[/B][/COLOR][/SIZE] and [SIZE=3][COLOR="#0000CD"][B]1-85 Cataclysm[/B][/COLOR][/SIZE] 
 [/INDENT]
 [INDENT]
-Doing so will [U]greatly[/U] increase XP/hr and [U]decrease leveling[/U] time between levels (77-80) !!!
+The difference being [SIZE=3][COLOR="#0000CD"][B]1-85 Cataclysm[/B][/COLOR][/SIZE] will automatically advance to Blackrock Caverns at level 77.
 [/INDENT]
 [INDENT]
-Otherwise, the bots will continue until level 80 in Halls of Lightning.
+[SIZE=3][COLOR="#0000CD"][B]1-80 Battle Chest[/B][/COLOR][/SIZE] will continue until level 80 in Halls of Lightning.
 [/INDENT]
 
 [/LIST]
