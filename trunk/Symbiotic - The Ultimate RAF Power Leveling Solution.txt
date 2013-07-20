@@ -50,7 +50,7 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [[COLOR="#008000"]✔[/COLOR]][QO][75-80] Halls of Lightning
 
 [[COLOR="#008000"]✔[/COLOR]][COLOR="#006400"][QO][80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
-[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][83-85] Lost City of Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP[/COLOR]
+[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][83-85] Lost City of the Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP[/COLOR]
 [/INDENT]
 [/CODE]
 
