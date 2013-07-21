@@ -16,10 +16,10 @@
 
 
 [LIST]
-[*]The entire structure, movement, internal instance code, and automation are currently being implemented or enhanced.
+[*]The entire structure, movement, internal instance code, and automation [U]have been[/U] implemented or enhanced.
 [/LIST]
 [LIST]
-[*]We do not yet have an official release date for Symbiotic, but I expect it will be released in days, not weeks !!!
+[*][SIZE=4][B]We do not yet have an official release date for Symbiotic. "Structurally speaking" it is complete.[/B][/SIZE]
 [/LIST]
 [LIST]
 [*]Please use the pre-existing [COLOR="#FF0000"]RAF Power Leveling[/COLOR] profiles attached to this post or [URL="http://botanist-hb-profiles.googlecode.com/svn/trunk/"][COLOR="#0000FF"][SIZE=3]*** Click To Access the Public SVN ***[/SIZE][/COLOR][/URL]
