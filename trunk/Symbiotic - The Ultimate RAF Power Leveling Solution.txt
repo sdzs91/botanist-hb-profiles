@@ -118,32 +118,38 @@ RAF - [U]Must[/U] be level 1-85
 [LIST]
 [*] In order to receive the triple XP bonus, your RAF toons [U]can't be[/U] more than four levels apart.
 [/LIST]
-
 [LIST]
 The 1-10 profiles will [U]require[/U] a minimum of 5g on you character, or they [U]will not[/U] run.
 [/LIST]
-
 [LIST]
-The 1-10 profiles will [U]require[/U] the user to enable the [U]Autoequip[/U] plugin (which comes default with HonorBuddy) to equip gear purchased at level 5..
+The 1-10 profiles will [U]require[/U] the user to enable the [U]Autoequip[/U] plugin.
+[INDENT]
+Autoequip  comes preinstalled with HonorBuddy, but [COLOR="#0000CD"][U]will need to be enabled[/U][/COLOR] to equip looted and purchased gear.
+[/INDENT]
 [/LIST]
-
 [LIST]
-[*] Each RAF character [U]must[/U] have gold for riding and at least two mounts (one for ground, one for flight).
+Each RAF character [U]must[/U] have gold to train their riding skill to [COLOR="#0000CD"]Expert Riding[/COLOR].
+[INDENT] 
+Plus the training listed below [B][U]and[/U][/B] at least two mounts (one for ground movement, one for flying movement).
+[/INDENT]
+[/LIST]
+[LIST]
+The profiles [U]will not[/U] buy mounts for you. If you have pre-exhisting account wide mounts, you [U]will not[/U] need to purchase new ones.
+[/LIST]
 [INDENT]
 Available @ Level 20 - Apprentice Riding (4g)
 Available @ Level 40 - Journeyman Riding (50g)
-Available @ Level 60 - Expert Riding (250g)  - mandatory trained  @ level 60
-Available @ Level 60 - Flight Master's License (250g) - mandatory trained  @ level 80
-Available @ Level 60 - Cold Weather Flying (500g) - mandatory trained @ level 68
+Available @ Level 60 - Expert Riding (250g)  - [U]mandatory [/U]trained  @ level 60
+Available @ Level 60 - Flight Master's License (250g) - [U]mandatory [/U]trained  @ level 80
+Available @ Level 60 - Cold Weather Flying (500g) - [U]mandatory[/U] trained @ level 68
 Total riding cost: 1054g
 
-Any blue ground mount (1g)
-Any blue flying mount (50g)
+[U]Any[/U] blue ground mount (1g)
+[U]Any[/U] blue flying mount (50g)
 Total mount cost: 51g
 
 Grand total: 1105g
 [/INDENT]
-[/LIST]
 
 [LIST]
 [*] The Booster [U]must[/U] have a Hearthstone - [B][I][U]OR[/U][/I][/B] - Innkeeper's Daughter present in their bags.
@@ -152,8 +158,9 @@ Grand total: 1105g
 [LIST]
 [*] At all times, the RAF's hearthstone [U]must[/U] be set in the proper location in order to have full functionality. 
 [INDENT]
-
 [COLOR="#0000CD"]Alliance RAF's [U]must[/U] have a hearthstone in their bags and that hearthstone [U]must[/U] be set to [URL="http://www.wowhead.com/npc=6740/innkeeper-allison"]Innkeeper Allison[/URL] in Stormwind. [/COLOR]
+[/INDENT]
+[INDENT]
 [COLOR="#FF0000"]Horde RAF's [U]must[/U] have a hearthstone in their bags and that hearthstone [U]must[/U] be set to [URL="http://www.wowhead.com/npc=6929/innkeeper-gryshka#."]Innkeeper Gryshka[/URL] in Orgrimmar.[/COLOR]
 [/INDENT]
 [/LIST]
