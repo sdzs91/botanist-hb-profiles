@@ -297,8 +297,12 @@ At level 10, the RAF characters will rendezvous with the Booster and automatical
 [/LIST]
 
 [LIST]
-Looting has been added for all levels 10-85. It will require the Autoequip plugin to be enabled on all the RAF toons.
+Looting has been added for all levels 10-85. It will [U]require[/U] the Autoequip plugin to be enabled on all the RAF characters at all times.
+[INDENT]
+It will also [U]require[/U] that you set a mail recipient in the HonorBuddy Settings & Tools
+[/INDENT]
 [/LIST]
+
 [LIST]
 [*]This will allow your characters to acquire some gear before heading into some of the higher level instances inwhich some bosses have instance wide aoe attacks.
 [/LIST]
