@@ -111,7 +111,11 @@ RAF - [U]Must[/U] be level 1-85
 
 [LIST]
 [*] The profiles [U]do not[/U] require your characters to be RAFed together, but you [U]will not[/U] receive the triple XP bonus unless they are.
+[/LIST]
+[LIST]
 [*] If the characters are RAFed, the "raf" toons [U]must not[/U] be RAFed directly to the Booster.
+[/LIST]
+[LIST]
 [*] In order to receive the triple XP bonus, your RAF toons [U]can't be[/U] more than four levels apart.
 [/LIST]
 
