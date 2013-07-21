@@ -50,7 +50,7 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [[COLOR="#008000"]✔[/COLOR]][QO][75-80] Halls of Lightning
 
 [[COLOR="#008000"]✔[/COLOR]][COLOR="#006400"][QO][80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
-[[COLOR="#B22222"][B][SIZE=4]x[/SIZE][/B][/COLOR]][QO][83-85] Lost City of the Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP[/COLOR]
+[[COLOR="#008000"]✔[/COLOR]][QO][83-85] Lost City of the Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP[/COLOR]
 [/INDENT]
 [/CODE]
 
@@ -294,6 +294,16 @@ At level 10, the RAF characters will rendezvous with the Booster and automatical
 [INDENT]
 [SIZE=4][COLOR="#0000CD"]Contact[/COLOR][/SIZE] me via [SIZE=4][COLOR="#0000CD"][U]Skype[/U][/COLOR][/SIZE] by clicking my link ----> : [SIZE=4][URL="skype:Botanist68?add"][COLOR="#0000CD"]Botanist[/COLOR][/URL][/SIZE]
 [/INDENT]
+[/LIST]
+
+[LIST]
+Looting has been added for all levels 10-85. It will require the Autoequip plugin to be enabled on all the RAF toons.
+[/LIST]
+[LIST]
+[*]This will allow your characters to acquire some gear before heading into some of the higher level instances inwhich some bosses have instance wide aoe attacks.
+[/LIST]
+[LIST]
+[*] It will also allow them to start earning some of the gold they require for riding skill training.
 [/LIST]
 
 [LIST]
