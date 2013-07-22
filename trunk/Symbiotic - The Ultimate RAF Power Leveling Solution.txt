@@ -59,10 +59,6 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 [SIZE=3][COLOR="#FF0000"]*** [U]READ THIS OR YOUR COMPUTER WILL BLOW UP[/U] ***[/COLOR][/SIZE]
 [CODE]
 
-
-
-
-
 [LIST]
 [*]When complete, these profiles will level your character from level 1 through 85, [COLOR="#0000CD"]fully automated[/COLOR] 
 [/LIST]
@@ -139,8 +135,8 @@ The profiles [U]will not[/U] buy mounts for you. If you have pre-exhisting accou
 [INDENT]
 Available @ Level 20 - Apprentice Riding (4g)
 Available @ Level 40 - Journeyman Riding (50g)
-Available @ Level 60 - Expert Riding (250g)  - [U]mandatory [/U]trained  @ level 60
-Available @ Level 60 - Flight Master's License (250g) - [U]mandatory [/U]trained  @ level 80
+Available @ Level 60 - Expert Riding (250g)  - [U]mandatory[/U] trained  @ level 60
+Available @ Level 60 - Flight Master's License (250g) - [U]mandatory[/U] trained  @ level 80
 Available @ Level 60 - Cold Weather Flying (500g) - [U]mandatory[/U] trained @ level 68
 Total riding cost: 1054g
 
@@ -173,6 +169,8 @@ Grand total: 1105g
 [/LIST]
 [LIST]
 [/LIST]
+
+
 [CENTER][B][SIZE=4][COLOR="#0000CD"]*** 1-80 Semi Automation ***[/COLOR][/SIZE][/B][/CENTER]
 [LIST]
 
@@ -294,7 +292,7 @@ At level 10, the RAF characters will rendezvous with the Booster and automatical
 
 
 
-[B][SIZE=4][COLOR="#0000CD"]*** INFORMATION ***[/COLOR][/SIZE][/B]
+[B][SIZE=4][COLOR="#0000CD"]*** Information ***[/COLOR][/SIZE][/B]
 [CODE]
 
 [LIST]
@@ -310,7 +308,10 @@ At level 10, the RAF characters will rendezvous with the Booster and automatical
 [LIST]
 Looting has been added for all levels 10-85. It will [U]require[/U] the Autoequip plugin to be enabled on all the RAF characters at all times.
 [INDENT]
-It will also [U]require[/U] that you set a mail recipient in the HonorBuddy Settings & Tools
+It will also [U]require[/U] that you set a mail recipient in the HonorBuddy Settings & Tools.
+[/INDENT]
+[INDENT]
+It is [U]not required[/U], but it is suggested that you equip your RAF characters with some bags of your choice to help facilitate looting.
 [/INDENT]
 [/LIST]
 
@@ -354,9 +355,9 @@ The difference being [SIZE=3][COLOR="#0000CD"][B]1-85 Cataclysm[/B][/COLOR][/SIZ
 [/LIST]
 
 [LIST]
-When the 1-10 sections are complete, users will be able to create any [COLOR="#FF0000"](non zone-locked race)[/COLOR] level 1  character,
+ Users [U]will be able[/U] to create any [COLOR="#FF0000"](non zone-locked race)[/COLOR] level 1  character.
 [INDENT]
-the character will make its way to [COLOR="#0000CD"]Elwynn Forest[/COLOR]/[COLOR="#FF0000"]Durator[/COLOR] and grind to level 10 before setting its hearth in the right location for running Symbiotic.
+The character will make its way to [COLOR="#0000CD"]Elwynn Forest[/COLOR]/[COLOR="#FF0000"]Durator[/COLOR] and grind to level 10 before setting its hearth in the right location for running Symbiotic.
 [/INDENT]
 [/LIST]
 
