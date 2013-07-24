@@ -16,7 +16,7 @@
 
 
 [LIST]
-[U][/U][B][COLOR="#0000CD"][U][SIZE=4]Symbiotic[/SIZE][/U][/COLOR][/B] is available for [SIZE=4][U][B][COLOR="#0000CD"]Beta[/COLOR][/B][/U][/SIZE] testing on the donor SVN. It [U]will be[/U] transfered to the [SIZE=3][COLOR="#0000CD"][URL="http://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#0000CD"]Public SVN[/COLOR][/URL][/COLOR][/SIZE] after [SIZE=4][U][B][COLOR="#0000CD"]Beta[/COLOR][/B][/U][/SIZE] testing.
+[U][/U][B][COLOR="#0000CD"][U][SIZE=4]Symbiotic[/SIZE][/U][/COLOR][/B] is available for [SIZE=4][U][B][COLOR="#0000CD"]Beta[/COLOR][/B][/U][/SIZE] testing on the donor SVN. It [U]will be[/U] transfered to the [SIZE=3][COLOR="#0000CD"][URL="http://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#0000CD"][B]Public SVN[/B][/COLOR][/URL][/COLOR][/SIZE] after [SIZE=4][U][B][COLOR="#0000CD"]Beta[/COLOR][/B][/U][/SIZE] testing.
 [/LIST]
 
 
@@ -28,11 +28,7 @@
 [*][SIZE=4][B]We do not yet have an official release date for Symbiotic. "Structurally speaking" it is complete.[/B][/SIZE]
 [/LIST]
 [LIST]
-[*]Please use the pre-existing [COLOR="#FF0000"]RAF Power Leveling[/COLOR] profiles attached to this post or [URL="http://botanist-hb-profiles.googlecode.com/svn/trunk/"][COLOR="#0000FF"][SIZE=3]*** Click To Access the Public SVN ***[/SIZE][/COLOR][/URL]
-[INDENT]
 To access the SVN, you will need a SVN client software such as [URL="http://tortoisesvn.net/downloads.html"][COLOR="#0000CD"]Tortoise SVN[/COLOR][/URL]
-[/INDENT]
-
 [/LIST]
 [INDENT]
 [SIZE=3][COLOR="#0000CD"]Current Progress[/COLOR][/SIZE]
@@ -93,7 +89,7 @@ To access the SVN, you will need a SVN client software such as [URL="http://tort
 If at any time you stop the bot inside the instance, you [U]must[/U] close and restart HonorBuddy to clear the memory ! 
 [/INDENT]
 [INDENT]
-You [U]must[/U] also exit the instance and manually reset it if any bosses were killed !!!
+You [U]must[/U] also exit the instance. Manually reset it if any bosses were killed !!!
 [/INDENT]
 [/LIST]
 
@@ -483,6 +479,6 @@ Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] wi
 
 [B][CENTER][COLOR="#FF0000"][SIZE=2]Thousand's of hours (concept - coding - testing - recoding - updating - retesting - recoding - retesting) have went into these profiles, yet we are providing them to you for free. Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
 
-[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NQ9P6LUTG5QDN"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
+[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
 
 [URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL][/CENTER]
