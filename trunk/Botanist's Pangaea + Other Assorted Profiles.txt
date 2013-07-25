@@ -13,7 +13,7 @@ Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] wi
 [video=youtube;drJgje2LYZY]http://www.youtube.com/watch?v=drJgje2LYZY[/video]
 
 [SIZE=2][COLOR="#0000CD"]More Videos using HonorBuddy[/COLOR][/SIZE]
-
+A
 [url=http://www.youtube.com/watch?v=aH56Q7KjXhE]Botanist Rogue Pickpocketing - Fire Camp Osul Long Route[/url] 
 [url=http://www.youtube.com/watch?v=xg0LP-xm-0U]Botanist [GoTo] Stormwind/orgrimmar To Dalaran[/url]    
 [url=http://www.youtube.com/watch?v=X-FCwgKYd48]Botanist The Scale of the Sands - Reputation Farming[/url]
@@ -39,15 +39,6 @@ Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] wi
 [QUOTE][B][LEFT][COLOR="#0000FF"][SIZE=3]Where To Get It:[/SIZE][/COLOR][/LEFT][/B]
 Download the zip file below. Or use my [URL="http://botanist-hb-profiles.googlecode.com/svn/trunk/"][COLOR="#0000FF"]SVN[/COLOR][/URL] with a SVN Client such as [URL="http://tortoisesvn.net/downloads.html"][COLOR="#0000FF"]Tortoise SVN[/COLOR][/URL] 
 [COLOR="#FF0000"]Those that download the zip file, be aware that it may contain bugs which have been updated on the SVN[/COLOR][/QUOTE]
-
-[QUOTE][COLOR="#0000CD"][B][COLOR="#0000CD"][SIZE=4]Support[/SIZE][/COLOR][/B]
-
-[SIZE=3]For those that are new to HonorBuddy, I provide support for [B][I][U]HonorBuddy setup[/U][/I][/B] as well as [B][U][I]support for all my profiles[/I][/U][/B]. For any support related issues, please add me to skype, Botanist68[/SIZE][/COLOR]
-[QUOTE]For those that wish to donate I have a [B][COLOR="#0000CD"]private SVN[/COLOR][/B] with approximately [COLOR="#0000CD"]575 profiles[/COLOR] I have written. Feel free to PM me for more details or send donations to [email]botanist1968@gmail.com[/email] via PayPal. If you donate, please PM me or add me to skype.
-
-[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NQ9P6LUTG5QDN"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL][/CENTER]
-[/QUOTE] 
- [/QUOTE]
 
 [QUOTE][B][LEFT][COLOR="#0000FF"][SIZE=3]Requirements:[/SIZE][/COLOR][/LEFT][/B]
 1. The profile will require a total of 1005 gold for riding training. ( Apprentice Riding [5g level 20] + Journeyman Riding [50g level 40] + Expert Riding [250g level 60] + Flight Master's License [250g level 68] + Cold Weather Flying [500g level 68] ) Make sure you character has the appropriate amount of gold before they reach each threshold. All or the majority of riding cost will looted by your character.
@@ -92,6 +83,18 @@ At no specific time, I will rotate new profiles and remove the old. Check back f
 
 [QUOTE][B]  [SIZE=3] [COLOR="#0000CD"][CENTER]Please report any bugs with an accurate description of the problem as well as a log. Bugs will be fixed ASAP.
 Before reporting bugs, please make sure you are using the latest version from the SVN.[/CENTER][/COLOR][/SIZE] [/B][/QUOTE]
+
+[CENTER]
+[COLOR="#0000CD"][B][SIZE=3]Support[/SIZE][/B][/COLOR]
+
+[SIZE=2]For those that are new to HonorBuddy, I provide support for [B][I][U]HonorBuddy setup[/U][/I][/B] as well as [B][U][I]support for all my profiles[/I][/U][/B]. For any support related issues, please add me to skype, Botanist68[/SIZE]
+
+
+[QUOTE]
+For those that wish to donate I have a [B][COLOR="#0000CD"]private SVN[/COLOR][/B] with approximately [COLOR="#0000CD"]600+ profiles[/COLOR] I have written. Feel free to PM me for more details or send donations to [email]botanist1968@gmail.com[/email] via PayPal. If you donate, please PM me or add me to skype.
+
+[/QUOTE]
+[/CENTER]
 
 [B][CENTER][COLOR="#FF0000"][SIZE=2]Many, many hours have went into this profile as well as many others. Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN.[/SIZE][/COLOR][/CENTER][/B]
 
