@@ -69,7 +69,8 @@ At no specific time, I will rotate new profiles and remove the old. Check back f
 
 None
 
-
+[/QUOTE]
+[/QUOTE]
 [QUOTE][B]  [SIZE=3] [COLOR="#0000CD"][CENTER]Please report any bugs with an accurate description of the problem as well as a log. Bugs will be fixed ASAP.
 Before reporting bugs, please make sure you are using the latest version from the SVN.[/CENTER][/COLOR][/SIZE] [/B][/QUOTE]
 
