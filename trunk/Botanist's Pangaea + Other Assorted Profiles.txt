@@ -67,18 +67,7 @@ At no specific time, I will rotate new profiles and remove the old. Check back f
 
 [QUOTE][B][U][SIZE=2][COLOR="#0000CD"]Currently available profiles:[/COLOR][/SIZE][/U][/B]
 
-[B][SIZE=2][COLOR="#0000CD"][GB2-N-M+H]_botanist_jade-forrest_windward_isle
-[QO-N][flying][Aethis - Pool-Stirrer]_botanist_jade-forest
-[QO-N][flying][Ferdinand - Ook-Breaker-Mace]_botanist_jade-forest
-[QO-N][flying][Kor'nas Nightsavage - Darkstaff-of-Annihilation]_botanist_jade-forest
-[QO-N][flying][Krax'ik - Needlefang-Throatripper]_botanist_jade-forest
-[QO-N][flying][Mister - Ferocious-Ook-Breaker-Mace]_botanist_jade-forest
-[QO-N][flying][Morgrinn - *****fang-Fang*****er-Battlemace]_botanist_jade-forest
-[QO-N][flying][Sarnak - Fishsticker-Crossbow]_botanist_jade-forest
-[QO-N][flying][Urobi - Pathwalker-Greatstaff]_botanist_jade-forest 
-
-[/COLOR][/SIZE]
-[/B][/QUOTE][/QUOTE]
+None
 
 
 [QUOTE][B]  [SIZE=3] [COLOR="#0000CD"][CENTER]Please report any bugs with an accurate description of the problem as well as a log. Bugs will be fixed ASAP.
