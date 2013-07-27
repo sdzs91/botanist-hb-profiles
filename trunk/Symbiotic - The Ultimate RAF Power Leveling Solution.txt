@@ -458,7 +458,6 @@ Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] wi
 [*]Symbiotic 1-85 Cataclysm Click [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FF0000"]here[/COLOR][/URL] for the SVN URL.
 [/LIST]
 
-[/LIST]
 
 [LIST]
 
