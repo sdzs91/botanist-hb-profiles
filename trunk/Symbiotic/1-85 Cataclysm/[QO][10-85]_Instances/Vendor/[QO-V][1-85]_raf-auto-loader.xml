@@ -1,0 +1,332 @@
+﻿<HBProfile creator="Botanist and Wigglez" version="1.0">
+	<Name>[QO-V][1-85]_raf-auto-loader</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>
+	</Factions>
+	
+	<ProtectedItems>	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<!-- *******************************************************  RAF Toons ************************************************************** -->
+		<If Condition="Me.Level &lt;= 85">
+			<CustomBehavior File="Message" 
+							Text="We are a RAF." 
+							LogColor="SeaGreen" />
+							
+		<!-- Use our hearthstone or innkeepers daughter -->					
+							
+			<If Condition="(Me.HearthstoneAreaId == 5148) || (Me.HearthstoneAreaId == 5170)" >
+				<CustomBehavior File="Message" 
+								Text="Our Innkeeper is set at Stormwind City or Orgrimmar." 
+								LogColor="Cyan" />
+								
+				<!-- Have hearthstone -->
+				<If Condition="HasItem(6948)">
+					<CustomBehavior File="Message" 
+									Text="Using Hearthstone." 
+									LogColor="Lime" />
+									
+					<CustomBehavior File="Misc\RunLua" 
+									Lua="UseItemByName(6948)" 
+									WaitTime="1000" />
+									
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="20000" />
+				</If> <!-- Have hearthstone -->
+			
+				<!-- Have Innkeeper's Daughter -->
+				<If Condition="HasItem(64488)">
+					<CustomBehavior File="Message" 
+									Text="Using Innkeeper's Daughter." 
+									LogColor="Lime" />
+										
+					<CustomBehavior File="Misc\RunLua" 
+									Lua="UseItemByName(64488)" 
+									WaitTime="1000" />
+						
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="20000" />
+				</If> <!-- Have Innkeeper's Daughter -->
+			</If> <!-- Hearth check -->	
+
+			<!-- ************************************************* Force vendor and return to the appropriate instance ******************************************************  -->
+										
+				
+			<!-- ******** 10-17	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+
+			<!-- ************************************************ 17-25	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+
+			<!-- ************************************************ 25-37	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+
+			<!-- ************************************************ 37-42	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+
+			<!-- ************************************************ 42-48	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+
+			<!-- ********************************************** 48-60	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+			
+			<!-- ********************************************** 58-60	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->	
+
+			<!-- Load appropriate instance profile -->
+			
+			
+
+			<!-- ************************************************ 60-63	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+
+			<!-- ********************************************** 63-68	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+
+			<!-- ************************************************ 68-71	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+
+			<!-- ********************************************** 71-73	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+
+			<!-- *********************************************** 73-75	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+			
+			<!-- ************************************************ 75-77	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+			
+			<!-- ************************************************ 77-83	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->
+			
+			<!-- Load appropriate instance profile -->
+			
+			
+
+			<!-- ********************************************** 83-85	************ -->				
+				
+			<!-- Check level -->
+			
+			<!-- Check zone location -->
+			
+			<!-- Verify faction -->
+			
+			<!-- Force vendor and repair -->
+			
+			<!-- Move to the appropriate instance box -->				
+				
+			<!-- Load appropriate instance profile -->
+
+		</If>	
+	</QuestOrder>
+</HBProfile>
+
