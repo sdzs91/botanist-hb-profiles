@@ -1,5 +1,7 @@
 [CENTER]
 
+[B][SIZE=7][COLOR="#0099ff"]Finally !!![/COLOR][/SIZE][/B]
+
 [B][SIZE=4][COLOR="#FF0000"]Botanist/Wigglez Presents[/COLOR][/SIZE][/B]
 
 
@@ -158,6 +160,8 @@ If you are starting the profiles > level 17, determine which profile you need to
 [42-48] Blackrock Depths
 
 [48-60] Blackrock Spire
+
+[58-60][DK] Hellfire Ramparts
 
 [60-63] Blood Furnace
 
@@ -446,14 +450,22 @@ Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] wi
 [CODE]
 
 
-[LIST]
-[*]Symbiotic 1-85 Cataclysm Click [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FF0000"]here[/COLOR][/URL] for the SVN URL.
-[/LIST]
+
 [LIST]
 [*]Symbiotic 1-80 Battle Chest Click [URL="https://github.com/Wigglez/symbiotic/"][COLOR="#FF0000"]here[/COLOR][/URL] for the SVN URL.
 [/LIST]
 [LIST]
+[*]Symbiotic 1-85 Cataclysm Click [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FF0000"]here[/COLOR][/URL] for the SVN URL.
+[/LIST]
+[LIST]
 [*]Symbiotic 1-85 Cataclysm.zip or Symbiotic 1-80 Battle Chest.zip Attached below. 
+[INDENT]
+[B][U][COLOR="#FF0000"][SIZE=3]NOTE:[/SIZE][/COLOR][/U][/B] The zip files below will not be up-to-date with the SVN.
+[/INDENT]
+[/LIST]
+
+[LIST]
+
 [/LIST]
 [/CODE]
 [/CENTER]
