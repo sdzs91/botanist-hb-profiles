@@ -28,7 +28,7 @@
 [/LIST]
 
 [LIST]
-[*]We have not yet determined the total runtime. Present [B][U]guess-timate[/U][/B] would be 10-80 in less than 32 hours (including automated movement between instances)
+[*]We have not yet determined the total runtime. Present [B][U]guess-timate[/U][/B] would be 10-85 in less than 32 hours (including automated movement between instances)
 [/LIST]
 
 [LIST]
