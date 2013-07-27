@@ -1,8 +1,8 @@
 [CENTER]
 
-[B][SIZE=4][COLOR="#FF0000"]Coming Soon[/COLOR][/SIZE][/B]
-
 [B][SIZE=4][COLOR="#FF0000"]Botanist/Wigglez Presents[/COLOR][/SIZE][/B]
+
+
 
 [B][SIZE=4][U][COLOR="#0000CD"]Symbiotic - The Ultimate RAF Power Leveling Solution[/COLOR][/U][/SIZE][/B]
 
@@ -12,51 +12,9 @@
 
 [B][SIZE=2][COLOR="#0000CD"]*** Watch the video in 1080 HD for better quality (If you have the bandwidth) ***[/COLOR][/SIZE][/B]
 
-[CODE]
-
-
-[LIST]
-[U][/U][B][COLOR="#0000CD"][U][SIZE=4]Symbiotic[/SIZE][/U][/COLOR][/B] is available for [SIZE=4][U][B][COLOR="#0000CD"]Beta[/COLOR][/B][/U][/SIZE] testing on the donor SVN. It [U]will be[/U] transfered to the [SIZE=3][COLOR="#0000CD"][URL="http://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#0000CD"][B]Public SVN[/B][/COLOR][/URL][/COLOR][/SIZE] after [SIZE=4][U][B][COLOR="#0000CD"]Beta[/COLOR][/B][/U][/SIZE] testing.
-[/LIST]
 
 
 
-[LIST]
-[*]The entire structure, movement, internal instance code, and automation [U]have been[/U] implemented or enhanced.
-[/LIST]
-[LIST]
-[*][SIZE=4][B]We do not yet have an official release date for Symbiotic. "Structurally speaking" it is complete.[/B][/SIZE]
-[/LIST]
-[LIST]
-To access the SVN, you will need a SVN client software such as [URL="http://tortoisesvn.net/downloads.html"][COLOR="#0000CD"]Tortoise SVN[/COLOR][/URL]
-[/LIST]
-[INDENT]
-[SIZE=3][COLOR="#0000CD"]Current Progress[/COLOR][/SIZE]
-
-
-
-[[COLOR="#008000"]✔[/COLOR]][COLOR="#0000CD"][QO-A][1-10]Northshire[/COLOR]
-[[COLOR="#008000"]✔[/COLOR]][COLOR="#FF0000"][QO-H][1-10]Valley of Trials[/COLOR]
-
-[[COLOR="#008000"]✔[/COLOR]][COLOR="#0000CD"][QO-A][10-17] Deadmines[/COLOR]
-[[COLOR="#008000"]✔[/COLOR]][COLOR="#FF0000"][QO-H][10-17] Wailing Caverns[/COLOR]
-
-[[COLOR="#008000"]✔[/COLOR]][QO][17-25] Blackfathom Deeps 
-[[COLOR="#008000"]✔[/COLOR]][QO][25-37] Razorfen Kraul 
-[[COLOR="#008000"]✔[/COLOR]][QO][37-42] Razorfen Downs
-[[COLOR="#008000"]✔[/COLOR]][QO][42-48] Blackrock Depths
-[[COLOR="#008000"]✔[/COLOR]][QO][48-60] Blackrock Spire
-[[COLOR="#008000"]✔[/COLOR]][QO][60-63] Blood Furnace
-[[COLOR="#008000"]✔[/COLOR]][QO][63-68] Sethekk Halls
-[[COLOR="#008000"]✔[/COLOR]][QO][68-71] Utgarde Keep
-[[COLOR="#008000"]✔[/COLOR]][QO][71-73] Drak'tharon Keep
-[[COLOR="#008000"]✔[/COLOR]][QO][73-75] Gundrak
-[[COLOR="#008000"]✔[/COLOR]][QO][75-80] Halls of Lightning
-
-[[COLOR="#008000"]✔[/COLOR]][COLOR="#006400"][QO][80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
-[[COLOR="#008000"]✔[/COLOR]][QO][83-85] Lost City of the Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP[/COLOR]
-[/INDENT]
-[/CODE]
 
 
 [SIZE=3][COLOR="#FF0000"]*** Disclaimer ***[/COLOR][/SIZE]
@@ -471,14 +429,31 @@ If you encounter this problem, move your characters outside the instance and the
 
 
 [URL="http://botanist-hb-profiles.googlecode.com/svn/trunk/"][COLOR="#0000FF"][SIZE=3]*** Click To Access The Public SVN ***[/SIZE][/COLOR][/URL]
-[/CENTER]
 
 
 
-Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] will need to contact me via skype and provide me their donor name or email for access to the new svn.
+
+Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] will need to contact me via skype and provide me their donor name or email for access to the new svn.[/CENTER]
 
 [B][CENTER][COLOR="#FF0000"][SIZE=2]Thousand's of hours (concept - coding - testing - recoding - updating - retesting - recoding - retesting) have went into these profiles, yet we are providing them to you for free. Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
 
 [CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
 
-[URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL][/CENTER]
+[URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL]
+
+
+[SIZE=3][COLOR="#0000CD"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
+[CODE]
+
+
+[LIST]
+[*]Symbiotic 1-85 Cataclysm Click [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FF0000"]here[/COLOR][/URL] for the SVN URL.
+[/LIST]
+[LIST]
+[*]Symbiotic 1-80 Battle Chest Click [URL="https://github.com/Wigglez/symbiotic/"][COLOR="#FF0000"]here[/COLOR][/URL] for the SVN URL.
+[/LIST]
+[LIST]
+[*]Symbiotic 1-85 Cataclysm.zip or Symbiotic 1-80 Battle Chest.zip Attached below. 
+[/LIST]
+[/CODE]
+[/CENTER]
