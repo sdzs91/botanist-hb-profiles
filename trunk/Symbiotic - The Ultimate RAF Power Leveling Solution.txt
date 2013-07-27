@@ -457,15 +457,13 @@ Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] wi
 [LIST]
 [*]Symbiotic 1-85 Cataclysm Click [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FF0000"]here[/COLOR][/URL] for the SVN URL.
 [/LIST]
-[LIST]
-[*]Symbiotic 1-85 Cataclysm.zip or Symbiotic 1-80 Battle Chest.zip Attached below. 
-[INDENT]
-[B][U][COLOR="#FF0000"][SIZE=3]NOTE:[/SIZE][/COLOR][/U][/B] The zip files below will not be up-to-date with the SVN.
-[/INDENT]
+
 [/LIST]
 
 [LIST]
 
 [/LIST]
 [/CODE]
+
+[B][U][COLOR="#FF0000"][SIZE=3]NOTE:[/SIZE][/COLOR][/U][/B] The zip files below will not be up-to-date with the SVN
 [/CENTER]
