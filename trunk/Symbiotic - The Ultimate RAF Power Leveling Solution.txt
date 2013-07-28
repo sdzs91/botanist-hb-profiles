@@ -54,7 +54,10 @@ You [U]must[/U] also exit the instance. Manually reset it if any bosses were kil
 [/LIST]
 
 [LIST]
-[*]Included on the SVN is a "[B][U]modified[/U][/B]" version of CodenameG's [URL="http://www.thebuddyforum.com/honorbuddy-forum/plugins/leveling/73772-plugin-mr-itemremover2-deletes-opens-sells-items-your-bags.html"]Mr.ItemRemover2[/URL].
+[*]Included on the SVN is a "[B][U]modified[/U][/B]" version of CodenameG's [B][U][COLOR="#FF0000"]Archived[/COLOR][/U][/B] [URL="http://www.thebuddyforum.com/archives/73772-plugin-mr-itemremover2-deletes-opens-sells-items-your-bags.html"]MrItemRemover2[/URL]
+[INDENT]
+Not to worry HB users, we will maintain the [U]modified[/U] version we are using for Symbiotic !
+[/INDENT]
 [INDENT]
 Copy it to the \Plugins folder of the RAF's Honorbuddy folder(s) and enable it on the RAF toons [U][B]ONLY[/B][/U] !
 [/INDENT]
