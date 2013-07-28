@@ -204,6 +204,46 @@ User [U]must[/U] set the hearthstone's of all RAF characters with [URL="http://w
 [LIST]
 Users [U]must[/U] invite all party members into the party. The Booster [U]must[/U] be the party leader.
 [/LIST]
+
+[LIST]
+This method also [U]requires[/U] that you preset the Booster's hearthstone (list below) before proceeding to the initial instance portal. Automation will set it thereafter.
+[/LIST]
+[Indent]
+
+[B][U]List to come ![/U][/B]
+
+[17-25] Blackfathom Deeps -
+
+[25-37] Razorfen Kraul -
+
+[37-42] Razorfen Downs -
+
+[42-48] Blackrock Depths -
+
+[48-60] Blackrock Spire -
+
+[58-60][DK] Hellfire Ramparts -
+
+[60-63] Blood Furnace -
+
+[63-68] Sethekk Halls -
+
+[68-71] Utgarde Keep -
+
+[71-73] Drak'tharon Keep -
+
+[73-75] Gundrak -
+
+[75-80] Halls of Lightning -
+
+[80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP -
+
+[83-85] Lost City of Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP -
+
+
+[/INDENT]
+[LIST]
+[/LIST]
 [LIST]
 You [U]must[/U] then move all your charcters 5 meters/yards away from the instance (entrance portal) you wish to begin.
 [/LIST]
@@ -291,13 +331,9 @@ At level 10, the RAF characters will rendezvous with the Booster and automatical
 [LIST]
 Looting has been added for all levels 10-85. It will [U]require[/U] the Autoequip plugin to be enabled on all the RAF characters at all times.
 [INDENT]
-It will also [U]require[/U] that you set a mail recipient in the HonorBuddy Settings & Tools.
-[/INDENT]
-[INDENT]
 It is [U]not required[/U], but it is suggested that you equip your RAF characters with some bags of your choice to help facilitate looting.
 [/INDENT]
 [/LIST]
-
 [LIST]
 [*]This will allow your characters to acquire some gear before heading into some of the higher level instances inwhich some bosses have instance wide aoe attacks.
 [/LIST]
