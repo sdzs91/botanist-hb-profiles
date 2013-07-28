@@ -54,6 +54,21 @@ You [U]must[/U] also exit the instance. Manually reset it if any bosses were kil
 [/LIST]
 
 [LIST]
+[*]Included on the SVN is a "[B][U]modified[/U][/B]" version of CodenameG's [URL="http://www.thebuddyforum.com/honorbuddy-forum/plugins/leveling/73772-plugin-mr-itemremover2-deletes-opens-sells-items-your-bags.html"]Mr.ItemRemover2[/URL].
+[INDENT]
+Copy it to the \Plugins folder of the RAF's Honorbuddy folder(s) and enable it on the RAF toons [U][B]ONLY[/B][/U] !
+[/INDENT]
+[INDENT]
+The plugin will automatically delete all the items in your RAF's bags every 5 minutes.
+[/INDENT]
+[INDENT]
+This allows Autoequip time to equip any loot [U][B]prior[/B][/U] to it being [B][U]deleted[/U][/B] from their bags.
+[/INDENT]
+[INDENT]
+This is posted per Honorbuddy rules : [URL="http://www.thebuddyforum.com/honorbuddy-forum/developer-forum/12433-rules-bots-cc-plugin-profiles-development-rules.html"]http://www.thebuddyforum.com/honorbuddy-forum/developer-forum/12433-rules-bots-cc-plugin-profiles-development-rules.html[/URL]
+[/INDENT]
+[/LIST]
+[LIST]
 [*]You [U]must[/U] have 1 HonorBuddy session per character you intend to run the profiles on.
 [/LIST]
 
