@@ -1,6 +1,8 @@
- This has been Modified to vendor everything in your bags.
+ This has been Modified to DELETE everything in your bags except your hearthstone.
  
- IT IS MEANT TO BE USED BY THE raf TOONS ONLY !!
+ Categories for common, uncommon and rares loots have been added and set to delete by default, leafe the setting that way
+ 
+ IT IS MEANT TO BE USED BY THE RAF TOONS ONLY !!
  
  This will now delete EVERYTHING in your bags every 5 minutes.
  
