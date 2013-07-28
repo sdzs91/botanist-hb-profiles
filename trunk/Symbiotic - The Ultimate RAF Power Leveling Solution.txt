@@ -66,7 +66,7 @@ The plugin will automatically delete all the items in your RAF's bags every 5 mi
 This allows Autoequip time to equip any loot [U][B]prior[/B][/U] to it being [B][U]deleted[/U][/B] from their bags.
 [/INDENT]
 [INDENT]
-This is posted per Honorbuddy rules : [URL="http://www.thebuddyforum.com/honorbuddy-forum/developer-forum/12433-rules-bots-cc-plugin-profiles-development-rules.html"]http://www.thebuddyforum.com/honorbuddy-forum/developer-forum/12433-rules-bots-cc-plugin-profiles-development-rules.html[/URL]
+This is posted per Honorbuddy rules : [URL="http://www.thebuddyforum.com/honorbuddy-forum/developer-forum/12433-rules-bots-cc-plugin-profiles-development-rules.html"][Rules] Bots/CC/Plugin/Profiles Development Rules[/URL]
 [/INDENT]
 [/LIST]
 [LIST]
