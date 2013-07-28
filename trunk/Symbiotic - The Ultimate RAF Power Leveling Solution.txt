@@ -144,17 +144,18 @@ Grand total: 1105g
 [/CODE]
 
 [B][SIZE=4][COLOR="#0000CD"]*** Instructions ***[/COLOR][/SIZE][/B]
-[CODE]
-[LIST]
-[/LIST]
-[LIST]
-[/LIST]
 
+
+[CODE]
 
 [CENTER][B][SIZE=4][COLOR="#0000CD"]*** 1-80 Semi Automation ***[/COLOR][/SIZE][/B][/CENTER]
 [LIST]
-
-
+[INDENT]
+[/INDENT]
+[INDENT]
+[/INDENT]
+[/LIST]
+[LIST]
 If you are starting the profiles between levels 1 and 10, you [U]must[/U] start all your characters from the [COLOR="#FF0000"](race starting)[/COLOR] zone, Stormwind (Alliance) or Orgrimmar (Horde).
 [/LIST]
 
