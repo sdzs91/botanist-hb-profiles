@@ -373,10 +373,8 @@
 									Text="Resetting instance, 1 of 2." 
 									LogColor="Fuchsia" />
 					
-					<CustomBehavior File="RunMacro" 
-									Macro="/script ResetInstances()" />
-					<CustomBehavior File="RunMacro"
-									Macro="/script SetDungeonDifficulty(1)" />
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
 					
 					<!-- Allow for an Honorbuddy pulse -->
 					<CustomBehavior File="WaitTimer" 
@@ -386,10 +384,8 @@
 					<CustomBehavior File="Message" 
 									Text="Resetting instance, 2 of 2." 
 									LogColor="Fuchsia" />
-					<CustomBehavior File="RunMacro" 
-									Macro="/script ResetInstances()" />
-					<CustomBehavior File="RunMacro" 
-									Macro="/script SetDungeonDifficulty(1)" />
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
 					
 					<CustomBehavior File="Message" 
 									Text="Instance reset." 
@@ -511,6 +507,10 @@
 				
 				<!-- If we are inside and have checked our reset -->
 				<If Condition="Me.ZoneId == 4416">
+					<CustomBehavior File="Message" 
+									Text="Avoiding instance lock from this point, do not touch." 
+									LogColor="Yellow" />	
+				
 					<!-- Entrance -->
 					<RunTo X="1880.74" Y="853.76" Z="176.696" />
 				
@@ -527,10 +527,6 @@
 									Text="Gundrak initialized."  
 									LogColor="Fuchsia" />
 									
-					<CustomBehavior File="Message" 
-									Text="Avoiding instance lock from this point, do not touch." 
-									LogColor="Yellow" />				
-					
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="20000" />
 												

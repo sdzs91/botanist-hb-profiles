@@ -548,8 +548,9 @@
 					
 					<CustomBehavior File="RunMacro" 
 									Macro="/script ResetInstances()" />
-					<CustomBehavior File="RunMacro"
-									Macro="/script SetDungeonDifficulty(1)" />
+									
+					<CustomBehavior File="RunMacro" 
+									Macro="/script SetDungeonDifficultyID(1);" />
 					
 					<!-- Wait timer to delay movement - .2 seconds -->
 					<CustomBehavior File="WaitTimer" 
@@ -691,40 +692,10 @@
 					<!-- Entrance -->
 					<RunTo X="209.903" Y="1133.02" Z="205.569" />
 				
-					<!-- Quest -->
-				
-					<!-- Pickups -->
-					<If Condition="Me.Level &gt;= 100" >
-						<If Condition="Me.ZoneId == 9999" >
-							<If Condition="((!HasQuest(XXXXX)) &amp;&amp; (!IsQuestCompleted(XXXXX)))" >
-								<PickUp QuestName="What's Eating Zhu's Watch?" 
-										QuestId="30079" 
-										GiverName="Ken-Ken" 
-										GiverId="56115" 
-										X="-330.934" Y="-624.592" Z="119.8942" />
-							</If>	
-						</If>		
-					</If>			
-								
-											
-								
-					<!-- ***************************************************************************************************************************************** -->
-
-					<!-- Turnins -->
-					
-					<If Condition="Me.Level &gt;= 100" >
-						<If Condition="Me.ZoneId == 9999" >
-							<If Condition="((HasQuest(XXXXX)) &amp;&amp; (!IsQuestCompleted(29547)))" >
-								<If Condition="IsQuestCompleted(XXXXX)" >
-									<TurnIn QuestName="What's Eating Zhu's Watch?" 
-											QuestId="30079" 
-											TurnInName="Ken-Ken" 
-											TurnInId="56115" 
-											X="-330.934" Y="-624.592" Z="119.8942" />
-								</If>			
-							</If>	
-						</If>		
-					</If>
+					<!-- Profile message - Avoiding instance lock from this point, do not touch -->
+					<CustomBehavior File="Message" 
+									Text="Avoiding instance lock from this point, do not touch." 
+									LogColor="Yellow" />
 					
 					<!-- Go to activate spot, NOTE this can not be the quest giver -->
 					<RunTo X="236.7661" Y="1123.584" Z="205.5914" />
@@ -738,11 +709,7 @@
 					<CustomBehavior File="Message" 
 									Text="Blackrock Caverns initialized."  
 									LogColor="Fuchsia" />
-									
-					<CustomBehavior File="Message" 
-									Text="Avoiding instance lock from this point, do not touch." 
-									LogColor="Yellow" />				
-					
+
 					<!-- Wait timer to delay movement - 70 seconds -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="70000" />

@@ -503,8 +503,9 @@
 					
 					<CustomBehavior File="RunMacro" 
 									Macro="/script ResetInstances()" />
-					<CustomBehavior File="RunMacro"
-									Macro="/script SetDungeonDifficulty(1)" />
+									
+					<CustomBehavior File="RunMacro" 
+									Macro="/script SetDungeonDifficultyID(1);" />
 					
 					<!-- Allow for an Honorbuddy pulse -->
 					<CustomBehavior File="WaitTimer" 
@@ -646,41 +647,11 @@
 					<!-- Entrance -->
 					<RunTo X="-10700.4" Y="-1312.69" Z="17.6029" />
 							
-					<!-- Quest -->
-				
-					<!-- Pickups -->
-					<If Condition="Me.Level &gt;= 100" >
-						<If Condition="Me.ZoneId == 9999" >
-							<If Condition="((!HasQuest(XXXXX)) &amp;&amp; (!IsQuestCompleted(XXXXX)))" >
-								<PickUp QuestName="What's Eating Zhu's Watch?" 
-										QuestId="30079" 
-										GiverName="Ken-Ken" 
-										GiverId="56115" 
-										X="-330.934" Y="-624.592" Z="119.8942" />
-							</If>	
-						</If>		
-					</If>			
-								
-											
-								
-					<!-- ***************************************************************************************************************************************** -->
-
-					<!-- Turnins -->
-					
-					<If Condition="Me.Level &gt;= 100" >
-						<If Condition="Me.ZoneId == 9999" >
-							<If Condition="((HasQuest(XXXXX)) &amp;&amp; (!IsQuestCompleted(29547)))" >
-								<If Condition="IsQuestCompleted(XXXXX)" >
-									<TurnIn QuestName="What's Eating Zhu's Watch?" 
-											QuestId="30079" 
-											TurnInName="Ken-Ken" 
-											TurnInId="56115" 
-											X="-330.934" Y="-624.592" Z="119.8942" />	
-								</If>			
-							</If>	
-						</If>		
-					</If>
-					
+					<!-- Profile message - Avoiding instance lock from this point, do not touch -->
+					<CustomBehavior File="Message" 
+									Text="Avoiding instance lock from this point, do not touch." 
+									LogColor="Yellow" />
+									
 					<!-- Go to activate spot, NOTE this can not be the quest giver -->
 					<RunTo X="-10703.34" Y="-1325.496" Z="17.6029" />
 				

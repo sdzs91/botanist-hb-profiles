@@ -293,10 +293,8 @@
 									Text="Resetting instance, 1 of 2." 
 									LogColor="Fuchsia" />
 					
-					<CustomBehavior File="RunMacro" 
-									Macro="/script ResetInstances()" />
-					<CustomBehavior File="RunMacro"
-									Macro="/script SetDungeonDifficulty(1)" />
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
 					
 					<!-- Allow for an Honorbuddy pulse -->
 					<CustomBehavior File="WaitTimer" 
@@ -306,10 +304,8 @@
 					<CustomBehavior File="Message" 
 									Text="Resetting instance, 2 of 2." 
 									LogColor="Fuchsia" />
-					<CustomBehavior File="RunMacro" 
-									Macro="/script ResetInstances()" />
-					<CustomBehavior File="RunMacro" 
-									Macro="/script SetDungeonDifficulty(1)" />
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
 					
 					<CustomBehavior File="Message" 
 									Text="Instance reset." 
@@ -453,6 +449,10 @@
 				
 				<!-- If we are inside Hellfire Ramparts and have checked our reset -->
 				<If Condition="Me.ZoneId == 3562">
+					<CustomBehavior File="Message" 
+									Text="Avoiding instance lock from this point, do not touch." 
+									LogColor="Yellow" />	
+				
 					<!-- Entrance -->
 					<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
 				
@@ -468,11 +468,7 @@
 					<CustomBehavior File="Message" 
 									Text="Hellfire Ramparts initialized."  
 									LogColor="Fuchsia" />
-									
-					<CustomBehavior File="Message" 
-									Text="Avoiding instance lock from this point, do not touch." 
-									LogColor="Yellow" />				
-					
+												
 					<CustomBehavior File="WaitTimer"
 									WaitTime="50000" />
 									
