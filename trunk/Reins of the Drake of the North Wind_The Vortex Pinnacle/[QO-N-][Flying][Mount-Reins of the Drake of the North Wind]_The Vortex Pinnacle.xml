@@ -467,9 +467,15 @@
 									</Vendors>
 								</SetVendor>
 								
+								<SetMailbox>
+									<Mailboxes>
+										<Mailbox X="-9428.854" Y="-968.5951" Z="111.0117" />
+									</Mailboxes>
+								</SetMailbox>
+								
 								<!-- Force set the vendor -->
 								<CustomBehavior File="ForceSetVendor" 
-												DoMail="False" 
+												DoMail="True" 
 												DoRepair="True" 
 												DoSell="True" 
 												DoTrain="False" />
@@ -503,7 +509,26 @@
 									
 									<!-- Run to the instance box -->
 									<Runto X="-11513.3" Y="-2309.88" Z="608.393" />	
+													<!-- If we are in the box -->
+									<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
 									
+										<!-- Profile message - Resetting the instance -->
+										<CustomBehavior File="Message" 
+														Text="Resetting the instance." 
+														LogColor="Fuchsia" />
+										
+										<!-- Reset the instance -->
+										<CustomBehavior File="RunMacro" 
+														Macro="/script ResetInstances()" />
+														
+										<!-- Set the dungeon difficulty to normal -->				
+										<CustomBehavior File="RunMacro" 
+														Macro="/script SetDungeonDifficultyID(1);" />
+										
+										<CustomBehavior File="Message" 
+														Text="Instance reset." 
+														LogColor="Fuchsia" />
+									</If> <!-- In box -->
 								</If> <!-- repaired -->
 							</If> <!-- Repairing -->
 						</If>	<!-- Durability -->
