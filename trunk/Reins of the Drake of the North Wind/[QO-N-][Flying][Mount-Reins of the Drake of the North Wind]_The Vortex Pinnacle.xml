@@ -112,6 +112,7 @@
 						
 					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
 					<While Condition="Me.ZoneId != 5035">
+					
 						<!-- Make sure we run to the right spot outside the portal -->
 						<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
 
@@ -414,176 +415,180 @@
 					<!-- Instance timer to ensure run take a minimum of 12 minutes and 30 seconds to avoid instance locks -->
 					<CustomBehavior File="Misc\InstanceTimer" 
 									Timer="Check" />
+										
+					<!-- Repair if necessary -->
+					<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
 					
-					<!-- If we are in The Vortex Pinnacle and need to repair or vendor, hearth to Ramkahen -->
-					<If Condition="Me.ZoneId == 5035">
-					
-						<!-- Repair if necessary -->
-						<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
-						
-							<!-- Profile message - Our durability is less than 30%, or we need to vendor -->
+						<!-- Profile message - Our durability is less than 30%, or we need to vendor -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30%, or we need to vendor." 
+										LogColor="Lime" />
+										
+						<!-- Use our hearthstone or innkeeps daughter -->				
+						<If Condition="Me.HearthstoneAreaId == 5466 ">
 							<CustomBehavior File="Message" 
-											Text="Our durability is less than 30%, or we need to vendor." 
-											LogColor="Lime" />
-											
-							<!-- Use our hearthstone or innkeeps daughter -->				
-							<If Condition="Me.HearthstoneAreaId == 5466 ">
+											Text="Our Innkeeper is set at Ramkahen." 
+											LogColor="Cyan" />
+												
+							<!-- Have hearthstone -->
+							<If Condition="HasItem(6948)">
 								<CustomBehavior File="Message" 
-												Text="Our Innkeeper is set at Ramkahen." 
-												LogColor="Cyan" />
-													
-								<!-- Have hearthstone -->
-								<If Condition="HasItem(6948)">
-									<CustomBehavior File="Message" 
-													Text="Using Hearthstone." 
-													LogColor="Lime" />
-													
-									<CustomBehavior File="Misc\RunLua" 
-													Lua="UseItemByName(6948)" 
-													WaitTime="1000" />
-													
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="20000" />
-								</If> <!-- Have hearthstone -->
-							
-								<!-- Have Innkeeper's Daughter -->
-								<If Condition="HasItem(64488)">
-									<CustomBehavior File="Message" 
-													Text="Using Innkeeper's Daughter." 
-													LogColor="Lime" />
-														
-									<CustomBehavior File="Misc\RunLua" 
-													Lua="UseItemByName(64488)" 
-													WaitTime="1000" />
-										
-									<!-- Wait 20 seconds for the game to load -->	
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="20000" />
-													
-								</If> <!-- Have Innkeeper's Daughter -->
-
-								<SetVendor>
-									<Vendors>
-										<!-- Ramkahen Repair -->
-										<Vendor Name="Blacksmith Abasi" 
-												Entry="48617" 
-												Type="Repair" 
-												X="-9404.68" Y="-906.438" Z="112.5411" />
-									</Vendors>
-								</SetVendor>
-								
-								<SetMailbox>
-									<Mailboxes>
-										<Mailbox X="-9428.854" Y="-968.5951" Z="111.0117" />
-									</Mailboxes>
-								</SetMailbox>
-								
-								<!-- Force set the vendor -->
-								<CustomBehavior File="ForceSetVendor" 
-												DoMail="True" 
-												DoRepair="True" 
-												DoSell="True" 
-												DoTrain="False" />
-							
-								<!-- We are done repairing -->
-								<If Condition="Me.DurabilityPercent &gt;= 0.8" >
-									<CustomBehavior File="Message" 
-													Text="Repairing complete." 
-													LogColor="Lime" />
-													
-									<!-- Profile message - Returning to The Vortex Pinnacle -->
-									<CustomBehavior File="Message" 
-													Text="Returning to The Vortex Pinnacle." 
-													LogColor="Lime" />
-													
-									<!-- Fly to the hover point at the last ridge near the sphinx-->
-									<CustomBehavior File="FlyTo" X="-10703.96" Y="-1767.715" Z="353.466" />
-															
-															
-									<!-- Profile message - CTM to The Vortex Pinnacle hover point -->						
-									<CustomBehavior File="Message" 
-													Text="CTM to The Vortex Pinnacle hover point." 
-													LogColor="Lime" />
-									
-									<!-- CTM to hover point above The Vortex Pinnacle -->
-									<CustomBehavior File="MyCTM" X="-11446.21" Y="-2263.146" Z="651.7057" />
-									
-									<!-- CTM to the instance box -->
-									<CustomBehavior File="MyCTM" 
-													X="-11513.3" Y="-2309.88" Z="608.393" />
-													
-									<CustomBehavior File="ForcedDismount" />	
-									
-									<!-- Run to the instance box -->
-									<Runto X="-11513.3" Y="-2309.88" Z="608.393" />	
-													<!-- If we are in the box -->
-									<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
-									
-										<!-- Profile message - Resetting the instance -->
-										<CustomBehavior File="Message" 
-														Text="Resetting the instance." 
-														LogColor="Fuchsia" />
-										
-										<!-- Reset the instance -->
-										<CustomBehavior File="RunMacro" 
-														Macro="/script ResetInstances()" />
-														
-										<!-- Set the dungeon difficulty to normal -->				
-										<CustomBehavior File="RunMacro" 
-														Macro="/script SetDungeonDifficultyID(1);" />
-										
-										<CustomBehavior File="Message" 
-														Text="Instance reset." 
-														LogColor="Fuchsia" />
-									</If> <!-- In box -->
-								</If> <!-- repaired -->
-							</If> <!-- Repairing -->
-						</If>	<!-- Durability -->
-					</If>	<!-- In Vortex Pinnecle -->
-				</If> <!-- The Vortex Pinnacle -->
-				
-				<!--The Vortex Pinnacle -->
-				<If Condition="Me.ZoneId == 5035">
-					<CustomBehavior File="Message" 
-									Text="The Vortex Pinnacle detected. Running out."
-									LogColor="Fuchsia" />
+												Text="Using Hearthstone." 
+												LogColor="Lime" />
+												
+								<CustomBehavior File="Misc\RunLua" 
+												Lua="UseItemByName(6948)" 
+												WaitTime="1000" />
+												
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="20000" />
+							</If> <!-- Have hearthstone -->
 						
-					<!-- Make our way to the exit -->
-					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
-					
-					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" 
-									X="-327.7366" Y="24.78619" Z="626.7043" />
-					
-					<!-- Wait timer for game to load -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="15000" />
-					
-					<!-- Make sure we run to the right spot outside the potral -->
-					<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
-					
-				</If> <!-- Vortex Pinnacle -->
-	
-				<!-- If we are in the box -->
-				<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
-				
-					<!-- Profile message - Resetting the instance -->
-					<CustomBehavior File="Message" 
-									Text="Resetting the instance." 
-									LogColor="Fuchsia" />
-					
-					<!-- Reset the instance -->
-					<CustomBehavior File="RunMacro" 
-									Macro="/script ResetInstances()" />
+							<!-- Have Innkeeper's Daughter -->
+							<If Condition="HasItem(64488)">
+								<CustomBehavior File="Message" 
+												Text="Using Innkeeper's Daughter." 
+												LogColor="Lime" />
+													
+								<CustomBehavior File="Misc\RunLua" 
+												Lua="UseItemByName(64488)" 
+												WaitTime="1000" />
 									
-					<!-- Set the dungeon difficulty to normal -->				
-					<CustomBehavior File="RunMacro" 
-									Macro="/script SetDungeonDifficultyID(1);" />
+								<!-- Wait 20 seconds for the game to load -->	
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="20000" />
+												
+							</If> <!-- Have Innkeeper's Daughter -->
+						</If> <!-- hearth location check -->
+							
+						
+						<!-- If we are in Uldum -->						
+						<If Condition="Me.ZoneId == 5034">		
+							<SetVendor>
+								<Vendors>
+									<!-- Ramkahen Repair -->
+									<Vendor Name="Blacksmith Abasi" 
+											Entry="48617" 
+											Type="Repair" 
+											X="-9404.68" Y="-906.438" Z="112.5411" />
+								</Vendors>
+							</SetVendor>
+							
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox X="-9428.854" Y="-968.5951" Z="111.0117" />
+								</Mailboxes>
+							</SetMailbox>
+							
+							<!-- Force set the vendor -->
+							<CustomBehavior File="ForceSetVendor" 
+											DoMail="True" 
+											DoRepair="True" 
+											DoSell="True" 
+											DoTrain="False" />
+						
+						
+						
+							<!-- We are done repairing -->
+							<If Condition="Me.DurabilityPercent &gt;= 0.8" >
+								<CustomBehavior File="Message" 
+												Text="Repairing complete." 
+												LogColor="Lime" />
+												
+								<!-- Profile message - Returning to The Vortex Pinnacle -->
+								<CustomBehavior File="Message" 
+												Text="Returning to The Vortex Pinnacle." 
+												LogColor="Lime" />
+												
+								<!-- Fly to the hover point at the last ridge near the sphinx-->
+								<CustomBehavior File="FlyTo" X="-10703.96" Y="-1767.715" Z="353.466" />
+														
+														
+								<!-- Profile message - CTM to The Vortex Pinnacle hover point -->						
+								<CustomBehavior File="Message" 
+												Text="CTM to The Vortex Pinnacle hover point." 
+												LogColor="Lime" />
+								
+								<!-- CTM to hover point above The Vortex Pinnacle -->
+								<CustomBehavior File="MyCTM" X="-11446.21" Y="-2263.146" Z="651.7057" />
+								
+								<!-- CTM to the instance box -->
+								<CustomBehavior File="MyCTM" 
+												X="-11513.3" Y="-2309.88" Z="608.393" />
+												
+								<CustomBehavior File="ForcedDismount" />	
+								
+								<!-- Run to the instance box -->
+								<Runto X="-11513.3" Y="-2309.88" Z="608.393" />	
+								
+								<!-- If we are in the box -->
+								<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
+								
+									<!-- Profile message - Resetting the instance -->
+									<CustomBehavior File="Message" 
+													Text="Resetting the instance." 
+													LogColor="Fuchsia" />
+									
+									<!-- Reset the instance -->
+									<CustomBehavior File="RunMacro" 
+													Macro="/script ResetInstances()" />
+													
+									<!-- Set the dungeon difficulty to normal -->				
+									<CustomBehavior File="RunMacro" 
+													Macro="/script SetDungeonDifficultyID(1);" />
+									
+									<CustomBehavior File="Message" 
+													Text="Instance reset." 
+													LogColor="Fuchsia" />
+								</If> <!-- In box -->
+							</If> <!-- repaired -->
+						</If>	<!-- If we are in Uldum -->	
+					</If> <!-- Repair if necessary -->					
+
+				
+					<!--The Vortex Pinnacle -->
+					<If Condition="Me.ZoneId == 5035">
+						<CustomBehavior File="Message" 
+										Text="The Vortex Pinnacle detected. Running out."
+										LogColor="Fuchsia" />
+							
+						<!-- Make our way to the exit -->
+						<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+						
+						<!-- Go through the portal -->
+						<CustomBehavior File="Misc\InInstance" 
+										X="-327.7366" Y="24.78619" Z="626.7043" />
+						
+						<!-- Wait timer for game to load -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="15000" />
+						
+						<!-- Make sure we run to the right spot outside the potral -->
+						<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
+						
+					</If> <!-- Vortex Pinnacle -->
+		
+					<!-- If we are in the box -->
+					<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
 					
-					<CustomBehavior File="Message" 
-									Text="Instance reset." 
-									LogColor="Fuchsia" />
-				</If> <!-- In box -->
+						<!-- Profile message - Resetting the instance -->
+						<CustomBehavior File="Message" 
+										Text="Resetting the instance." 
+										LogColor="Fuchsia" />
+						
+						<!-- Reset the instance -->
+						<CustomBehavior File="RunMacro" 
+										Macro="/script ResetInstances()" />
+										
+						<!-- Set the dungeon difficulty to normal -->				
+						<CustomBehavior File="RunMacro" 
+										Macro="/script SetDungeonDifficultyID(1);" />
+						
+						<CustomBehavior File="Message" 
+										Text="Instance reset." 
+										LogColor="Fuchsia" />
+					</If> <!-- If we are in the box -->						
+				</If> <!-- If we are inside Vortex Pinnacle and have checked our reset -->
 			</While> <!-- Infinite loop -->
 		</If> <!-- I am level 90 -->	
 	</QuestOrder>
