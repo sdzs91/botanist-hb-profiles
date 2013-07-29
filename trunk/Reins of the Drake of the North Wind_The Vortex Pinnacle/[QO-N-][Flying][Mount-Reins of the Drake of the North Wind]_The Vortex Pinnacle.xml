@@ -410,32 +410,6 @@
 					<!-- Run to the exit -->
 					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
 					
-					<!-- Instance timer to ensure run take a minimum of 12 minutes and 30 seconds to avoid instance locks -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
-					
-				</If> <!-- The Vortex Pinnacle -->
-				
-				<!--The Vortex Pinnacle -->
-				<If Condition="Me.ZoneId == 5035">
-					<CustomBehavior File="Message" 
-									Text="The Vortex Pinnacle detected. Running out."
-									LogColor="Fuchsia" />
-						
-					<!-- Make our way to the exit -->
-					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
-					
-					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" 
-									X="-327.7366" Y="24.78619" Z="626.7043" />
-					
-					<!-- Wait timer for game to load -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="15000" />
-					
-					<!-- Make sure we run to the right spot outside the potral -->
-					<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
-					
 					<!-- If we are in The Vortex Pinnacle and need to repair or vendor, hearth to Ramkahen -->
 					<If Condition="Me.ZoneId == 5035">
 					
@@ -533,7 +507,34 @@
 								</If> <!-- repaired -->
 							</If> <!-- Repairing -->
 						</If>	<!-- Durability -->
-					</If>	<!-- In Uldum -->
+					</If>	<!-- In Vortex Pinnecle -->
+					
+					<!-- Instance timer to ensure run take a minimum of 12 minutes and 30 seconds to avoid instance locks -->
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Check" />
+					
+				</If> <!-- The Vortex Pinnacle -->
+				
+				<!--The Vortex Pinnacle -->
+				<If Condition="Me.ZoneId == 5035">
+					<CustomBehavior File="Message" 
+									Text="The Vortex Pinnacle detected. Running out."
+									LogColor="Fuchsia" />
+						
+					<!-- Make our way to the exit -->
+					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" 
+									X="-327.7366" Y="24.78619" Z="626.7043" />
+					
+					<!-- Wait timer for game to load -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />
+					
+					<!-- Make sure we run to the right spot outside the potral -->
+					<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
+					
 				</If> <!-- Vortex Pinnacle -->
 	
 				<!-- If we are in the box -->
