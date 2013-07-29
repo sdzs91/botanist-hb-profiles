@@ -19,19 +19,18 @@ Either faction [U]can[/U] start the profile in Eastern Kingdoms or Kalimdor.
 If your hearth [U]isn't[/U] already set to Ramkahen, the profile will fly there and set your heart.
 [/LIST]
 [LIST]
-The profile [U]will[/U] endlessly farm Vortex Pinnicle in Uldum for [URL="http://www.wowhead.com/item=63040"][COLOR="#800080"]Reins of the Drake of the North[/COLOR][/URL] 
+The profile [U]will[/U] endlessly farm Vortex Pinnacle in Uldum for [URL="http://www.wowhead.com/item=63040"][COLOR="#800080"]Reins of the Drake of the North[/COLOR][/URL] 
 [/LIST]
 [LIST]
-The profile [U]will [/U]automatically hearth to Ramkahen and vendor/repair when neccessary.
+The profile [U]will [/U]automatically hearth to Ramkahen and vendor/repair/mail when when you have <25 slots in your bag or <30% durability.
 [/LIST]
 [LIST]
 The profile [U]will[/U] mail any items it farms that is on the protected items list.
 [/LIST]
 [LIST]
 Your character [U]will not[/U] reset the instance until [SIZE=3][B]after[/B][/SIZE] it has completed the first run.
-
 [INDENT]
-You [U]must[/U] manually [U]exit[/U] and [U]reset[/U] the instance if you stop the bot inside the instance for any reason
+You [U]must[/U] manually [U]exit[/U] and [U]reset[/U] the instance if you stop the bot inside the instance for any reason.
 [/INDENT]
 [/LIST]
 [LIST]
