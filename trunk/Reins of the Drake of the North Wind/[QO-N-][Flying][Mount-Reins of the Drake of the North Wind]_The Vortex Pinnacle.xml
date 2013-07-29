@@ -413,11 +413,11 @@
 									
 					<!-- Run to the exit -->
 					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
-					
+		
 					<!-- Instance timer to ensure run take a minimum of 12 minutes and 30 seconds to avoid instance locks -->
 					<CustomBehavior File="Misc\InstanceTimer" 
 									Timer="Check" />
-										
+		
 					<!-- Repair if necessary -->
 					<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
 					
@@ -522,32 +522,11 @@
 								
 								<!-- Run to the instance box -->
 								<Runto X="-11513.3" Y="-2309.88" Z="608.393" />	
-								
-								<!-- If we are in the box -->
-								<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
-								
-									<!-- Profile message - Resetting the instance -->
-									<CustomBehavior File="Message" 
-													Text="Resetting the instance." 
-													LogColor="Fuchsia" />
-									
-									<!-- Reset the instance -->
-									<CustomBehavior File="RunMacro" 
-													Macro="/script ResetInstances()" />
-													
-									<!-- Set the dungeon difficulty to normal -->				
-									<CustomBehavior File="RunMacro" 
-													Macro="/script SetDungeonDifficultyID(1);" />
-									
-									<CustomBehavior File="Message" 
-													Text="Instance reset." 
-													LogColor="Fuchsia" />
-								</If> <!-- In box -->
+		
 							</If> <!-- repaired -->
 						</If>	<!-- If we are in Uldum -->	
 					</If> <!-- Repair if necessary -->					
 
-				
 					<!--The Vortex Pinnacle -->
 					<If Condition="Me.ZoneId == 5035">
 						<CustomBehavior File="Message" 
@@ -569,28 +548,28 @@
 						<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
 						
 					</If> <!-- Vortex Pinnacle -->
-		
-					<!-- If we are in the box -->
-					<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
-					
-						<!-- Profile message - Resetting the instance -->
-						<CustomBehavior File="Message" 
-										Text="Resetting the instance." 
-										LogColor="Fuchsia" />
-						
-						<!-- Reset the instance -->
-						<CustomBehavior File="RunMacro" 
-										Macro="/script ResetInstances()" />
-										
-						<!-- Set the dungeon difficulty to normal -->				
-						<CustomBehavior File="RunMacro" 
-										Macro="/script SetDungeonDifficultyID(1);" />
-						
-						<CustomBehavior File="Message" 
-										Text="Instance reset." 
-										LogColor="Fuchsia" />
-					</If> <!-- If we are in the box -->						
 				</If> <!-- If we are inside Vortex Pinnacle and have checked our reset -->
+				
+				<!-- If we are in the box -->
+				<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
+				
+					<!-- Profile message - Resetting the instance -->
+					<CustomBehavior File="Message" 
+									Text="Resetting the instance." 
+									LogColor="Fuchsia" />
+					
+					<!-- Reset the instance -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/script ResetInstances()" />
+									
+					<!-- Set the dungeon difficulty to normal -->				
+					<CustomBehavior File="RunMacro" 
+									Macro="/script SetDungeonDifficultyID(1);" />
+					
+					<CustomBehavior File="Message" 
+									Text="Instance reset." 
+									LogColor="Fuchsia" />
+				</If> <!-- If we are in the box -->						
 			</While> <!-- Infinite loop -->
 		</If> <!-- I am level 90 -->	
 	</QuestOrder>
