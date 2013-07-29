@@ -39,7 +39,7 @@ You [U]must[/U] close HonorBuddy and reinitialize it if you stop the bot for [U]
 [/CODE]
 
 
-[B][COLOR="#0099ff"][SIZE=4]*****  Instructions*****[/SIZE][/COLOR][/B]
+[B][COLOR="#0099ff"][SIZE=4]***** Instructions *****[/SIZE][/COLOR][/B]
 
 [CODE]
 [LIST]
@@ -78,7 +78,7 @@ Go fishing and hopefully come home to a new mount.
 [/CODE]
 
 
-[B][COLOR="#0099ff"][SIZE=4]***** Prerequisites*****[/SIZE][/COLOR][/B]
+[B][COLOR="#0099ff"][SIZE=4]***** Prerequisites *****[/SIZE][/COLOR][/B]
 
 [CODE]
 
@@ -104,9 +104,7 @@ You [U]must[/U] also exit the instance. Manually reset it if any bosses were kil
 [/INDENT]
 [/LIST]
 [LIST]
-[INDENT]
-
-[/INDENT]
+You [U]must[/U] run this on a character class that can cast an instant ranged attack @ will !
 [/LIST]
 [LIST]
 [INDENT]
@@ -114,8 +112,19 @@ You [U]must[/U] also exit the instance. Manually reset it if any bosses were kil
 [/INDENT]
 [/LIST]
 [/CODE]
-[/CENTER]
 
+
+[B][COLOR="#0099ff"][SIZE=4]***** Support *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*] Should you have questions that [SIZE=3][U][COLOR="#FF0000"]are not[/COLOR][/U][/SIZE] answered on this page or bug reports :
+[INDENT]
+[SIZE=4][COLOR="#0000CD"]Contact[/COLOR][/SIZE] me via [SIZE=4][COLOR="#0000CD"][U]Skype[/U][/COLOR][/SIZE] by clicking my link ----> : [SIZE=4][URL="skype:Botanist68?add"][COLOR="#0000CD"]Botanist[/COLOR][/URL][/SIZE]
+[/INDENT]
+[/LIST]
+[/CODE]
+[/CENTER]
 [B][CENTER][COLOR="#FF0000"][SIZE=2] Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
 
 [CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
