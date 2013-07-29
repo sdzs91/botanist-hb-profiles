@@ -50,7 +50,9 @@ If at any time you stop the bot inside the instance, you [U]must[/U] close and r
 You [U]must[/U] also exit the instance. Manually reset it if any bosses were killed !!!
 [/INDENT]
 [/LIST]
-
+[LIST]
+To ensure that none of you charaters accidently go AFK while waiting to be tagged, it is [U]required[/U] that you download and enable Giwin's [URL="http://www.thebuddyforum.com/honorbuddy-forum/plugins/uncataloged/76383-plugin-alwayshere-because-im-afk.html"]AlwaysHere - Because I'm AFK[/URL]
+[/LIST]
 [LIST]
 [*]Included on the SVN is a "[B][U]modified[/U][/B]" version of CodenameG's [B][U][COLOR="#FF0000"]Archived[/COLOR][/U][/B] [URL="http://www.thebuddyforum.com/archives/73772-plugin-mr-itemremover2-deletes-opens-sells-items-your-bags.html"]MrItemRemover 2[/URL]
 [INDENT]
