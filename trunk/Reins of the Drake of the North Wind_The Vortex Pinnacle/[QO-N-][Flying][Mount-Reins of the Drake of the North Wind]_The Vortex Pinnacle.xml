@@ -1,0 +1,562 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-][Flying][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>		 
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+		<Mob Name="Lurking Tempest" Entry="45704" />
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+
+	<Factions></Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+
+		<If Condition="Me.Level &gt;= 90">
+		
+		 	<!-- Booster UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							FindVendorsAutomatically="False"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootChests="False"
+							LootMobs="True"
+							LootRadius="25"
+							MountDistance="75"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							PullDistance="25"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseFlightPaths="True"
+							UseMount="True" 
+							UseRandomMount="False" />
+						
+			<!-- Infinite loop -->
+			<While Condition="true" >	
+				<!--The Vortex Pinnacle -->
+				<If Condition="Me.ZoneId == 5035">
+					<CustomBehavior File="Message" 
+									Text="The Vortex Pinnacle detected. Running out."
+									LogColor="Fuchsia" />
+						
+					<!-- Make our way to the exit -->
+					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+					
+					<!-- InInstance to exit the dunfeon -->
+					<CustomBehavior File="Misc\InInstance" X="-327.7366" Y="24.78619" Z="626.7043" />
+					
+					<!-- Wait timer for game to load -->
+					<CustomBehavior File="WaitTimer" 
+											WaitTime="15000" />
+					
+					<!-- Make sure we run to the right spot outside the potral -->
+					<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
+				</If> <!-- Vortex Pinnacle -->
+				
+				<!-- If we are not in the box, load the movement profile -->
+				<If Condition="Me.X &gt; -11413 || Me.X &lt; -11613 || Me.Y &lt; -2409 || Me.Y &gt; -2209 || Me.Z &lt; 575" >
+					
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\[QO-N-M][Flying][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle" />
+					
+				</If> <!-- Not in box -->
+				
+				<!-- If we are in the box -->
+				<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
+					<CustomBehavior File="Message" 
+									Text="Portal detected nearby."
+									LogColor="Fuchsia" />	
+						
+					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
+					<While Condition="Me.ZoneId != 5035">
+						<!-- Make sure we run to the right spot outside the portal -->
+						<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
+
+						<!-- Run back in the portal -->
+						<CustomBehavior File="Misc\InInstance" X="-11521.92" Y="-2317.052" Z="608.393" /> 
+										
+						<CustomBehavior File="Message" 
+										Text="Waiting for the dungeon to load." 
+										LogColor="Fuchsia" />
+									
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000"
+										VariantTime="20000" />
+										
+						<!-- If we still aren't in, we're locked out -->
+						<If Condition="Me.ZoneId != 5035">
+							<CustomBehavior File="Message" 
+											Text="We are locked out. Waiting and trying again." 
+											LogColor="Fuchsia" />
+						</If> <!-- Locked -->
+					</While> <!-- While we aren't in the instance -->
+				</If> <!-- In box -->
+				
+				<!-- If we are inside Vortex Pinnacle and have checked our reset -->
+				<If Condition="Me.ZoneId == 5035">
+					<!-- Entrance -->
+					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+	
+					<!-- Instance timer to ensure run take a minimum of 12 minutes and 30 seconds to avoid instance locks -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" /> 
+	
+					<!-- Profile message - Vortex Pinnacle initialized -->
+					<CustomBehavior File="Message" 
+									Text="Vortex Pinnacle initialized."
+									LogColor="Fuchsia" />
+	
+					<!-- Kill the first Armored Mistral -->				
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true" 
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="-420.1686" Y="-66.62024" Z="634.4308" />
+					</CustomBehavior>
+					<RunTo X="-420.1686" Y="-66.62024" Z="634.4308" />				
+									
+					<!-- Wait timer to be sure we got aggro -->
+					<CustomBehavior File="WaitTimer" 
+											WaitTime="5000" />
+											
+					<!-- Profile message - First pull complete -->
+					<CustomBehavior File="Message" 
+										Text="First pull complete." 
+										LogColor="Fuchsia" />
+									
+					<!-- Kill the second Armored Mistral -->				
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true" 
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="-488.4386" Y="-136.1343" Z="638.8187" />
+					</CustomBehavior>
+					<RunTo X="-488.4386" Y="-136.1343" Z="638.8187" />					
+									
+					<!-- Profile message - Second pull complete -->
+					<CustomBehavior File="Message" 
+										Text="Second pull complete." 
+										LogColor="Fuchsia" />				
+									
+					<!-- Kill the three groups on the circular ramp -->					
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true" 
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="-492.4446" Y="-151.0539" Z="638.9374" />
+						<Hotspot X="-497.9773" Y="-169.7874" Z="638.9374" />
+						<Hotspot X="-501.4103" Y="-201.1987" Z="636.7026" />
+						<Hotspot X="-531.1849" Y="-220.9537" Z="632.2029" />
+						<Hotspot X="-562.058" Y="-208.1571" Z="627.9547" />
+						<Hotspot X="-573.7297" Y="-175.6947" Z="623.9427" />
+						<Hotspot X="-551.79" Y="-207.7548" Z="628.9031" />
+					</CustomBehavior>
+					<RunTo X="-551.79" Y="-207.7548" Z="628.9031" />				
+									
+					<!-- Profile message - Third pull complete -->
+					<CustomBehavior File="Message" 
+										Text="Third pull complete." 
+										LogColor="Fuchsia" />				
+										
+					<!-- Pull everything past the Lurking Tempest -->				
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true" 
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="-582.1216" Y="-177.2243" Z="624.0048" />
+						<Hotspot X="-577.3123" Y="-154.4328" Z="623.6596" />
+						<Hotspot X="-595.6486" Y="-119.5447" Z="619.7501" />
+						<Hotspot X="-650.5647" Y="-64.4799" Z="619.7435" />
+						<Hotspot X="-653.4256" Y="-43.56321" Z="619.738" />
+						<Hotspot X="-672.5125" Y="-41.11735" Z="624.6653" />
+						<Hotspot X="-688.5017" Y="-27.08958" Z="635.6384" />
+						<Hotspot X="-695.4821" Y="-20.34745" Z="635.6711" />
+						<Hotspot X="-685.1094" Y="4.219316" Z="635.6729" />
+					</CustomBehavior>
+					<RunTo X="-685.1094" Y="4.219316" Z="635.6729" />
+									
+					<!-- Profile message - Fifth pull complete -->
+					<CustomBehavior File="Message" 
+										Text="Fourth pull complete." 
+										LogColor="Fuchsia" />				
+									
+					<!-- Profile message - Third pull complete -->
+					<CustomBehavior File="Message" 
+										Text="Killing Grand Vizier Ertan." 
+										LogColor="Fuchsia" />				
+									
+					<!-- Kill Grand Vizier Ertan -->
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" 
+									EventCompleteDeadMobId="43878"
+									EventX="-719.587" EventY="4.32986" EventZ="635.6728"
+									MoveOutOfGroundEffectAuraId1="111111"
+									MoveAwayFromMobCastingSpellId1="111111"
+									MoveAwayFromMobWithAuraId1="111111">
+						<Safespots>
+							<Hotspot X="-719.587" Y="4.32986" Z="635.6728" />
+						</Safespots>
+					</CustomBehavior>	
+
+					<!-- Profile message - Fifth pull complete -->
+					<CustomBehavior File="Message" 
+										Text="Grand Vizier Ertan is dead, next !." 
+										LogColor="Fuchsia" />
+					
+					<!-- Run to the slipstream -->
+					<RunTo X="-752.7068" Y="-29.53746" Z="639.926" />
+					<RunTo X="-769.088" Y="-55.73653" Z="639.926" />
+									
+					<!-- Use the slipstream -->
+					<CustomBehavior File="MountVehOnly" 
+									VehicleMountId="45455" 
+									X="-768.213" Y="-53.6862" Z="639.926" />
+					
+					<!-- Run to the dias once we land -->
+					<RunTo X="-925.2205" Y="-175.1197" Z="669.2666" />
+									
+					<!-- Pull righthand staircase -->				
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true" 
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="-927.287" Y="-158.3864" Z="669.2666" />
+						<Hotspot X="-941.5566" Y="-147.5688" Z="669.2666" />
+						<Hotspot X="-934.7927" Y="-110.911" Z="681.3549" />
+						<Hotspot X="-943.6418" Y="-84.46862" Z="692.5999" />
+						<Hotspot X="-973.2905" Y="-64.17977" Z="694.9169" />
+						<Hotspot X="-986.8172" Y="-62.31145" Z="694.9169" />
+						<Hotspot X="-1002.6" Y="-63.35493" Z="694.9169" />
+						<Hotspot X="-987.6241" Y="-63.68237" Z="694.9169" />
+						<Hotspot X="-974.8712" Y="-64.82938" Z="694.9169" />
+					</CustomBehavior>
+					<RunTo X="-974.8712" Y="-64.82938" Z="694.9169" />				
+									
+					<!-- Profile message - Fifth pull complete -->
+					<CustomBehavior File="Message" 
+										Text="Sixth pull complete." 
+										LogColor="Fuchsia" />				
+									
+					<!-- Pull Young Storm Dragon -->				
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true" 
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="-980.473" Y="-75.58814" Z="694.9169" />
+						<Hotspot X="-985.1056" Y="-95.801" Z="694.9169" />
+						<Hotspot X="-990.2885" Y="-122.4022" Z="694.9169" />
+						<Hotspot X="-997.1421" Y="-156.4353" Z="694.9169" />
+					</CustomBehavior>
+					<RunTo X="-997.1421" Y="-156.4353" Z="694.9169" />				
+									
+					<!-- Profile message - Fifth pull complete -->
+					<CustomBehavior File="Message" 
+										Text="Seventh pull complete." 
+										LogColor="Fuchsia" />
+										
+					<!-- Run to the first Howling Gale -->				
+					<RunTo X="-1007.842" Y="-101.291" Z="694.9153" />
+					
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Fuchsia" />
+
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<!-- Run to the first Howling Gale -->				
+					<RunTo X="-1039.558" Y="-69.81506" Z="700.4934" />				
+	
+										
+					<!-- Target the Howling Gale -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/tar Howling Gale" 
+									NumOfTimes="1" 
+									WaitTime="1000" />
+					
+					<!-- Cast one of the following spells -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Moonfire \n/cast Icy Touch \n/cast Serpent Sting \n/cast Ice Lance \n/cast Crackling Jade Lightning \n/cast Judgment \n/cast Shadow Word: Pain \n/cast Throw \n/cast Earth Shock \n/cast Corruption" 
+									NumOfTimes="1" 
+									WaitTime="1000" />
+					
+					<!-- Target the Howling Gale -->				
+					<CustomBehavior File="RunMacro" 
+									Macro="/cleartarget" 
+									NumOfTimes="1" 
+									WaitTime="1000" />				
+							
+					<!-- NoCombatMoveTo to the second Howling Gale -->				
+					<CustomBehavior File="NoCombatMoveTo"  X="-1061.07" Y="-48.62126" Z="700.4818" />
+					
+					<!-- Wait timer to wait 1 second -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="1000" />
+
+					<!-- Target the Howling Gale -->				
+					<CustomBehavior File="RunMacro" 
+									Macro="/targetenemy" 
+									NumOfTimes="1" 
+									WaitTime="1000" />
+					
+					<!-- Cast one of the following spells -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Moonfire \n/cast Icy Touch \n/cast Serpent Sting \n/cast Ice Lance \n/cast Crackling Jade Lightning \n/cast Judgment \n/cast Shadow Word: Pain \n/cast Throw \n/cast Earth Shock \n/cast Corruption" 
+									NumOfTimes="1" 
+									WaitTime="1000" />
+				
+													
+					<!-- Target the Howling Gale -->				
+					<CustomBehavior File="RunMacro" 
+									Macro="/cleartarget" 
+									NumOfTimes="1" 
+									WaitTime="1000" />
+									
+					<!-- NoCombatMoveTo to the top of the stairs -->				
+					<CustomBehavior File="NoCombatMoveTo"  X="-1099.821" Y="-9.875572" Z="704.7399" />
+					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Fuchsia" />
+					
+					<!-- enableable combat -->
+					<EnableBehavior Name="Combat" />			
+									
+					<!-- Pull Young Storm Dragon -->				
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true" 
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="-1134.85" Y="29.5967" Z="704.7352" />
+						<Hotspot X="-1171.694" Y="47.29779" Z="707.6915" />
+					</CustomBehavior>
+					<RunTo X="-1171.694" Y="47.29779" Z="707.6915" />	
+
+					<!-- Run to Altairus -->
+					<RunTo X="-1165.007" Y="63.58732" Z="708.7789" />
+					<RunTo X="-1176.675" Y="96.28326" Z="720.9597" />
+					<RunTo X="-1206.814" Y="113.6306" Z="728.0722" />
+					<RunTo X="-1240.527" Y="109.3951" Z="728.0722" />
+					<RunTo X="-1249.716" Y="97.09432" Z="728.0722" />
+					<RunTo X="-1244.977" Y="76.2642" Z="731.8144" />
+									
+					<!-- Kill Altairus -->
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" 
+									EventCompleteDeadMobId="43873"
+									EventX="-1192.2" EventY="54.16493" EventZ="744.2992"
+									MoveOutOfGroundEffectAuraId1="111111"
+									MoveAwayFromMobCastingSpellId1="111111"
+									MoveAwayFromMobWithAuraId1="111111">
+						<Safespots>
+							<Hotspot X="-1192.2" Y="54.16493" Z="744.2992" />
+						</Safespots>
+					</CustomBehavior>
+									
+					<!-- Run to the top of the platform -->
+					<RunTo X="-1201.3" Y="111.9213" Z="740.707" />					
+									
+					<CustomBehavior File="MyCTM" 
+									X="-1201.302" Y="123.6426" Z="729.2406" />				
+									
+					<!-- Wait timer for game to load -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="20000" />				
+
+					<!-- Run to the exit -->
+					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+					
+					<!-- Instance timer to ensure run take a minimum of 12 minutes and 30 seconds to avoid instance locks -->
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Check" />
+					
+				</If> <!-- The Vortex Pinnacle -->
+				
+				<!--The Vortex Pinnacle -->
+				<If Condition="Me.ZoneId == 5035">
+					<CustomBehavior File="Message" 
+									Text="The Vortex Pinnacle detected. Running out."
+									LogColor="Fuchsia" />
+						
+					<!-- Make our way to the exit -->
+					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" 
+									X="-327.7366" Y="24.78619" Z="626.7043" />
+					
+					<!-- Wait timer for game to load -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />
+					
+					<!-- Make sure we run to the right spot outside the potral -->
+					<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
+					
+					<!-- If we are in The Vortex Pinnacle and need to repair or vendor, hearth to Ramkahen -->
+					<If Condition="Me.ZoneId == 5035">
+					
+						<!-- Repair if necessary -->
+						<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
+						
+							<!-- Profile message - Our durability is less than 30%, or we need to vendor -->
+							<CustomBehavior File="Message" 
+											Text="Our durability is less than 30%, or we need to vendor." 
+											LogColor="Lime" />
+											
+							<!-- Use our hearthstone or innkeeps daughter -->				
+							<If Condition="Me.HearthstoneAreaId == 5466 ">
+								<CustomBehavior File="Message" 
+												Text="Our Innkeeper is set at Ramkahen." 
+												LogColor="Cyan" />
+													
+								<!-- Have hearthstone -->
+								<If Condition="HasItem(6948)">
+									<CustomBehavior File="Message" 
+													Text="Using Hearthstone." 
+													LogColor="Lime" />
+													
+									<CustomBehavior File="Misc\RunLua" 
+													Lua="UseItemByName(6948)" 
+													WaitTime="1000" />
+													
+									<CustomBehavior File="WaitTimer" 
+													WaitTime="20000" />
+								</If> <!-- Have hearthstone -->
+							
+								<!-- Have Innkeeper's Daughter -->
+								<If Condition="HasItem(64488)">
+									<CustomBehavior File="Message" 
+													Text="Using Innkeeper's Daughter." 
+													LogColor="Lime" />
+														
+									<CustomBehavior File="Misc\RunLua" 
+													Lua="UseItemByName(64488)" 
+													WaitTime="1000" />
+										
+									<!-- Wait 20 seconds for the game to load -->	
+									<CustomBehavior File="WaitTimer" 
+													WaitTime="20000" />
+													
+								</If> <!-- Have Innkeeper's Daughter -->
+
+								<SetVendor>
+									<Vendors>
+										<!-- Ramkahen Repair -->
+										<Vendor Name="Blacksmith Abasi" 
+												Entry="48617" 
+												Type="Repair" 
+												X="-9404.68" Y="-906.438" Z="112.5411" />
+									</Vendors>
+								</SetVendor>
+								
+								<!-- Force set the vendor -->
+								<CustomBehavior File="ForceSetVendor" 
+												DoMail="False" 
+												DoRepair="True" 
+												DoSell="True" 
+												DoTrain="False" />
+							
+								<!-- We are done repairing -->
+								<If Condition="Me.DurabilityPercent &gt;= 0.8" >
+									<CustomBehavior File="Message" 
+													Text="Repairing complete." 
+													LogColor="Lime" />
+													
+									<!-- Profile message - Returning to The Vortex Pinnacle -->
+									<CustomBehavior File="Message" 
+													Text="Returning to The Vortex Pinnacle." 
+													LogColor="Lime" />
+													
+									<!-- Fly to the hover point at the last ridge near the sphinx-->
+									<CustomBehavior File="FlyTo" X="-10703.96" Y="-1767.715" Z="353.466" />
+															
+															
+									<!-- Profile message - CTM to The Vortex Pinnacle hover point -->						
+									<CustomBehavior File="Message" 
+													Text="CTM to The Vortex Pinnacle hover point." 
+													LogColor="Lime" />
+									
+									<!-- CTM to hover point above The Vortex Pinnacle -->
+									<CustomBehavior File="MyCTM" X="-11446.21" Y="-2263.146" Z="651.7057" />
+									
+									<!-- CTM to the instance box -->
+									<CustomBehavior File="MyCTM" X="-11513.3" Y="-2309.88" Z="608.393" />
+									<CustomBehavior File="ForcedDismount" />	
+									
+									<!-- Run to the instance box -->
+									<Runto X="-11513.3" Y="-2309.88" Z="608.393" />	
+									
+								</If> <!-- repaired -->
+							</If> <!-- Repairing -->
+						</If>	<!-- Durability -->
+					</If>	<!-- In Uldum -->
+				</If> <!-- Vortex Pinnacle -->
+	
+				<!-- If we are in the box -->
+				<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
+				
+					<!-- Profile message - Resetting the instance -->
+					<CustomBehavior File="Message" 
+									Text="Resetting the instance." 
+									LogColor="Fuchsia" />
+					
+					<!-- Reset the instance -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/script ResetInstances()" />
+									
+					<!-- Set the dungeon difficulty to normal -->				
+					<CustomBehavior File="RunMacro" 
+									Macro="/script SetDungeonDifficultyID(1);" />
+					
+					<CustomBehavior File="Message" 
+									Text="Instance reset." 
+									LogColor="Fuchsia" />
+				</If> <!-- In box -->
+			</While> <!-- Infinite loop -->
+		</If> <!-- I am level 90 -->	
+	</QuestOrder>
+</HBProfile>
