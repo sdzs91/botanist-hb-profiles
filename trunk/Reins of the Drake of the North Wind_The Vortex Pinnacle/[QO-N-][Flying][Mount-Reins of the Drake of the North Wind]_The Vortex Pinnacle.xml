@@ -406,6 +406,10 @@
 					<!-- Run to the exit -->
 					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
 					
+					<!-- Instance timer to ensure run take a minimum of 12 minutes and 30 seconds to avoid instance locks -->
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Check" />
+					
 					<!-- If we are in The Vortex Pinnacle and need to repair or vendor, hearth to Ramkahen -->
 					<If Condition="Me.ZoneId == 5035">
 					
@@ -529,11 +533,6 @@
 							</If> <!-- Repairing -->
 						</If>	<!-- Durability -->
 					</If>	<!-- In Vortex Pinnecle -->
-					
-					<!-- Instance timer to ensure run take a minimum of 12 minutes and 30 seconds to avoid instance locks -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
-					
 				</If> <!-- The Vortex Pinnacle -->
 				
 				<!--The Vortex Pinnacle -->
