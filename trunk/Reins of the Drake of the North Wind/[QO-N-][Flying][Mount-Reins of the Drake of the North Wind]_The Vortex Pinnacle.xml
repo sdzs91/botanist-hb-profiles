@@ -288,10 +288,12 @@
 									AllowCombat="false">
 						<Hotspot X="-980.473" Y="-75.58814" Z="694.9169" />
 						<Hotspot X="-985.1056" Y="-95.801" Z="694.9169" />
-						<Hotspot X="-990.2885" Y="-122.4022" Z="694.9169" />
-						<Hotspot X="-997.1421" Y="-156.4353" Z="694.9169" />
+						<Hotspot X="-991.5434" Y="-122.3373" Z="694.9169" />
+						<Hotspot X="-1029.242" Y="-128.8814" Z="694.9169" />
+						<Hotspot X="-1044.783" Y="-132.8248" Z="694.9169" />
+						<Hotspot X="-1021.897" Y="-126.2177" Z="694.9169" />
 					</CustomBehavior>
-					<RunTo X="-997.1421" Y="-156.4353" Z="694.9169" />				
+					<RunTo X="-1021.897" Y="-126.2177" Z="694.9169" />			
 									
 					<!-- Profile message - Fifth pull complete -->
 					<CustomBehavior File="Message" 
