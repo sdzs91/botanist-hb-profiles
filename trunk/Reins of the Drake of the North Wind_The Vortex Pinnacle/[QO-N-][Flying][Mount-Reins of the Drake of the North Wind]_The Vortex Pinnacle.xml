@@ -90,7 +90,7 @@
 					
 					<!-- Wait timer for game to load -->
 					<CustomBehavior File="WaitTimer" 
-											WaitTime="15000" />
+									WaitTime="15000" />
 					
 					<!-- Make sure we run to the right spot outside the potral -->
 					<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
@@ -141,7 +141,8 @@
 					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
 	
 					<!-- Instance timer to ensure run take a minimum of 12 minutes and 30 seconds to avoid instance locks -->
-					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" /> 
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Start" /> 
 	
 					<!-- Profile message - Vortex Pinnacle initialized -->
 					<CustomBehavior File="Message" 
@@ -330,7 +331,8 @@
 									WaitTime="1000" />				
 							
 					<!-- NoCombatMoveTo to the second Howling Gale -->				
-					<CustomBehavior File="NoCombatMoveTo"  X="-1061.07" Y="-48.62126" Z="700.4818" />
+					<CustomBehavior File="NoCombatMoveTo"  
+									X="-1061.07" Y="-48.62126" Z="700.4818" />
 					
 					<!-- Wait timer to wait 1 second -->
 					<CustomBehavior File="WaitTimer" 
@@ -356,7 +358,8 @@
 									WaitTime="1000" />
 									
 					<!-- NoCombatMoveTo to the top of the stairs -->				
-					<CustomBehavior File="NoCombatMoveTo"  X="-1099.821" Y="-9.875572" Z="704.7399" />
+					<CustomBehavior File="NoCombatMoveTo"  
+									X="-1099.821" Y="-9.875572" Z="704.7399" />
 					
 					<!-- Profile message - Enabling combat -->
 					<CustomBehavior File="Message" 
@@ -388,7 +391,9 @@
 					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 									EventCompleteWhen="SpecificMobsDead" 
 									EventCompleteDeadMobId="43873"
-									EventX="-1192.2" EventY="54.16493" EventZ="744.2992"
+									EventX="-1192.2" 
+									EventY="54.16493" 
+									EventZ="744.2992"
 									MoveOutOfGroundEffectAuraId1="111111"
 									MoveAwayFromMobCastingSpellId1="111111"
 									MoveAwayFromMobWithAuraId1="111111">
@@ -504,7 +509,9 @@
 									<CustomBehavior File="MyCTM" X="-11446.21" Y="-2263.146" Z="651.7057" />
 									
 									<!-- CTM to the instance box -->
-									<CustomBehavior File="MyCTM" X="-11513.3" Y="-2309.88" Z="608.393" />
+									<CustomBehavior File="MyCTM" 
+													X="-11513.3" Y="-2309.88" Z="608.393" />
+													
 									<CustomBehavior File="ForcedDismount" />	
 									
 									<!-- Run to the instance box -->
