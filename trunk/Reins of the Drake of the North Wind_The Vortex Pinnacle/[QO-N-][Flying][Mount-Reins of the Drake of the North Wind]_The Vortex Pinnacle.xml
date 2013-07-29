@@ -398,15 +398,11 @@
 					</CustomBehavior>
 									
 					<!-- Run to the top of the platform -->
-					<RunTo X="-1201.3" Y="111.9213" Z="740.707" />					
+					<RunTo X="-1082.505" Y="28.14781" Z="705.6274" />					
 									
 					<CustomBehavior File="MyCTM" 
-									X="-1201.302" Y="123.6426" Z="729.2406" />				
+									X="-361.0677" Y="-5.696181" Z="632.7807" />				
 									
-					<!-- Wait timer for game to load -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="20000" />				
-
 					<!-- Run to the exit -->
 					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
 					
