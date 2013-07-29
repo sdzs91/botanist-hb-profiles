@@ -28,19 +28,14 @@ The profile [U]will [/U]automatically hearth to Ramkahen and vendor/repair when 
 The profile [U]will[/U] mail any items it farms that is on the protected items list.
 [/LIST]
 [LIST]
-[INDENT]
+Your character [U]will not[/U] reset the instance until [SIZE=3][B]after[/B][/SIZE] it has completed the first run.
 
+[INDENT]
+You [U]must[/U] manually [U]exit[/U] and [U]reset[/U] the instance if you stop the bot inside the instance for any reason
 [/INDENT]
 [/LIST]
 [LIST]
-[INDENT]
-
-[/INDENT]
-[/LIST]
-[LIST]
-[INDENT]
-
-[/INDENT]
+You [U]must[/U] close HonorBuddy and reinitialize it if you stop the bot for [U]any[/U] reason while in the instance.
 [/LIST]
 [/CODE]
 
@@ -101,8 +96,12 @@ Your character [U]must[/U] have a hearthstone or innkeeper's daughter in it's ba
 You must set a mail recipient in the HonorBuddy Settings and Tools.
 [/LIST]
 [LIST]
+[*]Due to an extensive use of the [URL="http://king-hb-svn.googlecode.com/svn/trunk/Leveling%20Profiles/Questing%20Behaviors/RunLikeHell.cs"]RunLikeHell[/URL] Custom Behavior:
 [INDENT]
-
+If at any time you stop the bot inside the instance, you [U]must[/U] close and restart HonorBuddy to clear the memory ! 
+[/INDENT]
+[INDENT]
+You [U]must[/U] also exit the instance. Manually reset it if any bosses were killed !!!
 [/INDENT]
 [/LIST]
 [LIST]
