@@ -423,80 +423,7 @@
 					<!-- Instance timer to ensure run takes a minimum of 12 minutes and 30 seconds to avoid instance locks -->
 					<CustomBehavior File="Misc\InstanceTimer" 
 									Timer="Check" />
-
-					<!-- Repair if necessary -->
-					<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
-					
-						<!-- Profile message - Our durability is less than 30%, or we need to vendor -->
-						<CustomBehavior File="Message" 
-										Text="Our durability is less than 30%, or we need to vendor." 
-										LogColor="Lime" />
-										
-						<!-- Use our hearthstone or innkeeps daughter -->				
-						<If Condition="Me.HearthstoneAreaId == 5466 ">
-							<CustomBehavior File="Message" 
-											Text="Our Innkeeper is set at Ramkahen." 
-											LogColor="Cyan" />
-												
-							<!-- Have hearthstone -->
-							<If Condition="HasItem(6948)">
-								<CustomBehavior File="Message" 
-												Text="Using Hearthstone." 
-												LogColor="Lime" />
-												
-								<CustomBehavior File="Misc\RunLua" 
-												Lua="UseItemByName(6948)" 
-												WaitTime="1000" />
-												
-								<CustomBehavior File="WaitTimer" 
-												WaitTime="20000" />
-							</If> <!-- Have hearthstone -->
-						
-							<!-- Have Innkeeper's Daughter -->
-							<If Condition="HasItem(64488)">
-								<CustomBehavior File="Message" 
-												Text="Using Innkeeper's Daughter." 
-												LogColor="Lime" />
-													
-								<CustomBehavior File="Misc\RunLua" 
-												Lua="UseItemByName(64488)" 
-												WaitTime="1000" />
-									
-								<!-- Wait 20 seconds for the game to load -->	
-								<CustomBehavior File="WaitTimer" 
-												WaitTime="20000" />
-												
-							</If> <!-- Have Innkeeper's Daughter -->
-						</If> <!-- hearth location check -->
-							
-						
-						<!-- If we have hearthed to Uldum -->						
-						<If Condition="Me.ZoneId == 5034">		
-							<SetVendor>
-								<Vendors>
-									<!-- Ramkahen Repair -->
-									<Vendor Name="Blacksmith Abasi" 
-											Entry="48617" 
-											Type="Repair" 
-											X="-9404.68" Y="-906.438" Z="112.5411" />
-								</Vendors>
-							</SetVendor>
-							
-							<SetMailbox>
-								<Mailboxes>
-									<Mailbox X="-9428.854" Y="-968.5951" Z="111.0117" />
-								</Mailboxes>
-							</SetMailbox>
-							
-							<!-- Force set the vendor -->
-							<CustomBehavior File="ForceSetVendor" 
-											DoMail="True" 
-											DoRepair="True" 
-											DoSell="True" 
-											DoTrain="False" />
-						
-						</If>	<!-- If we have hearthed to Uldum -->	
-					</If> <!-- Repair if necessary -->					
+	
 				</If><!-- If we are inside Vortex Pinnacle and have checked our reset -->
 						
 				<!--The Vortex Pinnacle -->
@@ -521,6 +448,107 @@
 					
 				</If> <!-- Vortex Pinnacle -->
 				
+				<!-- Repair if necessary -->
+				<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
+				
+					<!-- Profile message - Our durability is less than 30%, or we need to vendor -->
+					<CustomBehavior File="Message" 
+									Text="Our durability is less than 30%, or we need to vendor." 
+									LogColor="Lime" />
+									
+					<!-- Use our hearthstone or innkeeps daughter -->				
+					<If Condition="Me.HearthstoneAreaId == 5466 ">
+						<CustomBehavior File="Message" 
+										Text="Our Innkeeper is set at Ramkahen." 
+										LogColor="Cyan" />
+											
+						<!-- Have hearthstone -->
+						<If Condition="HasItem(6948)">
+							<CustomBehavior File="Message" 
+											Text="Using Hearthstone." 
+											LogColor="Lime" />
+											
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(6948)" 
+											WaitTime="1000" />
+											
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+						</If> <!-- Have hearthstone -->
+					
+						<!-- Have Innkeeper's Daughter -->
+						<If Condition="HasItem(64488)">
+							<CustomBehavior File="Message" 
+											Text="Using Innkeeper's Daughter." 
+											LogColor="Lime" />
+												
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(64488)" 
+											WaitTime="1000" />
+								
+							<!-- Wait 20 seconds for the game to load -->	
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+											
+						</If> <!-- Have Innkeeper's Daughter -->
+					</If> <!-- hearth location check -->
+						
+					
+					<!-- If we have hearthed to Uldum -->						
+					<If Condition="Me.X &gt; -10700"">		
+						<SetVendor>
+							<Vendors>
+								<!-- Ramkahen Repair -->
+								<Vendor Name="Blacksmith Abasi" 
+										Entry="48617" 
+										Type="Repair" 
+										X="-9404.68" Y="-906.438" Z="112.5411" />
+							</Vendors>
+						</SetVendor>
+						
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="-9428.854" Y="-968.5951" Z="111.0117" />
+							</Mailboxes>
+						</SetMailbox>
+						
+						<!-- Force set the vendor -->
+						<CustomBehavior File="ForceSetVendor" 
+										DoMail="True" 
+										DoRepair="True" 
+										DoSell="True" 
+										DoTrain="False" />
+					
+					</If>	<!-- If we have hearthed to Uldum -->	
+				</If> <!-- Repair if necessary -->
+				
+				<!-- If we aren't in the box -->
+				<If Condition="Me.X &gt; -11413 || Me.X &lt; -11613 || Me.Y &lt; -2409 || Me.Y &gt; -2209 || Me.Z &lt; 575" >
+					
+					<!-- Profile message - Flying to the sphinx in south eastern Uldum -->
+					<CustomBehavior File="Message" 
+									Text="Flying to the sphinx in south eastern Uldum." 
+									LogColor="Lime" />					
+											
+					<!-- Fly to the hover point at the last ridge near the sphinx-->
+					<CustomBehavior File="FlyTo" X="-10703.96" Y="-1767.715" Z="353.466" />
+											
+					<!-- Profile message - CTM to The Vortex Pinnacle hover point -->						
+					<CustomBehavior File="Message" 
+									Text="CTM to The Vortex Pinnacle hover point." 
+									LogColor="Lime" />
+					
+					<!-- CTM to The Vortex Pinnacle hover point -->
+					<CustomBehavior File="MyCTM" X="-11446.21" Y="-2263.146" Z="651.7057" />
+					
+					<!-- CTM to the instance box -->
+					<CustomBehavior File="MyCTM" X="-11513.3" Y="-2309.88" Z="608.393" />
+					<CustomBehavior File="ForcedDismount" />	
+					
+					<!-- Run to the instance box -->
+					<Runto X="-11513.3" Y="-2309.88" Z="608.393" />
+				
+				</If> <!-- If we aren't in the box -->
 				
 				<!-- If we are in the box -->
 				<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
