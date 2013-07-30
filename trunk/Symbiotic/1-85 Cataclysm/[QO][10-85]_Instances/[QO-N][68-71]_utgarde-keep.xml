@@ -112,7 +112,7 @@
 									LogColor="Fuchsia" />	
 						
 					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
-					<While Condition="Me.MapId != 574">
+					<While Condition="Me.ZoneId != 206">
 						<!-- Make sure we run to the right spot outside the portal -->
 						<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
 
@@ -128,7 +128,7 @@
 										VariantTime="20000" />
 										
 						<!-- If we still aren't in, we're locked out -->
-						<If Condition="Me.MapId != 574">
+						<If Condition="Me.ZoneId != 206">
 							<CustomBehavior File="Message" 
 											Text="We are locked out. Waiting and trying again." 
 											LogColor="Fuchsia" />
@@ -428,7 +428,7 @@
 									LogColor="Fuchsia" />	
 						
 					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
-					<While Condition="Me.MapId != 574">
+					<While Condition="Me.ZoneId != 206">
 						<!-- Make sure we run to the right spot outside the portal -->
 						<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
 
@@ -444,7 +444,7 @@
 										VariantTime="20000" />
 										
 						<!-- If we still aren't in, we're locked out -->
-						<If Condition="Me.MapId != 574">
+						<If Condition="Me.ZoneId != 206">
 							<CustomBehavior File="Message" 
 											Text="We are locked out. Waiting and trying again." 
 											LogColor="Fuchsia" />
@@ -476,6 +476,18 @@
 										
 					<CustomBehavior File="WaitTimer"
 									WaitTime="40000" />
+					
+					<!-- Forces us to sit still until Dalronn dies -->
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="24201"
+									EventX="182.4236" EventY="-76.84211" EventZ="15.31155"
+									MoveOutOfGroundEffectAuraId1="111111"
+									MoveAwayFromMobCastingSpellId1="111111"
+									MoveAwayFromMobWithAuraId1="111111">
+						<Safespots>
+							<Hotspot X="182.4236" Y="-76.84211" Z="15.31155" />
+						</Safespots>
+					</CustomBehavior>
 					
 					<!-- Run to quest givers, wait to be tagged -->
 					<RunTo X="182.4236" Y="-76.84211" Z="15.31155" />

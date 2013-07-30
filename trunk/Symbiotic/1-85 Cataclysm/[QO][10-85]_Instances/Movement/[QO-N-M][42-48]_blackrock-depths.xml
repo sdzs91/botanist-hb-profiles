@@ -689,8 +689,9 @@
 													Text="Moving to the riding trainer."
 													LogColor="Orange" />
 													
+									<!-- Elevator -->
 									<RunTo X="1762.213" Y="-4407.147" Z="42.50801" />
-												
+													
 									<!-- Moving to riding trainer -->
 									<RunTo X="1799.227" Y="-4360.222" Z="102.4608" />
 									

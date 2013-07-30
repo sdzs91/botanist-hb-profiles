@@ -203,24 +203,38 @@
 						<CustomBehavior File="FlyTo" X="1751.324" Y="-4230.846" Z="147.3718" />
 					</If> <!-- Cleft of Shadows -->
 					
-					<!-- Fly to zeppelin dock -->
-					<CustomBehavior File="FlyTo" X="1842.819" Y="-4392.633" Z="168.825" />
-					<CustomBehavior File="FlyTo" X="1842.819" Y="-4392.633" Z="135.2332" />
-					<CustomBehavior File="ForcedDismount" />
-		
-					<!-- Board zeppelin to Undercity -->
-					<RunTo X="1839.144" Y="-4390.119" Z="135.2312" />
-					
-					<CustomBehavior File="Message" 
-									Text="We are on the Orgrimmar to Undercity zeppelin dock." 
-									LogColor="Cyan" />
-					
-					<CustomBehavior File="Message" 
-									Text="The zeppelin to Undercity has issues. You are to put yourself onto the zeppelin and start this instance profile again when you arrive on the Undercity zeppelin dock." 
-									LogColor="Red" />
+					<!-- Fly to the zeppelin hover point -->
+					<CustomBehavior File="FlyTo"
+									X="1853.863" Y="-4404.338" Z="188.4067" />
 									
-					<CustomBehavior File="UserSettings" 
-									StopBot="true" />
+					<!-- Land on the deck -->
+					<CustomBehavior File="MyCTM"
+									X="1868.09" Y="-4417.422" Z="135.232" />				
+							
+					<!-- Forced dismount -->		
+					<CustomBehavior File="ForcedDismount" />						
+						
+					<!-- Orgrimmar to Grom'gol Base Camp -->
+					<CustomBehavior File="UseTransport" 
+						TransportId="175080" 
+						WaitAtX="1869.635" 
+						WaitAtY="-4419.227" 
+						WaitAtZ="135.2332"								
+						TransportStartX="1880.818" 
+						TransportStartY="-4435.269" 
+						TransportStartZ="152.8608"								
+						StandOnX="1883.553" 
+						StandOnY="-4419.312" 
+						StandOnZ="136.8681"
+						TransportEndX="-12464.34" 
+						TransportEndY="233.1597" 
+						TransportEndZ="49.53437"	
+						GetOffX="-12445.94" 
+						GetOffY="218.9818" 
+						GetOffZ="31.86087" />	
+						
+					<!-- Run to the western side of the deck -->
+					<RunTo X="-12424.07" Y="225.4187" Z="32.17282" />
 				</If> <!-- Horde -->
 			</If> <!-- Kalimdor -->
 			
@@ -264,11 +278,11 @@
 										Text="We are Horde." 
 										LogColor="Cyan" />
 									
-						<!-- Bottom of zeppelin tower (Org/STV) -->
-						<RunTo X="2044.838" Y="284.2488" Z="56.00068" />
+						<CustomBehavior File="FlyTo" X="2075.285" Y="349.3864" Z="118.7071" />
 						
-						<!-- Bottom of zeppelin tower (Howling Fjord) -->
-						<RunTo X="2058.653" Y="311.7207" Z="54.22321" />
+						<CustomBehavior File="FlyTo" X="2061.812" Y="357.9389" Z="82.46954" />
+
+						<CustomBehavior File="ForcedDismount" />
 						
 						<!-- Top of zep tower (howling fjord) -->
 						<RunTo X="2062.118" Y="358.4322" Z="82.47268" />
@@ -291,6 +305,9 @@
 										GetOffX="1973.536"
 										GetOffY="-6099.92" 
 										GetOffZ="67.15816" />
+										
+						<!-- Run to the other side of the building off the zep -->
+						<RunTo  X="1959.064" Y="-6118.095" Z="27.84882" />
 					</ElseIf> <!-- Horde -->
 				</If> <!-- Alliance -->
 			</If> <!-- Eastern Kingdoms -->
@@ -487,6 +504,10 @@
 				
 				<!-- Fly outside of Utgarde Keep at rendezvous -->
 				<CustomBehavior File="FlyTo" X="1213.57" Y="-5184.801" Z="132.5065" />
+				
+				<CustomBehavior File="ForcedDismount" />
+				
+				<RunTo X="1213.57" Y="-5184.801" Z="132.5065" />
 
 				<CustomBehavior File="Misc\LoadProfileOn" 
 								CheckRange="5" />
@@ -677,6 +698,9 @@
 													Text="Moving to the riding trainer." 
 													LogColor="Orange" />
 															
+									<!-- Elevator -->
+									<RunTo X="1762.213" Y="-4407.147" Z="42.50801" />						
+															
 									<!-- move to riding trainer -->
 									<RunTo X="1802.374" Y="-4368.528" Z="102.6684" />
 
@@ -706,19 +730,30 @@
 							
 						<!-- trained -->
 						<If Condition="HasSpell(54197)" >
-							<!-- Board zeppelin to Undercity -->
-							<RunTo X="1839.144" Y="-4390.119" Z="135.2312" />
-							
-							<CustomBehavior File="Message" 
-											Text="We are on the Orgrimmar to Undercity zeppelin dock." 
-											LogColor="Cyan" />
-							
-							<CustomBehavior File="Message" 
-											Text="The zeppelin to Undercity has issues. You are to put yourself onto the zeppelin and start this instance profile again when you arrive on the Undercity zeppelin dock." 
-											LogColor="Red" />
-											
-							<CustomBehavior File="UserSettings" 
-											StopBot="true" />
+							<!-- Run to the deck -->
+							<RunTo X="1868.09" Y="-4417.422" Z="135.232" />
+
+							<!-- Orgrimmar to Grom'gol Base Camp -->
+							<CustomBehavior File="UseTransport"
+								TransportId="175080"
+								WaitAtX="1869.635"
+								WaitAtY="-4419.227"
+								WaitAtZ="135.2332"
+								TransportStartX="1880.818"
+								TransportStartY="-4435.269"
+								TransportStartZ="152.8608"
+								StandOnX="1883.553"
+								StandOnY="-4419.312"
+								StandOnZ="136.8681"
+								TransportEndX="-12464.34"
+								TransportEndY="233.1597"
+								TransportEndZ="49.53437"
+								GetOffX="-12445.94"
+								GetOffY="218.9818"
+								GetOffZ="31.86087" />
+
+							<!-- Run to the western side of the deck -->
+							<RunTo X="-12424.07" Y="225.4187" Z="32.17282" />
 						</If> <!-- Trained riding -->
 					</If> <!-- Orgrimmar -->
 				</If> <!-- Horde -->
@@ -842,33 +877,73 @@
 										Text="We are Horde." 
 										LogColor="Cyan" />
 								
-						<!-- Bottom of zeppelin tower (Org/STV) -->
-						<RunTo X="2044.838" Y="284.2488" Z="56.00068" />
+						<!-- Northern Stranglethorn -->
+						<If Condition="Me.ZoneId == 33">
+							<CustomBehavior File="Message" 
+											Text="We are in Northern Stranglethorn."
+											LogColor="Cyan" />
 						
-						<!-- Bottom of zeppelin tower (Howling Fjord) -->
-						<RunTo X="2058.653" Y="311.7207" Z="54.22321" />
-						
-						<!-- Top of zep tower (howling fjord) -->
-						<RunTo X="2062.118" Y="358.4322" Z="82.47268" />
-									
-						<!-- Undercity to Howling Fjord -->
-						<CustomBehavior File="UseTransport"
-										TransportId="181689"
-										WaitAtX="2062.118" 
-										WaitAtY="358.4322" 
-										WaitAtZ="82.47268" 
-										TransportStartX="2056.4926" 
-										TransportStartY="381.6347" 
-										TransportStartZ="100.3620"
-										TransportEndX="1989.352" 
-										TransportEndY="-6082.7763"
-										TransportEndZ="85.59"
-										StandOnX="2060.598" 
-										StandOnY="370.0439" 
-										StandOnZ="82.48199" 
-										GetOffX="1973.536"
-										GetOffY="-6099.92" 
-										GetOffZ="67.15816" />
+							<!-- Run to the deck -->
+							<RunTo X="-12407.97" Y="200.2348" Z="31.8366" />
+
+							<!-- Grom'gol Base Camp to Undercity -->
+							<CustomBehavior File="UseTransport"
+											TransportId="176495"
+											WaitAtX="-12407.97"
+											WaitAtY="200.2348"
+											WaitAtZ="31.8366"
+											TransportStartX="-12406.8906"
+											TransportStartY="211.837677"
+											TransportStartZ="49.6984367"
+											StandOnX="-12398.64"
+											StandOnY="197.7412"
+											StandOnZ="33.84207"
+											TransportEndX="2062.59888"
+											TransportEndY="235.264465"
+											TransportEndZ="117.733627"
+											GetOffX="2057.45"
+											GetOffY="238.7743"
+											GetOffZ="99.76712" />
+											
+							<!-- Run to the doorway -->
+							<RunTo X="2060.382" Y="254.9573" Z="99.76746" />
+						</If> <!-- Northern Stranglethorn -->
+							
+						<!-- Tirisfal Glades -->
+						<If Condition="Me.ZoneId == 85">
+							<CustomBehavior File="Message" 
+											Text="We are in Tirisfal Glades."
+											LogColor="Cyan" />	
+							
+							<CustomBehavior File="Message" 
+											Text="Moving to Howling Fjord zeppelin."
+											LogColor="Lime" />
+											
+							<!-- Top of zep tower (howling fjord) -->
+							<RunTo X="2062.118" Y="358.4322" Z="82.47268" />
+										
+							<!-- Undercity to Howling Fjord -->
+							<CustomBehavior File="UseTransport"
+											TransportId="181689"
+											WaitAtX="2062.118" 
+											WaitAtY="358.4322" 
+											WaitAtZ="82.47268" 
+											TransportStartX="2056.4926" 
+											TransportStartY="381.6347" 
+											TransportStartZ="100.3620"
+											TransportEndX="1989.352" 
+											TransportEndY="-6082.7763"
+											TransportEndZ="85.59"
+											StandOnX="2060.598" 
+											StandOnY="370.0439" 
+											StandOnZ="82.48199" 
+											GetOffX="1973.536"
+											GetOffY="-6099.92" 
+											GetOffZ="67.15816" />		
+
+							<!-- Run to the other side of the building off the zep -->
+							<RunTo  X="1959.064" Y="-6118.095" Z="27.84882" />
+						</If> <!-- Tirisfal Glades -->
 					</ElseIf> <!-- Horde -->
 				</If> <!-- Alliance -->
 			</If> <!-- Eastern Kingdoms -->
@@ -879,15 +954,16 @@
 								Text="We are in Northrend." 
 								LogColor="Cyan" />
 						
-				<!-- Run to the other side of the building off the zep 
-				<RunTo X="1958.926" Y="-6119.656" Z="61.81112" /> -->
-
 				<CustomBehavior File="Message" 
 								Text="Flying to the rendezvous location." 
 								LogColor="Lime" />
 				
 				<!-- Fly outside of Utgarde Keep at rendezvous -->
 				<CustomBehavior File="FlyTo" X="1213.57" Y="-5184.801" Z="132.5065" />
+				
+				<CustomBehavior File="ForcedDismount" />
+				
+				<RunTo X="1213.57" Y="-5184.801" Z="132.5065" />
 
 				<CustomBehavior File="Misc\LoadProfileOn" 
 								CheckRange="5" />

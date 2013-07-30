@@ -288,12 +288,9 @@
 				
 				<!-- Fly outside of Sethekk Halls at rendezvous -->
 				<CustomBehavior File="FlyTo" X="-3363.793" Y="4913.244" Z="53.08671" />
- 
-				<CustomBehavior File="WaitTimer"
-								WaitTime="1000" />
- 
+
 				<CustomBehavior File="Misc\LoadProfileOn" 
-								CheckRange="10" />
+								CheckRange="5" />
 									
 				<CustomBehavior File="WaitTimer"
 								WaitTime="10000" />
@@ -410,11 +407,8 @@
 				<!-- Fly outside of Sethekk Halls at rendezvous -->
 				<CustomBehavior File="FlyTo" X="-3363.793" Y="4913.244" Z="53.08671" />
 
-				<CustomBehavior File="WaitTimer"
-								WaitTime="1000" />
-				
 				<CustomBehavior File="Misc\LoadProfileOn" 
-								CheckRange="10" />
+								CheckRange="5" />
 									
 				<CustomBehavior File="WaitTimer"
 								WaitTime="10000" />

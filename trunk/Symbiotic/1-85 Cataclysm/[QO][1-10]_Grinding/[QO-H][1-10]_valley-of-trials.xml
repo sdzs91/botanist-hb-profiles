@@ -188,8 +188,8 @@
 								GetOffY="-4393.583" 
 								GetOffZ="135.233" />
 				
-				<!-- Orgrimmar dock -->
-				<RunTo X="1841.82" Y="-4393.583" Z="135.233" />
+				<!-- Orgrimmar fp -->
+				<RunTo X="1801.861" Y="-4368.239" Z="102.6186" />
 			</If> <!-- Tirisfal Glades -->
 			
 			<!-- Camp Narache / Mulgore -->
@@ -260,23 +260,17 @@
 									X="1573.266" Y="-4439.158" Z="16.0564" />
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="1000" />
-									
-					
 				</If> <!-- Hearth -->
 				
 				<CustomBehavior File="Message" 
-									Text="Moving to Razor Hill." 
-									LogColor="Lime" />
+								Text="Moving to Sen'jin Village." 
+								LogColor="Lime" />
 									
 				<!-- Move to orgrimmar fp -->
 				<RunTo X="1798.27" Y="-4363.27" Z="102.5216" />
 				
-				<!-- razor hill fp -->
-				<RunTo X="269.917" Y="-4766.76" Z="11.4946" />
-							
-				<CustomBehavior File="Message" 
-								Text="Moving to Durotar." 
-								LogColor="Lime" />
+				<!-- Sen'jin fp -->
+				<RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
 			</If> <!-- Orgrimmar -->
 
 			<CustomBehavior File="UserSettings"
@@ -293,9 +287,20 @@
 					<CustomBehavior File="Message" 
 									Text="Moving to boars." 
 									LogColor="Lime" />	
-						
+									
 					<!-- Go to boars -->
 					<CustomBehavior File="NoCombatMoveTo" X="-496.0468" Y="-4304.235" Z="41.63905" />
+					
+					<CustomBehavior File="Message" 
+									Text="Waiting for party members to meet us here."  
+									LogColor="Cyan" />
+					
+					<!-- If we have party members, wait for them to catch up to us -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									CheckRange="5" />		
+									
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="5000" />
 					
 					<SetGrindArea>
 						<GrindArea>
@@ -325,6 +330,17 @@
 							
 					<!-- Go to imps -->
 					<CustomBehavior File="NoCombatMoveTo" X="-332.7863" Y="-4300.681" Z="56.38295" />
+					
+					<CustomBehavior File="Message" 
+									Text="Waiting for party members to meet us here."  
+									LogColor="Cyan" />
+					
+					<!-- If we have party members, wait for them to catch up to us -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									CheckRange="5" />		
+									
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="5000" />
 					
 					<SetGrindArea>
 						<GrindArea>
@@ -685,6 +701,17 @@
 					<!-- Go to guards -->
 					<CustomBehavior File="NoCombatMoveTo" X="-250.4299" Y="-4918.466" Z="26.3126" />
 					
+					<CustomBehavior File="Message" 
+									Text="Waiting for party members to meet us here."  
+									LogColor="Cyan" />
+					
+					<!-- If we have party members, wait for them to catch up to us -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									CheckRange="5" />		
+									
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="5000" />
+					
 					<SetGrindArea>
 						<GrindArea>
 							<Factions>
@@ -720,8 +747,19 @@
 									LogColor="Lime" />
 							
 					<!-- Go to elementals -->
-					<CustomBehavior File="NoCombatMoveTo" X="1237.555" Y="-4196.477" Z="25.02902" />
+					<CustomBehavior File="NoCombatMoveTo" X="1240.841" Y="-4253.781" Z="23.98017" />
 
+					<CustomBehavior File="Message" 
+									Text="Waiting for party members to meet us here."  
+									LogColor="Cyan" />
+					
+					<!-- If we have party members, wait for them to catch up to us -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									CheckRange="5" />		
+									
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="5000" />
+					
 					<SetGrindArea>
 						<GrindArea>
 							<Factions>
