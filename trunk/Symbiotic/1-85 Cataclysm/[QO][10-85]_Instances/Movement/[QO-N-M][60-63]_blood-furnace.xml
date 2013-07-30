@@ -686,18 +686,21 @@
 				<CustomBehavior File="ForcedMount"
 								MountType="Ground" />
 			
-				<CustomBehavior File="MyCTM" X="-11901.27" Y="-3207.707" Z="-14.77159" />
-					
-				<CustomBehavior File="Misc\InInstance" X="-11913.26" Y="-3209.328" Z="-14.68666" />
+				<RunTo X="-11885.8" Y="-3204.831" Z="-15.74985" />
+
+				<CustomBehavior File="MyCTM" X="-11913.63" Y="-3206.204" Z="-10.40761" />	<!-- dark portal -->
 
 				<CustomBehavior File="WaitTimer" WaitTime="15000" />
 
-				<CustomBehavior File="MyCTM" X="-248.113" Y="922.9" Z="84.3497" />
+				<CustomBehavior File="MyCTM" X="-248.113" Y="1014.83" Z="54.32814" />
 			</If> <!-- Blasted Lands -->
 			
 			<!-- Outland -->
 			<If Condition="Me.MapId == 530">
 				<!-- Fly outside of Blood Furnace at rendezvous -->
+				<CustomBehavior File="ForcedMount"
+								MountType="Flying" />
+				
 				<CustomBehavior File="FlyTo" X="-217.1329" Y="3043.892" Z="144.3637" />
 
 				<CustomBehavior File="Misc\LoadProfileOn" 
