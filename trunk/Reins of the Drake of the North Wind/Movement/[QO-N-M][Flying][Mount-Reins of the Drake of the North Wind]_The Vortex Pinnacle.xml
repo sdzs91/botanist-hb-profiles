@@ -284,23 +284,6 @@
 						<!-- Run to the instance box -->
 						<Runto X="-11513.3" Y="-2309.88" Z="608.393" />	
 					
-						<!-- Profile message - Resetting the instance -->
-						<CustomBehavior File="Message" 
-										Text="Resetting the instance." 
-										LogColor="Fuchsia" />
-						
-						<!-- Reset the instance -->
-						<CustomBehavior File="RunMacro" 
-										Macro="/script ResetInstances()" />
-										
-						<!-- Set the dungeon difficulty to normal -->				
-						<CustomBehavior File="RunMacro" 
-										Macro="/script SetDungeonDifficultyID(1);" />
-						
-						<CustomBehavior File="Message" 
-										Text="Instance reset." 
-										LogColor="Fuchsia" />
-					
 					</Else>
 				</If>	<!-- hearth -->	
 			</If>	<!-- Kalimdor -->
