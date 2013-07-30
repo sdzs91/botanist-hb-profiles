@@ -5,6 +5,15 @@
 
 
 
+[COLOR="#0099ff"][SIZE=3]*** View in 1080 HD If You Have The Bandwidth ***[/SIZE][/COLOR]
+
+[CENTER][video=youtube;1lSm8UXN-9o]http://www.youtube.com/watch?v=1lSm8UXN-9o[/video]
+
+
+[/CENTER]
+
+
+
 
 [B][COLOR="#0099ff"][SIZE=4]***** Information *****[/SIZE][/COLOR][/B]
 
@@ -107,9 +116,7 @@ You [U]must[/U] also exit the instance. Manually reset it if any bosses were kil
 You [U]must[/U] run this on a character class that can cast an instant ranged attack @ will !
 [/LIST]
 [LIST]
-[INDENT]
-
-[/INDENT]
+You [U]must[/U] put a suitable amount of [U]appropriate[/U] level food/water in your bags.
 [/LIST]
 [/CODE]
 
