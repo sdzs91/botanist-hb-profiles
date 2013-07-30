@@ -688,7 +688,8 @@
 			
 				<RunTo X="-11885.8" Y="-3204.831" Z="-15.74985" />
 
-				<CustomBehavior File="MyCTM" X="-11913.63" Y="-3206.204" Z="-10.40761" />	<!-- dark portal -->
+				<!-- dark portal -->
+				<CustomBehavior File="Misc\InInstance" X="-11907.83" Y="-3208.61" Z="-14.80683" />	
 
 				<CustomBehavior File="WaitTimer" WaitTime="15000" />
 
