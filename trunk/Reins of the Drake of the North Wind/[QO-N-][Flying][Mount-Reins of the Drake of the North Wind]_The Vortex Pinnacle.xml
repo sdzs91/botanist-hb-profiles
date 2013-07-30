@@ -140,6 +140,12 @@
 				<If Condition="Me.ZoneId == 5035">
 					<!-- Entrance -->
 					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+					
+					<!-- Runmacro - open all our bags -->				
+					<CustomBehavior File="RunMacro" 
+									Macro="/script OpenAllBags();" 
+									NumOfTimes="1" 
+									WaitTime="1000" />
 	
 					<!-- Instance timer to ensure run take a minimum of 12 minutes and 30 seconds to avoid instance locks -->
 					<CustomBehavior File="Misc\InstanceTimer" 
@@ -414,10 +420,10 @@
 					<!-- Run to the exit -->
 					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
 		
-					<!-- Instance timer to ensure run take a minimum of 12 minutes and 30 seconds to avoid instance locks -->
+					<!-- Instance timer to ensure run takes a minimum of 12 minutes and 30 seconds to avoid instance locks -->
 					<CustomBehavior File="Misc\InstanceTimer" 
 									Timer="Check" />
-		
+
 					<!-- Repair if necessary -->
 					<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
 					
@@ -464,7 +470,7 @@
 						</If> <!-- hearth location check -->
 							
 						
-						<!-- If we are in Uldum -->						
+						<!-- If we have hearthed to Uldum -->						
 						<If Condition="Me.ZoneId == 5034">		
 							<SetVendor>
 								<Vendors>
@@ -489,73 +495,39 @@
 											DoSell="True" 
 											DoTrain="False" />
 						
-						
-						
-							<!-- We are done repairing -->
-							<If Condition="Me.DurabilityPercent &gt;= 0.8" >
-								<CustomBehavior File="Message" 
-												Text="Repairing complete." 
-												LogColor="Lime" />
-												
-								<!-- Profile message - Returning to The Vortex Pinnacle -->
-								<CustomBehavior File="Message" 
-												Text="Returning to The Vortex Pinnacle." 
-												LogColor="Lime" />
-												
-								<!-- Fly to the hover point at the last ridge near the sphinx-->
-								<CustomBehavior File="FlyTo" X="-10703.96" Y="-1767.715" Z="353.466" />
-														
-														
-								<!-- Profile message - CTM to The Vortex Pinnacle hover point -->						
-								<CustomBehavior File="Message" 
-												Text="CTM to The Vortex Pinnacle hover point." 
-												LogColor="Lime" />
-								
-								<!-- CTM to hover point above The Vortex Pinnacle -->
-								<CustomBehavior File="MyCTM" X="-11446.21" Y="-2263.146" Z="651.7057" />
-								
-								<!-- CTM to the instance box -->
-								<CustomBehavior File="MyCTM" 
-												X="-11513.3" Y="-2309.88" Z="608.393" />
-												
-								<CustomBehavior File="ForcedDismount" />	
-								
-								<!-- Run to the instance box -->
-								<Runto X="-11513.3" Y="-2309.88" Z="608.393" />	
-		
-							</If> <!-- repaired -->
-						</If>	<!-- If we are in Uldum -->	
+						</If>	<!-- If we have hearthed to Uldum -->	
 					</If> <!-- Repair if necessary -->					
-
-					<!--The Vortex Pinnacle -->
-					<If Condition="Me.ZoneId == 5035">
-						<CustomBehavior File="Message" 
-										Text="The Vortex Pinnacle detected. Running out."
-										LogColor="Fuchsia" />
-							
-						<!-- Make our way to the exit -->
-						<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+				</If><!-- If we are inside Vortex Pinnacle and have checked our reset -->
 						
-						<!-- Go through the portal -->
-						<CustomBehavior File="Misc\InInstance" 
-										X="-327.7366" Y="24.78619" Z="626.7043" />
+				<!--The Vortex Pinnacle -->
+				<If Condition="Me.ZoneId == 5035">
+					<CustomBehavior File="Message" 
+									Text="The Vortex Pinnacle detected. Running out."
+									LogColor="Fuchsia" />
 						
-						<!-- Wait timer for game to load -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="15000" />
-						
-						<!-- Make sure we run to the right spot outside the potral -->
-						<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
-						
-					</If> <!-- Vortex Pinnacle -->
-				</If> <!-- If we are inside Vortex Pinnacle and have checked our reset -->
+					<!-- Make our way to the exit -->
+					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" 
+									X="-327.7366" Y="24.78619" Z="626.7043" />
+					
+					<!-- Wait timer for game to load -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />
+					
+					<!-- Make sure we run to the right spot outside the potral -->
+					<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
+					
+				</If> <!-- Vortex Pinnacle -->
+				
 				
 				<!-- If we are in the box -->
 				<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
 				
 					<!-- Profile message - Resetting the instance -->
 					<CustomBehavior File="Message" 
-									Text="Resetting the instance." 
+									Text="Resetting the instance, we didn't need to repair." 
 									LogColor="Fuchsia" />
 					
 					<!-- Reset the instance -->
@@ -569,7 +541,8 @@
 					<CustomBehavior File="Message" 
 									Text="Instance reset." 
 									LogColor="Fuchsia" />
-				</If> <!-- If we are in the box -->						
+				
+				</If> <!-- If we are in the box -->			
 			</While> <!-- Infinite loop -->
 		</If> <!-- I am level 90 -->	
 	</QuestOrder>
