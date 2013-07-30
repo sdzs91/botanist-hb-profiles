@@ -234,8 +234,16 @@
 								</Vendors>
 							</SetVendor>
 							
+							<SetMailbox>
+								<!-- Ramkahen  -->
+								<Mailboxes>
+									<Mailbox X="-9428.854" Y="-968.5951" Z="111.0117" />
+								</Mailboxes>
+							</SetMailbox>
+							
+							<!-- Force set the vendor -->
 							<CustomBehavior File="ForceSetVendor" 
-											DoMail="False" 
+											DoMail="True" 
 											DoRepair="True" 
 											DoSell="True" 
 											DoTrain="False" />
@@ -248,9 +256,9 @@
 							</If> <!-- repaired -->
 						</If> <!-- Repairing -->			
 											
-						<!-- Profile message - Our hearth has been set, we have more than 15 empty slots in our bags and our gear is above 80 percent durability -->
+						<!-- Profile message - Our hearth has been set, we have more than 25 empty slots in our bags and our gear is above 80 percent durability -->
 								<CustomBehavior File="Message" 
-												Text="Our hearth has been set, we have more than 15 empty slots in our bags and our gear is above 80 percent durability." 
+												Text="Our hearth has been set, we have more than 25 empty slots in our bags and our gear is above 80 percent durability." 
 												LogColor="Lime" />
 												
 						<!-- Profile message - Flying to the sphinx in south eastern Uldum -->
@@ -275,6 +283,23 @@
 						
 						<!-- Run to the instance box -->
 						<Runto X="-11513.3" Y="-2309.88" Z="608.393" />	
+					
+						<!-- Profile message - Resetting the instance -->
+						<CustomBehavior File="Message" 
+										Text="Resetting the instance." 
+										LogColor="Fuchsia" />
+						
+						<!-- Reset the instance -->
+						<CustomBehavior File="RunMacro" 
+										Macro="/script ResetInstances()" />
+										
+						<!-- Set the dungeon difficulty to normal -->				
+						<CustomBehavior File="RunMacro" 
+										Macro="/script SetDungeonDifficultyID(1);" />
+						
+						<CustomBehavior File="Message" 
+										Text="Instance reset." 
+										LogColor="Fuchsia" />
 					
 					</Else>
 				</If>	<!-- hearth -->	
