@@ -542,6 +542,9 @@
 					<!-- Entrance -->
 					<RunTo X="-517.15" Y="-489.201" Z="11.0179" />
 				
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+				
 					<!-- Run to quest giver -->
 					<RunTo X="-524.327" Y="-527.0266" Z="11.00971" />
 
@@ -622,6 +625,9 @@
 					<!-- Make our way to the exit -->
 					<RunTo X="-517.15" Y="-489.201" Z="11.01775" />
 
+					<!-- enableable combat -->
+					<EnableBehavior Name="Combat" />
+					
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" X="-518.2795" Y="-460.8023" Z="10.98073" />
 					

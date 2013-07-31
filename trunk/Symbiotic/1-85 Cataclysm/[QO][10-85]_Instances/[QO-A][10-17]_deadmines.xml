@@ -696,6 +696,9 @@
 					<!-- Entrance -->
 					<RunTo X="-14.5732" Y="-385.475" Z="62.4561" />
 				
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
 					<!-- Go to activate spot -->
 					<RunTo X="-28.71053" Y="-375.081" Z="59.46141" />
 				
@@ -813,6 +816,10 @@
 					<RunTo X="-99.6212" Y="-657.9174" Z="7.423793" />
 
 					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+					
+					<!-- enableable combat -->
+					<EnableBehavior Name="Combat" />
+					
 				</If> <!-- Deadmines -->
 			</While> <!-- Infinite loop -->
 		</If> <!-- RAF -->

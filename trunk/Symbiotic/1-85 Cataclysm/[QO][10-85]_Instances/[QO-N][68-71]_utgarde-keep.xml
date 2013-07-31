@@ -112,7 +112,7 @@
 									LogColor="Fuchsia" />	
 						
 					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
-					<While Condition="Me.ZoneId != 206">
+					<While Condition="Me.MapId != 574">
 						<!-- Make sure we run to the right spot outside the portal -->
 						<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
 
@@ -128,7 +128,7 @@
 										VariantTime="20000" />
 										
 						<!-- If we still aren't in, we're locked out -->
-						<If Condition="Me.ZoneId != 206">
+						<If Condition="Me.MapId != 574">
 							<CustomBehavior File="Message" 
 											Text="We are locked out. Waiting and trying again." 
 											LogColor="Fuchsia" />
@@ -428,7 +428,7 @@
 									LogColor="Fuchsia" />	
 						
 					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
-					<While Condition="Me.ZoneId != 206">
+					<While Condition="Me.MapId != 574">
 						<!-- Make sure we run to the right spot outside the portal -->
 						<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
 
@@ -444,7 +444,7 @@
 										VariantTime="20000" />
 										
 						<!-- If we still aren't in, we're locked out -->
-						<If Condition="Me.ZoneId != 206">
+						<If Condition="Me.MapId != 574">
 							<CustomBehavior File="Message" 
 											Text="We are locked out. Waiting and trying again." 
 											LogColor="Fuchsia" />
@@ -461,6 +461,9 @@
 					<!-- Entrance -->
 					<RunTo X="157.878" Y="-84.7025" Z="12.55168" />
 				
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
 					<!-- Run to corner -->
 					<RunTo X="164.1923" Y="-72.27313" Z="12.55168" />
 
@@ -517,6 +520,9 @@
 					<!-- Make our way to the exit -->
 					<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
 
+					<!-- enableable combat -->
+					<EnableBehavior Name="Combat" />
+					
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" X="125.1626" Y="-87.67013" Z="12.55168" />
 					

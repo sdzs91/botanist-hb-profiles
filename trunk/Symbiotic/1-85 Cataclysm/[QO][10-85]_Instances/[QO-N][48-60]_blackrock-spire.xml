@@ -580,6 +580,9 @@
 					<!-- Entrance -->
 					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
 				
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
 					<!-- Run up ramp -->
 					<RunTo X="79.2363" Y="-241.2068" Z="56.4171" />
 					
@@ -637,6 +640,9 @@
 									LogColor="Fuchsia" />
 					
 					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					
+					<!-- enableable combat -->
+					<EnableBehavior Name="Combat" />
 					
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" X="77.31385" Y="-210.969" Z="49.81922" />

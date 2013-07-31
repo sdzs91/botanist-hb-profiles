@@ -647,6 +647,9 @@
 					<!-- Entrance -->
 					<RunTo X="-10700.4" Y="-1312.69" Z="17.6029" />
 							
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
 					<!-- Profile message - Avoiding instance lock from this point, do not touch -->
 					<CustomBehavior File="Message" 
 									Text="Avoiding instance lock from this point, do not touch." 
@@ -789,6 +792,9 @@
 					<!-- Make our way to the exit -->
 					<RunTo X="-10718.35" Y="-1317.63" Z="17.46929" />
 					<CustomBehavior File="MyCTM" X="-10700.4" Y="-1312.69" Z="17.6029" />
+					
+					<!-- enableable combat -->
+					<EnableBehavior Name="Combat" />
 					
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" X="-10687.9" Y="-1309.086" Z="17.65984" />

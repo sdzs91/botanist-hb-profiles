@@ -492,6 +492,9 @@
 					<!-- Entrance -->
 					<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
 				
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
 					<!-- Run to corner -->
 					<RunTo X="-2.395998" Y="9.060452" Z="0.006508276" />
 
@@ -577,6 +580,9 @@
 							<RunTo X="31.01099" Y="1.044048" Z="0.005493299" />
 							<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
 
+							<!-- enableable combat -->
+					<EnableBehavior Name="Combat" />
+					
 							<!-- Go through the portal -->
 							<CustomBehavior File="Misc\InInstance" X="-20.722509" Y="0.3174916" Z="0.005990623" />
 							

@@ -779,6 +779,9 @@
 					<!-- Entrance -->
 					<RunTo X="1942.27" Y="1544.23" Z="81.80499" />
 				
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
 					<!-- Go to quest givers -->
 					<RunTo X="1944.148" Y="1555.369" Z="81.5473" />
 					
@@ -813,7 +816,10 @@
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="30000" />
 									
-					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />  
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" /> 
+
+					<!-- enableable combat -->
+					<EnableBehavior Name="Combat" />
 				</If> <!-- RFK -->
 			</While> <!-- Infinite loop -->
 		</If> <!-- RAF -->
