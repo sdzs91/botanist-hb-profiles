@@ -80,18 +80,18 @@ I am currently modifying portions of Symbiotic for this. I will add the files as
 [URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL]
 
 
-[SIZE=3][COLOR="#0099ff"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
+[SIZE=3][COLOR="#ffcc00"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
 [CODE]
 
 
 
 [LIST]
-
+As I complete the modifications and test that it is working correctly, they will be added to a zip file below.
 [/LIST]
 
 
 [LIST]
-
+Currently testing the initial profiles.
 [/LIST]
 [/CODE]
 
