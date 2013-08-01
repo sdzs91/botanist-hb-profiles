@@ -1,0 +1,99 @@
+[B][CENTER][SIZE=4][COLOR="#ffcc00"]Solstice[/COLOR][/SIZE][/CENTER][/B]
+[B][U][CENTER][SIZE=3][COLOR="#FF0000"]Coming Soon[/COLOR][/SIZE][/CENTER][/U][/B]
+[CENTER]
+Solstice is an [U]alternative[/U] method for leveling "Death Knights" beyond level 58
+I am currently modifying portions of Symbiotic for this. I will add the files as they are modified.
+
+
+
+
+[B][COLOR="#ffcc00"][SIZE=4]***** Information *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*] Solstice is a modified version of Symbiotic.
+[/LIST]
+[LIST]
+[*] Many users of HonorBuddy are now using SOR or Battle Chest accounts for farming gold.
+[/LIST]
+[LIST]
+[*] The primary purpose of Solstice is "farming gold".
+[/LIST]
+[LIST]
+[*] It has been modified [U]specifically[/U] for leveling Death Knights in dungeons for the sake of "farming gold".
+[/LIST]
+[LIST]
+[*] It is not [U]intended[/U] as a rapid method of leveling. Leveling is a [U]consequence[/U] of farming the dungeons, not the [U]goal[/U].
+[/LIST]
+
+[LIST]
+[INDENT]
+
+[/INDENT]
+[/LIST]
+
+[LIST]
+[INDENT]
+
+[/INDENT]
+[/LIST]
+
+[LIST]
+[INDENT]
+
+[/INDENT]
+[/LIST]
+
+[/CODE]
+
+
+[B][COLOR="#ffcc00"][SIZE=4]***** Instructions *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*]Will be added.
+[/LIST]
+[/CODE]
+
+
+[B][COLOR="#ffcc00"][SIZE=4]***** Prerequisites *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*]Will be added.
+[/LIST]
+[/CODE]
+
+[CODE]
+[LIST]
+[*] Should you have questions that [SIZE=3][U][COLOR="#FF0000"]are not[/COLOR][/U][/SIZE] answered on this page or bug reports :
+[INDENT]
+[SIZE=4][COLOR="#0000CD"]Contact[/COLOR][/SIZE] me via [SIZE=4][COLOR="#0000CD"][U]Skype[/U][/COLOR][/SIZE] by clicking my link ----> : [SIZE=4][URL="skype:Botanist68?add"][COLOR="#0000CD"]Botanist[/COLOR][/URL][/SIZE]
+[/INDENT]
+[/LIST]
+[/CODE]
+[/CENTER]
+[B][CENTER][COLOR="#FF0000"][SIZE=2] Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
+
+[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
+
+[URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL]
+
+
+[SIZE=3][COLOR="#0099ff"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
+[CODE]
+
+
+
+[LIST]
+
+[/LIST]
+
+
+[LIST]
+
+[/LIST]
+[/CODE]
+
+[B][U][COLOR="#FF0000"][SIZE=3]NOTE:[/SIZE][/COLOR][/U][/B] The zip files below will not be up-to-date with the SVN
+[/CENTER]
