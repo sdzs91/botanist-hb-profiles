@@ -220,8 +220,6 @@
 
 					<RunTo X="1625.464" Y="743.6151" Z="142.7861" />
 
-
-					
 					<!-- Forces kill of Kill Drakkari Colossus  -->
 					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="29307"
@@ -249,12 +247,19 @@
 					<RunTo X="1678.107" Y="632.5063" Z="124.7534" />
 					<RunTo X="1699.889" Y="631.515" Z="129.1282" />
 					<RunTo X="1737.991" Y="633.0573" Z="129.1985" />
-					<RunTo X="1775.127" Y="610.5939" Z="124.6005" />
-					<RunTo X="1792.634" Y="631.2548" Z="124.4784" />
-					<RunTo X="1775.376" Y="627.4203" Z="124.2378" />
-					<RunTo X="1774.952" Y="609.108" Z="124.4656" />
-					<RunTo X="1757.822" Y="636.8477" Z="124.476" />
-					<RunTo X="1774.649" Y="635.449" Z="124.4096" />
+					<RunTo X="1774.679" Y="634.1741" Z="124.4356" />
+					<RunTo X="1808.261" Y="632.6815" Z="129.1983" />
+					<RunTo X="1792.058" Y="632.8167" Z="124.4771" />
+					<RunTo X="1775.193" Y="609.3021" Z="124.4646" />
+					<RunTo X="1761.451" Y="635.658" Z="124.4655" />
+					<RunTo X="1774.94" Y="611.0246" Z="124.6005" />
+									
+					<!-- Cast Army of the Dead -->
+					<CustomBehavior File="RunMacro" Macro="/cast Army of the Dead" />
+					
+					<!-- Wait timer -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
 										
 					<!-- Kill Slad'ran -->
 					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
