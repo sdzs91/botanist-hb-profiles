@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-DK-Solo-Power-Leveling][85-86]_gundrak</Name>
+	<Name>[QO-N][Solstice][85-86]_gundrak</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -319,7 +319,7 @@
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
 									MinLevel="86" 
-									ProfileName="[QO-N[]Solstice][86-87]_halls-of-lightning.xml"  />
+									ProfileName="[QO-N][Solstice][86-87]_halls-of-lightning.xml"  />
 				</If> <!-- GD -->
 				
 				<!-- Gundrak -->
