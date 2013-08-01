@@ -234,7 +234,7 @@
 			<!-- In box -->
 			<If Condition="Me.X &gt; 9100 &amp;&amp; Me.X &lt; 9200 &amp;&amp; Me.Y &gt; -1400 &amp;&amp; Me.Y &lt; -1300" >
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][75-80]_halls-of-lightning" />
+								ProfileName="..\[QO-N][75-77]_halls-of-lightning" />
 			</If> <!-- In box -->		
 		</If> <!-- Booster -->
 		
@@ -350,7 +350,7 @@
 			<!-- In box -->
 			<If Condition="Me.X &gt; 9100 &amp;&amp; Me.X &lt; 9200 &amp;&amp; Me.Y &gt; -1400 &amp;&amp; Me.Y &lt; -1300" >
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][75-80]_halls-of-lightning" />
+								ProfileName="..\[QO-N][75-77]_halls-of-lightning" />
 			</If> <!-- In box -->		
 		</If> <!-- RAF toons -->
 	</QuestOrder>

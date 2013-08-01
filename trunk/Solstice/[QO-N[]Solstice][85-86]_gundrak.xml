@@ -1,0 +1,458 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-DK-Solo-Power-Leveling][85-86]_gundrak</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>		
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+		<Mob Name="Drakkari Guardian" Entry="26620" />
+		<Mob Name="Drakkari Frenzy" Entry="29834"  />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="5777.278" Y="-3553.803" Z="387.186" Radius="12.4357" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+
+	<Factions>16</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+
+		<If Condition="Me.Level &gt;= 80">
+			<CustomBehavior File="Message" 
+							Text="You meet the level requirement to run this profile." 
+							LogColor="Fuchsia" />
+		
+		 	<!-- Booster UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							FindVendorsAutomatically="False"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootChests="False"
+							LootMobs="True"
+							LootRadius="10"
+							MountDistance="75"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							PullDistance="25"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseFlightPaths="True"
+							UseMount="True" 
+							UseRandomMount="False" />
+						
+			<!-- Infinite loop -->
+			<While Condition="true" >	
+				<!-- Gundrak -->
+				<If Condition="Me.ZoneId == 4416">
+					<CustomBehavior File="Message" 
+									Text="Gundrak detected. Running out."
+									LogColor="Fuchsia" />
+						
+					<!-- Make our way to the exit -->
+					<RunTo X="1887.432" Y="839.571" Z="176.6754" />
+
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="1900.536" Y="815.8542" Z="176.637" />
+					
+					<!-- Make sure we run to the right spot outside the potral -->
+					<RunTo X="6717.32" Y="-4645.55" Z="450.017" />
+				</If> <!-- GD -->
+				
+				<!-- If we are not in the box, load the movement profile -->
+				<If Condition="Me.X &lt; 6650 || Me.X &gt; 6750 || Me.Y &lt; -4700 || Me.Y &gt; -4600" >
+					<CustomBehavior File="Message" 
+									Text="Distance from portal is not within our proximity, initializing movement to get there."
+									LogColor="Fuchsia" />	
+									
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\[QO-N-M][Solstice][85-86]_gundrak" />
+				</If> <!-- Not in box -->
+				
+				<!-- If we are in the box -->
+				<If Condition="Me.X &gt; 6650 &amp;&amp; Me.X &lt; 6750 &amp;&amp; Me.Y &gt; -4700 &amp;&amp; Me.Y &lt; -4600" >
+					<CustomBehavior File="Message" 
+									Text="Portal detected nearby."
+									LogColor="Fuchsia" />	
+						
+					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
+					<While Condition="Me.ZoneId != 4416">
+						<!-- Make sure we run to the right spot outside the potral -->
+						<RunTo X="6717.32" Y="-4645.55" Z="450.017" />
+
+						<!-- Run back in the portal -->
+						<CustomBehavior File="Misc\InInstance" X="6690.202" Y="-4670.903" Z="441.5623" />
+										
+						<CustomBehavior File="Message" 
+										Text="Waiting for the dungeon to load." 
+										LogColor="Fuchsia" />
+									
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000"
+										VariantTime="20000" />
+										
+						<!-- If we still aren't in, we're locked out -->
+						<If Condition="Me.ZoneId != 4416" >
+							<CustomBehavior File="Message" 
+											Text="We are locked out. Waiting and trying again." 
+											LogColor="Fuchsia" />
+						</If> <!-- Locked -->
+					</While> <!-- While we aren't in the instance -->
+				</If> <!-- In box -->
+				
+				<!-- If we are inside and have checked our reset -->
+				<If Condition="Me.ZoneId == 4416">
+					<!-- Entrance -->
+					<RunTo X="1880.74" Y="853.76" Z="176.696" />
+
+					<!-- Instance timer -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />
+					
+					<!-- Profile message - Gundrak initialized -->
+					<CustomBehavior File="Message" 
+									Text="Gundrak initialized."  
+									LogColor="Fuchsia" />
+				
+					<!-- Run to the ledge and jump off -->
+					<RunTo X="1853.866" Y="852.3528" Z="175.8627" />
+					
+					<CustomBehavior File="MyCTM" X="1835.455" Y="850.0269" Z="126.3348" />
+					<CustomBehavior File="MyCTM" X="1839.684" Y="861.1832" Z="126.4267" />
+					<CustomBehavior File="MyCTM" X="1830.611" Y="861.0634" Z="128.5763" />
+
+					<!-- At doorway -->
+					<RunTo X="1825.048" Y="852.1369" Z="129.2877" />
+					
+					<!-- Pull mobs around Moorabi -->
+					<RunTo X="1798.344" Y="847.0183" Z="129.1968" />
+					<RunTo X="1797.455" Y="856.2925" Z="129.1909" />
+					<RunTo X="1773.845" Y="852.2606" Z="123.3098" />
+					<RunTo X="1747.521" Y="858.1993" Z="129.191" />
+					<RunTo X="1747.491" Y="849.5912" Z="129.197" />
+						
+					<!-- Center of Moorabi room -->
+					<RunTo X="1772.659" Y="850.7392" Z="123.1927" />
+					
+					<!-- Kill Moorabi -->
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" 
+									EventCompleteDeadMobId="29305"
+									EventX="1772.471" EventY="809.537" EventZ="129.2166"
+									MoveOutOfGroundEffectAuraId1="111111"
+									MoveAwayFromMobCastingSpellId1="111111"
+									MoveAwayFromMobWithAuraId1="111111">
+						<Safespots>
+							<Hotspot X="1772.471" Y="809.537" Z="129.2166" />
+						</Safespots>
+					</CustomBehavior>
+					
+					<!-- Interact with first obelisk -->
+					<CustomBehavior File="InteractWith" 
+									MobId="192519" 
+									ObjectType="Gameobject" 
+									Range="4.75" 
+									NumOfTimes="1"  
+									X="1772.321" Y="807.6896" Z="129.2165" />
+					
+					<!-- Get ready to pull big packs at door -->
+					<RunTo X="1740.698" Y="852.2436" Z="129.1967" />
+					
+					<!-- Pull up to second boss -->
+					<RunTo X="1705.25" Y="842.8112" Z="129.4524" />
+					<RunTo X="1704.805" Y="877.4604" Z="130.615" />
+					<RunTo X="1689.014" Y="894.2205" Z="133.3537" />
+					<RunTo X="1664.195" Y="886.1106" Z="139.0516" />
+					<RunTo X="1665.208" Y="865.5336" Z="137.5853" />
+					<RunTo X="1644.678" Y="889.4501" Z="142.2682" />
+					<RunTo X="1631.151" Y="899.5261" Z="145.182" />
+					<RunTo X="1602.488" Y="883.1555" Z="149.0445" />
+					<RunTo X="1583.111" Y="882.5538" Z="152.09" />
+					<RunTo X="1575.125" Y="831.4033" Z="153.0277" />
+					<RunTo X="1597.505" Y="807.1804" Z="147.3468" />
+					<RunTo X="1625.338" Y="793.8346" Z="143.2576" />
+					<RunTo X="1625.464" Y="743.6151" Z="142.7861" />
+					
+					<!-- go pick up mobs in L -->
+					<RunTo X="1615.076" Y="726.7632" Z="142.7879" />
+					<RunTo X="1577.816" Y="725.7277" Z="142.7831" />
+					<RunTo X="1576.669" Y="717.7441" Z="143.375" />
+					<RunTo X="1575.699" Y="726.1974" Z="142.7835" />
+					<RunTo X="1619.902" Y="728.5766" Z="142.7861" />
+
+					<!-- center of room -->
+					<RunTo X="1625.464" Y="743.6151" Z="142.7861" />
+
+					<RunTo X="1625.464" Y="743.6151" Z="142.7861" />
+
+
+					
+					<!-- Forces kill of Kill Drakkari Colossus  -->
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="29307"
+									EventX="1672.963" EventY="743.488" EventZ="142.7862"
+									MoveOutOfGroundEffectAuraId1="111111"
+									MoveAwayFromMobCastingSpellId1="111111"
+									MoveAwayFromMobWithAuraId1="111111">
+						<Safespots>
+							<Hotspot X="1672.963" Y="743.488" Z="142.7862" />
+						</Safespots>
+					</CustomBehavior>
+					
+					<!-- Interact with second obelisk -->
+					<CustomBehavior File="InteractWith" 
+									MobId="192520" 
+									ObjectType="Gameobject" 
+									Range="4.75" 
+									NumOfTimes="1"  
+									X="1690.178" Y="743.5302" Z="142.78" />
+								
+					<!-- Get ready to pull big packs at door -->			
+					<RunTo X="1625.223" Y="723.8843" Z="142.7833" />
+					<RunTo X="1626.205" Y="659.7232" Z="128.9379" />
+					<RunTo X="1658.303" Y="641.0867" Z="130.4551" />
+					<RunTo X="1678.107" Y="632.5063" Z="124.7534" />
+					<RunTo X="1699.889" Y="631.515" Z="129.1282" />
+					<RunTo X="1737.991" Y="633.0573" Z="129.1985" />
+					<RunTo X="1775.127" Y="610.5939" Z="124.6005" />
+					<RunTo X="1792.634" Y="631.2548" Z="124.4784" />
+					<RunTo X="1775.376" Y="627.4203" Z="124.2378" />
+					<RunTo X="1774.952" Y="609.108" Z="124.4656" />
+					<RunTo X="1757.822" Y="636.8477" Z="124.476" />
+					<RunTo X="1774.649" Y="635.449" Z="124.4096" />
+										
+					<!-- Kill Slad'ran -->
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="29304"
+									EventX="1775.129" EventY="674.9809" EventZ="129.2181"
+									MoveOutOfGroundEffectAuraId1="111111"
+									MoveAwayFromMobCastingSpellId1="111111"
+									MoveAwayFromMobWithAuraId1="111111" >
+						<Safespots>
+							<Hotspot X="1775.129" Y="674.9809" Z="129.2181" />
+						</Safespots>
+					</CustomBehavior>
+					
+					<!-- Wait timer -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					<!-- Interact with third obelisk -->
+					<CustomBehavior File="InteractWith" 
+									MobId="192518" 
+									ObjectType="Gameobject" 
+									Range="4.75" 
+									NumOfTimes="1"  
+									X="1775.357" Y="676.8625" Z="129.2172" />
+									
+					<!-- Move to the turnstyle -->				
+					<Runto X="1730.382" Y="743.3257" Z="122.0806" />
+
+					<!-- RLH past the turnstyle -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="false" 
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="1753.108" Y="743.3728" Z="118.9998" />
+						<Hotspot X="1791.86" Y="743.7135" Z="119.0975" />
+						<Hotspot X="1823.965" Y="743.6225" Z="123.9059" />
+						<Hotspot X="1830.587" Y="743.6631" Z="126.4693" />
+						<Hotspot X="1844.574" Y="744.731" Z="135.9352" />
+					</CustomBehavior>
+					<RunTo X="1844.574" Y="744.731" Z="135.9352" />
+					
+					<!-- kill the two rhinos -->
+					<Runto X="1880.599" Y="728.2939" Z="135.9249" />
+					<Runto X="1881.739" Y="757.2689" Z="135.9709" />
+					
+					<!-- Forces kill of Gal'darah  -->
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" 
+									EventCompleteDeadMobId="29306"
+									EventX="1914.748" EventY="743.6536" EventZ="136.4952"
+									MoveOutOfGroundEffectAuraId1="111111"
+									MoveAwayFromMobCastingSpellId1="111111"
+									MoveAwayFromMobWithAuraId1="111111" >
+						<Safespots>
+							<Hotspot X="1914.748" Y="743.6536" Z="136.4952" />
+						</Safespots>
+					</CustomBehavior>
+					
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="5000" />
+					
+					<!-- If we are high enough to go to the next instance, do so -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									MinLevel="86" 
+									ProfileName="[QO-N[]Solstice][86-87]_halls-of-lightning.xml"  />
+				</If> <!-- GD -->
+				
+				<!-- Gundrak -->
+				<If Condition="Me.ZoneId == 4416">
+					<CustomBehavior File="Message" 
+									Text="Gundrak detected. Running out to reset."
+									LogColor="Fuchsia" />
+						
+					<!-- Make our way to the exit -->
+					<RunTo X="1969.795" Y="833.3107" Z="135.2538" />
+
+					<!-- Repair if necessary -->
+					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					
+						<!-- If our hearthstone is set here, use it -->
+						<If Condition="Me.HearthstoneAreaId == 4275">
+							<CustomBehavior File="Message" 
+											Text="Our Innkeeper is set at The Argent Stand." 
+											LogColor="Cyan" />
+												
+							<!-- Have hearthstone -->
+							<If Condition="HasItem(6948)">
+								<CustomBehavior File="Message" 
+												Text="Using Hearthstone." 
+												LogColor="Lime" />
+												
+								<CustomBehavior File="Misc\RunLua" 
+												Lua="UseItemByName(6948)" 
+												WaitTime="1000" />
+												
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="20000" />
+							</If> <!-- Have hearthstone -->
+						
+							<!-- Have Innkeeper's Daughter -->
+							<If Condition="HasItem(64488)">
+								<CustomBehavior File="Message" 
+												Text="Using Innkeeper's Daughter." 
+												LogColor="Lime" />
+													
+								<CustomBehavior File="Misc\RunLua" 
+												Lua="UseItemByName(64488)" 
+												WaitTime="1000" />
+									
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="20000" />
+							</If> <!-- Have Innkeeper's Daughter -->
+						
+							<!-- Vendor -->
+							<If Condition="Me.ZoneId == 66" >
+								<CustomBehavior File="FlyTo" X="5407.229" Y="-2658.342" Z="303.9541" />
+								
+								<CustomBehavior File="Message" 
+												Text="Our durability is less than 30%, we need to repair." 
+												LogColor="Fuchsia" />
+											
+								<CustomBehavior File="ForceSetVendor" 
+												DoMail="False" 
+												DoRepair="True" 
+												DoSell="False" 
+												DoTrain="False" />
+								
+								<SetVendor>
+									<Vendors>
+									<!-- The Argent Stand -->
+									<Vendor Name="Arlen Brighthammer" 
+											Entry="28796" 
+											Type="Repair" 
+											X="5409.303" Y="-2655.896" Z="303.9539" />
+									</Vendors>
+								</SetVendor>
+								
+								<SetMailbox>
+									<!-- The Argent Stand -->
+									<Mailboxes>
+										<Mailbox X="5415.096" Y="-2623.771" Z="306.8864" />
+									</Mailboxes>
+								</SetMailbox>	
+							</If>	<!-- Vendor -->
+							
+							<!-- repaired -->
+							<If Condition="Me.DurabilityPercent &gt;= 0.3" >
+								<CustomBehavior File="Message" 
+												Text="Repairing complete." 
+												LogColor="Fuchsia" />
+							</If> <!-- repaired -->
+						</If> <!-- If our hearthstone is set here, use it-->		
+								
+						<!-- Hover point - inn keep -->
+						<CustomBehavior File="FlyTo" X="5369.718" Y="-2601.758" Z="366.4612" />
+
+						<!-- Hover point - Gundrak -->
+						<CustomBehavior File="FlyTo" X="6800.42" Y="-4567.538" Z="549.9343" />
+						
+						<!-- Instance timer check if we did repair-->
+						<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+						
+						<!-- Return to Gundrak -->
+						<CustomBehavior File="FlyTo" X="6717.32" Y="-4645.55" Z="450.017" />
+						<CustomBehavior File="ForcedDismount" />		
+
+						<RunTo X="6717.32" Y="-4645.55" Z="450.017" />
+					</If> <!-- Repair if necessary -->
+				</If>	<!-- Gundrak -->
+				
+				<!-- If we don't need to vendor -->
+				<If Condition="Me.ZoneId == 4416">
+				
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="1995.536" Y="845.8542" Z="135.2352" />
+					
+					<!-- Make sure we run to the right spot outside the potral -->
+					<RunTo X="6717.32" Y="-4645.55" Z="450.017" />
+				</If> <!-- GD -->
+					
+				
+				<!-- If we are in the box -->
+				<If Condition="Me.X &gt; 6650 &amp;&amp; Me.X &lt; 6750 &amp;&amp; Me.Y &gt; -4700 &amp;&amp; Me.Y &lt; -4600" >
+					<!-- First reset isn't enough to get a fresh instance if toons are still inside -->
+					<CustomBehavior File="Message" 
+									Text="Resetting instance." 
+									LogColor="Fuchsia" />
+					
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
+					
+				</If> <!-- In box -->
+			</While> <!-- Infinite loop -->
+		</If> <!-- Level Check -->	
+		
+		
+	</QuestOrder>
+</HBProfile>

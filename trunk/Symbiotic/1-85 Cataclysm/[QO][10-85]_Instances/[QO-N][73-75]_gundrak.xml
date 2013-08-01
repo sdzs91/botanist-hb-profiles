@@ -347,7 +347,7 @@
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
 									MinLevel="75" 
-									ProfileName="[QO-N][75-80]_halls-of-lightning.xml"  />
+									ProfileName="[QO-N][75-77]_halls-of-lightning.xml"  />
 				</If> <!-- GD -->
 				
 				<!-- Gundrak -->
@@ -568,7 +568,7 @@
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
 									MinLevel="75" 
-									ProfileName="[QO-N][75-80]_halls-of-lightning.xml"  />
+									ProfileName="[QO-N][75-77]_halls-of-lightning.xml"  />
 								
 					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />  
 				</If> <!-- GD -->

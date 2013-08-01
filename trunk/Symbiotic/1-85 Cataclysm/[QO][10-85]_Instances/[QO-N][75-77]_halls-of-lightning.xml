@@ -539,7 +539,7 @@
 									LogColor="Fuchsia" />	
 									
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][75-80]_halls-of-lightning" />
+									ProfileName="Movement\[QO-N-M][75-77]_halls-of-lightning" />
 				</If> <!-- Not in box -->
 				
 				<!-- If we are in the box -->
