@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][Solstice][65-70]_blood-furnace</Name>
+	<Name>[QO-N][Solstice][68-71]_blood-furnace</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -67,7 +67,7 @@
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="25"
+							PullDistance="35"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseFlightPaths="True"
@@ -175,15 +175,6 @@
 					<RunTo X="231.3915" Y="-103.133" Z="9.622198" />
 					<RunTo X="245.994" Y="-66.90824" Z="9.621491" />
 					<RunTo X="249.4076" Y="-26.19511" Z="6.952456" />
-					<RunTo X="235.0988" Y="-65.00427" Z="9.626006" />
-					<RunTo X="209.9388" Y="-84.39381" Z="9.575076" />
-					<RunTo X="196.0305" Y="-84.09791" Z="9.610758" />
-					<RunTo X="194.6048" Y="-71.02477" Z="9.605585" />
-					<RunTo X="181.4498" Y="-71.28983" Z="9.604942" />
-					<RunTo X="161.1364" Y="-77.68429" Z="9.554969" />
-					<RunTo X="47.77182" Y="-77.53708" Z="-40.26888" />
-					<RunTo X="-0.449405" Y="-77.91169" Z="-41.33155" />
-					<RunTo X="46.11079" Y="-78.09003" Z="-40.26909" />
 
 					<!-- Clears the top corridor and first boss -->	
 					<RunTo X="249.1926" Y="-28.02811" Z="6.953418" />			
@@ -195,12 +186,22 @@
 					<RunTo X="347.6952" Y="-8.367817" Z="9.625719" />
 					<RunTo X="335.0616" Y="-1.912738" Z="9.624074" />
 					<RunTo X="327.7275" Y="-9.617597" Z="9.498361" />
+					
 					<RunTo X="328.9055" Y="68.40388" Z="9.613312" />
+					
 					<RunTo X="351.4101" Y="68.86818" Z="9.619288" />
 					<RunTo X="338.0797" Y="102.3701" Z="9.619213" />
 					<RunTo X="305.962" Y="68.75052" Z="9.618334" />
 					<RunTo X="324.9991" Y="67.60344" Z="9.614052" />
 					<RunTo X="329.5138" Y="133.9504" Z="9.617323" />
+					
+					<!-- Cast Army of the Dead -->
+					<CustomBehavior File="RunMacro" Macro="/cast Army of the Dead" />
+					
+					<!-- Wait timer -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
 					<RunTo X="327.4166" Y="44.01584" Z="9.613595" />
 					
 					<!-- exit of 1st boss room -->
@@ -415,7 +416,7 @@
 					
 					<!-- Make sure we run to the right spot outside the portal -->
 					<RunTo X="-302.408" Y="3162.92" Z="31.7273" />
-				</If> <!-- BF -->
+				</If> <!-- If we don't need to vendor -->
 				
 				<!-- If we are in the box -->
 				<If Condition="Me.X &gt; -350 &amp;&amp; Me.X &lt; -250 &amp;&amp; Me.Y &gt; 3100 &amp;&amp; Me.Y &lt; 3200 " >
