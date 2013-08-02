@@ -105,19 +105,18 @@
 									ProfileName="Movement\[QO-N-M][80-83]_blackrock-caverns" />
 				</If> <!-- Not in box -->
 				
-				<!-- If we are in the box -->
 				<If Condition="Me.X &lt; -7565.834 &amp;&amp; Me.X &gt; -7582.962 &amp;&amp; Me.Y &lt; -1297.568 &amp;&amp; Me.Y &gt; -1328.157" >
 					<CustomBehavior File="Message" 
 									Text="Portal detected nearby."
 									LogColor="Fuchsia" />	
 						
-					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
+					<!-- If we didn't enter the instance, wait 15 seconds then attempt to enter again -->
 					<While Condition="Me.ZoneId != 4926">
 						<!-- Make sure we run to the right spot outside the portal -->
 						<RunTo X="-7571.14" Y="-1324.96" Z="245.538" />
 
 						<!-- Run back in the portal -->
-						<CustomBehavior File="Misc\InInstance" X="-7568.929" Y="-1345" Z="245.5389" />
+						<CustomBehavior File="Misc\InInstance" X="-7570.8" Y="-1331" Z="245.5383" />
 										
 						<CustomBehavior File="Message" 
 										Text="Waiting for the dungeon to load." 
@@ -125,8 +124,8 @@
 									
 						<!-- Wait timer to delay movement - 30 seconds with 30 second variant -->			
 						<CustomBehavior File="WaitTimer" 
-										WaitTime="30000"
-										VariantTime="30000" />
+										WaitTime="10000"
+										VariantTime="5000" />
 										
 						<!-- If we still aren't in, we're locked out -->
 						<If Condition="Me.ZoneId != 4926">
@@ -655,28 +654,27 @@
 									ProfileName="Movement\[QO-N-M][80-83]_blackrock-caverns" />
 				</If> <!-- Not in box -->
 				
-				<!-- If we are in the box -->
 				<If Condition="Me.X &lt; -7565.834 &amp;&amp; Me.X &gt; -7582.962 &amp;&amp; Me.Y &lt; -1297.568 &amp;&amp; Me.Y &gt; -1328.157" >
 					<CustomBehavior File="Message" 
 									Text="Portal detected nearby."
 									LogColor="Fuchsia" />	
 						
-					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
+					<!-- If we didn't enter the instance, wait 15 seconds then attempt to enter again -->
 					<While Condition="Me.ZoneId != 4926">
 						<!-- Make sure we run to the right spot outside the portal -->
 						<RunTo X="-7571.14" Y="-1324.96" Z="245.538" />
 
 						<!-- Run back in the portal -->
-						<CustomBehavior File="Misc\InInstance" X="-7568.929" Y="-1345" Z="245.5389" />
+						<CustomBehavior File="Misc\InInstance" X="-7570.8" Y="-1331" Z="245.5383" />
 										
 						<CustomBehavior File="Message" 
 										Text="Waiting for the dungeon to load." 
 										LogColor="Fuchsia" />
 									
-						<!-- Wait timer to delay movement - 20 seconds -->			
+						<!-- Wait timer to delay movement - 30 seconds with 30 second variant -->			
 						<CustomBehavior File="WaitTimer" 
-										WaitTime="20000"
-										VariantTime="20000" />
+										WaitTime="10000"
+										VariantTime="5000" />
 										
 						<!-- If we still aren't in, we're locked out -->
 						<If Condition="Me.ZoneId != 4926">
@@ -743,25 +741,25 @@
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="60000" />
 									
-					<!-- Re enter Blackrock Caverns -->
+					<!-- If we are in the box -->				
 					<If Condition="Me.X &lt; -7565.834 &amp;&amp; Me.X &gt; -7582.962 &amp;&amp; Me.Y &lt; -1297.568 &amp;&amp; Me.Y &gt; -1328.157" >
 						<CustomBehavior File="Message" 
 										Text="Portal detected nearby."
 										LogColor="Fuchsia" />	
 							
-						<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
+						<!-- If we didn't enter the instance, wait 15 seconds then attempt to enter again -->
 						<While Condition="Me.ZoneId != 4926">
 							<!-- Make sure we run to the right spot outside the portal -->
-							<CustomBehavior File="NoCombatMoveTo" X="-7571.14" Y="-1324.96" Z="245.538" />
+							<RunTo X="-7571.14" Y="-1324.96" Z="245.538" />
 
 							<!-- Run back in the portal -->
-							<CustomBehavior File="Misc\InInstance" X="-7568.929" Y="-1345" Z="245.5389" />
+							<CustomBehavior File="Misc\InInstance" X="-7570.8" Y="-1331" Z="245.5383" />
 											
 							<CustomBehavior File="Message" 
 											Text="Waiting for the dungeon to load." 
 											LogColor="Fuchsia" />
 										
-							<!-- Wait timer to delay movement - 10 seconds with 5 second variant -->			
+							<!-- Wait timer to delay movement - 30 seconds with 30 second variant -->			
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="10000"
 											VariantTime="5000" />
@@ -773,7 +771,7 @@
 												LogColor="Fuchsia" />
 							</If> <!-- Locked -->
 						</While> <!-- While we aren't in the instance -->
-					</If> <!-- In box -->
+					</If> <!-- If we are in the box -->
 					
 					<!-- Run to tag the Booster at the first bridge -->
 					<CustomBehavior File="NoCombatMoveTo" X="287.1887" Y="950.391" Z="190.8872" />
