@@ -355,6 +355,11 @@
 									NumOfTimes="1" 
 									WaitTime="1000" />
 					
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Moonfire \n/cast Icy Touch \n/cast Serpent Sting \n/cast Ice Lance \n/cast Spinning Fire Blossom \n/cast Judgment \n/cast Shadow Word: Pain \n/cast Throw \n/cast Earth Shock \n/cast Corruption" 
+									NumOfTimes="1" 
+									WaitTime="1000" />
+									
 					<!-- Target the Howling Gale -->				
 					<CustomBehavior File="RunMacro" 
 									Macro="/cleartarget" 
@@ -381,6 +386,10 @@
 									NumOfTimes="1" 
 									WaitTime="1000" />
 				
+				<CustomBehavior File="RunMacro" 
+									Macro="/cast Moonfire \n/cast Icy Touch \n/cast Serpent Sting \n/cast Ice Lance \n/cast Spinning Fire Blossom \n/cast Judgment \n/cast Shadow Word: Pain \n/cast Throw \n/cast Earth Shock \n/cast Corruption" 
+									NumOfTimes="1" 
+									WaitTime="1000" />
 													
 					<!-- Target the Howling Gale -->				
 					<CustomBehavior File="RunMacro" 
