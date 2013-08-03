@@ -187,6 +187,15 @@
 					<!-- Entrance -->
 					<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
 					
+					<!-- If we are below level 68, we will clear to the first boss, XXX, then run out and reset -->
+					<If Condition="Me.Level &gt;= 70" >
+					
+						<!-- Profile message - If we are below level 68, we will clear to the first boss, Watchkeeper Gargolmar, then run out and reset -->
+						<CustomBehavior File="Message" 
+										Text="If we are below level 68, we will clear to the first boss, XXX, then run out and reset." 
+										LogColor="Fuchsia" />
+					</If>
+					
 					<!-- Instance timer -->
 					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />
 					
@@ -209,25 +218,25 @@
 					<!-- Pull first floor -->
 					<RunTo X="-1242.876" Y="1616.946" Z="68.50874" />
 					<CustomBehavior File="WaitTimer" 
-												WaitTime="3000" />
+												WaitTime="1000" />
 					<RunTo X="-1256.954" Y="1585.761" Z="68.56223" />
 					<CustomBehavior File="WaitTimer" 
-												WaitTime="3000" />
+												WaitTime="1000" />
 					<RunTo X="-1265.318" Y="1560.76" Z="68.57436" />
 					<CustomBehavior File="WaitTimer" 
-												WaitTime="3000" />
-					<RunTo X="-1277.561" Y="1535.495" Z="68.56645" />
+												WaitTime="1000" />
+					<RunTo X="-1276.156" Y="1541.225" Z="68.56849" />
 					<CustomBehavior File="WaitTimer" 
-												WaitTime="3000" />
+												WaitTime="1000" />
 					<RunTo X="-1280.313" Y="1552.1" Z="68.58364" />
 					<CustomBehavior File="WaitTimer" 
-												WaitTime="3000" />
+												WaitTime="1000" />
 					<RunTo X="-1290.793" Y="1517.625" Z="68.58499" />
 					<CustomBehavior File="WaitTimer" 
-												WaitTime="3000" />
+												WaitTime="1000" />
 					<RunTo X="-1284.655" Y="1488.209" Z="68.58932" />
 					<CustomBehavior File="WaitTimer" 
-												WaitTime="3000" />
+												WaitTime="1000" />
 												
 					<!-- Pull the solo at the brazier -->	
 					<RunTo X="-1244.91" Y="1447.314" Z="68.59771" />
@@ -235,85 +244,55 @@
 					<!-- Pull the barrier group on the left -->
 					<RunTo X="-1228.355" Y="1469.517" Z="68.56563" />
 					
-					<!-- UserSettings -->
-					<CustomBehavior File="UserSettings"
-									PullDistance="1" />
-					
-					<!-- Run under the barricade -->
-					<RunTo X="-1233.829" Y="1452.516" Z="68.58691" />
-					<RunTo X="-1217.99" Y="1425.126" Z="68.61032" />
-					
-					<CustomBehavior File="MyCTM" X="-1216.317" Y="1421.499" Z="68.61301" />
-					<CustomBehavior File="MyCTM" X="-1201.736" Y="1414.408" Z="68.593" />
-					<CustomBehavior File="MyCTM" X="-1175.191" Y="1421.976" Z="68.44055" />
-		
-					<!-- We are below level 70, avoiding Watchkeeper Gargolmar -->		
-					<If Condition="Me.Level &lt;= 69" > 
+					<!-- We are below level 68, avoiding Watchkeeper Gargolmar -->		
+					<If Condition="Me.Level &lt;= 67" > 
 					
 						<!-- Profile message - We are below level 68 and can't kill bosses, avoiding Watchkeeper Gargolmar -->
 							<CustomBehavior File="Message" 
-										Text="We are below level 70 and can't kill bosses, avoiding Watchkeeper Gargolmar."  
+										Text="We are below level 68 and can't kill bosses, avoiding Watchkeeper Gargolmar."  
 										LogColor="Fuchsia" />		
-							
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="3000" />							
-								
+															
 							<!-- WFP to avoid Watchkeeper Gargolmar - move to brazier -->	
 							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
-										AvoidMobId="17306" 
-										AvoidDistance="25" 
-										X="-1173.495" Y="1435.236" Z="68.41026" >
-							</CustomBehavior>
+											AvoidMobId="17306" 
+											AvoidDistance="65"
+											X="-1231.222" Y="1474.324" Z="68.56033"  >
+							<FollowPath Strategy="StalkMobAtAvoidDistance" 
+										DismissPet="true" 
+										EgressDistance="45" >
+								  <Hotspot X="-1212.488" Y="1443.458" Z="68.57121" />
+							  </FollowPath>
+						  </CustomBehavior>
 								
-							<RunTo X="-1178.12" Y="1420.769" Z="68.45805" />	
-							<RunTo X="-1203.547" Y="1414.982" Z="68.59652" />
-							
-							<!-- Pull the grp we bypassed -->
-							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
-										AvoidMobId="17306" 
-										AvoidDistance="25" 
-										X="-1199.29" Y="1428.59" Z="68.53218" >
-							</CustomBehavior>	
-								
-							<RunTo X="-1202.336" Y="1414.267" Z="68.59673" />
-							<RunTo X="-1175.514" Y="1421.342" Z="68.44659" />
-							<RunTo X="-1164.992" Y="1436.933" Z="68.39989" />	
-								
-							<!-- WFP to avoid Watchkeeper Gargolmar - the rug past the brazier -->	
-							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
-										AvoidMobId="17306" 
-										AvoidDistance="45" 
-										X="-1157.586" Y="1451.219" Z="68.39919" >
-							</CustomBehavior>	
-
-							<!-- WFP to avoid Watchkeeper Gargolmar - move to the safe corner -->	
-							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
-										AvoidMobId="17306" 
-										AvoidDistance="45" 
-										X="-1128.56" Y="1503.036" Z="68.39825" >
-							</CustomBehavior>	
-							
-							<RunTo X="-1138.397" Y="1503.651" Z="68.39771" />
-							
-							<!-- WFP to avoid Watchkeeper Gargolmar - move to second floor-->	
-							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
-										AvoidMobId="17306" 
-										AvoidDistance="45" 
-										X="-1183.146" Y="1525.892" Z="68.46425"  >
-							</CustomBehavior>
-							
-							<!-- Run to first grp at the top of the stairs -->
-							<RunTo X="-1240.5" Y="1565.219" Z="91.10129" />
+						<!-- Move back to the bridge -->	
+						<RunTo X="-1283.821" Y="1503.144" Z="68.57864" />
+						<RunTo X="-1292.068" Y="1535.329" Z="68.58967" />
+						<RunTo X="-1251.764" Y="1579.988" Z="68.51157" />
+						<RunTo X="-1245.879" Y="1610.437" Z="68.53096" />
+						<RunTo X="-1266.327" Y="1662.983" Z="68.7224" />
+						<RunTo X="-1285.593" Y="1672.292" Z="68.75599" />
 	
-					</If>	
+					</If>
 					
 					<!-- If we are 68 or greater, we can kill bosses -->		
-					<If Condition="Me.Level &gt;= 70" >
+					<If Condition="Me.Level &gt;= 68" >
 					
 						<!-- Profile message - We are level 68 or above, we can kill bosses -->
 						<CustomBehavior File="Message" 
 									Text="We are level 68 or above, we can kill bosses."  
 									LogColor="Fuchsia" />
+									
+						<!-- WFP to avoid Watchkeeper Gargolmar - move to brazier -->	
+							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
+											AvoidMobId="17306" 
+											AvoidDistance="65"
+											X="-1231.222" Y="1474.324" Z="68.56033"  >
+							<FollowPath Strategy="StalkMobAtAvoidDistance" 
+										DismissPet="true" 
+										EgressDistance="45" >
+								  <Hotspot X="-1212.488" Y="1443.458" Z="68.57121" />
+							  </FollowPath>
+						  </CustomBehavior>			
 						
 						<!-- Forces kill of Watchkeeper Gargolmar -->
 						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
@@ -327,25 +306,29 @@
 							</Safespots>
 						</CustomBehavior>
 						
+						<!-- Run to first grp after Watchkeeper Gargolmar -->
+						<RunTo X="-1182.875" Y="1483.131" Z="68.46095" />
+						
+						<!-- Run to second grp after Watchkeeper Gargolmar -->
+						<RunTo X="-1152.259" Y="1504.416" Z="68.40633" />
+						
+						<!-- Run guards at the door near the stairs -->
+						<RunTo X="-1205.367" Y="1535.216" Z="68.53761" />
+
 						<!-- Run to first grp at the top of the stairs -->
 							<RunTo X="-1240.5" Y="1565.219" Z="91.10129" />
 						
-						<!-- UserSettings -->
-						<CustomBehavior File="UserSettings"
-										PullDistance="1" />
+						<!-- If we are on the second floor, continue -->
+						<If Condition="Me.X &gt; 75" >
 						
+							<CustomBehavior File="Message" 
+										Text="TEST COMPLETE."  
+										LogColor="Fuchsia" />
+						
+							<CustomBehavior File="UserSettings" StopBot="true" />
+						</If>
 					</If>
 					
-					<!-- If we are on the second floor, continue -->
-					<If Condition="Me.X &gt; 75" >
-					
-						<CustomBehavior File="Message" 
-									Text="TEST COMPLETE."  
-									LogColor="Fuchsia" />
-					
-						<CustomBehavior File="UserSettings" StopBot="true" />
-					</If>
-
 					<!-- Run to the exit -->
 					<RunTo X="-1346.896" Y="1651.415" Z="68.86491" />
 									
@@ -369,9 +352,9 @@
 					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 					
 						<!-- If our hearthstone is set here, use it -->
-						<If Condition="Me.HearthstoneAreaId == 4275">
+						<If Condition="(Me.HearthstoneAreaId == 3538) || (Me.HearthstoneAreaId == 3536)">
 							<CustomBehavior File="Message" 
-											Text="Our Innkeeper is set at The Argent Stand." 
+											Text="Our Innkeeper is set at Honor Hold or Thrallmar." 
 											LogColor="Cyan" />
 												
 							<!-- Have hearthstone -->
@@ -417,7 +400,7 @@
 											LogColor="Fuchsia" />
 										
 							<CustomBehavior File="ForceSetVendor" 
-											DoMail="False" 
+											DoMail="True" 
 											DoRepair="True" 
 											DoSell="False" 
 											DoTrain="False" />
@@ -438,6 +421,16 @@
 								</Vendors>
 							</SetVendor>
 						
+							<SetMailbox>
+								<Mailboxes>
+									<!-- Honor Hold -->
+									<Mailbox X="-706.4096" Y="2697.286" Z="94.34798" />
+									
+									<!-- Thrallmar -->
+									<Mailbox X="171.8167" Y="2626.572" Z="87.07685" />
+								</Mailboxes>
+							</SetMailbox>
+							
 							<!-- We are done repairing -->
 							<If Condition="Me.DurabilityPercent &gt;= 0.8" >
 								<CustomBehavior File="Message" 
@@ -458,6 +451,8 @@
 								<!-- Fly to the hover point above the innkeep in Thrallmar -->
 								<CustomBehavior File="FlyTo" X="167.4147" Y="2645.637" Z="115.6988" />
 								
+							</If>
+							
 								<CustomBehavior File="Message" 
 								Text="Flying to Hellfire Ramparts." 
 								LogColor="Lime" />
@@ -473,7 +468,7 @@
 								<CustomBehavior File="ForcedDismount" />
 								
 								<RunTo X="-363.436" Y="3078.43" Z="-15.00165" />
-							</If>							
+														
 						</If>	<!-- If our hearthstone is set here, use it -->
 					</If> <!-- Repair if necessary -->
 				</If>	<!-- If we are inside Blood Furnace -->

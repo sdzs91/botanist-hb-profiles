@@ -311,8 +311,27 @@
 					<RunTo X="1126.697" Y="-326.1796" Z="56.87439" />
 					<RunTo X="1122.756" Y="-285.4101" Z="56.88467" />
 					<RunTo X="1112.092" Y="-262.2586" Z="56.87514" />
-					<RunTo X="1080.195" Y="-262.8038" Z="61.22322" />
-					<RunTo X="1059.196" Y="-261.6739" Z="61.2276" />
+					
+					<!-- GOOGE to force kill of Ionar -->
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="28546"
+									EventX="1080.433" EventY="-262.5126" EventZ="61.21981"
+									MoveOutOfGroundEffectAuraId1="52770"
+									MoveAwayFromMobCastingSpellId1="52770"
+									MoveAwayFromMobWithAuraId1="52770"
+									MoveOutOfGroundEffectAuraId2="59795"
+									MoveAwayFromMobCastingSpellId2="59795"
+									MoveAwayFromMobWithAuraId2="59795" >
+						<Safespots>
+							<Hotspot X="1072.878" Y="-238.3697" Z="61.21747" />
+							<Hotspot X="1048.177" Y="-259.9499" Z="61.22632" />
+							<Hotspot X="1055.351" Y="-275.9792" Z="61.22632" />
+							<Hotspot X="1074.549" Y="-292.4146" Z="61.22632" />
+							<Hotspot X="1116.245" Y="-263.2051" Z="56.87384" />
+							<Hotspot X="1126.481" Y="-291.871" Z="56.87548" />
+							<Hotspot X="1120.172" Y="-244.9818" Z="56.89609" />
+						</Safespots>
+					</CustomBehavior>
 		
 								
 					<!-- Ionar through The Terrestrial Watchtower -->
