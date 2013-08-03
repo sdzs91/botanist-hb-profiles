@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-M][Solstice][65-68]_hellfire-ramparts</Name>
+	<Name>[QO-N-M][Solstice][70-73]_blood-furnace</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -106,7 +106,7 @@
 										WaitTime="20000" />
 					</If> <!-- Have Innkeeper's Daughter -->
 				</If> <!-- Hearth check -->
-			</If> <!-- BRS -->
+			</If> <!-- BRS -->		
 			
 			<!-- If we are in Eastern Kingdoms -->
 			<If Condition="Me.MapId == 0">
@@ -135,12 +135,12 @@
 				<CustomBehavior File="MyCTM" X="-248.113" Y="922.9" Z="84.3497" />
 			</If> <!-- Eastern Kingdoms -->
 			
-			<!-- Outlands -->
+			<!-- Outland -->
 			<If Condition="Me.MapId == 530">
 				<CustomBehavior File="Message" 
 								Text="We are in Outland." 
 								LogColor="Cyan" />
-								
+					
 				<!-- If our hearthstone is set here, use it -->
 				<If Condition="(Me.HearthstoneAreaId == 3538) || (Me.HearthstoneAreaId == 3536)">
 					<CustomBehavior File="Message" 
@@ -273,8 +273,7 @@
 					</If>
 					
 					<If Condition="Me.IsHorde">
-						<CustomBehavior File="FlyTo" X="166.5072" Y="2792.336" Z="113.3349" />
-						<CustomBehavior File="ForcedDismount" />
+						<RunTo X="183.0796" Y="2606.334" Z="87.28376" />
 					</If>
 				
 					<CustomBehavior File="Message" 
@@ -296,10 +295,10 @@
 									X="-717.3172" Y="2607.582" Z="91.01124" />
 									
 							<!-- Thrallmar -->
-							<Vendor Name="Rohok" 
-									Entry="16583" 
+									<Vendor Name="Reagan Mancuso" 
+									Entry="22225" 
 									Type="Repair" 
-									X="167.2784" Y="2795.669" Z="113.3652" />
+									X="179.7871" Y="2605.4" Z="87.28391" />
 						</Vendors>
 					</SetVendor>
 				
@@ -319,26 +318,21 @@
 						<!-- Fly to the hover point above the innkeep in Thrallmar -->
 						<CustomBehavior File="FlyTo" X="167.4147" Y="2645.637" Z="115.6988" />
 					</If>
-				</If> <!-- Repair if necessary -->
+				</If> <!-- Repairing -->
 				
-				<CustomBehavior File="Message" 
-								Text="Flying to Hellfire Ramparts." 
-								LogColor="Lime" />
-								
-				<!-- Fly above hellfire ramparts -->
-				<CustomBehavior File="FlyTo" X="-334.9235" Y="3018.459" Z="37.46231" />
-
-				<!-- Land in the box -->
-				<CustomBehavior File="FlyTo" X="-363.436" Y="3078.43" Z="-15.00165" />
+				<!-- Fly outside of Blood Furnace -->
+				<CustomBehavior File="FlyTo" X="-217.1329" Y="3043.892" Z="144.3637" />
+				
+				<!-- Fly into box -->
+				<CustomBehavior File="FlyTo" X="-302.408" Y="3162.92" Z="31.7273" />	
+				
 				<CustomBehavior File="ForcedDismount" />
-				
-				<RunTo X="-363.436" Y="3078.43" Z="-15.00165" />
-			</If> <!-- Outlands -->
+			</If> <!-- Outland -->
 			
 			<!-- In box -->
-			<If Condition="Me.X &gt; -400 &amp;&amp; Me.X &lt; -300 &amp;&amp; Me.Y &gt; 3000 &amp;&amp; Me.Y &lt; 3100" >
+			<If Condition="Me.X &gt; -350 &amp;&amp; Me.X &lt; -250 &amp;&amp; Me.Y &gt; 3100 &amp;&amp; Me.Y &lt; 3200 " >
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][Solstice][65-68]_hellfire-ramparts" />
+								ProfileName="..\[QO-N-M][Solstice][70-73]_blood-furnace" />
 			</If> <!-- In box -->
 		</If> <!-- Booster -->
 	</QuestOrder>

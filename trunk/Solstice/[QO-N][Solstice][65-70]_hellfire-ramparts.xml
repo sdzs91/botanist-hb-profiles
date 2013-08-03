@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][Solstice][65-68]_hellfire-ramparts</Name>
+	<Name>[QO-N][Solstice][65-70]_hellfire-ramparts</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -49,7 +49,7 @@
 							Text="You meet the level requirement to run this profile." 
 							LogColor="Fuchsia" />
 		
-		 	<!-- Booster UserSettings -->
+		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
@@ -62,12 +62,12 @@
 							LogoutInactivityUseForceQuit="False"
 							LootChests="False"
 							LootMobs="True"
-							LootRadius="1"
+							LootRadius="15"
 							MountDistance="75"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="25"
+							PullDistance="15"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseFlightPaths="True"
@@ -135,7 +135,7 @@
 									LogColor="Fuchsia" />	
 									
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][Solstice][65-68]_hellfire-ramparts" />
+									ProfileName="Movement\[QO-N-M][Solstice][65-70]_hellfire-ramparts" />
 				</If> <!-- Not in box -->
 				
 				<!-- If we are in the box -->
@@ -143,6 +143,18 @@
 					<CustomBehavior File="Message" 
 									Text="Portal detected nearby."
 									LogColor="Fuchsia" />	
+
+					<!-- Resetting the instance -->
+					<CustomBehavior File="Message" 
+									Text="Resetting instance." 
+									LogColor="Fuchsia" />
+					
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
+					
+					<CustomBehavior File="Message" 
+									Text="Instance reset." 
+									LogColor="Fuchsia" />
 						
 					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
 					<While Condition="Me.ZoneId != 3562">
@@ -171,12 +183,13 @@
 				
 				<!-- If we are inside Hellfire Ramparts and have checked our reset -->
 				<If Condition="Me.ZoneId == 3562">
-						<!-- Run macro to pass on loot -->
-					<CustomBehavior File="RunMacro" Macro="/run SetOptOutOfLoot(1)" />
-									
+		
 					<!-- Entrance -->
 					<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
-													
+					
+					<!-- Instance timer -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />
+					
 					<CustomBehavior File="Message" 
 									Text="Hellfire Ramparts initialized."  
 									LogColor="Fuchsia" />
@@ -195,67 +208,162 @@
 						
 					<!-- Pull first floor -->
 					<RunTo X="-1242.876" Y="1616.946" Z="68.50874" />
+					<CustomBehavior File="WaitTimer" 
+												WaitTime="3000" />
 					<RunTo X="-1256.954" Y="1585.761" Z="68.56223" />
+					<CustomBehavior File="WaitTimer" 
+												WaitTime="3000" />
 					<RunTo X="-1265.318" Y="1560.76" Z="68.57436" />
+					<CustomBehavior File="WaitTimer" 
+												WaitTime="3000" />
 					<RunTo X="-1277.561" Y="1535.495" Z="68.56645" />
+					<CustomBehavior File="WaitTimer" 
+												WaitTime="3000" />
 					<RunTo X="-1280.313" Y="1552.1" Z="68.58364" />
-					<RunTo X="-1294.451" Y="1525.285" Z="68.5917" />
-					<RunTo X="-1277.787" Y="1494.741" Z="68.57449" />
-					<RunTo X="-1227.532" Y="1471.552" Z="68.5621" />
-					<RunTo X="-1189.371" Y="1458.148" Z="68.45145" />
-					<RunTo X="-1178.249" Y="1476.704" Z="68.44762" />
-					<RunTo X="-1182.276" Y="1487.304" Z="68.46307" />
-					<RunTo X="-1172.442" Y="1495.46" Z="68.45762" />
-					<RunTo X="-1216.23" Y="1545" Z="68.55325" />
-					<RunTo X="-1147.292" Y="1507.029" Z="68.39722" />
-					<RunTo X="-1153.61" Y="1503.936" Z="68.41061" />
-					<RunTo X="-1154.117" Y="1482.467" Z="68.41945" />
-					<RunTo X="-1169.788" Y="1458.07" Z="68.42177" />
-					<RunTo X="-1180.135" Y="1440.294" Z="68.42554" />
-					<RunTo X="-1208.907" Y="1439.131" Z="68.55933" />
-					<RunTo X="-1240.705" Y="1446.83" Z="68.5974" />
-
-					<RunTo X="-1236.788" Y="1541.511" Z="90.32333" />
+					<CustomBehavior File="WaitTimer" 
+												WaitTime="3000" />
+					<RunTo X="-1290.793" Y="1517.625" Z="68.58499" />
+					<CustomBehavior File="WaitTimer" 
+												WaitTime="3000" />
+					<RunTo X="-1284.655" Y="1488.209" Z="68.58932" />
+					<CustomBehavior File="WaitTimer" 
+												WaitTime="3000" />
+												
+					<!-- Pull the solo at the brazier -->	
+					<RunTo X="-1244.91" Y="1447.314" Z="68.59771" />
+												
+					<!-- Pull the barrier group on the left -->
+					<RunTo X="-1228.355" Y="1469.517" Z="68.56563" />
 					
-					<!-- Pull second floor -->
-					<RunTo X="-1241.226" Y="1570.434" Z="91.27397" />
-					<RunTo X="-1258.31" Y="1596.797" Z="91.95538" />
-					<RunTo X="-1261.923" Y="1594.38" Z="92.16961" />
-					<RunTo X="-1282.059" Y="1597.541" Z="91.75027" />
-					<RunTo X="-1297.189" Y="1589.679" Z="91.77014" />
-					<RunTo X="-1316.828" Y="1616.842" Z="91.7486" />
-					<RunTo X="-1311.586" Y="1632.609" Z="91.74809" />
-					<RunTo X="-1319.655" Y="1653.462" Z="91.62841" />
-					<RunTo X="-1344.531" Y="1681.932" Z="90.60447" />
-					<RunTo X="-1307.892" Y="1638.273" Z="91.74696" />
-					<RunTo X="-1285.227" Y="1633.888" Z="91.73592" />
-					<RunTo X="-1271.261" Y="1625.002" Z="91.67666" />
-					<RunTo X="-1272.468" Y="1640.998" Z="91.6504" />
-					<RunTo X="-1168.66" Y="1697.98" Z="91.51431" />
-					<RunTo X="-1121.133" Y="1721.539" Z="89.32458" />
-					<RunTo X="-1161.369" Y="1696.875" Z="91.4279" />
-									
-					<!-- Run to ledge -->
-					<RunTo X="-1319.639" Y="1648.569" Z="91.65906" />
+					<!-- UserSettings -->
+					<CustomBehavior File="UserSettings"
+									PullDistance="1" />
+					
+					<!-- Run under the barricade -->
+					<RunTo X="-1233.829" Y="1452.516" Z="68.58691" />
+					<RunTo X="-1217.99" Y="1425.126" Z="68.61032" />
+					
+					<CustomBehavior File="MyCTM" X="-1216.317" Y="1421.499" Z="68.61301" />
+					<CustomBehavior File="MyCTM" X="-1201.736" Y="1414.408" Z="68.593" />
+					<CustomBehavior File="MyCTM" X="-1175.191" Y="1421.976" Z="68.44055" />
+		
+					<!-- We are below level 70, avoiding Watchkeeper Gargolmar -->		
+					<If Condition="Me.Level &lt;= 69" > 
+					
+						<!-- Profile message - We are below level 68 and can't kill bosses, avoiding Watchkeeper Gargolmar -->
+							<CustomBehavior File="Message" 
+										Text="We are below level 70 and can't kill bosses, avoiding Watchkeeper Gargolmar."  
+										LogColor="Fuchsia" />		
+							
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />							
+								
+							<!-- WFP to avoid Watchkeeper Gargolmar - move to brazier -->	
+							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
+										AvoidMobId="17306" 
+										AvoidDistance="25" 
+										X="-1173.495" Y="1435.236" Z="68.41026" >
+							</CustomBehavior>
+								
+							<RunTo X="-1178.12" Y="1420.769" Z="68.45805" />	
+							<RunTo X="-1203.547" Y="1414.982" Z="68.59652" />
+							
+							<!-- Pull the grp we bypassed -->
+							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
+										AvoidMobId="17306" 
+										AvoidDistance="25" 
+										X="-1199.29" Y="1428.59" Z="68.53218" >
+							</CustomBehavior>	
+								
+							<RunTo X="-1202.336" Y="1414.267" Z="68.59673" />
+							<RunTo X="-1175.514" Y="1421.342" Z="68.44659" />
+							<RunTo X="-1164.992" Y="1436.933" Z="68.39989" />	
+								
+							<!-- WFP to avoid Watchkeeper Gargolmar - the rug past the brazier -->	
+							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
+										AvoidMobId="17306" 
+										AvoidDistance="45" 
+										X="-1157.586" Y="1451.219" Z="68.39919" >
+							</CustomBehavior>	
+
+							<!-- WFP to avoid Watchkeeper Gargolmar - move to the safe corner -->	
+							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
+										AvoidMobId="17306" 
+										AvoidDistance="45" 
+										X="-1128.56" Y="1503.036" Z="68.39825" >
+							</CustomBehavior>	
+							
+							<RunTo X="-1138.397" Y="1503.651" Z="68.39771" />
+							
+							<!-- WFP to avoid Watchkeeper Gargolmar - move to second floor-->	
+							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
+										AvoidMobId="17306" 
+										AvoidDistance="45" 
+										X="-1183.146" Y="1525.892" Z="68.46425"  >
+							</CustomBehavior>
+							
+							<!-- Run to first grp at the top of the stairs -->
+							<RunTo X="-1240.5" Y="1565.219" Z="91.10129" />
+	
+					</If>	
+					
+					<!-- If we are 68 or greater, we can kill bosses -->		
+					<If Condition="Me.Level &gt;= 70" >
+					
+						<!-- Profile message - We are level 68 or above, we can kill bosses -->
+						<CustomBehavior File="Message" 
+									Text="We are level 68 or above, we can kill bosses."  
+									LogColor="Fuchsia" />
 						
-					<!-- jump down -->
-					<CustomBehavior File="MyCTM" X="-1346.896" Y="1651.415" Z="68.86491" />
+						<!-- Forces kill of Watchkeeper Gargolmar -->
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="17306"
+										EventX="-1184.001" EventY="1451.3" EventZ="68.43677"
+										MoveOutOfGroundEffectAuraId1="111111"
+										MoveAwayFromMobCastingSpellId1="111111"
+										MoveAwayFromMobWithAuraId1="111111">
+							<Safespots>
+								<Hotspot X="-1184.001" Y="1451.3" Z="68.43677" />
+							</Safespots>
+						</CustomBehavior>
+						
+						<!-- Run to first grp at the top of the stairs -->
+							<RunTo X="-1240.5" Y="1565.219" Z="91.10129" />
+						
+						<!-- UserSettings -->
+						<CustomBehavior File="UserSettings"
+										PullDistance="1" />
+						
+					</If>
+					
+					<!-- If we are on the second floor, continue -->
+					<If Condition="Me.X &gt; 75" >
+					
+						<CustomBehavior File="Message" 
+									Text="TEST COMPLETE."  
+									LogColor="Fuchsia" />
+					
+						<CustomBehavior File="UserSettings" StopBot="true" />
+					</If>
+
+					<!-- Run to the exit -->
+					<RunTo X="-1346.896" Y="1651.415" Z="68.86491" />
 									
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
-									MinLevel="60" 
-									ProfileName="[QO-N][60-63]_blood-furnace.xml"  />
+									MinLevel="70" 
+									ProfileName="[QO-N][Solstice][70-73]_blood-furnace.xml"  />
 									
 				</If> <!-- If we are inside Hellfire Ramparts -->
 				
-				<!-- If we are inside Blood Furnace -->
-				<If Condition="Me.ZoneId == 3713">
+				<!-- If we are inside Hellfire Ramparts -->
+				<If Condition="Me.ZoneId == 3562">
 					<CustomBehavior File="Message" 
-									Text="Blood Furnace detected. Running out to reset."
+									Text="Hellfire Ramparts detected. Running out to reset."
 									LogColor="Fuchsia" />
 									
 					<!-- Make our way to the exit -->					
-					<RunTo X="-4.093049" Y="17.00105" Z="-44.78368" />
+					<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
 					
 					<!-- Repair if necessary -->
 					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
@@ -301,8 +409,7 @@
 							</If>
 							
 							<If Condition="Me.IsHorde">
-								<CustomBehavior File="FlyTo" X="166.5072" Y="2792.336" Z="113.3349" />
-								<CustomBehavior File="ForcedDismount" />
+								<RunTo X="183.0796" Y="2606.334" Z="87.28376" />
 							</If>
 						
 							<CustomBehavior File="Message" 
@@ -324,10 +431,10 @@
 											X="-717.3172" Y="2607.582" Z="91.01124" />
 											
 									<!-- Thrallmar -->
-									<Vendor Name="Rohok" 
-											Entry="16583" 
+									<Vendor Name="Reagan Mancuso" 
+											Entry="22225" 
 											Type="Repair" 
-											X="167.2784" Y="2795.669" Z="113.3652" />
+											X="179.7871" Y="2605.4" Z="87.28391" />
 								</Vendors>
 							</SetVendor>
 						
@@ -351,22 +458,24 @@
 								<!-- Fly to the hover point above the innkeep in Thrallmar -->
 								<CustomBehavior File="FlyTo" X="167.4147" Y="2645.637" Z="115.6988" />
 								
-							</If>							
-						</If>	<!-- If our hearthstone is set here, use it -->
-					</If> <!-- Repair if necessary -->
-					
-					<CustomBehavior File="Message" 
+								<CustomBehavior File="Message" 
 								Text="Flying to Hellfire Ramparts." 
 								LogColor="Lime" />
 								
-					<!-- Fly above hellfire ramparts -->
-					<CustomBehavior File="FlyTo" X="-334.9235" Y="3018.459" Z="37.46231" />
+								<!-- Fly above hellfire ramparts -->
+								<CustomBehavior File="FlyTo" X="-334.9235" Y="3018.459" Z="37.46231" />
 
-					<!-- Land in the box -->
-					<CustomBehavior File="FlyTo" X="-363.436" Y="3078.43" Z="-15.00165" />
-					<CustomBehavior File="ForcedDismount" />
-					
-					<RunTo X="-363.436" Y="3078.43" Z="-15.00165" />
+								<!-- Instance timer check if we didn't repair -->
+								<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+								
+								<!-- Land in the box -->
+								<CustomBehavior File="FlyTo" X="-363.436" Y="3078.43" Z="-15.00165" />
+								<CustomBehavior File="ForcedDismount" />
+								
+								<RunTo X="-363.436" Y="3078.43" Z="-15.00165" />
+							</If>							
+						</If>	<!-- If our hearthstone is set here, use it -->
+					</If> <!-- Repair if necessary -->
 				</If>	<!-- If we are inside Blood Furnace -->
 				
 				<!-- If we don't need to vendor -->
@@ -382,22 +491,8 @@
 					
 					<!-- Make sure we run to the right spot outside the portal -->
 					<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
+					
 				</If> <!-- If we don't need to vendor -->
-				
-				<!-- If we are in the box -->
-				<If Condition="Me.X &gt; -400 &amp;&amp; Me.X &lt; -300 &amp;&amp; Me.Y &gt; 3000 &amp;&amp; Me.Y &lt; 3100" >
-					<!-- First reset isn't enough to get a fresh instance if toons are still inside -->
-					<CustomBehavior File="Message" 
-									Text="Resetting instance." 
-									LogColor="Fuchsia" />
-					
-					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
-					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
-					
-					<CustomBehavior File="Message" 
-									Text="Instance reset." 
-									LogColor="Fuchsia" />
-				</If> <!-- In box -->
 			</While> <!-- Infinite loop -->
 		</If> <!-- Level Check -->
 		

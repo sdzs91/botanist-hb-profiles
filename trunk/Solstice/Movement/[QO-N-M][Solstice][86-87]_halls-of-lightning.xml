@@ -180,9 +180,9 @@
 					<RunTo X="8385.353" Y="-389.2431" Z="903.1184" />
 					
 					<CustomBehavior File="ForceSetVendor" 
-									DoMail="False" 
+									DoMail="True" 
 									DoRepair="True" 
-									DoSell="False" 
+									DoSell="True" 
 									DoTrain="False" />
 					
 					<SetVendor>
@@ -194,6 +194,12 @@
 									X="8383.45" Y="-390.166" Z="903.1188" />
 						</Vendors>
 					</SetVendor>
+				
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="8443.896" Y="-329.4509" Z="906.608" />
+						</Mailboxes>
+					</SetMailbox>
 				
 					<!-- We are done repairing -->
 					<If Condition="Me.DurabilityPercent &gt;= 0.8" >
@@ -221,7 +227,7 @@
 			<!-- In box -->
 			<If Condition="Me.X &gt; 9100 &amp;&amp; Me.X &lt; 9200 &amp;&amp; Me.Y &gt; -1400 &amp;&amp; Me.Y &lt; -1300" >
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N-DK-Solo-Power-Leveling][85-87]_halls-of-lightning" />
+								ProfileName="..\[QO-N][Solstice][86-87]_halls-of-lightning" />
 			</If> <!-- In box -->		
 		</If> <!-- Level Check -->
 	</QuestOrder>

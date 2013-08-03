@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][Solstice][68-71]_blood-furnace</Name>
+	<Name>[QO-N][Solstice][70-73]_blood-furnace</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -49,7 +49,7 @@
 							Text="You meet the level requirement to run this profile." 
 							LogColor="Fuchsia" />
 		
-		 	<!-- Booster UserSettings -->
+		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
@@ -114,7 +114,7 @@
 									LogColor="Fuchsia" />	
 									
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][Solstice][65-70]_blood-furnace" />
+									ProfileName="Movement\[QO-N-M][Solstice][70-73]_blood-furnace" />
 				</If> <!-- Not in box -->
 				
 				<!-- If we are in the box -->
@@ -122,7 +122,19 @@
 					<CustomBehavior File="Message" 
 									Text="Portal detected nearby."
 									LogColor="Fuchsia" />	
-						
+
+					<!-- Reset the instance  -->
+					<CustomBehavior File="Message" 
+									Text="Resetting instance." 
+									LogColor="Fuchsia" />
+					
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
+					
+					<CustomBehavior File="Message" 
+									Text="Instance reset." 
+									LogColor="Fuchsia" />
+							
 					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
 					<While Condition="Me.ZoneId != 3713">
 						<!-- Make sure we run to the right spot outside the portal -->
@@ -170,14 +182,26 @@
 					<RunTo X="27.81888" Y="-85.12513" Z="-41.09704" />
 					<RunTo X="49.6638" Y="-93.84409" Z="-40.15036" />
 					<RunTo X="193.6469" Y="-91.41691" Z="9.613526" />
-					<RunTo X="193.4491" Y="-84.33443" Z="9.608779" />
-					<RunTo X="215.0788" Y="-84.38358" Z="9.577976" />
-					<RunTo X="231.3915" Y="-103.133" Z="9.622198" />
-					<RunTo X="245.994" Y="-66.90824" Z="9.621491" />
-					<RunTo X="249.4076" Y="-26.19511" Z="6.952456" />
+					
+					<!-- Pull the observatory  -->
+					<CustomBehavior File="RunLikeHell"
+									UseCTM="true"
+									NumOfTimes="1"
+									AllowCombat="false">	
+						<Hotspot X="193.4635" Y="-84.42117" Z="9.608479" />
+						<Hotspot X="211.3989" Y="-87.15601" Z="9.59502" />
+						<Hotspot X="216.9691" Y="-90.69233" Z="9.624678" />
+						<Hotspot X="229.8112" Y="-96.31448" Z="9.618695" />
+						<Hotspot X="231.6633" Y="-105.2847" Z="9.615137" />
+						<Hotspot X="238.9616" Y="-111.965" Z="9.604614" />
+					</CustomBehavior>
+					<RunTo X="238.9616" Y="-111.965" Z="9.604614" />
+					
+					<RunTo X="225.6276" Y="-70.90349" Z="9.617165" />
+					<RunTo X="243.1372" Y="-66.94068" Z="9.622755" />
+					<RunTo X="247.1241" Y="-30.21107" Z="7.089955" />
 
-					<!-- Clears the top corridor and first boss -->	
-					<RunTo X="249.1926" Y="-28.02811" Z="6.953418" />			
+					<!-- Clears the top corridor and first boss -->				
 					<RunTo X="278.7344" Y="-0.242348" Z="7.953723" />
 					<RunTo X="299.4574" Y="-0.686172" Z="9.60461" />
 					<RunTo X="316.344" Y="12.27846" Z="9.618405" />
@@ -187,17 +211,27 @@
 					<RunTo X="335.0616" Y="-1.912738" Z="9.624074" />
 					<RunTo X="327.7275" Y="-9.617597" Z="9.498361" />
 					
-					<RunTo X="328.9055" Y="68.40388" Z="9.613312" />
-					
-					<RunTo X="351.4101" Y="68.86818" Z="9.619288" />
-					<RunTo X="338.0797" Y="102.3701" Z="9.619213" />
-					<RunTo X="305.962" Y="68.75052" Z="9.618334" />
-					<RunTo X="324.9991" Y="67.60344" Z="9.614052" />
-					<RunTo X="329.5138" Y="133.9504" Z="9.617323" />
-					
-					<!-- Cast Army of the Dead -->
-					<CustomBehavior File="RunMacro" Macro="/cast Army of the Dead" />
-					
+					<!-- Door entering The Makers room -->
+					<RunTo X="327.3801" Y="36.15402" Z="9.573215" />
+					<RunTo X="326.4123" Y="54.44596" Z="9.61472" />
+					<RunTo X="306.0675" Y="69.19598" Z="9.618705" />
+					<RunTo X="310.9482" Y="89.4194" Z="9.619424" />
+					<RunTo X="350.0991" Y="68.82554" Z="9.61876" />
+					<RunTo X="347.8928" Y="84.65002" Z="9.620329" />
+					<RunTo X="349.9124" Y="97.90454" Z="9.622648" />
+					<RunTo X="327.5679" Y="98.88693" Z="9.615527" />
+
+					<!-- Pull The Maker -->
+					<CustomBehavior File="RunLikeHell"
+									UseCTM="true"
+									NumOfTimes="1"
+									AllowCombat="false">	
+						<Hotspot X="349.9124" Y="97.90454" Z="9.622648" />
+						<Hotspot X="327.5679" Y="98.88693" Z="9.615527" />
+						<Hotspot X="328.6978" Y="129.2227" Z="9.615915" />
+					</CustomBehavior>
+					<RunTo X="328.6978" Y="129.2227" Z="9.615915" />
+
 					<!-- Wait timer -->
 					<CustomBehavior File="WaitTimer" 
 										WaitTime="5000" />
@@ -342,8 +376,7 @@
 							</If>
 							
 							<If Condition="Me.IsHorde">
-								<CustomBehavior File="FlyTo" X="166.5072" Y="2792.336" Z="113.3349" />
-								<CustomBehavior File="ForcedDismount" />
+								<RunTo X="183.0796" Y="2606.334" Z="87.28376" />
 							</If>
 						
 							<CustomBehavior File="Message" 
@@ -365,10 +398,10 @@
 											X="-717.3172" Y="2607.582" Z="91.01124" />
 											
 									<!-- Thrallmar -->
-									<Vendor Name="Rohok" 
-											Entry="16583" 
-											Type="Repair" 
-											X="167.2784" Y="2795.669" Z="113.3652" />
+									<Vendor Name="Reagan Mancuso" 
+									Entry="22225" 
+									Type="Repair" 
+									X="179.7871" Y="2605.4" Z="87.28391" />
 								</Vendors>
 							</SetVendor>
 						
@@ -396,9 +429,12 @@
 						</If>	<!-- If our hearthstone is set here, use it -->
 					</If> <!-- Repair if necessary -->
 					
-					<!-- Fly outside of Blood Furnace at rendezvous -->
+					<!-- Fly outside of Blood Furnace -->
 					<CustomBehavior File="FlyTo" X="-217.1329" Y="3043.892" Z="144.3637" />
 
+					<!-- Instance timer check if we did repair -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+					
 					<!-- Fly into box -->
 					<CustomBehavior File="FlyTo" X="-302.408" Y="3162.92" Z="31.7273" />	
 					
@@ -417,21 +453,6 @@
 					<!-- Make sure we run to the right spot outside the portal -->
 					<RunTo X="-302.408" Y="3162.92" Z="31.7273" />
 				</If> <!-- If we don't need to vendor -->
-				
-				<!-- If we are in the box -->
-				<If Condition="Me.X &gt; -350 &amp;&amp; Me.X &lt; -250 &amp;&amp; Me.Y &gt; 3100 &amp;&amp; Me.Y &lt; 3200 " >
-					<!-- Reset the instance  -->
-					<CustomBehavior File="Message" 
-									Text="Resetting instance." 
-									LogColor="Fuchsia" />
-					
-					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
-					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
-					
-					<CustomBehavior File="Message" 
-									Text="Instance reset." 
-									LogColor="Fuchsia" />
-				</If> <!-- In box -->
 			</While> <!-- Infinite loop -->
 		</If> <!-- Level Check -->
 		

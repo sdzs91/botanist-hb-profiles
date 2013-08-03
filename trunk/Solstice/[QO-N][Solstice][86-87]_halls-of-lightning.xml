@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-DK-Solo-Power-Leveling][86-87]_halls-of-lightning</Name>
+	<Name>[QO-N][Solstice][86-87]_halls-of-lightning</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -99,7 +99,7 @@
 									LogColor="Fuchsia" />	
 									
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M-DK-Solo-Power-Leveling][86-87]_halls-of-lightning" />
+									ProfileName="Movement\[QO-N-M][Solstice][86-87]_halls-of-lightning" />
 				</If> <!-- Not in box -->
 				
 				<!-- If we are in the box -->
@@ -107,14 +107,27 @@
 					<CustomBehavior File="Message" 
 									Text="Portal detected nearby."
 									LogColor="Fuchsia" />	
+					<!-- Resetting the instance -->
+					<CustomBehavior File="Message" 
+									Text="Resetting the instance." 
+									LogColor="Fuchsia" />
+					
+					<CustomBehavior File="RunMacro" 
+									Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro"
+									Macro="/script SetDungeonDifficulty(1)" />	
 						
+					<CustomBehavior File="Message" 
+									Text="Instance reset." 
+									LogColor="Fuchsia" />
+									
 					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
 					<While Condition="Me.ZoneId != 4272">
 						<!-- Make sure we run to the right spot outside the portal -->
 						<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />
 
 						<!-- Run back in the portal -->
-						<CustomBehavior File="Misc\InInstance" X="9195.854" Y="-1410.016" Z="1110.216" />
+						<CustomBehavior File="Misc\InInstance" X="9188.984" Y="-1390.553" Z="1110.215" />
 										
 						<CustomBehavior File="Message" 
 										Text="Waiting for the dungeon to load." 
@@ -138,47 +151,89 @@
 					<!-- Entrance -->
 					<RunTo X="1331.41" Y="241.904" Z="52.5046" />
 	
+					<!-- Instance timer -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />
+	
 					<CustomBehavior File="Message" 
 									Text="Halls of Lightning initialized."  
 									LogColor="Fuchsia" />
 									
-					<!-- pull entrance to the back right corner -->
-					<RunTo X="1330.928" Y="191.5214" Z="53.16277" />
-					<RunTo X="1325.824" Y="163.2726" Z="53.70418" />
-					<RunTo X="1338.977" Y="163.0592" Z="53.70418" />
+					<!-- pull entrance -->
+					<RunTo X="1326.498" Y="166.4467" Z="53.70409" />
+					<RunTo X="1332.182" Y="99.07405" Z="40.18036" />
 					
-					<!-- Forces kill of General Bjarngrim -->
-					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="28586"
-									EventX="1262.115" EventY="99.51503" EventZ="33.50551"
-									MoveOutOfGroundEffectAuraId1="111111"
-									MoveAwayFromMobCastingSpellId1="111111"
-									MoveAwayFromMobWithAuraId1="111111">
-						<Safespots>
-							<Hotspot X="1262.115" Y="99.51503" Z="33.50551" />
-						</Safespots>
-					</CustomBehavior>
+					<!-- clear the right front platform -->
+					<RunTo X="1294.004" Y="92.10909" Z="36.14819" />
+					<RunTo X="1270.179" Y="103.6449" Z="33.50556" />
+	
+					<!-- Line up the proper angle for the General Bjarngrim target macro -->
+					<RunTo X="1304.761" Y="100.0253" Z="38.55698" />
+					<RunTo X="1295.259" Y="99.64906" Z="36.42612" />
+			
+					<While Condition="Me.Y &gt; 75" >
 					
-					<!-- pull back right corner -->
-					<RunTo X="1330.631" Y="93.76698" Z="40.18051" />
-					<RunTo X="1315.738" Y="94.10728" Z="40.18051" />
-					<RunTo X="1280.441" Y="94.56725" Z="33.5057" />
-					<RunTo X="1258.641" Y="106.4999" Z="33.50566" />
-
-					<!-- Runlikehell to pull front right corner to the back right corner -->
-					<RunTo X="1269.714" Y="73.57873" Z="33.50554" />
+						<!-- Target General Bjarngrim -->
+						<CustomBehavior File="Message" 
+												Text="Targeting General Bjarngrim." 
+												LogColor="Fuchsia" />
+												
+						<CustomBehavior File="RunMacro" Macro="/targetenemy [noharm]" />
+						
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 28586)">
+						
+							<!-- Profile message - My target is General Bjarngrim -->
+							<CustomBehavior File="Message" 
+												Text="My target is General Bjarngrim." 
+												LogColor="Fuchsia" />
+												
+							<!-- Cast Army of the Dead -->
+							<CustomBehavior File="RunMacro" Macro="/cast Army of the Dead" />
+								
+							  <!-- Wait timer -->
+							<CustomBehavior File="WaitTimer" 
+												WaitTime="5000" />
+												
+							  <!-- Forces kill of General Bjarngrim -->
+							<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+											EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="28586"
+											EventX="1262.115" EventY="99.51503" EventZ="33.50551"
+											MoveOutOfGroundEffectAuraId1="111111"
+											MoveAwayFromMobCastingSpellId1="111111"
+											MoveAwayFromMobWithAuraId1="111111">
+								<Safespots>
+									<Hotspot X="1262.115" Y="99.51503" Z="33.50551" />
+								</Safespots>
+							</CustomBehavior>
+							
+							<!-- Return to the center of the circle -->
+							<RunTo X="1261.765" Y="99.22363" Z="33.50551" />
+							
+							<!-- Move past Y location 75 to break the loop -->
+							<CustomBehavior File="MyCTM" X="1262.419" Y="59.93425" Z="33.18529" />
+							<Else>
+								
+								<!-- Profile message - My target is not General Bjarngrim -->
+								<CustomBehavior File="Message" 
+													Text="My target is not General Bjarngrim." 
+													LogColor="Fuchsia" />
+							</Else>					
+						</If>
+						<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+					</While> <!-- Infinite loop -->	
+					
+					<!-- Pull front right corner to the back right corner -->
 					<RunTo X="1254.295" Y="58.20074" Z="33.5056" />
 					<RunTo X="1271.316" Y="42.76962" Z="33.50558" />
 					<RunTo X="1253.993" Y="23.42127" Z="33.50569" />
 					<RunTo X="1270.521" Y="5.903249" Z="33.50577" />
 					<RunTo X="1259.842" Y="-32.71298" Z="33.50577" />
 											
-					<!-- Runlikehell to pull back right corner to the Iron Crucible -->
+					<!-- Pull back right corner to the Iron Crucible -->
 					<RunTo X="1280.169" Y="-33.99865" Z="33.5058" />
 					<RunTo X="1326.478" Y="-33.9321" Z="40.1817" />
 					<RunTo X="1336.967" Y="-31.51172" Z="40.1817" />
 							
-					<!-- Runlikehell to pull the Iron Crucible to the Unyielding Garrison -->	
+					<!-- Pull the Iron Crucible to the Unyielding Garrison -->	
 					<RunTo X="1354.329" Y="5.261074" Z="43.15365" />
 					<RunTo X="1363.421" Y="-4.571633" Z="42.99044" />			
 					<RunTo X="1365.948" Y="17.78572" Z="48.46579" />
@@ -186,7 +241,7 @@
 					<RunTo X="1378.08" Y="18.51252" Z="50.03817" />
 					<RunTo X="1395.017" Y="36.47628" Z="50.03823" />						
 						
-					<!-- Runlikehell to pull the Unyielding Garrison to the first platform and back -->	
+					<!-- Pull the Unyielding Garrison to the first platform and back -->	
 					<RunTo X="1376.603" Y="45.38057" Z="50.0383" />
 					<RunTo X="1341.149" Y="81.93388" Z="40.17981" />
 					<RunTo X="1348.616" Y="89.87563" Z="40.17981" />
@@ -196,40 +251,18 @@
 					<RunTo X="1441.873" Y="28.89459" Z="56.66949" />	<!-- Top right -->
 					<RunTo X="1435.227" Y="44.53588" Z="56.66731" />	<!-- left of top platform -->						
 					
-					<!-- profile message - Going to tag the RAF toons at the entrance -->
-					<CustomBehavior File="Message" 
-									Text="Tagging the RAFs at the entrance."
-									LogColor="Fuchsia" />
-									
-					<!-- tag rafs at the entrance -->
-					<RunTo X="1331.708" Y="159.2112" Z="53.70435" />				
-									
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="5000" />
-
-					<!-- Run to the entrance of the Iron Crucible -->
-					<RunTo X="1331.983" Y="-46.43424" Z="40.18056" />
-
+					<!-- Run to the entrance to The Iron Crucible -->
+					<RunTo X="1331.784" Y="-79.95277" Z="28.25682" />
+					
 					<!-- Runlikehell through the Iron Crucible -->
 					<CustomBehavior File="RunLikeHell" 
 									NumOfTimes="1" 
 									AllowCombat="false">
-						<Hotspot X="1331.979" Y="-99.62247" Z="23.22626" />
-						<Hotspot X="1332.758" Y="-123.8981" Z="23.22719" />
-						<Hotspot X="1312.495" Y="-170.3559" Z="23.22576" />
-						<Hotspot X="1321.518" Y="-186.2523" Z="23.22576" />
-						<Hotspot X="1299.432" Y="-219.6101" Z="23.22576" />
-						<Hotspot X="1314.561" Y="-197.4361" Z="23.22576" />
-						<Hotspot X="1346.253" Y="-166.3262" Z="23.22576" />
-						<Hotspot X="1337.932" Y="-146.5502" Z="23.22576" />
-						<Hotspot X="1313.027" Y="-167.1767" Z="23.22576" />
-						<Hotspot X="1350.126" Y="-198.0493" Z="23.22576" />
-						<Hotspot X="1366.418" Y="-223.6453" Z="23.22576" />
-						<Hotspot X="1343.533" Y="-190.0272" Z="23.22576" />
-						<Hotspot X="1331.809" Y="-201.5576" Z="23.34989" />
-						<Hotspot X="1331.48" Y="-230.4692" Z="37.78723" />
+						<Hotspot X="1332.292" Y="-99.18593" Z="23.22617" />
+						<Hotspot X="1344.798" Y="-164.3674" Z="23.22564" />			
+						<Hotspot X="1331.64" Y="-219.6317" Z="33.62513" />
 					</CustomBehavior>
-					<RunTo X="1331.48" Y="-230.4692" Z="37.78723" />	
+					<RunTo X="1331.64" Y="-219.6317" Z="33.62513" />	
 															
 					<!-- Iron Crucible to right before Volkhan -->
 					<RunTo X="1332.387" Y="-238.3228" Z="37.82282" />
@@ -329,7 +362,99 @@
 
 					<!-- Jump off -->
 					<CustomBehavior File="MyCTM" X="1267.815" Y="33.41695" Z="33.50579" />
+					
+					<!-- Repair if necessary -->
+					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					
+						<!-- If our hearthstone is set here, use it -->
+						<If Condition="Me.HearthstoneAreaId == 4484">
+							<CustomBehavior File="Message" 
+											Text="Our Innkeeper is set at Bouldercrag's Refuge." 
+											LogColor="Cyan" />
+												
+							<!-- Have hearthstone -->
+							<If Condition="HasItem(6948)">
+								<CustomBehavior File="Message" 
+												Text="Using Hearthstone." 
+												LogColor="Lime" />
+												
+								<CustomBehavior File="Misc\RunLua" 
+												Lua="UseItemByName(6948)" 
+												WaitTime="1000" />
+												
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="20000" />
+							</If> <!-- Have hearthstone -->
+						
+							<!-- Have Innkeeper's Daughter -->
+							<If Condition="HasItem(64488)">
+								<CustomBehavior File="Message" 
+												Text="Using Innkeeper's Daughter." 
+												LogColor="Lime" />
+													
+								<CustomBehavior File="Misc\RunLua" 
+												Lua="UseItemByName(64488)" 
+												WaitTime="1000" />
+									
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="20000" />
+							</If> <!-- Have Innkeeper's Daughter -->
+						
+							<CustomBehavior File="Message" 
+											Text="Our durability is less than 30%, we need to repair." 
+											LogColor="Fuchsia" />
+										
+							<CustomBehavior File="ForceSetVendor" 
+											DoMail="True" 
+											DoRepair="True" 
+											DoSell="True" 
+											DoTrain="False" />
+							
+							<SetVendor>
+								<Vendors>
+									<!-- Bouldercrag's Refuge -->
+									<Vendor Name="Dargum Hammerdeep" 
+											Entry="29964"
+											Type="Repair"
+											X="8383.45" Y="-390.166" Z="903.1188" />
+								</Vendors>
+							</SetVendor>
+						
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox X="8443.896" Y="-329.4509" Z="906.608" />
+								</Mailboxes>
+							</SetMailbox>
+						
+							<!-- We are done repairing -->
+							<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &lt;= 0.3)" >
+								<CustomBehavior File="Message" 
+												Text="Repairing complete." 
+												LogColor="Fuchsia" />
+												
+							</If> <!-- repaired -->
+							
+							<!-- Fly to the hover point above the innkeep in Bouldercrag's Refuge -->
+							<CustomBehavior File="FlyTo" X="8471.806" Y="-301.3479" Z="976.4656" />
 								
+								<CustomBehavior File="Message" 
+								Text="Flying to Halls of Lighning." 
+								LogColor="Lime" />
+								
+								<!-- Fly outside of Halls of Lightning -->
+								<CustomBehavior File="FlyTo" X="9067.207" Y="-1353.584" Z="1197.683" />
+											
+								<!-- Instance timer check if we did repair-->
+								<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+											
+								<!-- Fly down -->
+								<CustomBehavior File="FlyTo" X="9140.729" Y="-1356.245" Z="1140.377" />
+								<CustomBehavior File="ForcedDismount" />
+								
+								<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />
+							
+						</If>	<!-- If our hearthstone is set here, use it -->
+					</If> <!-- Repair if necessary -->
 				</If> <!-- HoL -->
 				
 				<!-- Halls of Lightning -->
@@ -344,28 +469,17 @@
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
 									MinLevel="87" 
-									ProfileName="[QO-N-M-DK-Solo-Power-Leveling][87-89]_blackrock-caverns.xml"  />
+									ProfileName="[QO-N][Solstice][87-88]_blackrock-caverns.xml"  />
 					
+					<!-- Instance timer check if we did repair-->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+						
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" X="1333.524" Y="290.7161" Z="52.81057" />
 					
 					<!-- Make sure we run to the right spot outside the potral -->
 					<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />
 				</If> <!-- HoL -->
-				
-				<!-- If we are in the box -->
-				<If Condition="Me.X &gt; 9100 &amp;&amp; Me.X &lt; 9200 &amp;&amp; Me.Y &gt; -1400 &amp;&amp; Me.Y &lt; -1300" >
-					<!-- First reset the instance -->
-					<CustomBehavior File="Message" 
-									Text="Resetting instance, 1 of 2." 
-									LogColor="Fuchsia" />
-					
-					<CustomBehavior File="RunMacro" 
-									Macro="/script ResetInstances()" />
-					<CustomBehavior File="RunMacro"
-									Macro="/script SetDungeonDifficulty(1)" />
-										
-				</If> <!-- In box -->
 			</While> <!-- Infinite loop -->
 		</If> <!-- Booster -->	
 		

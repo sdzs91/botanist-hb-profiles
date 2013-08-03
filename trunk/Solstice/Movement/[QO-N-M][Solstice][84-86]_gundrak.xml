@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-M][Solstice][85-86]_gundrak</Name>
+	<Name>[QO-N-M][Solstice][84-86]_gundrak</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -234,7 +234,7 @@
 			<!-- In box -->
 			<If Condition="Me.X &gt; 6650 &amp;&amp; Me.X &lt; 6750 &amp;&amp; Me.Y &gt; -4700 &amp;&amp; Me.Y &lt; -4600" >
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][Solstice][85-86]_gundrak" />
+								ProfileName="..\[QO-N][Solstice][84-86]_gundrak" />
 			</If> <!-- In box -->		
 		</If> <!-- Level Check -->
 

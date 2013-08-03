@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][Solstice][85-86]_gundrak</Name>
+	<Name>[QO-N][Solstice][84-86]_gundrak</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -118,7 +118,7 @@
 									LogColor="Fuchsia" />	
 									
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][Solstice][85-86]_gundrak" />
+									ProfileName="Movement\[QO-N-M][Solstice][84-86]_gundrak" />
 				</If> <!-- Not in box -->
 				
 				<!-- If we are in the box -->
