@@ -187,12 +187,21 @@
 					<!-- Entrance -->
 					<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
 					
-					<!-- If we are below level 68, we will clear to the first boss, XXX, then run out and reset -->
-					<If Condition="Me.Level &gt;= 70" >
+					<!-- If we are below level 68, we will clear to the first boss, Watchkeeper Gargolmar, then run out and reset -->
+					<If Condition="Me.Level &lt; 68" >
 					
 						<!-- Profile message - If we are below level 68, we will clear to the first boss, Watchkeeper Gargolmar, then run out and reset -->
 						<CustomBehavior File="Message" 
-										Text="If we are below level 68, we will clear to the first boss, XXX, then run out and reset." 
+										Text="We are below level 68, we will clear to the first boss, Watchkeeper Gargolmar, then run out and reset." 
+										LogColor="Fuchsia" />
+					</If>
+					
+					<!-- We are above level 68, we will kill Watchkeeper Gargolmar, and all the trash on the second floor, then run out and reset -->
+					<If Condition="Me.Level &gt;= 68" >
+					
+						<!-- Profile message - We are above level 68, we will kill Watchkeeper Gargolmar, and all the trash on the second floor, then run out and reset -->
+						<CustomBehavior File="Message" 
+										Text="We are above level 68, we will kill Watchkeeper Gargolmar, and all the trash on the second floor, then run out and reset." 
 										LogColor="Fuchsia" />
 					</If>
 					
@@ -289,27 +298,31 @@
 											X="-1231.222" Y="1474.324" Z="68.56033"  >
 							<FollowPath Strategy="StalkMobAtAvoidDistance" 
 										DismissPet="true" 
-										EgressDistance="45" >
+										EgressDistance="50" >
 								  <Hotspot X="-1212.488" Y="1443.458" Z="68.57121" />
+								  <Hotspot X="-1179.411" Y="1444.544" Z="68.42729" />
 							  </FollowPath>
 						  </CustomBehavior>			
 						
 						<!-- Forces kill of Watchkeeper Gargolmar -->
 						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="17306"
-										EventX="-1184.001" EventY="1451.3" EventZ="68.43677"
+										EventX="-1189.392" EventY="1462.559" EventZ="68.45417"
 										MoveOutOfGroundEffectAuraId1="111111"
 										MoveAwayFromMobCastingSpellId1="111111"
 										MoveAwayFromMobWithAuraId1="111111">
 							<Safespots>
-								<Hotspot X="-1184.001" Y="1451.3" Z="68.43677" />
+								<Hotspot X="-1189.392" Y="1462.559" Z="68.45417" />
 							</Safespots>
 						</CustomBehavior>
 						
-						<!-- Run to first grp after Watchkeeper Gargolmar -->
+						<!-- Run to dogs after Watchkeeper Gargolmar -->
+						<RunTo X="-1176.596" Y="1446.943" Z="68.42535" />
+						
+						<!-- Run to first grp, on the left after Watchkeeper Gargolmar -->
 						<RunTo X="-1182.875" Y="1483.131" Z="68.46095" />
 						
-						<!-- Run to second grp after Watchkeeper Gargolmar -->
+						<!-- Run to second grp, on the right after Watchkeeper Gargolmar -->
 						<RunTo X="-1152.259" Y="1504.416" Z="68.40633" />
 						
 						<!-- Run guards at the door near the stairs -->
@@ -352,7 +365,7 @@
 									
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
-									MinLevel="71" 
+									MinLevel="70" 
 									ProfileName="[QO-N][Solstice][70-73]_blood-furnace.xml"  />
 									
 				</If> <!-- If we are inside Hellfire Ramparts -->

@@ -312,6 +312,13 @@
 					<RunTo X="1122.756" Y="-285.4101" Z="56.88467" />
 					<RunTo X="1112.092" Y="-262.2586" Z="56.87514" />
 					
+					<!-- Cast Army of the Dead -->
+					<CustomBehavior File="RunMacro" Macro="/cast Army of the Dead" />
+								
+					 <!-- Wait timer -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+												
 					<!-- GOOGE to force kill of Ionar -->
 					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="28546"
