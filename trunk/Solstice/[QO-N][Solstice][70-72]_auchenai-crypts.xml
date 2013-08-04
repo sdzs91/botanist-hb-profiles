@@ -116,7 +116,7 @@
 									Text="Resetting instance." 
 									LogColor="Fuchsia" />
 					
-				<!--	<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />		-->
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
 					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
 					
 					<CustomBehavior File="Message" 
@@ -161,25 +161,127 @@
 									Text="Auchenai Crypts initialized."  
 									LogColor="Fuchsia" />
 									
-					<!-- Pulling the first floor -->				
-					<CustomBehavior File="MyCTM" X="34.37527" Y="0.1306189" Z="-0.1281645" />
-					<CustomBehavior File="MyCTM" X="58.28442" Y="-25.75494" Z="4.697529" />
-					<CustomBehavior File="MyCTM" X="74.43922" Y="-28.93018" Z="-0.06198803" />
-					<CustomBehavior File="MyCTM" X="86.25947" Y="-37.4708" Z="3.993866" />
-					<CustomBehavior File="MyCTM" X="84.22958" Y="-30.52874" Z="-0.06887054" />
-					<CustomBehavior File="MyCTM" X="103.7495" Y="-28.38541" Z="0.9757032" />
-					<CustomBehavior File="MyCTM" X="115.8693" Y="-22.54951" Z="1.478602" />
-					<CustomBehavior File="MyCTM" X="133.3557" Y="-24.80199" Z="8.439112" />
-					<CustomBehavior File="MyCTM" X="124.2446" Y="0.956852" Z="-0.1294402" />
-					<CustomBehavior File="MyCTM" X="85.00582" Y="-6.569526" Z="-0.07463734" />
-					<CustomBehavior File="MyCTM" X="125.2244" Y="2.119551" Z="-0.1294861" />
-					<CustomBehavior File="MyCTM" X="129.1146" Y="22.03077" Z="-0.1291174" />
-					<CustomBehavior File="MyCTM" X="143.1965" Y="37.73978" Z="3.891361" />
-					<CustomBehavior File="MyCTM" X="183.1557" Y="3.489965" Z="-0.1242565" />
-					<CustomBehavior File="MyCTM" X="207.6346" Y="0.896371" Z="-0.1210332" />
-					<CustomBehavior File="MyCTM" X="229.1296" Y="16.88322" Z="-0.06876553" />
-					<CustomBehavior File="MyCTM" X="243.8906" Y="-9.453298" Z="-0.06093664" />
+					<!-- Pulling the first floor -->
+					
+					<!-- Pull right hand group -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true"
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="34.54653" Y="0.008340187" Z="-0.1259279" />
+						<Hotspot X="58.3038" Y="-24.19761" Z="4.156734" />
+						<Hotspot X="75.04343" Y="-27.73314" Z="-0.05731665" />
+						<Hotspot X="87.60604" Y="-39.33399" Z="4.261199" />
+					</CustomBehavior>
+					<RunTo X="87.60604" Y="-39.33399" Z="4.261199" />
+					
+					<!-- Pull the right hand group on the mound -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true"
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="85.2756" Y="-28.91005" Z="-0.0631541" />
+						<Hotspot X="102.6795" Y="-28.25609" Z="0.783594" />
+						<Hotspot X="116.3809" Y="-21.85367" Z="1.68409" />
+						<Hotspot X="135.4688" Y="-25.81199" Z="9.133776" />
+					</CustomBehavior>
+					<RunTo X="135.4688" Y="-25.81199" Z="9.133776" />
+					
+					<!-- Pull the group below the mound -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true"
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="131.2622" Y="-16.97474" Z="5.169331" />
+						<Hotspot X="121.9053" Y="-0.9279838" Z="-0.04774198" />
+					</CustomBehavior>
+					<RunTo X="121.9053" Y="-0.9279838" Z="-0.04774198" />
+					
+					<RunTo X="110.5544" Y="25.26715" Z="-0.1004694" />
+					<RunTo X="108.0872" Y="29.26453" Z="-0.1285415" />
+					
+					<!-- Pull the first group on the left as we enter -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true"
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="100.9891" Y="41.74537" Z="4.261163" />
+						<Hotspot X="93.90685" Y="42.94441" Z="4.261581" />
+						<Hotspot X="83.08721" Y="42.66038" Z="4.261581" />
+						<Hotspot X="99.0504" Y="43.10467" Z="4.261581" />
+						<Hotspot X="104.8038" Y="44.11842" Z="4.261581" />
+					</CustomBehavior>
+					<RunTo X="104.8038" Y="44.11842" Z="4.261581" />
+					
+					<RunTo X="97.99736" Y="43.59798" Z="4.261581" />
+					<RunTo X="92.53748" Y="38.10494" Z="4.191312" />
+					<RunTo X="85.6544" Y="29.5138" Z="-0.1166367" />
+					
+					
+					<!-- Pull center-left group -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true"
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="72.35814" Y="28.53109" Z="-0.1209275" />
+						<Hotspot X="72.31617" Y="13.94529" Z="0.1700524" />
+						<Hotspot X="77.89931" Y="13.67166" Z="-0.2832717" />
+						<Hotspot X="66.49662" Y="16.97152" Z="0.9499019" />
+					</CustomBehavior>
+					<RunTo X="66.49662" Y="16.97152" Z="0.9499019" />
+					
+					<!-- Pull the center-right group -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true"
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="66.39713" Y="7.809072" Z="-0.1033214" />
+						<Hotspot X="78.89683" Y="-6.970415" Z="-0.07291495" />
+					</CustomBehavior>
+					<RunTo X="78.89683" Y="-6.970415" Z="-0.07291495" />
+					
+					<RunTo X="125.9174" Y="8.631757" Z="0.0462963" />
+					
+					<!-- Pull the back left group -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true"
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="134.1838" Y="23.63244" Z="0.4382764" />
+						<Hotspot X="143.2588" Y="38.38388" Z="4.210083" />
+					</CustomBehavior>
+					<RunTo X="143.2588" Y="38.38388" Z="4.210083" />
+					
+					<!-- pull the back-center group -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true"
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="158.4247" Y="25.38724" Z="0.3566595" />
+						<Hotspot X="185.0574" Y="1.935008" Z="-0.1238896" />
+					</CustomBehavior>
+					<RunTo X="185.0574" Y="1.935008" Z="-0.1238896" />
 
+					<!-- pull the second room back-left -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true"
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="206.4725" Y="0.7215546" Z="-0.1224577" />
+						<Hotspot X="225.5995" Y="15.03009" Z="-0.07376399" />
+					</CustomBehavior>
+					<RunTo X="225.5995" Y="15.03009" Z="-0.07376399" />
+					
+					<!-- pull the second room back-right -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true"
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="242.8543" Y="-10.39869" Z="-0.06367648" />
+					</CustomBehavior>
+					<RunTo X="242.8543" Y="-10.39869" Z="-0.06367648" />
+					
+					
 					<!-- Pulling the second floor -->				
 					<RunTo X="268.954" Y="-1.144128" Z="-0.06563307" />
 					<RunTo X="267.9668" Y="30.04669" Z="13.43612" />
