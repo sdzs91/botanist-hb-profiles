@@ -318,10 +318,7 @@
 									EventX="1080.433" EventY="-262.5126" EventZ="61.21981"
 									MoveOutOfGroundEffectAuraId1="52770"
 									MoveAwayFromMobCastingSpellId1="52770"
-									MoveAwayFromMobWithAuraId1="52770"
-									MoveOutOfGroundEffectAuraId2="59795"
-									MoveAwayFromMobCastingSpellId2="59795"
-									MoveAwayFromMobWithAuraId2="59795" >
+									MoveAwayFromMobWithAuraId1="52770" >
 						<Safespots>
 							<Hotspot X="1072.878" Y="-238.3697" Z="61.21747" />
 							<Hotspot X="1048.177" Y="-259.9499" Z="61.22632" />
