@@ -174,8 +174,8 @@
 					
 						<!-- Target General Bjarngrim -->
 						<CustomBehavior File="Message" 
-												Text="Targeting General Bjarngrim." 
-												LogColor="Fuchsia" />
+												Text="Targeting General Bjarngrim. DO NOT TOUCH !!!" 
+												LogColor="Orange" />
 												
 						<CustomBehavior File="RunMacro" Macro="/targetenemy [noharm]" />
 						
