@@ -184,13 +184,33 @@
 					<!-- Hover point -->
 					<CustomBehavior File="FlyTo" X="8471.806" Y="-301.3479" Z="976.4656" />
 				
+					<!-- Fly to the hover point above the innkeep in Bouldercrag's Refuge -->
+					<CustomBehavior File="FlyTo" X="8471.806" Y="-301.3479" Z="976.4656" />
+						
+					<CustomBehavior File="Message" 
+					Text="Flying to Halls of Lighning." 
+					LogColor="Lime" />
+						
+					<!--CTM's to Halls of Lightning -->
+					<CustomBehavior File="MyCTM" X="8550.668" Y="-434.3782" Z="1106.936" />
+					<CustomBehavior File="MyCTM" X="8833.596" Y="-1091.447" Z="1229.66" />	
+					<CustomBehavior File="MyCTM" X="9035.232" Y="-1264.308" Z="1227.567" />
+
+					<!-- Instance timer check if we did repair-->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+				
 				</If> <!-- Repairing -->
 				
-				<!-- Fly outside of Halls of Lightning -->
-				<CustomBehavior File="FlyTo" X="9067.207" Y="-1353.584" Z="1197.683" />
-								
+				<!-- Profile message - Flying to Halls of Lightning -->
+				<CustomBehavior File="Message" 
+					Text="Flying to Halls of Lightning." 
+					LogColor="Lime" />
+				
+				<!-- Fly to a hover point in front of HOL -->
+				<CustomBehavior File="FlyTo" X="9035.232" Y="-1264.308" Z="1227.567" />
+				
 				<!-- Fly down -->
-				<CustomBehavior File="FlyTo" X="9140.729" Y="-1356.245" Z="1140.377" />
+				<CustomBehavior File="MyCTM" X="9175.68" Y="-1378.8" Z="1103.57" />
 				<CustomBehavior File="ForcedDismount" />
 				
 				<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />
