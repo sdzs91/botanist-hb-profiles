@@ -163,17 +163,33 @@
 									
 					<!-- Pulling the first floor -->
 					
-					<!-- Pull right hand group -->
+					<!-- Pull right hand mob near the bone mound -->
 					<CustomBehavior File="RunLikeHell" 
 									UseCTM="true"
 									NumOfTimes="1" 
 									AllowCombat="false">
 						<Hotspot X="34.54653" Y="0.008340187" Z="-0.1259279" />
-						<Hotspot X="58.3038" Y="-24.19761" Z="4.156734" />
+						<Hotspot X="69.36382" Y="-26.52437" Z="-0.05877671" />
+					</CustomBehavior>
+					<RunTo X="69.36382" Y="-26.52437" Z="-0.05877671" />
+					
+					<!-- Wait timer - wait 3 seconds -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+										
+					<!-- Pull right hand group -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="true"
+									NumOfTimes="1" 
+									AllowCombat="false">
 						<Hotspot X="75.04343" Y="-27.73314" Z="-0.05731665" />
 						<Hotspot X="87.60604" Y="-39.33399" Z="4.261199" />
 					</CustomBehavior>
 					<RunTo X="87.60604" Y="-39.33399" Z="4.261199" />
+					
+					<!-- Wait timer - wait 3 seconds -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
 					
 					<!-- Pull the right hand group on the mound -->
 					<CustomBehavior File="RunLikeHell" 
@@ -187,6 +203,14 @@
 					</CustomBehavior>
 					<RunTo X="135.4688" Y="-25.81199" Z="9.133776" />
 					
+					<!-- Wait timer - wait 3 seconds -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+					
+					<!-- Run up the mound to be sure the mobs die if we get MCed -->
+					<RunTo X="140.1035" Y="-37.97977" Z="15.57701" />
+					<RunTo X="137.5577" Y="-27.29799" Z="10.1355" />
+					
 					<!-- Pull the group below the mound -->
 					<CustomBehavior File="RunLikeHell" 
 									UseCTM="true"
@@ -196,6 +220,10 @@
 						<Hotspot X="121.9053" Y="-0.9279838" Z="-0.04774198" />
 					</CustomBehavior>
 					<RunTo X="121.9053" Y="-0.9279838" Z="-0.04774198" />
+					
+					<!-- Wait timer - wait 3 seconds -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
 					
 					<RunTo X="110.5544" Y="25.26715" Z="-0.1004694" />
 					<RunTo X="108.0872" Y="29.26453" Z="-0.1285415" />
@@ -215,8 +243,12 @@
 					
 					<RunTo X="97.99736" Y="43.59798" Z="4.261581" />
 					<RunTo X="92.53748" Y="38.10494" Z="4.191312" />
-					<RunTo X="85.6544" Y="29.5138" Z="-0.1166367" />
 					
+					<!-- Wait timer - wait 3 seconds -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+										
+					<RunTo X="85.6544" Y="29.5138" Z="-0.1166367" />
 					
 					<!-- Pull center-left group -->
 					<CustomBehavior File="RunLikeHell" 

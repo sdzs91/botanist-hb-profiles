@@ -71,7 +71,7 @@
 							UseMount="True" 
 							UseRandomMount="False" />
 			
-			<!-- BRS -->
+			<!-- Blackrock Spire -->
 			<If Condition="Me.ZoneId == 1583">
 				<If Condition="Me.HearthstoneAreaId == 5628" >
 					<CustomBehavior File="Message" 
@@ -80,59 +80,67 @@
 									
 					<!-- Have hearthstone -->
 					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using Hearthstone -->
 						<CustomBehavior File="Message" 
 										Text="Using Hearthstone." 
 										LogColor="Lime" />
 										
+						<!-- Use Hearthstone -->				
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
 										WaitTime="1000" />
 										
+						<!-- Wait timer - wait 20 seconds for the game to load -->				
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />				
 					</If> <!-- Have hearthstone -->
 				
 					<!-- Have Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using Innkeep'e Daughter -->
 						<CustomBehavior File="Message" 
 										Text="Using Innkeeper's Daughter." 
 										LogColor="Lime" />
 											
+						<!-- Use Innkeeps Daughter -->					
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
 										WaitTime="1000" />
-							
+										
+						<!-- Wait timer - wait 20 seconds for the game to load -->	
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
+										
 					</If> <!-- Have Innkeeper's Daughter -->
 				</If> <!-- Hearth check -->
 			</If> <!-- BRS -->
 			
 			<!-- If we are in Eastern Kingdoms -->
 			<If Condition="Me.MapId == 0">
+			
+				<!-- Profile message - We are in Easter Kingdoms -->
 				<CustomBehavior File="Message" 
 								Text="We are in Eastern Kingdoms." 
 								LogColor="Cyan" />
 						
-				<!-- Searing Gorge -->
-				<If Condition="Me.ZoneId == 51">
-					<CustomBehavior File="Message" 
-									Text="We are in Searing Gorge." 
-									LogColor="Cyan" />
-				</If> <!-- Searing Gorge -->
-				
+				<!-- Profile message - Moving to The Dark Portal -->		
 				<CustomBehavior File="Message" 
 								Text="Moving to The Dark Portal." 
 								LogColor="Lime" />
 								
+				<!-- Fly to the Dark portal -->				
 				<CustomBehavior File="FlyTo" 
 								X="-11851.95" Y="-3196.791" Z="17.13597" />
 
+				<!-- Go through the portal -->				
 				<CustomBehavior File="Misc\InInstance" X="-11913.26" Y="-3209.328" Z="-14.68666" />
 
-				<CustomBehavior File="WaitTimer" WaitTime="15000" />	
+				<!-- Wait timer - wait 10 seconds for the game to load -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="10000" />	
 				
-				<CustomBehavior File="MyCTM" X="-248.113" Y="922.9" Z="84.3497" />
 			</If> <!-- Eastern Kingdoms -->
 			
 			<!-- Outlands -->

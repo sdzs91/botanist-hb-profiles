@@ -73,7 +73,209 @@
 							UseMount="True" 
 							UseRandomMount="False" />
 			
-			<!-- If we are inside -->
+			<!-- If we are in Eastern Kingdoms -->
+			<If Condition="Me.MapId == 0">
+			
+				<!-- Profile message - We are in Eastern Kingdoms-->
+				<CustomBehavior File="Message" 
+								Text="We are in Eastern Kingdoms." 
+								LogColor="Cyan" />
+				
+				<!-- Profile message - Moving to The Dark Portal -->
+				<CustomBehavior File="Message" 
+								Text="Moving to The Dark Portal." 
+								LogColor="Lime" />
+								
+				<!-- Fly to the Dark portal -->				
+				<CustomBehavior File="FlyTo" 
+								X="-11851.95" Y="-3196.791" Z="17.13597" />
+
+				<!-- Go through the portal -->				
+				<CustomBehavior File="Misc\InInstance" 
+								X="-11913.26" Y="-3209.328" Z="-14.68666" />
+
+				<!-- Wait timer - wait 10 seconds for the game to load -->				
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="10000" />	
+								
+			</If> <!-- Eastern Kingdoms -->
+			
+			<!-- If we are Alliance in Kalimdor -->
+			<If Condition="Me.MapId == 1" >
+			
+				<!-- If we are Alliance -->
+				<If Condition="Me.IsAlliance" >
+				
+					<!-- Profile message - I am Alliance in Kalimdor, flying to Ratchet -->
+					<CustomBehavior File="Message" 
+									Text="I am Alliance in Kalimdor, flying to Ratchet." 
+									LogColor="Lime" />
+									
+					<!-- Fly to Ratchet docks -->				
+					<CustomBehavior File="FlyTo" 
+									X="-996.9926" Y="-3824.178" Z="5.496727" />	
+						
+					<!-- Forced dismount -->	
+					<CustomBehavior File="ForcedDismount" />
+					
+					<!-- Run to the wait position -->
+					<RunTo X="-996.7842" Y="-3827.834" Z="5.570349" />
+					
+					<!-- Profile message - Waiting for the transport to Bootybay -->
+					<CustomBehavior File="Message" 
+									Text=" Waiting for the transport to Bootybay." 
+									LogColor="Lime" />
+									
+					<!-- Use the transport from Ratchet to Bootybay -->				
+					<CustomBehavior File="UseTransport"
+									TransportId="20808"
+									WaitAtX="-996.7842" 
+									WaitAtY="-3827.834" 
+									WaitAtZ="5.570349" 
+									TransportStartX="-1005.61346" 
+									TransportStartY="-3864.279" 
+									TransportStartZ="-0.0262415316"
+									TransportEndX="-14277.7451" 
+									TransportEndY="582.86615" 
+									TransportEndZ="0.0493392348"
+									StandOnX="-999.8182" 
+									StandOnY="-3833.799" 
+									StandOnZ="6.034274" 
+									GetOffX="-14280.22" 
+									GetOffY="567.6113" 
+									GetOffZ="6.696649" />
+									
+					<!-- Run to the dock after getting off the transport -->				
+					<RunTo X="-14280.22" Y="567.6113" Z="6.696649" />
+					
+					<!-- Fly to the Dark portal -->
+					<CustomBehavior File="FlyTo" 
+									X="-11851.95" Y="-3196.791" Z="17.13597" />
+									
+					<!-- Go through the dark portal -->				
+					<CustomBehavior File="MyCTM" 
+									X="-11911.02" Y="-3209.082" Z="-2.757394" />	
+									
+					<!-- Wait timer - wait 10 seconds for the game to load -->				
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="10000" />	
+									
+				</If>	<!-- If we are Alliance -->	
+			</If>	<!-- If we are Alliance in Kalimdor -->
+				
+				
+			<!-- If we are Horde in the Cleft of Shadow in Orgrimmar -->
+			<If Condition="Me.MapId == 1" >
+			
+				<!-- If we are Horde -->
+				<If Condition="Me.IsHorde" >
+				
+					<!-- If we are in the Cleft of Shadows -->
+					<If Condition="Me.X &lt; 1895.627 &amp;&amp; Me.X &gt; 1713.31 &amp;&amp; Me.Y &gt; -4440.429 &amp;&amp; Me.Y &lt; -4283.688 &amp;&amp; Me.Z &lt; 35" >
+					
+						<!-- Profile message - We are in the Cleft of Shadow in Orgrimmar, moving to the Blastedlands portal -->
+						<CustomBehavior File="Message" 
+										Text="We are in the Cleft of Shadow in Orgrimmar, moving to the Blastedlands portal." 
+										LogColor="Lime" />
+						
+						<!-- Run to the Blastedlands portal -->
+						<RunTo X="1771.456" Y="-4326.629" Z="-8.225829" />
+							
+						<!-- Profile message - Taking the portal to Blastedlands -->	
+						<CustomBehavior File="Message" 
+										Text="Taking the portal to Blastedlands." 
+										LogColor="Lime" />
+						
+						<!-- Interact with the portal -->
+						<CustomBehavior File="InteractWith" 
+										MobId="195142" 
+										ObjectType="Gameobject" 
+										Range="4.75" 
+										NumOfTimes="1"  
+										X="1768.45" Y="-4325.86" Z="-8.3711" />
+						
+						<!-- Wait timer - wait 15 seconds -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="15000" GoalText="TimeRemaining}" />
+						
+						<!-- User Settings -->
+						<CustomBehavior File="UserSettings" 
+										UseMount="True" />
+						
+						<!-- Fly to the Dark portal -->
+						<CustomBehavior File="FlyTo" 
+										X="-11851.95" Y="-3196.791" Z="17.13597" />
+						
+						<!-- CTM through the portal -->
+						<CustomBehavior File="MyCTM" 
+										X="-11911.02" Y="-3209.082" Z="-2.757394" />	<!-- dark portal -->
+						
+						<!-- Wait timer - wait 10 seconds for the game to load -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="10000" />	
+						
+					</If>
+				</If>		
+			</If>
+			
+			<!-- If I am in Kalimdor -->
+			<If Condition="Me.MapId == 1" >
+			
+				<!-- If I am Horde -->
+				<If Condition="Me.IsHorde" >
+				
+					<!-- Profile message - We are in Kalimdor, moving to the Blastedlands portal -->
+					<CustomBehavior File="Message" 
+									Text="We are in Kalimdor, moving to the Blastedlands portal." 
+									LogColor="Lime" />
+					
+					<!-- Fly to the entrance of the Cleft of Shadows -->
+					<CustomBehavior File="FlyTo" 
+									X="1859.277" Y="-4249.897" Z="38.38978" />
+						
+					<!-- Forced dismount -->	
+					<CustomBehavior File="ForcedDismount" />
+					
+					<!-- Usersettings - disable mounts -->-->
+					<CustomBehavior File="UserSettings" 
+									UseMount="False" />
+					
+					<!-- Run to the Blasted lands portal -->
+					<RunTo X="1771.456" Y="-4326.629" Z="-8.225829" />
+						
+					<!-- Profile message - Taking the portal to Blastedlands -->	
+					<CustomBehavior File="Message" Text="Taking the portal to Blastedlands." LogColor="Lime" />
+					
+					<!-- Interact with the portal -->
+					<CustomBehavior File="InteractWith" 
+									MobId="195142" 
+									ObjectType="Gameobject" 
+									Range="4.75" 
+									NumOfTimes="1" 
+									X="1768.45" Y="-4325.86" Z="-8.3711" />
+					
+					<!-- Wait timer - wait 15 seconds for the game to load -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />
+					
+					<!-- Usersettings - enable mount -->
+					<CustomBehavior File="UserSettings" 
+									UseMount="True" />
+					
+					<!-- Fly to the Dark portal -->
+					<CustomBehavior File="FlyTo" X="-11851.95" Y="-3196.791" Z="17.13597" />
+					
+					<!-- Go through the Dark portal -->
+					<CustomBehavior File="MyCTM" 
+									X="-11911.02" Y="-3209.082" Z="-2.757394" />
+					
+					<!-- Wait timer - wait 10 seconds for the game to load -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="10000" />	
+				</If>	
+			</If>
+			
+			<!-- If we are inside Hellfire Ramparts-->
 			<If Condition="Me.ZoneId == 3562">
 				<CustomBehavior File="Message" 
 								Text="Hellfire Ramparts detected. Running out."
