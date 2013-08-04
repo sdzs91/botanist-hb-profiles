@@ -43,7 +43,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-
+		<!-- Level check -->
 		<If Condition="Me.Level &gt;= 65">
 			<CustomBehavior File="Message" 
 							Text="You meet the level requirement to run this profile." 
@@ -491,7 +491,7 @@
 								<!-- Fly above hellfire ramparts -->
 								<CustomBehavior File="FlyTo" X="-334.9235" Y="3018.459" Z="37.46231" />
 
-								<!-- Instance timer check if we didn't repair -->
+								<!-- Instance timer check if we did repair -->
 								<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
 								
 								<!-- Land in the box -->
@@ -502,10 +502,14 @@
 														
 						</If>	<!-- If our hearthstone is set here, use it -->
 					</If> <!-- Repair if necessary -->
-				</If>	<!-- If we are inside Blood Furnace -->
+				</If>	<!-- If we are inside Hellfire Ramparts -->
 				
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.ZoneId == 3562">
+				
+					<CustomBehavior File="Message" 
+									Text="Hellfire Ramparts detected. Running out to reset."
+									LogColor="Fuchsia" />
 				
 					<!-- Instance timer check if we didn't repair -->
 					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
