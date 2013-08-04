@@ -1,0 +1,369 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][Solstice][70-72]_auchenai-crypts</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="64.52451" Y="80.84284" Z="0.4361966" Radius="1" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<!-- Level check -->
+		<If Condition="Me.Level &gt;= 70">
+			<CustomBehavior File="Message" 
+							Text="You meet the level requirement to run this profile." 
+							LogColor="Fuchsia" />
+		
+		 	<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							FindVendorsAutomatically="False"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootChests="False"
+							LootMobs="True"
+							LootRadius="1"
+							MountDistance="75"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							PullDistance="25"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseFlightPaths="True"
+							UseMount="True" 
+							UseRandomMount="False" />
+						
+			<!-- Infinite loop -->
+			<While Condition="true" >	
+				<!-- Auchenai Crypts -->
+				<If Condition="Me.ZoneId == 3790">
+					<CustomBehavior File="Message" 
+									Text="Auchenai Crypts detected. Running out."
+									LogColor="Fuchsia" />
+				
+					<!-- Run to the exit -->
+					<RunTo X="-16.7899" Y="-0.071496" Z="-0.120559" />
+
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="-28.9178" Y="0.09100415" Z="-0.1205578" />
+					
+					<!-- Make sure we run to the right spot outside the potral -->
+					<RunTo X="-3361.8" Y="5209.2" Z="-101.049" />
+
+				</If> <!-- Auchenai Crypts-->
+				
+				<!-- If we are not in the box, load the movement profile -->
+				<If Condition="Me.X &lt; -3380 || Me.X &gt; -3340 || Me.Y &lt; 5190 || Me.Y &gt; 5230" >
+					<CustomBehavior File="Message" 
+									Text="Distance from portal is not within our proximity, initializing movement to get there."
+									LogColor="Fuchsia" />	
+									
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\[QO-N-M][Solstice][70-72]_auchenai-crypts" />
+				</If> <!-- Not in box -->
+				
+				<!-- If we are in the box -->
+				<If Condition="Me.X &gt; -3380 &amp;&amp; Me.X &lt; -3340 &amp;&amp; Me.Y &gt; 5190 &amp;&amp; Me.Y &lt; 5230" >
+					<CustomBehavior File="Message" 
+									Text="Portal detected nearby."
+									LogColor="Fuchsia" />	
+						
+					<!-- Resetting the instance -->
+					<CustomBehavior File="Message" 
+									Text="Resetting instance." 
+									LogColor="Fuchsia" />
+					
+				<!--	<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />		-->
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
+					
+					<CustomBehavior File="Message" 
+									Text="Instance reset." 
+									LogColor="Fuchsia" />	
+									
+					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
+					<While Condition="Me.ZoneId != 3790">
+						<!-- Make sure we run to the right spot outside the portal -->
+						<RunTo X="-3361.605" Y="5221.771" Z="-101.0487" />
+
+						<!-- Run back in the portal -->
+						<CustomBehavior File="Misc\InInstance" X="-3361.57" Y="5232.868" Z="-101.0489" /> 
+										
+						<CustomBehavior File="Message" 
+										Text="Waiting for the dungeon to load." 
+										LogColor="Fuchsia" />
+									
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000"
+										VariantTime="20000" />
+										
+						<!-- If we still aren't in, we're locked out -->
+						<If Condition="Me.ZoneId != 3790">
+							<CustomBehavior File="Message" 
+											Text="We are locked out. Waiting and trying again." 
+											LogColor="Fuchsia" />
+						</If> <!-- Locked -->
+					</While> <!-- While we aren't in the instance -->
+				</If> <!-- In box -->
+				
+				<!-- If we are inside Auchenai Crypts -->
+				<If Condition="Me.ZoneId == 3790">
+									
+					<!-- Entrance -->
+					<RunTo X="3.252697" Y="-0.2137994" Z="-0.120559" />
+												
+					<!-- Instance timer -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />							
+												
+					<CustomBehavior File="Message" 
+									Text="Auchenai Crypts initialized."  
+									LogColor="Fuchsia" />
+									
+					<!-- Pulling the first floor -->				
+					<CustomBehavior File="MyCTM" X="34.37527" Y="0.1306189" Z="-0.1281645" />
+					<CustomBehavior File="MyCTM" X="58.28442" Y="-25.75494" Z="4.697529" />
+					<CustomBehavior File="MyCTM" X="74.43922" Y="-28.93018" Z="-0.06198803" />
+					<CustomBehavior File="MyCTM" X="86.25947" Y="-37.4708" Z="3.993866" />
+					<CustomBehavior File="MyCTM" X="84.22958" Y="-30.52874" Z="-0.06887054" />
+					<CustomBehavior File="MyCTM" X="103.7495" Y="-28.38541" Z="0.9757032" />
+					<CustomBehavior File="MyCTM" X="115.8693" Y="-22.54951" Z="1.478602" />
+					<CustomBehavior File="MyCTM" X="133.3557" Y="-24.80199" Z="8.439112" />
+					<CustomBehavior File="MyCTM" X="124.2446" Y="0.956852" Z="-0.1294402" />
+					<CustomBehavior File="MyCTM" X="85.00582" Y="-6.569526" Z="-0.07463734" />
+					<CustomBehavior File="MyCTM" X="125.2244" Y="2.119551" Z="-0.1294861" />
+					<CustomBehavior File="MyCTM" X="129.1146" Y="22.03077" Z="-0.1291174" />
+					<CustomBehavior File="MyCTM" X="143.1965" Y="37.73978" Z="3.891361" />
+					<CustomBehavior File="MyCTM" X="183.1557" Y="3.489965" Z="-0.1242565" />
+					<CustomBehavior File="MyCTM" X="207.6346" Y="0.896371" Z="-0.1210332" />
+					<CustomBehavior File="MyCTM" X="229.1296" Y="16.88322" Z="-0.06876553" />
+					<CustomBehavior File="MyCTM" X="243.8906" Y="-9.453298" Z="-0.06093664" />
+
+					<!-- Pulling the second floor -->				
+					<RunTo X="268.954" Y="-1.144128" Z="-0.06563307" />
+					<RunTo X="267.9668" Y="30.04669" Z="13.43612" />
+					<RunTo X="256.0609" Y="32.42807" Z="13.805" />
+					<RunTo X="238.4874" Y="32.711" Z="26.63088" />
+					<RunTo X="210.0919" Y="32.139" Z="26.63344" />
+					<RunTo X="206.9868" Y="3.049682" Z="26.60963" />
+					<RunTo X="211.2363" Y="-30.70985" Z="26.59106" />
+					<RunTo X="239.1454" Y="-34.27754" Z="26.5917" />
+					<RunTo X="239.2032" Y="-127.4457" Z="26.59133" />
+					<RunTo X="227.2808" Y="-162.8728" Z="26.59133" />
+
+					<!-- Entering the Bridge of Souls -->
+					<RunTo X="165.7737" Y="-163.0777" Z="26.25568" />
+					<RunTo X="71.6881" Y="-161.6786" Z="15.49627" />
+					<RunTo X="27.06454" Y="-162.8751" Z="14.01222" />
+
+					<!-- Profile message - That's as far as we can go for now. Exiting to reset -->
+					<CustomBehavior File="Message" 
+									Text="That's as far as we can go for now. Exiting to reset."  
+									LogColor="Fuchsia" />
+
+					<!-- Run to the exit -->
+					<RunTo X="-20.15984" Y="-0.1140493" Z="-0.120559" />
+
+					<!-- If we are high enough to go to the next instance, do so -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									MinLevel="75" 
+									ProfileName="[QO-N][Solstice][72-75]_sethekk-halls.xml"  />
+									
+				</If>	<!-- If we are inside Auchenai Crypts -->
+				
+				<!-- If we are inside Auchenai Crypts -->
+				<If Condition="Me.ZoneId == 3790">
+				
+					<!-- Repair if necessary -->
+					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					
+						<!-- If our hearthstone is set here, use it -->
+						<If Condition="(Me.HearthstoneAreaId == 3684) || (Me.HearthstoneAreaId == 3683)">
+							<CustomBehavior File="Message" 
+											Text="Our Innkeeper is set at Allerian Stronghold or Stonebreaker Hold." 
+											LogColor="Cyan" />
+											
+							<!-- Have hearthstone -->
+							<If Condition="HasItem(6948)">
+								<CustomBehavior File="Message" 
+												Text="Using Hearthstone." 
+												LogColor="Lime" />
+												
+								<CustomBehavior File="Misc\RunLua" 
+												Lua="UseItemByName(6948)" 
+												WaitTime="1000" />
+												
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="20000" />
+							</If> <!-- Have hearthstone -->
+						
+							<!-- Have Innkeeper's Daughter -->
+							<If Condition="HasItem(64488)">
+								<CustomBehavior File="Message" 
+												Text="Using Innkeeper's Daughter." 
+												LogColor="Lime" />
+													
+								<CustomBehavior File="Misc\RunLua" 
+												Lua="UseItemByName(64488)" 
+												WaitTime="1000" />
+									
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="20000" />
+							</If> <!-- Have Innkeeper's Daughter -->
+						
+							<If Condition="Me.IsAlliance">
+								<CustomBehavior File="FlyTo" X="-2963.77" Y="4017.751" Z="1.688854" />
+								<CustomBehavior File="ForcedDismount" />
+								
+								<RunTo X="-2974.844" Y="4026.831" Z="3.573579" />
+							</If>
+							
+							<If Condition="Me.IsHorde">
+								<CustomBehavior File="FlyTo" X="-2644.589" Y="4425.806" Z="36.9834" />
+								<CustomBehavior File="ForcedDismount" />
+							</If>
+						
+							<CustomBehavior File="Message" 
+											Text="Our durability is less than 80%, we need to repair." 
+											LogColor="Fuchsia" />
+										
+							<CustomBehavior File="ForceSetVendor" 
+											DoMail="False" 
+											DoRepair="True" 
+											DoSell="False" 
+											DoTrain="False" />
+							
+							<SetVendor>
+								<Vendors>
+									<!-- Allerian Stronghold -->
+									<Vendor Name="Cecil Meyers" 
+											Entry="19056" 
+											Type="Repair" 
+											X="-2978.951" Y="4033.115" Z="3.574028" />
+									
+									<!-- Stonebreaker Hold -->
+									<Vendor Name="Bar Talet" 
+											Entry="18962" 
+											Type="Repair" 
+											X="-2639.384" Y="4425.386" Z="36.68329" />
+								</Vendors>
+							</SetVendor>
+						
+							<SetMailbox>
+								<Mailboxes>
+									<!-- Allerian Stronghold -->
+									<Mailbox X="-2932.386" Y="4007.916" Z="-1.293741" />
+									
+									<!-- Stonebreaker Hold -->
+									<Mailbox X="-2617.452" Y="4414.927" Z="35.65971" />
+								</Mailboxes>
+							</SetMailbox>
+						
+							<!-- We are done repairing -->
+							<If Condition="Me.DurabilityPercent &gt; 0.3" >
+								<CustomBehavior File="Message" 
+												Text="Repairing complete." 
+												LogColor="Fuchsia" />
+							</If> <!-- repaired -->
+							
+							<If Condition="Me.IsAlliance">
+								<!-- Outside blacksmith -->
+								<RunTo X="-2963.77" Y="4017.751" Z="1.688854" />
+							
+								<!-- Fly to the hover point above the innkeep in Allerian Stronghold -->
+								<CustomBehavior File="FlyTo" X="-2939.273" Y="3984.656" Z="23.7445" />
+							</If>
+							
+							<If Condition="Me.IsHorde">
+								<!-- Fly to the hover point above the innkeep in Stonebreaker Hold -->
+								<CustomBehavior File="FlyTo" X="-2633.392" Y="4387.538" Z="93.16135" />
+							</If>
+						</If> <!-- Repairing -->
+					
+						<CustomBehavior File="Message" 
+									Text="Flying to Auchenai Crypts." 
+									LogColor="Lime" />
+					
+						<!-- Fly outside of Auchenai Crypts -->
+						<CustomBehavior File="FlyTo" X="-3363.793" Y="4913.244" Z="53.08671" />
+						
+						<!-- Instance timer check if we did repair -->
+						<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+
+						<!-- Fly down -->
+						<CustomBehavior File="FlyTo" X="-3361.095" Y="5032.998" Z="-73.79984" />
+
+						<!-- Fly into box -->
+						<CustomBehavior File="FlyTo" X="-3361.8" Y="5209.2" Z="-101.049" />
+						<CustomBehavior File="ForcedDismount" />
+						
+						<RunTo X="-3361.8" Y="5209.2" Z="-101.049" />
+						
+					</If> <!-- Repair if necessary -->
+				</If> <!-- If we are inside Auchenai Crypts -->
+				
+				<!-- If we don't need to vendor -->
+				<If Condition="Me.ZoneId == 3790">
+					<CustomBehavior File="Message" 
+									Text="Auchenai Crypts detected. Running out to reset."
+									LogColor="Fuchsia" />
+					
+					<!-- Make our way to the exit from the ground floor -->
+					<RunTo X="-20.15984" Y="-0.1140493" Z="-0.120559" />
+					
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="-28.9178" Y="0.09100415" Z="-0.1205578" />
+					
+					<!-- Make sure we run to the right spot outside the potral -->
+					<RunTo X="-3361.8" Y="5209.2" Z="-101.049" />
+					
+				</If> <!-- If we don't need to vendor  -->
+			</While> <!-- Infinite loop -->
+		</If> <!-- Level check -->		
+	</QuestOrder>
+</HBProfile>
+
