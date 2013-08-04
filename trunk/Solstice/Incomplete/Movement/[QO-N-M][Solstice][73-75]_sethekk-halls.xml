@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-M][Solstice][70-75]_sethekk-halls</Name>
+	<Name>[QO-N-M][Solstice][73-75]_sethekk-halls</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -46,7 +46,10 @@
 		<ClearMailbox />
 		
 		<!-- Level check -->
-		<If Condition="Me.Level &gt;= 70">
+		<If Condition="Me.Level &gt;= 90">
+			<CustomBehavior File="Message" 
+							Text="We are a booster." 
+							LogColor="Cyan" />
 							
 			<!-- Booster UserSettings -->
 			<CustomBehavior File="UserSettings"
@@ -74,19 +77,19 @@
 							UseRandomMount="False" />
 			
 			<!-- If we are inside -->
-			<If Condition="Me.ZoneId == 3562">
+			<If Condition="Me.ZoneId == 3713">
 				<CustomBehavior File="Message" 
-								Text="Hellfire Ramparts detected. Running out."
+								Text="Blood Furnace detected. Running out."
 								LogColor="Fuchsia" />
 								
-				<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+				<RunTo X="-4.093049" Y="17.00105" Z="-44.78368" />
 				
 				<!-- Go through the portal -->
-				<CustomBehavior File="Misc\InInstance" X="-1358.403" Y="1629.539" Z="68.55495" />
+				<CustomBehavior File="MyCTM" X="-0.4589169" Y="25.4346" Z="-44.8006" />
 				
 				<!-- Make sure we run to the right spot outside the portal -->
-				<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
-			</If> <!-- HR -->
+				<RunTo X="-302.408" Y="3162.92" Z="31.7273" />
+			</If> <!-- BF -->
 			
 			<!-- Outland -->
 			<If Condition="Me.MapId == 530">
@@ -94,12 +97,8 @@
 								Text="We are in Outland." 
 								LogColor="Cyan" />
 						
-				<!-- If our hearthstone is set at Allerian Stronghold or Stonebreaker Hold -->
-				<If Condition="(Me.HearthstoneAreaId == 3684) || (Me.HearthstoneAreaId == 3683)">
-					<CustomBehavior File="Message" 
-										Text="Our Innkeeper is set at Allerian Stronghold or Stonebreaker Hold." 
-										LogColor="Cyan" />
-										
+				
+						
 					<!-- Our hearth isn't set, we need to go to the zone -->
 					<Else>
 						<CustomBehavior File="Message" 
@@ -191,7 +190,8 @@
 				</If> <!-- Check hearthstone -->
 				
 				<!-- Repair if necessary -->
-				<If Condition="Me.LowestDurabilityPercent &lt; 0.8" >
+				<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					
 					<If Condition="Me.IsAlliance">
 						<CustomBehavior File="FlyTo" X="-2963.77" Y="4017.751" Z="1.688854" />
 						<CustomBehavior File="ForcedDismount" />
@@ -239,7 +239,7 @@
 							<Mailbox X="-2617.452" Y="4414.927" Z="35.65971" />
 						</Mailboxes>
 					</SetMailbox>
-						
+					
 					<!-- We are done repairing -->
 					<If Condition="Me.DurabilityPercent &gt;= 0.8" >
 						<CustomBehavior File="Message" 
@@ -281,7 +281,7 @@
 			<!-- In box -->
 			<If Condition="Me.X &gt; -3400 &amp;&amp; Me.X &lt; -3300 &amp;&amp; Me.Y &gt; 4600 &amp;&amp; Me.Y &lt; 4700" >
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][Solstice][70-75]_sethekk-halls." />
+								ProfileName="..\[QO-N][70-75]_sethekk-halls" />
 			</If> <!-- In box -->				
 		</If> <!-- Level check -->
 	</QuestOrder>
