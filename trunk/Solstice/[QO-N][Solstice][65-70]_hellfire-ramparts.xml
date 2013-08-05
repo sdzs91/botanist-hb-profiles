@@ -229,10 +229,9 @@
 					<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
 									AvoidMobId="17264" 
 									AvoidDistance="45"
-									X="-1301.743" Y="1670.563" Z="66.13448"  >
-						<FollowPath Strategy="StalkMobAtAvoidDistance" 
-									DismissPet="true" 
-									EgressDistance="35" >
+									X="-1293.311" Y="1673.113" Z="67.93364" >
+						<FollowPath Strategy="WaitForAvoidDistance" 
+									DismissPet="true" >
 							  <Hotspot X="-1277.826" Y="1665.512" Z="68.86652" />
 						</FollowPath>			
 					</CustomBehavior>
