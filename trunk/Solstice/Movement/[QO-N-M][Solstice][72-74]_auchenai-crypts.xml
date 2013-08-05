@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-M][Solstice][65-70]_hellfire-ramparts</Name>
+	<Name>[QO-N-M][Solstice][72-74]_auchenai-crypts</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -21,10 +21,12 @@
    
 	<TargetElites>True</TargetElites>
 	
-	<AvoidMobs>	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="64.52451" Y="80.84284" Z="0.4361966" Radius="1" />
 	</Blackspots>
 
 	<Mailboxes>
@@ -32,20 +34,20 @@
  
 	<Vendors>
 	</Vendors>
+
+	<Factions></Factions>
 	
 	<ProtectedItems>
+		
 	</ProtectedItems>
-
-	<Factions>
-	</Factions>
 	
 	<QuestOrder>
 		<ClearVendor />
 		<ClearMailbox />
-
-
-		<If Condition="Me.Level &gt;= 65">
-
+		
+		<!-- Level check -->
+		<If Condition="Me.Level &gt;= 72">
+							
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
@@ -70,52 +72,6 @@
 							UseFlightPaths="True"
 							UseMount="True" 
 							UseRandomMount="False" />
-			
-			<!-- Blackrock Spire -->
-			<If Condition="Me.ZoneId == 1583">
-				<If Condition="Me.HearthstoneAreaId == 5628" >
-					<CustomBehavior File="Message" 
-									Text="Our Innkeeper is set at Iron Summit." 
-									LogColor="Cyan" />
-									
-					<!-- Have hearthstone -->
-					<If Condition="HasItem(6948)">
-					
-						<!-- Profile message - Using Hearthstone -->
-						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
-										LogColor="Lime" />
-										
-						<!-- Use Hearthstone -->				
-						<CustomBehavior File="Misc\RunLua" 
-										Lua="UseItemByName(6948)" 
-										WaitTime="1000" />
-										
-						<!-- Wait timer - wait 20 seconds for the game to load -->				
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="20000" />				
-					</If> <!-- Have hearthstone -->
-				
-					<!-- Have Innkeeper's Daughter -->
-					<If Condition="HasItem(64488)">
-					
-						<!-- Profile message - Using Innkeep'e Daughter -->
-						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
-										LogColor="Lime" />
-											
-						<!-- Use Innkeeps Daughter -->					
-						<CustomBehavior File="Misc\RunLua" 
-										Lua="UseItemByName(64488)" 
-										WaitTime="1000" />
-										
-						<!-- Wait timer - wait 20 seconds for the game to load -->	
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="20000" />
-										
-					</If> <!-- Have Innkeeper's Daughter -->
-				</If> <!-- Hearth check -->
-			</If> <!-- BRS -->
 			
 			<!-- If we are in Eastern Kingdoms -->
 			<If Condition="Me.MapId == 0">
@@ -319,21 +275,50 @@
 				</If>	
 			</If>
 			
-			<!-- Outlands -->
+			<!-- If we are inside Hellfire Ramparts-->
+			<If Condition="Me.ZoneId == 3562">
+				<CustomBehavior File="Message" 
+								Text="Hellfire Ramparts detected. Running out."
+								LogColor="Fuchsia" />
+								
+				<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+				
+				<!-- Go through the portal -->
+				<CustomBehavior File="Misc\InInstance" X="-1358.403" Y="1629.539" Z="68.55495" />
+				
+				<!-- Make sure we run to the right spot outside the portal -->
+				<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
+			</If> <!-- HR -->
+			
+			<!-- Mana-Tombs -->
+			<If Condition="Me.ZoneId == 3792">
+				<CustomBehavior File="Message" 
+								Text="Mana-Tombs detected. Running out."
+								LogColor="Fuchsia" />
+			
+				<!-- Run to the exit -->
+				<RunTo X="-4.81115" Y="1.00236" Z="-0.954329" />
+
+				<!-- Go through the portal -->
+				<CustomBehavior File="Misc\InInstance" X="7.24442" Y="1.005781" Z="-0.954329" />
+				
+				<!-- Make sure we run to the right spot outside the potral -->
+				<RunTo X="-3080.679" Y="4942.799" Z="-101.047" />
+
+			</If> <!-- Mana-Tombs-->
+				
+			<!-- Outland -->
 			<If Condition="Me.MapId == 530">
 				<CustomBehavior File="Message" 
 								Text="We are in Outland." 
 								LogColor="Cyan" />
-								
-				<!-- If our hearthstone is set here, use it -->
-				<If Condition="(Me.HearthstoneAreaId == 3538) || (Me.HearthstoneAreaId == 3536)">
+						
+				<!-- If our hearthstone is set at Allerian Stronghold or Stonebreaker Hold -->
+				<If Condition="(Me.HearthstoneAreaId == 3684) || (Me.HearthstoneAreaId == 3683)">
 					<CustomBehavior File="Message" 
-										Text="Our Innkeeper is set at Honor Hold or Thrallmar." 
+										Text="Our Innkeeper is set at Allerian Stronghold or Stonebreaker Hold." 
 										LogColor="Cyan" />
 										
-					<!-- Fly to the instance box -->
-					
-						
 					<!-- Our hearth isn't set, we need to go to the zone -->
 					<Else>
 						<CustomBehavior File="Message" 
@@ -343,18 +328,18 @@
 						<!-- Alliance -->
 						<If Condition="Me.IsAlliance">
 							<CustomBehavior File="Message" 
-											Text="Flying to Honor Hold." 
+											Text="Flying to Allerian Stronghold." 
 											LogColor="Lime" />
 						
-							<!-- Fly to the hover point above the innkeep in Honor Hold -->
-							<CustomBehavior File="FlyTo" X="-699.7803" Y="2654.424" Z="153.3082" />
+							<!-- Fly to the hover point above the innkeep in Allerian Stronghold -->
+							<CustomBehavior File="FlyTo" X="-2939.273" Y="3984.656" Z="23.7445" />
 
 							<!-- Front doorway of the inn -->
-							<CustomBehavior File="FlyTo" X="-709.9306" Y="2699.804" Z="94.41746" />
+							<CustomBehavior File="FlyTo" X="-2931.109" Y="4013.582" Z="-1.410047" />
 							<CustomBehavior File="ForcedDismount" />
 
 							<!-- Run inside the inn -->
-							<RunTo X="-708.0077" Y="2736.445" Z="94.73333" />
+							<RunTo X="-2920.208" Y="4020.259" Z="0.4217456" />
 							
 							<!-- Set hearthstone -->
 							<CustomBehavior File="WaitTimer" 
@@ -365,36 +350,36 @@
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="1000" />
 							<CustomBehavior File="SetHearthstone" 
-											MobId="16826" 
-											X="-708.8713" Y="2739.131" Z="94.73363" />
+											MobId="19296" 
+											X="-2917.881" Y="4021.484" Z="0.4280258" />
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="1000" />
 								
 							<!-- Run outside of inn -->
-							<RunTo X="-709.9306" Y="2699.804" Z="94.41746" />
+							<RunTo X="-2931.109" Y="4013.582" Z="-1.410047" />
 							
 							<!-- Hover point -->
-							<CustomBehavior File="FlyTo" X="-699.7803" Y="2654.424" Z="153.3082" />
+							<CustomBehavior File="FlyTo" X="-2939.273" Y="3984.656" Z="23.7445" />
 							
 							<CustomBehavior File="Message" 
-											Text="We are in Honor Hold." 
+											Text="We are in Allerian Stronghold." 
 											LogColor="Fuchsia" />
 
 							<!-- Horde -->
 							<ElseIf Condition="Me.IsHorde">
 								<CustomBehavior File="Message" 
-												Text="Flying to Thrallmar." 
+												Text="Flying to Stonebreaker Hold." 
 												LogColor="Lime" />
 						
-								<!-- Fly to the hover point above the innkeep in Thrallmar -->
-								<CustomBehavior File="FlyTo" X="167.4147" Y="2645.637" Z="115.6988" />
+								<!-- Fly to the hover point above the innkeep in Stonebreaker Hold -->
+								<CustomBehavior File="FlyTo" X="-2633.392" Y="4387.538" Z="93.16135" />
 
 								<!-- Front doorway of the inn -->
-								<CustomBehavior File="FlyTo" X="178.6801" Y="2628.115" Z="87.12171" />
+								<CustomBehavior File="FlyTo" X="-2626.85" Y="4411.93" Z="34.70145" />
 								<CustomBehavior File="ForcedDismount" />
 
 								<!-- Run inside the inn -->
-								<RunTo X="190.1132" Y="2611.777" Z="87.28358" />
+								<RunTo X="-2621.966" Y="4448.498" Z="36.09211" />
 								
 								<!-- Set hearthstone -->
 								<CustomBehavior File="WaitTimer" 
@@ -405,19 +390,19 @@
 								<CustomBehavior File="WaitTimer" 
 												WaitTime="1000" />
 								<CustomBehavior File="SetHearthstone" 
-												MobId="16602"
-												X="190.8758" Y="2610.927" Z="87.28391" />
+												MobId="18957"
+												X="-2621.776" Y="4450.3" Z="36.09409" />
 								<CustomBehavior File="WaitTimer" 
 												WaitTime="1000" />
 							
 								<!-- Run outside of the inn -->
-								<RunTo X="178.6801" Y="2628.115" Z="87.12171" />
+								<RunTo X="-2626.85" Y="4411.93" Z="34.70145" />
 								
-								<!-- Fly to the hover point above the innkeep in Thrallmar -->
-								<CustomBehavior File="FlyTo" X="167.4147" Y="2645.637" Z="115.6988" />
+								<!-- Fly to the hover point above the innkeep in Stonebreaker Hold -->
+								<CustomBehavior File="FlyTo" X="-2633.392" Y="4387.538" Z="93.16135" />
 								
 								<CustomBehavior File="Message" 
-												Text="We are in Thrallmar." 
+												Text="We are in Stonebreaker Hold." 
 												LogColor="Fuchsia" />
 							</ElseIf> <!-- Horde -->
 						</If> <!-- Alliance -->
@@ -426,121 +411,98 @@
 				
 				<!-- Repair if necessary -->
 				<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					<If Condition="Me.IsAlliance">
+						<CustomBehavior File="FlyTo" X="-2963.77" Y="4017.751" Z="1.688854" />
+						<CustomBehavior File="ForcedDismount" />
+						
+						<RunTo X="-2974.844" Y="4026.831" Z="3.573579" />
+					</If>
+					
+					<If Condition="Me.IsHorde">
+						<CustomBehavior File="FlyTo" X="-2644.589" Y="4425.806" Z="36.9834" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>
 				
-					<!-- Fly to the appropriate vendors -->
-					<If Condition="(Me.HearthstoneAreaId == 3538) || (Me.HearthstoneAreaId == 3536)">
-						<CustomBehavior File="Message" 
-										Text="We need to repair. Flying to the vendor in Honor Hold or Thrallmar." 
-										LogColor="Cyan" />
-											
-						
-						<If Condition="Me.IsAlliance">
-							<CustomBehavior File="FlyTo" X="-709.473" Y="2621.555" Z="89.7064" />
-							<CustomBehavior File="ForcedDismount" />
-						</If>
-						
-						<If Condition="Me.IsHorde">
-							<CustomBehavior File="FlyTo" X="178.9605" Y="2627.524" Z="87.13406" />
-							<RunTo X="183.0796" Y="2606.334" Z="87.28376" />
-						</If>
-					
-						<CustomBehavior File="Message" 
-										Text="Our durability is less than 80%, we need to repair." 
-										LogColor="Fuchsia" />
-									
-						<CustomBehavior File="ForceSetVendor" 
-										DoMail="True" 
-										DoRepair="True" 
-										DoSell="False" 
-										DoTrain="False" />
-						
-						<SetVendor>
-							<Vendors>
-								<!-- Honor Hold -->
-								<Vendor Name="Humphry"
-										Entry="16823" 
-										Type="Repair" 
-										X="-717.3172" Y="2607.582" Z="91.01124" />
-										
-								<!-- Thrallmar -->
-								<Vendor Name="Reagan Mancuso" 
-										Entry="22225" 
-										Type="Repair" 
-										X="179.7871" Y="2605.4" Z="87.28391" />
-							</Vendors>
-						</SetVendor>
-					
-						<SetMailbox>
-							<Mailboxes>
-								<!-- Honor Hold -->
-								<Mailbox X="-706.4096" Y="2697.286" Z="94.34798" />
+					<CustomBehavior File="Message" 
+									Text="Our durability is less than 30%, we need to repair." 
+									LogColor="Fuchsia" />
 								
-								<!-- Thrallmar -->
-								<Mailbox X="171.8167" Y="2626.572" Z="87.07685" />
-							</Mailboxes>
-						</SetMailbox>
-						
-						<!-- We are done repairing -->
-						<If Condition="Me.DurabilityPercent &gt;= 0.8" >
-							<CustomBehavior File="Message" 
-											Text="Repairing complete." 
-											LogColor="Fuchsia" />
-											
-						</If> <!-- repaired -->
-						
-						<If Condition="Me.IsAlliance">
-						
-							<!-- Fly to the hover point above the innkeep in Honor Hold -->
-							<CustomBehavior File="FlyTo" X="-699.7803" Y="2654.424" Z="153.3082" />
+					<CustomBehavior File="ForceSetVendor" 
+									DoMail="False" 
+									DoRepair="True" 
+									DoSell="False" 
+									DoTrain="False" />
+					
+					<SetVendor>
+						<Vendors>
+							<!-- Allerian Stronghold -->
+							<Vendor Name="Cecil Meyers" 
+									Entry="19056" 
+									Type="Repair" 
+									X="-2978.951" Y="4033.115" Z="3.574028" />
 							
-						</If>
+							<!-- Stonebreaker Hold -->
+							<Vendor Name="Bar Talet" 
+									Entry="18962" 
+									Type="Repair" 
+									X="-2639.384" Y="4425.386" Z="36.68329" />
+						</Vendors>
+					</SetVendor>
+				
+					<SetMailbox>
+						<Mailboxes>
+							<!-- Allerian Stronghold -->
+							<Mailbox X="-2932.386" Y="4007.916" Z="-1.293741" />
+							
+							<!-- Stonebreaker Hold -->
+							<Mailbox X="-2617.452" Y="4414.927" Z="35.65971" />
+						</Mailboxes>
+					</SetMailbox>
 						
-						<If Condition="Me.IsHorde">
-						
-							<!-- Fly to the hover point above the innkeep in Thrallmar -->
-							<CustomBehavior File="FlyTo" X="167.4147" Y="2645.637" Z="115.6988" />
-							
-						</If>
-						
-							<CustomBehavior File="Message" 
-							Text="Flying to Hellfire Ramparts." 
-							LogColor="Lime" />
-							
-							<!-- Fly above hellfire ramparts -->
-							<CustomBehavior File="FlyTo" X="-334.9235" Y="3018.459" Z="37.46231" />
-
-							<!-- Instance timer check if we didn't repair -->
-							<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
-							
-							<!-- Land in the box -->
-							<CustomBehavior File="FlyTo" X="-363.436" Y="3078.43" Z="-15.00165" />
-							<CustomBehavior File="ForcedDismount" />
-							
-							<RunTo X="-363.436" Y="3078.43" Z="-15.00165" />
-													
-					</If>	<!-- If our hearthstone is set here, use it -->
-				</If> <!-- Repair if necessary -->
+					<!-- We are done repairing -->
+					<If Condition="Me.DurabilityPercent &gt;= 0.8" >
+						<CustomBehavior File="Message" 
+										Text="Repairing complete." 
+										LogColor="Fuchsia" />
+					</If> <!-- repaired -->
+					
+					<If Condition="Me.IsAlliance">
+						<!-- Outside blacksmith -->
+						<RunTo X="-2963.77" Y="4017.751" Z="1.688854" />
+					
+						<!-- Fly to the hover point above the innkeep in Allerian Stronghold -->
+						<CustomBehavior File="FlyTo" X="-2939.273" Y="3984.656" Z="23.7445" />
+					</If>
+					
+					<If Condition="Me.IsHorde">
+						<!-- Fly to the hover point above the innkeep in Stonebreaker Hold -->
+						<CustomBehavior File="FlyTo" X="-2633.392" Y="4387.538" Z="93.16135" />
+					</If>
+				</If> <!-- Repairing -->
 				
 				<CustomBehavior File="Message" 
-								Text="Flying to Hellfire Ramparts." 
+								Text="Flying to Auchenai Crypts." 
 								LogColor="Lime" />
-								
-				<!-- Fly above hellfire ramparts -->
-				<CustomBehavior File="FlyTo" X="-334.9235" Y="3018.459" Z="37.46231" />
+				
+				<!-- Fly outside of Auchenai Crypts -->
+				<CustomBehavior File="FlyTo" X="-3363.793" Y="4913.244" Z="53.08671" />
 
-				<!-- Land in the box -->
-				<CustomBehavior File="FlyTo" X="-363.436" Y="3078.43" Z="-15.00165" />
+				<!-- Fly down -->
+				<CustomBehavior File="FlyTo" X="-3361.095" Y="5032.998" Z="-73.79984" />
+
+				<!-- Fly into box -->
+				<CustomBehavior File="FlyTo" X="-3361.8" Y="5209.2" Z="-101.049" />
 				<CustomBehavior File="ForcedDismount" />
 				
-				<RunTo X="-363.436" Y="3078.43" Z="-15.00165" />
-			</If> <!-- Outlands -->
+				<RunTo X="-3361.8" Y="5209.2" Z="-101.049" />
+			</If> <!-- Outland -->
 			
 			<!-- In box -->
-			<If Condition="Me.X &gt; -400 &amp;&amp; Me.X &lt; -300 &amp;&amp; Me.Y &gt; 3000 &amp;&amp; Me.Y &lt; 3100" >
+			<If Condition="Me.X &gt; -3380 &amp;&amp; Me.X &lt; -3340 &amp;&amp; Me.Y &gt; 5190 &amp;&amp; Me.Y &lt; 5230" >
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][Solstice][65-70]_hellfire-ramparts" />
-			</If> <!-- In box -->
-		</If> <!-- Booster -->
+								ProfileName="..\[QO-N][Solstice][72-74]_auchenai-crypts" />
+			</If> <!-- In box -->				
+		</If> <!-- Level check -->
 	</QuestOrder>
 </HBProfile>
 
