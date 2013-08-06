@@ -46,7 +46,7 @@
 		<ClearMailbox />
 
 		<!-- Level check -->
-		<If Condition="Me.Level &gt;= 58">
+		<If Condition="Me.Level &gt;= 65">
 			<CustomBehavior File="Message" 
 							Text="You meet the level requirement to run this profile." 
 							LogColor="Fuchsia" />
@@ -165,12 +165,13 @@
 									LogColor="Fuchsia" />
 		
 					<!-- If we are below level 66, we will run LBRS -->				
-					<If Condition="Me.Level &lt; 68">
+					<If Condition="Me.Level &lt; 66">
 
 						<!-- Profile message - We are below level 66, we will run LBRS -->
 						<CustomBehavior File="Message" 
 										Text="We are below level 66, we will run LBRS." 
 										LogColor="Fuchsia" />
+										
 							<!-- Clear entrance of BRS to entrance of UBRS -->
 							<RunTo X="80.26455" Y="-258.1181" Z="60.70303" />
 							<RunTo X="89.87984" Y="-276.167" Z="60.61135" />					
@@ -232,7 +233,7 @@
 							<!-- Single ogre after entering Mok Doom -->
 							<RunTo X="-25.46938" Y="-348.4747" Z="31.61681" />
 							
-							<!-- Highlord Omokk - skip this kevel 59 boss and two level 58 flunkies -->
+							<!-- Highlord Omokk - skip this level 59 boss and two level 58 flunkies -->
 						<!--	<RunTo X="-23.86847" Y="-303.5255" Z="31.61827" />	-->
 							
 							<!-- XXXXXXXXXXXXXXXXX -->
@@ -248,14 +249,8 @@
 							<!-- XXXXXXXXXXXXXXXXX -->
 							
 							<!-- XXXXXXXXXXXXXXXXX -->
-							
-							<!-- XXXXXXXXXXXXXXXXX -->
-							
-							<!-- XXXXXXXXXXXXXXXXX -->
-							
-							<!-- XXXXXXXXXXXXXXXXX -->
 
-					</If>
+					</If>	<!-- If we are below level 66, we will run LBRS -->
 					
 					<!-- If we are level 66 or above, we will run UBRS -->				
 					<If Condition="Me.Level &gt;= 66">				
@@ -265,39 +260,169 @@
 										Text="We are level 66 or above, we will run UBRS." 
 										LogColor="Fuchsia" />
 					
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Clear entrance of BRS to entrance of UBRS -->
+							<RunTo X="126.3199" Y="-318.8307" Z="70.95536" />
+							<RunTo X="138.1454" Y="-319.4074" Z="70.95636" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Clear first room on the right -->
+							<RunTo X="125.2618" Y="-340.5648" Z="70.93581" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Clear the first room on the left -->
+							<RunTo X="124.9113" Y="-298.0913" Z="70.86601" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Clear the second room on the left -->
+							<RunTo X="155.3296" Y="-285.8724" Z="70.94311" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Clear the second room on the right -->
+							<RunTo X="155.2968" Y="-353.2222" Z="70.84631" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Clear the third room on the right -->
+							<RunTo X="215.1365" Y="-334.6961" Z="76.86909" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Clear the fourth room on the right -->
+							<RunTo X="200.5635" Y="-299.9356" Z="76.94067" />
+							<RunTo X="228.5733" Y="-301.1253" Z="76.93377" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Clear the third room on the left -->
+							<RunTo X="192.686" Y="-258.3676" Z="76.94982" />
+														
+							<!-- Run to the Blackrock Alter -->
+							<RunTo X="144.3794" Y="-286.4683" Z="91.54738" />
+						
+							<!-- Interact with the Blackrock alter -->
+							<CustomBehavior File="InteractWith" 
+											MobId="175706" 
+											ObjectType="Gameobject" 
+											Range="55.1" NumOfTimes="1" 
+											WaitTime="12000" 
+											X="144.445023" Y="-280.941467" Z="91.54761" />
+											
+							<!-- Run in front of the Blackrock Alter -->
+							<RunTo X="144.2224" Y="-273.2664" Z="91.55029" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Wait timer - wait 5 second to make sure we got aggro -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="5000" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Run to the Blackrock Alter -->
+							<RunTo X="144.3794" Y="-286.4683" Z="91.54738" />
+						
+							<!-- Interact with the Blackrock alter -->
+							<CustomBehavior File="InteractWith" 
+											MobId="175706" 
+											ObjectType="Gameobject" 
+											Range="55.1" NumOfTimes="1" 
+											WaitTime="12000" 
+											X="144.445023" Y="-280.941467" Z="91.54761" />
+											
+							<!-- Run in front of the Blackrock Alter -->
+							<RunTo X="144.2224" Y="-273.2664" Z="91.55029" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Wait timer - wait 5 second to make sure we got aggro -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="5000" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Run to Pyroguard Emberseer -->
+							<RunTo X="144.4081" Y="-260.0516" Z="96.32333" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Wait timer - wait 80 second to make sure we got boss aggro -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="80000" />
+											
+							<!-- Run into the Jenkins room -->
+							<RunTo X="97.65797" Y="-262.0821" Z="91.45261" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Run to the top of the stairs -->
+							<RunTo X="99.30752" Y="-240.4903" Z="106.4356" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
+							<!-- Run to the end of the balcony -->
+							<RunTo X="104.0359" Y="-257.2943" Z="106.4356" />
+							<RunTo X="104.324" Y="-324.6882" Z="106.4356" />
 							
-							<!-- XXXXXXXXXXXXXXXXX -->
-					
-					</If>
+							<!-- Pull the Hall of Blackhand door guards -->
+							<RunTo X="121.5492" Y="-312.0264" Z="110.2447" />
+							
+							<!-- Pull the first group on the left entering Hall of Blackhand -->
+							<RunTo X="139.4358" Y="-304.3484" Z="110.9678" />
+							
+							<!-- Pull the first group on the right entering Hall of Blackhand -->
+							<RunTo X="139.8645" Y="-339.0653" Z="110.9538" />
+							
+							<!-- Clear the way to Blackrock Stadium  -->
+							
+							<!-- Top of the stairs -->
+							<RunTo X="138.5921" Y="-366.0189" Z="116.8412" />
+							
+							<!-- First fire before the stadioum -->
+							<RunTo X="93.95695" Y="-366.4309" Z="116.9508" />
+							
+							<!-- Second fire before the stadioum -->
+							<RunTo X="92.70444" Y="-427.6818" Z="110.9227" />
+							
+							<!-- Move into Blackrock Stadium -->
+							<RunTo X="117.1818" Y="-420.4112" Z="110.873" />
+							
+							<!-- GOOGE to kill XXX -->
+							<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+											EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="10429"
+											EventX="181.8481" EventY="-420.2722" EventZ="110.4723"
+											MoveOutOfGroundEffectAuraId1="111111"
+											MoveAwayFromMobCastingSpellId1="111111"
+											MoveAwayFromMobWithAuraId1="111111">
+								<Safespots>
+									<Hotspot X="181.8481" Y="-420.2722" Z="110.4723" />
+								</Safespots>
+							</CustomBehavior>
+							
+							<!-- Run to the exit of the Blackrock Stadium -->
+							<RunTo X="110.6023" Y="-420.3399" Z="110.9068" />
+							
+							<!-- Run to the fire after the Blackrock Stadium -->
+							<RunTo X="92.50058" Y="-472.9952" Z="116.8424" />
+							
+							<!-- Run to the Furnace entrance -->
+							<RunTo X="51.9103" Y="-474.8492" Z="110.9227" />
+							
+							<!-- Pull the left group by the fire in the Furnace -->
+							<RunTo X="44.76465" Y="-491.2902" Z="110.933" />
+							
+							<!-- Pull the back left group by the fire in the Furnace -->
+							<RunTo X="12.1089" Y="-491.0417" Z="110.9417" />
+							
+							<!-- Pull the right-hand group in the Furnace -->
+							<RunTo X="8.011345" Y="-458.7841" Z="110.9346" />
+							
+							<!-- Pull Beauty -->
+							
+							
+							<!-- XXX -->
+							
+							
+							<!-- XXX -->
+							
+							
+							<!-- XXX -->
+							
+							
+							<!-- XXX -->
+							
+							
+							<!-- XXX -->
+							
+							
+							<!-- XXX -->
+							
+							
+							<!-- XXX -->
+							
+							
+							<!-- XXX -->
+							
+							
+							<!-- XXX -->
+							
+							
+					</If>	<!-- If we are level 66 or above, we will run UBRS -->
 
 					<!-- Run to the exit -->
 					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />

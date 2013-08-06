@@ -374,28 +374,28 @@
 						<!-- If we are on the second floor, continue -->
 						<If Condition="Me.Z &gt; 75" >
 							
-						<!-- Clear the second floor -->
-						<RunTo X="-1261.473" Y="1595.095" Z="92.13603" />
-						<RunTo X="-1279.512" Y="1600.849" Z="91.77261" />
-						<RunTo X="-1298.048" Y="1586.68" Z="91.77947" />
-						<RunTo X="-1316.719" Y="1617.893" Z="91.74869" />
-						<RunTo X="-1302.461" Y="1636.845" Z="91.74632" />
-						<RunTo X="-1275.223" Y="1626.908" Z="91.69825" />
-						<RunTo X="-1168.113" Y="1698.712" Z="91.50394" />
+							<!-- Clear the second floor -->
+							<RunTo X="-1261.473" Y="1595.095" Z="92.13603" />
+							<RunTo X="-1279.512" Y="1600.849" Z="91.77261" />
+							<RunTo X="-1298.048" Y="1586.68" Z="91.77947" />
+							<RunTo X="-1316.719" Y="1617.893" Z="91.74869" />
+							<RunTo X="-1302.461" Y="1636.845" Z="91.74632" />
+							<RunTo X="-1275.223" Y="1626.908" Z="91.69825" />
+							<RunTo X="-1168.113" Y="1698.712" Z="91.50394" />
+								
+							<!-- Kill the last two mobs on the ledge -->	
+							<RunTo X="-1338.467" Y="1675.37" Z="91.88944" />	
+								
+							<!-- Run to the ledge -->
+							<RunTo X="-1313.274" Y="1650.739" Z="91.67419" />
+							<RunTo X="-1317.109" Y="1649.491" Z="91.66763" />
 							
-						<!-- Kill the last two mobs on the ledge -->	
-						<RunTo X="-1338.467" Y="1675.37" Z="91.88944" />	
+							<!-- Jump off the ledge -->
+							<CustomBehavior File="Misc\JumpForward" />
 							
-						<!-- Run to the ledge -->
-						<RunTo X="-1313.274" Y="1650.739" Z="91.67419" />
-						<RunTo X="-1317.109" Y="1649.491" Z="91.66763" />
-						
-						<!-- Jump off the ledge -->
-						<CustomBehavior File="Misc\JumpForward" />
-						
-						<!-- Wait timer - wait 1 second --> -->
-						<CustomBehavior File="WaitTimer" 
-												WaitTime="1000" />
+							<!-- Wait timer - wait 1 second --> -->
+							<CustomBehavior File="WaitTimer" 
+													WaitTime="1000" />
 						
 						</If>
 					</If>
@@ -406,7 +406,7 @@
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
 									MinLevel="70" 
-									ProfileName="[QO-N][Solstice][70-73]_blood-furnace.xml"  />
+									ProfileName="[QO-N][Solstice][70-72]_mana-tombs.xml"  />
 									
 				</If> <!-- If we are inside Hellfire Ramparts -->
 				
