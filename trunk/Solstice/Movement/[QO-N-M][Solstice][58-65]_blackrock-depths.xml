@@ -262,7 +262,7 @@
 									LogColor="Cyan" />
 					
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="..\[QO-N][42-48]_blackrock-depths" />
+									ProfileName="..\[QO-N][Solstice][58-65]_blackrock-depths" />
 				</If> <!-- Load profile -->
 			</If> <!-- Eastern Kingdoms -->
 		</If> <!-- Level check -->
