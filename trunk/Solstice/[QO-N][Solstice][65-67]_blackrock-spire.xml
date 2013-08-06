@@ -234,23 +234,6 @@
 							<!-- Single ogre after entering Mok Doom -->
 							<RunTo X="-25.46938" Y="-348.4747" Z="31.61681" />
 							
-							<!-- Highlord Omokk - skip this level 59 boss and two level 58 flunkies -->
-						<!--	<RunTo X="-23.86847" Y="-303.5255" Z="31.61827" />	-->
-							
-							<!-- XXXXXXXXXXXXXXXXX -->
-							
-							<!-- XXXXXXXXXXXXXXXXX -->
-							
-							<!-- XXXXXXXXXXXXXXXXX -->
-							
-							<!-- XXXXXXXXXXXXXXXXX -->
-							
-							<!-- XXXXXXXXXXXXXXXXX -->
-							
-							<!-- XXXXXXXXXXXXXXXXX -->
-							
-							<!-- XXXXXXXXXXXXXXXXX -->
-
 					</If>	<!-- If we are below level 66, we will run LBRS -->
 					
 					<!-- If we are level 66 or above, we will run UBRS -->				
@@ -403,34 +386,72 @@
 							<RunTo X="8.011345" Y="-458.7841" Z="110.9346" />
 							
 							<!-- Pull Beauty -->
+							<RunTo X="25.38366" Y="-525.7129" Z="110.9419" />
 							
+							<CustomBehavior File="RunLikeHell"
+									UseCTM="true"
+									NumOfTimes="1"
+									AllowCombat="false">	
+								<Hotspot X="52.59668" Y="-537.2087" Z="110.9362" />
+								<Hotspot X="82.84416" Y="-517.7784" Z="114.0472" />
+							</CustomBehavior>
+							<RunTo X="82.84416" Y="-517.7784" Z="114.0472" />
 							
-							<!-- XXX -->
+							<!-- Run to the door exiting the Furnace -->
+							<RunTo X="34.07322" Y="-438.6306" Z="110.9631" />
 							
+							<!-- RunLikeHell to pull the door guards into Spire Throne, to avoid getting knocked off -->
+							<CustomBehavior File="RunLikeHell"
+									UseCTM="true"
+									NumOfTimes="1"
+									AllowCombat="false">	
+
+								<Hotspot X="33.87299" Y="-419.9698" Z="110.7003" />
+								<Hotspot X="33.39764" Y="-382.6583" Z="110.6763" />
+								<Hotspot X="33.17713" Y="-357.7313" Z="110.8591" />
+							</CustomBehavior>
+							<RunTo X="33.17713" Y="-357.7313" Z="110.8591" />
 							
-							<!-- XXX -->
+							<!-- Pull the first group  in Spire Throne -->
+							<RunTo X="38.29306" Y="-333.565" Z="110.9435" />
 							
+							<!-- Pull the partol -->
+							<RunTo X="21.72935" Y="-320.1906" Z="110.9435" />
+							<RunTo X="-0.1099372" Y="-311.6035" Z="110.9433" />
 							
-							<!-- XXX -->
+							<!-- Wait timer - wait 120 second to make sure we got aggro -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="60000" />
 							
+							<!-- Pull the second group on the left of Spire Throne -->
+							<RunTo X="-6.91998" Y="-340.9393" Z="110.942" />
 							
-							<!-- XXX -->
+							<!-- Pull the back left group in Spire Thrown -->
+							<RunTo X="-4.956197" Y="-264.057" Z="110.942" />
 							
+
 							
-							<!-- XXX -->
+							<!-- Run to the door exiting Spire Throne -->
+							<RunTo X="-0.421639" Y="-311.8678" Z="110.9431" />
+							<RunTo X="33.47183" Y="-378.9893" Z="110.6954" />
 							
+							<!-- Run to the jump location -->
+							<RunTo X="30.92096" Y="-407.6436" Z="110.6936" />
+							<RunTo X="34.60405" Y="-407.2081" Z="110.7096" />
 							
-							<!-- XXX -->
+							<!-- Jump off the ledge -->
+							<CustomBehavior File="Misc\JumpForward" />
 							
+							<!-- Run to second jump location -->
+							<RunTo X="72.3917" Y="-407.1803" Z="64.34776" />
+							<RunTo X="60.7928" Y="-403.1136" Z="64.34776" />
 							
-							<!-- XXX -->
+							<!-- Jump off the ledge -->
+							<CustomBehavior File="Misc\JumpForward" />
 							
-							
-							<!-- XXX -->
-							
-							
-							<!-- XXX -->
-							
+							<!-- Run to LBRS exit -->
+							<RunTo X="36.7063" Y="-383.8033" Z="48.64941" />
+							<RunTo X="36.80029" Y="-357.2883" Z="48.6636" />
 							
 					</If>	<!-- If we are level 66 or above, we will run UBRS -->
 

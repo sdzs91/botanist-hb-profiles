@@ -283,7 +283,7 @@
 			<!-- In box -->
 			<If Condition="Me.X &gt; -3400 &amp;&amp; Me.X &lt; -3300 &amp;&amp; Me.Y &gt; 4600 &amp;&amp; Me.Y &lt; 4700" >
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][Solstice][74-76]_sethekk-halls." />
+								ProfileName="..\[QO-N][Solstice][74-76]_sethekk-halls" />
 			</If> <!-- In box -->				
 		</If> <!-- Level check -->
 	</QuestOrder>
