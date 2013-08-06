@@ -235,8 +235,6 @@
 					<!-- Pull the second group on the right -->
 					<RunTo X="-1253.4" Y="1591.96" Z="68.55814" />
 					
-					
-					
 					<!-- Pull third group on the left after the bridge  -->
 					<RunTo X="-1275.092" Y="1541.744" Z="68.56787" />
 					
@@ -249,68 +247,55 @@
 					<!-- Pull the barrier group on the left -->
 					<RunTo X="-1234.819" Y="1476.051" Z="68.55984" />
 					
-					<!-- We are below level 66, avoiding Watchkeeper Gargolmar -->		
-					<If Condition="Me.Level &lt;= 66" > 
-					
-						<!-- Profile message - We are below level 68 and can't kill bosses, avoiding Watchkeeper Gargolmar -->
-							<CustomBehavior File="Message" 
-										Text="We are below level 68 and can't kill bosses, avoiding Watchkeeper Gargolmar."  
-										LogColor="Fuchsia" />		
-															
-							<!-- WFP to avoid Watchkeeper Gargolmar - move to brazier -->	
-							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
-											AvoidMobId="17306" 
-											AvoidDistance="65"
-											X="-1231.222" Y="1474.324" Z="68.56033"  >
-							<FollowPath Strategy="StalkMobAtAvoidDistance" 
-										DismissPet="true" 
-										EgressDistance="45" >
-								  <Hotspot X="-1212.488" Y="1443.458" Z="68.57121" />
-							  </FollowPath>
-						  </CustomBehavior>
-								
-						<!-- Move back to the bridge -->	
-						<RunTo X="-1283.821" Y="1503.144" Z="68.57864" />
-						<RunTo X="-1292.068" Y="1535.329" Z="68.58967" />
-						<RunTo X="-1251.764" Y="1579.988" Z="68.51157" />
-						<RunTo X="-1245.879" Y="1610.437" Z="68.53096" />
-						<RunTo X="-1266.327" Y="1662.983" Z="68.7224" />
-						<RunTo X="-1285.593" Y="1672.292" Z="68.75599" />
-	
-					</If>
-					
-					<!-- If we are 68 or greater, we can kill bosses -->		
+					<!-- If we are 67 or greater, we can kill bosses -->		
 					<If Condition="Me.Level &gt;= 67" >
 					
 						<!-- Profile message - We are level 67 or above, we can kill bosses -->
 						<CustomBehavior File="Message" 
 									Text="We are level 67 or above, we can kill bosses."  
 									LogColor="Fuchsia" />
-									
-						<!-- WFP to avoid Watchkeeper Gargolmar - move to brazier -->	
-							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
-											AvoidMobId="17306" 
-											AvoidDistance="65"
-											X="-1231.222" Y="1474.324" Z="68.56033"  >
-							<FollowPath Strategy="StalkMobAtAvoidDistance" 
-										DismissPet="true" 
-										EgressDistance="50" >
-								  <Hotspot X="-1212.488" Y="1443.458" Z="68.57121" />
-								  <Hotspot X="-1179.411" Y="1444.544" Z="68.42729" />
-							</FollowPath>
-						  </CustomBehavior>			
 						
-						<!-- Forces kill of Watchkeeper Gargolmar -->
-						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="17306"
-										EventX="-1189.392" EventY="1462.559" EventZ="68.45417"
-										MoveOutOfGroundEffectAuraId1="111111"
-										MoveAwayFromMobCastingSpellId1="111111"
-										MoveAwayFromMobWithAuraId1="111111">
-							<Safespots>
-								<Hotspot X="-1189.392" Y="1462.559" Z="68.45417" />
-							</Safespots>
+						<!-- Run to the brazier -->
+						<RunTo X="-1244.885" Y="1449.424" Z="68.59712" />						
+									
+						<!-- RunLikeHell to the first group on the right -->			
+						<CustomBehavior File="RunLikeHell"
+									UseCTM="true"
+									NumOfTimes="1"
+									AllowCombat="false">	
+							<Hotspot X="-1241.3" Y="1450.121" Z="68.59379" />
+							<Hotspot X="-1244.885" Y="1449.424" Z="68.59712" />
+							<Hotspot X="-1236.4" Y="1448.363" Z="68.59439" />
+							<Hotspot X="-1222.256" Y="1434.997" Z="68.60104" />
+							<Hotspot X="-1219.069" Y="1422.922" Z="68.61312" />
+							<Hotspot X="-1211.905" Y="1419.486" Z="68.60773" />
+							<Hotspot X="-1202.557" Y="1431.865" Z="68.54282" />
+							<Hotspot X="-1207.296" Y="1425.458" Z="68.57442" />
 						</CustomBehavior>
+						<RunTo X="-1207.296" Y="1425.458" Z="68.57442" />		
+									
+						<!-- Run to the barricade -->			
+						<RunTo X="-1201.305" Y="1414.618" Z="68.58919" />			
+									
+						<!-- Run through the barricade -->
+						<RunTo X="-1174.191" Y="1421.818" Z="68.43805" />
+						
+						<!-- Pull the group after the barricade -->			
+						<CustomBehavior File="RunLikeHell"
+									UseCTM="true"
+									NumOfTimes="1"
+									AllowCombat="false">	
+							<Hotspot X="-1173.777" Y="1435.133" Z="68.411" />
+							<Hotspot X="-1173.778" Y="1424.77" Z="68.41865" />
+						</CustomBehavior>
+						<RunTo X="-1173.778" Y="1424.77" Z="68.41865" />
+
+						<!-- Run To the center and pull Watchkeeper Gargolmar -->
+						<RunTo X="-1186.259" Y="1453.539" Z="68.44234" />
+						
+						<!-- Wait timer - wait 45 second to aggro Watchkeeper Gargolmar -->
+						<CustomBehavior File="WaitTimer" 
+												WaitTime="45000" />
 						
 						<!-- Run to dogs after Watchkeeper Gargolmar -->
 						<RunTo X="-1176.596" Y="1446.943" Z="68.42535" />
@@ -349,7 +334,7 @@
 							<!-- Jump off the ledge -->
 							<CustomBehavior File="Misc\JumpForward" />
 							
-							<!-- Wait timer - wait 1 second --> -->
+							<!-- Wait timer - wait 1 second -->
 							<CustomBehavior File="WaitTimer" 
 													WaitTime="1000" />
 						

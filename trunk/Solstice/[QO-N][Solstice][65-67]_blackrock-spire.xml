@@ -130,8 +130,8 @@
 						<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
 
 						<!-- Run back in the Blackrock Spire portal -->
-						<CustomBehavior File="Misc\InInstance" X="-7523.075" Y="-1245.195" Z="285.7318" />
-										
+						<CustomBehavior File="Misc\InInstance" X="-7522.451" Y="-1233.457" Z="285.7389" />
+																
 						<CustomBehavior File="Message" 
 										Text="Waiting for the dungeon to load." 
 										LogColor="Fuchsia" />
