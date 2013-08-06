@@ -419,18 +419,16 @@
 							<RunTo X="21.72935" Y="-320.1906" Z="110.9435" />
 							<RunTo X="-0.1099372" Y="-311.6035" Z="110.9433" />
 							
-							<!-- Wait timer - wait 120 second to make sure we got aggro -->
+							<!-- Wait timer - wait 40 second to make sure we got aggro -->
 							<CustomBehavior File="WaitTimer" 
-											WaitTime="60000" />
+											WaitTime="40000" />
 							
 							<!-- Pull the second group on the left of Spire Throne -->
 							<RunTo X="-6.91998" Y="-340.9393" Z="110.942" />
 							
 							<!-- Pull the back left group in Spire Thrown -->
 							<RunTo X="-4.956197" Y="-264.057" Z="110.942" />
-							
-
-							
+						
 							<!-- Run to the door exiting Spire Throne -->
 							<RunTo X="-0.421639" Y="-311.8678" Z="110.9431" />
 							<RunTo X="33.47183" Y="-378.9893" Z="110.6954" />
