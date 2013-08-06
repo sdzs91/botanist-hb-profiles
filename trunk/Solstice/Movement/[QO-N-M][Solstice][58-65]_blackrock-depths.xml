@@ -241,7 +241,7 @@
 					</If> <!-- Repair if necessary -->
 														
 					<CustomBehavior File="Message" 
-									Text="Moving to Blackrock Spire." 
+									Text="Moving to Blackrock Depths." 
 									LogColor="Cyan" />
 							
 					<!-- Move to the chain -->

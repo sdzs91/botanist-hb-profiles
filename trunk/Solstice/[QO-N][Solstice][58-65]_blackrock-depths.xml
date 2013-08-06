@@ -204,21 +204,27 @@
 									X="560.5311"
 									Y="-51.815918"
 									Z="-60.09396" />
-									
+					
+					<!-- Clear East Garrison door to the locked West Garrison door -->
+					<RunTo X="566.5451" Y="-56.07999" Z="-60.01884" />
+					<RunTo X="591.2901" Y="-53.97068" Z="-60.04206" />
+					<RunTo X="610.876" Y="-41.21051" Z="-60.05725" />
+					<RunTo X="627.3439" Y="-61.75054" Z="-60.05839" />
+					<RunTo X="595.9269" Y="-85.40606" Z="-45.45787" />
+					<RunTo X="568.4818" Y="-80.1502" Z="-45.02098" />
+					<RunTo X="610.506" Y="-97.71649" Z="-45.86585" />
+					<RunTo X="630.5255" Y="-108.3571" Z="-46.04316" />
+					<RunTo X="666.2721" Y="-139.6876" Z="-46.23346" />
+					<RunTo X="691.8231" Y="-130.5651" Z="-46.23346" />
+					
+					<!-- Clear locked West Garrison door to the Shrine of Thaurissan -->
+					<RunTo X="595.7323" Y="-125.2366" Z="-38.46785" />
+					<CustomBehavior File="NoCombatMoveTo" X="595.8028" Y="-253.5177" Z="-38.46038" /> 
+					<RunTo X="596.6684" Y="-282.4213" Z="-43.10127" />
+
 					
 					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
+					<!-- Clear the Shrine of Thaurissan  to -->
 					
 					
 					
@@ -306,7 +312,7 @@
 
 							<!-- Profile message - Moving to Blackrock Depths -->
 							<CustomBehavior File="Message" 
-							Text="Moving to Blackrock Spire." 
+							Text="Moving to Blackrock Depths." 
 							LogColor="Lime" />
 							
 							<!-- Move to the chain -->

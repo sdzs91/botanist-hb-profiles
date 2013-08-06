@@ -44,7 +44,7 @@
 		<ClearMailbox />
 
 		<!-- Level check -->
-		<If Condition="Me.Level &gt;= 65">
+		<If Condition="Me.Level &gt;= 67">
 			<CustomBehavior File="Message" 
 							Text="You meet the level requirement to run this profile." 
 							LogColor="Fuchsia" />
@@ -222,24 +222,8 @@
 					<CustomBehavior File="WaitTimer" 
 										WaitTime="5000" />
 					
-					<!-- Run back to the end of the bridge -->
-					<RunTo X="-1298.709" Y="1672.082" Z="66.79382" />
-					
-					<!-- WFP to avoid Watchkeeper Gargolmar - move to brazier -->	
-					<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
-									AvoidMobId="17264" 
-									AvoidDistance="40"
-									X="-1276.865" Y="1663.459" Z="68.91386" > <!-- Where I want to go -->
-					<FollowPath Strategy="WaitForAvoidDistance" 
-								DismissPet="true" 
-								EgressDistance="25" >
-						  <Hotspot X="-1296.538" Y="1674.081" Z="67.23779" /> <!-- Stay here until I can go there -->
-					</FollowPath>
-				  </CustomBehavior>
-										
-					<!-- Wait timer wait 5 seconds to aggro the mobs -->
-					<CustomBehavior File="WaitTimer" 
-										WaitTime="70000" />
+					<!-- Pull the first group on the right after the bridge -->
+					<RunTo X="-1273.983" Y="1656.789" Z="69.07109" />
 																								
 					<!-- Pull the second group on the left after the bridge -->
 					<CustomBehavior File="RunLikeHell" 

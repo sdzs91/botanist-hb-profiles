@@ -277,7 +277,7 @@
 									LogColor="Cyan" />
 					
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="..\[QO-N][Solstice][58-67]_blackrock-spire" />
+									ProfileName="..\[QO-N][Solstice][65-67]_blackrock-spire" />
 				</If> <!-- Load profile -->
 			</If> <!-- Eastern Kingdoms -->
 		</If> <!-- Level check -->
