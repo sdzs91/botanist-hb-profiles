@@ -26,6 +26,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="-1292.035" Y="1645.047" Z="91.70405" Radius="1" />
 	</Blackspots>
 
 	<Mailboxes>
