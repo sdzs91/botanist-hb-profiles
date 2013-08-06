@@ -450,7 +450,7 @@
 							</SetMailbox>
 						
 							<!-- We are done repairing -->
-							<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &lt;= 0.3)" >
+							<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
 								<CustomBehavior File="Message" 
 												Text="Repairing complete." 
 												LogColor="Fuchsia" />

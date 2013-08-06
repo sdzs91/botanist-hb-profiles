@@ -1,0 +1,589 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][Solstice][67-70]_hellfire-ramparts</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>	
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+
+	<Factions></Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+		<!-- Level check -->
+		<If Condition="Me.Level &gt;= 65">
+			<CustomBehavior File="Message" 
+							Text="You meet the level requirement to run this profile." 
+							LogColor="Fuchsia" />
+		
+		 	<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							FindVendorsAutomatically="False"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootChests="False"
+							LootMobs="True"
+							LootRadius="15"
+							MountDistance="75"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							PullDistance="10"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseFlightPaths="True"
+							UseMount="True" 
+							UseRandomMount="False" />
+							
+			<!-- Infinite loop -->
+			<While Condition="true" >
+				<!-- BRS -->
+				<If Condition="Me.ZoneId == 1583">
+					<If Condition="Me.HearthstoneAreaId == 5628" >
+						<CustomBehavior File="Message" 
+										Text="Our Innkeeper is set at Iron Summit." 
+										LogColor="Cyan" />
+										
+						<!-- Have hearthstone -->
+						<If Condition="HasItem(6948)">
+							<CustomBehavior File="Message" 
+											Text="Using Hearthstone." 
+											LogColor="Lime" />
+											
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(6948)" 
+											WaitTime="1000" />
+											
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />				
+						</If> <!-- Have hearthstone -->
+					
+						<!-- Have Innkeeper's Daughter -->
+						<If Condition="HasItem(64488)">
+							<CustomBehavior File="Message" 
+											Text="Using Innkeeper's Daughter." 
+											LogColor="Lime" />
+												
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(64488)" 
+											WaitTime="1000" />
+								
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+						</If> <!-- Have Innkeeper's Daughter -->
+					</If> <!-- Hearth check -->
+				</If> <!-- BRS -->		
+			
+				<!-- If we are inside -->
+				<If Condition="Me.ZoneId == 3562">
+					<CustomBehavior File="Message" 
+									Text="Hellfire Ramparts detected. Running out."
+									LogColor="Fuchsia" />
+									
+					<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="-1358.403" Y="1629.539" Z="68.55495" />
+					
+					<!-- Make sure we run to the right spot outside the portal -->
+					<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
+				</If> <!-- HR -->
+				
+				<!-- If we are not in the box, load the movement profile -->
+				<If Condition="Me.X &lt; -400 || Me.X &gt; -300 || Me.Y &lt; 3000 || Me.Y &gt; 3100" >
+					<CustomBehavior File="Message" 
+									Text="Distance from portal is not within our proximity, initializing movement to get there."
+									LogColor="Fuchsia" />	
+									
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\[QO-N-M][Solstice][67-70]_hellfire-ramparts" />
+				</If> <!-- Not in box -->
+				
+				<!-- If we are in the box -->
+				<If Condition="Me.X &gt; -400 &amp;&amp; Me.X &lt; -300 &amp;&amp; Me.Y &gt; 3000 &amp;&amp; Me.Y &lt; 3100" >
+					<CustomBehavior File="Message" 
+									Text="Portal detected nearby."
+									LogColor="Fuchsia" />	
+
+					<!-- Resetting the instance -->
+					<CustomBehavior File="Message" 
+									Text="Resetting instance." 
+									LogColor="Fuchsia" />
+					
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />	
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
+					
+					<CustomBehavior File="Message" 
+									Text="Instance reset." 
+									LogColor="Fuchsia" />
+						
+					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
+					<While Condition="Me.ZoneId != 3562">
+						<!-- Make sure we run to the right spot outside the portal -->
+						<RunTo X="-363.436" Y="3078.43" Z="-15.00165" />
+
+						<!-- Run back in the portal -->
+						<CustomBehavior File="Misc\InInstance" X="-364.514" Y="3088.31" Z="-15.02338" />
+										
+						<CustomBehavior File="Message" 
+										Text="Waiting for the dungeon to load." 
+										LogColor="Fuchsia" />
+									
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" 
+										VariantTime="20000" />
+										
+						<!-- If we still aren't in, we're locked out -->
+						<If Condition="Me.ZoneId != 3562">
+							<CustomBehavior File="Message" 
+											Text="We are locked out. Waiting and trying again." 
+											LogColor="Fuchsia" />
+						</If> <!-- Locked -->
+					</While> <!-- While we aren't in the instance -->
+				</If> <!-- In box -->
+				
+				<!-- If we are inside Hellfire Ramparts and have checked our reset -->
+				<If Condition="Me.ZoneId == 3562">
+		
+					<!-- Entrance -->
+					<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+					
+					<!-- If we are below level 68, we will clear to the first boss, Watchkeeper Gargolmar, then run out and reset -->
+					<If Condition="Me.Level &lt; 68" >
+					
+						<!-- Profile message - If we are below level 68, we will clear to the first boss, Watchkeeper Gargolmar, then run out and reset -->
+						<CustomBehavior File="Message" 
+										Text="We are below level 68, we will clear to the first boss, Watchkeeper Gargolmar, then run out and reset." 
+										LogColor="Fuchsia" />
+					</If>
+					
+					<!-- We are above level 68, we will kill Watchkeeper Gargolmar, and all the trash on the second floor, then run out and reset -->
+					<If Condition="Me.Level &gt;= 68" >
+					
+						<!-- Profile message - We are above level 68, we will kill Watchkeeper Gargolmar, and all the trash on the second floor, then run out and reset -->
+						<CustomBehavior File="Message" 
+										Text="We are above level 68, we will kill Watchkeeper Gargolmar, and all the trash on the second floor, then run out and reset." 
+										LogColor="Fuchsia" />
+					</If>
+					
+					<!-- Instance timer -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />
+					
+					<CustomBehavior File="Message" 
+									Text="Hellfire Ramparts initialized."  
+									LogColor="Fuchsia" />
+									
+					<!-- Pull the first two bridge guards -->
+					<RunTo X="-1328.626" Y="1658.497" Z="68.99782" />
+					
+					<!-- Run to the end of the bridge -->
+					<RunTo X="-1298.709" Y="1672.082" Z="66.79382" />
+					
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+					
+					<!-- Run back to the end of the bridge -->
+					<RunTo X="-1298.709" Y="1672.082" Z="66.79382" />
+					
+					<!-- WFP to avoid Watchkeeper Gargolmar - move to brazier -->	
+					<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
+									AvoidMobId="17264" 
+									AvoidDistance="40"
+									X="-1276.865" Y="1663.459" Z="68.91386" > <!-- Where I want to go -->
+					<FollowPath Strategy="WaitForAvoidDistance" 
+								DismissPet="true" 
+								EgressDistance="25" >
+						  <Hotspot X="-1296.538" Y="1674.081" Z="67.23779" /> <!-- Stay here until I can go there -->
+					</FollowPath>
+				  </CustomBehavior>
+										
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="70000" />
+																								
+					<!-- Pull the second group on the left after the bridge -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="false" 
+									NumOfTimes="1" 
+									AllowCombat="false">	
+						<Hotspot X="-1249.179" Y="1638.575" Z="68.37267" />
+						<Hotspot X="-1243.309" Y="1627.517" Z="68.50598" />
+					</CustomBehavior>
+					<RunTo X="-1243.309" Y="1627.517" Z="68.50598" />
+					
+					<!-- Pull second group on the right after the bridge  -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="false" 
+									NumOfTimes="1" 
+									AllowCombat="false">	
+						<Hotspot X="-1254.029" Y="1601.248" Z="68.59103" />
+					</CustomBehavior>
+					<RunTo X="-1254.029" Y="1601.248" Z="68.59103" />
+					
+					<!-- Pull third group on the left after the bridge  -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="false" 
+									NumOfTimes="1" 
+									AllowCombat="false">	
+						<Hotspot X="-1238.462" Y="1581.857" Z="68.43217" />
+						<Hotspot X="-1253.995" Y="1569.018" Z="68.59627" />
+						<Hotspot X="-1239.702" Y="1579.707" Z="68.4333" />
+					</CustomBehavior>
+					<RunTo X="-1239.702" Y="1579.707" Z="68.4333" />
+					
+					<!-- Pull fourth on the left -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="false" 
+									NumOfTimes="1" 
+									AllowCombat="false">	
+						<Hotspot X="-1252.984" Y="1556.219" Z="68.67274" />
+						<Hotspot X="-1268.911" Y="1543.165" Z="68.55493" />
+						<Hotspot X="-1249.095" Y="1560.771" Z="68.53049" />
+					</CustomBehavior>
+					<RunTo X="-1249.095" Y="1560.771" Z="68.53049" />
+					
+					<!-- Pull the patrol -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="false" 
+									NumOfTimes="1" 
+									AllowCombat="false">	
+						<Hotspot X="-1278.244" Y="1553.494" Z="68.58251" />
+						<Hotspot X="-1292.742" Y="1531.913" Z="68.59029" />
+						<Hotspot X="-1286.531" Y="1515.021" Z="68.57616" />
+						<Hotspot X="-1267.649" Y="1497.64" Z="68.55737" />
+						<Hotspot X="-1242.741" Y="1451.494" Z="68.59166" />
+					</CustomBehavior>
+					<RunTo X="-1242.741" Y="1451.494" Z="68.59166" />
+					
+					<!-- Pull the third group on the right after the bridge -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="false" 
+									NumOfTimes="1" 
+									AllowCombat="false">	
+						<Hotspot X="-1251.884" Y="1453.657" Z="68.5957" />
+						<Hotspot X="-1264.997" Y="1471.466" Z="68.58954" />
+						<Hotspot X="-1278.065" Y="1483.56" Z="68.58954" />
+					</CustomBehavior>
+					<RunTo X="-1278.065" Y="1483.56" Z="68.58954" />
+																	
+					<!-- Pull the barrier group on the left -->
+					<RunTo X="-1228.355" Y="1469.517" Z="68.56563" />
+					
+					<!-- We are below level 68, avoiding Watchkeeper Gargolmar -->		
+					<If Condition="Me.Level &lt;= 67" > 
+					
+						<!-- Profile message - We are below level 68 and can't kill bosses, avoiding Watchkeeper Gargolmar -->
+							<CustomBehavior File="Message" 
+										Text="We are below level 68 and can't kill bosses, avoiding Watchkeeper Gargolmar."  
+										LogColor="Fuchsia" />		
+															
+							<!-- WFP to avoid Watchkeeper Gargolmar - move to brazier -->	
+							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
+											AvoidMobId="17306" 
+											AvoidDistance="65"
+											X="-1231.222" Y="1474.324" Z="68.56033"  >
+							<FollowPath Strategy="StalkMobAtAvoidDistance" 
+										DismissPet="true" 
+										EgressDistance="45" >
+								  <Hotspot X="-1212.488" Y="1443.458" Z="68.57121" />
+							  </FollowPath>
+						  </CustomBehavior>
+								
+						<!-- Move back to the bridge -->	
+						<RunTo X="-1283.821" Y="1503.144" Z="68.57864" />
+						<RunTo X="-1292.068" Y="1535.329" Z="68.58967" />
+						<RunTo X="-1251.764" Y="1579.988" Z="68.51157" />
+						<RunTo X="-1245.879" Y="1610.437" Z="68.53096" />
+						<RunTo X="-1266.327" Y="1662.983" Z="68.7224" />
+						<RunTo X="-1285.593" Y="1672.292" Z="68.75599" />
+	
+					</If>
+					
+					<!-- If we are 68 or greater, we can kill bosses -->		
+					<If Condition="Me.Level &gt;= 68" >
+					
+						<!-- Profile message - We are level 68 or above, we can kill bosses -->
+						<CustomBehavior File="Message" 
+									Text="We are level 68 or above, we can kill bosses."  
+									LogColor="Fuchsia" />
+									
+						<!-- WFP to avoid Watchkeeper Gargolmar - move to brazier -->	
+							<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
+											AvoidMobId="17306" 
+											AvoidDistance="65"
+											X="-1231.222" Y="1474.324" Z="68.56033"  >
+							<FollowPath Strategy="StalkMobAtAvoidDistance" 
+										DismissPet="true" 
+										EgressDistance="50" >
+								  <Hotspot X="-1212.488" Y="1443.458" Z="68.57121" />
+								  <Hotspot X="-1179.411" Y="1444.544" Z="68.42729" />
+							</FollowPath>
+						  </CustomBehavior>			
+						
+						<!-- Forces kill of Watchkeeper Gargolmar -->
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="17306"
+										EventX="-1189.392" EventY="1462.559" EventZ="68.45417"
+										MoveOutOfGroundEffectAuraId1="111111"
+										MoveAwayFromMobCastingSpellId1="111111"
+										MoveAwayFromMobWithAuraId1="111111">
+							<Safespots>
+								<Hotspot X="-1189.392" Y="1462.559" Z="68.45417" />
+							</Safespots>
+						</CustomBehavior>
+						
+						<!-- Run to dogs after Watchkeeper Gargolmar -->
+						<RunTo X="-1176.596" Y="1446.943" Z="68.42535" />
+						
+						<!-- Run to first grp, on the left after Watchkeeper Gargolmar -->
+						<RunTo X="-1182.875" Y="1483.131" Z="68.46095" />
+						
+						<!-- Run to second grp, on the right after Watchkeeper Gargolmar -->
+						<RunTo X="-1152.259" Y="1504.416" Z="68.40633" />
+						
+						<!-- Run guards at the door near the stairs -->
+						<RunTo X="-1205.367" Y="1535.216" Z="68.53761" />
+
+						<!-- Run to first grp at the top of the stairs -->
+						<RunTo X="-1240.5" Y="1565.219" Z="91.10129" />
+						
+						<!-- If we are on the second floor, continue -->
+						<If Condition="Me.Z &gt; 75" >
+							
+						<!-- Clear the second floor -->
+						<RunTo X="-1261.473" Y="1595.095" Z="92.13603" />
+						<RunTo X="-1279.512" Y="1600.849" Z="91.77261" />
+						<RunTo X="-1298.048" Y="1586.68" Z="91.77947" />
+						<RunTo X="-1316.719" Y="1617.893" Z="91.74869" />
+						<RunTo X="-1302.461" Y="1636.845" Z="91.74632" />
+						<RunTo X="-1275.223" Y="1626.908" Z="91.69825" />
+						<RunTo X="-1168.113" Y="1698.712" Z="91.50394" />
+							
+						<!-- Kill the last two mobs on the ledge -->	
+						<RunTo X="-1338.467" Y="1675.37" Z="91.88944" />	
+							
+						<!-- Run to the ledge -->
+						<RunTo X="-1313.274" Y="1650.739" Z="91.67419" />
+						<RunTo X="-1317.109" Y="1649.491" Z="91.66763" />
+						
+						<!-- Jump off the ledge -->
+						<CustomBehavior File="Misc\JumpForward" />
+						
+						<!-- Wait timer - wait 1 second --> -->
+						<CustomBehavior File="WaitTimer" 
+												WaitTime="1000" />
+						
+						</If>
+					</If>
+					
+					<!-- Run to the exit -->
+					<RunTo X="-1346.896" Y="1651.415" Z="68.86491" />
+									
+					<!-- If we are high enough to go to the next instance, do so -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									MinLevel="70" 
+									ProfileName="[QO-N][Solstice][70-73]_blood-furnace.xml"  />
+									
+				</If> <!-- If we are inside Hellfire Ramparts -->
+				
+				<!-- If we are inside Hellfire Ramparts -->
+				<If Condition="Me.ZoneId == 3562">
+					<CustomBehavior File="Message" 
+									Text="Hellfire Ramparts detected. Running out to reset."
+									LogColor="Fuchsia" />
+									
+					<!-- Make our way to the exit -->					
+					<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+					
+					<!-- Repair if necessary -->
+					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					
+						<!-- If our hearthstone is set here, use it -->
+						<If Condition="(Me.HearthstoneAreaId == 3538) || (Me.HearthstoneAreaId == 3536)">
+							<CustomBehavior File="Message" 
+											Text="Our Innkeeper is set at Honor Hold or Thrallmar." 
+											LogColor="Cyan" />
+												
+							<!-- Have hearthstone -->
+							<If Condition="HasItem(6948)">
+								<CustomBehavior File="Message" 
+												Text="Using Hearthstone." 
+												LogColor="Lime" />
+												
+								<CustomBehavior File="Misc\RunLua" 
+												Lua="UseItemByName(6948)" 
+												WaitTime="1000" />
+												
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="20000" />
+							</If> <!-- Have hearthstone -->
+						
+							<!-- Have Innkeeper's Daughter -->
+							<If Condition="HasItem(64488)">
+								<CustomBehavior File="Message" 
+												Text="Using Innkeeper's Daughter." 
+												LogColor="Lime" />
+													
+								<CustomBehavior File="Misc\RunLua" 
+												Lua="UseItemByName(64488)" 
+												WaitTime="1000" />
+									
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="20000" />
+							</If> <!-- Have Innkeeper's Daughter -->
+						
+							
+							<If Condition="Me.IsAlliance">
+								<CustomBehavior File="FlyTo" X="-709.473" Y="2621.555" Z="89.7064" />
+								<CustomBehavior File="ForcedDismount" />
+							</If>
+							
+							<If Condition="Me.IsHorde">
+								<RunTo X="183.0796" Y="2606.334" Z="87.28376" />
+							</If>
+						
+							<CustomBehavior File="Message" 
+											Text="Our durability is less than 30% or our bags are nearly full, We need to vendor." 
+											LogColor="Fuchsia" />
+										
+							<CustomBehavior File="ForceSetVendor" 
+											DoMail="True" 
+											DoRepair="True" 
+											DoSell="False" 
+											DoTrain="False" />
+							
+							<SetVendor>
+								<Vendors>
+									<!-- Honor Hold -->
+									<Vendor Name="Humphry"
+											Entry="16823" 
+											Type="Repair" 
+											X="-717.3172" Y="2607.582" Z="91.01124" />
+											
+									<!-- Thrallmar -->
+									<Vendor Name="Reagan Mancuso" 
+											Entry="22225" 
+											Type="Repair" 
+											X="179.7871" Y="2605.4" Z="87.28391" />
+								</Vendors>
+							</SetVendor>
+						
+							<SetMailbox>
+								<Mailboxes>
+									<!-- Honor Hold -->
+									<Mailbox X="-706.4096" Y="2697.286" Z="94.34798" />
+									
+									<!-- Thrallmar -->
+									<Mailbox X="171.8167" Y="2626.572" Z="87.07685" />
+								</Mailboxes>
+							</SetMailbox>
+							
+							<!-- We are done repairing -->
+							<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+								<CustomBehavior File="Message" 
+												Text="Repairing complete." 
+												LogColor="Fuchsia" />
+												
+							</If> <!-- repaired -->
+							
+							<If Condition="Me.IsAlliance">
+							
+								<!-- Fly to the hover point above the innkeep in Honor Hold -->
+								<CustomBehavior File="FlyTo" X="-699.7803" Y="2654.424" Z="153.3082" />
+								
+							</If>
+							
+							<If Condition="Me.IsHorde">
+							
+								<!-- Fly to the hover point above the innkeep in Thrallmar -->
+								<CustomBehavior File="FlyTo" X="167.4147" Y="2645.637" Z="115.6988" />
+								
+							</If>
+							
+								<CustomBehavior File="Message" 
+								Text="Flying to Hellfire Ramparts." 
+								LogColor="Lime" />
+								
+								<!-- Fly above hellfire ramparts -->
+								<CustomBehavior File="FlyTo" X="-334.9235" Y="3018.459" Z="37.46231" />
+
+								<!-- Instance timer check if we did repair -->
+								<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+								
+								<!-- Land in the box -->
+								<CustomBehavior File="FlyTo" X="-363.436" Y="3078.43" Z="-15.00165" />
+								<CustomBehavior File="ForcedDismount" />
+								
+								<RunTo X="-363.436" Y="3078.43" Z="-15.00165" />
+														
+						</If>	<!-- If our hearthstone is set here, use it -->
+					</If> <!-- Repair if necessary -->
+				</If>	<!-- If we are inside Hellfire Ramparts -->
+				
+				<!-- If we don't need to vendor -->
+				<If Condition="Me.ZoneId == 3562">
+				
+					<CustomBehavior File="Message" 
+									Text="Hellfire Ramparts detected. Running out to reset."
+									LogColor="Fuchsia" />
+				
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+									
+					<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="-1358.403" Y="1629.539" Z="68.55495" />
+					
+					<!-- Make sure we run to the right spot outside the portal -->
+					<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
+					
+				</If> <!-- If we don't need to vendor -->
+			</While> <!-- Infinite loop -->
+		</If> <!-- Level Check -->
+		
+				
+		
+	</QuestOrder>
+</HBProfile>
+

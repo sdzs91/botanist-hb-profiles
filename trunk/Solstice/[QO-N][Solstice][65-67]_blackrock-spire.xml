@@ -1,0 +1,433 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][Solstice][58-67]_blackrock-spire</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>	
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="202.4744" Y="-420.869" Z="110.9131" Radius="14.15664" />
+		<Blackspot X="-10441.78" Y="-258.6545" Z="47.09528" Radius="163.9329" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+
+	<Factions></Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+		<!-- Level check -->
+		<If Condition="Me.Level &gt;= 58">
+			<CustomBehavior File="Message" 
+							Text="You meet the level requirement to run this profile." 
+							LogColor="Fuchsia" />
+		
+		 	<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							FindVendorsAutomatically="False"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootChests="False"
+							LootMobs="True"
+							LootRadius="1"
+							MountDistance="75"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							PullDistance="25"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseFlightPaths="True"
+							UseMount="True" 
+							UseRandomMount="False" />
+							
+			<!-- Infinite loop -->
+			<While Condition="true" >
+				
+				<!-- If we are inside Blackrock Spire -->
+				<If Condition="Me.ZoneId == 1583">
+					<CustomBehavior File="Message" 
+									Text="Blackrock Spire detected. Running out."
+									LogColor="Fuchsia" />
+									
+					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="77.31385" Y="-210.969" Z="49.81922" />
+					
+					<!-- Make sure we run to the right spot outside the portal -->
+					<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />	
+				</If> <!-- BRS -->
+				
+				<!-- If we are not in the box, load the movement profile -->
+				<If Condition="Me.X &gt; -7500 || Me.X &lt; -7550 || Me.Y &lt; -1260 || Me.Y &gt; -1200" >
+					<CustomBehavior File="Message" 
+									Text="Distance from portal is not within our proximity, initializing movement to get there."
+									LogColor="Fuchsia" />	
+									
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\[QO-N-M][Solstice][58-67]_blackrock-spire" />
+				</If> <!-- Not in box -->
+				
+				<!-- If we are in the box -->
+				<If Condition="Me.X &lt; -7500 &amp;&amp; Me.X &gt; -7550 &amp;&amp; Me.Y &gt; -1260 &amp;&amp; Me.Y &lt; -1200" >
+					<CustomBehavior File="Message" 
+									Text="Portal detected nearby."
+									LogColor="Fuchsia" />	
+						
+					<!-- Profile message - Resetting the instance -->
+					<CustomBehavior File="Message" 
+									Text="Resetting the instance." 
+									LogColor="Fuchsia" />
+					
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
+									
+					<!-- Profile message - The instance has been reset -->				
+					<CustomBehavior File="Message" 
+									Text="The instance has been reset." 
+									LogColor="Fuchsia" />
+						
+					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
+					<While Condition="Me.ZoneId != 1583">
+						<!-- Make sure we run to the right spot outside the portal -->
+						<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
+
+						<!-- Run back in the Blackrock Spire portal -->
+						<CustomBehavior File="Misc\InInstance" X="-7523.075" Y="-1245.195" Z="285.7318" />
+										
+						<CustomBehavior File="Message" 
+										Text="Waiting for the dungeon to load." 
+										LogColor="Fuchsia" />
+									
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" 
+										VariantTime="20000" />	
+										
+						<!-- If we still aren't in, we're locked out -->
+						<If Condition="Me.ZoneId != 1583">
+							<CustomBehavior File="Message" 
+											Text="We are locked out. Waiting and trying again." 
+											LogColor="Fuchsia" />
+						</If> <!-- Locked -->
+					</While> <!-- While we aren't in the instance -->
+				</If> <!-- In box -->
+				
+				<!-- If we are inside Blackrock Spire and have checked our reset -->
+				<If Condition="Me.ZoneId == 1583">
+
+					<!-- Entrance -->
+					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+				
+					<!-- Run up ramp -->
+					<RunTo X="79.2363" Y="-241.2068" Z="56.4171" />
+																
+					<!-- Instance timer -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />
+											
+					<CustomBehavior File="Message" 
+									Text="Blackrock Spire initialized."  
+									LogColor="Fuchsia" />
+		
+					<!-- If we are below level 66, we will run LBRS -->				
+					<If Condition="Me.Level &lt; 68">
+
+						<!-- Profile message - We are below level 66, we will run LBRS -->
+						<CustomBehavior File="Message" 
+										Text="We are below level 66, we will run LBRS." 
+										LogColor="Fuchsia" />
+							<!-- Clear entrance of BRS to entrance of UBRS -->
+							<RunTo X="80.26455" Y="-258.1181" Z="60.70303" />
+							<RunTo X="89.87984" Y="-276.167" Z="60.61135" />					
+							<RunTo X="71.38783" Y="-278.5209" Z="60.61227" />					
+							<RunTo X="71.57586" Y="-313.0738" Z="55.7865" />					
+							<RunTo X="57.85207" Y="-312.6806" Z="53.9165" />					
+							<RunTo X="105.4784" Y="-311.897" Z="53.91893" />					
+							<RunTo X="106.7944" Y="-331.0701" Z="53.9189" />					
+							<RunTo X="85.25211" Y="-357.0931" Z="60.70202" />					
+							<RunTo X="41.35803" Y="-327.2826" Z="53.78933" />					
+							<RunTo X="45.34401" Y="-272.9454" Z="65.36698" />					
+							<RunTo X="47.97971" Y="-253.2721" Z="65.36583" />					
+							<RunTo X="9.978234" Y="-255.1645" Z="65.34553" />					
+							<RunTo X="23.79317" Y="-326.1236" Z="48.77787" />					
+									
+							<!-- Entrance to LBRS -->		
+							<RunTo X="37.1034" Y="-359.2722" Z="48.66062" />					
+					
+							<!-- Pulling all the groups to the first bridge -->
+							<RunTo X="26.065" Y="-369.3656" Z="48.73167" />
+							<RunTo X="26.16421" Y="-393.5885" Z="48.7422" />
+							<RunTo X="65.75504" Y="-434.9665" Z="42.31444" />
+							<RunTo X="47.18937" Y="-462.657" Z="24.03268" />
+							<RunTo X="46.28746" Y="-498.0121" Z="29.18884" />
+							
+							<!-- Group after the first bridge -->
+							<RunTo X="55.50315" Y="-566.0964" Z="30.58309" />
+							
+							<!-- First group on the left after the second bridge -->
+							<RunTo X="-29.44304" Y="-588.4897" Z="29.19094" />
+							
+							<!-- Back left corner -->
+							<RunTo X="-55.65084" Y="-585.1641" Z="29.19091" />
+							
+							<!-- Right-hand group after the second bridge -->
+							<RunTo X="-39.81628" Y="-562.5513" Z="29.19091" />
+							
+							<!-- Left-hand group before the ogres -->
+							<RunTo X="-62.25497" Y="-536.7366" Z="29.1909" />
+							
+							<!-- Right-hand group before the ogres -->
+							<RunTo X="-8.305924" Y="-526.7022" Z="29.17883" />
+							
+							<!-- First two ogres -->
+							<RunTo X="-36.75611" Y="-505.5834" Z="29.16741" />
+							
+							<!-- The patrol -->
+							<RunTo X="-36.61018" Y="-454.0189" Z="31.19488" />
+							
+							<!-- Two bridge guards -->
+							<RunTo X="-37.02587" Y="-436.243" Z="31.81593" />
+							
+							<!-- Single bridge guard -->
+							<RunTo X="-37.34164" Y="-403.7234" Z="31.54186" />
+							
+							<!-- Three ogres entering Mok Doom -->
+							<RunTo X="-37.33359" Y="-382.3774" Z="31.61681" />
+							
+							<!-- Single ogre after entering Mok Doom -->
+							<RunTo X="-25.46938" Y="-348.4747" Z="31.61681" />
+							
+							<!-- Highlord Omokk - skip this kevel 59 boss and two level 58 flunkies -->
+						<!--	<RunTo X="-23.86847" Y="-303.5255" Z="31.61827" />	-->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+
+					</If>
+					
+					<!-- If we are level 66 or above, we will run UBRS -->				
+					<If Condition="Me.Level &gt;= 66">				
+						
+						<!-- Profile message - We are level 66 or above, we will run UBRS -->
+						<CustomBehavior File="Message" 
+										Text="We are level 66 or above, we will run UBRS." 
+										LogColor="Fuchsia" />
+					
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+							
+							<!-- XXXXXXXXXXXXXXXXX -->
+					
+					</If>
+
+					<!-- Run to the exit -->
+					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+									
+					<!-- If we are high enough to go to the next instance, do so -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									MinLevel="67" 
+									ProfileName="[QO-N][Solstice][67-70]_hellfire-ramparts.xml"  />
+										
+					<!-- Repair if necessary -->
+					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					
+						<!-- If our hearthstone is set here, use it -->
+						<If Condition="Me.HearthstoneAreaId == 5628" >
+						<CustomBehavior File="Message" 
+										Text="Our Innkeeper is set at Iron Summit." 
+										LogColor="Cyan" />
+										
+						<!-- Have hearthstone -->
+						<If Condition="HasItem(6948)">
+							<CustomBehavior File="Message" 
+											Text="Using Hearthstone." 
+											LogColor="Lime" />
+											
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(6948)" 
+											WaitTime="1000" />
+											
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+						</If> <!-- Have hearthstone -->
+					
+						<!-- Have Innkeeper's Daughter -->
+						<If Condition="HasItem(64488)">
+							<CustomBehavior File="Message" 
+											Text="Using Innkeeper's Daughter." 
+											LogColor="Lime" />
+												
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(64488)" 
+											WaitTime="1000" />
+								
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+						</If> <!-- Have Innkeeper's Daughter -->
+						
+							
+							<!-- Profile message - Our durability is less than 30% or our bags are nearly full, We need to vendor -->
+							<CustomBehavior File="Message" 
+											Text="Our durability is less than 30% or our bags are nearly full, We need to vendor." 
+											LogColor="Fuchsia" />
+										
+							<CustomBehavior File="ForceSetVendor" 
+											DoMail="True" 
+											DoRepair="True" 
+											DoSell="False" 
+											DoTrain="False" />
+							
+							<SetVendor>
+								<Vendors>
+									<!-- Iron Summit -->
+									<Vendor Name="Fergus Gravelsmash" 
+											Entry="47937" 
+											Type="Repair" 
+											X="-7093.68" Y="-1268.31" Z="270.4849" />
+								</Vendors>
+							</SetVendor>
+					
+							<SetMailbox>
+								<Mailboxes>
+									<!-- Iron Summit -->
+									<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+								</Mailboxes>
+							</SetMailbox>
+							
+							<!-- We are done repairing -->
+							<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+								<CustomBehavior File="Message" 
+												Text="Repairing complete." 
+												LogColor="Fuchsia" />
+												
+							</If> <!-- repaired -->
+
+							<CustomBehavior File="Message" 
+							Text="Moving to Blackrock Spire." 
+							LogColor="Lime" />
+							
+							<CustomBehavior File="Message" 
+									Text="Moving to Blackrock Spire." 
+									LogColor="Cyan" />
+							
+							<!-- Move to end of chain -->
+							<RunTo X="-7482.167" Y="-1163.467" Z="277.9067" />
+												
+							<CustomBehavior File="MyCTM" X="-7470.056" Y="-1164.558" Z="273.2744" />
+							<CustomBehavior File="MyCTM" X="-7469.265" Y="-1186.581" Z="273.9157" />
+							<CustomBehavior File="MyCTM" X="-7480.061" Y="-1194.603" Z="278.3599" />
+							<CustomBehavior File="MyCTM" X="-7501.622" Y="-1200.502" Z="281.8502" />
+							<CustomBehavior File="MyCTM" X="-7517.264" Y="-1210.495" Z="290.9408" />
+							<CustomBehavior File="MyCTM" X="-7530.776" Y="-1209.405" Z="285.4507" />
+							<CustomBehavior File="MyCTM" X="-7534.965" Y="-1214.374" Z="285.4137" />
+							
+							<!-- Moving to the instance box -->
+							<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
+														
+							<!-- Instance timer check if we did repair -->
+					        <CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+					
+						</If>	<!-- If our hearthstone is set here, use it -->
+					</If> <!-- Repair if necessary -->	
+				</If> <!-- BRS -->
+				
+				<!-- If we are inside Blackrock Spire -->
+				<If Condition="Me.ZoneId == 1583">
+					<CustomBehavior File="Message" 
+									Text="Blackrock Spire detected. Running out to reset."
+									LogColor="Fuchsia" />
+					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="77.31385" Y="-210.969" Z="49.81922" />
+					
+					<!-- Make sure we run to the right spot outside the portal -->
+					<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />	
+				</If> <!-- BRS -->
+			</While> <!-- Infinite loop -->
+		</If> <!-- Level check -->
+	</QuestOrder>
+</HBProfile>
+

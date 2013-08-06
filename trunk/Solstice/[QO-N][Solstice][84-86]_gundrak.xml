@@ -421,12 +421,12 @@
 								</SetMailbox>	
 							</If>	<!-- Vendor -->
 							
-							<!-- repaired -->
-							<If Condition="Me.DurabilityPercent &gt;= 0.3" >
+							<!-- We are done repairing -->
+							<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
 								<CustomBehavior File="Message" 
 												Text="Repairing complete." 
 												LogColor="Fuchsia" />
-							</If> <!-- repaired -->
+							</If> <!-- We are done repairing -->
 						</If> <!-- If our hearthstone is set here, use it-->		
 								
 						<!-- Hover point - inn keep -->

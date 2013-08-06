@@ -291,10 +291,10 @@
 					
 						<!-- If our hearthstone is set here, use it -->
 						<If Condition="(Me.HearthstoneAreaId == 3684) || (Me.HearthstoneAreaId == 3683)">
-						<CustomBehavior File="Message" 
-											Text="Our Innkeeper is set at Allerian Stronghold or Stonebreaker Hold." 
-											LogColor="Cyan" />
-											
+							<CustomBehavior File="Message" 
+												Text="Our Innkeeper is set at Allerian Stronghold or Stonebreaker Hold." 
+												LogColor="Cyan" />
+						</If>					
 						<!-- Have hearthstone -->
 						<If Condition="HasItem(6948)">
 							<CustomBehavior File="Message" 
@@ -372,7 +372,7 @@
 						</SetMailbox>
 					
 						<!-- We are done repairing -->
-						<If Condition="Me.DurabilityPercent &gt; 0.3" >
+						<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
 							<CustomBehavior File="Message" 
 											Text="Repairing complete." 
 											LogColor="Fuchsia" />
