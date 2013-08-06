@@ -132,6 +132,33 @@
 				</If> 	<!-- We are horde in Kalimdor -->	
 			</If> 	<!-- If we are in Kalimdor take us to Grom'gol -->
 			
+			<!-- If we are inside Blackrock Depths -->
+			<If Condition="Me.ZoneId == 1584">
+				<CustomBehavior File="Message" 
+								Text="Blackrock Depths detected. Running out."
+								LogColor="Fuchsia" />
+				
+				<RunTo X="460.6402" Y="15.41037" Z="-71.11736" />
+				
+				<!-- Go through the portal -->
+				<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
+				
+
+				<!-- Move to BRS -->
+				<RunTo X="-7482.167" Y="-1163.467" Z="277.9067" />
+									
+				<CustomBehavior File="MyCTM" X="-7470.056" Y="-1164.558" Z="273.2744" />
+				<CustomBehavior File="MyCTM" X="-7469.265" Y="-1186.581" Z="273.9157" />
+				<CustomBehavior File="MyCTM" X="-7480.061" Y="-1194.603" Z="278.3599" />
+				<CustomBehavior File="MyCTM" X="-7501.622" Y="-1200.502" Z="281.8502" />
+				<CustomBehavior File="MyCTM" X="-7517.264" Y="-1210.495" Z="290.9408" />
+				<CustomBehavior File="MyCTM" X="-7530.776" Y="-1209.405" Z="285.4507" />
+				<CustomBehavior File="MyCTM" X="-7534.965" Y="-1214.374" Z="285.4137" />
+				
+				<!-- Moving to the instance box -->
+				<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
+			</If> <!-- BRD -->
+			
 			<!-- If we are in Eastern Kingdoms -->
 			<If Condition="Me.MapId == 0">
 				<CustomBehavior File="Message" 

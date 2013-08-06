@@ -101,7 +101,7 @@
 									LogColor="Fuchsia" />	
 									
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][Solstice][58-67]_blackrock-spire" />
+									ProfileName="Movement\[QO-N-M][Solstice][65-67]_blackrock-spire" />
 				</If> <!-- Not in box -->
 				
 				<!-- If we are in the box -->
