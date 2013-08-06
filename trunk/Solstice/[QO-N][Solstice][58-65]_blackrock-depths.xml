@@ -1,0 +1,356 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][Solstice][58-65]_blackrock-depths</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>	
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+
+	<Factions>
+	</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+		<If Condition="Me.Level &gt;= 58">
+		
+			<CustomBehavior File="Message" 
+							Text="You meet the level requirement to run this profile." 
+							LogColor="Fuchsia" />
+		
+		 	<!-- Booster UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							FindVendorsAutomatically="False"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootChests="False"
+							LootMobs="True"
+							LootRadius="1"
+							MountDistance="75"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							PullDistance="25"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseFlightPaths="True"
+							UseMount="True" 
+							UseRandomMount="False" />
+							
+			<!-- Infinite loop -->
+			<While Condition="true" >
+				
+				<!-- If we are inside Blackrock Depths -->
+				<If Condition="Me.ZoneId == 1584">
+					<CustomBehavior File="Message" 
+									Text="Blackrock Depths detected. Running out."
+									LogColor="Fuchsia" />
+					
+					<RunTo X="460.6402" Y="15.41037" Z="-71.11736" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
+					
+					<!-- Make sure we run to the right spot outside the portal -->
+					<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+				</If> <!-- BRD -->
+			
+				<!-- If we are not in the box, load the movement profile -->
+				<If Condition="Me.X &lt; -7200 || Me.X &gt; -7000 || Me.Y &gt; -900 || Me.Y &lt; -1000" >
+					<CustomBehavior File="Message" 
+									Text="Distance from portal is not within our proximity, initializing movement to get there."
+									LogColor="Fuchsia" />	
+									
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\[QO-N-M][Solstice][58-65]_blackrock-depths" />
+				</If> <!-- Not in box -->
+				
+				<!-- If we are in the box -->
+				<If Condition="Me.X &gt; -7200 &amp;&amp; Me.X &lt; -7000 &amp;&amp; Me.Y &lt; -900 &amp;&amp; Me.Y &gt; -1000" >
+					<CustomBehavior File="Message" 
+									Text="Portal detected nearby."
+									LogColor="Fuchsia" />	
+						
+					<!-- Resetting the instance -->
+					<CustomBehavior File="Message" 
+									Text="Resetting the instance." 
+									LogColor="Fuchsia" />
+					
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
+										
+					<CustomBehavior File="Message" 
+									Text="Instance reset." 
+									LogColor="Fuchsia" />	
+						
+					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
+					<While Condition="Me.ZoneId != 1584">
+						<!-- Make sure we run to the right spot outside the portal -->
+						<RunTo X="-7178.41" Y="-922.152" Z="166.092" />
+
+						<!-- Run back in the Blackrock Depths portal -->
+						<CustomBehavior File="Misc\InInstance" X="-7179.068" Y="-937.434" Z="166.4007" />
+										
+						<CustomBehavior File="Message" 
+										Text="Waiting for the dungeon to load." 
+										LogColor="Fuchsia" />
+									
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" 
+										VariantTime="20000" />	
+										
+						<!-- If we still aren't in, we're locked out -->
+						<If Condition="Me.ZoneId != 1584">
+							<CustomBehavior File="Message" 
+											Text="We are locked out. Waiting and trying again." 
+											LogColor="Fuchsia" />
+						</If> <!-- Locked -->
+					</While> <!-- While we aren't in the instance -->
+				</If> <!-- In box -->
+				
+				<!-- If we are inside Blackrock Depths and have checked our reset -->
+				<If Condition="Me.ZoneId == 1584">
+				
+					<!-- Entrance -->
+					<RunTo X="456.929" Y="34.0923" Z="-69.56168" />
+								
+					<!-- Instance timer -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />
+					
+					<CustomBehavior File="Message" 
+									Text="Blackrock Depths initialized."  
+									LogColor="Fuchsia" />
+									
+					<!-- Run to first Shadowforge Gate -->
+					<RunTo X="493.8814" Y="14.29045" Z="-70.35346" />
+									
+					<!-- First Shadowforge Gate interact -->
+					<CustomBehavior File="InteractWith"
+									ObjectType="GameObject"
+									MobId="170559"
+									NumOfTimes="1"
+									X="496.3966"
+									Y="16.012654"
+									Z="-70.47108" />	
+									
+					<!-- Run through the gate -->
+					<RunTo X="525.9897" Y="19.44355" Z="-71.12934" />
+					
+					<!-- Make sure we kill the fire elemental -->
+					<CustomBehavior File="TargetAndMoveToMob" 
+									MobId="8910" 
+									MoveWithinMaxRangeOfMob="1" 
+									WaitForNpcs="false"
+									X="564.9453" Y="21.04286" Z="-70.8724" />		
+									
+					<!-- Run to second Shadowforge Gate -->	
+					<RunTo X="567.6488" Y="-7.285117" Z="-70.21188" />
+					
+					<!-- Second Shadowforge Gate interact -->
+					<CustomBehavior File="InteractWith"
+									ObjectType="GameObject"
+									MobId="170560"
+									NumOfTimes="1"
+									X="569.58905"
+									Y="-9.361542"
+									Z="-70.25659" />
+									
+					<!-- Run to East Garrison Door -->
+					<RunTo X="559.0313" Y="-50.95553" Z="-60.35724" />	
+					
+					<!-- East Garrison Door interact -->
+					<CustomBehavior File="InteractWith"
+									ObjectType="GameObject"
+									MobId="170570"
+									NumOfTimes="1"
+									X="560.5311"
+									Y="-51.815918"
+									Z="-60.09396" />
+									
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<!-- Run to the exit -->
+					<RunTo X="456.929" Y="34.0923" Z="-69.56168" />
+					
+					<!-- If we are high enough to go to the next instance, do so -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									MinLevel="65" 
+									ProfileName="[QO-N][Solstice][65-67]_blackrock-spire.xml"  />
+														
+					<!-- Repair if necessary -->
+					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					
+						<!-- If our hearthstone is set here, use it -->
+						<If Condition="Me.HearthstoneAreaId == 5628" >
+						<CustomBehavior File="Message" 
+										Text="Our Innkeeper is set at Iron Summit." 
+										LogColor="Cyan" />
+										
+						<!-- Have hearthstone -->
+						<If Condition="HasItem(6948)">
+							<CustomBehavior File="Message" 
+											Text="Using Hearthstone." 
+											LogColor="Lime" />
+											
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(6948)" 
+											WaitTime="1000" />
+											
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+						</If> <!-- Have hearthstone -->
+					
+						<!-- Have Innkeeper's Daughter -->
+						<If Condition="HasItem(64488)">
+							<CustomBehavior File="Message" 
+											Text="Using Innkeeper's Daughter." 
+											LogColor="Lime" />
+												
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(64488)" 
+											WaitTime="1000" />
+								
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+						</If> <!-- Have Innkeeper's Daughter -->
+						
+							
+							<!-- Profile message - Our durability is less than 30% or our bags are nearly full, We need to vendor -->
+							<CustomBehavior File="Message" 
+											Text="Our durability is less than 30% or our bags are nearly full, We need to vendor." 
+											LogColor="Fuchsia" />
+										
+							<CustomBehavior File="ForceSetVendor" 
+											DoMail="True" 
+											DoRepair="True" 
+											DoSell="False" 
+											DoTrain="False" />
+							
+							<SetVendor>
+								<Vendors>
+									<!-- Iron Summit -->
+									<Vendor Name="Fergus Gravelsmash" 
+											Entry="47937" 
+											Type="Repair" 
+											X="-7093.68" Y="-1268.31" Z="270.4849" />
+								</Vendors>
+							</SetVendor>
+					
+							<SetMailbox>
+								<Mailboxes>
+									<!-- Iron Summit -->
+									<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+								</Mailboxes>
+							</SetMailbox>
+							
+							<!-- We are done repairing -->
+							<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+								<CustomBehavior File="Message" 
+												Text="Repairing complete." 
+												LogColor="Fuchsia" />
+												
+							</If> <!-- repaired -->
+
+							<!-- Profile message - Moving to Blackrock Depths -->
+							<CustomBehavior File="Message" 
+							Text="Moving to Blackrock Spire." 
+							LogColor="Lime" />
+							
+							<!-- Move to the chain -->
+							<RunTo X="-7503.016" Y="-1153.874" Z="269.4245" />
+												
+							<!-- Move to Lothos -->
+							<RunTo X="-7514.716" Y="-1046.491" Z="182.3" />
+							
+							<!-- Move to the instance box -->
+							<RunTo X="-7178.41" Y="-922.152" Z="166.0919" />
+								
+							<!-- Instance timer check if we did repair -->
+					        <CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+							
+						</If>	<!-- If our hearthstone is set here, use it -->
+					</If> <!-- Repair if necessary -->
+														
+				</If> <!-- BRD -->
+				
+				<!-- If we are inside Blackrock Depths -->
+				<If Condition="Me.ZoneId == 1584">
+					<CustomBehavior File="Message" 
+									Text="Blackrock Depths detected. Running out to reset."
+									LogColor="Fuchsia" />
+					
+					<RunTo X="460.6402" Y="15.41037" Z="-71.11736" />
+					
+					<!-- Instance timer check if we didn't repair -->
+					        <CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+							
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
+					
+					<!-- Make sure we run to the right spot outside the portal -->
+					<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+				</If> <!-- BRD -->
+				
+				<!-- If we are in the box -->
+				<If Condition="Me.X &gt; -7200 &amp;&amp; Me.X &lt; -7000 &amp;&amp; Me.Y &lt; -900 &amp;&amp; Me.Y &gt; -1000" >
+					
+					
+				</If> <!-- In box -->
+			</While> <!-- Infinite loop -->
+		</If> <!-- Booster -->
+	</QuestOrder>
+</HBProfile>
+

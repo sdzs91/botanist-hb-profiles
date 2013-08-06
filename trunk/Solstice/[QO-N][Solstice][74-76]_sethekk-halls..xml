@@ -1,0 +1,440 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][Solstice][74-76]_sethekk-halls</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="64.52451" Y="80.84284" Z="0.4361966" Radius="1" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<!-- Level check -->
+		<If Condition="Me.Level &gt;= 70">
+			<CustomBehavior File="Message" 
+							Text="You meet the level requirement to run this profile." 
+							LogColor="Fuchsia" />
+		
+		 	<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							FindVendorsAutomatically="False"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootChests="False"
+							LootMobs="True"
+							LootRadius="1"
+							MountDistance="75"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							PullDistance="25"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseFlightPaths="True"
+							UseMount="True" 
+							UseRandomMount="False" />
+						
+			<!-- Infinite loop -->
+			<While Condition="true" >	
+				<!-- Sethekk Halls -->
+				<If Condition="Me.ZoneId == 3791">
+					<CustomBehavior File="Message" 
+									Text="Sethekk Halls detected. Running out."
+									LogColor="Fuchsia" />
+				
+					<!-- Floors -->
+					<If Condition="Me.Z &gt; 10 " >
+						<!-- Make our way to the exit from the top floor -->
+						<RunTo X="44.45738" Y="286.3805" Z="25.0132" />
+						
+						<RunTo X="44.72137" Y="142.0625" Z="0.02178714" />
+						
+						<RunTo X="47.88029" Y="97.99895" Z="0.1508283" />
+						<RunTo X="43.62694" Y="62.81333" Z="0.008441973" />
+						<RunTo X="43.03834" Y="7.287698" Z="0.007048465" />
+						<RunTo X="31.01099" Y="1.044048" Z="0.005493299" />
+						<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
+						
+						<!-- Go through the portal -->
+						<CustomBehavior File="Misc\InInstance" X="-20.722509" Y="0.3174916" Z="0.005990623" />
+						
+						<!-- Make sure we run to the right spot outside the portal -->
+						<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
+						
+						<Else>
+							<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
+
+							<!-- Go through the portal -->
+							<CustomBehavior File="Misc\InInstance" X="-20.722509" Y="0.3174916" Z="0.005990623" />
+							
+							<!-- Make sure we run to the right spot outside the potral -->
+							<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
+						</Else>
+					</If> <!-- Floors -->
+				</If> <!-- SH -->
+				
+				<!-- If we are not in the box, load the movement profile -->
+				<If Condition="Me.X &lt; -3400 || Me.X &gt; -3300 || Me.Y &lt; 4600 || Me.Y &gt; 4700" >
+					<CustomBehavior File="Message" 
+									Text="Distance from portal is not within our proximity, initializing movement to get there."
+									LogColor="Fuchsia" />	
+									
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\[QO-N-M][Solstice][74-76]_sethekk-halls" />
+				</If> <!-- Not in box -->
+				
+				<!-- If we are in the box -->
+				<If Condition="Me.X &gt; -3400 &amp;&amp; Me.X &lt; -3300 &amp;&amp; Me.Y &gt; 4600 &amp;&amp; Me.Y &lt; 4700" >
+					<CustomBehavior File="Message" 
+									Text="Portal detected nearby."
+									LogColor="Fuchsia" />	
+						
+					<!-- Resetting the instance -->
+					<CustomBehavior File="Message" 
+									Text="Resetting instance." 
+									LogColor="Fuchsia" />
+					
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
+					
+					<CustomBehavior File="Message" 
+									Text="Instance reset." 
+									LogColor="Fuchsia" />	
+									
+					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
+					<While Condition="Me.ZoneId != 3791">
+						<!-- Make sure we run to the right spot outside the portal -->
+						<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
+
+						<!-- Run back in the portal -->
+						<CustomBehavior File="Misc\InInstance" X="-3361.98" Y="4640.243" Z="-101.048" /> 
+										
+						<CustomBehavior File="Message" 
+										Text="Waiting for the dungeon to load." 
+										LogColor="Fuchsia" />
+									
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000"
+										VariantTime="20000" />
+										
+						<!-- If we still aren't in, we're locked out -->
+						<If Condition="Me.ZoneId != 3791">
+							<CustomBehavior File="Message" 
+											Text="We are locked out. Waiting and trying again." 
+											LogColor="Fuchsia" />
+						</If> <!-- Locked -->
+					</While> <!-- While we aren't in the instance -->
+				</If> <!-- In box -->
+				
+				<!-- If we are inside Sethekk Halls and have checked our reset -->
+				<If Condition="Me.ZoneId == 3791">
+									
+					<!-- Entrance -->
+					<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
+												
+					<!-- Instance timer -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />							
+												
+					<CustomBehavior File="Message" 
+									Text="Sethekk Halls initialized."  
+									LogColor="Fuchsia" />
+				
+					<!-- Clears entrance and first room -->
+					<RunTo X="21.37461" Y="-5.836917" Z="0.005755" />
+					<RunTo X="42.48843" Y="6.566267" Z="0.006550001" />
+					<RunTo X="43.92519" Y="45.68747" Z="0.006550001" />
+					<RunTo X="43.26239" Y="65.4243" Z="0.007141251" />
+					<RunTo X="57.07096" Y="78.12932" Z="0.07494323" />
+					<RunTo X="52.44757" Y="94.68806" Z="0.1505142" />
+					<RunTo X="42.51099" Y="121.7842" Z="0.2055656" />
+					<RunTo X="70.216" Y="120.6423" Z="-0.08463419" />
+					<RunTo X="83.29604" Y="106.5705" Z="0.1768363" />
+					<RunTo X="30.86219" Y="78.15954" Z="-0.6817849" />
+					<RunTo X="22.63563" Y="101.7787" Z="0.2693909" />
+					<RunTo X="2.804949" Y="99.32995" Z="0.04899137" />
+					
+					<!-- Center of the first hallway -->
+					<RunTo X="-17.38082" Y="100.6026" Z="0.007194391" />
+					
+					<!-- Clear to first boss -->
+					<RunTo X="-38.59309" Y="96.59857" Z="0.007193189" />
+					<RunTo X="-52.03913" Y="85.95343" Z="3.174125" />
+					<RunTo X="-65.17772" Y="84.34257" Z="0.007220455" />
+					<RunTo X="-54.04027" Y="105.5371" Z="0.0080238" />
+					<RunTo X="-71.74348" Y="105.3568" Z="1.681748" />
+					<RunTo X="-86.29785" Y="108.3329" Z="0.00721208" />
+					<RunTo X="-72.73356" Y="127.8268" Z="0.005768445" />
+					<RunTo X="-70.91251" Y="143.5216" Z="0.005893752" />
+					<RunTo X="-69.03397" Y="162.9909" Z="0.007236939" />
+					<RunTo X="-75.52717" Y="174.434" Z="0.008853251" />
+					<RunTo X="-98.92248" Y="176.8694" Z="0.009124153" />
+					<RunTo X="-108.3063" Y="173.1768" Z="0.009124153" />
+					
+					<If Condition="Me.Level &lt; 73" > 
+					
+						<!-- Run to the entrance -->
+						<RunTo X="31.01099" Y="1.044048" Z="0.005493299" />
+						<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
+						
+					</If>
+					
+					<If Condition="Me.Level &gt;= 73" > 
+					
+						<!-- Pulls Darkweaver Syth -->
+						<RunTo X="-134.4446" Y="173.4718" Z="0.01039251" />
+
+						
+						<!-- clear last room on the ground floor and stair-door guards of the second floor -->
+						<RunTo X="-204.9517" Y="176.3423" Z="0.01093201" />
+						<RunTo X="-243.9381" Y="159.8705" Z="0.06504456" />
+						<RunTo X="-230.2003" Y="190.4187" Z="3.944963" />
+						<RunTo X="-263.4235" Y="187.0892" Z="0.03411928" />
+						<RunTo X="-271.8045" Y="171.5383" Z="0.05078629" />
+						<RunTo X="-271.4767" Y="142.2779" Z="13.56483" />
+						<RunTo X="-210.7714" Y="142.4178" Z="26.75119" />
+						<RunTo X="-214.4941" Y="203.6616" Z="26.72287" />
+						<RunTo X="-242.3174" Y="211.0034" Z="26.75901" />
+						
+						<!-- Clear top door to last boss guards -->
+						<RunTo X="-242.5275" Y="228.7115" Z="26.7231" />
+						<RunTo X="-243.2647" Y="284.1381" Z="27.49084" />
+						<RunTo X="-235.8431" Y="334.1547" Z="27.31513" />
+						<RunTo X="-201.8283" Y="338.0493" Z="26.63621" />
+						<RunTo X="-207.187" Y="312.0368" Z="31.70341" />
+						<RunTo X="-205.6251" Y="314.0121" Z="30.29447" />
+						<RunTo X="-184.4474" Y="343.7325" Z="27.98125" />
+						<RunTo X="-182.8104" Y="279.7446" Z="26.60574" />
+						<RunTo X="-141.845" Y="290.2998" Z="26.73262" />
+						<RunTo X="-129.0573" Y="287.5922" Z="26.73122" />
+						<RunTo X="-95.22292" Y="304.7847" Z="26.4843" />
+						<RunTo X="-61.07859" Y="308.918" Z="26.83824" />
+						<RunTo X="-45.60033" Y="284.2642" Z="26.7746" />
+						<RunTo X="-0.1354589" Y="291.7284" Z="26.68957" />
+						<RunTo X="-0.09103165" Y="284.6599" Z="26.68957" />
+						<RunTo X="-41.70713" Y="286.3986" Z="26.73074" />
+						<RunTo X="-77.20947" Y="287.3869" Z="26.4832" />
+						<RunTo X="-89.19993" Y="267.9048" Z="26.82262" />
+						<RunTo X="-119.8436" Y="271.4776" Z="27.3058" />
+						<RunTo X="-85.27658" Y="297.7351" Z="26.48322" />
+
+					
+						<!-- Run to last bosses room -->
+						<RunTo X="-21.41718" Y="286.436" Z="26.72997" />
+										
+						<!-- Forces kill of Talon King Ikiss -->
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="18473"
+										EventX="44.56851" EventY="286.1446" EventZ="25.01321"
+										MoveOutOfGroundEffectAuraId1="111111"
+										MoveAwayFromMobCastingSpellId1="111111"
+										MoveAwayFromMobWithAuraId1="111111" >
+							<Safespots>
+								<Hotspot X="44.56851" Y="286.1446" Z="25.01321" />
+							</Safespots>
+						</CustomBehavior>
+					
+						<!-- run to the exit -->
+						<RunTo X="44.61202" Y="139.9013" Z="0.01621437" />
+						<RunTo X="31.01099" Y="1.044048" Z="0.005493299" />
+						<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
+					</If>
+					
+					<!-- If we are high enough to go to the next instance, do so -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									MinLevel="75" 
+									ProfileName="[QO-N][Solstice][76-79]_utgarde-keep.xml"  />
+									
+					<!-- Repair if necessary -->
+					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					
+						<!-- If our hearthstone is set here, use it -->
+						<If Condition="(Me.HearthstoneAreaId == 3684) || (Me.HearthstoneAreaId == 3683)">
+							<CustomBehavior File="Message" 
+												Text="Our Innkeeper is set at Allerian Stronghold or Stonebreaker Hold." 
+												LogColor="Cyan" />
+						</If>					
+						<!-- Have hearthstone -->
+						<If Condition="HasItem(6948)">
+							<CustomBehavior File="Message" 
+											Text="Using Hearthstone." 
+											LogColor="Lime" />
+											
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(6948)" 
+											WaitTime="1000" />
+											
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+						</If> <!-- Have hearthstone -->
+					
+						<!-- Have Innkeeper's Daughter -->
+						<If Condition="HasItem(64488)">
+							<CustomBehavior File="Message" 
+											Text="Using Innkeeper's Daughter." 
+											LogColor="Lime" />
+												
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(64488)" 
+											WaitTime="1000" />
+								
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+						</If> <!-- Have Innkeeper's Daughter -->
+					
+						<If Condition="Me.IsAlliance">
+							<CustomBehavior File="FlyTo" X="-2963.77" Y="4017.751" Z="1.688854" />
+							<CustomBehavior File="ForcedDismount" />
+							
+							<RunTo X="-2974.844" Y="4026.831" Z="3.573579" />
+						</If>
+						
+						<If Condition="Me.IsHorde">
+							<CustomBehavior File="FlyTo" X="-2644.589" Y="4425.806" Z="36.9834" />
+							<CustomBehavior File="ForcedDismount" />
+						</If>
+					
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 80%, we need to repair." 
+										LogColor="Fuchsia" />
+									
+						<CustomBehavior File="ForceSetVendor" 
+										DoMail="True" 
+										DoRepair="True" 
+										DoSell="True" 
+										DoTrain="False" />
+						
+						<SetVendor>
+							<Vendors>
+								<!-- Allerian Stronghold -->
+								<Vendor Name="Cecil Meyers" 
+										Entry="19056" 
+										Type="Repair" 
+										X="-2978.951" Y="4033.115" Z="3.574028" />
+								
+								<!-- Stonebreaker Hold -->
+								<Vendor Name="Bar Talet" 
+										Entry="18962" 
+										Type="Repair" 
+										X="-2639.384" Y="4425.386" Z="36.68329" />
+							</Vendors>
+						</SetVendor>
+					
+						<SetMailbox>
+							<Mailboxes>
+								<!-- Allerian Stronghold -->
+								<Mailbox X="-2932.386" Y="4007.916" Z="-1.293741" />
+								
+								<!-- Stonebreaker Hold -->
+								<Mailbox X="-2617.452" Y="4414.927" Z="35.65971" />
+							</Mailboxes>
+						</SetMailbox>
+					
+						<!-- We are done repairing -->
+						<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+							<CustomBehavior File="Message" 
+											Text="Repairing complete." 
+											LogColor="Fuchsia" />
+						</If> <!-- repaired -->
+						
+						<If Condition="Me.IsAlliance">
+							<!-- Outside blacksmith -->
+							<RunTo X="-2963.77" Y="4017.751" Z="1.688854" />
+						
+							<!-- Fly to the hover point above the innkeep in Allerian Stronghold -->
+							<CustomBehavior File="FlyTo" X="-2939.273" Y="3984.656" Z="23.7445" />
+						</If>
+						
+						<If Condition="Me.IsHorde">
+							<!-- Fly to the hover point above the innkeep in Stonebreaker Hold -->
+							<CustomBehavior File="FlyTo" X="-2633.392" Y="4387.538" Z="93.16135" />
+						</If>
+					</If> <!-- Repairing -->
+					
+					<CustomBehavior File="Message" 
+									Text="Flying to Sethekk Halls." 
+									LogColor="Lime" />
+					
+					<!-- Fly outside of Sethekk Halls -->
+					<CustomBehavior File="FlyTo" X="-3363.793" Y="4913.244" Z="53.08671" />
+
+					<!-- Instance timer check if we did repair -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+								
+					<!-- Fly down -->
+					<CustomBehavior File="FlyTo" X="-3362.315" Y="4869.151" Z="-54.88341" />
+
+					<!-- Fly into box -->
+					<CustomBehavior File="FlyTo" X="-3362.1" Y="4752.152" Z="-101.3961" />
+					<CustomBehavior File="ForcedDismount" />
+					
+					<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
+				</If> <!-- Outland -->
+					
+				</If> <!-- SH -->
+				
+				<!-- If we don't need to vendor -->
+				<If Condition="Me.ZoneId == 3791">
+					<CustomBehavior File="Message" 
+									Text="Sethekk Halls detected. Running out to reset."
+									LogColor="Fuchsia" />
+					
+					<!-- Make our way to the exit from the ground floor -->
+					<RunTo X="31.01099" Y="1.044048" Z="0.005493299" />
+					<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
+					
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="-20.722509" Y="0.3174916" Z="0.005990623" />
+					
+					<!-- Make sure we run to the right spot outside the potral -->
+					<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
+				</If> <!-- SH -->
+			</While> <!-- Infinite loop -->
+		</If> <!-- Level check -->		
+	</QuestOrder>
+</HBProfile>
+
