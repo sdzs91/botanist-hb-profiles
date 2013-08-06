@@ -362,13 +362,10 @@
 							<CustomBehavior File="Message" 
 											Text="Setting my Hearthstone." 
 											LogColor="Lime" />
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="1000" />
+
 							<CustomBehavior File="SetHearthstone" 
 											MobId="16826" 
 											X="-708.8713" Y="2739.131" Z="94.73363" />
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="1000" />
 								
 							<!-- Run outside of inn -->
 							<RunTo X="-709.9306" Y="2699.804" Z="94.41746" />
