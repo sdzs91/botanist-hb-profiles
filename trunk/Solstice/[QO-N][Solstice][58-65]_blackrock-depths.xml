@@ -217,14 +217,86 @@
 					<RunTo X="666.2721" Y="-139.6876" Z="-46.23346" />
 					<RunTo X="691.8231" Y="-130.5651" Z="-46.23346" />
 					
-					<!-- Clear locked West Garrison door to the Shrine of Thaurissan -->
-					<RunTo X="595.7323" Y="-125.2366" Z="-38.46785" />
-					<CustomBehavior File="NoCombatMoveTo" X="595.8028" Y="-253.5177" Z="-38.46038" /> 
-					<RunTo X="596.6684" Y="-282.4213" Z="-43.10127" />
-
+					<!-- Run to the Ring of Law -->
+					<RunTo X="596.0129" Y="-108.5541" Z="-45.4115" />
+					
+					<!-- RunLikeHell to the right-hand spectators -->
+					<CustomBehavior File="RunLikeHell" 
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="580.0894" Y="-142.2944" Z="-38.39994" />
+					</CustomBehavior>
+					<RunTo X="580.0894" Y="-142.2944" Z="-38.39994" />
+					
+					<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					<!-- RunLikeHell to the second group of spectators -->
+					<CustomBehavior File="RunLikeHell" 
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="550.2949" Y="-167.3969" Z="-38.36191" />
+					</CustomBehavior>
+					<RunTo X="550.2949" Y="-167.3969" Z="-38.36191" />
+					
+					<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+									
+					<!-- RunLikeHell to the third group of spectators -->
+					<CustomBehavior File="RunLikeHell" 
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="547.2753" Y="-198.2678" Z="-38.37403" />
+						<Hotspot X="564.3515" Y="-228.5818" Z="-38.36187" />
+					</CustomBehavior>
+					<RunTo X="564.3515" Y="-228.5818" Z="-38.36187" />
+					
+					<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					<!-- Clear the entrance of Shrine of Thaurissan -->
+					<Hotspot X="593.7885" Y="-242.5599" Z="-38.37638" />
+					<Hotspot X="595.6187" Y="-259.2216" Z="-40.32296" />
+					<Hotspot X="596.3951" Y="-279.1672" Z="-43.1013" />
 					
 					
-					<!-- Clear the Shrine of Thaurissan  to -->
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 					
 					
 					

@@ -113,7 +113,7 @@
 							<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
 						</Else>
 					</If> <!-- Floors -->
-				</If> <!-- SH -->
+				</If> <!-- Sethekk Halls -->
 				
 				<!-- If we are not in the box, load the movement profile -->
 				<If Condition="Me.X &lt; -3400 || Me.X &gt; -3300 || Me.Y &lt; 4600 || Me.Y &gt; 4700" >
@@ -166,7 +166,7 @@
 											LogColor="Fuchsia" />
 						</If> <!-- Locked -->
 					</While> <!-- While we aren't in the instance -->
-				</If> <!-- In box -->
+				</If> <!-- If we are in the box -->
 				
 				<!-- If we are inside Sethekk Halls and have checked our reset -->
 				<If Condition="Me.ZoneId == 3791">
@@ -410,10 +410,8 @@
 					<CustomBehavior File="ForcedDismount" />
 					
 					<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
-				</If> <!-- Outland -->
+				</If> <!-- If we are inside Sethekk Halls and have checked our reset -->
 					
-				</If> <!-- SH -->
-				
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.ZoneId == 3791">
 					<CustomBehavior File="Message" 
