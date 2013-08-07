@@ -406,18 +406,11 @@
 							
 							<!-- Pull Beauty -->
 							<RunTo X="25.38366" Y="-525.7129" Z="110.9419" />
-				
-							<!-- GOOGE to kill Beauty -->
-							<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-											EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="39700"
-											EventX="70.61871" EventY="-544.947" EventZ="110.9304"
-											MoveOutOfGroundEffectAuraId1="111111"
-											MoveAwayFromMobCastingSpellId1="111111"
-											MoveAwayFromMobWithAuraId1="111111">
-								<Safespots>
-									<Hotspot X="70.61871" Y="-544.947" Z="110.9304" />
-								</Safespots>
-							</CustomBehavior>
+							<RunTo X="85.86034" Y="-557.1172" Z="110.9244" />
+							
+							<!-- Wait timer - wait 5 seconds to be sure we go aggro -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="5000" />
 				
 							<!-- Run to the door exiting the Furnace -->
 							<RunTo X="34.07322" Y="-438.6306" Z="110.9631" />

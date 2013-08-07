@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-M][Solstice][75-79]_utgarde-keep</Name>
+	<Name>[QO-N-M][Solstice][77-79]_utgarde-keep</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -507,7 +507,7 @@
 			<!-- In box -->
 			<If Condition="Me.X &gt; 1200 &amp;&amp; Me.X &lt; 1300 &amp;&amp; Me.Y &gt; -4900 &amp;&amp; Me.Y &lt; -4800" >
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][Solstice][75-79]_utgarde-keep" />
+								ProfileName="..\[QO-N][Solstice][77-79]_utgarde-keep" />
 			</If> <!-- In box -->				
 		</If> <!-- Level check -->
 

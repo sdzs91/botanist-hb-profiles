@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][Solstice][74-76]_sethekk-halls</Name>
+	<Name>[QO-N][Solstice][74-77]_sethekk-halls</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -122,7 +122,7 @@
 									LogColor="Fuchsia" />	
 									
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][Solstice][74-76]_sethekk-halls" />
+									ProfileName="Movement\[QO-N-M][Solstice][74-77]_sethekk-halls" />
 				</If> <!-- Not in box -->
 				
 				<!-- If we are in the box -->
@@ -225,7 +225,6 @@
 						<!-- Pulls Darkweaver Syth -->
 						<RunTo X="-134.4446" Y="173.4718" Z="0.01039251" />
 
-						
 						<!-- clear last room on the ground floor and stair-door guards of the second floor -->
 						<RunTo X="-204.9517" Y="176.3423" Z="0.01093201" />
 						<RunTo X="-243.9381" Y="159.8705" Z="0.06504456" />
@@ -267,25 +266,54 @@
 						<!-- Pull Anzsu's door guards -->
 						<RunTo X="-141.0085" Y="283.8476" Z="26.73229" />
 						
+						<!-- Wait timer - wait 3 seconds to make sure we have aggro -->
+						<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
+						
 						<!-- Pull the right-hand group entering Anzu's room -->
 						<RunTo X="-123.5941" Y="275.8971" Z="27.34166" />
+						
+						<!-- Wait timer - wait 3 seconds to make sure we have aggro -->
+						<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
 						
 						<!-- Pull the second group on the right in Anzu's room -->
 						<RunTo X="-105.839" Y="260.9236" Z="27.01575" />
 						<RunTo X="-93.4143" Y="261.5227" Z="26.73647" />
 						
+						<!-- Wait timer - wait 3 seconds to make sure we have aggro -->
+						<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
+						
 						<!-- Pull the first group on the left of Anzu's room -->
+						<RunTo X="-91.57882" Y="279.1673" Z="26.20838" />
 						<RunTo X="-97.51299" Y="297.7459" Z="26.48318" />
 						
+						<!-- Wait timer - wait 3 seconds to make sure we have aggro -->
+						<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
+											
 						<!-- Pull back left group in Anzu's room -->
 						<RunTo X="-68.0854" Y="312.47" Z="26.71863" />
 						
+						<!-- Wait timer - wait 3 seconds to make sure we have aggro -->
+						<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
+											
 						<!-- Pull back right group in Anzu's room -->
 						<RunTo X="-58.58341" Y="287.7144" Z="26.91286" />
 						
+						<!-- Wait timer - wait 3 seconds to make sure we have aggro -->
+						<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
+											
 						<!-- Pull the door guards entering Talon King Ikiss's room-->
 						<RunTo X="-16.60608" Y="286.7267" Z="26.73114" />
-										
+									
+					<!-- Wait timer - wait 3 seconds to make sure we have aggro -->
+											<CustomBehavior File="WaitTimer" 
+																WaitTime="3000" />
+											
 						<!-- Forces kill of Talon King Ikiss -->
 						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="18473"
@@ -306,8 +334,8 @@
 					
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
-									MinLevel="75" 
-									ProfileName="[QO-N][Solstice][76-79]_utgarde-keep.xml"  />
+									MinLevel="77" 
+									ProfileName="[QO-N][Solstice][77-79]_utgarde-keep.xml"  />
 									
 					<!-- Repair if necessary -->
 					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
