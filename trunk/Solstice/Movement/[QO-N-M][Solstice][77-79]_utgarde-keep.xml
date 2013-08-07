@@ -165,15 +165,15 @@
 									Text="We are Horde." 
 									LogColor="Cyan" />
 								
-					<!-- Run to the Grom'gol zeppelin -->
+					<!-- Run to the Grom'gol Zeppelin -->
 					<RunTo X="1868.09" Y="-4417.422" Z="135.232" />				
 			
 					<!-- Forced dismount -->		
 					<CustomBehavior File="ForcedDismount" />						
 									
-					<!-- Profile message - Waiting for the zeppelin -->
+					<!-- Profile message - Waiting for the Zeppelin -->
 					<CustomBehavior File="Message" 
-									Text="Waiting for the zeppelin." 
+									Text="Waiting for the Zeppelin." 
 									LogColor="Cyan" />
 									
 					<CustomBehavior File="UseTransport" 
@@ -194,59 +194,67 @@
 						GetOffY="218.9818" 
 						GetOffZ="31.86087" />	
 						
-					<!-- Run to the Grom'gol flightmaster -->
+					<!-- Run to the Grom'gol flight master -->
 					<RunTo X="-12414.2" Y="146.29" Z="3.266916" />
 					
-					<!-- Run to the Ubdercity zeppelin -->
-					<RunTo X="-12407.97" Y="200.2348" Z="31.8366" />				
-						
-					<!-- Forced dismount -->		
-					<CustomBehavior File="ForcedDismount" />
-
-					<CustomBehavior File="UseTransport" 
-								TransportId="176495" 
-								WaitAtX="-12407.97" 
-								WaitAtY="200.2348" 
-								WaitAtZ="31.8366"								
-								TransportStartX="-12406.8906" 
-								TransportStartY="211.837677" 
-								TransportStartZ="49.6984367"						
-								StandOnX="-12398.64" 
-								StandOnY="197.7412" 
-								StandOnZ="33.84207"
-								TransportEndX="2062.59888" 
-								TransportEndY="235.264465" 
-								TransportEndZ="117.733627"	
-								GetOffX="2057.45" 
-								GetOffY="238.7743" 
-								GetOffZ="99.76712" />				
-					<!-- Run to the doorway -->
-					<RunTo X="2060.382" Y="254.9573" Z="99.76746" />
+					<!-- If we are in Northern Stranglethorn -->
+					<If Condition="Me.ZoneId == 33">
 					
-					<!-- Run to the Howling Fjord zeppelin -->
-					<RunTo X="2062.118" Y="358.4322" Z="82.47268" />
-								
-					<!-- Undercity to Howling Fjord -->
-					<CustomBehavior File="UseTransport"
-									TransportId="181689"
-									WaitAtX="2062.118" 
-									WaitAtY="358.4322" 
-									WaitAtZ="82.47268" 
-									TransportStartX="2056.4926" 
-									TransportStartY="381.6347" 
-									TransportStartZ="100.3620"
-									TransportEndX="1989.352" 
-									TransportEndY="-6082.7763"
-									TransportEndZ="85.59"
-									StandOnX="2060.598" 
-									StandOnY="370.0439" 
-									StandOnZ="82.48199" 
-									GetOffX="1973.536"
-									GetOffY="-6099.92" 
-									GetOffZ="67.15816" />
-										
+						<!-- Run to the Undercity Zeppelin -->
+						<RunTo X="-12409.83" Y="202.752" Z="31.97309" />				
+							
+						<!-- Forced dismount -->		
+						<CustomBehavior File="ForcedDismount" />
+
+						<CustomBehavior File="UseTransport" 
+									TransportId="176495" 
+									WaitAtX="-12410.93" 
+									WaitAtY="202.3381" 
+									WaitAtZ="31.77636"								
+									TransportStartX="-12406.8906" 
+									TransportStartY="211.837677" 
+									TransportStartZ="49.6984367"						
+									StandOnX="-12398.64" 
+									StandOnY="197.7412" 
+									StandOnZ="33.84207"
+									TransportEndX="2062.59888" 
+									TransportEndY="235.264465" 
+									TransportEndZ="117.733627"	
+									GetOffX="2057.45" 
+									GetOffY="238.7743" 
+									GetOffZ="99.76712" />				
+						<!-- Run to the doorway -->
+						<RunTo X="2060.382" Y="254.9573" Z="99.76746" />
+					</If>
+					
+					<!-- If we are in Tristfall Glades -->
+					<If Condition="Me.ZoneId == 85" >
+					
+						<!-- Run to the Howling Fjord Zeppelin -->
+						<RunTo X="2062.118" Y="358.4322" Z="82.47268" />
+									
+						<!-- Undercity to Howling Fjord -->
+						<CustomBehavior File="UseTransport"
+										TransportId="181689"
+										WaitAtX="2062.118" 
+										WaitAtY="358.4322" 
+										WaitAtZ="82.47268" 
+										TransportStartX="2056.4926" 
+										TransportStartY="381.6347" 
+										TransportStartZ="100.3620"
+										TransportEndX="1989.352" 
+										TransportEndY="-6082.7763"
+										TransportEndZ="85.59"
+										StandOnX="2060.598" 
+										StandOnY="370.0439" 
+										StandOnZ="82.48199" 
+										GetOffX="1973.536"
+										GetOffY="-6099.92" 
+										GetOffZ="67.15816" />
+											
 						<!-- Run to the other side of the room -->
 						<RunTo  X="1959.064" Y="-6118.095" Z="27.84882" />
+					</If>		
 				</If> <!-- Horde -->
 			</If> <!-- Kalimdor -->
 			
@@ -287,33 +295,33 @@
 				
 				<If Condition="Me.IsHorde" >
 				
-					<!-- Run to the Ubdercity zeppelin -->
-					<RunTo X="-12407.97" Y="200.2348" Z="31.8366" />				
-						
-					<!-- Forced dismount -->		
-					<CustomBehavior File="ForcedDismount" />
+					<!-- Run to the Undercity Zeppelin -->
+						<RunTo X="-12409.83" Y="202.752" Z="31.97309" />				
+							
+						<!-- Forced dismount -->		
+						<CustomBehavior File="ForcedDismount" />
 
-					<CustomBehavior File="UseTransport" 
-								TransportId="176495" 
-								WaitAtX="-12407.97" 
-								WaitAtY="200.2348" 
-								WaitAtZ="31.8366"								
-								TransportStartX="-12406.8906" 
-								TransportStartY="211.837677" 
-								TransportStartZ="49.6984367"						
-								StandOnX="-12398.64" 
-								StandOnY="197.7412" 
-								StandOnZ="33.84207"
-								TransportEndX="2062.59888" 
-								TransportEndY="235.264465" 
-								TransportEndZ="117.733627"	
-								GetOffX="2057.45" 
-								GetOffY="238.7743" 
-								GetOffZ="99.76712" />				
-					<!-- Run to the doorway -->
-					<RunTo X="2060.382" Y="254.9573" Z="99.76746" />
+						<CustomBehavior File="UseTransport" 
+									TransportId="176495" 
+									WaitAtX="-12410.93" 
+									WaitAtY="202.3381" 
+									WaitAtZ="31.77636"								
+									TransportStartX="-12406.8906" 
+									TransportStartY="211.837677" 
+									TransportStartZ="49.6984367"						
+									StandOnX="-12398.64" 
+									StandOnY="197.7412" 
+									StandOnZ="33.84207"
+									TransportEndX="2062.59888" 
+									TransportEndY="235.264465" 
+									TransportEndZ="117.733627"	
+									GetOffX="2057.45" 
+									GetOffY="238.7743" 
+									GetOffZ="99.76712" />						
+						<!-- Run to the doorway -->
+						<RunTo X="2060.382" Y="254.9573" Z="99.76746" />
 					
-					<!-- Run to the Howling Fjord zeppelin -->
+					<!-- Run to the Howling Fjord Zeppelin -->
 					<RunTo X="2062.118" Y="358.4322" Z="82.47268" />
 								
 					<!-- Undercity to Howling Fjord -->
