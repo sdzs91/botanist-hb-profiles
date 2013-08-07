@@ -158,182 +158,114 @@
 					<CustomBehavior File="Message" 
 									Text="Blackrock Depths initialized."  
 									LogColor="Fuchsia" />
-									
-					<!-- Run to first Shadowforge Gate -->
-					<RunTo X="493.8814" Y="14.29045" Z="-70.35346" />
-									
-					<!-- First Shadowforge Gate interact -->
-					<CustomBehavior File="InteractWith"
-									ObjectType="GameObject"
-									MobId="170559"
-									NumOfTimes="1"
-									X="496.3966"
-									Y="16.012654"
-									Z="-70.47108" />	
-									
-					<!-- Run through the gate -->
-					<RunTo X="525.9897" Y="19.44355" Z="-71.12934" />
+
+					<!-- If we are below level 60 -->				
+					<If Condition="Me.Level &lt;= 60">	
+
+						<!-- Profile message - We are below level 60 higher level mobs will be avoided -->
+						<CustomBehavior File="Message" 
+									Text="We are below level 60, the higher level mobs will be avoided."  
+									LogColor="Fuchsia" />
 					
-					<!-- Make sure we kill the fire elemental -->
-					<CustomBehavior File="TargetAndMoveToMob" 
-									MobId="8910" 
-									MoveWithinMaxRangeOfMob="1" 
-									WaitForNpcs="false"
-									X="564.9453" Y="21.04286" Z="-70.8724" />		
-									
-					<!-- Run to second Shadowforge Gate -->	
-					<RunTo X="567.6488" Y="-7.285117" Z="-70.21188" />
+						<!-- Run to first Shadowforge Gate -->
+						<RunTo X="493.8814" Y="14.29045" Z="-70.35346" />
+										
+						<!-- First Shadowforge Gate interact -->
+						<CustomBehavior File="InteractWith"
+										ObjectType="GameObject"
+										MobId="170559"
+										NumOfTimes="1"
+										X="496.3966"
+										Y="16.012654"
+										Z="-70.47108" />	
+										
+						<!-- Run through the gate -->
+						<RunTo X="525.9897" Y="19.44355" Z="-71.12934" />
+						
+						<!-- Make sure we kill the fire elemental -->
+						<CustomBehavior File="TargetAndMoveToMob" 
+										MobId="8910" 
+										MoveWithinMaxRangeOfMob="1" 
+										WaitForNpcs="false"
+										X="564.9453" Y="21.04286" Z="-70.8724" />		
+										
+						<!-- Run to second Shadowforge Gate -->	
+						<RunTo X="567.6488" Y="-7.285117" Z="-70.21188" />
+						
+						<!-- Second Shadowforge Gate interact -->
+						<CustomBehavior File="InteractWith"
+										ObjectType="GameObject"
+										MobId="170560"
+										NumOfTimes="1"
+										X="569.58905"
+										Y="-9.361542"
+										Z="-70.25659" />
+										
+						<!-- Run to East Garrison Door -->
+						<RunTo X="559.0313" Y="-50.95553" Z="-60.35724" />	
+						
+						<!-- East Garrison Door interact -->
+						<CustomBehavior File="InteractWith"
+										ObjectType="GameObject"
+										MobId="170570"
+										NumOfTimes="1"
+										X="560.5311"
+										Y="-51.815918"
+										Z="-60.09396" />
+						
+						<!-- Clear East Garrison door to the locked West Garrison door -->
+						<RunTo X="566.5451" Y="-56.07999" Z="-60.01884" />
+						<RunTo X="591.2901" Y="-53.97068" Z="-60.04206" />
+						<RunTo X="610.876" Y="-41.21051" Z="-60.05725" />
+						<RunTo X="627.3439" Y="-61.75054" Z="-60.05839" />
+						<RunTo X="595.9269" Y="-85.40606" Z="-45.45787" />
+						<RunTo X="568.4818" Y="-80.1502" Z="-45.02098" />
+						<RunTo X="610.506" Y="-97.71649" Z="-45.86585" />
+						<RunTo X="630.5255" Y="-108.3571" Z="-46.04316" />
+						<RunTo X="666.2721" Y="-139.6876" Z="-46.23346" />
+						<RunTo X="691.8231" Y="-130.5651" Z="-46.23346" />
+						
+						<!-- Run to the Ring of Law -->
+						<RunTo X="596.0129" Y="-108.5541" Z="-45.4115" />
+						
+						<!-- RunLikeHell to the right-hand spectators -->
+						<CustomBehavior File="RunLikeHell" 
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="580.0894" Y="-142.2944" Z="-38.39994" />
+						</CustomBehavior>
+						<RunTo X="580.0894" Y="-142.2944" Z="-38.39994" />
+						
+						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+						
+						<!-- RunLikeHell to the second group of spectators -->
+						<CustomBehavior File="RunLikeHell" 
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="550.2949" Y="-167.3969" Z="-38.36191" />
+						</CustomBehavior>
+						<RunTo X="550.2949" Y="-167.3969" Z="-38.36191" />
+						
+						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+										
+						<!-- RunLikeHell to the third group of spectators -->
+						<CustomBehavior File="RunLikeHell" 
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="547.2753" Y="-198.2678" Z="-38.37403" />
+							<Hotspot X="564.3515" Y="-228.5818" Z="-38.36187" />
+						</CustomBehavior>
+						<RunTo X="564.3515" Y="-228.5818" Z="-38.36187" />
+						
+						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
 					
-					<!-- Second Shadowforge Gate interact -->
-					<CustomBehavior File="InteractWith"
-									ObjectType="GameObject"
-									MobId="170560"
-									NumOfTimes="1"
-									X="569.58905"
-									Y="-9.361542"
-									Z="-70.25659" />
-									
-					<!-- Run to East Garrison Door -->
-					<RunTo X="559.0313" Y="-50.95553" Z="-60.35724" />	
-					
-					<!-- East Garrison Door interact -->
-					<CustomBehavior File="InteractWith"
-									ObjectType="GameObject"
-									MobId="170570"
-									NumOfTimes="1"
-									X="560.5311"
-									Y="-51.815918"
-									Z="-60.09396" />
-					
-					<!-- Clear East Garrison door to the locked West Garrison door -->
-					<RunTo X="566.5451" Y="-56.07999" Z="-60.01884" />
-					<RunTo X="591.2901" Y="-53.97068" Z="-60.04206" />
-					<RunTo X="610.876" Y="-41.21051" Z="-60.05725" />
-					<RunTo X="627.3439" Y="-61.75054" Z="-60.05839" />
-					<RunTo X="595.9269" Y="-85.40606" Z="-45.45787" />
-					<RunTo X="568.4818" Y="-80.1502" Z="-45.02098" />
-					<RunTo X="610.506" Y="-97.71649" Z="-45.86585" />
-					<RunTo X="630.5255" Y="-108.3571" Z="-46.04316" />
-					<RunTo X="666.2721" Y="-139.6876" Z="-46.23346" />
-					<RunTo X="691.8231" Y="-130.5651" Z="-46.23346" />
-					
-					<!-- Run to the Ring of Law -->
-					<RunTo X="596.0129" Y="-108.5541" Z="-45.4115" />
-					
-					<!-- RunLikeHell to the right-hand spectators -->
-					<CustomBehavior File="RunLikeHell" 
-									NumOfTimes="1" 
-									AllowCombat="false">
-						<Hotspot X="580.0894" Y="-142.2944" Z="-38.39994" />
-					</CustomBehavior>
-					<RunTo X="580.0894" Y="-142.2944" Z="-38.39994" />
-					
-					<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
-					
-					<!-- RunLikeHell to the second group of spectators -->
-					<CustomBehavior File="RunLikeHell" 
-									NumOfTimes="1" 
-									AllowCombat="false">
-						<Hotspot X="550.2949" Y="-167.3969" Z="-38.36191" />
-					</CustomBehavior>
-					<RunTo X="550.2949" Y="-167.3969" Z="-38.36191" />
-					
-					<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
-									
-					<!-- RunLikeHell to the third group of spectators -->
-					<CustomBehavior File="RunLikeHell" 
-									NumOfTimes="1" 
-									AllowCombat="false">
-						<Hotspot X="547.2753" Y="-198.2678" Z="-38.37403" />
-						<Hotspot X="564.3515" Y="-228.5818" Z="-38.36187" />
-					</CustomBehavior>
-					<RunTo X="564.3515" Y="-228.5818" Z="-38.36187" />
-					
-					<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
-					
-					<!-- Clear the entrance of Shrine of Thaurissan -->
-					<RunTo X="593.7885" Y="-242.5599" Z="-38.37638" />
-					<RunTo X="595.6187" Y="-259.2216" Z="-40.32296" />
-					<RunTo X="596.3951" Y="-279.1672" Z="-43.1013" />
-					
-					<!-- Pull the group on the left -->
-					<RunTo X="623.0304" Y="-283.2556" Z="-43.10722" />
-					
-					<!-- Pull the two bridge elementals -->
-					<RunTo X="645.2542" Y="-284.8105" Z="-43.24514" />
-					
-					<!-- Pull the next two elementals -->
-					<CustomBehavior File="RunLikeHell" 
-									UseCTM="false" 
-									NumOfTimes="1" 
-									AllowCombat="false">
-						<Hotspot X="689.6422" Y="-279.79" Z="-43.19712" />
-						<Hotspot X="715.7651" Y="-281.571" Z="-42.87342" />
-						<Hotspot X="733.2648" Y="-276.0323" Z="-42.80363" />
-						<Hotspot X="740.7075" Y="-275.4771" Z="-42.83439" />
-						<Hotspot X="739.7984" Y="-283.6084" Z="-42.83404" />
-					</CustomBehavior>
-					<RunTo X="739.7984" Y="-283.6084" Z="-42.83404" />
-					
-					<!-- Pull the first group on the left in The Domicile -->
-					<RunTo X="767.723" Y="-259.7374" Z="-43.39937" />
-					
-					<!-- Pull the second group on the left in The Domicile -->
-					<RunTo X="791.739" Y="-225.095" Z="-43.28893" />
-					
-					<!-- Pull the center group near the book shelves -->
-					<RunTo X="791.3059" Y="-269.0306" Z="-43.33686" />
-					
-					<!-- Pull the right-hand group -->
-					<RunTo X="791.9423" Y="-298.1971" Z="-43.29707" />
-					
-					<!-- Clear the first room on the right -->
-					<RunTo X="773.9301" Y="-304.7879" Z="-43.29959" />
-					
-					<!-- Clear the second room on the right -->
-					<RunTo X="813.0432" Y="-301.1625" Z="-43.29477" />
-					
-					<!-- Pull the group at the door entering Shadowforge City -->
-					<RunTo X="850.4582" Y="-249.9508" Z="-49.9968" />
-					
-					<CustomBehavior File="UserSettings" StopBot="true" />
-					<!-- XXX -->
-					
-					
-					<!-- XXX -->
-					
-					
-					<!-- XXX -->
-					
-					
-					<!-- XXX -->
-					
-					
-					<!-- XXX -->
-					
-					
-					<!-- XXX -->
-					
-					
-					<!-- XXX -->
-					
-					
-					<!-- XXX -->
-					
-					
-					<!-- XXX -->
-					
-					
-					<!-- XXX -->
-					
-					
-					<!-- XXX -->
+						<CustomBehavior File="UserSettings" StopBot="true" />
 					
 					
 					
@@ -343,11 +275,237 @@
 					
 					
 					
+					</If>
+								
+					<!-- If we are level 60 or above -->			
+					<If Condition="Me.Level &gt;= 60">
+								
+						<!-- Profile message - We are above level 60, we are no longer avoiding the higher level mobs -->
+						<CustomBehavior File="Message" 
+									Text="We are above level 60, we are no longer avoiding the higher level mobs."  
+									LogColor="Fuchsia" />		
+								
+						<!-- Run to first Shadowforge Gate -->
+						<RunTo X="493.8814" Y="14.29045" Z="-70.35346" />
+										
+						<!-- First Shadowforge Gate interact -->
+						<CustomBehavior File="InteractWith"
+										ObjectType="GameObject"
+										MobId="170559"
+										NumOfTimes="1"
+										X="496.3966"
+										Y="16.012654"
+										Z="-70.47108" />	
+										
+						<!-- Run through the gate -->
+						<RunTo X="525.9897" Y="19.44355" Z="-71.12934" />
+						
+						<!-- Make sure we kill the fire elemental -->
+						<CustomBehavior File="TargetAndMoveToMob" 
+										MobId="8910" 
+										MoveWithinMaxRangeOfMob="1" 
+										WaitForNpcs="false"
+										X="564.9453" Y="21.04286" Z="-70.8724" />		
+										
+						<!-- Run to second Shadowforge Gate -->	
+						<RunTo X="567.6488" Y="-7.285117" Z="-70.21188" />
+						
+						<!-- Second Shadowforge Gate interact -->
+						<CustomBehavior File="InteractWith"
+										ObjectType="GameObject"
+										MobId="170560"
+										NumOfTimes="1"
+										X="569.58905"
+										Y="-9.361542"
+										Z="-70.25659" />
+										
+						<!-- Run to East Garrison Door -->
+						<RunTo X="559.0313" Y="-50.95553" Z="-60.35724" />	
+						
+						<!-- East Garrison Door interact -->
+						<CustomBehavior File="InteractWith"
+										ObjectType="GameObject"
+										MobId="170570"
+										NumOfTimes="1"
+										X="560.5311"
+										Y="-51.815918"
+										Z="-60.09396" />
+						
+						<!-- Clear East Garrison door to the locked West Garrison door -->
+						<RunTo X="566.5451" Y="-56.07999" Z="-60.01884" />
+						<RunTo X="591.2901" Y="-53.97068" Z="-60.04206" />
+						<RunTo X="610.876" Y="-41.21051" Z="-60.05725" />
+						<RunTo X="627.3439" Y="-61.75054" Z="-60.05839" />
+						<RunTo X="595.9269" Y="-85.40606" Z="-45.45787" />
+						<RunTo X="568.4818" Y="-80.1502" Z="-45.02098" />
+						<RunTo X="610.506" Y="-97.71649" Z="-45.86585" />
+						<RunTo X="630.5255" Y="-108.3571" Z="-46.04316" />
+						<RunTo X="666.2721" Y="-139.6876" Z="-46.23346" />
+						<RunTo X="691.8231" Y="-130.5651" Z="-46.23346" />
+						
+						<!-- Run to the Ring of Law -->
+						<RunTo X="596.0129" Y="-108.5541" Z="-45.4115" />
+						
+						<!-- RunLikeHell to the right-hand spectators -->
+						<CustomBehavior File="RunLikeHell" 
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="580.0894" Y="-142.2944" Z="-38.39994" />
+						</CustomBehavior>
+						<RunTo X="580.0894" Y="-142.2944" Z="-38.39994" />
+						
+						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+						
+						<!-- RunLikeHell to the second group of spectators -->
+						<CustomBehavior File="RunLikeHell" 
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="550.2949" Y="-167.3969" Z="-38.36191" />
+						</CustomBehavior>
+						<RunTo X="550.2949" Y="-167.3969" Z="-38.36191" />
+						
+						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+										
+						<!-- RunLikeHell to the third group of spectators -->
+						<CustomBehavior File="RunLikeHell" 
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="547.2753" Y="-198.2678" Z="-38.37403" />
+							<Hotspot X="564.3515" Y="-228.5818" Z="-38.36187" />
+						</CustomBehavior>
+						<RunTo X="564.3515" Y="-228.5818" Z="-38.36187" />
+						
+						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+												
+						<!-- Clear the entrance of Shrine of Thaurissan -->
+						<CustomBehavior File="RunLikeHell" 
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="588.0265" Y="-239.1576" Z="-38.33234" />
+							<Hotspot X="595.4872" Y="-252.9997" Z="-38.46623" />
+							<Hotspot X="596.0645" Y="-276.7381" Z="-43.10135" />
+							<Hotspot X="595.3687" Y="-252.7586" Z="-38.46747" />
+						</CustomBehavior>
+						<RunTo X="595.3687" Y="-252.7586" Z="-38.46747" />
+
+						<!-- Pull the group on the left -->
+						<RunTo X="595.7094" Y="-280.9147" Z="-43.1013" />
+						<RunTo X="623.0304" Y="-283.2556" Z="-43.10722" />
+						
+						<!-- Pull the two bridge elementals -->
+						<RunTo X="645.2542" Y="-284.8105" Z="-43.24514" />
+						
+						<!-- Pull the next two elementals -->
+						<CustomBehavior File="RunLikeHell" 
+										UseCTM="false" 
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="689.6422" Y="-279.79" Z="-43.19712" />
+							<Hotspot X="715.7651" Y="-281.571" Z="-42.87342" />
+							<Hotspot X="733.2648" Y="-276.0323" Z="-42.80363" />
+							<Hotspot X="740.7075" Y="-275.4771" Z="-42.83439" />
+							<Hotspot X="739.7984" Y="-283.6084" Z="-42.83404" />
+						</CustomBehavior>
+						<RunTo X="739.7984" Y="-283.6084" Z="-42.83404" />
+						
+						<!-- Pull the first group on the left in The Domicile -->
+						<RunTo X="767.723" Y="-259.7374" Z="-43.39937" />
+						
+						<!-- Pull the second group on the left in The Domicile -->
+						<RunTo X="791.739" Y="-225.095" Z="-43.28893" />
+						
+						<!-- Pull the center group near the book shelves -->
+						<RunTo X="791.3059" Y="-269.0306" Z="-43.33686" />
+						
+						<!-- Pull the right-hand group -->
+						<RunTo X="791.9423" Y="-298.1971" Z="-43.29707" />
+						
+						<!-- Clear the first room on the right -->
+						<RunTo X="773.9301" Y="-304.7879" Z="-43.29959" />
+						
+						<!-- Clear the second room on the right -->
+						<RunTo X="813.0432" Y="-301.1625" Z="-43.29477" />
+						
+						<!-- Pull the group at the door entering Shadowforge City -->
+						<RunTo X="850.4582" Y="-249.9508" Z="-49.9968" />
+						
+						<!-- Pull the group at the Shadow Vault door -->
+						<RunTo X="863.0449" Y="-296.494" Z="-49.9375" />
+						
+						<!-- Pulling the group in the Shadow Vault -->
+						<RunTo X="844.1882" Y="-316.3904" Z="-50.2864" />
+						
+						<!-- Pulling Warder Stilgiss -->
+						<RunTo X="824.0263" Y="-338.7129" Z="-50.21777" />
+						
+						<!-- Pulling the last group exiting Shadowforge City -->
+						<RunTo X="908.8571" Y="-309.1023" Z="-49.9356" />
+						
+						<!-- Pulling the 1st construct -->
+						<RunTo X="894.2448" Y="-358.7" Z="-49.93695" />
+						<RunTo X="902.3375" Y="-387.6328" Z="-49.47581" />
+						
+						<!-- Wait timer- wait 30 seconds to make sure we have aggro -->
+						<CustomBehavior File="WaitTimer" 
+												WaitTime="30000" />
+						
+						<!-- Pulling the 2nd construct -->
+						<RunTo X="919.9565" Y="-400.4873" Z="-49.65272" />
+						
+						<!-- Wait timer- wait 30 seconds to make sure we have aggro -->
+						<CustomBehavior File="WaitTimer" 
+												WaitTime="30000" />
+												
+						<RunTo X="933.1699" Y="-421.7071" Z="-55.50344" />
+						
+						<!-- Pulling the 3rd construct -->
+						<RunTo X="961.313" Y="-393.6404" Z="-60.83768" />
+						
+						<!-- Pulling the 4th construct -->
+						<RunTo X="981.2277" Y="-377.5467" Z="-65.83135" />
+						
+						<!-- Pulling the 5th construct -->
+						<RunTo X="966.3475" Y="-343.1573" Z="-71.71923" />
+						
+						<!-- Pulling the door guards before Lord Incendius -->
+						<RunTo X="932.4054" Y="-319.8398" Z="-71.7617" />
+						
+						<!-- GOOGE to kill Lord Incendius -->
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="9017"
+										EventX="899.8699" EventY="-278.6437" EventZ="-71.87404"
+										MoveOutOfGroundEffectAuraId1="111111"
+										MoveAwayFromMobCastingSpellId1="111111"
+										MoveAwayFromMobWithAuraId1="111111">
+							<Safespots>
+								<Hotspot X="899.8699" Y="-278.6437" Z="-71.87404" />
+							</Safespots>
+						</CustomBehavior>
+
+						<!-- Pulling the 1st elementals -->
+						<RunTo X="864.8226" Y="-249.0783" Z="-71.75791" />
+						
+						<!-- Pulling the 2nd elementals -->
+						<RunTo X="833.1629" Y="-226.9291" Z="-72.04496" />
+						
+						<!-- Pulling the 3rd elementals -->
+						<RunTo X="805.8466" Y="-203.575" Z="-72.85842" />
+						
+						<!-- Pulling the 4th elementals -->
+						<RunTo X="768.7166" Y="-169.9092" Z="-73.44596" />
+						
+						<!-- Move to the big gate opening into the Dark Iron Highway -->
+						<RunTo X="727.5874" Y="-115.1883" Z="-71.77332" />
+						
+						<CustomBehavior File="UserSettings" StopBot="true" />
 					
-					
-					
-					
-					
+					</If>	<!-- If we are level 60 or above -->
 					
 					
 					<!-- Run to the exit -->

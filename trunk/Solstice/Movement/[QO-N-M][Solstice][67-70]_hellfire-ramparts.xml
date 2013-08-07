@@ -501,9 +501,6 @@
 							
 							<!-- Fly above hellfire ramparts -->
 							<CustomBehavior File="FlyTo" X="-334.9235" Y="3018.459" Z="37.46231" />
-
-							<!-- Instance timer check if we didn't repair -->
-							<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
 							
 							<!-- Land in the box -->
 							<CustomBehavior File="FlyTo" X="-363.436" Y="3078.43" Z="-15.00165" />

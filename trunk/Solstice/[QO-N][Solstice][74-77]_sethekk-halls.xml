@@ -168,7 +168,7 @@
 					</While> <!-- While we aren't in the instance -->
 				</If> <!-- If we are in the box -->
 				
-				<!-- If we are inside Sethekk Halls and have checked our reset -->
+				<!-- If we are inside Sethekk Halls -->
 				<If Condition="Me.ZoneId == 3791">
 									
 					<!-- Entrance -->
@@ -212,14 +212,7 @@
 					<RunTo X="-98.92248" Y="176.8694" Z="0.009124153" />
 					<RunTo X="-108.3063" Y="173.1768" Z="0.009124153" />
 					
-					<If Condition="Me.Level &lt; 73" > 
-					
-						<!-- Run to the entrance -->
-						<RunTo X="31.01099" Y="1.044048" Z="0.005493299" />
-						<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
-						
-					</If>
-					
+					<!-- If we are 73 or above -->
 					<If Condition="Me.Level &gt;= 73" > 
 					
 						<!-- Pulls Darkweaver Syth -->
@@ -310,7 +303,7 @@
 						<!-- Pull the door guards entering Talon King Ikiss's room-->
 						<RunTo X="-16.60608" Y="286.7267" Z="26.73114" />
 									
-					<!-- Wait timer - wait 3 seconds to make sure we have aggro -->
+						<!-- Wait timer - wait 3 seconds to make sure we have aggro -->
 											<CustomBehavior File="WaitTimer" 
 																WaitTime="3000" />
 											
@@ -325,16 +318,24 @@
 								<Hotspot X="44.56851" Y="286.1446" Z="25.01321" />
 							</Safespots>
 						</CustomBehavior>
+						
+						
+					</If>	<!-- If we are 73 or above -->
+					
 					
 						<!-- run to the exit -->
 						<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
-					</If>
-					
-					<!-- If we are high enough to go to the next instance, do so -->
-					<CustomBehavior File="Misc\LoadProfileOn" 
+						
+						<!-- If we are high enough to go to the next instance, do so -->
+						<CustomBehavior File="Misc\LoadProfileOn" 
 									MinLevel="77" 
-									ProfileName="[QO-N][Solstice][77-79]_utgarde-keep.xml"  />
+									ProfileName="[QO-N][Solstice][77-79]_utgarde-keep.xml"  />									
+
+				</If> 	<!-- If we are inside Sethekk Halls -->				
 									
+				<!-- If we are inside Sethekk Halls -->
+				<If Condition="Me.ZoneId == 3791">	
+				
 					<!-- Repair if necessary -->
 					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 					
@@ -440,28 +441,30 @@
 							<!-- Fly to the hover point above the innkeep in Stonebreaker Hold -->
 							<CustomBehavior File="FlyTo" X="-2633.392" Y="4387.538" Z="93.16135" />
 						</If>
+						
+				
+						<CustomBehavior File="Message" 
+										Text="Flying to Sethekk Halls." 
+										LogColor="Lime" />
+						
+						<!-- Fly outside of Sethekk Halls -->
+						<CustomBehavior File="FlyTo" X="-3363.793" Y="4913.244" Z="53.08671" />
+
+						<!-- Instance timer check if we did repair -->
+						<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+									
+						<!-- Fly down -->
+						<CustomBehavior File="FlyTo" X="-3362.315" Y="4869.151" Z="-54.88341" />
+
+						<!-- Fly into box -->
+						<CustomBehavior File="FlyTo" X="-3362.1" Y="4752.152" Z="-101.3961" />
+						<CustomBehavior File="ForcedDismount" />
+						
+						<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
+						
 					</If> <!-- Repair if necessary -->
-					
-					<CustomBehavior File="Message" 
-									Text="Flying to Sethekk Halls." 
-									LogColor="Lime" />
-					
-					<!-- Fly outside of Sethekk Halls -->
-					<CustomBehavior File="FlyTo" X="-3363.793" Y="4913.244" Z="53.08671" />
+				</If> <!-- If we are inside Sethekk Halls -->	
 
-					<!-- Instance timer check if we did repair -->
-					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
-								
-					<!-- Fly down -->
-					<CustomBehavior File="FlyTo" X="-3362.315" Y="4869.151" Z="-54.88341" />
-
-					<!-- Fly into box -->
-					<CustomBehavior File="FlyTo" X="-3362.1" Y="4752.152" Z="-101.3961" />
-					<CustomBehavior File="ForcedDismount" />
-					
-					<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
-				</If> <!-- If we are inside Sethekk Halls and have checked our reset -->
-					
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.ZoneId == 3791">
 					<CustomBehavior File="Message" 

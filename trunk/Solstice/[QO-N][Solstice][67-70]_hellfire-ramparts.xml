@@ -217,128 +217,139 @@
 					<RunTo X="-1328.626" Y="1658.497" Z="68.99782" />
 					
 					<!-- Run to the end of the bridge -->
-					<RunTo X="-1290.817" Y="1673.272" Z="68.39494" />
+					<RunTo X="-1276.491" Y="1671.906" Z="68.64146" />
 					
 					<!-- Wait timer wait 5 seconds to aggro the mobs -->
 					<CustomBehavior File="WaitTimer" 
-										WaitTime="15000" />
+										WaitTime="5000" />
 					
 					<!-- Pull the first group on the right after the bridge -->
 					<RunTo X="-1277.047" Y="1657.461" Z="69.09747" />
-																								
+										
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
 					<!-- Pull the second group on the left after the bridge -->
 					<RunTo X="-1245.894" Y="1647.94" Z="67.55897" />
 					
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
 					<!-- Pull second group on the left after the bridge  -->
 					<RunTo X="-1243.185" Y="1623.843" Z="68.50868" />
 					
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
 					<!-- Pull the second group on the right -->
 					<RunTo X="-1253.4" Y="1591.96" Z="68.55814" />
 					
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
 					<!-- Pull third group on the left after the bridge  -->
 					<RunTo X="-1275.092" Y="1541.744" Z="68.56787" />
 					
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
 					<!-- Pull the third group on the right -->
 					<RunTo X="-1276.361" Y="1563.736" Z="68.5933" />
 					<RunTo X="-1293.089" Y="1530.273" Z="68.59075" />
 					<RunTo X="-1277.7" Y="1501.062" Z="68.57021" />
 					<RunTo X="-1284.042" Y="1489.25" Z="68.58755" />
-																						
+									
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
 					<!-- Pull the barrier group on the left -->
 					<RunTo X="-1234.819" Y="1476.051" Z="68.55984" />
+							
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
+					<!-- Pull the group in front of the barrier -->		
+					<CustomBehavior File="NoCombatMoveTo" X="-1187.759" Y="1476.556" Z="68.46307" />
 					
-					<!-- If we are 67 or greater, we can kill bosses -->		
-					<If Condition="Me.Level &gt;= 67" >
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
+					<!-- Pull the group at the door to the stairs -->	
+					<CustomBehavior File="NoCombatMoveTo" X="-1205.454" Y="1534.658" Z="68.54165" />
 					
-						<!-- Profile message - We are level 67 or above, we can kill bosses -->
-						<CustomBehavior File="Message" 
-									Text="We are level 67 or above, we can kill bosses."  
-									LogColor="Fuchsia" />
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
+					<!-- Pull the 1st group on the left backtracking -->
+					<CustomBehavior File="NoCombatMoveTo" X="-1155.788" Y="1507.705" Z="68.41247" />
+					
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
+					<!-- Pull the 2nd group on the left backtracking -->
+					<CustomBehavior File="NoCombatMoveTo" X="-1161.322" Y="1466.328" Z="68.41697" />
+					
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
+					<!-- Pull the 3rd group on the left backtracking -->
+					<CustomBehavior File="NoCombatMoveTo" X="-1175.203" Y="1441.703" Z="68.41886" />
+					
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
+					<!-- Pull the 4th group on the left backtracking -->
+					<CustomBehavior File="NoCombatMoveTo" X="-1195.087" Y="1436.823" Z="68.50004" />
+					
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
+					<!-- Run to first grp at the top of the stairs -->
+					<RunTo X="-1240.5" Y="1565.219" Z="91.10129" />
+					
+					<!-- Wait timer wait 5 seconds to aggro the mobs -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
+					<!-- If we are on the second floor, continue -->
+					<If Condition="Me.Z &gt; 75" >
 						
-						<!-- Run to the brazier -->
-						<RunTo X="-1244.885" Y="1449.424" Z="68.59712" />						
-									
-						<!-- RunLikeHell to the first group on the right -->			
-						<CustomBehavior File="RunLikeHell"
-									UseCTM="true"
-									NumOfTimes="1"
-									AllowCombat="false">	
-							<Hotspot X="-1241.3" Y="1450.121" Z="68.59379" />
-							<Hotspot X="-1244.885" Y="1449.424" Z="68.59712" />
-							<Hotspot X="-1236.4" Y="1448.363" Z="68.59439" />
-							<Hotspot X="-1222.256" Y="1434.997" Z="68.60104" />
-							<Hotspot X="-1219.069" Y="1422.922" Z="68.61312" />
-							<Hotspot X="-1211.905" Y="1419.486" Z="68.60773" />
-							<Hotspot X="-1202.557" Y="1431.865" Z="68.54282" />
-							<Hotspot X="-1207.296" Y="1425.458" Z="68.57442" />
-						</CustomBehavior>
-						<RunTo X="-1207.296" Y="1425.458" Z="68.57442" />		
-									
-						<!-- Run to the barricade -->			
-						<RunTo X="-1201.305" Y="1414.618" Z="68.58919" />			
-									
-						<!-- Run through the barricade -->
-						<RunTo X="-1174.191" Y="1421.818" Z="68.43805" />
+						<!-- Clear the second floor -->
+						<RunTo X="-1261.473" Y="1595.095" Z="92.13603" />
+						<RunTo X="-1279.512" Y="1600.849" Z="91.77261" />
+						<RunTo X="-1298.048" Y="1586.68" Z="91.77947" />
+						<RunTo X="-1316.719" Y="1617.893" Z="91.74869" />
+						<RunTo X="-1302.461" Y="1636.845" Z="91.74632" />
+						<RunTo X="-1275.223" Y="1626.908" Z="91.69825" />
+						<RunTo X="-1168.113" Y="1698.712" Z="91.50394" />
+							
+						<!-- Kill the last two mobs on the ledge -->	
+						<RunTo X="-1338.467" Y="1675.37" Z="91.88944" />	
+							
+						<!-- Run to the ledge -->
+						<RunTo X="-1313.274" Y="1650.739" Z="91.67419" />
+						<RunTo X="-1317.109" Y="1649.491" Z="91.66763" />
 						
-						<!-- Pull the group after the barricade -->			
-						<CustomBehavior File="RunLikeHell"
-									UseCTM="true"
-									NumOfTimes="1"
-									AllowCombat="false">	
-							<Hotspot X="-1173.777" Y="1435.133" Z="68.411" />
-							<Hotspot X="-1173.778" Y="1424.77" Z="68.41865" />
-						</CustomBehavior>
-						<RunTo X="-1173.778" Y="1424.77" Z="68.41865" />
-
-						<!-- Run To the center and pull Watchkeeper Gargolmar -->
-						<RunTo X="-1186.259" Y="1453.539" Z="68.44234" />
+						<!-- Jump off the ledge -->
+						<CustomBehavior File="Misc\JumpForward" />
 						
-						<!-- Wait timer - wait 45 second to aggro Watchkeeper Gargolmar -->
+						<!-- Wait timer - wait 1 second -->
 						<CustomBehavior File="WaitTimer" 
-												WaitTime="45000" />
-						
-						<!-- Run to dogs after Watchkeeper Gargolmar -->
-						<RunTo X="-1176.596" Y="1446.943" Z="68.42535" />
-						
-						<!-- Run to first grp, on the left after Watchkeeper Gargolmar -->
-						<RunTo X="-1182.875" Y="1483.131" Z="68.46095" />
-						
-						<!-- Run to second grp, on the right after Watchkeeper Gargolmar -->
-						<RunTo X="-1152.259" Y="1504.416" Z="68.40633" />
-						
-						<!-- Run guards at the door near the stairs -->
-						<RunTo X="-1205.367" Y="1535.216" Z="68.53761" />
-
-						<!-- Run to first grp at the top of the stairs -->
-						<RunTo X="-1240.5" Y="1565.219" Z="91.10129" />
-						
-						<!-- If we are on the second floor, continue -->
-						<If Condition="Me.Z &gt; 75" >
-							
-							<!-- Clear the second floor -->
-							<RunTo X="-1261.473" Y="1595.095" Z="92.13603" />
-							<RunTo X="-1279.512" Y="1600.849" Z="91.77261" />
-							<RunTo X="-1298.048" Y="1586.68" Z="91.77947" />
-							<RunTo X="-1316.719" Y="1617.893" Z="91.74869" />
-							<RunTo X="-1302.461" Y="1636.845" Z="91.74632" />
-							<RunTo X="-1275.223" Y="1626.908" Z="91.69825" />
-							<RunTo X="-1168.113" Y="1698.712" Z="91.50394" />
-								
-							<!-- Kill the last two mobs on the ledge -->	
-							<RunTo X="-1338.467" Y="1675.37" Z="91.88944" />	
-								
-							<!-- Run to the ledge -->
-							<RunTo X="-1313.274" Y="1650.739" Z="91.67419" />
-							<RunTo X="-1317.109" Y="1649.491" Z="91.66763" />
-							
-							<!-- Jump off the ledge -->
-							<CustomBehavior File="Misc\JumpForward" />
-							
-							<!-- Wait timer - wait 1 second -->
-							<CustomBehavior File="WaitTimer" 
-													WaitTime="1000" />
-						
-						</If>
+												WaitTime="1000" />
+					
 					</If>
 					
 					<!-- Run to the exit -->
