@@ -232,7 +232,7 @@
 					<RunTo X="-1253.4" Y="1591.96" Z="68.55814" />
 					
 					<!-- Pull the center group -->
-					<Hotspot X="-1264.139" Y="1566.891" Z="68.64436" />
+					<RunTo X="-1264.139" Y="1566.891" Z="68.64436" />
 										
 					<!-- Pull third group on the left after the bridge  -->
 					<RunTo X="-1275.092" Y="1541.744" Z="68.56787" />
@@ -259,12 +259,12 @@
 					<CustomBehavior File="NoCombatMoveTo" X="-1161.322" Y="1466.328" Z="68.41697" />
 
 					<!-- Pull the 3rd group on the left backtracking -->
-					<CustomBehavior File="NoCombatMoveTo" X="-1175.203" Y="1441.703" Z="68.41886" />
+					<CustomBehavior File="NoCombatMoveTo" X="-1167.667" Y="1436.779" Z="68.40344" />
 
 					<!-- Pull the 4th group on the left backtracking -->
 					<CustomBehavior File="NoCombatMoveTo" X="-1195.087" Y="1436.823" Z="68.50004" />
 
-					<!-- Run to first grp at the top of the stairs -->
+					<!-- Run to first group at the top of the stairs -->
 					<RunTo X="-1240.5" Y="1565.219" Z="91.10129" />
 										
 					<!-- If we are on the second floor, continue -->
