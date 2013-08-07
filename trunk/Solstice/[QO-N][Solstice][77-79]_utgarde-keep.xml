@@ -47,12 +47,12 @@
 		<ClearMailbox />
 		
 
-		<If Condition="Me.Level &gt;= 80">
+		<If Condition="Me.Level &gt;= 77">
 			<CustomBehavior File="Message" 
 							Text="You meet the level requirement to run this profile." 
 							LogColor="Fuchsia" />
 		
-		 	<!-- Booster UserSettings -->
+		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"

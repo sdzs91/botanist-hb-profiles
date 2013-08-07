@@ -327,15 +327,24 @@
 					<!-- If we are on the second floor, continue -->
 					<If Condition="Me.Z &gt; 75" >
 						
-						<!-- Clear the second floor -->
-						<RunTo X="-1261.473" Y="1595.095" Z="92.13603" />
-						<RunTo X="-1279.512" Y="1600.849" Z="91.77261" />
-						<RunTo X="-1298.048" Y="1586.68" Z="91.77947" />
-						<RunTo X="-1316.719" Y="1617.893" Z="91.74869" />
-						<RunTo X="-1302.461" Y="1636.845" Z="91.74632" />
-						<RunTo X="-1275.223" Y="1626.908" Z="91.69825" />
-						<RunTo X="-1168.113" Y="1698.712" Z="91.50394" />
+						<!-- Pull the first group on the left-->
+						<CustomBehavior File="NoCombatMoveTo" X="-1297.197" Y="1588.697" Z="91.77291" />
+						
+						<!-- Pull the second group on the left -->
+						<CustomBehavior File="NoCombatMoveTo" X="-1312.995" Y="1612.319" Z="91.75178" />
+						
+						<!-- Pull the first group on the right-->
+						<CustomBehavior File="NoCombatMoveTo" X="-1272.616" Y="1623.165" Z="91.68772" /> 
+						
+						<!-- Run to the center of the corridor leading to Omor the Unscarred -->
+						<CustomBehavior File="NoCombatMoveTo" X="-1242.992" Y="1657.34" Z="92.66415" />
+						
+						<!-- Pull last two mobs before Omor the Unscarred -->
+						<RunTo X="-1166.884" Y="1701.474" Z="91.45723" />
 							
+						<!-- Pull Omor the Unscarred -->
+						<RunTo X="-1119.855" Y="1719.716" Z="89.42812" />
+						
 						<!-- Kill the last two mobs on the ledge -->	
 						<RunTo X="-1338.467" Y="1675.37" Z="91.88944" />	
 							

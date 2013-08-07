@@ -46,7 +46,7 @@
 		<ClearMailbox />
 		
 		<!-- Level check -->
-		<If Condition="Me.Level &gt;= 80">
+		<If Condition="Me.Level &gt;= 77">
 							
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
@@ -73,46 +73,22 @@
 							UseMount="True" 
 							UseRandomMount="False" />
 			
-			<!-- If we are inside -->
+			<!-- Sethekk Halls -->
 			<If Condition="Me.ZoneId == 3791">
 				<CustomBehavior File="Message" 
-								Text="Sethekk Halls detected."
+								Text="Sethekk Halls detected. Running out."
 								LogColor="Fuchsia" />
-				
-				<If Condition="(Me.HearthstoneAreaId == 3684) || (Me.HearthstoneAreaId == 3683)">
-					<CustomBehavior File="Message" 
-									Text="Our Innkeeper is set at Allerian Stronghold or Stonebreaker Hold." 
-									LogColor="Cyan" />
-									
-					<!-- Have hearthstone -->
-					<If Condition="HasItem(6948)">
-						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
-										LogColor="Lime" />
-										
-						<CustomBehavior File="Misc\RunLua" 
-										Lua="UseItemByName(6948)" 
-										WaitTime="1000" />
-										
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="20000" />
-					</If> <!-- Have hearthstone -->
-				
-					<!-- Have Innkeeper's Daughter -->
-					<If Condition="HasItem(64488)">
-						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
-										LogColor="Lime" />
-											
-						<CustomBehavior File="Misc\RunLua" 
-										Lua="UseItemByName(64488)" 
-										WaitTime="1000" />
-							
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="20000" />
-					</If> <!-- Have Innkeeper's Daughter -->
-				</If> <!-- Hearth check -->
-			</If> <!-- SH -->
+			
+					<!-- Make our way to the exit from the top floor -->
+					<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="-20.722509" Y="0.3174916" Z="0.005990623" />
+					
+					<!-- Make sure we run to the right spot outside the portal -->
+					<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
+					
+			</If> <!-- Sethekk Halls -->
 			
 			<!-- Outland -->
 			<If Condition="Me.MapId == 530">
@@ -189,29 +165,17 @@
 									Text="We are Horde." 
 									LogColor="Cyan" />
 								
-					<!-- Cleft of Shadows -->
-					<If Condition="Me.Z &lt;= 20">
-						<CustomBehavior File="FlyTo" X="1745.012" Y="-4297.64" Z="19.51438" />
-						<CustomBehavior File="FlyTo" X="1730.463" Y="-4283.47" Z="22.22959" />
-						<CustomBehavior File="FlyTo" X="1746.871" Y="-4253.945" Z="35.6974" />
-						<CustomBehavior File="FlyTo" X="1780.756" Y="-4229.685" Z="43.92487" />
-						<CustomBehavior File="FlyTo" X="1748.23" Y="-4214.471" Z="59.54888" />
-						<CustomBehavior File="FlyTo" X="1749.469" Y="-4204.077" Z="89.2692" />
-						<CustomBehavior File="FlyTo" X="1751.324" Y="-4230.846" Z="147.3718" />
-					</If> <!-- Cleft of Shadows -->
-					
-					<!-- Fly to the zeppelin hover point -->
-					<CustomBehavior File="FlyTo"
-									X="1853.863" Y="-4404.338" Z="188.4067" />
-									
-					<!-- Land on the deck -->
-					<CustomBehavior File="MyCTM"
-									X="1868.09" Y="-4417.422" Z="135.232" />				
-							
+					<!-- Run to the Grom'gol zeppelin -->
+					<RunTo X="1868.09" Y="-4417.422" Z="135.232" />				
+			
 					<!-- Forced dismount -->		
 					<CustomBehavior File="ForcedDismount" />						
-						
-					<!-- Orgrimmar to Grom'gol Base Camp -->
+									
+					<!-- Profile message - Waiting for the zeppelin -->
+					<CustomBehavior File="Message" 
+									Text="Waiting for the zeppelin." 
+									LogColor="Cyan" />
+									
 					<CustomBehavior File="UseTransport" 
 						TransportId="175080" 
 						WaitAtX="1869.635" 
@@ -230,8 +194,59 @@
 						GetOffY="218.9818" 
 						GetOffZ="31.86087" />	
 						
-					<!-- Run to the western side of the deck -->
-					<RunTo X="-12424.07" Y="225.4187" Z="32.17282" />
+					<!-- Run to the Grom'gol flightmaster -->
+					<RunTo X="-12414.2" Y="146.29" Z="3.266916" />
+					
+					<!-- Run to the Ubdercity zeppelin -->
+					<RunTo X="-12407.97" Y="200.2348" Z="31.8366" />				
+						
+					<!-- Forced dismount -->		
+					<CustomBehavior File="ForcedDismount" />
+
+					<CustomBehavior File="UseTransport" 
+								TransportId="176495" 
+								WaitAtX="-12407.97" 
+								WaitAtY="200.2348" 
+								WaitAtZ="31.8366"								
+								TransportStartX="-12406.8906" 
+								TransportStartY="211.837677" 
+								TransportStartZ="49.6984367"						
+								StandOnX="-12398.64" 
+								StandOnY="197.7412" 
+								StandOnZ="33.84207"
+								TransportEndX="2062.59888" 
+								TransportEndY="235.264465" 
+								TransportEndZ="117.733627"	
+								GetOffX="2057.45" 
+								GetOffY="238.7743" 
+								GetOffZ="99.76712" />				
+					<!-- Run to the doorway -->
+					<RunTo X="2060.382" Y="254.9573" Z="99.76746" />
+					
+					<!-- Run to the Howling Fjord zeppelin -->
+					<RunTo X="2062.118" Y="358.4322" Z="82.47268" />
+								
+					<!-- Undercity to Howling Fjord -->
+					<CustomBehavior File="UseTransport"
+									TransportId="181689"
+									WaitAtX="2062.118" 
+									WaitAtY="358.4322" 
+									WaitAtZ="82.47268" 
+									TransportStartX="2056.4926" 
+									TransportStartY="381.6347" 
+									TransportStartZ="100.3620"
+									TransportEndX="1989.352" 
+									TransportEndY="-6082.7763"
+									TransportEndZ="85.59"
+									StandOnX="2060.598" 
+									StandOnY="370.0439" 
+									StandOnZ="82.48199" 
+									GetOffX="1973.536"
+									GetOffY="-6099.92" 
+									GetOffZ="67.15816" />
+										
+						<!-- Run to the other side of the room -->
+						<RunTo  X="1959.064" Y="-6118.095" Z="27.84882" />
 				</If> <!-- Horde -->
 			</If> <!-- Kalimdor -->
 			
@@ -246,10 +261,9 @@
 									Text="We are Alliance." 
 									LogColor="Cyan" />
 								
-					<!-- Fly to Wetlands -->
-					<CustomBehavior File="FlyTo" X="-3691.205" Y="-604.9369" Z="4.289214" />
-					<CustomBehavior File="ForcedDismount" />
-					
+					<!-- Move to Wetlands -->
+					<RunTo X="-3691.205" Y="-604.9369" Z="4.289214" />
+
 					<!-- Take boat to Valgarde, Howling Fjord -->
 					<CustomBehavior File="UseTransport"
 									TransportId="181688" 
@@ -269,44 +283,61 @@
 									GetOffY="-5102.632" 
 									GetOffZ="5.260393" />
 			
-					<!-- Horde -->
-					<ElseIf Condition="Me.IsHorde">
-						<CustomBehavior File="Message" 
-										Text="We are Horde." 
-										LogColor="Cyan" />
-									
-						<CustomBehavior File="FlyTo" X="2075.285" Y="349.3864" Z="118.7071" />
-						
-						<CustomBehavior File="FlyTo" X="2061.812" Y="357.9389" Z="82.46954" />
-
-						<CustomBehavior File="ForcedDismount" />
-						
-						<!-- Top of zep tower (howling fjord) -->
-						<RunTo X="2062.118" Y="358.4322" Z="82.47268" />
-									
-						<!-- Undercity to Howling Fjord -->
-						<CustomBehavior File="UseTransport"
-										TransportId="181689"
-										WaitAtX="2062.118" 
-										WaitAtY="358.4322" 
-										WaitAtZ="82.47268" 
-										TransportStartX="2056.4926" 
-										TransportStartY="381.6347" 
-										TransportStartZ="100.3620"
-										TransportEndX="1989.352" 
-										TransportEndY="-6082.7763"
-										TransportEndZ="85.59"
-										StandOnX="2060.598" 
-										StandOnY="370.0439" 
-										StandOnZ="82.48199" 
-										GetOffX="1973.536"
-										GetOffY="-6099.92" 
-										GetOffZ="67.15816" />
-										
-						<!-- Run to the other side of the building off the zep -->
-						<RunTo  X="1959.064" Y="-6118.095" Z="27.84882" />
-					</ElseIf> <!-- Horde -->
 				</If> <!-- Alliance -->
+				
+				<If Condition="Me.IsHorde" >
+				
+					<!-- Run to the Ubdercity zeppelin -->
+					<RunTo X="-12407.97" Y="200.2348" Z="31.8366" />				
+						
+					<!-- Forced dismount -->		
+					<CustomBehavior File="ForcedDismount" />
+
+					<CustomBehavior File="UseTransport" 
+								TransportId="176495" 
+								WaitAtX="-12407.97" 
+								WaitAtY="200.2348" 
+								WaitAtZ="31.8366"								
+								TransportStartX="-12406.8906" 
+								TransportStartY="211.837677" 
+								TransportStartZ="49.6984367"						
+								StandOnX="-12398.64" 
+								StandOnY="197.7412" 
+								StandOnZ="33.84207"
+								TransportEndX="2062.59888" 
+								TransportEndY="235.264465" 
+								TransportEndZ="117.733627"	
+								GetOffX="2057.45" 
+								GetOffY="238.7743" 
+								GetOffZ="99.76712" />				
+					<!-- Run to the doorway -->
+					<RunTo X="2060.382" Y="254.9573" Z="99.76746" />
+					
+					<!-- Run to the Howling Fjord zeppelin -->
+					<RunTo X="2062.118" Y="358.4322" Z="82.47268" />
+								
+					<!-- Undercity to Howling Fjord -->
+					<CustomBehavior File="UseTransport"
+									TransportId="181689"
+									WaitAtX="2062.118" 
+									WaitAtY="358.4322" 
+									WaitAtZ="82.47268" 
+									TransportStartX="2056.4926" 
+									TransportStartY="381.6347" 
+									TransportStartZ="100.3620"
+									TransportEndX="1989.352" 
+									TransportEndY="-6082.7763"
+									TransportEndZ="85.59"
+									StandOnX="2060.598" 
+									StandOnY="370.0439" 
+									StandOnZ="82.48199" 
+									GetOffX="1973.536"
+									GetOffY="-6099.92" 
+									GetOffZ="67.15816" />
+										
+					<!-- Run to the other side of the room -->
+					<RunTo  X="1959.064" Y="-6118.095" Z="27.84882" />
+				</If>
 			</If> <!-- Eastern Kingdoms -->
 			
 			<!-- Northrend -->
