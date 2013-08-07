@@ -327,8 +327,6 @@
 						</CustomBehavior>
 					
 						<!-- run to the exit -->
-						<RunTo X="44.61202" Y="139.9013" Z="0.01621437" />
-						<RunTo X="31.01099" Y="1.044048" Z="0.005493299" />
 						<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
 					</If>
 					
@@ -340,6 +338,11 @@
 					<!-- Repair if necessary -->
 					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 					
+						<!-- Profile message - Our durability is less than 30% or our bags are about full. Doing a vendor run -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30% or our bags are about full. Doing a vendor run." 
+										LogColor="Fuchsia" />
+										
 						<!-- If our hearthstone is set here, use it -->
 						<If Condition="(Me.HearthstoneAreaId == 3684) || (Me.HearthstoneAreaId == 3683)">
 							<CustomBehavior File="Message" 
@@ -385,10 +388,6 @@
 							<CustomBehavior File="FlyTo" X="-2644.589" Y="4425.806" Z="36.9834" />
 							<CustomBehavior File="ForcedDismount" />
 						</If>
-					
-						<CustomBehavior File="Message" 
-										Text="Our durability is less than 80%, we need to repair." 
-										LogColor="Fuchsia" />
 									
 						<CustomBehavior File="ForceSetVendor" 
 										DoMail="True" 
@@ -441,7 +440,7 @@
 							<!-- Fly to the hover point above the innkeep in Stonebreaker Hold -->
 							<CustomBehavior File="FlyTo" X="-2633.392" Y="4387.538" Z="93.16135" />
 						</If>
-					</If> <!-- Repairing -->
+					</If> <!-- Repair if necessary -->
 					
 					<CustomBehavior File="Message" 
 									Text="Flying to Sethekk Halls." 

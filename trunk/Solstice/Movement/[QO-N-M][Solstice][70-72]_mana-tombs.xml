@@ -395,9 +395,9 @@
 				<!-- Repair if necessary -->
 				<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 					
-					<!-- Profile message - We need to fly to the vendor, empty our bags and repair our gear first -->
+					<!-- Profile message - Our durability is less than 30% or our bags are about full Doing a vendor run -->
 					<CustomBehavior File="Message" 
-									Text="We need to fly to the vendor, empty our bags and repair our gear first." 
+									Text="Our durability is less than 30% or our bags are about full. Doing a vendor run." 
 									LogColor="Fuchsia" />
 				
 					<If Condition="Me.IsAlliance">
@@ -411,11 +411,7 @@
 						<CustomBehavior File="FlyTo" X="-2650.036" Y="4415.961" Z="35.32476" />
 						<CustomBehavior File="ForcedDismount" />
 					</If>
-				
-					<CustomBehavior File="Message" 
-									Text="Our durability is less than 30%, we need to repair." 
-									LogColor="Fuchsia" />
-								
+
 					<CustomBehavior File="ForceSetVendor" 
 									DoMail="False" 
 									DoRepair="True" 
@@ -449,11 +445,11 @@
 					</SetMailbox>
 						
 					<!-- We are done repairing -->
-					<If Condition="Me.DurabilityPercent &gt;= 0.8" >
+					<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
 						<CustomBehavior File="Message" 
 										Text="Repairing complete." 
 										LogColor="Fuchsia" />
-					</If> <!-- repaired -->
+					</If> <!-- We are done repairing -->
 					
 					<If Condition="Me.IsAlliance">
 						<!-- Outside blacksmith -->

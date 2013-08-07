@@ -363,6 +363,11 @@
 					<!-- Repair if necessary -->
 					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 					
+						<!-- Profile message - Our durability is less than 30% or our bags are about full. Doing a vendor run -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30% or our bags are about full. Doing a vendor run." 
+										LogColor="Fuchsia" />
+					
 						<!-- If our hearthstone is set here, use it -->
 						<If Condition="(Me.HearthstoneAreaId == 3538) || (Me.HearthstoneAreaId == 3536)">
 							<CustomBehavior File="Message" 
@@ -406,10 +411,6 @@
 							<If Condition="Me.IsHorde">
 								<RunTo X="183.0796" Y="2606.334" Z="87.28376" />
 							</If>
-						
-							<CustomBehavior File="Message" 
-											Text="Our durability is less than 30% or our bags are nearly full, We need to vendor." 
-											LogColor="Fuchsia" />
 										
 							<CustomBehavior File="ForceSetVendor" 
 											DoMail="True" 

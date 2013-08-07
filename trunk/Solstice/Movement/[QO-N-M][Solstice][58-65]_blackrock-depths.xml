@@ -202,13 +202,15 @@
 				
 					<!-- Repair if necessary -->
 					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					
+						<!-- Profile message - Our durability is less than 30% or our bags are about full Doing a vendor run -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30% or our bags are about full. Doing a vendor run." 
+										LogColor="Fuchsia" />
+					
 						<RunTo X="-7095.479" Y="-1266.96" Z="270.4855" />
 						<CustomBehavior File="ForcedDismount" />
-					
-						<CustomBehavior File="Message" 
-										Text="Our durability is less than 30%, or our bags are nearly full. We need to vendor." 
-										LogColor="Fuchsia" />
-									
+
 						<CustomBehavior File="ForceSetVendor" 
 										DoMail="True" 
 										DoRepair="True" 
@@ -233,11 +235,11 @@
 						</SetMailbox>
 					
 						<!-- We are done repairing -->
-						<If Condition="(Me.FreeBagSlots &gt; 15) || (Me.LowestDurabilityPercent &gt; 0.3)" >
+						<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
 							<CustomBehavior File="Message" 
 											Text="Repairing complete." 
 											LogColor="Fuchsia" />
-						</If> <!-- repaired -->
+						</If> <!-- We are done repairing -->
 					</If> <!-- Repair if necessary -->
 														
 					<CustomBehavior File="Message" 

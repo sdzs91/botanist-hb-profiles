@@ -142,8 +142,10 @@
 				
 				<!-- Repair if necessary -->
 				<If Condition="Me.LowestDurabilityPercent &lt; 0.8" >
+				
+					<!-- Profile message - Our durability is less than 30% or our bags are about full Doing a vendor run -->
 					<CustomBehavior File="Message" 
-									Text="Our durability is less than 80%, we need to repair." 
+									Text="Our durability is less than 30% or our bags are about full. Doing a vendor run." 
 									LogColor="Fuchsia" />
 									
 					<CustomBehavior File="FlyTo" X="8446.114" Y="-333.7011" Z="906.6091" />
@@ -174,11 +176,11 @@
 					</SetMailbox>
 				
 					<!-- We are done repairing -->
-					<If Condition="Me.DurabilityPercent &gt;= 0.8" >
-						<CustomBehavior File="Message" 
-										Text="Repairing complete." 
-										LogColor="Fuchsia" />
-					</If> <!-- repaired -->
+						<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+							<CustomBehavior File="Message" 
+											Text="Repairing complete." 
+											LogColor="Fuchsia" />
+						</If> <!-- We are done repairing -->
 					
 					
 					<!-- Hover point -->

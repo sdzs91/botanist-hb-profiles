@@ -364,8 +364,7 @@
 				<!-- If we are inside Mana-Tombs -->
 				<If Condition="Me.ZoneId == 3792">
 				
-					<!-- Repair if necessary -->
-					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					<!-- Repair if necessary -->>
 					
 						<!-- If our hearthstone is set here, use it -->
 						<If Condition="(Me.HearthstoneAreaId == 3684) || (Me.HearthstoneAreaId == 3683)">
@@ -412,11 +411,7 @@
 								<CustomBehavior File="FlyTo" X="-2644.589" Y="4425.806" Z="36.9834" />
 								<CustomBehavior File="ForcedDismount" />
 							</If>
-						
-							<CustomBehavior File="Message" 
-											Text="Our durability is less than 80%, we need to repair." 
-											LogColor="Fuchsia" />
-										
+
 							<CustomBehavior File="ForceSetVendor" 
 											DoMail="False" 
 											DoRepair="True" 

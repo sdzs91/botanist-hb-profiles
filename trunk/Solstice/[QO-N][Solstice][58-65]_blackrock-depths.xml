@@ -299,7 +299,7 @@
 					<!-- Clear the second room on the right -->
 					<RunTo X="813.0432" Y="-301.1625" Z="-43.29477" />
 					
-					<!-- Pull the group at the door enter Shadowforge City -->
+					<!-- Pull the group at the door entering Shadowforge City -->
 					<RunTo X="850.4582" Y="-249.9508" Z="-49.9968" />
 					
 					<CustomBehavior File="UserSettings" StopBot="true" />
@@ -361,6 +361,11 @@
 					<!-- Repair if necessary -->
 					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 					
+						<!-- Profile message - Our durability is less than 30% or our bags are about full. Doing a vendor run -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30% or our bags are about full. Doing a vendor run." 
+										LogColor="Fuchsia" />
+										
 						<!-- If our hearthstone is set here, use it -->
 						<If Condition="Me.HearthstoneAreaId == 5628" >
 						<CustomBehavior File="Message" 
@@ -394,13 +399,7 @@
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="20000" />
 						</If> <!-- Have Innkeeper's Daughter -->
-						
-							
-							<!-- Profile message - Our durability is less than 30% or our bags are nearly full, We need to vendor -->
-							<CustomBehavior File="Message" 
-											Text="Our durability is less than 30% or our bags are nearly full, We need to vendor." 
-											LogColor="Fuchsia" />
-										
+
 							<CustomBehavior File="ForceSetVendor" 
 											DoMail="True" 
 											DoRepair="True" 

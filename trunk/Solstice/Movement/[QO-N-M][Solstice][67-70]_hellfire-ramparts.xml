@@ -424,12 +424,13 @@
 				<!-- Repair if necessary -->
 				<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 				
+					<!-- Profile message - Our durability is less than 30% or our bags are about full Doing a vendor run -->
+					<CustomBehavior File="Message" 
+									Text="Our durability is less than 30% or our bags are about full. Doing a vendor run." 
+									LogColor="Fuchsia" />
+				
 					<!-- Fly to the appropriate vendors -->
 					<If Condition="(Me.HearthstoneAreaId == 3538) || (Me.HearthstoneAreaId == 3536)">
-						<CustomBehavior File="Message" 
-										Text="We need to repair. Flying to the vendor in Honor Hold or Thrallmar." 
-										LogColor="Cyan" />
-											
 						
 						<If Condition="Me.IsAlliance">
 							<CustomBehavior File="FlyTo" X="-709.473" Y="2621.555" Z="89.7064" />
@@ -440,11 +441,7 @@
 							<CustomBehavior File="FlyTo" X="178.9605" Y="2627.524" Z="87.13406" />
 							<RunTo X="183.0796" Y="2606.334" Z="87.28376" />
 						</If>
-					
-						<CustomBehavior File="Message" 
-										Text="Our durability is less than 80%, we need to repair." 
-										LogColor="Fuchsia" />
-									
+
 						<CustomBehavior File="ForceSetVendor" 
 										DoMail="True" 
 										DoRepair="True" 
@@ -478,12 +475,11 @@
 						</SetMailbox>
 						
 						<!-- We are done repairing -->
-						<If Condition="Me.DurabilityPercent &gt;= 0.8" >
+						<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
 							<CustomBehavior File="Message" 
 											Text="Repairing complete." 
 											LogColor="Fuchsia" />
-											
-						</If> <!-- repaired -->
+						</If> <!-- We are done repairing -->
 						
 						<If Condition="Me.IsAlliance">
 						
