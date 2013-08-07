@@ -265,15 +265,50 @@
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
 					
-						<CustomBehavior File="UserSettings" StopBot="true" />
+						<!-- RunLikeHell to the fourth group of spectators -->
+						<CustomBehavior File="RunLikeHell" 
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="596.5645" Y="-239.2611" Z="-38.38293" />
+							<Hotspot X="624.4799" Y="-232.5415" Z="-38.36314" />
+						</CustomBehavior>
+						<RunTo X="624.4799" Y="-232.5415" Z="-38.36314" />
+						
+						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
 					
+						<!-- RunLikeHell to the fifth group of spectators -->
+						<CustomBehavior File="RunLikeHell" 
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="630.7129" Y="-221.0824" Z="-38.36077" />
+							<Hotspot X="647.3768" Y="-196.7364" Z="-38.35932" />
+						</CustomBehavior>
+						<RunTo X="647.3768" Y="-196.7364" Z="-38.35932" />
+						
+						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
 					
+						<!-- RunLikeHell to the sisth group of spectators -->
+						<CustomBehavior File="RunLikeHell" 
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="644.9526" Y="-175.2199" Z="-38.35932" />
+							<Hotspot X="630.675" Y="-150.3143" Z="-38.35932" />
+						</CustomBehavior>
+						<RunTo X="630.675" Y="-150.3143" Z="-38.35932" />
+						
+						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
 					
-					
-					
-					
-					
-					
+						<!-- Run to the first group Dark Iron Road -->
+						<RunTo X="593.5171" Y="26.76964" Z="-72.5388" />
+						
+						<!-- Pull the first group on the right of Dark Iron Road -->
+						<RunTo X="593.5171" Y="26.76964" Z="-72.5388" />
 					
 					</If>
 								

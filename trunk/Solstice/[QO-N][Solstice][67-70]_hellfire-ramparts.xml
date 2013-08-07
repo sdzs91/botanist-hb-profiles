@@ -229,7 +229,7 @@
 					<RunTo X="-1243.185" Y="1623.843" Z="68.50868" />
 										
 					<!-- Pull the second group on the right -->
-					<RunTo X="-1253.4" Y="1591.96" Z="68.55814" />
+					<RunTo X="-1254.471" Y="1599.957" Z="68.589" />
 					
 					<!-- Pull the center group -->
 					<RunTo X="-1264.139" Y="1566.891" Z="68.64436" />
@@ -248,22 +248,42 @@
 										
 					<!-- Pull the group in front of the barrier -->		
 					<CustomBehavior File="NoCombatMoveTo" X="-1187.759" Y="1476.556" Z="68.46307" />
-															
+												
+					<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+												
 					<!-- Pull the group at the door to the stairs -->	
 					<CustomBehavior File="NoCombatMoveTo" X="-1205.454" Y="1534.658" Z="68.54165" />
-															
+												
+					<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+												
 					<!-- Pull the 1st group on the left backtracking -->
 					<CustomBehavior File="NoCombatMoveTo" X="-1155.788" Y="1507.705" Z="68.41247" />
 
+					<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
 					<!-- Pull the 2nd group on the left backtracking -->
 					<CustomBehavior File="NoCombatMoveTo" X="-1161.322" Y="1466.328" Z="68.41697" />
 
+					<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
 					<!-- Pull the 3rd group on the left backtracking -->
 					<CustomBehavior File="NoCombatMoveTo" X="-1167.667" Y="1436.779" Z="68.40344" />
 
+					<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
 					<!-- Pull the 4th group on the left backtracking -->
 					<CustomBehavior File="NoCombatMoveTo" X="-1195.087" Y="1436.823" Z="68.50004" />
-
+					
 					<!-- Run to first group at the top of the stairs -->
 					<RunTo X="-1240.5" Y="1565.219" Z="91.10129" />
 										
