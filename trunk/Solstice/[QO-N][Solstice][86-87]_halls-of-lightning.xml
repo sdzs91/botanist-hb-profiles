@@ -76,6 +76,7 @@
 							
 			<!-- Infinite loop -->
 			<While Condition="true" >	
+			
 				<!-- Halls of Lightning -->
 				<If Condition="Me.ZoneId == 4272">
 					<CustomBehavior File="Message" 
@@ -428,6 +429,22 @@
 												WaitTime="20000" />
 							</If> <!-- Have Innkeeper's Daughter -->
 
+							<!-- Halls of Lightning -->
+							<If Condition="Me.ZoneId == 4272">
+								<CustomBehavior File="Message" 
+												Text="Halls of Lightning detected. Running out."
+												LogColor="Fuchsia" />
+									
+								<!-- Make our way to the exit -->
+								<RunTo X="1331.41" Y="241.904" Z="52.5046" />
+
+								<!-- Go through the portal -->
+								<CustomBehavior File="Misc\InInstance" X="1333.524" Y="290.7161" Z="52.81057" />
+								
+								<!-- Make sure we run to the right spot outside the potral -->
+								<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />
+							</If> <!-- HoL -->
+							
 							<CustomBehavior File="ForceSetVendor" 
 											DoMail="True" 
 											DoRepair="True" 

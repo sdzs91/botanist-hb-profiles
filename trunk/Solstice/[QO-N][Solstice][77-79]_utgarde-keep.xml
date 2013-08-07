@@ -79,6 +79,7 @@
 						
 			<!-- Infinite loop -->
 			<While Condition="true" >	
+			
 				<!-- Utgarde Keep -->
 				<If Condition="Me.MapId == 574">
 					<CustomBehavior File="Message" 

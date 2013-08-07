@@ -386,18 +386,21 @@
 							</If> <!-- Have Innkeeper's Daughter -->
 						
 							<!-- If we didn't hearth, run out -->
-							<If Condition="Me.ZoneId == 3790" >
-								<RunTo X="-20.15984" Y="-0.1140493" Z="-0.120559" />
-								
-								<!-- Instance timer check if we didn't repair -->
-								<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
-								
+							<If Condition="Me.ZoneId == 3790">
+								<CustomBehavior File="Message" 
+												Text="Auchenai Crypts detected. Running out."
+												LogColor="Fuchsia" />
+							
+								<!-- Run to the exit -->
+								<RunTo X="-16.7899" Y="-0.071496" Z="-0.120559" />
+
 								<!-- Go through the portal -->
 								<CustomBehavior File="Misc\InInstance" X="-28.9178" Y="0.09100415" Z="-0.1205578" />
 								
 								<!-- Make sure we run to the right spot outside the potral -->
 								<RunTo X="-3361.8" Y="5209.2" Z="-101.049" />
-							</If>
+
+							</If> <!-- Auchenai Crypts-->
 						
 						
 							<If Condition="Me.IsAlliance">

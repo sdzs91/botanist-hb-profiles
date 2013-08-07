@@ -519,6 +519,22 @@
 											WaitTime="20000" />
 						</If> <!-- Have Innkeeper's Daughter -->
 
+						<!-- If we are inside Blackrock Spire -->
+						<If Condition="Me.ZoneId == 1583">
+							<CustomBehavior File="Message" 
+											Text="Blackrock Spire detected. Running out."
+											LogColor="Fuchsia" />
+											
+							<RunTo X="89.9931" Y="-318.9885" Z="65.46351" />				
+							<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+							
+							<!-- Go through the portal -->
+							<CustomBehavior File="Misc\InInstance" X="77.31385" Y="-210.969" Z="49.81922" />
+							
+							<!-- Make sure we run to the right spot outside the portal -->
+							<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />	
+						</If> <!-- BRS -->
+						
 							<CustomBehavior File="ForceSetVendor" 
 											DoMail="True" 
 											DoRepair="True" 

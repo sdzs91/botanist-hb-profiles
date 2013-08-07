@@ -326,11 +326,7 @@
 					<!-- Wait timer - wait 30 seconds to aggro the patrols -->
 					<CustomBehavior File="WaitTimer" 
 										WaitTime="30000" />
-					
-					
-					
-					
-					
+
 					<!-- Run to the exit -->
 					<RunTo X="-74.20116" Y="-145.2856" Z="-0.9543099" />
 					
@@ -399,6 +395,23 @@
 								<CustomBehavior File="WaitTimer" 
 												WaitTime="20000" />
 							</If> <!-- Have Innkeeper's Daughter -->
+						
+							<!-- Mana-Tombs -->
+							<If Condition="Me.ZoneId == 3792">
+								<CustomBehavior File="Message" 
+												Text="Mana-Tombs detected. Running out."
+												LogColor="Fuchsia" />
+							
+								<!-- Run to the exit -->
+								<RunTo X="-4.81115" Y="1.00236" Z="-0.954329" />
+
+								<!-- Go through the portal -->
+								<CustomBehavior File="Misc\InInstance" X="7.24442" Y="1.005781" Z="-0.954329" />
+								
+								<!-- Make sure we run to the right spot outside the potral -->
+								<RunTo X="-3080.679" Y="4942.799" Z="-101.047" />
+
+							</If> <!-- Mana-Tombs-->
 						
 							<If Condition="Me.IsAlliance">
 								<CustomBehavior File="FlyTo" X="-2963.77" Y="4017.751" Z="1.688854" />

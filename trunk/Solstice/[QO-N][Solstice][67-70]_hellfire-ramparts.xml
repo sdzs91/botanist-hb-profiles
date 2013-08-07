@@ -413,6 +413,20 @@
 												WaitTime="20000" />
 							</If> <!-- Have Innkeeper's Daughter -->
 						
+							<!-- If we are inside -->
+							<If Condition="Me.ZoneId == 3562">
+								<CustomBehavior File="Message" 
+												Text="Hellfire Ramparts detected. Running out."
+												LogColor="Fuchsia" />
+												
+								<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+								
+								<!-- Go through the portal -->
+								<CustomBehavior File="Misc\InInstance" X="-1358.403" Y="1629.539" Z="68.55495" />
+								
+								<!-- Make sure we run to the right spot outside the portal -->
+								<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
+							</If> <!-- HR -->
 							
 							<If Condition="Me.IsAlliance">
 								<CustomBehavior File="FlyTo" X="-709.473" Y="2621.555" Z="89.7064" />
