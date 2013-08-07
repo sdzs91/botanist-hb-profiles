@@ -3,5 +3,5 @@
 [QO-N][Solstice][65-70]_hellfire-ramparts
 [QO-N][Solstice][70-72]_mana-tombs --------------------> level 71 280k XP/per Hr
 [QO-N][Solstice][72-74]_auchenai-crypts
-[QO-N][Solstice][74-76]_sethekk-halls
+[QO-N][Solstice][74-76]_sethekk-halls------------------> level 75 
 [QO-N][Solstice][84-86]_gundrak

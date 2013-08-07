@@ -317,11 +317,7 @@
 							
 							<!-- Run to Pyroguard Emberseer -->
 							<RunTo X="144.4081" Y="-260.0516" Z="96.32333" />
-							
-							<!-- Wait timer - wait 80 second to make sure we got boss aggro -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="30000" />
-											
+																		
 							<!-- Run into the Jenkins room -->
 							<RunTo X="97.65797" Y="-262.0821" Z="91.45261" />
 							
@@ -337,6 +333,29 @@
 							
 							<!-- Pull the first group on the left entering Hall of Blackhand -->
 							<RunTo X="139.4358" Y="-304.3484" Z="110.9678" />
+							
+							<!-- Pull the first group on the left entering Hall of Blackhand -->
+							<RunTo X="141.3742" Y="-277.1001" Z="110.943" />
+							
+							<!-- Pull Goraluk Anvilcrack -->
+							<RunTo X="151.4996" Y="-243.8243" Z="110.9053" />
+							
+							<!-- Pull the left-hand group after Goraluk Anvilcrack -->
+							<RunTo X="162.1723" Y="-286.7653" Z="110.9434" />
+							
+							<!-- Pull the center group after Goraluk Anvilcrack -->
+							<RunTo X="163.2221" Y="-313.3682" Z="110.9323" />
+							
+							<!-- Pull the group at the bottom of the stairs -->
+							<RunTo X="163.5952" Y="-338.2741" Z="110.9525" />
+							
+							<!-- Pull the group at the top of the stairs -->
+							<RunTo X="175.8129" Y="-365.6139" Z="116.8409" />
+							
+							<!-- Pull the group viewing the Blackrock Stadium -->
+							<RunTo X="137.821" Y="-366.1404" Z="116.8417" />
+							<RunTo X="137.8707" Y="-384.4027" Z="121.9753" />
+							<RunTo X="141.2489" Y="-392.1855" Z="121.9753" />
 							
 							<!-- Pull the first group on the right entering Hall of Blackhand -->
 							<RunTo X="139.8645" Y="-339.0653" Z="110.9538" />
@@ -355,7 +374,7 @@
 							<!-- Move into Blackrock Stadium -->
 							<RunTo X="117.1818" Y="-420.4112" Z="110.873" />
 							
-							<!-- GOOGE to kill XXX -->
+							<!-- GOOGE to kill Warchief Rend Blackhand -->
 							<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 											EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="10429"
 											EventX="181.8481" EventY="-420.2722" EventZ="110.4723"
@@ -387,16 +406,19 @@
 							
 							<!-- Pull Beauty -->
 							<RunTo X="25.38366" Y="-525.7129" Z="110.9419" />
-							
-							<CustomBehavior File="RunLikeHell"
-									UseCTM="true"
-									NumOfTimes="1"
-									AllowCombat="false">	
-								<Hotspot X="52.59668" Y="-537.2087" Z="110.9362" />
-								<Hotspot X="82.84416" Y="-517.7784" Z="114.0472" />
+				
+							<!-- GOOGE to kill Beauty -->
+							<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+											EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="39700"
+											EventX="70.61871" EventY="-544.947" EventZ="110.9304"
+											MoveOutOfGroundEffectAuraId1="111111"
+											MoveAwayFromMobCastingSpellId1="111111"
+											MoveAwayFromMobWithAuraId1="111111">
+								<Safespots>
+									<Hotspot X="70.61871" Y="-544.947" Z="110.9304" />
+								</Safespots>
 							</CustomBehavior>
-							<RunTo X="82.84416" Y="-517.7784" Z="114.0472" />
-							
+				
 							<!-- Run to the door exiting the Furnace -->
 							<RunTo X="34.07322" Y="-438.6306" Z="110.9631" />
 							
@@ -412,21 +434,22 @@
 							</CustomBehavior>
 							<RunTo X="33.17713" Y="-357.7313" Z="110.8591" />
 							
-							<!-- Pull the first group  in Spire Throne -->
+							<!-- Pull the first group in Spire Throne -->
 							<RunTo X="38.29306" Y="-333.565" Z="110.9435" />
 							
 							<!-- Pull the partol -->
-							<RunTo X="21.72935" Y="-320.1906" Z="110.9435" />
-							<RunTo X="-0.1099372" Y="-311.6035" Z="110.9433" />
-							
-							<!-- Wait timer - wait 40 second to make sure we got aggro -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="40000" />
-							
+							<RunTo X="14.98267" Y="-327.712" Z="110.9426" />
+							<RunTo X="0.4710908" Y="-319.4752" Z="110.9426" />
+							<RunTo X="0.1663844" Y="-294.5398" Z="110.9425" />
+							<RunTo X="-0.1470592" Y="-312.8383" Z="110.9441" />
+
 							<!-- Pull the second group on the left of Spire Throne -->
-							<RunTo X="-6.91998" Y="-340.9393" Z="110.942" />
+							<RunTo X="6.521269" Y="-327.2348" Z="110.9427" />
+							<RunTo X="-10.13626" Y="-344.0502" Z="110.9427" />
 							
 							<!-- Pull the back left group in Spire Thrown -->
+							<RunTo X="0.03813887" Y="-326.3633" Z="110.9427" />
+							<RunTo X="-0.1139246" Y="-290.2191" Z="110.9429" />
 							<RunTo X="-4.956197" Y="-264.057" Z="110.942" />
 						
 							<!-- Run to the door exiting Spire Throne -->

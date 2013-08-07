@@ -236,32 +236,55 @@
 						<RunTo X="-210.7714" Y="142.4178" Z="26.75119" />
 						<RunTo X="-214.4941" Y="203.6616" Z="26.72287" />
 						<RunTo X="-242.3174" Y="211.0034" Z="26.75901" />
+												
+						<!-- Pull all the birds entering the second floor -->
+						<RunTo X="-243.2757" Y="274.095" Z="26.92527" />
 						
-						<!-- Clear top door to last boss guards -->
-						<RunTo X="-242.5275" Y="228.7115" Z="26.7231" />
-						<RunTo X="-243.2647" Y="284.1381" Z="27.49084" />
-						<RunTo X="-235.8431" Y="334.1547" Z="27.31513" />
-						<RunTo X="-201.8283" Y="338.0493" Z="26.63621" />
-						<RunTo X="-207.187" Y="312.0368" Z="31.70341" />
-						<RunTo X="-205.6251" Y="314.0121" Z="30.29447" />
-						<RunTo X="-184.4474" Y="343.7325" Z="27.98125" />
-						<RunTo X="-182.8104" Y="279.7446" Z="26.60574" />
-						<RunTo X="-141.845" Y="290.2998" Z="26.73262" />
-						<RunTo X="-129.0573" Y="287.5922" Z="26.73122" />
-						<RunTo X="-95.22292" Y="304.7847" Z="26.4843" />
-						<RunTo X="-61.07859" Y="308.918" Z="26.83824" />
-						<RunTo X="-45.60033" Y="284.2642" Z="26.7746" />
-						<RunTo X="-0.1354589" Y="291.7284" Z="26.68957" />
-						<RunTo X="-0.09103165" Y="284.6599" Z="26.68957" />
-						<RunTo X="-41.70713" Y="286.3986" Z="26.73074" />
-						<RunTo X="-77.20947" Y="287.3869" Z="26.4832" />
-						<RunTo X="-89.19993" Y="267.9048" Z="26.82262" />
-						<RunTo X="-119.8436" Y="271.4776" Z="27.3058" />
-						<RunTo X="-85.27658" Y="297.7351" Z="26.48322" />
-
+						<!-- Pull the first group on the left -->
+						<RunTo X="-244.6912" Y="300.7824" Z="26.73067" />
+						<RunTo X="-239.1409" Y="322.7475" Z="26.84665" />
+						
+						<!-- Pull the second group on the left -->
+						<RunTo X="-212.0216" Y="344.4765" Z="26.71217" />
+						
+						<!-- Pull the birds in the hole -->
+						<RunTo X="-183.7815" Y="337.7345" Z="26.2025" />
+						
+						<!-- Pull the birds on the mound -->
+						<RunTo X="-208.8909" Y="311.1301" Z="32.67688" />
+						
+						<!-- Pull the rifgt-hand group before Anzu's room -->
+						<CustomBehavior File="RunLikeHell" 
+										UseCTM="false" 
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="-189.8043" Y="315.7279" Z="26.73052" />
+							<Hotspot X="-181.3911" Y="285.3156" Z="26.41636" />
+							<Hotspot X="-191.6818" Y="317.6216" Z="26.70936" />
+						</CustomBehavior>
+						<RunTo X="-191.6818" Y="317.6216" Z="26.70936" />
 					
-						<!-- Run to last bosses room -->
-						<RunTo X="-21.41718" Y="286.436" Z="26.72997" />
+						<!-- Pull Anzsu's door guards -->
+						<RunTo X="-141.0085" Y="283.8476" Z="26.73229" />
+						
+						<!-- Pull the right-hand group entering Anzu's room -->
+						<RunTo X="-123.5941" Y="275.8971" Z="27.34166" />
+						
+						<!-- Pull the second group on the right in Anzu's room -->
+						<RunTo X="-105.839" Y="260.9236" Z="27.01575" />
+						<RunTo X="-93.4143" Y="261.5227" Z="26.73647" />
+						
+						<!-- Pull the first group on the left of Anzu's room -->
+						<RunTo X="-97.51299" Y="297.7459" Z="26.48318" />
+						
+						<!-- Pull back left group in Anzu's room -->
+						<RunTo X="-68.0854" Y="312.47" Z="26.71863" />
+						
+						<!-- Pull back right group in Anzu's room -->
+						<RunTo X="-58.58341" Y="287.7144" Z="26.91286" />
+						
+						<!-- Pull the door guards entering Talon King Ikiss's room-->
+						<RunTo X="-16.60608" Y="286.7267" Z="26.73114" />
 										
 						<!-- Forces kill of Talon King Ikiss -->
 						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 

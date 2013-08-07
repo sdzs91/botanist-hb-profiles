@@ -262,28 +262,78 @@
 					<RunTo X="595.6187" Y="-259.2216" Z="-40.32296" />
 					<RunTo X="596.3951" Y="-279.1672" Z="-43.1013" />
 					
+					<!-- Pull the group on the left -->
+					<RunTo X="623.0304" Y="-283.2556" Z="-43.10722" />
+					
+					<!-- Pull the two bridge elementals -->
+					<RunTo X="645.2542" Y="-284.8105" Z="-43.24514" />
+					
+					<!-- Pull the next two elementals -->
+					<CustomBehavior File="RunLikeHell" 
+									UseCTM="false" 
+									NumOfTimes="1" 
+									AllowCombat="false">
+						<Hotspot X="689.6422" Y="-279.79" Z="-43.19712" />
+						<Hotspot X="715.7651" Y="-281.571" Z="-42.87342" />
+						<Hotspot X="733.2648" Y="-276.0323" Z="-42.80363" />
+						<Hotspot X="740.7075" Y="-275.4771" Z="-42.83439" />
+						<Hotspot X="739.7984" Y="-283.6084" Z="-42.83404" />
+					</CustomBehavior>
+					<RunTo X="739.7984" Y="-283.6084" Z="-42.83404" />
+					
+					<!-- Pull the first group on the left in The Domicile -->
+					<RunTo X="767.723" Y="-259.7374" Z="-43.39937" />
+					
+					<!-- Pull the second group on the left in The Domicile -->
+					<RunTo X="791.739" Y="-225.095" Z="-43.28893" />
+					
+					<!-- Pull the center group near the book shelves -->
+					<RunTo X="791.3059" Y="-269.0306" Z="-43.33686" />
+					
+					<!-- Pull the right-hand group -->
+					<RunTo X="791.9423" Y="-298.1971" Z="-43.29707" />
+					
+					<!-- Clear the first room on the right -->
+					<RunTo X="773.9301" Y="-304.7879" Z="-43.29959" />
+					
+					<!-- Clear the second room on the right -->
+					<RunTo X="813.0432" Y="-301.1625" Z="-43.29477" />
+					
+					<!-- Pull the group at the door enter Shadowforge City -->
+					<RunTo X="850.4582" Y="-249.9508" Z="-49.9968" />
+					
+					<CustomBehavior File="UserSettings" StopBot="true" />
+					<!-- XXX -->
 					
 					
+					<!-- XXX -->
 					
 					
+					<!-- XXX -->
 					
 					
+					<!-- XXX -->
 					
 					
+					<!-- XXX -->
 					
 					
+					<!-- XXX -->
 					
 					
+					<!-- XXX -->
 					
 					
+					<!-- XXX -->
 					
 					
+					<!-- XXX -->
 					
 					
+					<!-- XXX -->
 					
 					
-					
-					
+					<!-- XXX -->
 					
 					
 					
