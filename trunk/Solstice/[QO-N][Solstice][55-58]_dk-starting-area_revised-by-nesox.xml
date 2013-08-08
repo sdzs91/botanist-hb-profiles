@@ -182,7 +182,7 @@
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="20"
+							PullDistance="25"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseFlightPaths="True"
@@ -780,7 +780,7 @@
 		</If>
 				
 		<If Condition="Me.Level &gt;= 58" >
-		<CustomBehavior File="LoadProfile" ProfileName="[QO-N][Solstice][58-62]_blackrock-depths" />
+		<CustomBehavior File="LoadProfile" ProfileName="[QO-N][Solstice][58-65]_blackrock-depths" />
 		</If>
 	</If>
 
@@ -802,7 +802,7 @@
 			<CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="5000"/> <!-- Set Hearth to SW -->
 		</If>
 		<If Condition="Me.Level &gt;= 58" >
-			<CustomBehavior File="LoadProfile" ProfileName="[QO-N][Solstice][58-62]_blackrock-depths" />
+			<CustomBehavior File="LoadProfile" ProfileName="[QO-N][Solstice][58-65]_blackrock-depths" />
 		</If>
 		
 	</If>
