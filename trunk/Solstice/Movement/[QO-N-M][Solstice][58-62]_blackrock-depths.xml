@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-M][Solstice][58-65]_blackrock-depths</Name>
+	<Name>[QO-N-M][Solstice][58-62]_blackrock-depths</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -264,7 +264,7 @@
 									LogColor="Cyan" />
 					
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="..\[QO-N][Solstice][58-65]_blackrock-depths" />
+									ProfileName="..\[QO-N][Solstice][58-62]_blackrock-depths" />
 				</If> <!-- Load profile -->
 			</If> <!-- Eastern Kingdoms -->
 		</If> <!-- Level check -->

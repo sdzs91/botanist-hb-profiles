@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-M][Solstice][58-67]_blackrock-spire</Name>
+	<Name>[QO-N-M][Solstice][62-67]_blackrock-spire</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -278,7 +278,7 @@
 									LogColor="Cyan" />
 					
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="..\[QO-N][Solstice][65-67]_blackrock-spire" />
+									ProfileName="..\[QO-N][Solstice][62-67]_blackrock-spire" />
 				</If> <!-- Load profile -->
 			</If> <!-- Eastern Kingdoms -->
 		</If> <!-- Level check -->

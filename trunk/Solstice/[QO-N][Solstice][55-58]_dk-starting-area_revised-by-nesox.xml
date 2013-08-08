@@ -1,5 +1,5 @@
 <HBProfile>  <!-- Developed by Kickazz006 -->
-    <Name>Deathknight Starting Zone ($Rev: 2485 $)</Name>
+    <Name>[QO-N][Solstice][55-58]_dk-starting-area_revised-by-nesox</Name>
     <MinLevel>55</MinLevel>
     <MaxLevel>99</MaxLevel>
 	<MinDurability>0.3</MinDurability>
@@ -153,7 +153,7 @@
 
     <QuestOrder>
 	
-	<CustomBehavior File="Message" Text="Loading Profile: DK Starting revised by Nesox" LogColor="CornflowerBlue" />
+	<CustomBehavior File="Message" Text="[QO-N][Solstice][55-58]_dk-starting-area_revised-by-nesox" LogColor="CornflowerBlue" />
 	
 	<If Condition="(Me.Class != WoWClass.DeathKnight)" >
 		<CustomBehavior File="UserDialog" AllowBotStop="True" StopOnContinue="True" SoundCue="Exclamation" SoundCueInterval="1" Text="LOL Y U LOAD DK PROFILE? U NO DK!!! NOOB! ROFL" />
@@ -164,10 +164,30 @@
 	<!-- Settings checks:
 		We know the class is DeathKnight, and we need PullDistance set to something sane,
 		for when we restore the user's settings -->
-	<If Condition="CharacterSettings.Instance.PullDistance &gt; 25">
-		<CustomBehavior File="UserDialog" StopOnContinue="true"
-			Text="Your PullDistance is too high!  Please set it to 25 or less.\n\nHonorbuddy\n-> Settings &amp; Tools\n-> use &quot;Pull Distance&quot; slider" />
-	</If>
+	<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							FindVendorsAutomatically="False"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootChests="False"
+							LootMobs="True"
+							LootRadius="1"
+							MountDistance="75"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							PullDistance="20"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseFlightPaths="True"
+							UseMount="True" 
+							UseRandomMount="False" />
 	
 	<If Condition="Me.Level &lt;= 58" >
 		<!-- NB: The following Condition will evaluate incorrectly, if Honorbuddy has just been started.
@@ -759,39 +779,9 @@
 			<CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="5000"/> <!-- Set Hearth to Org -->
 		</If>
 				
-		<If Condition="(Me.Level &lt;= 60)" >
-			<If Condition="(Me.ZoneId == 1637)" > <!-- Org -->
-				<RunTo X="1772.016" Y="-4328.45" Z="-8.219744" />
-				<CustomBehavior File="InteractWith" MobId="195142" Range="2"
-					CollectionDistance="1000" X="1772.016" Y="-4328.45" Z="-8.219744" />
-				<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for port {TimeRemaining}" />
-			</If>
-			<If Condition="Me.MapId == 0" >
-				<RunTo X="-11895.44" Y="-3206.936" Z="-14.64132" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="MyCTM" X="-11908.09" Y="-3208.854" Z="-14.83002" />
-				<CustomBehavior File="WaitTimer" WaitTime="10000" />
-				<While Condition="Me.MapId == 0" >
-					<If Condition="Me.MapId == 0" >
-						<RunTo X="-11895.44" Y="-3206.936" Z="-14.64132" />
-						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					</If>
-					<If Condition="Me.MapId == 0" >
-						<CustomBehavior File="MyCTM" X="-11908.09" Y="-3208.854" Z="-14.83002" />
-						<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					</If>
-					 <If Condition="Me.MapId == 0" >
-						<CustomBehavior File="WaitTimer" WaitTime="15000" />
-					 </If>
-				</While>
-			</If>
-			
-			<EnableRepair />
-			<CustomBehavior File="UserSettings" PullDistance="original" />
-			<CustomBehavior File="EnablePlugin" Names="AutoEquip2" />
-			<CustomBehavior File="DeleteItems" Ids="39327,39328" /> <!-- DK Profile -->
+		<If Condition="Me.Level &gt;= 58" >
+		<CustomBehavior File="LoadProfile" ProfileName="[QO-N][Solstice][58-62]_blackrock-depths" />
 		</If>
-		<CustomBehavior File="LoadProfile" ProfileName="..\BC\[Fly][H - Quest] BC 58-70 [Kick]" />
 	</If>
 
     <!-- Alliance -->
@@ -811,32 +801,10 @@
 				X="-8867.786" Y="673.6729" Z="97.90324" />
 			<CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="5000"/> <!-- Set Hearth to SW -->
 		</If>
-		<If Condition="(Me.Level &lt;= 60)" >
-			<If Condition="Me.ZoneId == 1519" >
-				<RunTo X="-9006.36" Y="869.7172" Z="129.693" />
-				<CustomBehavior File="InteractWith" MobId="195141" Range="8" WaitTime="10000" 
-					CollectionDistance="1000" X="-9006.36" Y="869.7172" Z="129.693" />
-			</If>
-			<While Condition="Me.MapId == 0" >
-				<If Condition="Me.MapId == 0" >
-				<RunTo X="-11895.44" Y="-3206.936" Z="-14.64132" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			</If>
-			<If Condition="Me.MapId == 0" >
-				<CustomBehavior File="MyCTM" X="-11908.09" Y="-3208.854" Z="-14.83002" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-			</If>
-			<If Condition="Me.MapId == 0" >
-				<CustomBehavior File="WaitTimer" WaitTime="15000" />
-			</If>
-			</While>
-	  
-			<EnableRepair />
-			<CustomBehavior File="UserSettings" PullDistance="original" />
-			<CustomBehavior File="EnablePlugin" Names="AutoEquip2" />
-			<CustomBehavior File="DeleteItems" Ids="39327,39328" /> <!-- DK Profile -->
+		<If Condition="Me.Level &gt;= 58" >
+			<CustomBehavior File="LoadProfile" ProfileName="[QO-N][Solstice][58-62]_blackrock-depths" />
 		</If>
-		<CustomBehavior File="LoadProfile" ProfileName="[QO-N][Solstice][58-65]_blackrock-depths" />
+		
 	</If>
 	
     </QuestOrder>

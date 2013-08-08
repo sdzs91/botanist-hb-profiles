@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][Solstice][58-67]_blackrock-spire</Name>
+	<Name>[QO-N][Solstice][62-67]_blackrock-spire</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -102,7 +102,7 @@
 									LogColor="Fuchsia" />	
 									
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][Solstice][65-67]_blackrock-spire" />
+									ProfileName="Movement\[QO-N-M][Solstice][62-67]_blackrock-spire" />
 				</If> <!-- Not in box -->
 				
 				<!-- If we are in the box -->
