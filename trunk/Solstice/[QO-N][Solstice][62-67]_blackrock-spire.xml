@@ -11,12 +11,12 @@
 	<MailWhite>False</MailWhite>
 	<MailGreen>False</MailGreen>
 	<MailBlue>False</MailBlue>
-	<MailPurple>False</MailPurple>
+	<MailPurple>True</MailPurple>
    
-	<SellGrey>False</SellGrey>
-	<SellWhite>False</SellWhite>
-	<SellGreen>False</SellGreen>
-	<SellBlue>False</SellBlue>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
 	<SellPurple>False</SellPurple>
    
 	<TargetElites>True</TargetElites>
@@ -46,7 +46,7 @@
 		<ClearMailbox />
 
 		<!-- Level check -->
-		<If Condition="Me.Level &gt;= 65">
+		<If Condition="Me.Level &gt;= 62">
 			<CustomBehavior File="Message" 
 							Text="You meet the level requirement to run this profile." 
 							LogColor="Fuchsia" />
@@ -165,6 +165,10 @@
 									Text="Blackrock Spire initialized."  
 									LogColor="Fuchsia" />
 		
+		
+		<!-- ************************************************************************************ level 62-66 *************************************************************** -->
+		
+		
 					<!-- If we are below level 66, we will run LBRS -->				
 					<If Condition="Me.Level &lt; 66">
 
@@ -191,15 +195,57 @@
 							<!-- Entrance to LBRS -->		
 							<RunTo X="37.1034" Y="-359.2722" Z="48.66062" />					
 					
-							<!-- Pulling all the groups to the first bridge -->
-							<RunTo X="26.065" Y="-369.3656" Z="48.73167" />
-							<RunTo X="26.16421" Y="-393.5885" Z="48.7422" />
-							<RunTo X="65.75504" Y="-434.9665" Z="42.31444" />
-							<RunTo X="47.18937" Y="-462.657" Z="24.03268" />
-							<RunTo X="46.28746" Y="-498.0121" Z="29.18884" />
+							<!-- Pulling the first group at the entrance -->
+							<RunTo X="33.93049" Y="-394.8943" Z="48.67911" />
+							
+							<!-- Avoiding the second group -->
+							<CustomBehavior File="RunLikeHell" 
+											UseCTM="true" 
+											NumOfTimes="1" 
+											AllowCombat="false">
+								<Hotspot X="33.93049" Y="-394.8943" Z="48.67911" />
+								<Hotspot X="55.27284" Y="-409.5037" Z="47.17941" />
+								<Hotspot X="86.34416" Y="-421.4836" Z="51.65228" />
+								<Hotspot X="87.21146" Y="-428.4678" Z="49.87283" />
+								<Hotspot X="95.67535" Y="-428.9516" Z="54.58511" />
+								<Hotspot X="90.38204" Y="-443.0916" Z="45.9206" />
+								<Hotspot X="84.39173" Y="-457.8681" Z="37.03413" />
+								<Hotspot X="81.10568" Y="-473.4621" Z="32.85233" />
+							</CustomBehavior>
+							<RunTo X="81.10568" Y="-473.4621" Z="32.85233" />
+							
+							<!-- Pull the left-hand group -->
+							<CustomBehavior File="RunLikeHell" 
+											UseCTM="true" 
+											NumOfTimes="1" 
+											AllowCombat="false">
+								<Hotspot X="74.34081" Y="-487.4573" Z="27.85728" />
+<Hotspot X="56.98522" Y="-491.5849" Z="28.70326" />
+<Hotspot X="61.46122" Y="-505.9091" Z="29.18768" />
+							</CustomBehavior>
+							<RunTo X="61.46122" Y="-505.9091" Z="29.18768" />
+							
+							<!-- Pull the right-hand group -->
+							<CustomBehavior File="RunLikeHell" 
+											UseCTM="true" 
+											NumOfTimes="1" 
+											AllowCombat="false">
+								<Hotspot X="47.76076" Y="-487.1947" Z="28.8968" />
+								<Hotspot X="48.34912" Y="-465.3182" Z="24.40177" />
+							</CustomBehavior>
+							<RunTo X="48.34912" Y="-465.3182" Z="24.40177" />
 							
 							<!-- Group after the first bridge -->
-							<RunTo X="55.50315" Y="-566.0964" Z="30.58309" />
+							<CustomBehavior File="RunLikeHell" 
+											UseCTM="true" 
+											NumOfTimes="1" 
+											AllowCombat="false">
+								<Hotspot X="45.62149" Y="-483.9624" Z="28.15186" />			
+								<Hotspot X="50.42857" Y="-514.9098" Z="30.0029" />
+								<Hotspot X="50.88689" Y="-552.7054" Z="30.9769" />
+								<Hotspot X="58.43221" Y="-571.8993" Z="30.60801" />
+							</CustomBehavior>
+							<RunTo X="58.43221" Y="-571.8993" Z="30.60801" />
 							
 							<!-- First group on the left after the second bridge -->
 							<RunTo X="-29.44304" Y="-588.4897" Z="29.19094" />
@@ -234,7 +280,25 @@
 							<!-- Single ogre after entering Mok Doom -->
 							<RunTo X="-25.46938" Y="-348.4747" Z="31.61681" />
 							
+							<!-- Avoiding the second group  at the entrance-->
+							<CustomBehavior File="RunLikeHell" 
+											UseCTM="true" 
+											NumOfTimes="1" 
+											AllowCombat="false">
+								<Hotspot X="81.10568" Y="-473.4621" Z="32.85233" />
+								<Hotspot X="84.39173" Y="-457.8681" Z="37.03413" />
+								<Hotspot X="90.38204" Y="-443.0916" Z="45.9206" />
+								<Hotspot X="95.67535" Y="-428.9516" Z="54.58511" />
+								<Hotspot X="87.21146" Y="-428.4678" Z="49.87283" />
+								<Hotspot X="86.34416" Y="-421.4836" Z="51.65228" />
+								<Hotspot X="55.27284" Y="-409.5037" Z="47.17941" />
+								<Hotspot X="33.93049" Y="-394.8943" Z="48.67911" />
+							</CustomBehavior>
+							<RunTo X="33.93049" Y="-394.8943" Z="48.67911" />
+							
 					</If>	<!-- If we are below level 66, we will run LBRS -->
+					
+		<!-- ************************************************************************************ level 66-67 *************************************************************** -->			
 					
 					<!-- If we are level 66 or above, we will run UBRS -->				
 					<If Condition="Me.Level &gt;= 66">				

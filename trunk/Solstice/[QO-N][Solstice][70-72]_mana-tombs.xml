@@ -11,13 +11,15 @@
 	<MailWhite>False</MailWhite>
 	<MailGreen>False</MailGreen>
 	<MailBlue>False</MailBlue>
-	<MailPurple>False</MailPurple>
+	<MailPurple>True</MailPurple>
    
-	<SellGrey>False</SellGrey>
-	<SellWhite>False</SellWhite>
-	<SellGreen>False</SellGreen>
-	<SellBlue>False</SellBlue>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
 	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
    
 	<TargetElites>True</TargetElites>
 	
@@ -360,7 +362,8 @@
 				<!-- If we are inside Mana-Tombs -->
 				<If Condition="Me.ZoneId == 3792">
 				
-					<!-- Repair if necessary -->>
+					<!-- Repair if necessary -->
+					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 					
 						<!-- If our hearthstone is set here, use it -->
 						<If Condition="(Me.HearthstoneAreaId == 3684) || (Me.HearthstoneAreaId == 3683)">

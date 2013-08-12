@@ -11,12 +11,12 @@
 	<MailWhite>False</MailWhite>
 	<MailGreen>False</MailGreen>
 	<MailBlue>False</MailBlue>
-	<MailPurple>False</MailPurple>
+	<MailPurple>True</MailPurple>
    
 	<SellGrey>True</SellGrey>
-	<SellWhite>False</SellWhite>
-	<SellGreen>False</SellGreen>
-	<SellBlue>False</SellBlue>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
 	<SellPurple>False</SellPurple>
    
 	<TargetElites>True</TargetElites>

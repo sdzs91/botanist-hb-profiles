@@ -1,22 +1,22 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
 	<Name>[QO-N][Solstice][87-88]_blackrock-caverns</Name>
    
-	<MinLevel>1</MinLevel>
+		<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
    
 	<MinDurability>-1</MinDurability>
 	<MinFreeBagSlots>-1</MinFreeBagSlots>
 	
-	<MailGrey>True</MailGrey>
+	<MailGrey>False</MailGrey>
 	<MailWhite>False</MailWhite>
 	<MailGreen>False</MailGreen>
 	<MailBlue>False</MailBlue>
-	<MailPurple>False</MailPurple>
+	<MailPurple>True</MailPurple>
    
-	<SellGrey>False</SellGrey>
-	<SellWhite>False</SellWhite>
-	<SellGreen>False</SellGreen>
-	<SellBlue>False</SellBlue>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
 	<SellPurple>False</SellPurple>
    
 	<TargetElites>True</TargetElites>
@@ -46,13 +46,11 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-		<!-- *******************************************************  Booster ************************************************************** -->
-		<If Condition="Me.Level &gt;= 90">
-			<CustomBehavior File="Message" 
-							Text="We are a Booster." 
-							LogColor="Fuchsia" />
+
+		<If Condition="Me.Level &gt;= 87">
+			
 		
-		 	<!-- Booster UserSettings -->
+		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"

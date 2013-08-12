@@ -7,20 +7,20 @@
 	<MinDurability>-1</MinDurability>
 	<MinFreeBagSlots>-1</MinFreeBagSlots>
 	
-	<MailGrey>True</MailGrey>
+	<MailGrey>False</MailGrey>
 	<MailWhite>False</MailWhite>
 	<MailGreen>False</MailGreen>
 	<MailBlue>False</MailBlue>
-	<MailPurple>False</MailPurple>
+	<MailPurple>True</MailPurple>
    
-	<SellGrey>False</SellGrey>
-	<SellWhite>False</SellWhite>
-	<SellGreen>False</SellGreen>
-	<SellBlue>False</SellBlue>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
 	<SellPurple>False</SellPurple>
    
 	<TargetElites>True</TargetElites>
-	
+		
 	<AvoidMobs>		
 		<Mob Name="Summon Enabler Stalker" Entry="53488" />
 		<Mob Name="Karsh Steelbender" Entry="39698" />

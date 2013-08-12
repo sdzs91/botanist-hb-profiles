@@ -1,16 +1,23 @@
 <HBProfile>  <!-- Developed by Kickazz006 -->
     <Name>[QO-N][Solstice][55-58]_dk-starting-area_revised-by-nesox</Name>
-    <MinLevel>55</MinLevel>
-    <MaxLevel>99</MaxLevel>
-	<MinDurability>0.3</MinDurability>
-	<MinFreeBagSlots>3</MinFreeBagSlots>
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
 	<SellGrey>True</SellGrey>
 	<SellWhite>True</SellWhite>
 	<SellGreen>True</SellGreen>
-	<MailWhite>True</MailWhite>
-	<MailGreen>True</MailGreen>
-	<MailBlue>True</MailBlue>
-	<MailPurple>True</MailPurple>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
 	<TargetElites>False</TargetElites>
   
   
@@ -152,19 +159,17 @@
   </Quest>
 
     <QuestOrder>
-	
-	<CustomBehavior File="Message" Text="[QO-N][Solstice][55-58]_dk-starting-area_revised-by-nesox" LogColor="CornflowerBlue" />
-	
-	<If Condition="(Me.Class != WoWClass.DeathKnight)" >
-		<CustomBehavior File="UserDialog" AllowBotStop="True" StopOnContinue="True" SoundCue="Exclamation" SoundCueInterval="1" Text="LOL Y U LOAD DK PROFILE? U NO DK!!! NOOB! ROFL" />
-	</If>
-	
-	<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
+
+		<If Condition="(Me.Class != WoWClass.DeathKnight)" >
+			<CustomBehavior File="UserDialog" AllowBotStop="True" StopOnContinue="True" SoundCue="Exclamation" SoundCueInterval="1" Text="LOL Y U LOAD DK PROFILE? U NO DK!!! NOOB! ROFL" />
+		</If>
 		
-	<!-- Settings checks:
-		We know the class is DeathKnight, and we need PullDistance set to something sane,
-		for when we restore the user's settings -->
-	<!-- UserSettings -->
+		<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
+			
+		<!-- Settings checks:
+			We know the class is DeathKnight, and we need PullDistance set to something sane,
+			for when we restore the user's settings -->
+		<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
@@ -182,26 +187,26 @@
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="25"
+							PullDistance="20"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseFlightPaths="True"
 							UseMount="True" 
 							UseRandomMount="False" />
 	
-	<If Condition="Me.Level &lt;= 58" >
-		<!-- NB: The following Condition will evaluate incorrectly, if Honorbuddy has just been started.
-			This is because plugins have yet to be initialized when the profile is started
-			for the first time.  However, if the user stop/starts Honorbuddy, the Condition will
-			be avaluated correctly, thus eliminating some "noise" to the user.
-			-->
-		<If Condition="(Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;AutoEquip2&quot;) != null) &amp;&amp; Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;AutoEquip2&quot;).Enabled">
-			<CustomBehavior File="DisablePlugin" Names="AutoEquip2" />
-			<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="2"
-				ExpiryTime="60" ExpiryAction="InputEnabled_Continue"
-				Text="DO NOT ENABLE AutoEquip2 in the DeathKnight starting zone!\n\nWe have disabled your AutoEquip2 plugin.  This is required for questing in the DeathKnight starting zone, as some quests require the equipping of specific armor and weapons.\n\nPLEASE do not re-enable AutoEquip2 until we've left the Deathknight starting zone\n\n" />
+		<If Condition="Me.Level &lt;= 58" >
+			<!-- NB: The following Condition will evaluate incorrectly, if Honorbuddy has just been started.
+				This is because plugins have yet to be initialized when the profile is started
+				for the first time.  However, if the user stop/starts Honorbuddy, the Condition will
+				be avaluated correctly, thus eliminating some "noise" to the user.
+				-->
+			<If Condition="(Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;AutoEquip2&quot;) != null) &amp;&amp; Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;AutoEquip2&quot;).Enabled">
+				<CustomBehavior File="DisablePlugin" Names="AutoEquip2" />
+				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="2"
+					ExpiryTime="60" ExpiryAction="InputEnabled_Continue"
+					Text="DO NOT ENABLE AutoEquip2 in the DeathKnight starting zone!\n\nWe have disabled your AutoEquip2 plugin.  This is required for questing in the DeathKnight starting zone, as some quests require the equipping of specific armor and weapons.\n\nPLEASE do not re-enable AutoEquip2 until we've left the Deathknight starting zone\n\n" />
+			</If>
 		</If>
-	</If>
 			
      <If Condition="HasQuest(12779)">
         <DisableRepair />
@@ -664,33 +669,33 @@
       <PickUp QuestName="A Sort Of Homecoming" QuestId="12751" GiverName="Knight Commander Plaguefist" GiverId="29053" />
       <TurnIn QuestName="A Sort Of Homecoming" QuestId="12751" TurnInName="Thassarian" TurnInId="28913" />
 
-      <!-- Ambush At The Overlook - http://www.wowhead.com/quest=12754 -->
-      <PickUp QuestName="Ambush At The Overlook" QuestId="12754" GiverName="Orbaz Bloodbane" GiverId="28914" />
-      <If Condition="HasQuest(12754) &amp;&amp; !IsQuestCompleted(12754)">
-        <UseItem QuestName="A Vision of the Past" QuestId="12754" ItemId="39645" X="1481.461" Y="-5989.479" Z="116.5384" />
-        <CustomBehavior File="WaitTimer" WaitTime="12000" />
-      </If>
+	  <!-- Ambush At The Overlook - http://www.wowhead.com/quest=12754 -->
+	  <PickUp QuestName="Ambush At The Overlook" QuestId="12754" GiverName="Orbaz Bloodbane" GiverId="28914" />
+	  <If Condition="HasQuest(12754) &amp;&amp; !IsQuestCompleted(12754)">
+		<UseItem QuestName="A Vision of the Past" QuestId="12754" ItemId="39645" X="1481.461" Y="-5989.479" Z="116.5384" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" />
+	  </If>
 		<If Condition="((HasQuest(12754)) &amp;&amp; (IsQuestCompleted(12754)))" >
 			<RunTo X="1405.699" Y="-5819.216" Z="131.2088" />
 			<CustomBehavior File="ForcedDismount" />
 		</If>
-     <TurnIn QuestName="Ambush At The Overlook" QuestId="12754" TurnInName="Orbaz Bloodbane" TurnInId="28914" />
+	 <TurnIn QuestName="Ambush At The Overlook" QuestId="12754" TurnInName="Orbaz Bloodbane" TurnInId="28914" />
 
-      <!-- A Meeting With Fate - http://www.wowhead.com/quest=12755 -->
-      <PickUp QuestName="A Meeting With Fate" QuestId="12755" GiverName="Orbaz Bloodbane" GiverId="28914" />
-      <TurnIn QuestName="A Meeting With Fate" QuestId="12755" TurnInName="High General Abbendis" TurnInId="29077" />
+	  <!-- A Meeting With Fate - http://www.wowhead.com/quest=12755 -->
+	  <PickUp QuestName="A Meeting With Fate" QuestId="12755" GiverName="Orbaz Bloodbane" GiverId="28914" />
+	  <TurnIn QuestName="A Meeting With Fate" QuestId="12755" TurnInName="High General Abbendis" TurnInId="29077" />
 
-      <!-- The Scarlet Onslaught Emerges - http://www.wowhead.com/quest=12756 -->
-      <PickUp QuestName="The Scarlet Onslaught Emerges" QuestId="12756" GiverName="High General Abbendis" GiverId="29077" />
-      <TurnIn QuestName="The Scarlet Onslaught Emerges" QuestId="12756" TurnInName="Orbaz Bloodbane" TurnInId="28914" />
+	  <!-- The Scarlet Onslaught Emerges - http://www.wowhead.com/quest=12756 -->
+	  <PickUp QuestName="The Scarlet Onslaught Emerges" QuestId="12756" GiverName="High General Abbendis" GiverId="29077" />
+	  <TurnIn QuestName="The Scarlet Onslaught Emerges" QuestId="12756" TurnInName="Orbaz Bloodbane" TurnInId="28914" />
 
-      <!-- Scarlet Armies Approach... - http://www.wowhead.com/quest=12757 -->
-      <PickUp QuestName="Scarlet Armies Approach..." QuestId="12757" GiverName="Orbaz Bloodbane" GiverId="28914" />
-      <TurnIn QuestName="Scarlet Armies Approach..." QuestId="12757" TurnInName="Highlord Darion Mograine" TurnInId="28444" />
-      <CustomBehavior File="EquipItem" ItemId="38663" />
+	  <!-- Scarlet Armies Approach... - http://www.wowhead.com/quest=12757 -->
+	  <PickUp QuestName="Scarlet Armies Approach..." QuestId="12757" GiverName="Orbaz Bloodbane" GiverId="28914" />
+	  <TurnIn QuestName="Scarlet Armies Approach..." QuestId="12757" TurnInName="Highlord Darion Mograine" TurnInId="28444" />
+	  <CustomBehavior File="EquipItem" ItemId="38663" />
 
-      <!-- The Scarlet Apocalypse - http://www.wowhead.com/quest=12778 -->
-      <PickUp QuestName="The Scarlet Apocalypse" QuestId="12778" GiverName="Highlord Darion Mograine" GiverId="28444" />
+	  <!-- The Scarlet Apocalypse - http://www.wowhead.com/quest=12778 -->
+	  <PickUp QuestName="The Scarlet Apocalypse" QuestId="12778" GiverName="Highlord Darion Mograine" GiverId="28444" />
 		<If Condition="HasQuest(12778) &amp;&amp; IsQuestCompleted(12778)" >
 			<RunTo X="2321.242" Y="-5732.957" Z="153.9213" />
 			<RunTo X="2310.946" Y="-5741.625" Z="161.1496" />
@@ -705,7 +710,7 @@
 		<If Condition="!Me.IsOutdoors">
 			<MoveTo X="2324.595" Y="-5729.186" Z="153.9202" />
 		</If>
-        <CustomBehavior File="SpecificQuests\DeathknightStart\AnEndToAllThings" VehicleId="28670" ItemId="39700"
+		<CustomBehavior File="SpecificQuests\DeathknightStart\AnEndToAllThings" VehicleId="28670" ItemId="39700"
 			AttackSpellIndex="1" HealSpellIndex="3" KillNpcId="29104" HealNpcId="29102">
 			<Start X="1800.488" Y="-5774.659" Z="180.3334" />
 			<End X="1752.615" Y="-5823.563" Z="234.6956" />
@@ -720,92 +725,92 @@
 		<TurnIn QuestName="An End To All Things..." QuestId="12779" TurnInName="The Lich King" TurnInId="29110" />
 		<EnableRepair />
 
-	 <!-- The Lich King's Command - http://www.wowhead.com/quest=12800 -->
-	 <PickUp QuestName="The Lich King's Command" QuestId="12800" GiverName="The Lich King" GiverId="29110" />
-	 <TurnIn QuestName="The Lich King's Command" QuestId="12800" TurnInName="Scourge Commander Thalanor" TurnInId="31082" />
-	 <!-- The Light of Dawn - http://www.wowhead.com/quest=12801 -->
-	 <PickUp QuestName="The Light of Dawn" QuestId="12801" GiverName="Scourge Commander Thalanor" GiverId="31082" />
-     <If Condition="HasQuest(12801) &amp;&amp; !IsQuestCompleted(12801)" >
-        <CustomBehavior File="EquipItem" ItemId="38661" />
-        <CustomBehavior File="SpecificQuests\DeathknightStart\TheLightOfDawn" QuestId="12801" />
-     </If>
-     <TurnIn QuestName="The Light of Dawn" QuestId="12801" TurnInName="Highlord Darion Mograine" TurnInId="29173"
-		X="2261.529" Y="-5284.931" Z="81.80493" />
+		 <!-- The Lich King's Command - http://www.wowhead.com/quest=12800 -->
+		 <PickUp QuestName="The Lich King's Command" QuestId="12800" GiverName="The Lich King" GiverId="29110" />
+		 <TurnIn QuestName="The Lich King's Command" QuestId="12800" TurnInName="Scourge Commander Thalanor" TurnInId="31082" />
+		 <!-- The Light of Dawn - http://www.wowhead.com/quest=12801 -->
+		 <PickUp QuestName="The Light of Dawn" QuestId="12801" GiverName="Scourge Commander Thalanor" GiverId="31082" />
+		 <If Condition="HasQuest(12801) &amp;&amp; !IsQuestCompleted(12801)" >
+			<CustomBehavior File="EquipItem" ItemId="38661" />
+			<CustomBehavior File="SpecificQuests\DeathknightStart\TheLightOfDawn" QuestId="12801" />
+		 </If>
+		 <TurnIn QuestName="The Light of Dawn" QuestId="12801" TurnInName="Highlord Darion Mograine" TurnInId="29173"
+			X="2261.529" Y="-5284.931" Z="81.80493" />
 
-    <CustomBehavior File="EquipItem" ItemId="38632" />
-    <CustomBehavior File="EquipItem" ItemId="38633" />
+		<CustomBehavior File="EquipItem" ItemId="38632" />
+		<CustomBehavior File="EquipItem" ItemId="38633" />
 
-    <!-- Taking Back Acherus - http://www.wowhead.com/quest=13165 -->
-    <PickUp QuestName="Taking Back Acherus" QuestId="13165" GiverName="Highlord Darion Mograine" GiverId="29173" />
-		<If Condition="HasQuest(13165)" >
-			<CustomBehavior File="Misc\RunLua" Lua = "CastSpellByID(50977)" />
-			<CustomBehavior File="WaitTimer" WaitTime="3000" />
-			<CustomBehavior File="InteractWith" MobId="190942" />
-		</If>
-    <TurnIn QuestName="Taking Back Acherus" QuestId="13165" TurnInName="Highlord Darion Mograine" TurnInId="31084" />
+		<!-- Taking Back Acherus - http://www.wowhead.com/quest=13165 -->
+		<PickUp QuestName="Taking Back Acherus" QuestId="13165" GiverName="Highlord Darion Mograine" GiverId="29173" />
+			<If Condition="HasQuest(13165)" >
+				<CustomBehavior File="Misc\RunLua" Lua = "CastSpellByID(50977)" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+				<CustomBehavior File="InteractWith" MobId="190942" />
+			</If>
+		<TurnIn QuestName="Taking Back Acherus" QuestId="13165" TurnInName="Highlord Darion Mograine" TurnInId="31084" />
 
-    <DisableRepair />
-    <!-- The Battle For The Ebon Hold - http://www.wowhead.com/quest=13166 -->
-    <PickUp QuestName="The Battle For The Ebon Hold" QuestId="13166" GiverName="Highlord Darion Mograine" GiverId="31084" />
-    <If Condition="HasQuest(13166) &amp;&amp; !IsQuestCompleted(13166)" >
-        <Objective QuestName="The Battle For The Ebon Hold" QuestId="13166" Type="KillMob" MobId="31099" KillCount="1" />
-        <Objective QuestName="The Battle For The Ebon Hold" QuestId="13166" Type="KillMob" MobId="31100" KillCount="10" />
-    </If>
-    <TurnIn QuestName="The Battle For The Ebon Hold" QuestId="13166" TurnInName="Highlord Darion Mograine" TurnInId="31084" X="2375.382" Y="-5650.722" Z="382.4389"  />
+		<DisableRepair />
+		<!-- The Battle For The Ebon Hold - http://www.wowhead.com/quest=13166 -->
+		<PickUp QuestName="The Battle For The Ebon Hold" QuestId="13166" GiverName="Highlord Darion Mograine" GiverId="31084" />
+		<If Condition="HasQuest(13166) &amp;&amp; !IsQuestCompleted(13166)" >
+			<Objective QuestName="The Battle For The Ebon Hold" QuestId="13166" Type="KillMob" MobId="31099" KillCount="1" />
+			<Objective QuestName="The Battle For The Ebon Hold" QuestId="13166" Type="KillMob" MobId="31100" KillCount="10" />
+		</If>
+		<TurnIn QuestName="The Battle For The Ebon Hold" QuestId="13166" TurnInName="Highlord Darion Mograine" TurnInId="31084" X="2375.382" Y="-5650.722" Z="382.4389"  />
 
-    <If Condition="Me.IsHorde">
-        <!-- Warchief's Blessing - http://www.wowhead.com/quest=13189 -->
-        <PickUp QuestName="Warchief's Blessing" QuestId="13189" GiverName="Highlord Darion Mograine" GiverId="31084" X="2375.382" Y="-5650.722" Z="382.4389" />
-        <ElseIf Condition="Me.IsAlliance" >
-			<!-- Where Kings Walk - http://www.wowhead.com/quest=13188 -->
-			<PickUp QuestName="Where Kings Walk" QuestId="13188" GiverName="Highlord Darion Mograine" GiverId="31084" X="2375.382" Y="-5650.722" Z="382.4389" />
-        </ElseIf>
-    </If>
+		<If Condition="Me.IsHorde">
+			<!-- Warchief's Blessing - http://www.wowhead.com/quest=13189 -->
+			<PickUp QuestName="Warchief's Blessing" QuestId="13189" GiverName="Highlord Darion Mograine" GiverId="31084" X="2375.382" Y="-5650.722" Z="382.4389" />
+			<ElseIf Condition="Me.IsAlliance" >
+				<!-- Where Kings Walk - http://www.wowhead.com/quest=13188 -->
+				<PickUp QuestName="Where Kings Walk" QuestId="13188" GiverName="Highlord Darion Mograine" GiverId="31084" X="2375.382" Y="-5650.722" Z="382.4389" />
+			</ElseIf>
+		</If>
 
-    <!-- Horde -->
- 	<If Condition="Me.IsHorde" >
-		<If Condition="HasQuest(13189) &amp;&amp; Me.ZoneId == 139" >
-			<CustomBehavior File="UserSettings" PullDistance="0" />
-			<CustomBehavior File="InteractWith" MobId="193052" CollectionDistance="4"
-				X="2348.233" Y="-5695.629" Z="382.2405" />
-			<CustomBehavior File="WaitTimer" WaitTime="20000" />
+		<!-- Horde -->
+		<If Condition="Me.IsHorde" >
+			<If Condition="HasQuest(13189) &amp;&amp; Me.ZoneId == 139" >
+				<CustomBehavior File="UserSettings" PullDistance="0" />
+				<CustomBehavior File="InteractWith" MobId="193052" CollectionDistance="4"
+					X="2348.233" Y="-5695.629" Z="382.2405" />
+				<CustomBehavior File="WaitTimer" WaitTime="20000" />
+			</If>
+			<If Condition="HasQuest(13189)" >
+				<CustomBehavior File="UserSettings" PullDistance="0" />
+				<CustomBehavior File="NoCombatMoveTo" X="1669.178" Y="-4343.229" Z="28.36206" />
+				<TurnIn QuestName="Warchief's Blessing" QuestId="13189" TurnInName="Garrosh Hellscream" TurnInId="39605" X="1669.178" Y="-4343.229" Z="28.36206" />
+				<CustomBehavior File="InteractWith" MobId="6929" InteractByGossipOptions="1"
+					X="1573.266" Y="-4439.158" Z="16.05683" />
+				<CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="5000"/> <!-- Set Hearth to Org -->
+			</If>
+					
+			<If Condition="Me.Level &gt;= 58" >
+			<CustomBehavior File="LoadProfile" ProfileName="[QO-H][Solstice][58-60]_outlands[Kick]" />
+			</If>
 		</If>
-		<If Condition="HasQuest(13189)" >
-			<CustomBehavior File="UserSettings" PullDistance="0" />
-			<CustomBehavior File="NoCombatMoveTo" X="1669.178" Y="-4343.229" Z="28.36206" />
-			<TurnIn QuestName="Warchief's Blessing" QuestId="13189" TurnInName="Garrosh Hellscream" TurnInId="39605" X="1669.178" Y="-4343.229" Z="28.36206" />
-			<CustomBehavior File="InteractWith" MobId="6929" InteractByGossipOptions="1"
-				X="1573.266" Y="-4439.158" Z="16.05683" />
-			<CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="5000"/> <!-- Set Hearth to Org -->
-		</If>
-				
-		<If Condition="Me.Level &gt;= 58" >
-		<CustomBehavior File="LoadProfile" ProfileName="[QO-N][Solstice][58-65]_blackrock-depths" />
-		</If>
-	</If>
 
-    <!-- Alliance -->
- 	<If Condition="Me.IsAlliance" >
-		<If Condition="HasQuest(13188) &amp;&amp; Me.ZoneId == 139" >
-			<CustomBehavior File="UserSettings" PullDistance="0" />
-			<CustomBehavior File="InteractWith" MobId="193053" CollectionDistance="4"
-				X="2324.699" Y="-5659.518" Z="382.2405" />
-			<CustomBehavior File="WaitTimer" WaitTime="10000" />
+		<!-- Alliance -->
+		<If Condition="Me.IsAlliance" >
+			<If Condition="HasQuest(13188) &amp;&amp; Me.ZoneId == 139" >
+				<CustomBehavior File="UserSettings" PullDistance="0" />
+				<CustomBehavior File="InteractWith" MobId="193053" CollectionDistance="4"
+					X="2324.699" Y="-5659.518" Z="382.2405" />
+				<CustomBehavior File="WaitTimer" WaitTime="10000" />
+			</If>
+			<If Condition="HasQuest(13188)">
+				<CustomBehavior File="UserSettings" PullDistance="0" />
+				<CustomBehavior File="NoCombatMoveTo" X="-8363.06" Y="232.236" Z="156.9907" />
+				<TurnIn QuestId="13188" QuestName="Where Kings Walk" TurnInName="King Varian Wrynn" TurnInId="29611"
+					X="-8363.06" Y="232.236" Z="156.9907" />
+				<CustomBehavior File="InteractWith" MobId="6740" InteractByGossipOptions="1"
+					X="-8867.786" Y="673.6729" Z="97.90324" />
+				<CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="5000"/> <!-- Set Hearth to SW -->
+			</If>
+			<If Condition="Me.Level &gt;= 58" >
+				<CustomBehavior File="LoadProfile" ProfileName="[QO-A][Solstice][58-60]_outlands[Kick]" />
+			</If>
+			
 		</If>
-		<If Condition="HasQuest(13188)">
-			<CustomBehavior File="UserSettings" PullDistance="0" />
-			<CustomBehavior File="NoCombatMoveTo" X="-8363.06" Y="232.236" Z="156.9907" />
-			<TurnIn QuestId="13188" QuestName="Where Kings Walk" TurnInName="King Varian Wrynn" TurnInId="29611"
-				X="-8363.06" Y="232.236" Z="156.9907" />
-			<CustomBehavior File="InteractWith" MobId="6740" InteractByGossipOptions="1"
-				X="-8867.786" Y="673.6729" Z="97.90324" />
-			<CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="5000"/> <!-- Set Hearth to SW -->
-		</If>
-		<If Condition="Me.Level &gt;= 58" >
-			<CustomBehavior File="LoadProfile" ProfileName="[QO-N][Solstice][58-65]_blackrock-depths" />
-		</If>
-		
-	</If>
 	
     </QuestOrder>
 	

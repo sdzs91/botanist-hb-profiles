@@ -45,7 +45,7 @@
 		<ClearMailbox />
 
 		<!-- Level check -->
-		<If Condition="Me.Level &gt;= 58">
+		<If Condition="Me.Level &gt;= 62">
 							
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
@@ -213,43 +213,44 @@
 					<!-- Repair if necessary -->
 					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 					
-					<!-- Profile message - Our durability is less than 30% or our bags are about full Doing a vendor run -->
-					<CustomBehavior File="Message" 
-									Text="Our durability is less than 30% or our bags are about full. Doing a vendor run." 
-									LogColor="Fuchsia" />
-					
-					<RunTo X="-7095.479" Y="-1266.96" Z="270.4855" />
-					<CustomBehavior File="ForcedDismount" />
-
-					<CustomBehavior File="ForceSetVendor" 
-									DoMail="True" 
-									DoRepair="True" 
-									DoSell="True" 
-									DoTrain="False" />
-					
-					<SetVendor>
-						<Vendors>
-							<!-- Iron Summit -->
-							<Vendor Name="Fergus Gravelsmash" 
-									Entry="47937" 
-									Type="Repair" 
-									X="-7093.68" Y="-1268.31" Z="270.4849" />
-						</Vendors>
-					</SetVendor>
-				
-					<SetMailbox>
-						<Mailboxes>
-							<!-- Iron Summit -->
-							<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
-						</Mailboxes>
-					</SetMailbox>
-				
-					<!-- We are done repairing -->
-					<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+						<!-- Profile message - Our durability is less than 30% or our bags are about full Doing a vendor run -->
 						<CustomBehavior File="Message" 
-										Text="Repairing complete." 
+										Text="Our durability is less than 30% or our bags are about full. Doing a vendor run." 
 										LogColor="Fuchsia" />
-					</If> <!-- We are done repairing -->
+					
+						<RunTo X="-7095.479" Y="-1266.96" Z="270.4855" />
+						<CustomBehavior File="ForcedDismount" />
+
+						<CustomBehavior File="ForceSetVendor" 
+										DoMail="True" 
+										DoRepair="True" 
+										DoSell="True" 
+										DoTrain="False" />
+						
+						<SetVendor>
+							<Vendors>
+								<!-- Iron Summit -->
+								<Vendor Name="Fergus Gravelsmash" 
+										Entry="47937" 
+										Type="Repair" 
+										X="-7093.68" Y="-1268.31" Z="270.4849" />
+							</Vendors>
+						</SetVendor>
+					
+						<SetMailbox>
+							<Mailboxes>
+								<!-- Iron Summit -->
+								<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+							</Mailboxes>
+						</SetMailbox>
+					
+						<!-- We are done repairing -->
+						<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+							<CustomBehavior File="Message" 
+											Text="Repairing complete." 
+											LogColor="Fuchsia" />
+						</If> <!-- We are done repairing -->
+					</If> <!-- Repair if necessary -->
 													
 					<CustomBehavior File="Message" 
 									Text="Moving to Blackrock Spire." 

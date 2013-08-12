@@ -1,0 +1,761 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][Solstice][58-62]_blackrock-depths</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>	
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+
+	<Factions>
+	</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+		<If Condition="Me.Level &gt;= 60">
+		
+			<CustomBehavior File="Message" 
+							Text="You meet the level requirement to run this profile." 
+							LogColor="Fuchsia" />
+		
+		 	<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							FindVendorsAutomatically="False"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootChests="False"
+							LootMobs="True"
+							LootRadius="20"
+							MountDistance="30"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							PullDistance="25"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseFlightPaths="True"
+							UseMount="True" 
+							UseRandomMount="False" />
+							
+			<!-- Infinite loop -->
+			<While Condition="true" >
+				
+				<!-- If we are inside Blackrock Depths -->
+				<If Condition="Me.ZoneId == 1584">
+					<CustomBehavior File="Message" 
+									Text="Blackrock Depths detected. Running out."
+									LogColor="Fuchsia" />
+					
+					<!-- If we are north of the 2nd mole machine -->
+					<If Condition="Me.X &gt; 920" >
+						
+						<!-- Run to the 2nd mole machine -->
+						<RunTo X="932.7762" Y="-286.2478" Z="-49.93694" />
+						
+						<!-- Interact with the 2nd mole machine -->		
+						<CustomBehavior File="InteractWith" MobId="207402" ObjectType="Gameobject" GossipOptions="1" Range="4.75" NumOfTimes="1"  WaitTime="1" X="933.2972" Y="-290.390167" Z="-49.9389954" />
+					
+					</If>					
+
+					<!-- Move to the zone in location -->
+					<RunTo X="456.929" Y="34.0923" Z="-69.56171" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
+					
+					<!-- Make sure we run to the right spot outside the portal -->
+					<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+				</If> <!-- BRD -->
+			
+				<!-- If we are not in the box, load the movement profile -->
+				<If Condition="Me.X &lt; -7200 || Me.X &gt; -7000 || Me.Y &gt; -900 || Me.Y &lt; -1000" >
+					<CustomBehavior File="Message" 
+									Text="Distance from portal is not within our proximity, initializing movement to get there."
+									LogColor="Fuchsia" />	
+									
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\[QO-N-M][Solstice][60-62]_blackrock-depths" />
+				</If> <!-- Not in box -->
+				
+				<!-- If we are in the box -->
+				<If Condition="Me.X &gt; -7200 &amp;&amp; Me.X &lt; -7000 &amp;&amp; Me.Y &lt; -900 &amp;&amp; Me.Y &gt; -1000" >
+					<CustomBehavior File="Message" 
+									Text="Portal detected nearby."
+									LogColor="Fuchsia" />	
+						
+					<!-- Resetting the instance -->
+					<CustomBehavior File="Message" 
+									Text="Resetting the instance." 
+									LogColor="Fuchsia" />
+					
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficultyID(1)" />
+										
+					<CustomBehavior File="Message" 
+									Text="Instance reset." 
+									LogColor="Fuchsia" />	
+						
+					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
+					<While Condition="Me.ZoneId != 1584">
+						<!-- Make sure we run to the right spot outside the portal -->
+						<RunTo X="-7178.41" Y="-922.152" Z="166.092" />
+
+						<!-- Run back in the Blackrock Depths portal -->
+						<CustomBehavior File="Misc\InInstance" X="-7179.068" Y="-937.434" Z="166.4007" />
+										
+						<CustomBehavior File="Message" 
+										Text="Waiting for the dungeon to load." 
+										LogColor="Fuchsia" />
+									
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" 
+										VariantTime="20000" />	
+										
+						<!-- If we still aren't in, we're locked out -->
+						<If Condition="Me.ZoneId != 1584">
+							<CustomBehavior File="Message" 
+											Text="We are locked out. Waiting and trying again." 
+											LogColor="Fuchsia" />
+						</If> <!-- Locked -->
+					</While> <!-- While we aren't in the instance -->
+				</If> <!-- In box -->
+				
+				<!-- If we are inside Blackrock Depths and have checked our reset -->
+				<If Condition="Me.ZoneId == 1584">
+				
+					<!-- Entrance -->
+					<RunTo X="456.929" Y="34.0923" Z="-69.56168" />
+								
+					<!-- Instance timer -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />
+					
+					<CustomBehavior File="Message" 
+									Text="Blackrock Depths initialized."  
+									LogColor="Fuchsia" />
+									
+					<!-- If we are level 60 or above -->			
+					<If Condition="Me.Level &gt;= 61">
+								
+						<!-- Profile message - We are level 60 or above, we are no longer avoiding the higher level mobs -->
+						<CustomBehavior File="Message" 
+									Text="We are level 60 or above, we are no longer avoiding the higher level mobs."  
+									LogColor="Fuchsia" />		
+								
+						<!-- Move to the mole machine -->
+						<RunTo X="449.0945" Y="24.26541" Z="-70.5683" />
+						
+						<!-- Interact with the mole machine -->						
+						<CustomBehavior File="InteractWith" MobId="207401" ObjectType="Gameobject" GossipOptions="1" Range="4.75" NumOfTimes="1"  WaitTime="1" X="444.794922" Y="21.6984711" Z="-70.6062241" />			
+									
+						<!-- Pull the 1st group by the mole machine -->
+						<CustomBehavior File="TargetAndMoveToMob" 
+										MobId="8899" 
+										MoveWithinMaxRangeOfMob="1"
+										X="931.2899" Y="-258.6396" Z="-49.93595" >
+						</CustomBehavior>
+					  
+						<!-- Pull the 2nd group near the Grim Guzzler -->
+						<RunTo X="904.4885" Y="-234.645" Z="-49.93694" />
+												
+						<!-- Move to the Mold Foundry doors -->
+						<RunTo X="1074.355" Y="-171.3696" Z="-65.21709" />
+								
+						<!-- Wait timer - wait 3 seconds to target 	Panzor the Invincible -->	
+						<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />		
+								
+						<!-- Clear target -->
+						<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+						
+						<!-- Target Panzor the Invincible -->
+						<CustomBehavior File="Message" 
+										Text="Targeting Panzor the Invincible. DO NOT TOUCH !!!" 
+										LogColor="Orange" />
+							
+						<CustomBehavior File="RunMacro" Macro="/target Panzor the Invincible" />
+	
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 8923)" >
+						
+							<!-- Profile message - My target is Panzor the Invincible, initiating avoidance procedures -->
+							<CustomBehavior File="Message" 
+												Text="My target is Panzor the Invincible, initiating avoidance procedures." 
+												LogColor="Fuchsia" />			
+					
+							<!--Infinite loop until we are past Panzor the Invincible -->
+							<While Condition="Me.X &lt; 1165" >
+								<CustomBehavior File="UserSettings" PullDistance="25" />
+								
+								<!-- Move to the Mold Foundry doors -->
+									<RunTo X="1074.355" Y="-171.3696" Z="-65.21709" />
+
+								<!--WFP to avoid Panzor the Invincible if he is spawned -->	
+								<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="NavigatorOnly" AvoidMobId="8923" AvoidDistance="105"
+
+									X="1073.128" Y="-178.0069" Z="-64.94862" >	<!-- Our wait area -->
+								</CustomBehavior>
+								
+								<!-- Move to the next safe location - jump location -->
+								<RunTo X="1189.917" Y="-187.5472" Z="-65.31155" />
+							</While>
+							
+							<!-- Wait timer - wait 10 seconds to be sure HB has time to think -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="10000" />
+							
+							<!--Infinite loop until we are in the Summoners Tomb -->
+							<While Condition="Me.Z &gt; -70" >
+								<CustomBehavior File="UserSettings" PullDistance="25" />
+								
+								<!--WFP to avoid Panzor the Invincible if he is spawned -->	
+								<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="ClickToMoveOnly" AvoidMobId="8923" AvoidDistance="40"
+									X="1188.103" Y="-190.4882" Z="-65.30853" >
+								</CustomBehavior>
+								
+								<!-- CTM off the ledge -->
+								<CustomBehavior File="MyCTM" X="1196.323" Y="-179.6094" Z="-74.31414" />
+								
+								<!-- Move to Doom'rel -->
+								<RunTo X="1278.471" Y="-278.614" Z="-78.21918" />
+							</While>
+						</If>	
+
+						<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 8923)" >
+						
+							<!-- Move to the stairs near the entrance of the Mold Foundry -->
+							<RunTo X="1097.347" Y="-152.0225" Z="-65.30988" />
+						
+							<!-- Profile message - waiting for the patrol. DO NOT TOUCH !!! -->
+							<CustomBehavior File="Message" 
+											Text="Waiting for the patrol. DO NOT TOUCH !!!" 
+											LogColor="Orange" />
+						
+							<!-- Wait timer - wait 110 seconds to be sure we aggro the patrol -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="110000" />
+						
+							<!-- Move to the 1st group of mobs on the right -->
+							<RunTo X="1094.854" Y="-167.7351" Z="-65.30852" />
+							<RunTo X="1115.936" Y="-187.0745" Z="-65.46373" />
+							
+							<!-- Move to the last group before the jump -->
+							<RunTo X="1156.91" Y="-202.2157" Z="-65.45284" />
+							<RunTo X="1167.539" Y="-192.8664" Z="-65.45311" />
+							
+							<!-- Move to the next safe location - jump location -->
+							<RunTo X="1189.917" Y="-187.5472" Z="-65.31155" />
+						
+							<!-- CTM off the ledge -->
+							<CustomBehavior File="MyCTM" X="1196.323" Y="-179.6094" Z="-74.31414" />
+							
+							<!-- Move to Doom'rel -->
+							<RunTo X="1278.471" Y="-278.614" Z="-78.21918" />
+						</If>
+
+						<!-- Interact with Doom'rel NEED TO BE AT LEAST 63 -->
+						<!--	<CustomBehavior File="InteractWith" MobId="9039" GossipOptions="1" NumOfTimes="1" X="1281.137" Y="-282.1509" Z="-78.21918" /> -->
+						
+						<!-- Wait timer - wait XXXXXX seconds to kill all the mini bosses 
+						<CustomBehavior File="WaitTimer" 
+											WaitTime="120000" /> -->
+
+						<!-- Run to the door exiting the Summoner's Tomb -->
+						<RunTo X="1225.526" Y="-200.3166" Z="-85.6856" />
+						
+						<!-- Run macro to clear target -->
+						<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+						
+						<!-- Profile message - Targeting Panzor the Invincible. DO NOT TOUCH !!! -->
+						<CustomBehavior File="Message" 
+										Text="Targeting Panzor the Invincible. DO NOT TOUCH !!!" 
+										LogColor="Orange" />
+							
+						<!-- Run macro to target Panzor the Invincible -->	
+						<CustomBehavior File="RunMacro" Macro="/target Panzor the Invincible" />
+	
+						<!-- If our target is Panzor the Invincible -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 8923)" >
+						
+							<!-- Profile message - My target is Panzor the Invincible, initiating avoidance procedures -->
+							<CustomBehavior File="Message" 
+												Text="My target is Panzor the Invincible, initiating avoidance procedures." 
+												LogColor="Fuchsia" />			
+					
+							<!--Infinite loop until we are past Panzor the Invincible -->
+							<While Condition="Me.X &gt; 1220" >
+								<CustomBehavior File="UserSettings" PullDistance="25" />
+								
+								<!-- Run to the door exiting the Summoner's Tomb -->
+								<RunTo X="1225.526" Y="-200.3166" Z="-85.6856" />
+
+								<!--WFP to avoid Panzor the Invincible if he is spawned -->	
+								<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="NavigatorOnly" AvoidMobId="8923" AvoidDistance="45"
+									X="1225.526" Y="-200.3166" Z="-85.6856" >	<!-- Our wait area -->
+								</CustomBehavior>
+								
+								<!-- Move to the next safe location - the group of mobs at the top of the ramp leaving the Summoner's Tomb -->
+								<RunTo X="1189.778" Y="-163.6549" Z="-74.36124" />
+								
+								<!-- Move to the next safe location - behind the column near the ramp -->
+								<RunTo X="1143.803" Y="-184.7962" Z="-74.92951" />
+								
+							</While>	<!--Infinite loop until we are past Panzor the Invincible -->
+						
+							<!-- Move to the group of mobs near the ramp exiting the Mold Foundry -->
+							<RunTo X="1127.902" Y="-168.2146" Z="-74.91734" />
+						
+							<!--Infinite loop until we are past Panzor the Invincible -->
+							<While Condition="Me.X &gt; 1120" >
+								<CustomBehavior File="UserSettings" PullDistance="25" />
+									
+								<!-- Move to the group of mobs near the ramp exiting the Mold Foundry -->
+								<RunTo X="1127.902" Y="-168.2146" Z="-74.91734" />
+
+								<!--WFP to avoid Panzor the Invincible if he is spawned -->	
+								<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="NavigatorOnly" AvoidMobId="8923" AvoidDistance="45"
+
+									X="1127.902" Y="-168.2146" Z="-74.91734" >	<!-- Our wait area -->
+								</CustomBehavior>
+								
+								<!-- Move to the next safe location - Chamber of Enchantment -->
+								<RunTo X="1069.85" Y="-185.9467" Z="-64.15487" />
+														
+							</While>	<!--Infinite loop until we are past Panzor the Invincible -->
+						</If>	<!-- If our target is Panzor the Invincible -->
+						
+						<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 8923)" >
+						
+							<!-- Profile message - My target is not Panzor the Invincible,pulling the remaining groups -->
+							<CustomBehavior File="Message" 
+												Text="My target is not Panzor the Invincible,pulling the remaining groups." 
+												LogColor="Fuchsia" />			
+					
+							<!-- Pull the group at the top of the ramp -->
+							<RunTo X="1187.402" Y="-162.3908" Z="-74.3624" />
+							
+							<!-- Pull the left-hand group at the bottom of the ramp -->
+							<RunTo X="1127.902" Y="-168.2146" Z="-74.91734" />
+							
+							<!-- Move to the top of the ramp -->
+							<RunTo X="1095.178" Y="-154.1315" Z="-65.31004" />
+						</If>	<!-- If our target is Panzor the Invincible -->
+
+						<!-- Run to the mole machine -->
+						<RunTo X="932.7762" Y="-286.2478" Z="-49.93694" />
+						
+						<!-- Interact with the mole machine -->		
+						<CustomBehavior File="InteractWith" MobId="207402" ObjectType="Gameobject" GossipOptions="1" Range="4.75" NumOfTimes="1"  WaitTime="1" X="933.2972" Y="-290.390167" Z="-49.9389954" />		
+
+					</If>	<!-- If we are level 61 or above -->	
+						
+					<!-- If we are beloe level 60 -->			
+					<If Condition="Me.Level &lt; 61">	
+					
+						<!-- Run to first Shadowforge Gate -->
+						<RunTo X="493.8814" Y="14.29045" Z="-70.35346" />
+										
+						<!-- First Shadowforge Gate interact -->
+						<CustomBehavior File="InteractWith"
+										ObjectType="GameObject"
+										MobId="170559"
+										NumOfTimes="1"
+										X="496.3966"
+										Y="16.012654"
+										Z="-70.47108" />	
+										
+						<!-- Run through the gate -->
+						<RunTo X="525.9897" Y="19.44355" Z="-71.12934" />
+						
+						<!-- Make sure we kill the fire elemental for the RAFs -->
+						<CustomBehavior File="TargetAndMoveToMob" 
+										MobId="8910" 
+										MoveWithinMaxRangeOfMob="1" 
+										WaitForNpcs="false"
+										X="564.9453" Y="21.04286" Z="-70.8724" />		
+	
+						<!-- Run to second Shadowforge Gate -->	
+						<RunTo X="567.6488" Y="-7.285117" Z="-70.21188" />
+						
+						<!-- Second Shadowforge Gate interact -->
+						<CustomBehavior File="InteractWith"
+										ObjectType="GameObject"
+										MobId="170560"
+										NumOfTimes="1"
+										X="569.58905"
+										Y="-9.361542"
+										Z="-70.25659" />
+										
+						<!-- Run to East Garrison Door -->
+						<RunTo X="559.0313" Y="-50.95553" Z="-60.35724" />	
+						
+						<!-- East Garrison Door interact -->
+						<CustomBehavior File="InteractWith"
+										ObjectType="GameObject"
+										MobId="170570"
+										NumOfTimes="1"
+										X="560.5311"
+										Y="-51.815918"
+										Z="-60.09396" />
+						
+						<!-- Move to the far side of the Ring of the Law -->	
+<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1" 
+										AllowCombat="false">	
+							<Hotspot X="692.7579" Y="-2.428671" Z="-45.67053" />
+							<Hotspot X="692.17" Y="14.49883" Z="-45.50127" />
+							<Hotspot X="689.6866" Y="22.84058" Z="-49.87167" />
+							<Hotspot X="699.5455" Y="23.15034" Z="-45.46643" />
+							<Hotspot X="683.1484" Y="22.19287" Z="-52.06663" />
+						</CustomBehavior>
+
+<!-- Pull the single dog -->
+<Hotspot X="605.3615" Y="44.44267" Z="-74.04726" />
+<!-- Pull the left group at the Dark Iron Highway -->
+<Hotspot X="613.523" Y="81.85958" Z="-73.86839" />
+<!-- Pull the center group at the Dark Iron Highway -->
+
+<!-- Pull the center group at the Dark Iron Highway -->
+
+<!-- Pull the center group at the Dark Iron Highway -->
+
+<!-- Pull the center group at the Dark Iron Highway -->
+
+<!-- Pull the center group at the Dark Iron Highway -->
+
+<!-- Pull the center group at the Dark Iron Highway -->
+
+<!-- Pull the center group at the Dark Iron Highway -->
+
+<!-- Pull the center group at the Dark Iron Highway -->
+
+<!-- Pull the center group at the Dark Iron Highway -->
+
+<!-- Pull the center group at the Dark Iron Highway -->
+
+<!-- Pull the center group at the Dark Iron Highway -->					
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<!-- Move to the group near the base of the stair -->
+						<RunTo X="591.2123" Y="-51.60256" Z="-60.05102" />
+						
+						<!-- Move to the Shadowforge lock -->
+						<RunTo X="608.5732" Y="-50.51231" Z="-60.05605" />
+						
+						<!-- Wait timer - wait 3 seconds to make sure we don't have aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+						
+						<!-- Interact with the Shadowforge lock -->
+						<CustomBehavior File="InteractWith"
+										ObjectType="GameObject"
+										MobId="161460"
+										NumOfTimes="1"
+										X="615.614136"
+										Y="-49.78228"
+										Z="-60.0557327" />
+						
+						<!-- Run to the Shadowforge door -->
+						<RunTo X="747.3532" Y="-80.28317" Z="-46.23373" />
+						
+						<!-- Profile message - Waiting 138 seconds to aggro the patrol. DON'T TOUCH -->
+						<CustomBehavior File="Message" 
+										Text="Waiting 138 second to aggro the patrol. DON'T TOUCH ." 
+										LogColor="Orange" />
+						
+						<!-- Wait timer - wait 138 seconds to make sure we aggro the patrol -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="138000" />
+						
+						<!-- Pull the first group past Shadowforge door -->
+						<RunTo X="759.3325" Y="-55.36684" Z="-46.23372" />
+						
+						<!-- Wait timer - wait 3 seconds to make sure we get aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+						
+						<!-- Pull the 2nd group past the Shadowforge door -->
+						<CustomBehavior File="RunLikeHell"
+										UseCTM="false"
+										NumOfTimes="1" 
+										AllowCombat="false">	
+							<Hotspot X="752.9161" Y="-39.32797" Z="-46.23365" />
+							<Hotspot X="738.6857" Y="-13.08935" Z="-46.23362" />
+							<Hotspot X="752.9161" Y="-39.32797" Z="-46.23365" />
+						</CustomBehavior>
+						
+						<!-- Pull the elementals in the left corner -->
+						<RunTo X="696.8931" Y="-13.55973" Z="-45.68333" />
+						
+						<!-- Pull the center guards -->
+						<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1" 
+										AllowCombat="false">	
+							<Hotspot X="692.7579" Y="-2.428671" Z="-45.67053" />
+							<Hotspot X="692.17" Y="14.49883" Z="-45.50127" />
+							<Hotspot X="689.6866" Y="22.84058" Z="-49.87167" />
+							<Hotspot X="699.5455" Y="23.15034" Z="-45.46643" />
+							<Hotspot X="683.1484" Y="22.19287" Z="-52.06663" />
+						</CustomBehavior>
+						
+						<!-- Run to the top of the stairs -->
+						<RunTo X="695.944" Y="22.10061" Z="-46.06472" />
+		
+						<!-- Pull the elementals near the stairs -->
+						<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1" 
+										AllowCombat="false">	
+							<Hotspot X="709.3614" Y="22.21044" Z="-45.43858" />
+							<Hotspot X="713.8358" Y="31.06722" Z="-45.44584" />
+							<Hotspot X="708.3068" Y="-1.110556" Z="-45.97158" />
+						</CustomBehavior>
+						<RunTo X="708.3068" Y="-1.110556" Z="-45.97158" />
+						
+						<!-- Run to The Manufactory -->
+						<RunTo X="765.7694" Y="22.48119" Z="-53.66121" />
+						
+						<!-- Wait timer - wait 30 seconds to be sure we get aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="30000"  />
+
+						<!-- Pull the center left group -->
+						<RunTo X="776.5829" Y="24.76657" Z="-53.6513" />
+						<RunTo X="776.6301" Y="49.17134" Z="-53.73506" />				
+		
+						<!-- Pull the left group -->
+						<RunTo X="758.4663" Y="51.38408" Z="-53.68451" />
+
+						<!-- Pull the back left group -->
+						<RunTo X="802.2473" Y="52.63643" Z="-53.67447" />
+
+						<!-- Pull the center right group -->
+						<RunTo X="797.0045" Y="-9.058965" Z="-53.73513" />
+						
+						<!-- If we are level 61 -->
+						<If Condition="Me.Level &gt;= 61">
+						
+							<!-- Pull the back right group -->
+							<RunTo X="788.7012" Y="-34.92953" Z="-53.7228" />
+							
+						</If>	<!-- If we are level 61 -->
+
+						<!-- Pull the two elementals entering Shadowforge City -->
+						<RunTo X="814.8274" Y="-31.94935" Z="-53.69008" />
+						<RunTo X="817.1615" Y="-65.2311" Z="-53.90551" />
+						
+						<!-- Pull the 2nd elementals -->
+						<RunTo X="834.9883" Y="-110.76" Z="-54.13317" />
+
+					</If>	<!-- If we are level 60 or above -->
+					
+					<!-- Move to the zone in location -->
+					<RunTo X="456.929" Y="34.0923" Z="-69.56171" />
+					
+					<!-- If we are high enough to go to the next instance, do so -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									MinLevel="62" 
+									ProfileName="[QO-N][Solstice][62-67]_blackrock-spire.xml"  />
+														
+					<!-- Repair if necessary -->
+					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					
+						<!-- Profile message - Our durability is less than 30% or our bags are about full. Doing a vendor run -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30% or our bags are about full. Doing a vendor run." 
+										LogColor="Fuchsia" />
+										
+						<!-- If our hearthstone is set here, use it -->
+						<If Condition="Me.HearthstoneAreaId == 5628" >
+						<CustomBehavior File="Message" 
+										Text="Our Innkeeper is set at Iron Summit." 
+										LogColor="Cyan" />
+										
+						<!-- Have hearthstone -->
+						<If Condition="HasItem(6948)">
+							<CustomBehavior File="Message" 
+											Text="Using Hearthstone." 
+											LogColor="Lime" />
+											
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(6948)" 
+											WaitTime="1000" />
+											
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+						</If> <!-- Have hearthstone -->
+					
+						<!-- Have Innkeeper's Daughter -->
+						<If Condition="HasItem(64488)">
+							<CustomBehavior File="Message" 
+											Text="Using Innkeeper's Daughter." 
+											LogColor="Lime" />
+												
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(64488)" 
+											WaitTime="1000" />
+								
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+						</If> <!-- Have Innkeeper's Daughter -->
+
+						<!-- If we are inside Blackrock Depths -->
+						<If Condition="Me.ZoneId == 1584">
+							<CustomBehavior File="Message" 
+											Text="Blackrock Depths detected. Running out."
+											LogColor="Fuchsia" />
+							
+							<RunTo X="460.6402" Y="15.41037" Z="-71.11736" />
+							
+							<!-- Go through the portal -->
+							<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
+							
+							<!-- Make sure we run to the right spot outside the portal -->
+							<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+						</If> <!-- BRD -->
+						
+							<CustomBehavior File="ForceSetVendor" 
+											DoMail="True" 
+											DoRepair="True" 
+											DoSell="False" 
+											DoTrain="False" />
+							
+							<SetVendor>
+								<Vendors>
+									<!-- Iron Summit -->
+									<Vendor Name="Fergus Gravelsmash" 
+											Entry="47937" 
+											Type="Repair" 
+											X="-7093.68" Y="-1268.31" Z="270.4849" />
+								</Vendors>
+							</SetVendor>
+					
+							<SetMailbox>
+								<Mailboxes>
+									<!-- Iron Summit -->
+									<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+								</Mailboxes>
+							</SetMailbox>
+							
+							<!-- We are done repairing -->
+							<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+								<CustomBehavior File="Message" 
+												Text="Repairing complete." 
+												LogColor="Fuchsia" />
+												
+							</If> <!-- repaired -->
+
+							<!-- Profile message - Moving to Blackrock Depths -->
+							<CustomBehavior File="Message" 
+							Text="Moving to Blackrock Depths." 
+							LogColor="Lime" />
+							
+							<!-- Move to the chain -->
+							<RunTo X="-7503.016" Y="-1153.874" Z="269.4245" />
+												
+							<!-- Move to Lothos -->
+							<RunTo X="-7514.716" Y="-1046.491" Z="182.3" />
+							
+							<!-- Move to the instance box -->
+							<RunTo X="-7178.41" Y="-922.152" Z="166.0919" />
+								
+							<!-- Instance timer check if we did repair -->
+					        <CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+							
+						</If>	<!-- If our hearthstone is set here, use it -->
+					</If> <!-- Repair if necessary -->
+														
+				</If> <!-- BRD -->
+				
+				<!-- If we are inside Blackrock Depths -->
+				<If Condition="Me.ZoneId == 1584">
+					<CustomBehavior File="Message" 
+									Text="Blackrock Depths detected. Running out to reset."
+									LogColor="Fuchsia" />
+					
+					<RunTo X="460.6402" Y="15.41037" Z="-71.11736" />
+					
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
+							
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
+					
+					<!-- Make sure we run to the right spot outside the portal -->
+					<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+				</If> <!-- BRD -->
+			</While> <!-- Infinite loop -->
+		</If> <!-- Booster -->
+	</QuestOrder>
+</HBProfile>
+

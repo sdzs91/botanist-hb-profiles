@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-M][Solstice][58-62]_blackrock-depths</Name>
+	<Name>[QO-N-M][Solstice][60-62]_blackrock-depths</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -47,7 +47,7 @@
 		<ClearMailbox />
 			
 		<!-- Level check -->
-		<If Condition="Me.Level &gt;= 58">
+		<If Condition="Me.Level &gt;= 60">
 			
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
@@ -74,9 +74,47 @@
 							UseMount="True" 
 							UseRandomMount="False" />
 							
-			<!-- If we are in Kalimdor take us to Grom'gol -->
+							
+			<!-- If we are in Outlands, move to Stormwind/Orgrimmar -->				
+			<If Condition="Me.MapId == 530" >	
+
+				<!-- Profile message - We are in Outlands. Moving to Stormwind/Orgrimmar -->
+				<CustomBehavior File="Message" 
+								Text="We are in Outlands. Moving to Stormwind/Orgrimmar" 
+								LogColor="Cyan" />
+								
+				<!-- If we are Alliance -->
+				<If Condition="Me.IsAlliance">
+					
+					<!-- Move to Honorhold and fly to the Dark portal -->
+					
+					<!-- Use the flight master to fly to the Dark portal -->
+							
+				</If>		
+				
+				<!-- If we are Horde -->			
+				<If Condition="Me.IsHorde">		
+				
+					<!-- Move to Thrallmar and fly to the Dark portal -->
+					<Runto X="220.9109" Y="2639.406" Z="87.91273" />
+					
+					<!-- Use the flight master to fly to the Dark portal -->
+					<Runto X="-179.2556" Y="1027.916" Z="54.17752" />
+					
+					<!-- Move to the Ogrimmar portal -->
+					<Runto X="-160.91" Y="967.9704" Z="54.28086" />
+					
+					<!-- Interact with the portal -->
+					<CustomBehavior File="Message" Text="Taking the portal to Orgrimmar." LogColor="Lime" />	
+					<CustomBehavior File="InteractWith" MobId="195140" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="-161.317764" Y="965.409851" Z="54.29044" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />	
+				</If>						
+			</If>				
+			
+			<!-- If we are in Kalimdor -->
 			<If Condition="Me.MapId == 1" >
 			
+				<!-- If we are Alliance -->
 				<If Condition="Me.IsAlliance">
 					<!-- Profile message - Alliance must start this profile from Eastern Kingdoms -->
 					<CustomBehavior File="Message" 
@@ -89,26 +127,70 @@
 				</If>
 			</If>	
 				
-				<!-- If we are in Kalimdor take us to Grom'gol -->
+			<!-- If we are in Kalimdor -->
 			<If Condition="Me.MapId == 1" >
 			
-				<If Condition="Me.IsAlliance">
-					<!-- Profile message - Alliance must start this profile from Eastern Kingdoms -->
-					<CustomBehavior File="Message" 
-								Text="Alliance must start this profile from Eastern Kingdoms. Stopping the bot" 
-								LogColor="Cyan" />
-					
-					<!-- Usersetting - stopbot -->					
-					<CustomBehavior File="UserSettings" StopBot="true" />
-					
-				</If>
-				
-				<!-- We are horde in Kalimdor -->
+				<!-- We are Horde -->
 				<If Condition="Me.IsHorde">
 					<CustomBehavior File="Message" 
-									Text="We are in Kalimdor." 
+									Text="We are Horde, in Kalimdor." 
 									LogColor="Cyan" />
 							
+					<!-- Train Flying for Horde -->		
+					<If Condition="Me.Level &gt;= 60" >	
+						<!-- Buy mount training until we've reached our needed skill -->
+						<While Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt; 225">
+							<!-- Have gold -->
+							<If Condition="(Me.Gold &gt;= 250)" >
+								<CustomBehavior File="Message" 
+												Text="Moving to the riding trainer." 
+												LogColor="Orange" />
+														
+								<!-- move to riding trainer -->
+								<RunTo X="1802.374" Y="-4368.528" Z="102.6684" />
+								
+								<!-- Turn in flight quest -->
+								<If Condition="((HasQuest(32674)) &amp;&amp; (IsQuestCompleted(32674)))" >
+									<TurnIn QuestName="I Believe You Can Fly" 
+											QuestId="32674" 
+											TurnInName="Maztha" 
+											TurnInId="44919" />
+								</If> <!-- Turn in flight quest -->
+					
+								<CustomBehavior File="InteractWith" 
+												MobId="44919" 
+												WaitTime="1000"
+												CollectionDistance="50" 
+												X="1799.54" Y="-4357.09" Z="102.4019" />
+												
+								<CustomBehavior File="ForceTrainRiding" 
+												MobId="44919" />
+													
+								<Else>
+									<CustomBehavior File="Message" 
+													Text="You have insufficient gold for training. You require 250g or more to be able to train." 
+													LogColor="Red" />	
+								</Else>
+							</If> <!-- Have gold -->	
+						</While> <!-- Loop mount purchasing -->
+						
+						<Else>
+							<CustomBehavior File="Message" 
+											Text="You are not level 60." 
+											LogColor="Red" />	
+						</Else>
+						
+						<!-- trained -->
+						<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &gt;= 225" >
+						
+							<!-- Profile message - We have learned Expert Riding -->
+							<CustomBehavior File="Message" 
+													Text="We have learned Expert Riding." 
+													LogColor="Orange" />
+													
+						</If>				
+					</If> <!-- Level check -->
+
 					<!-- Profile message - We are on the wrong continent. Moving to Blackrock Mountain in Eastern Kingdoms -->
 					<CustomBehavior File="Message" 
 									Text="We are on the wrong continent. Moving to Blackrock Mountain in Eastern Kingdoms." 
@@ -146,15 +228,67 @@
 					<!-- Run to the Grom'gol flightmaster -->
 					<RunTo X="-12414.2" Y="146.29" Z="3.266916" />
 					
-				</If> 	<!-- We are horde in Kalimdor -->	
-			</If> 	<!-- If we are in Kalimdor take us to Grom'gol -->
+				</If> 	<!-- We are Horde -->	
+			</If> 	<!-- If we are in Kalimdor -->
 			
 			<!-- If we are in Eastern Kingdoms -->
 			<If Condition="Me.MapId == 0">
-				<CustomBehavior File="Message" 
-								Text="We are in Eastern Kingdoms." 
-								LogColor="Cyan" />
+			
+				<!-- If we are Alliance -->
+				<If Condition="Me.IsAlliance">
+				
+				
+					<CustomBehavior File="Message" 
+									Text="We are Alliance in Eastern Kingdoms." 
+									LogColor="Cyan" />
 
+					<!-- If we are 60 -->
+					<If Condition="Me.Level &gt;= 60" >	
+						<!-- Buy mount training until we've reached our needed skill -->
+						<While Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt; 225">
+							<!-- Have gold -->
+							<If Condition="(Me.Gold &gt;= 250)" >
+						
+									<CustomBehavior File="Message" 
+													Text="Moving to the riding trainer."
+													LogColor="Orange" />
+															
+									<RunTo X="-8847.744" Y="500.6151" Z="109.6094" />	
+									
+									<CustomBehavior File="InteractWith" 
+													MobId="43769" 
+													WaitTime="1000"
+													CollectionDistance="50" 
+													X="-8845.4" Y="502.653" Z="109.617" />
+													
+									<CustomBehavior File="ForceTrainRiding" 
+													MobId="43769" />
+									
+								<Else>
+									<CustomBehavior File="Message" 
+													Text="You have insufficient gold for training. You require 250g or more to be able to train." 
+													LogColor="Red" />	
+								</Else>
+							</If> <!-- Have gold -->
+						</While> <!-- Loop mount purchasing -->
+						
+						<Else>
+							<CustomBehavior File="Message" 
+											Text="You are not level 60." 
+											LogColor="Red" />	
+						</Else>
+						
+						<!-- trained -->
+						<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &gt;= 225" >
+						
+							<!-- Profile message - We have learned Expert Riding -->
+							<CustomBehavior File="Message" 
+													Text="We have learned Expert Riding." 
+													LogColor="Orange" />
+						</If> <!-- trained -->
+					</If> <!-- Level check -->							
+				</If>	<!-- If we are Alliance -->
+				
 				<!-- If our hearthstone is set here, use it -->
 				<If Condition="Me.HearthstoneAreaId == 5628" >
 					<CustomBehavior File="Message" 
@@ -245,9 +379,15 @@
 					<CustomBehavior File="Message" 
 									Text="Moving to Blackrock Depths." 
 									LogColor="Cyan" />
+									
+					<!-- Run to the exit of Iron Summit -->
+					<RunTo  X="-7106.151" Y="-1332.527" Z="244.8059" />					
 							
-					<!-- Move to the chain -->
-					<RunTo X="-7503.016" Y="-1153.874" Z="269.4245" />
+					<!-- NCM to the overhead gate entering Blackrock Mountain -->
+					<CustomBehavior File="NoCombatMoveTo" X="-7483.535" Y="-1070.837" Z="265.3488" />
+					
+					<!-- NCM to the chain leading to BRD -->
+					<CustomBehavior File="NoCombatMoveTo" X="-7503.016" Y="-1153.874" Z="269.4245" />
 					
 					<!-- Move to Lothos -->
 					<RunTo X="-7514.716" Y="-1046.491" Z="182.3" />
@@ -264,7 +404,7 @@
 									LogColor="Cyan" />
 					
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="..\[QO-N][Solstice][58-62]_blackrock-depths" />
+									ProfileName="..\[QO-N][Solstice][60-62]_blackrock-depths" />
 				</If> <!-- Load profile -->
 			</If> <!-- Eastern Kingdoms -->
 		</If> <!-- Level check -->

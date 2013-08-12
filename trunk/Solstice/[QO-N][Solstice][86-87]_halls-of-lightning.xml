@@ -11,7 +11,7 @@
 	<MailWhite>False</MailWhite>
 	<MailGreen>False</MailGreen>
 	<MailBlue>False</MailBlue>
-	<MailPurple>False</MailPurple>
+	<MailPurple>True</MailPurple>
    
 	<SellGrey>True</SellGrey>
 	<SellWhite>True</SellWhite>
