@@ -339,7 +339,7 @@
 									Text="Wait for Watchkeeper Gargolmar to patrol to us."  
 									LogColor="Fuchsia" />
 						<CustomBehavior File="WaitTimer" 
-										WaitTime="80000" />
+										WaitTime="20000" />
 
 						<!-- Pull the group in front of the barrier -->	
 						<CustomBehavior File="Message" 
