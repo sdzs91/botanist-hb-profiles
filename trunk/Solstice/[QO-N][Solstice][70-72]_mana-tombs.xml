@@ -84,6 +84,32 @@
 					<CustomBehavior File="Message" 
 									Text="Mana-Tombs detected. Running out."
 									LogColor="Fuchsia" />
+					
+					<!-- If we are beyond Pandemonius, initiate avoidance procedures while exiting -->
+					<If Condition="Me.Y &lt; -157" >
+					
+						<CustomBehavior File="Message" 
+									Text="Pandemonius detected nearby, initiating avoidance procedures."
+									LogColor="Fuchsia" />
+				
+						<!-- Avoid Pandemonius -->
+						<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1"
+										AllowCombat="false">	
+							<Hotspot X="-75.8492" Y="-142.711" Z="-0.9543099" />
+							<Hotspot X="-80.79897" Y="-142.2388" Z="-0.741442" />
+							<Hotspot X="-86.38946" Y="-135.9321" Z="-0.9543301" />
+							<Hotspot X="-84.13701" Y="-130.9905" Z="-0.8779216" />
+							<Hotspot X="-89.4305" Y="-120.7783" Z="2.803637" />
+							<Hotspot X="-93.31026" Y="-117.0478" Z="3.557825" />
+							<Hotspot X="-102.1714" Y="-107.2164" Z="-0.9432421" />
+							<Hotspot X="-101.7527" Y="-98.99216" Z="-0.9435375" />
+							<Hotspot X="-68.02106" Y="-50.38025" Z="-0.950399" />
+						</CustomBehavior>
+						<RunTo X="-68.02106" Y="-50.38025" Z="-0.950399" />
+				
+					</If>
 				
 					<!-- Run to the exit -->
 					<RunTo X="-4.81115" Y="1.00236" Z="-0.954329" />
@@ -250,7 +276,15 @@
 					<RunTo X="-67.55712" Y="-150.3288" Z="-0.9543301" />
 
 					<!-- Pulling the first set of door guards -->
-					<RunTo X="-67.41599" Y="-160.4967" Z="-0.9557084" />
+					<CustomBehavior File="RunLikeHell"
+									UseCTM="true"
+									NumOfTimes="1"
+									AllowCombat="false">	
+						<Hotspot X="-67.63417" Y="-165.0752" Z="-0.9543372" />
+						<Hotspot X="-63.06457" Y="-169.1089" Z="-0.9543281" />
+						<Hotspot X="-77.29594" Y="-142.9006" Z="-0.9543372" />
+					</CustomBehavior>
+					<RunTo X="-77.29594" Y="-142.9006" Z="-0.9543372" />
 					
 					<!-- Wait timer -wait 3 seconds to aggro the mobs -->
 					<CustomBehavior File="WaitTimer" 
@@ -262,6 +296,13 @@
 					<!-- Wait timer -wait 3 seconds to aggro the mobs -->
 					<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
+					
+					<!-- Move to the patrol wait area -->
+					<RunTo X="-69.59794" Y="-207.233" Z="-0.300784" />
+					
+					<!-- Wait timer -wait 30 seconds to aggro the patrol -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="30000" />
 					
 					<!-- Pulling the first group on the left after the door -->
 					<RunTo X="-44.56248" Y="-196.0402" Z="-0.3908756" />
@@ -302,12 +343,12 @@
 					<!-- GOOGE to kill Nexus Terror -->
 					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="19307"
-										EventX="-74.80435" EventY="-231.5568" EventZ="0.09367964"
+										EventX="-88.03616" EventY="-218.7399" EventZ="-1.352689"
 										MoveOutOfGroundEffectAuraId1="111111"
 										MoveAwayFromMobCastingSpellId1="111111"
 										MoveAwayFromMobWithAuraId1="111111">
 							<Safespots>
-								<Hotspot X="-74.80435" Y="-231.5568" Z="0.09367964" />
+								<Hotspot X="-88.03616" Y="-218.7399" Z="-1.352689" />
 							</Safespots>
 						</CustomBehavior>
 					

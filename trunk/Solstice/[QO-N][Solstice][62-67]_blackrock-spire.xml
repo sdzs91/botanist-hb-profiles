@@ -201,10 +201,18 @@
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="60000" />
 
-							<!-- Pull the lower group in the middle-->			
-							<RunTo X="89.23845" Y="-292.6263" Z="60.67784" />
-							<RunTo X="82.03984" Y="-301.325" Z="58.48672" />
-							<RunTo X="80.38829" Y="-318.6318" Z="55.7806" />
+							<!-- Pull the lower group in the middle -->			
+							<RunTo X="88.95364" Y="-296.1153" Z="60.70023" />
+							<CustomBehavior File="RunLikeHell"
+									UseCTM="true"
+									NumOfTimes="1"
+									AllowCombat="false">	
+								<Hotspot X="88.95364" Y="-296.1153" Z="60.70023" />
+								<Hotspot X="77.71117" Y="-324.9973" Z="55.78347" />
+								<Hotspot X="58.1865" Y="-324.9695" Z="53.91683" />
+								<Hotspot X="38.89936" Y="-325.2675" Z="53.736" />
+								<Hotspot X="41.92837" Y="-295.6572" Z="62.82181" />
+							</CustomBehavior>
 							
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="3000" />
@@ -217,7 +225,7 @@
 							<!-- 1st room on the right -->
 							<RunTo X="55.30037" Y="-312.3303" Z="53.9193" />
 							<CustomBehavior File="WaitTimer" 
-											WaitTime="3000" />
+											WaitTime="30000" />
 											
 							<!-- 2nd room on the left -->				
 							<RunTo X="104.2737" Y="-326.3554" Z="53.91899" />
@@ -237,8 +245,10 @@
 											
 							<!-- Pull the single mob of the 3rd group -->				
 							<RunTo X="15.81628" Y="-283.8374" Z="65.37438" />
-							<RunTo X="8.349821" Y="-278.0359" Z="65.33875" />
-
+							<CustomBehavior File="NoCombatMoveTo" X="8.349821" Y="-278.0359" Z="65.33875" />
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="10000" />
+							
 							<!-- Pull the remaining group -->
 							<RunTo X="13.06813" Y="-258.2972" Z="65.34567" />							
 										
