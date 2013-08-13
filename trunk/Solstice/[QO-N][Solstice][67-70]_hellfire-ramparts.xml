@@ -220,24 +220,13 @@
 					<RunTo X="-1285.217" Y="1674.313" Z="68.67785" />
 										
 					<!-- Pull the first group on the right after the bridge -->
-					<CustomBehavior File="RunLikeHell" 
-									UseCTM="false" 
-									NumOfTimes="1" 
-									AllowCombat="false">
-						<Hotspot X="-1269.783" Y="1661.314" Z="68.86868" />
-						<Hotspot X="-1277.234" Y="1667.114" Z="68.80787" />
-						<Hotspot X="-1312.823" Y="1667.753" Z="66.20265" />
-					</CustomBehavior>
-					<RunTo X="-1312.823" Y="1667.753" Z="66.20265" />
-
-					<!-- Dodge to the left to angle the approach -->
-					<RunTo X="-1277.047" Y="1657.461" Z="69.09747" />
-																				
+					<RunTo X="-1274.458" Y="1657.591" Z="69.05404" />
+					
+					<!-- Pull the first group on the left --> 
+					<RunTo X="-1245.347" Y="1648.605" Z="67.4994" />
+				
 					<!-- Pull the second group on the left after the bridge -->
-					<RunTo X="-1245.894" Y="1647.94" Z="67.55897" />
-
-					<!-- Pull second group on the left after the bridge  -->
-					<RunTo X="-1243.185" Y="1623.843" Z="68.50868" />
+					<RunTo X="-1241.276" Y="1624.299" Z="68.49368" />
 										
 					<!-- Pull the second group on the right -->
 					<RunTo X="-1254.471" Y="1599.957" Z="68.589" />
@@ -250,36 +239,44 @@
 						<Hotspot X="-1240.469" Y="1599.546" Z="68.48991" />
 						<Hotspot X="-1264.139" Y="1566.891" Z="68.64436" />
 						<Hotspot X="-1240.469" Y="1599.546" Z="68.48991" />
-						<Hotspot X="-1259.44" Y="1595.935" Z="68.60711" />
+						.<Hotspot X="-1257.113" Y="1638.533" Z="68.41988" />
+						<Hotspot X="-1277.516" Y="1657.928" Z="69.09048" />
 					</CustomBehavior>
-					<RunTo X="-1259.44" Y="1595.935" Z="68.60711" />
+					<RunTo X="-1277.516" Y="1657.928" Z="69.09048" />
 										
 					<!-- Pull third group on the left after the bridge  -->
 					<RunTo X="-1275.092" Y="1541.744" Z="68.56787" />
 															
-					<!-- Pull the third group on the right -->
-					<RunTo X="-1276.361" Y="1563.736" Z="68.5933" />
-					<RunTo X="-1293.089" Y="1530.273" Z="68.59075" />
-					<RunTo X="-1277.7" Y="1501.062" Z="68.57021" />
-					<RunTo X="-1284.042" Y="1489.25" Z="68.58755" />
-
 					<!-- Move up the middle to pick up patrols -->
-					<RunTo X="-1281.983" Y="1490.566" Z="68.58473" />
-					<RunTo X="-1278.49" Y="1497.688" Z="68.57447" />
-					<RunTo X="-1289.454" Y="1519.069" Z="68.58099" />
-					<RunTo X="-1269.174" Y="1487.472" Z="68.57146" />
-					<RunTo X="-1251.316" Y="1472.04" Z="68.57455" />
-					<RunTo X="-1236.4" Y="1446.491" Z="68.59394" />
+					<RunTo X="-1274.022" Y="1559.637" Z="68.58629" />
+					<RunTo X="-1293.509" Y="1534.907" Z="68.592" />
+					<RunTo X="-1292.625" Y="1521.109" Z="68.58867" />
+					<RunTo X="-1286.728" Y="1512.067" Z="68.57763" />
+					<RunTo X="-1265.924" Y="1492.381" Z="68.56222" />
+					<RunTo X="-1262.111" Y="1480.594" Z="68.57206" />
+					<RunTo X="-1256.084" Y="1466.209" Z="68.58526" />
+					<RunTo X="-1239.589" Y="1448.316" Z="68.59441" />
+					<RunTo X="-1248.005" Y="1463.974" Z="68.58133" />
+					<RunTo X="-1262.662" Y="1479.717" Z="68.57671" />
+					<RunTo X="-1280.04" Y="1487.161" Z="68.58556" />
 					
 					<!-- Pull the barrier group on the left -->
 					<CustomBehavior File="NoCombatMoveTo" X="-1231.185" Y="1478.602" Z="68.55569" />
 										
-					<!-- If we are level 69 or above, clear the bosses and top floor -->					
+					<!-- If we are level 69 or above -->					
 					<If Condition="Me.Level &gt;= 69">					
 										
 						<!-- Pull the group on the right -->
-						<CustomBehavior File="NoCombatMoveTo" X="-1238.466" Y="1453.852" Z="68.58798" />
-						<CustomBehavior File="NoCombatMoveTo" X="-1209.644" Y="1439.216" Z="68.56494" />				
+						<RunTo X="-1225.177" Y="1435.18" Z="68.60134" />
+						<RunTo X="-1212.986" Y="1428.832" Z="68.59489" />
+						<CustomBehavior File="NoCombatMoveTo" X="-1214.37" Y="1420.18" Z="68.61272" />
+						<CustomBehavior File="NoCombatMoveTo" X="-1206.634" Y="1417.511" Z="68.59715" />
+						<CustomBehavior File="NoCombatMoveTo" X="-1206.179" Y="1425.061" Z="68.57098" />
+						<CustomBehavior File="NoCombatMoveTo" X="-1204.603" Y="1430.657" Z="68.55384" />						
+										
+						<CustomBehavior File="NoCombatMoveTo" X="-1201.68" Y="1413.718" Z="68.59578" />
+						<CustomBehavior File="NoCombatMoveTo" X="-1174.865" Y="1420.68" Z="68.44641" />
+						<CustomBehavior File="NoCombatMoveTo" X="-1172.466" Y="1429.125" Z="68.40836" />				
 										
 						<!-- Move to the patrol wait area -->
 						<RunTo X="-1187.251" Y="1454.408" Z="68.44676" />
@@ -289,7 +286,7 @@
 										WaitTime="80000" />
 
 						<!-- Pull the group in front of the barrier -->		
-						<CustomBehavior File="NoCombatMoveTo" X="-1187.759" Y="1476.556" Z="68.46307" />
+						<CustomBehavior File="NoCombatMoveTo" X="-1181.629" Y="1485.672" Z="68.46004" />
 													
 						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
 						<CustomBehavior File="WaitTimer" 
@@ -311,17 +308,6 @@
 						
 						<!-- Pull the 2nd group on the left backtracking -->
 						<CustomBehavior File="NoCombatMoveTo" X="-1161.322" Y="1466.328" Z="68.41697" />
-
-						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />
-						
-						<!-- Pull the 3rd group on the left backtracking -->
-						<CustomBehavior File="NoCombatMoveTo" X="-1167.667" Y="1436.779" Z="68.40344" />
-
-						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />
 						
 					</If>	<!-- If we are level 69 or above, clear the bosses and top floor -->
 					

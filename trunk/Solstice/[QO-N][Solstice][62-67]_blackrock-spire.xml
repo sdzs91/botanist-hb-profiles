@@ -69,7 +69,7 @@
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="25"
+							PullDistance="5"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseFlightPaths="True"
@@ -156,7 +156,7 @@
 					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
 				
 					<!-- Run up ramp -->
-					<RunTo X="79.2363" Y="-241.2068" Z="56.4171" />
+					<RunTo X="78.67663" Y="-238.5619" Z="54.92327" />
 																
 					<!-- Instance timer -->
 					<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />
@@ -176,126 +176,81 @@
 						<CustomBehavior File="Message" 
 										Text="We are below level 66, we will run LBRS." 
 										LogColor="Fuchsia" />
+
+							<!-- Clear entrance of BRS to entrance of UBRS -->			
+							<CustomBehavior File="RunLikeHell"
+									UseCTM="true"
+									NumOfTimes="1"
+									AllowCombat="false">	
+								<Hotspot X="80.16209" Y="-258.1129" Z="60.70258" />
+								<Hotspot X="87.74446" Y="-263.0184" Z="60.72235" />
+								<Hotspot X="91.31277" Y="-276.0287" Z="60.61781" />
+								<Hotspot X="86.50657" Y="-261.2951" Z="60.71276" />
+								<Hotspot X="79.8087" Y="-260.0155" Z="60.70203" />
+							</CustomBehavior>
 										
-							<!-- Clear entrance of BRS to entrance of UBRS -->
-							<RunTo X="80.26455" Y="-258.1181" Z="60.70303" />
-							<RunTo X="89.87984" Y="-276.167" Z="60.61135" />					
-							<RunTo X="71.38783" Y="-278.5209" Z="60.61227" />					
-							<RunTo X="71.57586" Y="-313.0738" Z="55.7865" />					
-							<RunTo X="57.85207" Y="-312.6806" Z="53.9165" />					
-							<RunTo X="105.4784" Y="-311.897" Z="53.91893" />					
-							<RunTo X="106.7944" Y="-331.0701" Z="53.9189" />					
-							<RunTo X="85.25211" Y="-357.0931" Z="60.70202" />					
-							<RunTo X="41.35803" Y="-327.2826" Z="53.78933" />					
-							<RunTo X="45.34401" Y="-272.9454" Z="65.36698" />					
-							<RunTo X="47.97971" Y="-253.2721" Z="65.36583" />					
-							<RunTo X="9.978234" Y="-255.1645" Z="65.34553" />					
-							<RunTo X="23.79317" Y="-326.1236" Z="48.77787" />					
-									
-							<!-- Entrance to LBRS -->		
-							<RunTo X="37.1034" Y="-359.2722" Z="48.66062" />					
-					
-							<!-- Pulling the first group at the entrance -->
-							<RunTo X="33.93049" Y="-394.8943" Z="48.67911" />
+							<!-- Wait timer - wait 3 seconds to aggro -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />			
+										
+							<!-- Move to the patrol wait area -->
+							<RunTo X="92.03392" Y="-276.3041" Z="60.61378" />
+							<RunTo X="94.09586" Y="-291.2989" Z="60.63641" />
 							
-							<!-- Avoiding the second group -->
-							<CustomBehavior File="RunLikeHell" 
-											UseCTM="true" 
-											NumOfTimes="1" 
-											AllowCombat="false">
-								<Hotspot X="33.93049" Y="-394.8943" Z="48.67911" />
-								<Hotspot X="55.27284" Y="-409.5037" Z="47.17941" />
-								<Hotspot X="86.34416" Y="-421.4836" Z="51.65228" />
-								<Hotspot X="87.21146" Y="-428.4678" Z="49.87283" />
-								<Hotspot X="95.67535" Y="-428.9516" Z="54.58511" />
-								<Hotspot X="90.38204" Y="-443.0916" Z="45.9206" />
-								<Hotspot X="84.39173" Y="-457.8681" Z="37.03413" />
-								<Hotspot X="81.10568" Y="-473.4621" Z="32.85233" />
-							</CustomBehavior>
-							<RunTo X="81.10568" Y="-473.4621" Z="32.85233" />
+							<!-- Wait timer - wait 60 seconds to aggro the patrol -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="60000" />
+
+							<!-- Pull the lower group in the middle-->			
+							<RunTo X="89.23845" Y="-292.6263" Z="60.67784" />
+							<RunTo X="82.03984" Y="-301.325" Z="58.48672" />
+							<RunTo X="80.38829" Y="-318.6318" Z="55.7806" />
 							
-							<!-- Pull the left-hand group -->
-							<CustomBehavior File="RunLikeHell" 
-											UseCTM="true" 
-											NumOfTimes="1" 
-											AllowCombat="false">
-								<Hotspot X="74.34081" Y="-487.4573" Z="27.85728" />
-<Hotspot X="56.98522" Y="-491.5849" Z="28.70326" />
-<Hotspot X="61.46122" Y="-505.9091" Z="29.18768" />
-							</CustomBehavior>
-							<RunTo X="61.46122" Y="-505.9091" Z="29.18768" />
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
 							
-							<!-- Pull the right-hand group -->
-							<CustomBehavior File="RunLikeHell" 
-											UseCTM="true" 
-											NumOfTimes="1" 
-											AllowCombat="false">
-								<Hotspot X="47.76076" Y="-487.1947" Z="28.8968" />
-								<Hotspot X="48.34912" Y="-465.3182" Z="24.40177" />
-							</CustomBehavior>
-							<RunTo X="48.34912" Y="-465.3182" Z="24.40177" />
+							<!-- 1st room on the left -->
+							<RunTo X="104.5913" Y="-312.5388" Z="53.91899" />
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
 							
-							<!-- Group after the first bridge -->
-							<CustomBehavior File="RunLikeHell" 
-											UseCTM="true" 
-											NumOfTimes="1" 
-											AllowCombat="false">
-								<Hotspot X="45.62149" Y="-483.9624" Z="28.15186" />			
-								<Hotspot X="50.42857" Y="-514.9098" Z="30.0029" />
-								<Hotspot X="50.88689" Y="-552.7054" Z="30.9769" />
-								<Hotspot X="58.43221" Y="-571.8993" Z="30.60801" />
-							</CustomBehavior>
-							<RunTo X="58.43221" Y="-571.8993" Z="30.60801" />
+							<!-- 1st room on the right -->
+							<RunTo X="55.30037" Y="-312.3303" Z="53.9193" />
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="30000" />
+											
+							<!-- 2nd room on the left -->				
+							<RunTo X="104.2737" Y="-326.3554" Z="53.91899" />
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="30000" />
 							
-							<!-- First group on the left after the second bridge -->
-							<RunTo X="-29.44304" Y="-588.4897" Z="29.19094" />
+							<!-- 1st group on the top right ramp in lbrs -->
+							<RunTo X="39.30283" Y="-325.6855" Z="53.74557" />
 							
-							<!-- Back left corner -->
-							<RunTo X="-55.65084" Y="-585.1641" Z="29.19091" />
+							<!-- 2nd group on the top right ramp in lbrs -->
+							<RunTo X="43.85595" Y="-282.2584" Z="65.34974" />
 							
-							<!-- Right-hand group after the second bridge -->
-							<RunTo X="-39.81628" Y="-562.5513" Z="29.19091" />
+							<!-- 2nd group on the top right ramp in lbrs -->
+							<RunTo X="46.30854" Y="-259.3858" Z="65.37053" />
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
+											
+							<!-- Pull the single mob of the 3rd group -->				
+							<RunTo X="15.81628" Y="-283.8374" Z="65.37438" />
+							<RunTo X="8.349821" Y="-278.0359" Z="65.33875" />
+
+							<!-- Pull the remaining group -->
+							<RunTo X="13.06813" Y="-258.2972" Z="65.34567" />							
+										
+							<!-- Move to UBRS -->
+							<RunTo X="121.385" Y="-318.9493" Z="70.95507" />
 							
-							<!-- Left-hand group before the ogres -->
-							<RunTo X="-62.25497" Y="-536.7366" Z="29.1909" />
+							<!-- Move to the center of the room -->
+							<RunTo X="136.6282" Y="-319.1006" Z="70.95531" />
 							
-							<!-- Right-hand group before the ogres -->
-							<RunTo X="-8.305924" Y="-526.7022" Z="29.17883" />
-							
-							<!-- First two ogres -->
-							<RunTo X="-36.75611" Y="-505.5834" Z="29.16741" />
-							
-							<!-- The patrol -->
-							<RunTo X="-36.61018" Y="-454.0189" Z="31.19488" />
-							
-							<!-- Two bridge guards -->
-							<RunTo X="-37.02587" Y="-436.243" Z="31.81593" />
-							
-							<!-- Single bridge guard -->
-							<RunTo X="-37.34164" Y="-403.7234" Z="31.54186" />
-							
-							<!-- Three ogres entering Mok Doom -->
-							<RunTo X="-37.33359" Y="-382.3774" Z="31.61681" />
-							
-							<!-- Single ogre after entering Mok Doom -->
-							<RunTo X="-25.46938" Y="-348.4747" Z="31.61681" />
-							
-							<!-- Avoiding the second group  at the entrance-->
-							<CustomBehavior File="RunLikeHell" 
-											UseCTM="true" 
-											NumOfTimes="1" 
-											AllowCombat="false">
-								<Hotspot X="81.10568" Y="-473.4621" Z="32.85233" />
-								<Hotspot X="84.39173" Y="-457.8681" Z="37.03413" />
-								<Hotspot X="90.38204" Y="-443.0916" Z="45.9206" />
-								<Hotspot X="95.67535" Y="-428.9516" Z="54.58511" />
-								<Hotspot X="87.21146" Y="-428.4678" Z="49.87283" />
-								<Hotspot X="86.34416" Y="-421.4836" Z="51.65228" />
-								<Hotspot X="55.27284" Y="-409.5037" Z="47.17941" />
-								<Hotspot X="33.93049" Y="-394.8943" Z="48.67911" />
-							</CustomBehavior>
-							<RunTo X="33.93049" Y="-394.8943" Z="48.67911" />
-							
+							<!-- Move to the two mobs near the exit -->
+							<RunTo X="71.28532" Y="-277.0699" Z="60.61209" />
+						
 					</If>	<!-- If we are below level 66, we will run LBRS -->
 					
 		<!-- ************************************************************************************ level 66-67 *************************************************************** -->			

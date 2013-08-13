@@ -26,6 +26,14 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="924.9705" Y="-275.5513" Z="-48.90093" Radius="3" />
+		<Blackspot X="924.7561" Y="-276.2694" Z="-48.90093" Radius="3" />
+		<Blackspot X="924.0821" Y="-268.1429" Z="-48.90093" Radius="3" />
+		<Blackspot X="918.9016" Y="-255.6138" Z="-48.90088" Radius="3" />
+		<Blackspot X="912.0954" Y="-248.8142" Z="-48.90088" Radius="3" />
+		<Blackspot X="903.7244" Y="-244.7371" Z="-48.90088" Radius="3" />
+		<Blackspot X="891.3657" Y="-243.4299" Z="-48.90088" Radius="3" />
+		<Blackspot X="880.371" Y="-246.7472" Z="-48.90229" Radius="3" />
 	</Blackspots>
 
 	<Mailboxes>
@@ -176,7 +184,7 @@
 								
 						<!-- Profile message - We are level 60 or above, we are no longer avoiding the higher level mobs -->
 						<CustomBehavior File="Message" 
-									Text="We are level 60 or above, we are no longer avoiding the higher level mobs."  
+									Text="We are level 61 or above, we are no longer avoiding the higher level mobs."  
 									LogColor="Fuchsia" />		
 								
 						<!-- Move to the mole machine -->
@@ -184,6 +192,9 @@
 						
 						<!-- Interact with the mole machine -->						
 						<CustomBehavior File="InteractWith" MobId="207401" ObjectType="Gameobject" GossipOptions="1" Range="4.75" NumOfTimes="1"  WaitTime="1" X="444.794922" Y="21.6984711" Z="-70.6062241" />			
+									
+						<!-- Move away from the Mole machine -->
+						<RunTo X="946.1516" Y="-277.2573" Z="-49.94847" />						
 									
 						<!-- Pull the 1st group by the mole machine -->
 						<CustomBehavior File="TargetAndMoveToMob" 
@@ -360,18 +371,35 @@
 							</While>	<!--Infinite loop until we are past Panzor the Invincible -->
 						</If>	<!-- If our target is Panzor the Invincible -->
 						
+						<!-- If our target is not Panzor the Invincible, pulling the remaining groups -->
 						<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 8923)" >
 						
 							<!-- Profile message - My target is not Panzor the Invincible,pulling the remaining groups -->
 							<CustomBehavior File="Message" 
-												Text="My target is not Panzor the Invincible,pulling the remaining groups." 
+												Text="My target is not Panzor the Invincible, pulling the remaining groups." 
 												LogColor="Fuchsia" />			
 					
 							<!-- Pull the group at the top of the ramp -->
 							<RunTo X="1187.402" Y="-162.3908" Z="-74.3624" />
 							
+							<!-- Wait timer - wait 10 second to get our whits back -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="10000" />
+							
+							<!-- Pull the group straight ahead of the ramp -->
+							<RunTo X="1180.339" Y="-145.6811" Z="-74.36473" />
+							<RunTo X="1158.845" Y="-129.4267" Z="-74.3661" />
+							
+							<!-- Wait timer - wait 10 second to get our whits back -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="10000" />
+							
 							<!-- Pull the left-hand group at the bottom of the ramp -->
-							<RunTo X="1127.902" Y="-168.2146" Z="-74.91734" />
+							<RunTo X="1132.748" Y="-152.2255" Z="-74.91098" />
+							
+							<!-- Wait timer - wait 10 second to get our whits back -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="10000" />
 							
 							<!-- Move to the top of the ramp -->
 							<RunTo X="1095.178" Y="-154.1315" Z="-65.31004" />
@@ -385,7 +413,7 @@
 
 					</If>	<!-- If we are level 61 or above -->	
 						
-					<!-- If we are beloe level 60 -->			
+					<!-- If we are below level 60 -->			
 					<If Condition="Me.Level &lt; 61">	
 					
 						<!-- Run to first Shadowforge Gate -->
@@ -433,191 +461,174 @@
 										X="560.5311"
 										Y="-51.815918"
 										Z="-60.09396" />
+						<!-- Move to the top of the stairs -->
+						<RunTo X="595.5462" Y="-72.73868" Z="-49.52985" />
 						
 						<!-- Move to the far side of the Ring of the Law -->	
-<CustomBehavior File="RunLikeHell"
-										UseCTM="true"
-										NumOfTimes="1" 
-										AllowCombat="false">	
-							<Hotspot X="692.7579" Y="-2.428671" Z="-45.67053" />
-							<Hotspot X="692.17" Y="14.49883" Z="-45.50127" />
-							<Hotspot X="689.6866" Y="22.84058" Z="-49.87167" />
-							<Hotspot X="699.5455" Y="23.15034" Z="-45.46643" />
-							<Hotspot X="683.1484" Y="22.19287" Z="-52.06663" />
-						</CustomBehavior>
-
-<!-- Pull the single dog -->
-<Hotspot X="605.3615" Y="44.44267" Z="-74.04726" />
-<!-- Pull the left group at the Dark Iron Highway -->
-<Hotspot X="613.523" Y="81.85958" Z="-73.86839" />
-<!-- Pull the center group at the Dark Iron Highway -->
-
-<!-- Pull the center group at the Dark Iron Highway -->
-
-<!-- Pull the center group at the Dark Iron Highway -->
-
-<!-- Pull the center group at the Dark Iron Highway -->
-
-<!-- Pull the center group at the Dark Iron Highway -->
-
-<!-- Pull the center group at the Dark Iron Highway -->
-
-<!-- Pull the center group at the Dark Iron Highway -->
-
-<!-- Pull the center group at the Dark Iron Highway -->
-
-<!-- Pull the center group at the Dark Iron Highway -->
-
-<!-- Pull the center group at the Dark Iron Highway -->
-
-<!-- Pull the center group at the Dark Iron Highway -->					
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<!-- Move to the group near the base of the stair -->
-						<RunTo X="591.2123" Y="-51.60256" Z="-60.05102" />
-						
-						<!-- Move to the Shadowforge lock -->
-						<RunTo X="608.5732" Y="-50.51231" Z="-60.05605" />
-						
-						<!-- Wait timer - wait 3 seconds to make sure we don't have aggro -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />
-						
-						<!-- Interact with the Shadowforge lock -->
-						<CustomBehavior File="InteractWith"
-										ObjectType="GameObject"
-										MobId="161460"
-										NumOfTimes="1"
-										X="615.614136"
-										Y="-49.78228"
-										Z="-60.0557327" />
-						
-						<!-- Run to the Shadowforge door -->
-						<RunTo X="747.3532" Y="-80.28317" Z="-46.23373" />
-						
-						<!-- Profile message - Waiting 138 seconds to aggro the patrol. DON'T TOUCH -->
-						<CustomBehavior File="Message" 
-										Text="Waiting 138 second to aggro the patrol. DON'T TOUCH ." 
-										LogColor="Orange" />
-						
-						<!-- Wait timer - wait 138 seconds to make sure we aggro the patrol -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="138000" />
-						
-						<!-- Pull the first group past Shadowforge door -->
-						<RunTo X="759.3325" Y="-55.36684" Z="-46.23372" />
-						
-						<!-- Wait timer - wait 3 seconds to make sure we get aggro -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />
-						
-						<!-- Pull the 2nd group past the Shadowforge door -->
-						<CustomBehavior File="RunLikeHell"
-										UseCTM="false"
-										NumOfTimes="1" 
-										AllowCombat="false">	
-							<Hotspot X="752.9161" Y="-39.32797" Z="-46.23365" />
-							<Hotspot X="738.6857" Y="-13.08935" Z="-46.23362" />
-							<Hotspot X="752.9161" Y="-39.32797" Z="-46.23365" />
-						</CustomBehavior>
-						
-						<!-- Pull the elementals in the left corner -->
-						<RunTo X="696.8931" Y="-13.55973" Z="-45.68333" />
-						
-						<!-- Pull the center guards -->
 						<CustomBehavior File="RunLikeHell"
 										UseCTM="true"
 										NumOfTimes="1" 
 										AllowCombat="false">	
-							<Hotspot X="692.7579" Y="-2.428671" Z="-45.67053" />
-							<Hotspot X="692.17" Y="14.49883" Z="-45.50127" />
-							<Hotspot X="689.6866" Y="22.84058" Z="-49.87167" />
-							<Hotspot X="699.5455" Y="23.15034" Z="-45.46643" />
-							<Hotspot X="683.1484" Y="22.19287" Z="-52.06663" />
+							<Hotspot X="595.7415" Y="-109.771" Z="-45.40632" />
+							<Hotspot X="596.5897" Y="-146.8009" Z="-38.35332" />
+							<Hotspot X="577.4015" Y="-152.3474" Z="-38.36183" />
+							<Hotspot X="564.7644" Y="-161.7932" Z="-38.36183" />
+							<Hotspot X="557.2039" Y="-176.1525" Z="-38.36183" />
+							<Hotspot X="555.4595" Y="-191.3549" Z="-38.36183" />
+							<Hotspot X="559.9516" Y="-207.651" Z="-38.36183" />
+							<Hotspot X="569.819" Y="-220.1681" Z="-38.36183" />
+							<Hotspot X="584.223" Y="-228.588" Z="-38.35719" />
+							<Hotspot X="596.3651" Y="-229.9615" Z="-38.35719" />
 						</CustomBehavior>
+						<RunTo X="596.3651" Y="-229.9615" Z="-38.35719" />
 						
-						<!-- Run to the top of the stairs -->
-						<RunTo X="695.944" Y="22.10061" Z="-46.06472" />
-		
-						<!-- Pull the elementals near the stairs -->
+						<!-- Pull the center group entering the Shrine of Thaurissan -->
 						<CustomBehavior File="RunLikeHell"
 										UseCTM="true"
 										NumOfTimes="1" 
 										AllowCombat="false">	
-							<Hotspot X="709.3614" Y="22.21044" Z="-45.43858" />
-							<Hotspot X="713.8358" Y="31.06722" Z="-45.44584" />
-							<Hotspot X="708.3068" Y="-1.110556" Z="-45.97158" />
+							<Hotspot X="596.2306" Y="-246.801" Z="-38.40232" />
+							<Hotspot X="595.8177" Y="-277.3798" Z="-43.10044" />
+							<Hotspot X="595.5884" Y="-261.245" Z="-41.08568" />
 						</CustomBehavior>
-						<RunTo X="708.3068" Y="-1.110556" Z="-45.97158" />
+						<RunTo X="595.5884" Y="-261.245" Z="-41.08568" />
 						
-						<!-- Run to The Manufactory -->
-						<RunTo X="765.7694" Y="22.48119" Z="-53.66121" />
+						<!-- Pull the left group entering the Shrine of Thaurissan -->
+						<RunTo X="628.0031" Y="-284.1517" Z="-43.10701" />
 						
-						<!-- Wait timer - wait 30 seconds to be sure we get aggro -->
+						<!-- Pull the 1st two elementals entering Shadowforge City -->
+						<RunTo X="655.9355" Y="-288.0824" Z="-43.25743" />
+
+						<!-- Pull the 2nd two elementals enter Shadowforge City -->
+						<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1" 
+										AllowCombat="false">	
+							<Hotspot X="671.8906" Y="-281.1317" Z="-43.20778" />
+							<Hotspot X="699.2533" Y="-279.2653" Z="-43.20261" />
+							<Hotspot X="710.2673" Y="-278.6252" Z="-43.21307" />
+							<Hotspot X="718.29" Y="-282.4307" Z="-42.87344" />
+							<Hotspot X="742.9002" Y="-274.5996" Z="-42.83503" />
+						</CustomBehavior>
+						<RunTo X="742.9002" Y="-274.5996" Z="-42.83503" />
+						
+						<!-- Pull the 1st group on the left entering the Domicile -->
+						<RunTo X="754.8533" Y="-275.9839" Z="-42.85453" />
+						<RunTo X="770.8972" Y="-256.2503" Z="-43.37001" />
+						
+						<!-- Pull the back left group on the left entering the Domicile  -->
+						<RunTo X="779.8141" Y="-245.1992" Z="-43.2956" />
+						<RunTo X="793.4214" Y="-222.9231" Z="-43.28813" />
+
+						<!-- Pull the center group entering the Domicile -->
+						<RunTo X="778.5629" Y="-248.6082" Z="-43.31196" />
+						<RunTo X="798.747" Y="-264.2956" Z="-43.22237" />
+
+						<!-- Pull the back right group in the Domicile -->
+						<RunTo X="793.5933" Y="-275.8902" Z="-43.35877" />
+						<RunTo X="792.7086" Y="-300.3492" Z="-43.29586" />
+
+						<!-- Pull the 1st room on the right -->
+						<RunTo X="777.7065" Y="-298.5092" Z="-43.30016" />
+						<RunTo X="772.3882" Y="-307.0617" Z="-43.30016" />
+
+						<!-- Pull the 2nd room on the right -->
+						<RunTo X="805.4876" Y="-293.3858" Z="-43.29547" />
+						<RunTo X="818.3176" Y="-300.28" Z="-43.29497" />
+
+						<!-- Pull the 1st group exiting the Domicile -->
+						<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1" 
+										AllowCombat="false">	
+							<Hotspot X="802.7252" Y="-290.5954" Z="-43.29497" />
+							<Hotspot X="821.6622" Y="-254.8406" Z="-49.36726" />
+							<Hotspot X="838.3878" Y="-243.1367" Z="-49.36298" />
+							<Hotspot X="852.5449" Y="-251.5377" Z="-49.98117" />
+							<Hotspot X="854.244" Y="-252.7987" Z="-49.97554" />
+							<Hotspot X="835.6569" Y="-240.379" Z="-49.36098" />
+							<Hotspot X="822.3247" Y="-254.6354" Z="-49.36702" />
+						</CustomBehavior>
+						<RunTo X="822.3247" Y="-254.6354" Z="-49.36702" />
+
+						<!-- Move to the patrol wait area -->
+						<RunTo X="855.6649" Y="-282.2051" Z="-49.93592" />
+
+						<!-- Wait timer - wait 84 seconds to aggro the patrol -->
 						<CustomBehavior File="WaitTimer" 
-										WaitTime="30000"  />
+										WaitTime="84000" />
 
-						<!-- Pull the center left group -->
-						<RunTo X="776.5829" Y="24.76657" Z="-53.6513" />
-						<RunTo X="776.6301" Y="49.17134" Z="-53.73506" />				
-		
-						<!-- Pull the left group -->
-						<RunTo X="758.4663" Y="51.38408" Z="-53.68451" />
-
-						<!-- Pull the back left group -->
-						<RunTo X="802.2473" Y="52.63643" Z="-53.67447" />
-
-						<!-- Pull the center right group -->
-						<RunTo X="797.0045" Y="-9.058965" Z="-53.73513" />
+						<!-- Pull the group near the Shadowforge bank -->
+						<RunTo X="865.6812" Y="-293.5862" Z="-49.93699" />
 						
-						<!-- If we are level 61 -->
-						<If Condition="Me.Level &gt;= 61">
-						
-							<!-- Pull the back right group -->
-							<RunTo X="788.7012" Y="-34.92953" Z="-53.7228" />
-							
-						</If>	<!-- If we are level 61 -->
+						<!-- Pull the group in the Shadowforge bank -->	
+						<RunTo X="858.6848" Y="-307.5148" Z="-50.07042" />
+						<RunTo X="847.2166" Y="-328.3503" Z="-50.28405" />
 
-						<!-- Pull the two elementals entering Shadowforge City -->
-						<RunTo X="814.8274" Y="-31.94935" Z="-53.69008" />
-						<RunTo X="817.1615" Y="-65.2311" Z="-53.90551" />
+						<!-- Pull Warder Stilgiss -->
+						<RunTo X="823.9337" Y="-338.7134" Z="-50.21724" />
 						
-						<!-- Pull the 2nd elementals -->
-						<RunTo X="834.9883" Y="-110.76" Z="-54.13317" />
+						<!-- Pull the last group in the Shadowforge City -->
+						<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1" 
+										AllowCombat="false">	
+							<Hotspot X="836.8566" Y="-325.589" Z="-50.66374" />
+							<Hotspot X="859.7172" Y="-306.2697" Z="-50.03347" />
+							<Hotspot X="887.7269" Y="-315.0457" Z="-49.93741" />
+							<Hotspot X="907.5345" Y="-310.4995" Z="-49.93741" />
+							<Hotspot X="897.3318" Y="-328.2762" Z="-49.59404" />
+							<Hotspot X="897.3655" Y="-341.2033" Z="-49.95572" />
+							<Hotspot X="889.0815" Y="-343.4247" Z="-49.93766" />
+						</CustomBehavior>
+						<RunTo X="889.0815" Y="-343.4247" Z="-49.93766" />
 
-					</If>	<!-- If we are level 60 or above -->
+						<!-- Wait timer - wait 20 seconds to get our shit together -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" />
+						
+						<!-- Pull the 1st Warbringer Construct -->
+						<RunTo X="895.5796" Y="-356.0602" Z="-49.93626" />
+						<RunTo X="900.0751" Y="-387.9861" Z="-49.45807" />
+
+						<!-- Pull the 2nd Warbringer Construct -->
+						<RunTo X="932.3821" Y="-423.1016" Z="-55.60953" />
+						
+						<!-- Pull the 3rd Warbringer Construct -->
+						<RunTo X="960.2994" Y="-393.9873" Z="-60.83762" />
+						
+						<!-- Pull the 4th Warbringer Construct -->
+						<RunTo X="982.5533" Y="-376.8148" Z="-66.2743" />
+						
+						<!-- Pull the 5th Warbringer Construct -->
+						<RunTo X="966.0654" Y="-341.8437" Z="-71.63456" />
+						
+						<!-- Run to the exit -->
+						<RunTo X="897.0684" Y="-327.5275" Z="-49.59398" />
+						<RunTo X="846.8502" Y="-247.7458" Z="-49.37342" />
+						<RunTo X="733.5371" Y="-276.2826" Z="-42.79977" />
+						<RunTo X="598.7031" Y="-278.0204" Z="-43.1029" />
+						
+						<!-- Move to the far side of the Ring of the Law -->	
+						<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1" 
+										AllowCombat="false">	
+							<Hotspot X="596.1512" Y="-252.3614" Z="-38.4625" />
+							<Hotspot X="596.3651" Y="-229.9615" Z="-38.35719" />
+							<Hotspot X="584.223" Y="-228.588" Z="-38.35719" />
+							<Hotspot X="569.819" Y="-220.1681" Z="-38.36183" />
+							<Hotspot X="559.9516" Y="-207.651" Z="-38.36183" />
+							<Hotspot X="555.4595" Y="-191.3549" Z="-38.36183" />
+							<Hotspot X="557.2039" Y="-176.1525" Z="-38.36183" />
+							<Hotspot X="564.7644" Y="-161.7932" Z="-38.36183" />
+							<Hotspot X="577.4015" Y="-152.3474" Z="-38.36183" />
+							<Hotspot X="596.5897" Y="-146.8009" Z="-38.35332" />
+							<Hotspot X="595.7415" Y="-109.771" Z="-45.40632" />
+						</CustomBehavior>
+						<RunTo X="595.7415" Y="-109.771" Z="-45.40632" />
+
+					</If>	<!-- If we are below level 60 -->
 					
 					<!-- Move to the zone in location -->
 					<RunTo X="456.929" Y="34.0923" Z="-69.56171" />
