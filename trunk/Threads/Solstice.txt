@@ -1,8 +1,15 @@
 [B][CENTER][SIZE=4][COLOR="#ffcc00"]Solstice[/COLOR][/SIZE][/CENTER][/B]
 [B][U][CENTER][SIZE=3][COLOR="#FF0000"]Coming Soon[/COLOR][/SIZE][/CENTER][/U][/B]
+
 [CENTER]
-Solstice is an [U]alternative[/U] method for leveling "Death Knights" beyond level 58
-I am currently modifying portions of Symbiotic for this. I will add the files as they are modified.
+[IMG]http://img829.imageshack.us/img829/4108/yy30.jpg[/IMG]
+
+
+Solstice is an [U]alternative[/U] method for farming gold. It uses "Death Knights", level 60 or above to farm instances and vendor all the unprotected items.
+[SIZE=2][B]
+Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/details.xml?id=110000044"]Battle Chest[/URL] account and instantly roll (50) level 55 Death Knight's as a virtual gold farming army !!![/B][/SIZE]
+
+[B][U][SIZE=2]Say goodbye to GatherBuddy and hello to a new way of gold farming ![/SIZE][/U][/B]
 
 
 
@@ -25,42 +32,133 @@ I am currently modifying portions of Symbiotic for this. I will add the files as
 [LIST]
 [*] It is not [U]intended[/U] as a rapid method of leveling. Leveling is a [U]consequence[/U] of farming the dungeons, not the [U]goal[/U].
 [/LIST]
-
 [LIST]
-[INDENT]
-
-[/INDENT]
+*
 [/LIST]
-
 [LIST]
-[INDENT]
-
-[/INDENT]
+*
 [/LIST]
-
 [LIST]
-[INDENT]
-
-[/INDENT]
+*
 [/LIST]
-
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
 [/CODE]
 
 
-[B][COLOR="#ffcc00"][SIZE=4]***** Instructions *****[/SIZE][/COLOR][/B]
+[CENTER][B][COLOR="#ffcc00"][SIZE=4]***** Instructions *****[/SIZE][/COLOR][/B][/CENTER]
 
 [CODE]
 [LIST]
-[*]Will be added.
+[*] Initialize Honorbuddy.
+[/LIST]
+[LIST]
+[*] Click the drop down menu and select Questing as your bot base.
+[/LIST]
+[LIST]
+[*] Click the load profile button and browse to where you have Soltice stored. Double click the profile named [QO-N][Solstice]_autoloader.
+[/LIST]
+[LIST]
+[*] Click start on the bot.
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
 [/LIST]
 [/CODE]
 
 
-[B][COLOR="#ffcc00"][SIZE=4]***** Prerequisites *****[/SIZE][/COLOR][/B]
+[CENTER][B][COLOR="#ffcc00"][SIZE=4]***** Prerequisites *****[/SIZE][/COLOR][/B][/CENTER]
 
 [CODE]
 [LIST]
-[*]Will be added.
+[*]Your Death Knight [U]must[/U] be level 60 or above.
+[/LIST]
+[LIST]
+[*]Your Death Knight [U]must[/U] maintain a minimum of one stack of appropriate level healing potions in their bags. (For those "Oh Sit !" moments.)
+[/LIST]
+[LIST]
+[*]Your Death Knight [U]must[/U] maintain a minimum of 5 stacks of appropriate level "food" in their bags.
+[/LIST]
+[LIST]
+[*]Your Death Knight [U]must[/U] have the Autoequip plugin enabled.
+[/LIST]
+[LIST]
+[*]Your Death Knight [U]must[/U] use a properly working combat routine. For the purposes of these profiles, I used Singular with the following settings:
+[INDENT]
+All Singualr settings are default except :
+Set Eat @ health % 85
+Set Potion @ health % 30
+[/INDENT]
+[/LIST]
+[LIST]
+[*]You [U]must[/U] start the profiles in Eastern Kingdoms, Kalimdor or Northrend.
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
+[/LIST]
+[LIST]
+*
 [/LIST]
 [/CODE]
 
@@ -72,10 +170,10 @@ I am currently modifying portions of Symbiotic for this. I will add the files as
 [/INDENT]
 [/LIST]
 [/CODE]
-[/CENTER]
-[B][CENTER][COLOR="#FF0000"][SIZE=2] Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
 
-[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
+[B][COLOR="#FF0000"][SIZE=2] Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/B]
+
+[URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
 
 [URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL]
 
@@ -83,17 +181,12 @@ I am currently modifying portions of Symbiotic for this. I will add the files as
 [SIZE=3][COLOR="#ffcc00"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
 [CODE]
 
-
-
 [LIST]
-As I complete the modifications and test that it is working correctly, they will be added to a zip file below.
+[*]Solstice Click [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FF0000"]here[/COLOR][/URL] for the SVN URL.
 [/LIST]
-
-
 [LIST]
-Currently testing the initial profiles.
+Or you can download the zip file below.
 [/LIST]
 [/CODE]
 
-[B][U][COLOR="#FF0000"][SIZE=3]NOTE:[/SIZE][/COLOR][/U][/B] The zip files below will not be up-to-date with the SVN
-[/CENTER]
+[B][U][COLOR="#FF0000"][SIZE=3]NOTE:[/SIZE][/COLOR][/U][/B] The zip files below will not be up-to-date with the SVN[/CENTER]
