@@ -495,7 +495,7 @@
 					</If>	<!-- If we are level 66 or above, we will run UBRS -->
 
 					<!-- Run to the exit -->
-					<RunTo <RunTo X="80.03099" Y="-258.143" Z="60.70329" />
+					<RunTo X="80.03099" Y="-258.143" Z="60.70329" />
 									
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
