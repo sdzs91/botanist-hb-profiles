@@ -377,6 +377,10 @@
 									LogColor="Fuchsia" />
 						<CustomBehavior File="NoCombatMoveTo" X="-1161.322" Y="1466.328" Z="68.41697" />
 						
+						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+						
 					</If>	<!-- If we are level 69 or above, clear the bosses and top floor -->
 					
 					<!-- Move to the exit -->

@@ -251,6 +251,8 @@
 							
 							<!-- Move to the center of the room -->
 							<RunTo X="136.6282" Y="-319.1006" Z="70.95531" />
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
 							
 							<!-- Move to the two mobs near the exit -->
 							<RunTo X="95.74954" Y="-318.971" Z="65.46349" />
