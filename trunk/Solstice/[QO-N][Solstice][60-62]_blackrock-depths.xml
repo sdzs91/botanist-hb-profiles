@@ -179,7 +179,7 @@
 									Text="Blackrock Depths initialized."  
 									LogColor="Fuchsia" />
 									
-					<!-- If we are level 60 or above -->			
+					<!-- If we are level 61 or above -->			
 					<If Condition="Me.Level &gt;= 61">
 								
 						<!-- Profile message - We are level 60 or above, we are no longer avoiding the higher level mobs -->
@@ -197,14 +197,12 @@
 						<RunTo X="946.1516" Y="-277.2573" Z="-49.94847" />						
 									
 						<!-- Pull the 1st group by the mole machine -->
-						<CustomBehavior File="TargetAndMoveToMob" 
-										MobId="8899" 
-										MoveWithinMaxRangeOfMob="1"
-										X="931.2899" Y="-258.6396" Z="-49.93595" >
-						</CustomBehavior>
+						<RunTo X="931.2899" Y="-258.6396" Z="-49.93595" />
 					  
 						<!-- Pull the 2nd group near the Grim Guzzler -->
 						<RunTo X="904.4885" Y="-234.645" Z="-49.93694" />
+												
+						<!-- Move to XXXXXXXXXXXXXXXX -->						
 												
 						<!-- Move to the Mold Foundry doors -->
 						<RunTo X="1074.355" Y="-171.3696" Z="-65.21709" />

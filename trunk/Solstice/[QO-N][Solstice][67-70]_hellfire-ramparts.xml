@@ -214,24 +214,45 @@
 									LogColor="Fuchsia" />
 									
 					<!-- Pull the first two bridge guards -->
+					<CustomBehavior File="Message" 
+									Text="Pull the first two bridge guards."  
+									LogColor="Fuchsia" />
 					<RunTo X="-1328.626" Y="1658.497" Z="68.99782" />
 					
-					<!-- Run to the end of the bridge -->
+					<!-- Pull the 2nd two bridge guards -->
+					<CustomBehavior File="Message" 
+									Text="Pull the 2nd two bridge guards."  
+									LogColor="Fuchsia" />
 					<RunTo X="-1285.217" Y="1674.313" Z="68.67785" />
-										
+		
 					<!-- Pull the first group on the right after the bridge -->
+					<CustomBehavior File="Message" 
+									Text="Pull the first group on the right after the bridge."  
+									LogColor="Fuchsia" />
 					<RunTo X="-1274.458" Y="1657.591" Z="69.05404" />
 					
-					<!-- Pull the first group on the left --> 
+					<!-- Pull the first group on the left -->
+					<CustomBehavior File="Message" 
+									Text="Pull the first group on the left."  
+									LogColor="Fuchsia" />					
 					<RunTo X="-1245.347" Y="1648.605" Z="67.4994" />
 				
 					<!-- Pull the second group on the left after the bridge -->
+					<CustomBehavior File="Message" 
+									Text="Pull the second group on the left after the bridge."  
+									LogColor="Fuchsia" />
 					<RunTo X="-1241.276" Y="1624.299" Z="68.49368" />
 										
 					<!-- Pull the second group on the right -->
+					<CustomBehavior File="Message" 
+									Text="Pull the second group on the right."  
+									LogColor="Fuchsia" />
 					<RunTo X="-1254.471" Y="1599.957" Z="68.589" />
 					
 					<!-- Pull the center group -->
+					<CustomBehavior File="Message" 
+									Text="Pull the center group."  
+									LogColor="Fuchsia" />
 					<CustomBehavior File="RunLikeHell" 
 									UseCTM="true" 
 									NumOfTimes="1" 
@@ -245,9 +266,15 @@
 					<RunTo X="-1277.516" Y="1657.928" Z="69.09048" />
 										
 					<!-- Pull third group on the left after the bridge  -->
+					<CustomBehavior File="Message" 
+									Text="Pull third group on the left after the bridge."  
+									LogColor="Fuchsia" />
 					<RunTo X="-1275.092" Y="1541.744" Z="68.56787" />
 															
 					<!-- Move up the middle to pick up patrols -->
+					<CustomBehavior File="Message" 
+									Text="Move up the middle to pick up patrols."  
+									LogColor="Fuchsia" />
 					<RunTo X="-1274.022" Y="1559.637" Z="68.58629" />
 					<RunTo X="-1293.509" Y="1534.907" Z="68.592" />
 					<RunTo X="-1292.625" Y="1521.109" Z="68.58867" />
@@ -261,38 +288,73 @@
 					<RunTo X="-1280.04" Y="1487.161" Z="68.58556" />
 					
 					<!-- Pull the barrier group on the left -->
+					<CustomBehavior File="Message" 
+									Text="Pull the barrier group on the left."  
+									LogColor="Fuchsia" />
 					<CustomBehavior File="NoCombatMoveTo" X="-1231.185" Y="1478.602" Z="68.55569" />
 										
 					<!-- If we are level 69 or above -->					
 					<If Condition="Me.Level &gt;= 69">					
 										
 						<!-- Pull the group on the right -->
-						<RunTo X="-1225.177" Y="1435.18" Z="68.60134" />
-						<RunTo X="-1212.986" Y="1428.832" Z="68.59489" />
-						<CustomBehavior File="NoCombatMoveTo" X="-1214.37" Y="1420.18" Z="68.61272" />
-						<CustomBehavior File="NoCombatMoveTo" X="-1206.634" Y="1417.511" Z="68.59715" />
-						<CustomBehavior File="NoCombatMoveTo" X="-1206.179" Y="1425.061" Z="68.57098" />
-						<CustomBehavior File="NoCombatMoveTo" X="-1204.603" Y="1430.657" Z="68.55384" />						
-										
-						<CustomBehavior File="NoCombatMoveTo" X="-1201.68" Y="1413.718" Z="68.59578" />
-						<CustomBehavior File="NoCombatMoveTo" X="-1174.865" Y="1420.68" Z="68.44641" />
-						<CustomBehavior File="NoCombatMoveTo" X="-1172.466" Y="1429.125" Z="68.40836" />				
+						<CustomBehavior File="Message" 
+									Text="Pull the group on the right."  
+									LogColor="Fuchsia" />
+						<RunTo X="-1225.687" Y="1435.282" Z="68.60292" />	
+						<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1" 
+										AllowCombat="false">	
+							<Hotspot X="-1220.543" Y="1430.445" Z="68.60539" />
+							<Hotspot X="-1217.922" Y="1422.923" Z="68.61268" />
+							<Hotspot X="-1211.586" Y="1418.896" Z="68.60934" />
+							<Hotspot X="-1203.034" Y="1431.897" Z="68.54474" />
+							<Hotspot X="-1207.842" Y="1424.376" Z="68.57862" />	
+						</CustomBehavior>
+						<RunTo X="-1207.842" Y="1424.376" Z="68.57862" />	
+			
+						<!-- Pull the 2nd group on the right -->
+						<CustomBehavior File="Message" 
+									Text="Pull the 2nd group on the right."  
+									LogColor="Fuchsia" />
+						<RunTo X="-1201.441" Y="1414.513" Z="68.59032" />	
+						<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1" 
+										AllowCombat="false">
+							<Hotspot X="-1176.491" Y="1421.346" Z="68.44907" />										
+							<Hotspot X="-1168.054" Y="1436.646" Z="68.40484" />
+							<Hotspot X="-1172.125" Y="1443.403" Z="68.41369" />
+						</CustomBehavior>
+						<RunTo X="-1177.261" Y="1420.626" Z="68.45518" />
 										
 						<!-- Move to the patrol wait area -->
+						<CustomBehavior File="Message" 
+									Text="Move to the patrol wait area."  
+									LogColor="Fuchsia" />
 						<RunTo X="-1187.251" Y="1454.408" Z="68.44676" />
 						
 						<!-- Wait for Watchkeeper Gargolmar to patrol to us -->
+						<CustomBehavior File="Message" 
+									Text="Wait for Watchkeeper Gargolmar to patrol to us."  
+									LogColor="Fuchsia" />
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="80000" />
 
-						<!-- Pull the group in front of the barrier -->		
+						<!-- Pull the group in front of the barrier -->	
+						<CustomBehavior File="Message" 
+									Text="Pull the group in front of the barrier."  
+									LogColor="Fuchsia" />						
 						<CustomBehavior File="NoCombatMoveTo" X="-1181.629" Y="1485.672" Z="68.46004" />
 													
 						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
 													
-						<!-- Pull the group at the door to the stairs -->	
+						<!-- Pull the group at the door to the stairs -->
+						<CustomBehavior File="Message" 
+									Text="Pull the group at the door to the stairs."  
+									LogColor="Fuchsia" />						
 						<CustomBehavior File="NoCombatMoveTo" X="-1205.454" Y="1534.658" Z="68.54165" />
 													
 						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
@@ -300,6 +362,9 @@
 										WaitTime="3000" />
 													
 						<!-- Pull the 1st group on the left backtracking -->
+						<CustomBehavior File="Message" 
+									Text="Pull the 1st group on the left backtracking."  
+									LogColor="Fuchsia" />
 						<CustomBehavior File="NoCombatMoveTo" X="-1155.788" Y="1507.705" Z="68.41247" />
 
 						<!-- Wait timer - wait 3 seconds to be sure we got aggro -->
@@ -307,11 +372,17 @@
 										WaitTime="3000" />
 						
 						<!-- Pull the 2nd group on the left backtracking -->
+						<CustomBehavior File="Message" 
+									Text="Pull the 2nd group on the left backtracking."  
+									LogColor="Fuchsia" />
 						<CustomBehavior File="NoCombatMoveTo" X="-1161.322" Y="1466.328" Z="68.41697" />
 						
 					</If>	<!-- If we are level 69 or above, clear the bosses and top floor -->
 					
-					<!-- Run to the exit -->
+					<!-- Move to the exit -->
+					<CustomBehavior File="Message" 
+									Text="Moveto the exit."  
+									LogColor="Fuchsia" />
 					<RunTo X="-1346.896" Y="1651.415" Z="68.86491" />
 									
 					<!-- If we are high enough to go to the next instance, do so -->

@@ -85,8 +85,7 @@
 									Text="Blackrock Spire detected. Running out."
 									LogColor="Fuchsia" />
 									
-					<RunTo X="89.9931" Y="-318.9885" Z="65.46351" />				
-					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					<RunTo X="80.03099" Y="-258.143" Z="60.70329" />
 					
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" X="77.31385" Y="-210.969" Z="49.81922" />
@@ -177,7 +176,8 @@
 										Text="We are below level 66, we will run LBRS." 
 										LogColor="Fuchsia" />
 
-							<!-- Clear entrance of BRS to entrance of UBRS -->			
+							<!-- Clear entrance of BRS to entrance of UBRS -->
+							<RunTo X="80.16209" Y="-258.1129" Z="60.70258" />
 							<CustomBehavior File="RunLikeHell"
 									UseCTM="true"
 									NumOfTimes="1"
@@ -217,12 +217,12 @@
 							<!-- 1st room on the right -->
 							<RunTo X="55.30037" Y="-312.3303" Z="53.9193" />
 							<CustomBehavior File="WaitTimer" 
-											WaitTime="30000" />
+											WaitTime="3000" />
 											
 							<!-- 2nd room on the left -->				
 							<RunTo X="104.2737" Y="-326.3554" Z="53.91899" />
 							<CustomBehavior File="WaitTimer" 
-											WaitTime="30000" />
+											WaitTime="3000" />
 							
 							<!-- 1st group on the top right ramp in lbrs -->
 							<RunTo X="39.30283" Y="-325.6855" Z="53.74557" />
@@ -243,12 +243,18 @@
 							<RunTo X="13.06813" Y="-258.2972" Z="65.34567" />							
 										
 							<!-- Move to UBRS -->
+							<RunTo X="69.86389" Y="-325.1388" Z="55.78746" />
+							<RunTo X="94.83033" Y="-292.3493" Z="60.67614" />
+							<RunTo X="96.036" Y="-318.8101" Z="65.46442" />
+							<RunTo X="106.1456" Y="-319.2032" Z="65.47916" />
 							<RunTo X="121.385" Y="-318.9493" Z="70.95507" />
 							
 							<!-- Move to the center of the room -->
 							<RunTo X="136.6282" Y="-319.1006" Z="70.95531" />
 							
 							<!-- Move to the two mobs near the exit -->
+							<RunTo X="95.74954" Y="-318.971" Z="65.46349" />
+							<RunTo X="95.44293" Y="-294.5286" Z="60.70257" />
 							<RunTo X="71.28532" Y="-277.0699" Z="60.61209" />
 						
 					</If>	<!-- If we are below level 66, we will run LBRS -->
@@ -489,7 +495,7 @@
 					</If>	<!-- If we are level 66 or above, we will run UBRS -->
 
 					<!-- Run to the exit -->
-					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					<RunTo <RunTo X="80.03099" Y="-258.143" Z="60.70329" />
 									
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
