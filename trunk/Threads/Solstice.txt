@@ -5,11 +5,15 @@
 [IMG]http://img829.imageshack.us/img829/4108/yy30.jpg[/IMG]
 
 
-Solstice is an [U]alternative[/U] method for farming gold. It uses "Death Knights", level 60 or above to farm instances and vendor all the unprotected items.
+[B][SIZE=2]Solstice is an [U]alternative[/U] method for farming gold. It uses "Death Knights", level 60 or above to farm instances and vendor all the unprotected items.[/SIZE][/B]
 [SIZE=2][B]
 Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/details.xml?id=110000044"]Battle Chest[/URL] account and instantly roll (50) level 55 Death Knight's as a virtual gold farming army !!![/B][/SIZE]
 
 [B][U][SIZE=2]Say goodbye to GatherBuddy and hello to a new way of gold farming ![/SIZE][/U][/B]
+
+[B][U][SIZE=2]Imagine setting up 50 Blood DK's farming instances for 2 hours each, with Arelog. It would take 4 days and 2 hours to cycle back to the first character.[/SIZE][/U][/B]
+
+[B][U][COLOR="#000000"][SIZE=3]Now multiply that by 10 accounts !!![/SIZE][/COLOR][/U][/B]
 
 
 
@@ -125,7 +129,7 @@ Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/detai
 [LIST]
 [*]Your Death Knight [U]must[/U] use a properly working combat routine. For the purposes of these profiles, I used Singular with the following settings:
 [INDENT]
-All Singualr settings are default except :
+All Singular settings are default except :
 Set Eat @ health % 85
 Set Potion @ health % 30
 [/INDENT]
