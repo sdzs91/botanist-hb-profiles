@@ -264,34 +264,32 @@
 				</If>	<!-- hearth -->		
 			</If>	<!-- Northrend -->			
 						
-						
+			<!-- If we are in Blackrock Mountain  -->			
+			<If Condition="Me.ZoneId == 25">
+			
+				<!-- If we are not in the box, load the movement profile -->
+				<If Condition="Me.X &gt; -7565.834 || Me.X &lt; -7582.962 || Me.Y &gt; -1297.568 || Me.Y &lt; -1328.157" >
+					
+					<!-- Run to the exit of Blackrock Mountain near Iron Summit -->
+					<RunTo X="-7336.788" Y="-1092.54" Z="277.2957" />
+					
+				</If>
+			</If>
+			
 			<!-- If we are in Eastern Kingdoms -->			
 			<If Condition="Me.MapId == 0">
 			
 				<!-- Hearth check -->
 				<If Condition="Me.HearthstoneAreaId == 5628">
-				
-					<!-- Profile message - Flying to the rendzvous -->
-					<CustomBehavior File="Message" 
-										Text="Flying to the rendzvous point.." 
-										LogColor="Lime" />
 					
-					<!-- Fly to the hover/rendezvous point -->
-					<CustomBehavior File="FlyTo" X="-7038.787" Y="-1230.125" Z="390.7811" />
-					
-					<!-- Continue when tagged by the RAFs -->
-					<CustomBehavior File="Misc\LoadProfileOn" 
-											CheckRange="5" />
-									
-					<!-- Wait 20 seconds -->
-					<CustomBehavior File="WaitTimer" 
-											WaitTime="5000" />
-					
+					<!-- Fly to the hover point above the innkeep in Iron Summit -->
+					<CustomBehavior File="FlyTo" 
+									X="-7144.615" Y="-1236.51" Z="321.6574" />
+
 					<CustomBehavior File="Message" 
 									Text="Flying to Blackrock Caverns." 
 									LogColor="Lime" />
-					
-					<CustomBehavior File="FlyTo" X="-7056.178" Y="-1135.619" Z="367.9378" />
+
 					<CustomBehavior File="FlyTo" X="-7330.418" Y="-1124.455" Z="359.2787" />
 					
 					<CustomBehavior File="MyCTM" X="-7363.104" Y="-1102.565" Z="280.0103" />
@@ -374,41 +372,40 @@
 							</If> <!-- repaired -->
 						</If> <!-- Repairing -->
 						
-						<!-- Profile message - Flying to the rendzvous -->
-						<CustomBehavior File="Message" 
-											Text="Flying to the rendzvous point.." 
-											LogColor="Lime" />
-						
-						<!-- Fly to the hover/rendezvous point -->
-						<CustomBehavior File="FlyTo" X="-7038.787" Y="-1230.125" Z="390.7811" />
-						
-						<!-- Continue when tagged by the RAFs -->
-						<CustomBehavior File="Misc\LoadProfileOn" 
-												CheckRange="5" />
-										
-						<!-- Wait 20 seconds -->
-						<CustomBehavior File="WaitTimer" 
-												WaitTime="5000" />
-						
-						<CustomBehavior File="Message" 
-										Text="Flying to Blackrock Caverns." 
-										LogColor="Lime" />
-						
-						<CustomBehavior File="FlyTo" X="-7056.178" Y="-1135.619" Z="367.9378" />
-						<CustomBehavior File="FlyTo" X="-7330.418" Y="-1124.455" Z="359.2787" />
-						
-						<CustomBehavior File="MyCTM" X="-7363.104" Y="-1102.565" Z="280.0103" />
-						<CustomBehavior File="MyCTM" X="-7376.134" Y="-1094.168" Z="280.9006" />
-						<CustomBehavior File="MyCTM" X="-7409.696" Y="-1101.115" Z="280.6046" />
-						<CustomBehavior File="MyCTM" X="-7420.444" Y="-1069.138" Z="279.7732" />
-						<CustomBehavior File="MyCTM" X="-7430.155" Y="-1058.552" Z="275.2509" />
-						<CustomBehavior File="MyCTM" X="-7481.438" Y="-1070.679" Z="265.6658" />
-						<CustomBehavior File="MyCTM" X="-7593.228" Y="-1162.036" Z="298.1223" />
-						<CustomBehavior File="MyCTM" X="-7612.961" Y="-1233.647" Z="236.3418" />
-						<CustomBehavior File="MyCTM" X="-7615.291" Y="-1271.456" Z="238.1814" />
-						
-						<!-- Run to the instance box -->
-						<Runto X="-7571.14" Y="-1324.96" Z="245.538" />
+					<!-- Fly to the hover point above the innkeep in Iron Summit -->
+					<CustomBehavior File="FlyTo" 
+									X="-7144.615" Y="-1236.51" Z="321.6574" />
+
+					<CustomBehavior File="Message" 
+									Text="Flying to Blackrock Caverns." 
+									LogColor="Lime" />
+					
+					<CustomBehavior File="FlyTo" 
+									X="-7330.418" Y="-1124.455" Z="359.2787" />
+					
+					<CustomBehavior File="MyCTM" 
+									X="-7363.104" Y="-1102.565" Z="280.0103" />
+					<CustomBehavior File="MyCTM" 
+									X="-7376.134" Y="-1094.168" Z="280.9006" />
+					<CustomBehavior File="MyCTM" 
+									X="-7409.696" Y="-1101.115" Z="280.6046" />
+					<CustomBehavior File="MyCTM" 
+									X="-7420.444" Y="-1069.138" Z="279.7732" />
+					<CustomBehavior File="MyCTM" 
+									X="-7430.155" Y="-1058.552" Z="275.2509" />
+					<CustomBehavior File="MyCTM" 
+									X="-7481.438" Y="-1070.679" Z="265.6658" />
+					<CustomBehavior File="MyCTM" 
+									X="-7593.228" Y="-1162.036" Z="298.1223" />
+					<CustomBehavior File="MyCTM" 
+									X="-7612.961" Y="-1233.647" Z="236.3418" />
+					<CustomBehavior File="MyCTM" 
+									X="-7615.291" Y="-1271.456" Z="238.1814" />
+					
+					<!-- Run to the instance box -->
+					<Runto X="-7571.14" Y="-1324.96" Z="245.538" />
+					
+					<!-- Our hearth isn't set, we need to go to the zone -->
 					</Else>		<!-- Our hearth isn't set, we need to go to the zone -->		
 				</If>	<!-- Hearth check -->
 			</If>	<!-- If we are in Eastern Kingdoms -->

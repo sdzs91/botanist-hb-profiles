@@ -69,7 +69,7 @@
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="5"
+							PullDistance="25"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseFlightPaths="True"
@@ -194,8 +194,9 @@
 											WaitTime="3000" />			
 										
 							<!-- Move to the patrol wait area -->
-							<RunTo X="92.03392" Y="-276.3041" Z="60.61378" />
-							<RunTo X="94.09586" Y="-291.2989" Z="60.63641" />
+							<RunTo X="85.48825" Y="-266.4994" Z="60.71582" />
+							<RunTo X="87.84299" Y="-283.6653" Z="60.62334" />
+							<RunTo X="94.94666" Y="-290.8693" Z="60.65479" />
 							
 							<!-- Wait timer - wait 60 seconds to aggro the patrol -->
 							<CustomBehavior File="WaitTimer" 
@@ -224,7 +225,15 @@
 								<RunTo X="16.06892" Y="-329.3272" Z="48.75714" />
 							
 								<!-- Move to the 1st group entering lbrs -->
-								<RunTo X="37.16503" Y="-397.5541" Z="48.64508" />
+								<RunTo X="37.20009" Y="-361.4637" Z="48.66985" />
+								<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1"
+										AllowCombat="false">	
+									<Hotspot X="26.526" Y="-370.3649" Z="48.7274" />
+									<Hotspot X="27.99537" Y="-392.2279" Z="48.72646" />
+									<Hotspot X="33.02238" Y="-398.4084" Z="48.68701" />
+								</CustomBehavior>
 								
 								<!-- Move to the 2nd group entering lbrs -->
 								<RunTo X="65.93195" Y="-437.6073" Z="41.67786" />
@@ -232,24 +241,30 @@
 								<!-- Move to the right-hand group before the first bridge -->
 								<RunTo X="56.44518" Y="-462.2363" Z="24.64445" />
 								
-								<!-- Move to the left-hand group before the first bridge -->
-								<RunTo X="56.82211" Y="-503.45" Z="29.20592" />
-								
 								<!-- Move to the first bridge -->
 								<RunTo X="50.99259" Y="-514.0154" Z="30.00287" />
 								<CustomBehavior File="RunLikeHell"
 										UseCTM="true"
 										NumOfTimes="1"
 										AllowCombat="false">	
-									<Hotspot X="51.05185" Y="-516.0936" Z="30.00287" />
-									<Hotspot X="50.77325" Y="-551.0259" Z="31.00057" />
-									<Hotspot X="52.13462" Y="-563.6445" Z="30.57133" />
-									<Hotspot X="55.84347" Y="-566.1898" Z="30.58437" />
+									<Hotspot X="43.30916" Y="-482.3682" Z="27.79804" />
+									<Hotspot X="43.26118" Y="-496.7362" Z="29.23287" />
+									<Hotspot X="60.25068" Y="-506.7692" Z="29.18512" />
 								</CustomBehavior>
 
-								<!-- Move to left-hand group after the bridges -->
-								<RunTo X="-55.30078" Y="-582.3642" Z="29.19221" />
+								<!-- Move to the bridge -->
+								<RunTo X="51.15711" Y="-514.89" Z="30.00286" />
 							
+								<!-- Move to the group between the bridges -->
+								<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1"
+										AllowCombat="false">	
+									<Hotspot X="50.85302" Y="-552.2141" Z="30.98722" />
+									<Hotspot X="55.89524" Y="-568.4191" Z="30.5843" />
+									<Hotspot X="51.79511" Y="-580.6166" Z="30.59822" />
+								</CustomBehavior>
+
 								<!-- Move to the right-hand group after the bridges -->
 								<RunTo X="-39.12909" Y="-562.6106" Z="29.19221" />
 							

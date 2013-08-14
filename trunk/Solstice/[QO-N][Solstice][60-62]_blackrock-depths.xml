@@ -71,7 +71,7 @@
 							LogoutInactivityUseForceQuit="False"
 							LootChests="False"
 							LootMobs="True"
-							LootRadius="20"
+							LootRadius="35"
 							MountDistance="30"
 							MountName=""
 							NinjaSkin="False"
@@ -194,10 +194,31 @@
 						<CustomBehavior File="InteractWith" MobId="207401" ObjectType="Gameobject" GossipOptions="1" Range="4.75" NumOfTimes="1"  WaitTime="1" X="444.794922" Y="21.6984711" Z="-70.6062241" />			
 
 						<!-- Pull the 1st group by the mole machine -->
-						<RunTo X="946.5341" Y="-263.3122" Z="-50.09573" />
-					  
+						<CustomBehavior File="RunLikeHell"
+											UseCTM="true"
+											NumOfTimes="1"
+											AllowCombat="false">	
+							<Hotspot X="934.708" Y="-278.4533" Z="-49.93596" />
+							<Hotspot X="936.2432" Y="-258.0412" Z="-49.95316" />
+							<Hotspot X="935.0564" Y="-236.2824" Z="-50.09827" />
+							<Hotspot X="952.2306" Y="-218.1677" Z="-55.16591" />
+							<Hotspot X="941.35" Y="-233.6066" Z="-50.18066" />	
+						</CustomBehavior>
+						<RunTo X="941.35" Y="-233.6066" Z="-50.18066" />
+
 						<!-- Pull the 2nd group near the Grim Guzzler -->
-						<RunTo X="904.4885" Y="-234.645" Z="-49.93694" />
+						<CustomBehavior File="RunLikeHell"
+											UseCTM="true"
+											NumOfTimes="1"
+											AllowCombat="false">	
+							<Hotspot X="930.1429" Y="-236.1586" Z="-50.34349" />
+							<Hotspot X="902.3163" Y="-233.8008" Z="-49.93595" />
+							<Hotspot X="893.1902" Y="-234.083" Z="-49.93595" />
+							<Hotspot X="931.6633" Y="-236.4631" Z="-50.38256" />
+							<Hotspot X="952.1742" Y="-216.7008" Z="-55.69798" />
+							<Hotspot X="935.8456" Y="-228.7525" Z="-50.16731" />	
+						</CustomBehavior>
+						<RunTo X="935.8456" Y="-228.7525" Z="-50.16731" />
 																								
 						<!-- Move to the Mold Foundry doors -->
 						<RunTo X="1078.126" Y="-181.8669" Z="-65.08492" />
@@ -224,6 +245,7 @@
 												LogColor="Fuchsia" />
 												
 							<!-- Move to the ramp -->
+							<RunTo X="1085.257" Y="-157.4221" Z="-65.31017" />
 							<RunTo X="1104.309" Y="-144.4338" Z="-69.87238" />
 							
 							<!-- Profile message - Waiting to aggro the patrol. DON'T TOUCH !!! -->
@@ -240,11 +262,12 @@
 											UseCTM="true"
 											NumOfTimes="1"
 											AllowCombat="false">	
-								<Hotspot X="1097.301" Y="-152.3414" Z="-65.31013" />
-								<Hotspot X="1092.252" Y="-161.0077" Z="-65.31013" />
-								<Hotspot X="1108.304" Y="-180.1559" Z="-65.31013" />
+								<Hotspot X="1096.105" Y="-153.5737" Z="-65.30853" />
+								<Hotspot X="1094.377" Y="-164.0252" Z="-65.30853" />
+								<Hotspot X="1110.089" Y="-181.4379" Z="-65.30853" />
 							</CustomBehavior>
-
+							<RunTo X="1110.089" Y="-181.4379" Z="-65.30853" />
+							
 							<!-- Move to the 2nd group on the upper tier -->
 							<CustomBehavior File="RunLikeHell"
 											UseCTM="true"
@@ -259,7 +282,7 @@
 							<RunTo X="1170.445" Y="-190.1259" Z="-65.45216" />
 
 							<!-- Jump off the ledge -->
-							<RunTo X="1179.122" Y="-176.0873" Z="-65.31017" />
+							<RunTo X="1176.069" Y="-180.0656" Z="-65.31015" />
 							<RunTo X="1173.903" Y="-174.6628" Z="-65.31001" />
 							<CustomBehavior File="Misc\JumpForward" />
 							<RunTo X="1167.311" Y="-162.4356" Z="-74.91134" />
@@ -270,7 +293,7 @@
 											NumOfTimes="1"
 											AllowCombat="false">	
 								<Hotspot X="1171.826" Y="-160.4738" Z="-74.35953" />
-								<Hotspot X="1186.857" Y="-160.2341" Z="-74.36241" />
+								<Hotspot X="1191.3" Y="-155.0775" Z="-74.36498" />
 							</CustomBehavior>
 							<RunTo X="1186.857" Y="-160.2341" Z="-74.36241" />
 							
@@ -284,18 +307,19 @@
 								<Hotspot X="1151.714" Y="-130.9314" Z="-74.36523" />
 							</CustomBehavior>
 							<RunTo X="1151.714" Y="-130.9314" Z="-74.36523" />
-														
+												
+							<!-- Wait timer - wait 20 seconds to get our shit together -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+												
 							<!-- Move to the left-hand group at the ramp exiting the Mold Foundry -->
 							<CustomBehavior File="RunLikeHell"
 											UseCTM="true"
 											NumOfTimes="1"
 											AllowCombat="false">	
-								<Hotspot X="1143.58" Y="-133.0447" Z="-74.36523" />
-								<Hotspot X="1134.747" Y="-137.8276" Z="-74.36214" />
-								<Hotspot X="1129.511" Y="-148.3576" Z="-74.36095" />
-								<Hotspot X="1128.209" Y="-160.5472" Z="-74.91396" />
+								<Hotspot X="1128.958" Y="-156.4153" Z="-74.91315" />
 							</CustomBehavior>
-							<RunTo X="1128.209" Y="-160.5472" Z="-74.91396" />
+							<RunTo X="1128.958" Y="-156.4153" Z="-74.91315" />
 							
 							<!-- Move to the top of the ramp -->
 							<RunTo X="1104.309" Y="-144.4338" Z="-69.87238" />
