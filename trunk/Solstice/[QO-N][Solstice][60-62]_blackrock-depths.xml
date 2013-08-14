@@ -381,6 +381,11 @@
 							
 							<!-- Move to the 2nd group on the upper tier -->
 							<RunTo X="1144.55" Y="-206.1649" Z="-65.43088" />
+							
+							<!-- Wait timer - wait 20 seconds to get our shit together -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+
 							<RunTo X="1170.452" Y="-192.4301" Z="-65.44746" />
 							
 							<!-- Jump off the ledge -->
