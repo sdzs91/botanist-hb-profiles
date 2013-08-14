@@ -196,11 +196,11 @@
 							<!-- Move to the patrol wait area -->
 							<RunTo X="85.48825" Y="-266.4994" Z="60.71582" />
 							<RunTo X="87.84299" Y="-283.6653" Z="60.62334" />
-							<RunTo X="94.94666" Y="-290.8693" Z="60.65479" />
+							<RunTo X="90.38697" Y="-290.652" Z="60.64143" />
 							
-							<!-- Wait timer - wait 80 seconds to aggro the patrol -->
+							<!-- Wait timer - wait 60 seconds to aggro the patrol -->
 							<CustomBehavior File="WaitTimer" 
-											WaitTime="80000" />
+											WaitTime="60000" />
 
 							<!-- Pull the lower group in the middle -->			
 							<RunTo X="88.95364" Y="-296.1153" Z="60.70023" />
@@ -230,9 +230,9 @@
 										UseCTM="true"
 										NumOfTimes="1"
 										AllowCombat="false">	
-									<Hotspot X="26.526" Y="-370.3649" Z="48.7274" />
-									<Hotspot X="27.99537" Y="-392.2279" Z="48.72646" />
-									<Hotspot X="33.02238" Y="-398.4084" Z="48.68701" />
+									<Hotspot X="51.83622" Y="-383.0965" Z="48.76254" />
+									<Hotspot X="52.6503" Y="-398.9718" Z="48.77218" />
+									<Hotspot X="46.65864" Y="-400.2843" Z="48.77218" />
 								</CustomBehavior>
 								
 								<!-- Move to the 2nd group entering lbrs -->
@@ -287,25 +287,11 @@
 										UseCTM="true"
 										NumOfTimes="1"
 										AllowCombat="false">	
-									<Hotspot X="-59.09392" Y="-524.5341" Z="29.19169" />
-									<Hotspot X="-49.45001" Y="-524.0081" Z="29.19169" />
-									<Hotspot X="-44.1848" Y="-517.1393" Z="29.18343" />
-									<Hotspot X="-41.16676" Y="-500.9685" Z="29.16551" />
+									<Hotspot X="-50.07036" Y="-520.3069" Z="29.18944" />
+									<Hotspot X="-38.88102" Y="-505.543" Z="29.17233" />
+									<Hotspot X="-40.08751" Y="-525.8922" Z="29.18703" />
 								</CustomBehavior>
-								<RunTo X="-41.16676" Y="-500.9685" Z="29.16551" />
-								
-								<!-- Move to the 2nd ogre guards -->
-								<RunTo X="-37.18531" Y="-435.6128" Z="31.81401" />
-								
-								<!-- Move to the 3rd ogre guard -->
-								<CustomBehavior File="RunLikeHell"
-										UseCTM="true"
-										NumOfTimes="1"
-										AllowCombat="false">	
-									<Hotspot X="-37.28591" Y="-429.7318" Z="31.79278" />
-									<Hotspot X="-37.37466" Y="-404.8024" Z="31.53796" />
-									<Hotspot X="-37.21477" Y="-398.883" Z="31.55002" />
-								</CustomBehavior>
+								<RunTo X="-40.08751" Y="-525.8922" Z="29.18703" />
 																
 								<!-- Move to the first group of trolls -->
 								<RunTo X="-2.943207" Y="-523.7845" Z="29.19154" />

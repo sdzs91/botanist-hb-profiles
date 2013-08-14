@@ -93,7 +93,7 @@
 									LogColor="Fuchsia" />
 					
 					<!-- If we are north of the 2nd mole machine -->
-					<If Condition="Me.X &gt; 920" >
+					<If Condition="Me.X &gt; 900" >
 						
 						<!-- Run to the 2nd mole machine -->
 						<RunTo X="932.7762" Y="-286.2478" Z="-49.93694" />
@@ -205,22 +205,6 @@
 							<Hotspot X="941.35" Y="-233.6066" Z="-50.18066" />	
 						</CustomBehavior>
 						<RunTo X="941.35" Y="-233.6066" Z="-50.18066" />
-
-						<!-- Clear target -->
-						<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
-						
-						<CustomBehavior File="RunMacro" Macro="/target Doomforge Arcanasmith" />
-						
-						<!-- Pull the 2nd group near the Grim Guzzler -->
-						<CustomBehavior File="RunLikeHell"
-											UseCTM="true"
-											NumOfTimes="1"
-											AllowCombat="false">	
-							<Hotspot X="930.0517" Y="-238.1426" Z="-50.25825" />
-							<Hotspot X="902.8247" Y="-232.883" Z="-49.93485" />
-							<Hotspot X="892.5246" Y="-219.2338" Z="-49.94526" />
-						</CustomBehavior>
-						<RunTo X="892.5246" Y="-219.2338" Z="-49.94526" />
 																								
 						<!-- Move to the Mold Foundry doors -->
 						<RunTo X="1078.126" Y="-181.8669" Z="-65.08492" />
@@ -259,16 +243,18 @@
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="80000" />
 											
-							<!-- Move to the first group on the right -->
+							<!-- Pull the right-hand group inside the Mold Foundry -->
 							<CustomBehavior File="RunLikeHell"
-											UseCTM="true"
-											NumOfTimes="1"
-											AllowCombat="false">	
-								<Hotspot X="1096.105" Y="-153.5737" Z="-65.30853" />
-								<Hotspot X="1094.377" Y="-164.0252" Z="-65.30853" />
-								<Hotspot X="1110.089" Y="-181.4379" Z="-65.30853" />
+									UseCTM="true"
+									NumOfTimes="1" 
+									AllowCombat="false">	
+								<Hotspot X="1095.998" Y="-155.0779" Z="-65.3098" />
+								<Hotspot X="1104.294" Y="-171.4452" Z="-65.3098" />
+								<Hotspot X="1081.023" Y="-170.6186" Z="-65.30838" />
+								<Hotspot X="1073.241" Y="-179.202" Z="-64.87019" />
+								<Hotspot X="1080.751" Y="-188.1525" Z="-65.57912" />
 							</CustomBehavior>
-							<RunTo X="1110.089" Y="-181.4379" Z="-65.30853" />
+							<RunTo X="1093.981" Y="-166.6782" Z="-65.30766" />
 							
 							<!-- Move to the 2nd group on the upper tier -->
 							<CustomBehavior File="RunLikeHell"
@@ -354,8 +340,9 @@
 											<Hotspot X="1083.103" Y="-168.4399" Z="-65.30804" />
 											<Hotspot X="1107.275" Y="-175.3708" Z="-65.30754" />
 											<Hotspot X="1082.663" Y="-167.6114" Z="-65.30754" />
-											<Hotspot X="1048.6" Y="-204.1033" Z="-62.21271" />
-											<Hotspot X="1061.693" Y="-191.5275" Z="-63.40622" />
+											<Hotspot X="1079.746" Y="-171.4379" Z="-65.30217" />
+											<Hotspot X="1071.735" Y="-183.8445" Z="-64.40835" />
+											<Hotspot X="1080.773" Y="-188.2685" Z="-65.57761" />
 										</CustomBehavior>
 										<RunTo X="1074.565" Y="-170.9247" Z="-65.216" />
 										
