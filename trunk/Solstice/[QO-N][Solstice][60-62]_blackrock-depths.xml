@@ -206,19 +206,21 @@
 						</CustomBehavior>
 						<RunTo X="941.35" Y="-233.6066" Z="-50.18066" />
 
+						<!-- Clear target -->
+						<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+						
+						<CustomBehavior File="RunMacro" Macro="/target Doomforge Arcanasmith" />
+						
 						<!-- Pull the 2nd group near the Grim Guzzler -->
 						<CustomBehavior File="RunLikeHell"
 											UseCTM="true"
 											NumOfTimes="1"
 											AllowCombat="false">	
-							<Hotspot X="930.1429" Y="-236.1586" Z="-50.34349" />
-							<Hotspot X="902.3163" Y="-233.8008" Z="-49.93595" />
-							<Hotspot X="893.1902" Y="-234.083" Z="-49.93595" />
-							<Hotspot X="931.6633" Y="-236.4631" Z="-50.38256" />
-							<Hotspot X="952.1742" Y="-216.7008" Z="-55.69798" />
-							<Hotspot X="935.8456" Y="-228.7525" Z="-50.16731" />	
+							<Hotspot X="930.0517" Y="-238.1426" Z="-50.25825" />
+							<Hotspot X="902.8247" Y="-232.883" Z="-49.93485" />
+							<Hotspot X="892.5246" Y="-219.2338" Z="-49.94526" />
 						</CustomBehavior>
-						<RunTo X="935.8456" Y="-228.7525" Z="-50.16731" />
+						<RunTo X="892.5246" Y="-219.2338" Z="-49.94526" />
 																								
 						<!-- Move to the Mold Foundry doors -->
 						<RunTo X="1078.126" Y="-181.8669" Z="-65.08492" />
@@ -293,7 +295,7 @@
 											NumOfTimes="1"
 											AllowCombat="false">	
 								<Hotspot X="1171.826" Y="-160.4738" Z="-74.35953" />
-								<Hotspot X="1191.3" Y="-155.0775" Z="-74.36498" />
+								<Hotspot X="1187.954" Y="-157.9924" Z="-74.36423" />
 							</CustomBehavior>
 							<RunTo X="1186.857" Y="-160.2341" Z="-74.36241" />
 							

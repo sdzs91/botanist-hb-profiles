@@ -64,7 +64,7 @@
 							LogoutInactivityUseForceQuit="False"
 							LootChests="False"
 							LootMobs="True"
-							LootRadius="1"
+							LootRadius="25"
 							MountDistance="75"
 							MountName=""
 							NinjaSkin="False"
@@ -148,7 +148,7 @@
 					</While> <!-- While we aren't in the instance -->
 				</If> <!-- In box -->
 				
-				<!-- If we are inside Blackrock Spire and have checked our reset -->
+				<!-- If we are inside Blackrock Spire -->
 				<If Condition="Me.ZoneId == 1583">
 
 					<!-- Entrance -->
@@ -165,7 +165,7 @@
 									LogColor="Fuchsia" />
 		
 		
-		<!-- ************************************************************************************ level 62-66 *************************************************************** -->
+					<!-- ******************************* level 62-66 *************************************************************** -->
 		
 		
 					<!-- If we are below level 66, we will run LBRS -->				
@@ -177,7 +177,7 @@
 										LogColor="Fuchsia" />
 
 							<!-- Clear entrance of BRS to entrance of UBRS -->
-							<RunTo X="80.16209" Y="-258.1129" Z="60.70258" />
+							<RunTo X="78.67663" Y="-238.5619" Z="54.92327" />
 							<CustomBehavior File="RunLikeHell"
 									UseCTM="true"
 									NumOfTimes="1"
@@ -198,9 +198,9 @@
 							<RunTo X="87.84299" Y="-283.6653" Z="60.62334" />
 							<RunTo X="94.94666" Y="-290.8693" Z="60.65479" />
 							
-							<!-- Wait timer - wait 60 seconds to aggro the patrol -->
+							<!-- Wait timer - wait 80 seconds to aggro the patrol -->
 							<CustomBehavior File="WaitTimer" 
-											WaitTime="60000" />
+											WaitTime="80000" />
 
 							<!-- Pull the lower group in the middle -->			
 							<RunTo X="88.95364" Y="-296.1153" Z="60.70023" />
@@ -265,26 +265,46 @@
 									<Hotspot X="51.79511" Y="-580.6166" Z="30.59822" />
 								</CustomBehavior>
 
+								<!-- Move to the left-hand group after the bridges -->
+								<RunTo X="-48.59515" Y="-582.9059" Z="29.19094" />
+								
 								<!-- Move to the right-hand group after the bridges -->
 								<RunTo X="-39.12909" Y="-562.6106" Z="29.19221" />
 							
 								<!-- Move to the left-hand group before the ogres -->
-								<RunTo X="-65.05694" Y="-537.9634" Z="29.1922" />
+								<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1"
+										AllowCombat="false">	
+									<Hotspot X="-44.53912" Y="-551.4288" Z="29.19169" />
+									<Hotspot X="-59.05861" Y="-549.9328" Z="29.19169" />
+									<Hotspot X="-68.09201" Y="-541.042" Z="29.19169" />
+								</CustomBehavior>
+								<RunTo X="-67.99844" Y="-524.2798" Z="29.19169" />
 								
 								<!-- Move to the 1st ogre guards -->
-								<RunTo X="-36.98145" Y="-499.661" Z="29.15208" />
+								<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1"
+										AllowCombat="false">	
+									<Hotspot X="-59.09392" Y="-524.5341" Z="29.19169" />
+									<Hotspot X="-49.45001" Y="-524.0081" Z="29.19169" />
+									<Hotspot X="-44.1848" Y="-517.1393" Z="29.18343" />
+									<Hotspot X="-41.16676" Y="-500.9685" Z="29.16551" />
+								</CustomBehavior>
+								<RunTo X="-41.16676" Y="-500.9685" Z="29.16551" />
 								
 								<!-- Move to the 2nd ogre guards -->
 								<RunTo X="-37.18531" Y="-435.6128" Z="31.81401" />
 								
-								<!-- Move to the 3rd orge guard -->
+								<!-- Move to the 3rd ogre guard -->
 								<CustomBehavior File="RunLikeHell"
 										UseCTM="true"
 										NumOfTimes="1"
 										AllowCombat="false">	
 									<Hotspot X="-37.28591" Y="-429.7318" Z="31.79278" />
 									<Hotspot X="-37.37466" Y="-404.8024" Z="31.53796" />
-									<Hotspot X="-38.06447" Y="-391.605" Z="31.61826" />
+									<Hotspot X="-37.21477" Y="-398.883" Z="31.55002" />
 								</CustomBehavior>
 																
 								<!-- Move to the first group of trolls -->
@@ -353,7 +373,7 @@
 								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
 							
 							
-							</If>
+							</If>	<!-- If we are level 63 or above -->
 							
 							<!-- 1st room on the left -->
 							<RunTo X="104.5913" Y="-312.5388" Z="53.91899" />
@@ -407,9 +427,9 @@
 							<RunTo X="95.44293" Y="-294.5286" Z="60.70257" />
 							<RunTo X="71.28532" Y="-277.0699" Z="60.61209" />
 						
-					</If>	<!-- If we are below level 66, we will run LBRS -->
+					</If>	<!-- If we are below level 66, we will run LBRS -->	
 					
-		<!-- ************************************************************************************ level 66-67 *************************************************************** -->			
+					<!-- ************************************************************************************ level 66-67 *************************************************************** -->			
 					
 					<!-- If we are level 66 or above, we will run UBRS -->				
 					<If Condition="Me.Level &gt;= 66">				
@@ -662,39 +682,41 @@
 					
 						<!-- If our hearthstone is set here, use it -->
 						<If Condition="Me.HearthstoneAreaId == 5628" >
-						<CustomBehavior File="Message" 
-										Text="Our Innkeeper is set at Iron Summit." 
-										LogColor="Cyan" />
-										
-						<!-- Have hearthstone -->
-						<If Condition="HasItem(6948)">
 							<CustomBehavior File="Message" 
-											Text="Using Hearthstone." 
-											LogColor="Lime" />
+											Text="Our Innkeeper is set at Iron Summit." 
+											LogColor="Cyan" />
 											
-							<CustomBehavior File="Misc\RunLua" 
-											Lua="UseItemByName(6948)" 
-											WaitTime="1000" />
-											
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="20000" />
-						</If> <!-- Have hearthstone -->
-					
-						<!-- Have Innkeeper's Daughter -->
-						<If Condition="HasItem(64488)">
-							<CustomBehavior File="Message" 
-											Text="Using Innkeeper's Daughter." 
-											LogColor="Lime" />
+							<!-- Have hearthstone -->
+							<If Condition="HasItem(6948)">
+								<CustomBehavior File="Message" 
+												Text="Using Hearthstone." 
+												LogColor="Lime" />
 												
-							<CustomBehavior File="Misc\RunLua" 
-											Lua="UseItemByName(64488)" 
-											WaitTime="1000" />
-								
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="20000" />
-						</If> <!-- Have Innkeeper's Daughter -->
-
-						<!-- If we are inside Blackrock Spire -->
+								<CustomBehavior File="Misc\RunLua" 
+												Lua="UseItemByName(6948)" 
+												WaitTime="1000" />
+												
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="20000" />
+							</If> <!-- Have hearthstone -->
+						
+						
+							<!-- Have Innkeeper's Daughter -->
+							<If Condition="HasItem(64488)">
+								<CustomBehavior File="Message" 
+												Text="Using Innkeeper's Daughter." 
+												LogColor="Lime" />
+													
+								<CustomBehavior File="Misc\RunLua" 
+												Lua="UseItemByName(64488)" 
+												WaitTime="1000" />
+									
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="20000" />
+							</If> <!-- Have Innkeeper's Daughter -->
+						</If>	<!-- If our hearthstone is set here, use it -->
+						
+						<!-- If we didn't hearth, run out of BRS -->
 						<If Condition="Me.ZoneId == 1583">
 							<CustomBehavior File="Message" 
 											Text="Blackrock Spire detected. Running out."
@@ -708,7 +730,7 @@
 							
 							<!-- Make sure we run to the right spot outside the portal -->
 							<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />	
-						</If> <!-- BRS -->
+						</If> <!-- If we didn't hearth, run out of BRS -->
 						
 							<CustomBehavior File="ForceSetVendor" 
 											DoMail="True" 
@@ -742,11 +764,11 @@
 							</If> <!-- repaired -->
 
 							<CustomBehavior File="Message" 
-							Text="Moving to Blackrock Spire." 
+							Text="Returning to Blackrock Spire." 
 							LogColor="Lime" />
 							
 							<CustomBehavior File="Message" 
-									Text="Moving to Blackrock Spire." 
+									Text="Moving to Blackrock Mountain." 
 									LogColor="Cyan" />
 							
 							<!-- Move to end of chain -->
@@ -766,14 +788,13 @@
 							<!-- Instance timer check if we did repair -->
 					        <CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
 					
-						</If>	<!-- If our hearthstone is set here, use it -->
-					</If> <!-- Repair if necessary -->	
-				</If> <!-- BRS -->
-				
+					</If>	 <!-- Repair if necessary -->	
+				</If>	<!-- If we are inside Blackrock Spire -->
+					
 				<!-- If we are inside Blackrock Spire -->
 				<If Condition="Me.ZoneId == 1583">
 					<CustomBehavior File="Message" 
-									Text="Blackrock Spire detected. Running out to reset."
+									Text="We didn't need to vendor, running out to reset."
 									LogColor="Fuchsia" />
 					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
 					
@@ -784,7 +805,8 @@
 					<CustomBehavior File="Misc\InInstance" X="77.31385" Y="-210.969" Z="49.81922" />
 					
 					<!-- Make sure we run to the right spot outside the portal -->
-					<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />	
+					<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
+					
 				</If> <!-- BRS -->
 			</While> <!-- Infinite loop -->
 		</If> <!-- Level check -->
