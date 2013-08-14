@@ -495,7 +495,7 @@
 					</If>	<!-- If we are level 61 or above -->	
 						
 					<!-- If we are below level 60 -->			
-					<If Condition="Me.Level &lt; 61">	
+					<If Condition="Me.Level &lt;= 60">	
 					
 						<!-- Run to first Shadowforge Gate -->
 						<RunTo X="493.8814" Y="14.29045" Z="-70.35346" />

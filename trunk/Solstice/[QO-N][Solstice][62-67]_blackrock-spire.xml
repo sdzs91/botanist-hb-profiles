@@ -271,20 +271,7 @@
 									<Hotspot X="-37.37466" Y="-404.8024" Z="31.53796" />
 									<Hotspot X="-38.06447" Y="-391.605" Z="31.61826" />
 								</CustomBehavior>
-								
-								<!-- Move to the 4th group of ogres -->
-								<RunTo X="-37.12668" Y="-370.9448" Z="31.61826" />
-								
-								<!-- Move to the group of ogres on the mound -->
-								<CustomBehavior File="RunLikeHell"
-										UseCTM="true"
-										NumOfTimes="1"
-										AllowCombat="false">	
-									<Hotspot X="-41.88337" Y="-357.4123" Z="31.61825" />
-									<Hotspot X="-47.11293" Y="-343.307" Z="35.72013" />
-									<Hotspot X="-55.75993" Y="-329.388" Z="42.89257" />
-								</CustomBehavior>
-								
+																
 								<!-- Move to the first group of trolls -->
 								<RunTo X="-2.943207" Y="-523.7845" Z="29.19154" />
 							
