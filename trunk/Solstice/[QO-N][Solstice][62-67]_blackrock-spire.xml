@@ -217,6 +217,142 @@
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="3000" />
 							
+							<!-- If we are level 63 or above -->
+							<If Condition="Me.Level &gt;= 63 &amp;&amp; Me.Level &lt; 66">
+							
+								<!-- Move to the group before entering lbrs -->
+								<RunTo X="16.06892" Y="-329.3272" Z="48.75714" />
+							
+								<!-- Move to the 1st group entering lbrs -->
+								<RunTo X="37.16503" Y="-397.5541" Z="48.64508" />
+								
+								<!-- Move to the 2nd group entering lbrs -->
+								<RunTo X="65.93195" Y="-437.6073" Z="41.67786" />
+								
+								<!-- Move to the right-hand group before the first bridge -->
+								<RunTo X="56.44518" Y="-462.2363" Z="24.64445" />
+								
+								<!-- Move to the left-hand group before the first bridge -->
+								<RunTo X="56.82211" Y="-503.45" Z="29.20592" />
+								
+								<!-- Move to the first bridge -->
+								<RunTo X="50.99259" Y="-514.0154" Z="30.00287" />
+								<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1"
+										AllowCombat="false">	
+									<Hotspot X="51.05185" Y="-516.0936" Z="30.00287" />
+									<Hotspot X="50.77325" Y="-551.0259" Z="31.00057" />
+									<Hotspot X="52.13462" Y="-563.6445" Z="30.57133" />
+									<Hotspot X="55.84347" Y="-566.1898" Z="30.58437" />
+								</CustomBehavior>
+
+								<!-- Move to left-hand group after the bridges -->
+								<RunTo X="-55.30078" Y="-582.3642" Z="29.19221" />
+							
+								<!-- Move to the right-hand group after the bridges -->
+								<RunTo X="-39.12909" Y="-562.6106" Z="29.19221" />
+							
+								<!-- Move to the left-hand group before the ogres -->
+								<RunTo X="-65.05694" Y="-537.9634" Z="29.1922" />
+								
+								<!-- Move to the 1st ogre guards -->
+								<RunTo X="-36.98145" Y="-499.661" Z="29.15208" />
+								
+								<!-- Move to the 2nd ogre guards -->
+								<RunTo X="-37.18531" Y="-435.6128" Z="31.81401" />
+								
+								<!-- Move to the 3rd orge guard -->
+								<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1"
+										AllowCombat="false">	
+									<Hotspot X="-37.28591" Y="-429.7318" Z="31.79278" />
+									<Hotspot X="-37.37466" Y="-404.8024" Z="31.53796" />
+									<Hotspot X="-38.06447" Y="-391.605" Z="31.61826" />
+								</CustomBehavior>
+								
+								<!-- Move to the 4th group of ogres -->
+								<RunTo X="-37.12668" Y="-370.9448" Z="31.61826" />
+								
+								<!-- Move to the group of ogres on the mound -->
+								<CustomBehavior File="RunLikeHell"
+										UseCTM="true"
+										NumOfTimes="1"
+										AllowCombat="false">	
+									<Hotspot X="-41.88337" Y="-357.4123" Z="31.61825" />
+									<Hotspot X="-47.11293" Y="-343.307" Z="35.72013" />
+									<Hotspot X="-55.75993" Y="-329.388" Z="42.89257" />
+								</CustomBehavior>
+								
+								<!-- Move to the first group of trolls -->
+								<RunTo X="-2.943207" Y="-523.7845" Z="29.19154" />
+							
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+							
+							
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+							
+							
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+								
+								
+								<!-- Move to XXXXXXXXXXXXXXXXXXXXXX -->
+							
+							
+							</If>
+							
 							<!-- 1st room on the left -->
 							<RunTo X="104.5913" Y="-312.5388" Z="53.91899" />
 							<CustomBehavior File="WaitTimer" 

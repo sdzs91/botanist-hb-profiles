@@ -182,7 +182,7 @@
 					<!-- If we are level 61 or above -->			
 					<If Condition="Me.Level &gt;= 61">
 								
-						<!-- Profile message - We are level 60 or above, we are no longer avoiding the higher level mobs -->
+						<!-- Profile message - We are level 61 or above, we are no longer avoiding the higher level mobs -->
 						<CustomBehavior File="Message" 
 									Text="We are level 61 or above, we are no longer avoiding the higher level mobs."  
 									LogColor="Fuchsia" />		
@@ -192,12 +192,9 @@
 						
 						<!-- Interact with the mole machine -->						
 						<CustomBehavior File="InteractWith" MobId="207401" ObjectType="Gameobject" GossipOptions="1" Range="4.75" NumOfTimes="1"  WaitTime="1" X="444.794922" Y="21.6984711" Z="-70.6062241" />			
-									
-						<!-- Move away from the Mole machine -->
-						<RunTo X="946.1516" Y="-277.2573" Z="-49.94847" />						
-									
+
 						<!-- Pull the 1st group by the mole machine -->
-						<RunTo X="931.2899" Y="-258.6396" Z="-49.93595" />
+						<RunTo X="946.5341" Y="-263.3122" Z="-50.09573" />
 					  
 						<!-- Pull the 2nd group near the Grim Guzzler -->
 						<RunTo X="904.4885" Y="-234.645" Z="-49.93694" />
@@ -218,144 +215,7 @@
 										LogColor="Orange" />
 							
 						<CustomBehavior File="RunMacro" Macro="/target Panzor the Invincible" />
-	
-						<!-- If our target is Panzor the Invincible -->
-						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 8923)" >
 						
-							<!-- Profile message - My target is Panzor the Invincible, initiating avoidance procedures -->
-							<CustomBehavior File="Message" 
-												Text="My target is Panzor the Invincible, initiating avoidance procedures." 
-												LogColor="Fuchsia" />			
-					
-							<!--Infinite loop until we are past Panzor the Invincible -->
-							<While Condition="Me.X &lt; 1165" >
-								<CustomBehavior File="UserSettings" PullDistance="10" />
-								
-								<!-- Move to the Mold Foundry doors -->
-									<RunTo X="1078.126" Y="-181.8669" Z="-65.08492" />
-
-								<!--WFP to avoid Panzor the Invincible if he is spawned -->	
-								<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="NavigatorOnly" AvoidMobId="8923" AvoidDistance="98"
-
-									X="1078.126" Y="-181.8669" Z="-65.08492" >	<!-- Our wait area -->
-								</CustomBehavior>
-								
-								<!-- Move to the next safe location - jump location -->
-								<CustomBehavior File="RunLikeHell"
-										UseCTM="true"
-										NumOfTimes="1" 
-										AllowCombat="false">	
-									<Hotspot X="1073.959" Y="-178.3401" Z="-64.99358" />
-									<Hotspot X="1090.363" Y="-161.5433" Z="-65.30743" />
-									<Hotspot X="1135.199" Y="-205.5621" Z="-65.43156" />
-								</CustomBehavior>
-								<RunTo X="1144.746" Y="-196.2402" Z="-65.3085" />
-
-								<CustomBehavior File="MyCTM" X="1144.602" Y="-185.6195" Z="-74.92912" />
-								<RunTo X="1170.412" Y="-169.9098" Z="-74.91463" />
-							</While>
-							
-							<!-- Wait timer - wait 10 seconds to be sure HB has time to think -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="10000" />
-							
-							<!--Infinite loop until we are in the Summoners Tomb -->
-							<While Condition="Me.X &lt; 1220" >
-								<CustomBehavior File="UserSettings" PullDistance="10" />
-								
-								<!--WFP to avoid Panzor the Invincible if he is spawned -->	
-								<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="NavigatorOnly" AvoidMobId="8923" AvoidDistance="45"
-									X="1170.412" Y="-169.9098" Z="-74.91463" >
-								</CustomBehavior>
-								
-								<!-- Pull the this group into Summoners Tomb -->
-								<CustomBehavior File="RunLikeHell"
-										UseCTM="true"
-										NumOfTimes="1" 
-										AllowCombat="false">	
-									<Hotspot X="1182.643" Y="-157.2843" Z="-74.36241" />
-									<Hotspot X="1194.63" Y="-168.1662" Z="-74.3559" />
-									<Hotspot X="1233.191" Y="-207.4832" Z="-85.6741" />
-									<Hotspot X="1225.207" Y="-199.9105" Z="-85.68584" />
-								</CustomBehavior>
-								<RunTo X="1225.207" Y="-199.9105" Z="-85.68584" />
-								
-								<!-- Move into the Summoners Tomb -->
-								<RunTo X="1225.878" Y="-220.4177" Z="-85.67438" />
-							</While>
-							
-
-								<!-- ***************************************************************************************************************** -->
-								
-							<!-- Run to the door exiting the Summoner's Tomb -->
-							<RunTo X="1214.916" Y="-189.1485" Z="-78.9483" />
-							
-							<!-- Wait timer - wait 10 seconds to be sure HB has time to think -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="10000" />
-							
-							<!-- Run macro to clear target -->
-							<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
-							
-							<!-- Profile message - Targeting Panzor the Invincible. DO NOT TOUCH !!! -->
-							<CustomBehavior File="Message" 
-											Text="Targeting Panzor the Invincible. DO NOT TOUCH !!!" 
-											LogColor="Orange" />
-								
-							<!-- Run macro to target Panzor the Invincible -->	
-							<CustomBehavior File="RunMacro" Macro="/target Panzor the Invincible" />
-									
-							<!--Infinite loop until we are past Panzor the Invincible -->
-							<While Condition="Me.X &gt; 1200" >
-								<CustomBehavior File="UserSettings" PullDistance="1" />
-
-								<!--WFP to avoid Panzor the Invincible if he is spawned -->	
-								<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="NavigatorOnly" AvoidMobId="8923" AvoidDistance="65"
-									X="1214.916" Y="-189.1485" Z="-78.9483" >	<!-- Our wait area -->
-								</CustomBehavior>
-									
-								<!-- Move to the next safe location - the left-hand group near the ramp -->
-								<RunTo X="1163.916" Y="-167.9556" Z="-74.91837" />
-								<RunTo X="1145.643" Y="-185.2126" Z="-74.92958" />
-								<RunTo X="1129.843" Y="-166.5283" Z="-74.92059" />
-								<RunTo X="1129.131" Y="-157.0498" Z="-74.91432" />								
-												
-							</While>	<!--Infinite loop until we are past Panzor the Invincible -->
-							
-				
-				
-							<!-- Wait timer - wait 10 seconds to be sure HB has time to think -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="10000" />
-							
-							<!-- Run macro to clear target -->
-							<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
-							
-							<!-- Profile message - Targeting Panzor the Invincible. DO NOT TOUCH !!! -->
-							<CustomBehavior File="Message" 
-											Text="Targeting Panzor the Invincible. DO NOT TOUCH !!!" 
-											LogColor="Orange" />
-								
-							<!-- Run macro to target Panzor the Invincible -->	
-							<CustomBehavior File="RunMacro" Macro="/target Panzor the Invincible" />
-		
-							<While Condition="Me.X &gt; 1100" >
-								<CustomBehavior File="UserSettings" PullDistance="1" />					
-												
-								<!--WFP to avoid Panzor the Invincible if he is spawned -->	
-								<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="NavigatorOnly" AvoidMobId="8923" AvoidDistance="45"
-									X="1129.131" Y="-157.0498" Z="-74.91432" >	<!-- Our wait area -->
-								</CustomBehavior>				
-													
-								<!-- Move to the next safe location - Chamber of Enchantment -->
-								<RunTo X="1114.212" Y="-136.4549" Z="-74.35941" />
-								<RunTo X="1069.85" Y="-185.9467" Z="-64.15487" />
-
-							</While>	<!--Infinite loop until we are past Panzor the Invincible -->
-						
-						</If>	<!-- If our target is Panzor the Invincible -->
-						
-						<!-- If our target is not Panzor the Invincible -->
 						<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 8923)" >
 						
 							<!-- Profile message - My target is Panzor the Invincible, initiating avoidance procedures -->
@@ -376,42 +236,257 @@
 											WaitTime="80000" />
 											
 							<!-- Move to the first group on the right -->
-							<RunTo X="1092.158" Y="-163.4729" Z="-65.30991" />
-							<RunTo X="1114.608" Y="-187.6719" Z="-65.46376" />
-							
-							<!-- Move to the 2nd group on the upper tier -->
-							<RunTo X="1144.55" Y="-206.1649" Z="-65.43088" />
-							
-							<!-- Wait timer - wait 20 seconds to get our shit together -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="20000" />
+							<CustomBehavior File="RunLikeHell"
+											UseCTM="true"
+											NumOfTimes="1"
+											AllowCombat="false">	
+								<Hotspot X="1097.301" Y="-152.3414" Z="-65.31013" />
+								<Hotspot X="1092.252" Y="-161.0077" Z="-65.31013" />
+								<Hotspot X="1108.304" Y="-180.1559" Z="-65.31013" />
+							</CustomBehavior>
 
-							<RunTo X="1170.452" Y="-192.4301" Z="-65.44746" />
-							
+							<!-- Move to the 2nd group on the upper tier -->
+							<CustomBehavior File="RunLikeHell"
+											UseCTM="true"
+											NumOfTimes="1"
+											AllowCombat="false">	
+								<Hotspot X="1122.97" Y="-196.3811" Z="-65.46021" />
+								<Hotspot X="1135.427" Y="-204.4259" Z="-65.4308" />
+								<Hotspot X="1150.102" Y="-206.0153" Z="-65.43259" />
+								<Hotspot X="1155.835" Y="-203.7836" Z="-65.44731" />
+								<Hotspot X="1170.445" Y="-190.1259" Z="-65.45216" />
+							</CustomBehavior>
+							<RunTo X="1170.445" Y="-190.1259" Z="-65.45216" />
+
 							<!-- Jump off the ledge -->
+							<RunTo X="1179.122" Y="-176.0873" Z="-65.31017" />
 							<RunTo X="1173.903" Y="-174.6628" Z="-65.31001" />
 							<CustomBehavior File="Misc\JumpForward" />
 							<RunTo X="1167.311" Y="-162.4356" Z="-74.91134" />
 							
-							<!-- Move to the last XXX before the Summoners Tomb -->
-							<RunTo X="1194.051" Y="-161.575" Z="-74.35976" />
+							<!-- Move to the last group before the Summoners Tomb -->
+							<CustomBehavior File="RunLikeHell"
+											UseCTM="true"
+											NumOfTimes="1"
+											AllowCombat="false">	
+								<Hotspot X="1171.826" Y="-160.4738" Z="-74.35953" />
+								<Hotspot X="1186.857" Y="-160.2341" Z="-74.36241" />
+							</CustomBehavior>
+							<RunTo X="1186.857" Y="-160.2341" Z="-74.36241" />
 							
 							<!-- Move to the right-hand group at the ramp exiting the Mold Foundry -->
-							<RunTo X="1160.642" Y="-133.5322" Z="-74.36487" />
-							
-							<!-- Wait timer - wait 20 seconds to get our shit together -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="20000" />
-							
+							<CustomBehavior File="RunLikeHell"
+											UseCTM="true"
+											NumOfTimes="1"
+											AllowCombat="false">	
+								<Hotspot X="1178.818" Y="-146.9906" Z="-74.36523" />
+								<Hotspot X="1170.52" Y="-138.0451" Z="-74.36523" />
+								<Hotspot X="1151.714" Y="-130.9314" Z="-74.36523" />
+							</CustomBehavior>
+							<RunTo X="1151.714" Y="-130.9314" Z="-74.36523" />
+														
 							<!-- Move to the left-hand group at the ramp exiting the Mold Foundry -->
-							<RunTo X="1138.15" Y="-151.1354" Z="-74.91238" />
+							<CustomBehavior File="RunLikeHell"
+											UseCTM="true"
+											NumOfTimes="1"
+											AllowCombat="false">	
+								<Hotspot X="1143.58" Y="-133.0447" Z="-74.36523" />
+								<Hotspot X="1134.747" Y="-137.8276" Z="-74.36214" />
+								<Hotspot X="1129.511" Y="-148.3576" Z="-74.36095" />
+								<Hotspot X="1128.209" Y="-160.5472" Z="-74.91396" />
+							</CustomBehavior>
+							<RunTo X="1128.209" Y="-160.5472" Z="-74.91396" />
 							
 							<!-- Move to the top of the ramp -->
 							<RunTo X="1104.309" Y="-144.4338" Z="-69.87238" />
 							
+							<Else>
+								<!-- If our target is Panzor the Invincible -->
+								<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 8923)" >
+								
+									<!-- Profile message - My target is Panzor the Invincible, initiating avoidance procedures -->
+									<CustomBehavior File="Message" 
+														Text="My target is Panzor the Invincible, initiating avoidance procedures." 
+														LogColor="Fuchsia" />			
+							
+									<!--Infinite loop until we are past Panzor the Invincible -->
+									<While Condition="Me.Y &lt; -175" >
+										<CustomBehavior File="UserSettings" PullDistance="10" />
+										
+										<!--WFP to avoid Panzor the Invincible if he is spawned -->	
+										<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="NavigatorOnly" AvoidMobId="8923" AvoidDistance="98"
+
+											X="1078.126" Y="-181.8669" Z="-65.08492" >	<!-- Our wait area -->
+										</CustomBehavior>
+										
+										<!-- Pull the right-hand group inside the Mold Foundry -->
+										<CustomBehavior File="RunLikeHell"
+												UseCTM="true"
+												NumOfTimes="1" 
+												AllowCombat="false">	
+											<Hotspot X="1073.224" Y="-178.4877" Z="-64.92139" />
+											<Hotspot X="1083.103" Y="-168.4399" Z="-65.30804" />
+											<Hotspot X="1107.275" Y="-175.3708" Z="-65.30754" />
+											<Hotspot X="1082.663" Y="-167.6114" Z="-65.30754" />
+											<Hotspot X="1048.6" Y="-204.1033" Z="-62.21271" />
+											<Hotspot X="1061.693" Y="-191.5275" Z="-63.40622" />
+										</CustomBehavior>
+										<RunTo X="1074.565" Y="-170.9247" Z="-65.216" />
+										
+									</While>	
+										
+									<!-- Wait timer - wait 3 seconds to target 	Panzor the Invincible -->	
+									<CustomBehavior File="WaitTimer" 
+														WaitTime="10000" />		
+											
+									<!-- Clear target -->
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									
+									<!-- Target Panzor the Invincible -->
+									<CustomBehavior File="Message" 
+													Text="Targeting Panzor the Invincible. DO NOT TOUCH !!!" 
+													LogColor="Orange" />
+										
+									<CustomBehavior File="RunMacro" Macro="/target Panzor the Invincible" />
+			
+									<!--Infinite loop until we are past Panzor the Invincible -->
+									<While Condition="Me.X &lt; 1165" >
+										<CustomBehavior File="UserSettings" PullDistance="10" />
+										
+										<!--WFP to avoid Panzor the Invincible if he is spawned -->	
+										<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="NavigatorOnly" AvoidMobId="8923" AvoidDistance="105"
+
+											X="1074.565" Y="-170.9247" Z="-65.216" >	<!-- Our wait area -->
+										</CustomBehavior>		
+										
+										<!-- Move to the next safe location - jump location -->
+
+										<RunTo X="1140.42" Y="-205.2415" Z="-65.4298" />
+										<RunTo X="1143.538" Y="-197.3835" Z="-65.30837" />
+										<CustomBehavior File="Misc\JumpForward" />
+										<RunTo X="1170.412" Y="-169.9098" Z="-74.91463" />
+									</While>
+									
+									<!-- Wait timer - wait 10 seconds to be sure HB has time to think -->
+									<CustomBehavior File="WaitTimer" 
+													WaitTime="10000" />
+									
+									<!--Infinite loop until we are in the Summoners Tomb -->
+									<While Condition="Me.X &lt; 1220" >
+										<CustomBehavior File="UserSettings" PullDistance="10" />
+										
+										<!--WFP to avoid Panzor the Invincible if he is spawned -->	
+										<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="NavigatorOnly" AvoidMobId="8923" AvoidDistance="45"
+											X="1170.412" Y="-169.9098" Z="-74.91463" >
+										</CustomBehavior>
+										
+										<!-- Pull the this group into Summoners Tomb -->
+										<CustomBehavior File="RunLikeHell"
+												UseCTM="true"
+												NumOfTimes="1" 
+												AllowCombat="false">	
+											<Hotspot X="1182.643" Y="-157.2843" Z="-74.36241" />
+											<Hotspot X="1194.63" Y="-168.1662" Z="-74.3559" />
+											<Hotspot X="1233.191" Y="-207.4832" Z="-85.6741" />
+											<Hotspot X="1225.207" Y="-199.9105" Z="-85.68584" />
+										</CustomBehavior>
+										<RunTo X="1225.207" Y="-199.9105" Z="-85.68584" />
+										
+										<!-- Move into the Summoners Tomb -->
+										<RunTo X="1225.878" Y="-220.4177" Z="-85.67438" />
+									</While>
+									
+
+										<!-- ***************************************************************************************************************** -->
+										
+									<!-- Run to the door exiting the Summoner's Tomb -->
+									<RunTo X="1214.916" Y="-189.1485" Z="-78.9483" />
+									
+									<!-- Wait timer - wait 10 seconds to be sure HB has time to think -->
+									<CustomBehavior File="WaitTimer" 
+													WaitTime="10000" />
+									
+									<!-- Run macro to clear target -->
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									
+									<!-- Profile message - Targeting Panzor the Invincible. DO NOT TOUCH !!! -->
+									<CustomBehavior File="Message" 
+													Text="Targeting Panzor the Invincible. DO NOT TOUCH !!!" 
+													LogColor="Orange" />
+										
+									<!-- Run macro to target Panzor the Invincible -->	
+									<CustomBehavior File="RunMacro" Macro="/target Panzor the Invincible" />
+											
+									<!--Infinite loop until we are past Panzor the Invincible -->
+									<While Condition="Me.X &gt; 1200" >
+										<CustomBehavior File="UserSettings" PullDistance="1" />
+
+										<!--WFP to avoid Panzor the Invincible if he is spawned -->	
+										<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="NavigatorOnly" AvoidMobId="8923" AvoidDistance="65"
+											X="1214.916" Y="-189.1485" Z="-78.9483" >	<!-- Our wait area -->
+										</CustomBehavior>
+											
+										<!-- Move to the next safe location - the left-hand group near the ramp -->
+										<CustomBehavior File="RunLikeHell"
+												UseCTM="true"
+												NumOfTimes="1" 
+												AllowCombat="false">	
+											<Hotspot X="1189.776" Y="-164.6729" Z="-74.36087" />
+											<Hotspot X="1164.59" Y="-164.218" Z="-74.91222" />
+											<Hotspot X="1145.967" Y="-184.5016" Z="-74.92952" />
+											<Hotspot X="1132.156" Y="-175.2134" Z="-74.92213" />
+											<Hotspot X="1129.227" Y="-166.4357" Z="-74.91862" />
+											<Hotspot X="1131.667" Y="-153.0519" Z="-74.91259" />
+											<Hotspot X="1129.825" Y="-171.2932" Z="-74.91845" />
+											<Hotspot X="1144.08" Y="-183.1852" Z="-74.92879" />
+											<Hotspot X="1149.484" Y="-177.929" Z="-74.92879" />
+										</CustomBehavior>
+										<RunTo X="1128.327" Y="-170.7302" Z="-74.91753" />
+										<RunTo X="1129.131" Y="-157.0498" Z="-74.91432" />
+																						
+									</While>	<!--Infinite loop until we are past Panzor the Invincible -->
+
+									<!-- Wait timer - wait 10 seconds to be sure HB has time to think -->
+									<CustomBehavior File="WaitTimer" 
+													WaitTime="10000" />
+									
+									<!-- Run macro to clear target -->
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									
+									<!-- Profile message - Targeting Panzor the Invincible. DO NOT TOUCH !!! -->
+									<CustomBehavior File="Message" 
+													Text="Targeting Panzor the Invincible. DO NOT TOUCH !!!" 
+													LogColor="Orange" />
+										
+									<!-- Run macro to target Panzor the Invincible -->	
+									<CustomBehavior File="RunMacro" Macro="/target Panzor the Invincible" />
+				
+									<While Condition="Me.X &gt; 1100" >
+										<CustomBehavior File="UserSettings" PullDistance="1" />					
+														
+										<!--WFP to avoid Panzor the Invincible if he is spawned -->	
+										<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" MovementBy="NavigatorOnly" AvoidMobId="8923" AvoidDistance="45"
+											X="1129.131" Y="-157.0498" Z="-74.91432" >	<!-- Our wait area -->
+										</CustomBehavior>				
+															
+										<!-- Move to the next safe location - Chamber of Enchantment -->
+										<RunTo X="1114.212" Y="-136.4549" Z="-74.35941" />
+										<RunTo X="1069.85" Y="-185.9467" Z="-64.15487" />
+
+									</While>	<!--Infinite loop until we are past Panzor the Invincible -->
+								
+								</If>	<!-- If our target is Panzor the Invincible -->
+							</Else>
 						</If>	<!-- If our target is not Panzor the Invincible -->
 						
 						<!-- Run to the mole machine -->
+						<RunTo X="1041.262" Y="-211.9768" Z="-61.78923" />
+						<RunTo X="1026.587" Y="-216.8513" Z="-61.78923" />
+						<RunTo X="997.5488" Y="-216.4268" Z="-61.78913" />
+						<RunTo X="982.2069" Y="-211.1585" Z="-61.78913" />
+						<RunTo X="964.4368" Y="-205.6942" Z="-61.7891" />
+						<RunTo X="935.4018" Y="-235.3324" Z="-50.09823" />
+						<RunTo X="930.8427" Y="-270.9931" Z="-49.9352" />
 						<RunTo X="932.7762" Y="-286.2478" Z="-49.93694" />
 						
 						<!-- Interact with the mole machine -->		

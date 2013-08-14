@@ -53,7 +53,7 @@
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
-							KillBetweenHotspots="True"
+							KillBetweenHotspots="False"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
 							LootChests="False"
@@ -63,7 +63,7 @@
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="45"
+							PullDistance="1"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseFlightPaths="True"
@@ -201,34 +201,30 @@
 											
 							<!-- Fly to the hover point above the innkeep in Iron Summit -->
 							<CustomBehavior File="FlyTo" 
-											X="-7070.313" Y="-1215.361" Z="336.248" />
+											X="-7144.615" Y="-1236.51" Z="321.6574" />
 					
 							<!-- Land at innkeeper -->
-							<CustomBehavior File="FlyTo" 
-											X="-7083.119" Y="-1201.846" Z="324.2862" />
+							<CustomBehavior File="MyCTM" 
+											X="-7113.001" Y="-1201.079" Z="306.7261" />
 							<CustomBehavior File="ForcedDismount" />
 							
 							<!-- Set hearthstone -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="1000" />
 							<CustomBehavior File="Message" 
 											Text="Setting my Hearthstone." 
 											LogColor="Lime" />
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="1000" />
+							<RunTo X="-7085.191" Y="-1202.107" Z="324.0312" />
+							
 							<CustomBehavior File="SetHearthstone" 
 											MobId="47942" 
 											X="-7085.53" Y="-1202.19" Z="323.9885" />
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="1000" />
-																
+							<RunTo X="-7113.001" Y="-1201.079" Z="306.7261" />									
 							<CustomBehavior File="Message" 
 										Text="We are in Iron Summit." 
 										LogColor="Lime" />
 
 							<!-- Fly to the hover point above the innkeep in Iron Summit -->
 							<CustomBehavior File="FlyTo" 
-											X="-7070.313" Y="-1215.361" Z="336.248" />
+											X="-7144.615" Y="-1236.51" Z="321.6574" />
 				
 							<!-- Repair if necessary -->
 							<If Condition="Me.LowestDurabilityPercent &lt; 0.8" >
@@ -318,35 +314,31 @@
 										LogColor="Lime" />
 						
 						<!-- Fly to the hover point above the innkeep in Iron Summit -->
-						<CustomBehavior File="FlyTo" 
-										X="-7070.313" Y="-1215.361" Z="336.248" />
-				
-						<!-- Land at innkeeper -->
-						<CustomBehavior File="FlyTo" 
-										X="-7083.119" Y="-1201.846" Z="324.2862" />
-						<CustomBehavior File="ForcedDismount" />
-						
-						<!-- Set hearthstone -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="1000" />
-						<CustomBehavior File="Message" 
-										Text="Setting my Hearthstone." 
+							<CustomBehavior File="FlyTo" 
+											X="-7144.615" Y="-1236.51" Z="321.6574" />
+					
+							<!-- Land at innkeeper -->
+							<CustomBehavior File="MyCTM" 
+											X="-7113.001" Y="-1201.079" Z="306.7261" />
+							<CustomBehavior File="ForcedDismount" />
+							
+							<!-- Set hearthstone -->
+							<CustomBehavior File="Message" 
+											Text="Setting my Hearthstone." 
+											LogColor="Lime" />
+							<RunTo X="-7085.191" Y="-1202.107" Z="324.0312" />
+							
+							<CustomBehavior File="SetHearthstone" 
+											MobId="47942" 
+											X="-7085.53" Y="-1202.19" Z="323.9885" />
+							<RunTo X="-7113.001" Y="-1201.079" Z="306.7261" />									
+							<CustomBehavior File="Message" 
+										Text="We are in Iron Summit." 
 										LogColor="Lime" />
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="1000" />
-						<CustomBehavior File="SetHearthstone" 
-										MobId="47942" 
-										X="-7085.53" Y="-1202.19" Z="323.9885" />
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="1000" />
-															
-						<CustomBehavior File="Message" 
-									Text="We are in Iron Summit." 
-									LogColor="Lime" />
 
-						<!-- Fly to the hover point above the innkeep in Iron Summit -->
-						<CustomBehavior File="FlyTo" 
-										X="-7070.313" Y="-1215.361" Z="336.248" />
+							<!-- Fly to the hover point above the innkeep in Iron Summit -->
+							<CustomBehavior File="FlyTo" 
+											X="-7144.615" Y="-1236.51" Z="321.6574" />
 			
 						<!-- Repair if necessary -->
 						<If Condition="Me.LowestDurabilityPercent &lt; 0.8" >
@@ -425,7 +417,7 @@
 			<!-- In box -->
 			<If Condition="Me.X &lt; -7565.834 &amp;&amp; Me.X &gt; -7582.962 &amp;&amp; Me.Y &lt; -1297.568 &amp;&amp; Me.Y &gt; -1328.157" >
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][77-83]_blackrock-caverns" />
+								ProfileName="..\[QO-N][Solstice][87-88]_blackrock-caverns" />
 			</If> <!-- In box -->		
 		</If> <!-- Booster -->
 	</QuestOrder>
