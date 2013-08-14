@@ -43,13 +43,10 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-		<!-- *******************************************************  Booster ************************************************************** -->
-		<If Condition="Me.Level &gt;= 90">
-			<CustomBehavior File="Message" 
-							Text="We are a booster." 
-							LogColor="Cyan" />
+
+		<If Condition="Me.Level &gt;= 89">
 							
-			<!-- Booster UserSettings -->
+			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
@@ -74,6 +71,71 @@
 							UseMount="True" 
 							UseRandomMount="False" />
 							
+			<!-- Northrend -->
+			<If Condition="Me.MapId == 571">
+			
+				<CustomBehavior File="Message" 
+								Text="We are in Northrend." 
+								LogColor="Cyan" />
+							
+					<!-- Fly to last hilltop before Dalaran -->
+					<CustomBehavior File="FlyTo" X="6238.808" Y="-155.1916" Z="603.1764" />
+				
+					<!-- CTM to the same altitude as the hover point in Dalaran -->
+					<CustomBehavior File="MyCTM" X="6195.48" Y="-80.85192" Z="816.6508" />
+					
+					<!-- CTM to the hover point in Dalaran -->
+					<CustomBehavior File="MyCTM" X="5804.329" Y="640.8198" Z="816.6508" />
+				
+					<!-- If we are Alliance, use the portal to Stormwind -->
+					<If Condition="Me.IsAlliance">
+						<CustomBehavior File="FlyTo" X="5763.367" Y="710.6233" Z="643.6194" />
+						<CustomBehavior File="FlyTo" X="5732.852" Y="735.7708" Z="644.6849" />
+						<CustomBehavior File="FlyTo" X="5720.347" Y="721.5897" Z="643.5318" />
+						<CustomBehavior File="ForcedDismount" />
+						
+						<!-- Interact with the portal to Stormwind -->
+						<CustomBehavior File="InteractWith" 
+										MobId="190960" 
+										ObjectType="Gameobject" 
+										Range="4.75"
+										NumOfTimes="1"  
+										X="5719.184" Y="719.6667" Z="641.727844" />
+						
+						<!-- Wait timer for game to load -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" />
+
+						<!-- Run to the exit of the mage tower -->
+						<RunTo X="-8989.28" Y="860.5299" Z="125.8689" />
+						
+					</If>
+				
+					<!-- If we are Horde, use the portal to Orgrimmar -->
+					<If Condition="Me.IsHorde">
+						<CustomBehavior File="FlyTo" X="5864.578" Y="584.0018" Z="725.4819" />
+						<CustomBehavior File="FlyTo" X="5897.451" Y="565.5864" Z="648.7625" />
+						<CustomBehavior File="FlyTo" X="5923.795" Y="590.6122" Z="641.8165" />
+						<CustomBehavior File="ForcedDismount" />
+						
+						<!-- Interact with the portal to Orgrimmar -->
+						<CustomBehavior File="InteractWith" 
+										MobId="191009" 
+										ObjectType="Gameobject" 
+										Range="4.75" 
+										NumOfTimes="1"  
+										X="5925.874" Y="593.1875" Z="640.5933" />
+						
+						<!-- Wait timer for game to load -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" />
+						
+						<!-- Move to the exit of the Cleft of Shadow -->
+
+						
+					</If>
+			</If>	<!-- Northrend -->			
+	
 			<!-- Blackrock Caverns -->
 			<If Condition="Me.ZoneId == 4926">
 				<CustomBehavior File="Message" 
@@ -110,8 +172,7 @@
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="20000" />
 				</If> <!-- Have Innkeeper's Daughter -->
-				
-			</If> <!-- BRC -->
+			</If> <!-- Blackrock Caverns -->
 
 			<!-- Eastern Kingdoms -->
 			<If Condition="Me.MapId == 0">

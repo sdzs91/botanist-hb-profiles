@@ -394,6 +394,10 @@
 							<!-- Move to the right-hand group at the ramp exiting the Mold Foundry -->
 							<RunTo X="1160.642" Y="-133.5322" Z="-74.36487" />
 							
+							<!-- Wait timer - wait 20 seconds to get our shit together -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+							
 							<!-- Move to the left-hand group at the ramp exiting the Mold Foundry -->
 							<RunTo X="1138.15" Y="-151.1354" Z="-74.91238" />
 							

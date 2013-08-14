@@ -43,13 +43,9 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-		<!-- *******************************************************  Booster ************************************************************** -->
-		<If Condition="Me.Level &gt;= 90">
-			<CustomBehavior File="Message" 
-							Text="We are a booster." 
-							LogColor="Cyan" />
+		<If Condition="Me.Level &gt;= 87">
 							
-			<!-- Booster UserSettings -->
+			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
@@ -272,7 +268,11 @@
 				</If>	<!-- hearth -->		
 			</If>	<!-- Northrend -->			
 						
+						
+			<!-- If we are in Eastern Kingdoms -->			
 			<If Condition="Me.MapId == 0">
+			
+				<!-- Hearth check -->
 				<If Condition="Me.HearthstoneAreaId == 5628">
 				
 					<!-- Profile message - Flying to the rendzvous -->
@@ -417,9 +417,9 @@
 						
 						<!-- Run to the instance box -->
 						<Runto X="-7571.14" Y="-1324.96" Z="245.538" />
-					</Else>		
-				</If>
-			</If>
+					</Else>		<!-- Our hearth isn't set, we need to go to the zone -->		
+				</If>	<!-- Hearth check -->
+			</If>	<!-- If we are in Eastern Kingdoms -->
 			
 			
 			<!-- In box -->
@@ -428,224 +428,6 @@
 								ProfileName="..\[QO-N][77-83]_blackrock-caverns" />
 			</If> <!-- In box -->		
 		</If> <!-- Booster -->
-		
-		
-		
-		
-		
-		
-		
-		
-				
-		<!-- ******************************************************* RAF Toons *************************************************************** -->			
-				
-	
-	
-		
-		
-		
-		
-		
-		
-		<!-- RAF Toons -->		
-		<If Condition="Me.Level &lt;= 85">
-			<CustomBehavior File="Message" 
-							Text="We are a RAF." 
-							LogColor="Cyan" />
-		
-			<If Condition="Me.IsAlliance">
-				<If Condition="Me.HearthstoneAreaId != 5148">
-					<CustomBehavior File="Message" 
-									Text="Our Hearthstone isn't set in the Trade District in Stormwind. Stopping profile." 
-									LogColor="Lime" />
-									
-					<CustomBehavior File="UserSettings" 
-										StopBot="true" />
-				</If>
-				
-				<ElseIf Condition="Me.IsHorde">
-					<If Condition="Me.HearthstoneAreaId != 5170">
-						<CustomBehavior File="Message" 
-										Text="Our Hearthstone isn't set in the Valley of Strength in Orgrimmar. Stopping profile." 
-										LogColor="Lime" />
-										
-						<CustomBehavior File="UserSettings" 
-										StopBot="true" />
-					</If>
-				</ElseIf>
-			</If>
-			
-			<!-- RAF UserSettings -->
-			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
-							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
-							GroundMountFarmingMode="False"
-							HarvestHerbs="False"
-							HarvestMinerals="False"
-							KillBetweenHotspots="False"
-							LogoutForInactivity="False"
-							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
-							LootMobs="False"
-							LootRadius="1"
-							MountDistance="75"
-							MountName=""
-							NinjaSkin="False"
-							ProfileDebuggingMode="False"
-							PullDistance="1"
-							RessAtSpiritHealers="False"
-							SkinMobs="False"
-							UseFlightPaths="True"
-							UseMount="True" 
-							UseRandomMount="False" />
-			
-			<!-- If we are in HOL, hearth -->
-			<If Condition="Me.ZoneId == 4272">
-				<CustomBehavior File="Message" 
-								Text="Halls of Lightning detected. hearthing out."
-								LogColor="Lime" />
-								
-				<!-- Use our hearthstone -->
-				<If Condition="HasItem(6948)">
-					<CustomBehavior File="Message" 
-									Text="Using Hearthstone." 
-									LogColor="Lime" />
-									
-					<CustomBehavior File="Misc\RunLua" 
-									Lua="UseItemByName(6948)" 
-									WaitTime="1000" />
-				</If> <!-- Have hearthstone -->
-			
-				<!-- Have Innkeeper's Daughter -->
-				<If Condition="HasItem(64488)">
-					<CustomBehavior File="Message" 
-									Text="Using Innkeeper's Daughter." 
-									LogColor="Lime" />
-										
-					<CustomBehavior File="Misc\RunLua" 
-									Lua="UseItemByName(64488)" 
-									WaitTime="1000" />
-				</If> <!-- Have Innkeeper's Daughter -->
-
-				<!-- Wait for the game to load -->
-				<CustomBehavior File="WaitTimer" 
-									WaitTime="20000" />	
-					
-			</If> <!-- HoL -->
-
-			<!-- Stormwind -->
-			<If Condition="Me.ZoneId == 1519">
-				<CustomBehavior File="Message" 
-								Text="We are in Stormwind City." 
-								LogColor="Cyan" />
-								
-				<!-- Bag space and Durabilty check -->
-				<If Condition="(Me.FreeBagSlots &lt;= 10) || (Me.LowestDurabilityPercent &lt; 0.8)" >
-					<SetVendor>
-						<Vendors>
-							<Vendor Name="Gunther Weller" 
-									Entry="1289" 
-									Type="Repair" 
-									X="-8790.421" Y="607.3484" Z="96.77297" />
-						</Vendors>
-					</SetVendor>
-					<SetMailbox>
-						<Mailboxes>
-							<Mailbox X="-8862.369" Y="639.4135" Z="96.18259" />
-						</Mailboxes>
-					</SetMailbox>				
-					<CustomBehavior File="ForceSetVendor" 
-									DoMail="True" 
-									DoRepair="True" 
-									DoSell="True" 
-									DoTrain="False" />	
-				</If>
-				
-				<!-- Fly to the hover point in Stormwind -->
-				<CustomBehavior File="FlyTo" X="-8839.209" Y="629.257" Z="133.6664" />
-			</If>
-			
-			<!-- IF we are Horde, take the portal to Blastedlands -->
-			<If Condition="Me.IsHorde">
-				
-				<!-- Bag space and Durabilty check -->
-				<If Condition="(Me.FreeBagSlots &lt;= 10) || (Me.LowestDurabilityPercent &lt; 0.8)" >
-					<SetVendor>
-						<Vendors>
-							<Vendor Name="Punra" 
-									Entry="46359" 
-									Type="Repair" 
-									X="1596.22" Y="-4288.39" Z="21.51565" />
-						</Vendors>
-					</SetVendor>
-					<SetMailbox>
-						<Mailboxes>
-							<Mailbox X="1550.043" Y="-4363.695" Z="17.54109" />
-						</Mailboxes>
-					</SetMailbox>				
-					<CustomBehavior File="ForceSetVendor" 
-									DoMail="True" 
-									DoRepair="True" 
-									DoSell="True" 
-									DoTrain="False" />	
-				</If>
-				
-				<!-- Run to the Blastedlands portal -->
-				<RunTo X="1771.456" Y="-4326.629" Z="-8.225829" />
-				
-				<!-- Interact with the portal to Blastedlands -->
-				<CustomBehavior File="InteractWith" 
-								MobId="195142" 
-								ObjectType="Gameobject" 
-								Range="4.75" 
-								NumOfTimes="1"  
-								X="1768.45" Y="-4325.86" Z="-8.3711" />
-			</If>
-			
-			<!-- Profile message - Flying to the rendzvous -->
-					<CustomBehavior File="Message" 
-										Text="Flying to the rendzvous point." 
-										LogColor="Lime" />
-										
-			<!-- Fly to the rendzvous at Iron Summit -->
-			<CustomBehavior File="FlyTo" X="-7038.787" Y="-1230.125" Z="390.7811" />
-			
-			<!-- Continue when tagged by the Booster -->
-			<CustomBehavior File="Misc\LoadProfileOn" 
-									CheckRange="5" />
-									
-			<!-- Wait 20 seconds -->
-			<CustomBehavior File="WaitTimer" 
-									WaitTime="20000" />	
-			
-			<!-- Fly to the BRC instance box -->
-			<CustomBehavior File="Message" 
-								Text="Flying to Blackrock Caverns." 
-								LogColor="Lime" />
-				
-				<CustomBehavior File="FlyTo" X="-7056.178" Y="-1135.619" Z="367.9378" />
-				<CustomBehavior File="FlyTo" X="-7330.418" Y="-1124.455" Z="359.2787" />
-				
-				<CustomBehavior File="MyCTM" X="-7363.104" Y="-1102.565" Z="280.0103" />
-				<CustomBehavior File="MyCTM" X="-7376.134" Y="-1094.168" Z="280.9006" />
-				<CustomBehavior File="MyCTM" X="-7409.696" Y="-1101.115" Z="280.6046" />
-				<CustomBehavior File="MyCTM" X="-7420.444" Y="-1069.138" Z="279.7732" />
-				<CustomBehavior File="MyCTM" X="-7430.155" Y="-1058.552" Z="275.2509" />
-				<CustomBehavior File="MyCTM" X="-7481.438" Y="-1070.679" Z="265.6658" />
-				<CustomBehavior File="MyCTM" X="-7593.228" Y="-1162.036" Z="298.1223" />
-				<CustomBehavior File="MyCTM" X="-7612.961" Y="-1233.647" Z="236.3418" />
-				<CustomBehavior File="MyCTM" X="-7615.291" Y="-1271.456" Z="238.1814" />
-				
-				<!-- Run to the instance box -->
-				<Runto X="-7571.14" Y="-1324.96" Z="245.538" />
-				
-			<!-- In box -->
-			<If Condition="Me.X &lt; -7565.834 &amp;&amp; Me.X &gt; -7582.962 &amp;&amp; Me.Y &lt; -1297.568 &amp;&amp; Me.Y &gt; -1328.157" >
-				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N-M][Solstice][87-88]_blackrock-caverns" />
-			</If> <!-- In box -->		
-		</If> <!-- RAF toons -->
 	</QuestOrder>
 </HBProfile>
 

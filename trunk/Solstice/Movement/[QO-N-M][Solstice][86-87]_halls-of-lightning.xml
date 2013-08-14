@@ -70,7 +70,266 @@
 							UseFlightPaths="True"
 							UseMount="True" 
 							UseRandomMount="False" />
+						
+
+			<!-- Outland -->
+			<If Condition="Me.MapId == 530">
+				<CustomBehavior File="Message" 
+								Text="We are in Outland." 
+								LogColor="Cyan" />
+								
+				<CustomBehavior File="Message" 
+								Text="Moving to Shattrath portals." 
+								LogColor="Lime" />				
+								
+				<!-- Fly to shattrath -->
+				<CustomBehavior File="FlyTo" X="-1977.775" Y="5373.526" Z="54.82305" />
+
+				<!-- Go to the ground -->
+				<CustomBehavior File="FlyTo" X="-1920.137" Y="5400.772" Z="-12.42688" />
+				
+				<!-- Alliance -->
+				<If Condition="Me.IsAlliance">
+					<CustomBehavior File="Message" 
+									Text="We are Alliance." 
+									LogColor="Cyan" />
+									
+					<CustomBehavior File="Message" 
+									Text="Taking Stormwind portal." 
+									LogColor="Lime" />		
+								
+					<!-- Portal to stormwind -->
+					<CustomBehavior File="FlyTo" X="-1892.733" Y="5390.708" Z="-12.42776" />
+					
+					<!-- Interact with stormwind portal -->
+					<CustomBehavior File="InteractWith" 
+									MobId="183325" 
+									ObjectType="Gameobject" 
+									Range="55.1" 
+									NumOfTimes="1"
+									WaitTime="10000" 
+									X="-1894.18921" Y="5387.93945" Z="-12.4282484" />
+					
+					<!-- Horde -->
+					<ElseIf Condition="Me.IsHorde">
+						<CustomBehavior File="Message" 
+										Text="We are Horde." 
+										LogColor="Cyan" />
+									
+						<CustomBehavior File="Message" 
+										Text="Taking Orgrimmar portal." 
+										LogColor="Lime" />	
+					
+						<!-- Portal to org -->
+						<CustomBehavior File="FlyTo" X="-1897.926" Y="5395.339" Z="-12.42868" />
+						
+						<!-- Interact with orgrimmar portal -->
+						<CustomBehavior File="InteractWith" 
+										MobId="183323" 
+										ObjectType="Gameobject" 
+										Range="55.1" 
+										NumOfTimes="1"
+										WaitTime="10000" 
+										X="-1899.44971" Y="5393.01" Z="-12.4283171" />
+					</ElseIf> <!-- Horde -->
+				</If> <!-- Alliance -->
+			</If> <!-- Outland -->
+			
+			<!-- Kalimdor -->
+			<If Condition="Me.MapId == 1">
+				<CustomBehavior File="Message" 
+								Text="We are in Kalimdor." 
+								LogColor="Cyan" />
+								
+				<!-- Horde -->
+				<If Condition="Me.IsHorde">
+					<CustomBehavior File="Message" 
+									Text="We are Horde." 
+									LogColor="Cyan" />
+								
+					<!-- Run to the Grom'gol Zeppelin -->
+					<RunTo X="1868.09" Y="-4417.422" Z="135.232" />				
+			
+					<!-- Forced dismount -->		
+					<CustomBehavior File="ForcedDismount" />						
+									
+					<!-- Profile message - Waiting for the Zeppelin -->
+					<CustomBehavior File="Message" 
+									Text="Waiting for the Zeppelin." 
+									LogColor="Cyan" />
+									
+					<CustomBehavior File="UseTransport" 
+						TransportId="175080" 
+						WaitAtX="1869.635" 
+						WaitAtY="-4419.227" 
+						WaitAtZ="135.2332"								
+						TransportStartX="1880.818" 
+						TransportStartY="-4435.269" 
+						TransportStartZ="152.8608"								
+						StandOnX="1883.553" 
+						StandOnY="-4419.312" 
+						StandOnZ="136.8681"
+						TransportEndX="-12464.34" 
+						TransportEndY="233.1597" 
+						TransportEndZ="49.53437"	
+						GetOffX="-12445.94" 
+						GetOffY="218.9818" 
+						GetOffZ="31.86087" />	
+						
+					<!-- Run to the Grom'gol flight master -->
+					<RunTo X="-12414.2" Y="146.29" Z="3.266916" />
+					
+					<!-- If we are in Northern Stranglethorn -->
+					<If Condition="Me.ZoneId == 33">
+					
+						<!-- Run to the Undercity Zeppelin -->
+						<RunTo X="-12409.83" Y="202.752" Z="31.97309" />				
 							
+						<!-- Forced dismount -->		
+						<CustomBehavior File="ForcedDismount" />
+
+						<CustomBehavior File="UseTransport" 
+									TransportId="176495" 
+									WaitAtX="-12410.93" 
+									WaitAtY="202.3381" 
+									WaitAtZ="31.77636"								
+									TransportStartX="-12406.8906" 
+									TransportStartY="211.837677" 
+									TransportStartZ="49.6984367"						
+									StandOnX="-12398.64" 
+									StandOnY="197.7412" 
+									StandOnZ="33.84207"
+									TransportEndX="2062.59888" 
+									TransportEndY="235.264465" 
+									TransportEndZ="117.733627"	
+									GetOffX="2057.45" 
+									GetOffY="238.7743" 
+									GetOffZ="99.76712" />				
+						<!-- Run to the doorway -->
+						<RunTo X="2060.382" Y="254.9573" Z="99.76746" />
+					</If>
+					
+					<!-- If we are in Tristfall Glades -->
+					<If Condition="Me.ZoneId == 85" >
+					
+						<!-- Run to the Howling Fjord Zeppelin -->
+						<RunTo X="2062.118" Y="358.4322" Z="82.47268" />
+									
+						<!-- Undercity to Howling Fjord -->
+						<CustomBehavior File="UseTransport"
+										TransportId="181689"
+										WaitAtX="2062.118" 
+										WaitAtY="358.4322" 
+										WaitAtZ="82.47268" 
+										TransportStartX="2056.4926" 
+										TransportStartY="381.6347" 
+										TransportStartZ="100.3620"
+										TransportEndX="1989.352" 
+										TransportEndY="-6082.7763"
+										TransportEndZ="85.59"
+										StandOnX="2060.598" 
+										StandOnY="370.0439" 
+										StandOnZ="82.48199" 
+										GetOffX="1973.536"
+										GetOffY="-6099.92" 
+										GetOffZ="67.15816" />
+											
+						<!-- Run to the other side of the room -->
+						<RunTo  X="1959.064" Y="-6118.095" Z="27.84882" />
+					</If>		
+				</If> <!-- Horde -->
+			</If> <!-- Kalimdor -->
+			
+			<!-- Eastern Kingdoms -->
+			<If Condition="Me.MapId == 0">
+				<CustomBehavior File="Message" 
+								Text="We are in Eastern Kingdoms." 
+								LogColor="Cyan" />
+			
+				<If Condition="Me.IsAlliance">
+					<CustomBehavior File="Message" 
+									Text="We are Alliance." 
+									LogColor="Cyan" />
+								
+					<!-- Move to Wetlands -->
+					<RunTo X="-3691.205" Y="-604.9369" Z="4.289214" />
+
+					<!-- Take boat to Valgarde, Howling Fjord -->
+					<CustomBehavior File="UseTransport"
+									TransportId="181688" 
+									WaitAtX="-3684.419" 
+									WaitAtY="-600.1639"
+									WaitAtZ="4.367113"
+									TransportStartX="-3674.43" 
+									TransportStartY="-586.74"
+									TransportStartZ="0.0416"
+									StandOnX="-3672.219"
+									StandOnY="-592.2634" 
+									StandOnZ="9.477744"
+									TransportEndX="584.0138"
+									TransportEndY="-5118.85547"
+									TransportEndZ="0.004170269"	
+									GetOffX="593.8839"
+									GetOffY="-5102.632" 
+									GetOffZ="5.260393" />
+			
+				</If> <!-- Alliance -->
+				
+				<If Condition="Me.IsHorde" >
+				
+					<!-- Run to the Undercity Zeppelin -->
+						<RunTo X="-12409.83" Y="202.752" Z="31.97309" />				
+							
+						<!-- Forced dismount -->		
+						<CustomBehavior File="ForcedDismount" />
+
+						<CustomBehavior File="UseTransport" 
+									TransportId="176495" 
+									WaitAtX="-12410.93" 
+									WaitAtY="202.3381" 
+									WaitAtZ="31.77636"								
+									TransportStartX="-12406.8906" 
+									TransportStartY="211.837677" 
+									TransportStartZ="49.6984367"						
+									StandOnX="-12398.64" 
+									StandOnY="197.7412" 
+									StandOnZ="33.84207"
+									TransportEndX="2062.59888" 
+									TransportEndY="235.264465" 
+									TransportEndZ="117.733627"	
+									GetOffX="2057.45" 
+									GetOffY="238.7743" 
+									GetOffZ="99.76712" />						
+						<!-- Run to the doorway -->
+						<RunTo X="2060.382" Y="254.9573" Z="99.76746" />
+					
+					<!-- Run to the Howling Fjord Zeppelin -->
+					<RunTo X="2062.118" Y="358.4322" Z="82.47268" />
+								
+					<!-- Undercity to Howling Fjord -->
+					<CustomBehavior File="UseTransport"
+									TransportId="181689"
+									WaitAtX="2062.118" 
+									WaitAtY="358.4322" 
+									WaitAtZ="82.47268" 
+									TransportStartX="2056.4926" 
+									TransportStartY="381.6347" 
+									TransportStartZ="100.3620"
+									TransportEndX="1989.352" 
+									TransportEndY="-6082.7763"
+									TransportEndZ="85.59"
+									StandOnX="2060.598" 
+									StandOnY="370.0439" 
+									StandOnZ="82.48199" 
+									GetOffX="1973.536"
+									GetOffY="-6099.92" 
+									GetOffZ="67.15816" />
+										
+					<!-- Run to the other side of the room -->
+					<RunTo  X="1959.064" Y="-6118.095" Z="27.84882" />
+				</If>
+			</If> <!-- Eastern Kingdoms -->
+						
 			<!-- Gundrak -->
 			<If Condition="Me.ZoneId == 4416">
 				<CustomBehavior File="Message" 
