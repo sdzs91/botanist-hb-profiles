@@ -97,16 +97,18 @@
 		<While Condition="Me.MapId == 530 &amp;&amp; Me.ZoneId == 3483 &amp;&amp; Me.Level &gt;= 58 &amp;&amp; Me.Level &lt;= 59 &amp;&amp; Me.Y &gt;= 1073.369" >
 			
 				<CustomBehavior File="UserSettings" MountDistance="30" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
-				<CustomBehavior File="Message" Text="Position check, Thrallmar in Hellfire Peninsula." LogColor="Lime" />  
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Honor Hold." LogColor="Lime" />
-					<RunTo X="188.5732" Y="2613.322" Z="87.28364" />
-				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
-				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="SetHearthstone" MobId="16602" X="190.8758" Y="2610.927" Z="87.28393" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Position check, Thrallmar in Hellfire Peninsula." LogColor="Lime" />
+				<If Condition="Me.HearthstoneAreaId != 3536" > 
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Moving to the innkeep at Thrallmar." LogColor="Lime" />
+						<RunTo X="188.5732" Y="2613.322" Z="87.28364" />
+					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="SetHearthstone" MobId="16602" X="190.8758" Y="2610.927" Z="87.28393" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				</If>	
+					<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 					<RunTo X="167.606" Y="2644.138" Z="86.27419" />					
 					<RunTo X="170.7345" Y="2460.86" Z="57.30331" />
 								 
@@ -175,16 +177,18 @@
 				<CustomBehavior File="UserSettings" FindMountAutomatically="True" UseRandomMount="True" UseMount="True" MountDistance="30"
 								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
 								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
-								LogoutForInactivity="True" />				
+								LogoutForInactivity="True" />								
 				<CustomBehavior File="Message" Text="Position check, Thrallmar in Hellfire Peninsula." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Thrallmar." LogColor="Lime" />
-					<RunTo X="188.5732" Y="2613.322" Z="87.28364" />
-				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
-				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="SetHearthstone" MobId="16602" X="190.8758" Y="2610.927" Z="87.28393" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<If Condition="Me.HearthstoneAreaId != 3536" >
+					<CustomBehavior File="Message" Text="Moving to the innkeep at Thrallmar." LogColor="Lime" />
+						<RunTo X="188.5732" Y="2613.322" Z="87.28364" />
+					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="SetHearthstone" MobId="16602" X="190.8758" Y="2610.927" Z="87.28393" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				</If>
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
 					<RunTo X="167.606" Y="2644.138" Z="86.27419" />	
 				<CustomBehavior File="ForcedMount" MountType="Flying" />

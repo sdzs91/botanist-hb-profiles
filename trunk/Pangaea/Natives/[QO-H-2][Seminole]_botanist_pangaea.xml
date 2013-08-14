@@ -505,10 +505,19 @@
 		</While>
 
 				<If Condition="Me.Level &gt;= 25 &amp;&amp; Me.Level &lt;= 26" >				
-					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the 25 to 27 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" 
+									Text="Checking my current level.." 
+									LogColor="Lime" />		
+									
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="1000" />
+									
+					<CustomBehavior File="Message" 
+									Text="I am in the 25 to 27 bracket, changing to the newest farming location." 
+									LogColor="Lime" />
+									
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="1000" />
 				</If>
 				
 				
@@ -536,36 +545,51 @@
 								
 								
 				<!-- User notification of hearth/farming location -->				
-				<CustomBehavior File="Message" Text="Position check, Splintertree Post in Ashenvale." LogColor="Lime" />
+				<CustomBehavior File="Message" 
+								Text="Position check, Splintertree Post in Ashenvale." 
+								LogColor="Lime" />
 
 				
 				<!-- If our hearth isn't set to splintertree post, user notification - moving to set hearth -->
 				<If Condition="(Me.HearthstoneAreaId != 431)" >
 					<CustomBehavior File="Message"
-									Text="Our hearth hasn't been set to Splintertree post, moving to the innkeep." LogColor="Lime" />														
-						<RunTo X="2340.604" Y="-2565.124" Z="103.0933" />
+									Text="Our hearth hasn't been set to Splintertree post, moving to the innkeep." 
+									LogColor="Lime" />	
+									
+					<RunTo X="2340.604" Y="-2565.124" Z="103.0933" />
+						
 					<CustomBehavior File="Message" 
-									Text="I have reached the innkeeper. " LogColor="Lime" />
+									Text="I have reached the innkeeper. " 
+									LogColor="Lime" />
+									
 					<CustomBehavior File="Message" 
-									Text="Setting my Heartstone." LogColor="Lime" />
+									Text="Setting my Heartstone." 
+									LogColor="Lime" />
+									
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="1000" />
+									
 					<CustomBehavior File="SetHearthstone" 
 									MobId="12196" 
 									X="2341.864" Y="-2566.989" Z="103.0932" />
+									
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="1000" />
 				</If>
 
 				<!-- If our hearth is set to splintertree post, user notification - move to the farming area -->
-				<CustomBehavior File="Message" Text="Our hearth has already been set to Splintertree Post, moving to the farming location." LogColor="Lime" />
+				<CustomBehavior File="Message" 
+								Text="Our hearth has already been set to Splintertree Post, moving to the farming location." 
+								LogColor="Lime" />
 				
 				<!-- Road entering bough shadow near entrance to azshara -->
 				<RunTo X="2934.957" Y="-3655.47" Z="99.57008" />
 				<CustomBehavior File="ForcedDismount" />	
 								 
 					<!-- User notification - we have reached the farming area -->			 
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this area until I reach level 27." LogColor="Lime" />
+					<CustomBehavior File="Message" 
+									Text="I have reached the farming location. I'll farm this area until I reach level 27." 
+									LogColor="Lime" />
 						<SetGrindArea><GrindArea>
 							<Factions>50</Factions>
 								<Hotspots>
@@ -602,23 +626,32 @@
 								</Hotspots>
 						</GrindArea></SetGrindArea>	
 
-					<!-- farm here until our bags are full, gear is broke or until we reach level 27 -->	
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 27)" GoalText="Farming" />
+					<!-- Farm here until our bags are full, gear is broke or until we reach level 27 -->	
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 27)"  />
 					
 
 					<!-- Bag and durability check -->
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" >
 					
 						<!-- User notification that our bags are full or gear is about to break -->
-						<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
-						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+						<CustomBehavior File="Message" 
+										Text="Checking my free bag slots and gear's durability." 
+										LogColor="Lime" />
+						<CustomBehavior File="Message" 
+										Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." 
+										LogColor="Lime" />
 						
 						<!-- Use hearth and vendor/mail -->
-						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="UseItemByName(6948)" 
+										WaitTime="15000" />
+																				
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Burkrum" Entry="6028" Type="Repair" X="2346.262" Y="-2582.214" Z="103.0934" />
+								<Vendor Name="Burkrum" 
+										Entry="6028" 
+										Type="Repair" 
+										X="2346.262" Y="-2582.214" Z="103.0934" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
@@ -626,65 +659,138 @@
 								<Mailbox X="2331.225" Y="-2544.33" Z="101.8888" />
 							</Mailboxes>
 						</SetMailbox>				
-						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						<CustomBehavior File="ForceSetVendor" 
+										DoMail="True" 
+										DoRepair="True" 
+										DoSell="True" 
+										DoTrain="False" />
 					</If>
 					<!-- loop back if we didn't level -->
 		</While>
 				
-				
-
 				<If Condition="Me.Level &gt;= 27 &amp;&amp; Me.Level &lt;= 28" >				
-					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the 27 to 29 bracket, changing to the newest farming location." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" 
+									Text="Checking my current level." 
+									LogColor="Lime" />	
+									
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="1000" />
+									
+					<CustomBehavior File="Message" 
+									Text="I am in the 27 to 29 bracket, changing to the newest farming location." 
+									LogColor="Lime" />
+									
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="1000" />
 				</If>
 				
-		<While Condition="Me.Level &gt;= 27 &amp;&amp; Me.Level &lt;= 28" >		
-				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
-								LogoutForInactivity="True" />					
-				<CustomBehavior File="Message" Text="Position check, Krom' Gar in Stonetalon Mountains." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the innkeep at Krom' Gar." LogColor="Lime" />														
+		<!-- level 27-29 loop -->		
+		<While Condition="Me.Level &gt;= 27 &amp;&amp; Me.Level &lt;= 28" >
+		
+				<!-- User Settings -->
+				<CustomBehavior File="UserSettings" 
+								FindMountAutomatically="True" 
+								UseRandomMount="False" 
+								UseMount="True" 
+								MountDistance="100"
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								SkinMobs="False" 
+								NinjaSkin="False" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False"
+								PullDistance="45" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								FindVendorsAutomatically="True" 
+								LootRadius="50"
+								LogoutForInactivity="True" />
+								
+				<!-- User notification of hearth/farming location -->				
+				<CustomBehavior File="Message" 
+								Text="Position check, Krom'Gar." 
+								LogColor="Lime" />
+				
+				<!-- If our hearth isn't set to splintertree post, user notification - moving to set hearth -->
+				<If Condition="(Me.HearthstoneAreaId != 4933)" >
+					<CustomBehavior File="Message"
+									Text="Our hearth hasn't been set to Krom'Gar, moving to the innkeep." 
+									LogColor="Lime" />
+									
 					<RunTo X="879.6248" Y="-17.85691" Z="92.675" />
-				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
-				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="SetHearthstone" MobId="41892"  X="877.2882" Y="-20.30903" Z="92.67494" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="824.9472" Y="-23.66834" Z="11.29285" />
-								 
+						
+					<CustomBehavior File="Message" 
+									Text="I have reached the innkeeper." 
+									LogColor="Lime" />
+									
+					<CustomBehavior File="Message" 
+									Text="Setting my Heartstone." 
+									LogColor="Lime" />
+									
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="1000" />
+									
+					<CustomBehavior File="SetHearthstone" 
+									MobId="41892" 
+									X="877.2882" Y="-20.30903" Z="92.67494" />
+									
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="1000" />
+				</If>
+				
+				<!-- If our hearth is set to krom'gar, user notification - move to the farming area -->
+				<CustomBehavior File="Message" 
+								Text="Our hearth has already been set to Krom'Gar, moving to the farming location." 
+								LogColor="Lime" />
+				
+				<!-- Cave below krom'gar -->
+				<RunTo X="824.9472" Y="-23.66834" Z="11.29285" />
 
-					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 32." LogColor="Lime" />				
-						<SetGrindArea><GrindArea>
-							<Factions>14</Factions>
-								<Hotspots>
-									<Hotspot X="824.9472" Y="-23.66834" Z="11.29285" />
-									<Hotspot X="749.2973" Y="-22.55126" Z="14.47842" />
-									<Hotspot X="669.5599" Y="-16.0243" Z="22.84321" />
-									<Hotspot X="558.2065" Y="-55.28457" Z="30.95638" />
-									<Hotspot X="498.9778" Y="-84.77184" Z="35.06749" />
-									<Hotspot X="449.1294" Y="-79.4492" Z="38.44096" />
-									<Hotspot X="395.6908" Y="-138.7206" Z="47.47399" />
-									<Hotspot X="366.1769" Y="-211.6069" Z="63.26046" />
-									<Hotspot X="345.9508" Y="-251.2289" Z="61.75789" />									
-								</Hotspots>
-						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 29)" GoalText="Farming" />
+				<!-- User notification - we have reached the farming area -->
+				<CustomBehavior File="Message" 
+								Text="I have reached the farming location. I'll farm this location until I reach level 32." 
+								LogColor="Lime" />				
+					<SetGrindArea><GrindArea>
+						<Factions>14</Factions>
+							<Hotspots>
+								<Hotspot X="824.9472" Y="-23.66834" Z="11.29285" />
+								<Hotspot X="749.2973" Y="-22.55126" Z="14.47842" />
+								<Hotspot X="669.5599" Y="-16.0243" Z="22.84321" />
+								<Hotspot X="558.2065" Y="-55.28457" Z="30.95638" />
+								<Hotspot X="498.9778" Y="-84.77184" Z="35.06749" />
+								<Hotspot X="449.1294" Y="-79.4492" Z="38.44096" />
+								<Hotspot X="395.6908" Y="-138.7206" Z="47.47399" />
+								<Hotspot X="366.1769" Y="-211.6069" Z="63.26046" />
+								<Hotspot X="345.9508" Y="-251.2289" Z="61.75789" />									
+							</Hotspots>
+					</GrindArea></SetGrindArea>	
 
+				<!-- Farm here until our bags are full, gear is broke or until we reach level 29 -->	
+				<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 29)" />
 
-				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="2000" />
-					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
-						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
-					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
+				<!-- User notification that our bags are full or gear is about to break -->
+				<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" >
+					<CustomBehavior File="Message" 
+									Text="Checking my free bag slots and gear's durability." 
+									LogColor="Lime" />
+									
+					<CustomBehavior File="Message" 
+									Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." 
+									LogColor="Lime" />
+					
+					<!-- Use hearth and vendor/mail -->
+					<CustomBehavior File="Misc\RunLua" 
+									Lua="UseItemByName(6948)" 
+									WaitTime="1000" />
+									
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="10000" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Krom'gar Quartermaster" Entry="42028" Type="Repair" X="881.3611" Y="16.40972" Z="92.87994" />
+								<Vendor Name="Krom'gar Quartermaster" 
+										Entry="42028" 
+										Type="Repair" 
+										X="881.3611" Y="16.40972" Z="92.87994" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
@@ -692,13 +798,15 @@
 								<Mailbox X="884.1934" Y="-4.230453" Z="92.675" />
 							</Mailboxes>
 						</SetMailbox>				
-						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
-					</If>
-					
+					<CustomBehavior File="ForceSetVendor" 
+									DoMail="True" 
+									DoRepair="True" 
+									DoSell="True" 
+									DoTrain="False" />
+				</If>
+				<!-- loop back if we didn't level -->	
 		</While>
 		
-				
-
 				<If Condition="Me.Level &gt;= 29 &amp;&amp; Me.Level &lt;= 30" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />

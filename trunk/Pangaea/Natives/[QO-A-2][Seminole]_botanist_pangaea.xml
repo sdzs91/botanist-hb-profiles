@@ -182,7 +182,7 @@
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-3][Cherokee]_botanist_pangaea" />
 				</If>
 
-		<While Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >
+		<While Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 14" >
 			
 				<CustomBehavior File="UserSettings" MountDistance="60" UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="50" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Sentinel Hill in Westfall." LogColor="Lime" />  
@@ -211,7 +211,7 @@
 									<Hotspot X="-10908.34" Y="956.5885" Z="37.44214" />
 								</Hotspots>
 						</GrindArea></SetGrindArea>					
-					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level &gt;= 14)" GoalText="Farming" />
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level &gt;= 15)" GoalText="Farming" />
 
 
 				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
@@ -235,14 +235,14 @@
 					
 		</While>				
 				
-				<If Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 15" >				
+				<If Condition="Me.Level &gt;= 15 &amp;&amp; Me.Level &lt; 16" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the 14 to 16 bracket, changing to the newest farming location." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="I am in the 15 to 16 bracket, changing to the newest farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				</If>
 			
-		<While Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 15" >	
+		<While Condition="Me.Level &gt;= 15 &amp;&amp; Me.Level &lt; 16" >	
 	
 				<CustomBehavior File="UserSettings" MountDistance="60"  UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Lakeshire in Redridge Mountains." LogColor="Lime" />

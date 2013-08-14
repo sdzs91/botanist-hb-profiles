@@ -1,6 +1,6 @@
-[CENTER][B][SIZE=4][COLOR="#0000FF"]Botanist Molten Core Attunment + Weekly Farm
+[CENTER][B][SIZE=4][COLOR="#0000FF"]Botanist Molten Core (Weekly Pet Farm) + Attunment 
 
-&
++
 
 [COLOR="#FF0000"]Trash Farm[/COLOR] with Mining/Herbing[/COLOR][/SIZE][/B]
 
@@ -30,11 +30,12 @@ If you [U]are attuned[/U] it will fly to Lothos in Blackrock Mountain and port y
 back to Lothos, then stop the bot.[/COLOR]
 
 
-[SIZE=3][COLOR="#0000FF"]Automatically detects your faction. [SIZE=4][COLOR="#FF0000"]Either[/COLOR][/SIZE] faction can start the profile in Eastern Kingdoms or Kalimdor[/COLOR][/SIZE][/CENTER]
+[SIZE=3][COLOR="#0000FF"]Automatically detects your faction. [SIZE=4][COLOR="#FF0000"]Either[/COLOR][/SIZE] faction can start the profile in Eastern Kingdoms or Kalimdor[/COLOR][/SIZE]
 
-[QUOTE]
-[COLOR="#0000CD"][SIZE=4]You may want to run this profile for the following reasons:     scroll down -----> [/SIZE][/COLOR]
+
+[COLOR="#0000CD"][SIZE=3]**** Information *****[/SIZE][/COLOR]
 [CODE]
+[CENTER]
 [COLOR="#FF0000"][SIZE=4]Reputation:[/SIZE][/COLOR]
 
 [SIZE=4][COLOR="#0000CD"][URL="http://www.wowhead.com/faction=749/hydraxian-waterlords"][COLOR="#800080"][SIZE=3]Hydraxian Waterlords[/SIZE][/COLOR][/URL][/COLOR][/SIZE]
@@ -54,7 +55,9 @@ back to Lothos, then stop the bot.[/COLOR]
 
 
 [URL="http://www.wowhead.com/zone=2717/molten-core"][COLOR="#0000CD"][SIZE=4][B][I][U]Xmorg Gear + Loot[/U][/I][/B][/SIZE][/COLOR][/URL] [SIZE=3][COLOR="#0000CD"][B]<------- [FONT=Arial Black]Click to view list[/FONT][/B][/COLOR][/SIZE]
-[CENTER][QUOTE]Molten Core is also home to two legendaries: [URL="http://www.wowhead.com/item=19019"][SIZE=4][COLOR="#FF8C00"] Thunderfury, Blessed Blade of the Windseeker[/COLOR][/SIZE][/URL] is forged from the two halves of
+
+
+Molten Core is also home to two legendaries: [URL="http://www.wowhead.com/item=19019"][SIZE=4][COLOR="#FF8C00"] Thunderfury, Blessed Blade of the Windseeker[/COLOR][/SIZE][/URL] is forged from the two halves of
 
 [URL="http://www.wowhead.com/search?q=bindings+of+the+windseeker"][SIZE=3][COLOR="#FF8C00"]Bindings of the Windseeker[/COLOR][/SIZE][/URL] found in Molten Core, along with
 
@@ -62,38 +65,53 @@ back to Lothos, then stop the bot.[/COLOR]
 
 [URL="http://www.wowhead.com/item=17204"][SIZE=4][COLOR="#FF8C00"]Eye of Sulfuras[/COLOR][/SIZE][/URL], and the crafted  [URL="http://www.wowhead.com/item=17193/sulfuron-hammer"][SIZE=3][COLOR="#800080"][B]Sulfuron Hammer[/B][/COLOR][/SIZE][/URL]. Crafting a Sulfuron Hammer requires eight  [SIZE=3][URL="http://www.wowhead.com/item=17203/sulfuron-ingot"][B][COLOR="#800080"]Sulfuron Ingot[/COLOR][/B][/URL][/SIZE]'s from Golemagg,
 
-along with many other materials.[/QUOTE]
+along with many other materials.
+
+
+
+
 
 [SIZE=4][COLOR="#FF0000"][B]Other Notable Items[/B]:[/COLOR][/SIZE]
-
-
 
 [URL="http://www.wowhead.com/item=11382/blood-of-the-mountain"][SIZE=3][COLOR="#008000"][B]Blood of the Mountain[/B][/COLOR][/SIZE][/URL]
 
 [URL="http://www.wowhead.com/item=1973/orb-of-deception"][SIZE=3][COLOR="#0000CD"][B]Orb of Deception[/B][/COLOR][/SIZE][/URL] 
-[SIZE=2][COLOR="#000000"]Dropped while editing the profile. Worth 4K on my server !![/COLOR][/SIZE][/CENTER]
+[SIZE=2][COLOR="#000000"]Dropped while editing the profile. Worth 4K on my server !![/COLOR][/SIZE]
 
 
 
-
+[/CENTER]
 [/CODE]
-[/QUOTE]
-
-[QUOTE]
-[B][SIZE=3][COLOR="#FF0000"][U]Prerequisites[/U][/COLOR][/SIZE][/B]
 
 
+
+[SIZE=3][COLOR="#0000CD"]***** Prerequisites *****[/COLOR][/SIZE]
+
+[CODE]
 [SIZE=3]It is suggested that you run this profile on a level 90 tank class !!![/SIZE]
 
 You [COLOR="#FF0000"][SIZE=3]must[/SIZE][/COLOR] have a Flight Master's License
 
-[/QUOTE]
+
+[/CODE]
+
+[SIZE=3][COLOR="#0000CD"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
+[CODE]
 
 
-[CENTER]
 
-[QUOTE][B]  [SIZE=3] [COLOR="#0000CD"][CENTER]Please report any bugs with an accurate description of the problem as well as a log. Bugs will be fixed ASAP.
-[/CENTER][/COLOR][/SIZE] [/B][/QUOTE]
+[LIST]
+[*] You can download and update this profile via my [COLOR="#0000CD"][SIZE=3][URL="http://botanist-hb-profiles.googlecode.com/svn/trunk/"]Public SVN[/URL][/SIZE][/COLOR] or the attached .zip file below.
+[/LIST]
+
+
+[LIST]
+
+[/LIST]
+[/CODE]
+
+[B]  [SIZE=3] [COLOR="#0000CD"][CENTER]Please report any bugs with an accurate description of the problem as well as a log. Bugs will be fixed ASAP.
+[/CENTER][/COLOR][/SIZE] [/B]
 
 [COLOR="#0000CD"][B]Enjoy and please share it with your friends![/B][/COLOR][/CENTER]
 
