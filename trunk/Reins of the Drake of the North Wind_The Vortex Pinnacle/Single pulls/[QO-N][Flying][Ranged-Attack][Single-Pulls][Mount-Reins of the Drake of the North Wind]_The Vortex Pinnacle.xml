@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-][Flying][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle</Name>
+	<Name>[QO-N-][Flying][Ranged-Attack][Single-Pulls][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -100,7 +100,7 @@
 				<If Condition="Me.X &gt; -11413 || Me.X &lt; -11613 || Me.Y &lt; -2409 || Me.Y &gt; -2209 || Me.Z &lt; 575" >
 					
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][Flying][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle" />
+									ProfileName="Movement\[QO-N-M][Flying][Ranged-Attack][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle" />
 					
 				</If> <!-- Not in box -->
 				
@@ -179,84 +179,42 @@
 									LogColor="Fuchsia" />
 	
 					<!-- Kill the first Armored Mistral -->				
-					<CustomBehavior File="RunLikeHell" 
-									UseCTM="true" 
-									NumOfTimes="1" 
-									AllowCombat="false">
-						<Hotspot X="-420.1686" Y="-66.62024" Z="634.4308" />
-					</CustomBehavior>
 					<RunTo X="-420.1686" Y="-66.62024" Z="634.4308" />				
-									
-					<!-- Wait timer to be sure we got aggro -->
-					<CustomBehavior File="WaitTimer" 
-											WaitTime="5000" />
-											
-					<!-- Profile message - First pull complete -->
-					<CustomBehavior File="Message" 
-										Text="First pull complete." 
-										LogColor="Fuchsia" />
-									
+		
 					<!-- Kill the second Armored Mistral -->				
+					<RunTo X="-487.8338" Y="-135.4983" Z="638.8186" />					
+			
+					<!-- RLH past the Lurking Tempest -->
 					<CustomBehavior File="RunLikeHell" 
 									UseCTM="true" 
 									NumOfTimes="1" 
 									AllowCombat="false">
-						<Hotspot X="-488.4386" Y="-136.1343" Z="638.8187" />
+						<Hotspot X="-497.171" Y="-144.0894" Z="638.9374" />
+						<Hotspot X="-503.1414" Y="-158.1159" Z="638.9374" />
+						<Hotspot X="-494.6409" Y="-190.7959" Z="638.1677" />
+						<Hotspot X="-517.7236" Y="-219.4058" Z="633.7436" />
+						<Hotspot X="-539.3506" Y="-206.0839" Z="630.7188" />
 					</CustomBehavior>
-					<RunTo X="-488.4386" Y="-136.1343" Z="638.8187" />					
-									
-					<!-- Profile message - Second pull complete -->
-					<CustomBehavior File="Message" 
-										Text="Second pull complete." 
-										LogColor="Fuchsia" />				
-									
-					<!-- Kill the three groups on the circular ramp -->					
-					<CustomBehavior File="RunLikeHell" 
-									UseCTM="true" 
-									NumOfTimes="1" 
-									AllowCombat="false">
-						<Hotspot X="-492.4446" Y="-151.0539" Z="638.9374" />
-						<Hotspot X="-497.9773" Y="-169.7874" Z="638.9374" />
-						<Hotspot X="-501.4103" Y="-201.1987" Z="636.7026" />
-						<Hotspot X="-531.1849" Y="-220.9537" Z="632.2029" />
-						<Hotspot X="-562.058" Y="-208.1571" Z="627.9547" />
-						<Hotspot X="-573.7297" Y="-175.6947" Z="623.9427" />
-						<Hotspot X="-551.79" Y="-207.7548" Z="628.9031" />
-					</CustomBehavior>
-					<RunTo X="-551.79" Y="-207.7548" Z="628.9031" />				
-									
-					<!-- Profile message - Third pull complete -->
-					<CustomBehavior File="Message" 
-										Text="Third pull complete." 
-										LogColor="Fuchsia" />				
-										
+					<RunTo X="-539.3506" Y="-206.0839" Z="630.7188" />
+
 					<!-- Pull everything past the Lurking Tempest -->				
+					<RunTo X="-571.6333" Y="-201.898" Z="626.576" />
+		
+					<!-- RLH past the Lurking Tempest -->
 					<CustomBehavior File="RunLikeHell" 
 									UseCTM="true" 
 									NumOfTimes="1" 
 									AllowCombat="false">
-						<Hotspot X="-582.1216" Y="-177.2243" Z="624.0048" />
-						<Hotspot X="-577.3123" Y="-154.4328" Z="623.6596" />
-						<Hotspot X="-595.6486" Y="-119.5447" Z="619.7501" />
-						<Hotspot X="-650.5647" Y="-64.4799" Z="619.7435" />
-						<Hotspot X="-653.4256" Y="-43.56321" Z="619.738" />
-						<Hotspot X="-672.5125" Y="-41.11735" Z="624.6653" />
-						<Hotspot X="-688.5017" Y="-27.08958" Z="635.6384" />
-						<Hotspot X="-695.4821" Y="-20.34745" Z="635.6711" />
-						<Hotspot X="-685.1094" Y="4.219316" Z="635.6729" />
+						<Hotspot X="-569.3063" Y="-163.0539" Z="623.6579" />
+						<Hotspot X="-573.7848" Y="-142.7745" Z="623.6011" />
+						<Hotspot X="-600.1212" Y="-115.0508" Z="619.7446" />
+						<Hotspot X="-641.6827" Y="-73.99748" Z="619.7435" />
+						<Hotspot X="-654.0828" Y="-46.51339" Z="619.739" />
+						<Hotspot X="-670.012" Y="-46.87457" Z="619.7332" />
+						<Hotspot X="-695.5717" Y="-20.89456" Z="635.6717" />
 					</CustomBehavior>
-					<RunTo X="-685.1094" Y="4.219316" Z="635.6729" />
-									
-					<!-- Profile message - Fifth pull complete -->
-					<CustomBehavior File="Message" 
-										Text="Fourth pull complete." 
-										LogColor="Fuchsia" />				
-									
-					<!-- Profile message - Third pull complete -->
-					<CustomBehavior File="Message" 
-										Text="Killing Grand Vizier Ertan." 
-										LogColor="Fuchsia" />				
-									
+					<RunTo X="-695.5717" Y="-20.89456" Z="635.6717" />
+		
 					<!-- Kill Grand Vizier Ertan -->
 					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 									EventCompleteWhen="SpecificMobsDead" 
@@ -270,11 +228,6 @@
 						</Safespots>
 					</CustomBehavior>	
 
-					<!-- Profile message - Fifth pull complete -->
-					<CustomBehavior File="Message" 
-										Text="Grand Vizier Ertan is dead, next !." 
-										LogColor="Fuchsia" />
-					
 					<!-- Run to the slipstream -->
 					<RunTo X="-752.7068" Y="-29.53746" Z="639.926" />
 					<RunTo X="-769.088" Y="-55.73653" Z="639.926" />
@@ -284,31 +237,13 @@
 									VehicleMountId="45455" 
 									X="-768.213" Y="-53.6862" Z="639.926" />
 					
-					<!-- Run to the dias once we land -->
+					<!-- Run to the dais once we land -->
 					<RunTo X="-925.2205" Y="-175.1197" Z="669.2666" />
 									
-					<!-- Pull righthand staircase -->				
-					<CustomBehavior File="RunLikeHell" 
-									UseCTM="true" 
-									NumOfTimes="1" 
-									AllowCombat="false">
-						<Hotspot X="-927.287" Y="-158.3864" Z="669.2666" />
-						<Hotspot X="-941.5566" Y="-147.5688" Z="669.2666" />
-						<Hotspot X="-934.7927" Y="-110.911" Z="681.3549" />
-						<Hotspot X="-943.6418" Y="-84.46862" Z="692.5999" />
-						<Hotspot X="-973.2905" Y="-64.17977" Z="694.9169" />
-						<Hotspot X="-986.8172" Y="-62.31145" Z="694.9169" />
-						<Hotspot X="-1002.6" Y="-63.35493" Z="694.9169" />
-						<Hotspot X="-987.6241" Y="-63.68237" Z="694.9169" />
-						<Hotspot X="-974.8712" Y="-64.82938" Z="694.9169" />
-					</CustomBehavior>
-					<RunTo X="-974.8712" Y="-64.82938" Z="694.9169" />				
-									
-					<!-- Profile message - Fifth pull complete -->
-					<CustomBehavior File="Message" 
-										Text="Sixth pull complete." 
-										LogColor="Fuchsia" />				
-									
+					<!-- Pull right-hand staircase -->				
+					<RunTo X="-986.8172" Y="-62.31145" Z="694.9169" />
+					<RunTo X="-974.8712" Y="-64.82938" Z="694.9169" />
+		
 					<!-- Pull Young Storm Dragon -->				
 					<CustomBehavior File="RunLikeHell" 
 									UseCTM="true" 
@@ -322,15 +257,15 @@
 						<Hotspot X="-1021.897" Y="-126.2177" Z="694.9169" />
 					</CustomBehavior>
 					<RunTo X="-1021.897" Y="-126.2177" Z="694.9169" />			
-									
-					<!-- Profile message - Fifth pull complete -->
-					<CustomBehavior File="Message" 
-										Text="Seventh pull complete." 
-										LogColor="Fuchsia" />
-										
+					
 					<!-- Run to the first Howling Gale -->				
 					<RunTo X="-1007.842" Y="-101.291" Z="694.9153" />
 					
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Fuchsia" />
+
 					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Disabling combat." 
@@ -350,22 +285,8 @@
 									WaitTime="1000" />
 					
 					<!-- Cast one of the following spells -->
-					<CustomBehavior File="RunMacro" 
-									Macro="/cast Moonfire \n/cast Icy Touch \n/cast Serpent Sting \n/cast Ice Lance \n/cast Spinning Fire Blossom \n/cast Judgment \n/cast Shadow Word: Pain \n/cast Throw \n/cast Earth Shock \n/cast Corruption" 
-									NumOfTimes="1" 
-									WaitTime="1000" />
-					
-					<CustomBehavior File="RunMacro" 
-									Macro="/cast Moonfire \n/cast Icy Touch \n/cast Serpent Sting \n/cast Ice Lance \n/cast Spinning Fire Blossom \n/cast Judgment \n/cast Shadow Word: Pain \n/cast Throw \n/cast Earth Shock \n/cast Corruption" 
-									NumOfTimes="1" 
-									WaitTime="1000" />
-									
-					<!-- Target the Howling Gale -->				
-					<CustomBehavior File="RunMacro" 
-									Macro="/cleartarget" 
-									NumOfTimes="1" 
-									WaitTime="1000" />				
-							
+					<CustomBehavior File="Misc\RangeAttack" />
+
 					<!-- NoCombatMoveTo to the second Howling Gale -->				
 					<CustomBehavior File="NoCombatMoveTo"  
 									X="-1061.07" Y="-48.62126" Z="700.4818" />
@@ -374,6 +295,12 @@
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="1000" />
 
+					<!-- Clear target -->				
+					<CustomBehavior File="RunMacro" 
+									Macro="/cleartarget" 
+									NumOfTimes="1" 
+									WaitTime="1000" />					
+									
 					<!-- Target the Howling Gale -->				
 					<CustomBehavior File="RunMacro" 
 									Macro="/targetenemy" 
@@ -381,21 +308,7 @@
 									WaitTime="1000" />
 					
 					<!-- Cast one of the following spells -->
-					<CustomBehavior File="RunMacro" 
-									Macro="/cast Moonfire \n/cast Icy Touch \n/cast Serpent Sting \n/cast Ice Lance \n/cast Spinning Fire Blossom \n/cast Judgment \n/cast Shadow Word: Pain \n/cast Throw \n/cast Earth Shock \n/cast Corruption" 
-									NumOfTimes="1" 
-									WaitTime="1000" />
-				
-				<CustomBehavior File="RunMacro" 
-									Macro="/cast Moonfire \n/cast Icy Touch \n/cast Serpent Sting \n/cast Ice Lance \n/cast Spinning Fire Blossom \n/cast Judgment \n/cast Shadow Word: Pain \n/cast Throw \n/cast Earth Shock \n/cast Corruption" 
-									NumOfTimes="1" 
-									WaitTime="1000" />
-													
-					<!-- Target the Howling Gale -->				
-					<CustomBehavior File="RunMacro" 
-									Macro="/cleartarget" 
-									NumOfTimes="1" 
-									WaitTime="1000" />
+					<CustomBehavior File="Misc\RangeAttack" />
 									
 					<!-- NoCombatMoveTo to the top of the stairs -->				
 					<CustomBehavior File="NoCombatMoveTo"  
@@ -406,7 +319,10 @@
 										Text="Enabling combat." 
 										LogColor="Fuchsia" />
 					
-					<!-- enableable combat -->
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />			
+					
+					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />			
 									
 					<!-- Pull Young Storm Dragon -->				
@@ -420,11 +336,6 @@
 					<RunTo X="-1171.694" Y="47.29779" Z="707.6915" />	
 
 					<!-- Run to Altairus -->
-					<RunTo X="-1165.007" Y="63.58732" Z="708.7789" />
-					<RunTo X="-1176.675" Y="96.28326" Z="720.9597" />
-					<RunTo X="-1206.814" Y="113.6306" Z="728.0722" />
-					<RunTo X="-1240.527" Y="109.3951" Z="728.0722" />
-					<RunTo X="-1249.716" Y="97.09432" Z="728.0722" />
 					<RunTo X="-1244.977" Y="76.2642" Z="731.8144" />
 									
 					<!-- Kill Altairus -->
