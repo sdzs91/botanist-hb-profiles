@@ -14,7 +14,7 @@ namespace MrItemRemover2
         public class MrItemRemover2Settings : Settings
         {
             public static readonly MrItemRemover2Settings Instance = new MrItemRemover2Settings();
-            private MrItemRemover2Settings() : base(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"D:/My HB Main/My Settings/MrItemRemover2_Settings_{0}.xml", StyxWoW.Me.Name.ToString())) { }
+            private MrItemRemover2Settings() : base(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Settings/MrItemRemover2_Settings_{0}.xml", StyxWoW.Me.Name.ToString())) { }
 
             [Setting, Styx.Helpers.DefaultValue(5)]
             public int Time { get; set; }
