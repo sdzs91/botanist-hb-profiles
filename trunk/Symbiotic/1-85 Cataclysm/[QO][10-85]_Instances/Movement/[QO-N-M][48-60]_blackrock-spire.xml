@@ -264,7 +264,7 @@
 						<CustomBehavior File="ForcedDismount" />
 					
 						<CustomBehavior File="Message" 
-										Text="Our durability is less than 80%, we need to repair." 
+										Text="Our durability is less than 30%, we need to repair." 
 										LogColor="Fuchsia" />
 									
 						<CustomBehavior File="ForceSetVendor" 
@@ -284,7 +284,7 @@
 						</SetVendor>
 					
 						<!-- We are done repairing -->
-						<If Condition="Me.DurabilityPercent &gt;= 0.8" >
+						<If Condition="(Me.FreeBagSlots &gt; 15) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
 							<CustomBehavior File="Message" 
 											Text="Repairing complete." 
 											LogColor="Fuchsia" />

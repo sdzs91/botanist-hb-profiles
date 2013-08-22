@@ -89,8 +89,8 @@
 					<RunTo X="209.903" Y="1133.02" Z="205.569" />
 
 					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="215.7276" Y="1150.736" Z="206.7795" />
-					
+					<CustomBehavior File="Misc\InInstance" X="211.7239" Y="1142" Z="206.0054" />
+
 					<!-- Make sure we run to the right spot outside the potral -->
 					<RunTo X="-7571.14" Y="-1324.96" Z="245.538" />
 				</If> <!-- HoL -->
@@ -532,7 +532,7 @@
 					<RunTo X="209.903" Y="1133.02" Z="205.569" />
 
 					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="215.7276" Y="1150.736" Z="206.7795" />
+					<CustomBehavior File="Misc\InInstance" X="211.7239" Y="1142" Z="206.0054" />
 					
 					<!-- Make sure we run to the right spot outside the potral -->
 					<RunTo X="-7571.14" Y="-1324.96" Z="245.538" />
@@ -638,7 +638,7 @@
 					<RunTo X="209.903" Y="1133.02" Z="205.569" />
 
 					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="215.7276" Y="1150.736" Z="206.7795" />
+					<CustomBehavior File="Misc\InInstance" X="211.7239" Y="1142" Z="206.0054" />
 					
 					<!-- Make sure we run to the right spot outside the potral -->
 					<RunTo X="-7571.14" Y="-1324.96" Z="245.538" />
@@ -665,7 +665,7 @@
 						<RunTo X="-7571.14" Y="-1324.96" Z="245.538" />
 
 						<!-- Run back in the portal -->
-						<CustomBehavior File="Misc\InInstance" X="-7570.8" Y="-1331" Z="245.5383" />
+						<CustomBehavior File="Misc\InInstance" X="-7569.818" Y="-1331.122" Z="245.5391" />
 										
 						<CustomBehavior File="Message" 
 										Text="Waiting for the dungeon to load." 
@@ -732,7 +732,7 @@
 					<CustomBehavior File="NoCombatMoveTo" X="209.903" Y="1133.02" Z="205.569" />
 
 					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="215.7276" Y="1150.736" Z="206.7795" />
+					<CustomBehavior File="Misc\InInstance" X="211.7239" Y="1142" Z="206.0054" />
 					
 					<!-- Make sure we run to the right spot outside the potral -->
 					<CustomBehavior File="NoCombatMoveTo" X="-7571.14" Y="-1324.96" Z="245.538" />				
@@ -965,7 +965,7 @@
 					<EnableBehavior Name="Combat" />
 					
 					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="215.7276" Y="1150.736" Z="206.7795" />
+					<CustomBehavior File="Misc\InInstance" X="211.7239" Y="1142" Z="206.0054" />
 					
 					<!-- Make sure we run to the right spot outside the potral -->
 					<CustomBehavior File="NoCombatMoveTo" X="-7571.14" Y="-1324.96" Z="245.538" /> 

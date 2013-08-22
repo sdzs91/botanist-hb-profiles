@@ -295,13 +295,6 @@
 									Text="Waiting for party members to meet us here."  
 									LogColor="Cyan" />
 					
-					<!-- If we have party members, wait for them to catch up to us -->
-					<CustomBehavior File="Misc\LoadProfileOn" 
-									CheckRange="5" />		
-									
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="5000" />
-					
 					<SetGrindArea>
 						<GrindArea>
 							<Factions>
@@ -334,14 +327,7 @@
 					<CustomBehavior File="Message" 
 									Text="Waiting for party members to meet us here."  
 									LogColor="Cyan" />
-					
-					<!-- If we have party members, wait for them to catch up to us -->
-					<CustomBehavior File="Misc\LoadProfileOn" 
-									CheckRange="5" />		
-									
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="5000" />
-					
+										
 					<SetGrindArea>
 						<GrindArea>
 							<Factions>
@@ -704,14 +690,7 @@
 					<CustomBehavior File="Message" 
 									Text="Waiting for party members to meet us here."  
 									LogColor="Cyan" />
-					
-					<!-- If we have party members, wait for them to catch up to us -->
-					<CustomBehavior File="Misc\LoadProfileOn" 
-									CheckRange="5" />		
-									
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="5000" />
-					
+										
 					<SetGrindArea>
 						<GrindArea>
 							<Factions>
@@ -752,14 +731,7 @@
 					<CustomBehavior File="Message" 
 									Text="Waiting for party members to meet us here."  
 									LogColor="Cyan" />
-					
-					<!-- If we have party members, wait for them to catch up to us -->
-					<CustomBehavior File="Misc\LoadProfileOn" 
-									CheckRange="5" />		
-									
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="5000" />
-					
+										
 					<SetGrindArea>
 						<GrindArea>
 							<Factions>
