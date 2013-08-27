@@ -100,7 +100,7 @@
 				<If Condition="Me.X &gt; -11413 || Me.X &lt; -11613 || Me.Y &lt; -2409 || Me.Y &gt; -2209 || Me.Z &lt; 575" >
 					
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][Flying][Ranged-Attack][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle" />
+									ProfileName="Movement\[QO-N-M][Flying][Ranged-Attack][Single-Pulls][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle" />
 					
 				</If> <!-- Not in box -->
 				
