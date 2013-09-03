@@ -5,13 +5,13 @@
 [IMG]http://img829.imageshack.us/img829/4108/yy30.jpg[/IMG]
 
 
-[B][SIZE=2]Solstice is an [U]alternative[/U] method for farming gold. It uses "Death Knights", level 60 or above to farm instances and vendor all the unprotected items.[/SIZE][/B]
+[B][SIZE=2]Solstice is an [U]alternative[/U] method for farming gold. It uses "Death Knights", level 58 or above to farm instances and vendor all the unprotected items.[/SIZE][/B]
 [SIZE=2][B]
-Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/details.xml?id=110000044"]Battle Chest[/URL] account and instantly roll (50) level 55 Death Knight's as a virtual gold farming army !!![/B][/SIZE]
+Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/details.xml?id=110000044"]Battle Chest[/URL] account, level 1 character to level 55 (Hunter's level the fastest), then roll (49) level 55 Death Knight's as a virtual gold farming army !!![/B][/SIZE]
 
 [B][U][SIZE=2]Say goodbye to GatherBuddy and hello to a new way of gold farming ![/SIZE][/U][/B]
 
-[B][U][SIZE=2]Imagine setting up 50 Blood DK's farming instances for 2 hours each, with Arelog. It would take 4 days and 2 hours to cycle back to the first character.[/SIZE][/U][/B]
+[B][U][SIZE=2]Imagine setting up 49Blood DK's farming instances for 2 hours each, with Arelog. It takes 96 hours for the cycle to repeat.[/SIZE][/U][/B]
 
 [B][U][COLOR="#000000"][SIZE=3]Now multiply that by 10 accounts !!![/SIZE][/COLOR][/U][/B]
 
@@ -21,9 +21,7 @@ Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/detai
 [B][COLOR="#ffcc00"][SIZE=4]***** Information *****[/SIZE][/COLOR][/B]
 
 [CODE]
-[LIST]
-[*] Solstice is a modified version of Symbiotic.
-[/LIST]
+
 [LIST]
 [*] Many users of HonorBuddy are now using SOR or Battle Chest accounts for farming gold.
 [/LIST]
@@ -31,16 +29,25 @@ Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/detai
 [*] The primary purpose of Solstice is "farming gold".
 [/LIST]
 [LIST]
-[*] It has been modified [U]specifically[/U] for leveling Death Knights in dungeons for the sake of "farming gold".
+[*] Solstice supports [U]mount training[/U], [U]mount purchasing[/U], [U]deletion of annoying items[/U] from your bags.
 [/LIST]
 [LIST]
-[*] It is not [U]intended[/U] as a rapid method of leveling. Leveling is a [U]consequence[/U] of farming the dungeons, not the [U]goal[/U].
+[*] Solstice supports[U] repairing[/U], [U]mailing[/U], [B][U]mobile-banking[/U][/B] and [B][U]hard coded food purchase[/U][/B] (if needed) at the end of every instance run.
 [/LIST]
 [LIST]
-*
+[*] Solstice supports levels 58-90 for Blood Death Knights ONLY !!!
 [/LIST]
 [LIST]
-*
+[*] Solstice supports  WOTLK, CATA and MOP expansions.
+[/LIST]
+[LIST]
+[*] You can start the profile from Eastern Kingdoms, Outlands, Northrend, or Kalimdor at any level after leaving the Death Knight starting zone.
+[/LIST]
+[LIST]
+Solstice is hard coded to use the following spells independant of you combat routine: Death Grip, Icy Touch, Lichborne, Icebound Fortitude, Army of the Dead where ever I deam it neccessary.
+[/LIST]
+[LIST]
+Solstice actively scans for rare spawns within instances. It will intelligently avoid rares it can't kill while selectively killing off all the mobs around the rare.
 [/LIST]
 [LIST]
 *
@@ -76,7 +83,7 @@ Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/detai
 [*] Click the drop down menu and select Questing as your bot base.
 [/LIST]
 [LIST]
-[*] Click the load profile button and browse to where you have Soltice stored. Double click the profile named [QO-N][Solstice]_autoloader.
+[*] Click the load profile button and browse to where you have Soltice stored. Double click the profile named [QO-N][60-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS.
 [/LIST]
 [LIST]
 [*] Click start on the bot.
@@ -115,13 +122,10 @@ Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/detai
 
 [CODE]
 [LIST]
-[*]Your Death Knight [U]must[/U] be level 60 or above.
+[*]Your Death Knight [U]must[/U] be level 58 or above.
 [/LIST]
 [LIST]
 [*]Your Death Knight [U]must[/U] maintain a minimum of one stack of appropriate level healing potions in their bags. (For those "Oh Sit !" moments.)
-[/LIST]
-[LIST]
-[*]Your Death Knight [U]must[/U] maintain a minimum of 5 stacks of appropriate level "food" in their bags.
 [/LIST]
 [LIST]
 [*]Your Death Knight [U]must[/U] have the Autoequip plugin enabled.
@@ -135,7 +139,7 @@ Set Potion @ health % 30
 [/INDENT]
 [/LIST]
 [LIST]
-[*]You [U]must[/U] start the profiles in Eastern Kingdoms, Kalimdor or Northrend.
+[*]You [U]must[/U] start the profiles in Eastern Kingdoms, Kalimdor, Outland or Northrend.
 [/LIST]
 [LIST]
 *
@@ -186,10 +190,10 @@ Set Potion @ health % 30
 [CODE]
 
 [LIST]
-[*]Solstice Click [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FF0000"]here[/COLOR][/URL] for the SVN URL.
+[*]Solstice will be available [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FF0000"]HERE[/COLOR][/URL] when it is released.
 [/LIST]
 [LIST]
-Or you can download the zip file below.
+Or you will be able download a zip file below.
 [/LIST]
 [/CODE]
 
