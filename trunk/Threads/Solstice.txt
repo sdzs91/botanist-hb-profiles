@@ -11,7 +11,7 @@ Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/detai
 
 [B][U][SIZE=2]Say goodbye to GatherBuddy and hello to a new way of gold farming ![/SIZE][/U][/B]
 
-[B][U][SIZE=2]Imagine setting up 49Blood DK's farming instances for 2 hours each, with Arelog. It takes 96 hours for the cycle to repeat.[/SIZE][/U][/B]
+[B][U][SIZE=2]Imagine setting up 49 Blood DK's farming instances for 2 hours each, with Arelog. It takes 96 hours for the cycle to repeat.[/SIZE][/U][/B]
 
 [B][U][COLOR="#000000"][SIZE=3]Now multiply that by 10 accounts !!![/SIZE][/COLOR][/U][/B]
 
@@ -32,7 +32,7 @@ Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/detai
 [*] Solstice supports [U]mount training[/U], [U]mount purchasing[/U], [U]deletion of annoying items[/U] from your bags.
 [/LIST]
 [LIST]
-[*] Solstice supports[U] repairing[/U], [U]mailing[/U], [B][U]mobile-banking[/U][/B] and [B][U]hard coded food purchase[/U][/B] (if needed) at the end of every instance run.
+[*] Solstice supports [U]repairing[/U], [U]mailing[/U], [B][U]mobile-banking[/U][/B] and [B][U]hard coded food purchase[/U][/B] (if needed) at the end of every instance run.
 [/LIST]
 [LIST]
 [*] Solstice supports levels 58-90 for Blood Death Knights ONLY !!!
@@ -44,13 +44,42 @@ Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/detai
 [*] You can start the profile from Eastern Kingdoms, Outlands, Northrend, or Kalimdor at any level after leaving the Death Knight starting zone.
 [/LIST]
 [LIST]
-Solstice is hard coded to use the following spells independant of you combat routine: Death Grip, Icy Touch, Lichborne, Icebound Fortitude, Army of the Dead where ever I deam it neccessary.
+Solstice is hard coded to use the following spells independant of you combat routine: [U]Death Grip[/U], [U]Icy Touch[/U], [U]Lichborne[/U], [U]Icebound Fortitude[/U], and [U]Army of the Dead[/U] where ever I deem it neccessary.
 [/LIST]
 [LIST]
-Solstice actively scans for rare spawns within instances. It will intelligently avoid rares it can't kill while selectively killing off all the mobs around the rare.
+Solstice actively scans for rare spawns within instances. It will intelligently avoid rares it can't kill while selectively killing off [U]all[/U] the mobs around the rare.
 [/LIST]
 [LIST]
-*
+Solstice will level according to the chart below:
+[INDENT]
+
+[58-60] Grinding
+
+[60-62] Blackrock Depths
+
+[62-67] Blackrock Spire
+
+[67-70] Hellfire Ramparts
+
+[70-72] Mana Tombs
+
+[72-74] Auchenai Crypts
+
+[74-78] Sethekk Halls
+
+[78-79] Utgarde Keep
+
+[79-84] Drak'tharon Keep
+
+[84-86] Gundrak
+
+[86-87] Halls of Lightning
+
+[87-88] Blackrock Caverns
+
+[88-90] The Lost City of the Tol'vir
+
+[/INDENT]
 [/LIST]
 [LIST]
 *
@@ -83,16 +112,23 @@ Solstice actively scans for rare spawns within instances. It will intelligently 
 [*] Click the drop down menu and select Questing as your bot base.
 [/LIST]
 [LIST]
-[*] Click the load profile button and browse to where you have Soltice stored. Double click the profile named [QO-N][60-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS.
+[*] Click the load profile button and browse to where you have Soltice stored. Double click the profile named:
+[INDENT]
+[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS
+[/INDENT]
+[LIST]
+[INDENT]
+[/INDENT]
+[/LIST]
 [/LIST]
 [LIST]
 [*] Click start on the bot.
 [/LIST]
 [LIST]
-If your Death Knight is between levels [U]58-60[/U], it will travel to Outlands and [U]grind to level 60 around Honor Hold or Thrallmar[/U].
+If your Death Knight is [U]below[/U] level 60, it will travel to Outlands and [U]grind until level 60 (around Honor Hold or Thrallmar)[/U].
 [/LIST]
 [LIST]
-If your Death Knight is[U] above[/U] level 60, it will [U]automatically[/U] detect the highest level instance it can [U]solo[/U]  and fly there.
+If your Death Knight is [U]above[/U] level 60, it will [U]automatically[/U] detect the highest level instance it can [U]solo[/U]  and fly there.
 [/LIST]
 [LIST]
 *
