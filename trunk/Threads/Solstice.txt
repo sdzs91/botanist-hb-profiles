@@ -1,21 +1,31 @@
 [B][CENTER][SIZE=4][COLOR="#ffcc00"]Solstice[/COLOR][/SIZE][/CENTER][/B]
 [B][U][CENTER][SIZE=3][COLOR="#FF0000"]Coming Soon[/COLOR][/SIZE][/CENTER][/U][/B]
 
+
 [CENTER]
 [IMG]http://img829.imageshack.us/img829/4108/yy30.jpg[/IMG]
 
 
+[B][U][SIZE=3]I will have a trailer video soon !!![/SIZE][/U][/B]
+
+
 [B][SIZE=2]Solstice is an [U]alternative[/U] method for farming gold. It uses "Death Knights", level 58 or above to farm instances and vendor all the unprotected items.[/SIZE][/B]
 [SIZE=2][B]
-Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/details.xml?id=110000044"]Battle Chest[/URL] account, level 1 character to level 55 (Hunter's level the fastest), then roll (49) level 55 Death Knight's as a virtual gold farming army !!![/B][/SIZE]
+Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/details.xml?id=110000044"]Battle Chest[/URL] account, level 1 character to level 55 (Hunter's level the fastest), then roll (1-49) level 55 Death Knight's as a virtual gold farming army !!![/B][/SIZE]
 
 [B][U][SIZE=2]Say goodbye to GatherBuddy and hello to a new way of gold farming ![/SIZE][/U][/B]
 
-[B][U][SIZE=2]Imagine setting up 49 Blood DK's farming instances for 2 hours each, with Arelog. It takes 96 hours for the cycle to repeat.[/SIZE][/U][/B]
+[B][U][SIZE=2]Solstice allows users to setup 1-49 Blood Death Knights farming instances for 2 hours each. With Arelog running 24/7, it takes 96 hours for the cycle to repeat.[/SIZE][/U][/B]
 
-[B][U][COLOR="#000000"][SIZE=3]Now multiply that by 10 accounts !!![/SIZE][/COLOR][/U][/B]
+[B][U][SIZE=2]Meaning each Death Knight farms for a grand total of 4 hours per week. That should take care of any so-called LCP detection which they probably can't use in instances to begin with.[/SIZE][/U][/B]
+
+[B][COLOR="#000000"][SIZE=3]Now multiply that by 10 accounts = 490 Death Knights !!![/SIZE][/COLOR][/B]
 
 
+[B][U][COLOR="#000000"][SIZE=2]These profiles are the result of Blizz banning my first [B][U]non-botting[/U][/B] account 4+ years ago, and then acting like pricks about it. Like I told them then, I would get even.[/SIZE][/COLOR][/U][/B]
+
+
+[B][U][COLOR="#000000"][SIZE=3][B][U]Revenge[/U][/B] is a dish best served cold !!! [/SIZE][/COLOR][/U][/B]
 
 
 [B][COLOR="#ffcc00"][SIZE=4]***** Information *****[/SIZE][/COLOR][/B]
@@ -128,7 +138,7 @@ Solstice will level according to the chart below:
 If your Death Knight is [U]below[/U] level 60, it will travel to Outlands and [U]grind until level 60 (around Honor Hold or Thrallmar)[/U].
 [/LIST]
 [LIST]
-If your Death Knight is [U]above[/U] level 60, it will [U]automatically[/U] detect the highest level instance it can [U]solo[/U]  and fly there.
+If your Death Knight is [U]above[/U] level 60, it will [U]automatically[/U] detect the highest level instance it can [U]solo[/U] and fly there.
 [/LIST]
 [LIST]
 *
@@ -159,6 +169,9 @@ If your Death Knight is [U]above[/U] level 60, it will [U]automatically[/U] dete
 [CODE]
 [LIST]
 [*]Your Death Knight [U]must[/U] be level 58 or above.
+[/LIST]
+[LIST]
+[*]Your Death Knight [U]must[/U] have a [U]mail recipient[/U] set in the settings and tools tab for HonorBuddy to mail to.
 [/LIST]
 [LIST]
 [*]Your Death Knight [U]must[/U] maintain a minimum of one stack of appropriate level healing potions in their bags. (For those "Oh Sit !" moments.)
