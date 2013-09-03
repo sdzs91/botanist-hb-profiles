@@ -89,10 +89,10 @@ Solstice actively scans for rare spawns within instances. It will intelligently 
 [*] Click start on the bot.
 [/LIST]
 [LIST]
-*
+If your Death Knight is between levels [U]58-60[/U], it will travel to Outlands and [U]grind to level 60 around Honor Hold or Thrallmar[/U].
 [/LIST]
 [LIST]
-*
+If your Death Knight is[U] above[/U] level 60, it will [U]automatically[/U] detect the highest level instance it can [U]solo[/U]  and fly there.
 [/LIST]
 [LIST]
 *
