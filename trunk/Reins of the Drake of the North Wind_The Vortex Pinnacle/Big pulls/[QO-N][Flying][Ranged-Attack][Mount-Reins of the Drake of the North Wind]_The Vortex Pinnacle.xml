@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-][Flying][Ranged-Attack][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle</Name>
+	<Name>[QO-N][Flying][Ranged-Attack][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -85,14 +85,14 @@
 					<!-- Make our way to the exit -->
 					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
 					
-					<!-- InInstance to exit the dunfeon -->
+					<!-- InInstance to exit the dungeon -->
 					<CustomBehavior File="Misc\InInstance" X="-327.7366" Y="24.78619" Z="626.7043" />
 					
 					<!-- Wait timer for game to load -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="15000" />
 					
-					<!-- Make sure we run to the right spot outside the potral -->
+					<!-- Make sure we run to the right spot outside the portal -->
 					<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
 				</If> <!-- Vortex Pinnacle -->
 				
