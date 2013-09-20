@@ -716,27 +716,27 @@
 				<!-- Disable combat -->
 				<DisableBehavior Name="Combat" />	
 
-				<!-- Move to - 1st ziggurat - kite  -->	
+				<!-- Move to - 2nd ziggurat - kite  -->	
 				<CustomBehavior File="NoCombatMoveTo" 
 								X="3850.447" Y="-3736.665" Z="148.0916" />
 
-				<!-- Move to - 1st ziggurat - kite  -->	
+				<!-- Move to - 2nd ziggurat - kite  -->	
 				<CustomBehavior File="NoCombatMoveTo" 
 								X="3837.173" Y="-3747.164" Z="145.0919" />
 								
-				<!-- Move to - 1st ziggurat - kite  -->	
+				<!-- Move to - 2nd ziggurat - kite  -->	
 				<CustomBehavior File="NoCombatMoveTo" 
 								X="3845.205" Y="-3759.438" Z="145.0919" />
 								
-				<!-- Move to - 1st ziggurat - kite  -->	
+				<!-- Move to - 2nd ziggurat - kite  -->	
 				<CustomBehavior File="NoCombatMoveTo" 
 								X="3858.33" Y="-3750.337" Z="145.0919" />
 								
-				<!-- Move to - 1st ziggurat - kite  -->	
+				<!-- Move to - 2nd ziggurat - kite  -->	
 				<CustomBehavior File="NoCombatMoveTo" 
 								X="3850.71" Y="-3735.741" Z="148.0918" />
 								
-				<!-- Move to - 1st ziggurat - kite  -->	
+				<!-- Move to - 2nd ziggurat - kite  -->	
 				<CustomBehavior File="NoCombatMoveTo" 
 								X="3855.511" Y="-3715.12" Z="148.0918" />
 
@@ -772,27 +772,27 @@
 				<!-- Disable combat -->
 				<DisableBehavior Name="Combat" />	
 
-				<!-- Move to - 1st ziggurat - kite  -->	
+				<!-- Move to - 3rd ziggurat - kite  -->	
 				<CustomBehavior File="NoCombatMoveTo" 
 								X="4048.956" Y="-3659.22" Z="135.6549" />
 
-				<!-- Move to - 1st ziggurat - kite  -->	
+				<!-- Move to - 3rd ziggurat - kite  -->	
 				<CustomBehavior File="NoCombatMoveTo" 
 								X="4051.054" Y="-3675.281" Z="132.6552" />
 								
-				<!-- Move to - 1st ziggurat - kite  -->	
+				<!-- Move to - 3rd ziggurat - kite  -->	
 				<CustomBehavior File="NoCombatMoveTo" 
 								X="4066.247" Y="-3674.111" Z="132.6552" />
 								
-				<!-- Move to - 1st ziggurat - kite  -->	
+				<!-- Move to - 3rd ziggurat - kite  -->	
 				<CustomBehavior File="NoCombatMoveTo" 
 								X="4065.782" Y="-3659.761" Z="132.6552" />
 								
-				<!-- Move to - 1st ziggurat - kite  -->	
+				<!-- Move to - 3rd ziggurat - kite  -->	
 				<CustomBehavior File="NoCombatMoveTo" 
 								X="4048.268" Y="-3658.728" Z="135.6551" />
 								
-				<!-- Move to - 1st ziggurat - kite  -->	
+				<!-- Move to - 3rd ziggurat - kite  -->	
 				<CustomBehavior File="NoCombatMoveTo" 
 								X="4030.922" Y="-3643.495" Z="135.6551" />
 
@@ -801,7 +801,7 @@
 							
 				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />
+								WaitTime="30000" />
 
 								
 				<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
