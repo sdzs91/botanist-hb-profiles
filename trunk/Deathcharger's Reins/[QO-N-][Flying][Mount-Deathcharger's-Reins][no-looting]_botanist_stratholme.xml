@@ -963,7 +963,7 @@
 												WaitTime="1000" />
 												
 								<CustomBehavior File="WaitTimer" 
-												WaitTime="20000" />
+												WaitTime="15000" />
 							</If> <!-- Have hearthstone -->
 						
 							<!-- Have Innkeeper's Daughter -->
@@ -977,11 +977,8 @@
 												WaitTime="1000" />
 									
 								<CustomBehavior File="WaitTimer" 
-												WaitTime="20000" />
+												WaitTime="15000" />
 							</If> <!-- Have Innkeeper's Daughter -->
-							
-							<!-- Wait timer - wait 15 second - delay -->
-							<CustomBehavior File="WaitTimer" WaitTime="15000" />
 							
 							<!-- If we aren't in Stratholme -->
 							<If Condition="Me.MapId != 329">
