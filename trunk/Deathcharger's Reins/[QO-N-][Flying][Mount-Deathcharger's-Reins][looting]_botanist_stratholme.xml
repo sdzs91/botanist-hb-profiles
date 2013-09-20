@@ -1109,6 +1109,10 @@
 								<!-- Usersettings -->
 								<CustomBehavior File="UserSettings" 
 												UseMount="True" />
+												
+								<!-- Instance timer check if we didn't repair -->
+								<CustomBehavior File="Misc\InstanceTimer" 
+												Timer="Check" />				
 							
 							</If>
 
@@ -1168,6 +1172,10 @@
 								
 								<!-- Move to - zone in location -->
 								<RunTo X="3590.87" Y="-3643.22" Z="138.4909" />
+								
+								<!-- Instance timer check if we didn't repair -->
+								<CustomBehavior File="Misc\InstanceTimer" 
+												Timer="Check" />
 								
 								<!-- Move to - attempt to exit the instance -->
 								<CustomBehavior File="Misc\InInstance" 
