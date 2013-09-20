@@ -846,12 +846,12 @@
 				<!-- Forces kill of Black Guard Sentry -->
 				<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 								EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="10394"
-								EventX="4032.795" EventY="-3410.632" EventZ="115.7528"
+								EventX="4033.654" EventY="-3429.733" EventZ="117.8732"
 								MoveOutOfGroundEffectAuraId1="111111"
 								MoveAwayFromMobCastingSpellId1="111111"
 								MoveAwayFromMobWithAuraId1="111111">
 					<Safespots>
-						<Hotspot X="4032.795" Y="-3410.632" Z="115.7528" />
+						<Hotspot X="4033.654" Y="-3429.733" Z="117.8732" />
 					</Safespots>
 				</CustomBehavior>	
 
