@@ -4,17 +4,17 @@
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
    
-	<MinDurability>0.2</MinDurability>
-	<MinFreeBagSlots>0</MinFreeBagSlots>
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
 	
 	<MailGrey>False</MailGrey>
-	<MailWhite>False</MailWhite>
+	<MailWhite>True</MailWhite>
 	<MailGreen>False</MailGreen>
 	<MailBlue>False</MailBlue>
 	<MailPurple>True</MailPurple>
    
 	<SellGrey>True</SellGrey>
-	<SellWhite>True</SellWhite>
+	<SellWhite>False</SellWhite>
 	<SellGreen>True</SellGreen>
 	<SellBlue>True</SellBlue>
 	<SellPurple>False</SellPurple>
@@ -850,12 +850,12 @@
 				<!-- Forces kill of Black Guard Sentry -->
 				<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 								EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="10394"
-								EventX="4033.654" EventY="-3429.733" EventZ="117.8732"
+								EventX="4032.094" EventY="-3433.813" EventZ="118.5511"
 								MoveOutOfGroundEffectAuraId1="111111"
 								MoveAwayFromMobCastingSpellId1="111111"
 								MoveAwayFromMobWithAuraId1="111111">
 					<Safespots>
-						<Hotspot X="4033.654" Y="-3429.733" Z="117.8732" />
+						<Hotspot X="4032.094" Y="-3433.813" Z="118.5511" />
 					</Safespots>
 				</CustomBehavior>	
 
