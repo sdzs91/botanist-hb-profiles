@@ -12,8 +12,19 @@
 
 [CODE]
 
-[LIST]
-[*]This is one of my older profiles. The profile should run fine as is. If you have any bugs, please report them and I will make the needed changes.
+I just did a 100% complete rewrite of this. As I said originally, it was an old profile. Everything should run smoothly now.
+
+Edits: 
+
+
+[List]
+Now sets your hearthstone in Light's Hope Chapel [B][U]only if it isn't currently set there[/U][/B].
+[/LIST]
+[List]
+Now LOS pulls all the mobs (in the ziggurats) outside and mass kills them. This avoids getting stuck in the ziggurats and missing any of the mobs.
+[/LIST]
+[List]
+Now uses NoCombatMoveTo instead of the RunLikeHell to mass pull the groups. This avoids HB tripping and running into walls.
 [/LIST]
 [/CODE]
 

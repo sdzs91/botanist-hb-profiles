@@ -643,6 +643,10 @@
 				<!-- Move to - the gauntlet -->
 				<RunTo X="3784.173" Y="-3593.188" Z="144.6194" />
 
+				<!-- Wait timer - wait 5 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="5000" />
+
 				<!-- Profile message - Moving to Nerub'enkan -->
 				<CustomBehavior File="Message" 
 								Text="Moving to Nerub'enkan." 
