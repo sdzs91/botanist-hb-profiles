@@ -1,0 +1,1674 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][Solstice][58-90][food]</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-7118.711" Y="-1225.894" Z="290.2633" Radius="3" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>	
+	</ProtectedItems>
+
+	<Factions></Factions>
+	
+	<QuestOrder>
+
+		<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							FindVendorsAutomatically="False"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootChests="False"
+							LootMobs="False"
+							LootRadius="1"
+							MountDistance="75"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							PullDistance="45"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseFlightPaths="True"
+							UseMount="True" 
+							UseRandomMount="False" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<!-- If our level is 88-90 -->
+		<If Condition="Me.Level &gt;= 88 &amp;&amp; Me.Level &lt; 90">
+			
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - XXXXXXXXXXXXXX-->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - XXXXXXXXXXXXXXXX -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />
+					
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - Floyd Pinkus -->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Floyd Pinkus -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />			
+			
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we have Clefthoof Ribs -->
+			<If Condition="HasItem(29451)">
+			
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Clefthoof Ribs -->	
+			
+		</If>	<!-- If our level is 88-90 -->
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 87-88 -->
+		<If Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt; 88">
+		
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - XXXXXXXXXXXXXX-->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - XXXXXXXXXXXXXXXX -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />
+					
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - Floyd Pinkus -->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Floyd Pinkus -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />			
+			
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we have Clefthoof Ribs -->
+			<If Condition="HasItem(29451)">
+			
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Clefthoof Ribs -->
+			
+		</If>	<!-- If our level is 87-88 -->
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 86-87 -->
+		<If Condition="Me.Level &gt;= 86 &amp;&amp; Me.Level &lt; 87">
+		
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - XXXXXXXXXXXXXX-->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - XXXXXXXXXXXXXXXX -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />
+					
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - Floyd Pinkus -->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Floyd Pinkus -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />			
+			
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we have Clefthoof Ribs -->
+			<If Condition="HasItem(29451)">
+			
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Clefthoof Ribs -->
+									
+		</If>	<!-- If our level is 86-87 -->
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 84-86 -->
+		<If Condition="Me.Level &gt;= 84 &amp;&amp; Me.Level &lt; 86">
+		
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - XXXXXXXXXXXXXX-->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - XXXXXXXXXXXXXXXX -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />
+					
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - Floyd Pinkus -->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Floyd Pinkus -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />			
+			
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we have Clefthoof Ribs -->
+			<If Condition="HasItem(29451)">
+			
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Clefthoof Ribs -->
+			
+		</If>	<!-- If our level is 84-86 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 79-84 -->
+		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 84">
+		
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - XXXXXXXXXXXXXX-->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - XXXXXXXXXXXXXXXX -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />
+					
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - Floyd Pinkus -->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Floyd Pinkus -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />			
+			
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we have Clefthoof Ribs -->
+			<If Condition="HasItem(29451)">
+			
+				<!-- Move to - Thrallmar flight master -->
+				
+				
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Clefthoof Ribs -->
+			
+		</If>	<!-- If our level is 79-84 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 77-79 -->
+		<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 79">
+		
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - XXXXXXXXXXXXXX-->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - XXXXXXXXXXXXXXXX -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />
+					
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - Floyd Pinkus -->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Floyd Pinkus -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />			
+			
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we have Clefthoof Ribs -->
+			<If Condition="HasItem(29451)">
+			
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Clefthoof Ribs -->
+			
+		</If>	<!-- If our level is 77-79 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 74-78 -->
+		<If Condition="Me.Level &gt;= 74 &amp;&amp; Me.Level &lt; 78">
+			
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
+				<If Condition="(!HasItem(29451)) &amp;&amp; (!HasItem(29448))">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs or Mag'har Mild Cheese -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs or Mag'har Mild Cheese."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - hover point - Allerian Stronghold - hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="-2941.848" Y="3986.454" Z="29.54919" />
+				
+					<!-- Fly to - Innkeeper Biribi-->
+					<CustomBehavior File="FlyTo"
+									X="-2933.22" Y="4012.429" Z="-1.368297" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Innkeeper Biribi -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-2920.801" Y="4019.86" Z="0.422266" />
+					
+					<!-- Interact with Innkeeper Biribi and buy 100 Mag'har Mild Cheese -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="19296" 
+												BuyItemId="29448" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 60 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Allerian Stronghold flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-2990.889" Y="3872.223" Z="9.294443" />
+					
+				</If>	<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese-->
+				<If Condition="(!HasItem(29451)) &amp;&amp; (!HasItem(29448))">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to Innkeeper Grilka to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to Innkeeper Grilka to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - hover point - Stonebreaker Hold -->
+					<CustomBehavior File="FlyTo" 
+									X="-2633.392" Y="4387.538" Z="93.16135" />
+				
+					<!-- Fly to - Innkeeper Grilka - just outside the inn-->
+					<CustomBehavior File="FlyTo"
+									X="-2627.862" Y="4408.704" Z="34.79284" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Innkeeper Grilka -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-2621.776" Y="4450.3" Z="36.09357" />
+					
+					<!-- Interact with Innkeeper Grilka and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="18957" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="-2621.776" Y="4450.3" Z="36.09357" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Stonebreaker Hold - flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-2567.424" Y="4427.083" Z="39.22084" />			
+			
+				</If>	<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we have Clefthoof Ribs or Mag'har Mild Cheese -->
+			<If Condition="(HasItem(29451)) || (HasItem(29448))">
+							
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Clefthoof Ribs or Mag'har Mild Cheese -->
+			
+		</If>	<!-- If our level is 74-78 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 72-74 -->
+		<If Condition="Me.Level &gt;= 72 &amp;&amp; Me.Level &lt; 74">
+			
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
+				<If Condition="(!HasItem(29451)) &amp;&amp; (!HasItem(29448))">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs or Mag'har Mild Cheese -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs or Mag'har Mild Cheese."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - hover point - Allerian Stronghold - hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="-2941.848" Y="3986.454" Z="29.54919" />
+				
+					<!-- Fly to - Innkeeper Biribi-->
+					<CustomBehavior File="FlyTo"
+									X="-2933.22" Y="4012.429" Z="-1.368297" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Innkeeper Biribi -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-2920.801" Y="4019.86" Z="0.422266" />
+					
+					<!-- Interact with Innkeeper Biribi and buy 100 Mag'har Mild Cheese -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="19296" 
+												BuyItemId="29448" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 60 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Allerian Stronghold flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-2990.889" Y="3872.223" Z="9.294443" />
+					
+				</If>	<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese-->
+				<If Condition="(!HasItem(29451)) &amp;&amp; (!HasItem(29448))">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to Innkeeper Grilka to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to Innkeeper Grilka to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - hover point - Stonebreaker Hold -->
+					<CustomBehavior File="FlyTo" 
+									X="-2633.392" Y="4387.538" Z="93.16135" />
+				
+					<!-- Fly to - Innkeeper Grilka - just outside the inn-->
+					<CustomBehavior File="FlyTo"
+									X="-2627.862" Y="4408.704" Z="34.79284" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Innkeeper Grilka -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-2621.776" Y="4450.3" Z="36.09357" />
+					
+					<!-- Interact with Innkeeper Grilka and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="18957" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="-2621.776" Y="4450.3" Z="36.09357" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Stonebreaker Hold - flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-2567.424" Y="4427.083" Z="39.22084" />			
+			
+				</If>	<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we have Clefthoof Ribs or Mag'har Mild Cheese -->
+			<If Condition="(HasItem(29451)) || (HasItem(29448))">
+							
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Clefthoof Ribs or Mag'har Mild Cheese -->
+			
+		</If>	<!-- If our level is 72-74 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 70-72 -->
+		<If Condition="Me.Level &gt;= 70 &amp;&amp; Me.Level &lt; 72">
+			
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
+				<If Condition="(!HasItem(29451)) &amp;&amp; (!HasItem(29448))">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs or Mag'har Mild Cheese -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs or Mag'har Mild Cheese."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - hover point - Allerian Stronghold - hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="-2941.848" Y="3986.454" Z="29.54919" />
+				
+					<!-- Fly to - Innkeeper Biribi-->
+					<CustomBehavior File="FlyTo"
+									X="-2933.22" Y="4012.429" Z="-1.368297" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Innkeeper Biribi -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-2920.801" Y="4019.86" Z="0.422266" />
+					
+					<!-- Interact with Innkeeper Biribi and buy 100 Mag'har Mild Cheese -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="19296" 
+												BuyItemId="29448" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 60 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Allerian Stronghold flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-2990.889" Y="3872.223" Z="9.294443" />
+					
+				</If>	<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese-->
+				<If Condition="(!HasItem(29451)) &amp;&amp; (!HasItem(29448))">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to Innkeeper Grilka to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to Innkeeper Grilka to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - hover point - Stonebreaker Hold -->
+					<CustomBehavior File="FlyTo" 
+									X="-2633.392" Y="4387.538" Z="93.16135" />
+				
+					<!-- Fly to - Innkeeper Grilka - just outside the inn-->
+					<CustomBehavior File="FlyTo"
+									X="-2627.862" Y="4408.704" Z="34.79284" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Innkeeper Grilka -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-2621.776" Y="4450.3" Z="36.09357" />
+					
+					<!-- Interact with Innkeeper Grilka and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="18957" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="-2621.776" Y="4450.3" Z="36.09357" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Stonebreaker Hold - flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-2567.424" Y="4427.083" Z="39.22084" />			
+			
+				</If>	<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we have Clefthoof Ribs or Mag'har Mild Cheese -->
+			<If Condition="(HasItem(29451)) || (HasItem(29448))">
+							
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Clefthoof Ribs or Mag'har Mild Cheese -->
+			
+		</If>	<!-- If our level is 70-72 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 67-70 -->
+		<If Condition="Me.Level &gt;= 67 &amp;&amp; Me.Level &lt; 70">
+			
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to Sid Limbardi to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - hover point - Honor Hold -->
+					<CustomBehavior File="FlyTo" 
+									X="-699.7803" Y="2654.424" Z="153.3082" />
+				
+					<!-- Front doorway of the inn -->
+					<CustomBehavior File="FlyTo" 
+									X="-709.9306" Y="2699.804" Z="94.41746" />
+					
+					<!-- Forced dismount -->
+					<CustomBehavior File="ForcedDismount" />
+
+					<!-- Move inside the inn -->
+					<RunTo X="-708.0077" Y="2736.445" Z="94.73333" />
+					
+					<!-- Interact with Sid Limbardi and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="1"
+												Range="75"
+												MobId="16826" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="-708.8713" Y="2739.131" Z="94.73372" />
+
+					<!-- Wait timer - wait 60 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Honor Hold flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-668.9916" Y="2718.042" Z="94.38165" />
+					
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Clefthoof Ribs -->
+				<If Condition="!HasItem(29451)">
+				
+					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Clefthoof Ribs."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - Floyd Pinkus -->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Floyd Pinkus -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="29451" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />			
+			
+				</If>	<!-- If we don't have Clefthoof Ribs -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we have Clefthoof Ribs -->
+			<If Condition="HasItem(29451)">
+
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Clefthoof Ribs -->
+			
+		</If>	<!-- If our level is 67-70 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 62-67 -->
+		<If Condition="Me.Level &gt;= 62 &amp;&amp; Me.Level &lt; 67">
+		
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+			
+				<!-- If we don't have Homemade Cherry Pie -->
+				<If Condition="!HasItem(8950)">
+				
+					<!-- Profile message - We don't have any Homemade Cheery Pie -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Homemade Cheery Pie."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Move to the food vendor -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-7083.726" Y="-1201.636" Z="324.2231" />
+					
+					<!-- Interact with the food vendor and buy 100 Homemade Cherry Pie -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="47942" 
+												BuyItemId="8950" 
+												BuyItemCount="100"
+												X="2438.781" Y="-5608.514" Z="419.9876" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+												
+				</If>	<!-- If we don't have Homemade Cherry Pie -->
+	
+			</If>	<!-- If we are Alliance -->
+	
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+	
+				<!-- If we don't have Homemade Cherry Pie -->
+				<If Condition="!HasItem(8950)">
+				
+					<!-- Profile message - We don't have any Homemade Cheery Pie -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Homemade Cheery Pie."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Move to the food vendor -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-7083.726" Y="-1201.636" Z="324.2231" />
+					
+					<!-- Interact with the food vendor and buy 100 Homemade Cherry Pie -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="47942" 
+												BuyItemId="8950" 
+												BuyItemCount="100"
+												X="2438.781" Y="-5608.514" Z="419.9876" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="45000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+												
+				</If>	<!-- If we don't have Homemade Cherry Pie -->
+
+			</If>	<!-- If we are Horde -->
+								
+			<!-- If we do have Homemade Cherry Pie -->
+			<If Condition="HasItem(8950)">
+			
+				<!-- Move to the Iron Summit flight master -->
+				<CustomBehavior File="NoCombatMoveTo"
+								X="-7121.381" Y="-1233.72" Z="290.1036" />
+								
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Homemade Cherry Pie -->
+
+		</If>	<!-- If our level is 62-67 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 60-62 -->
+		<If Condition="Me.Level &gt;= 60 &amp;&amp; Me.Level &lt; 62">
+		
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+			
+				<!-- If we don't have Homemade Cherry Pie -->
+				<If Condition="!HasItem(8950)">
+				
+					<!-- Profile message - We don't have any Homemade Cheery Pie -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Homemade Cheery Pie."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Move to the food vendor -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-7083.726" Y="-1201.636" Z="324.2231" />
+					
+					<!-- Interact with the food vendor and buy 100 Homemade Cherry Pie -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="47942" 
+												BuyItemId="8950" 
+												BuyItemCount="100"
+												X="2438.781" Y="-5608.514" Z="419.9876" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="45000" />	
+
+					<!-- Move to - Thrallmar flight master -->				
+												
+				</If>	<!-- If we don't have Homemade Cherry Pie -->
+	
+			</If>	<!-- If we are Alliance -->
+	
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+	
+				<!-- If we don't have Homemade Cherry Pie -->
+				<If Condition="!HasItem(8950)">
+				
+					<!-- Profile message - We don't have any Homemade Cheery Pie -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Homemade Cheery Pie."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Move to the food vendor -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-7083.726" Y="-1201.636" Z="324.2231" />
+					
+					<!-- Interact with the food vendor and buy 100 Homemade Cherry Pie -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="47942" 
+												BuyItemId="8950" 
+												BuyItemCount="100"
+												X="2438.781" Y="-5608.514" Z="419.9876" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="45000" />	
+
+					<!-- Move to - Thrallmar flight master -->				
+												
+				</If>	<!-- If we don't have Homemade Cherry Pie -->
+
+			</If>	<!-- If we are Horde -->
+	
+			<!-- If we do have Homemade Cherry Pie -->
+			<If Condition="HasItem(8950)">
+			
+				<!-- Move to the Iron Summit flight master -->
+				<CustomBehavior File="NoCombatMoveTo"
+								X="-7121.381" Y="-1233.72" Z="290.1036" />
+								
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Homemade Cherry Pie -->						
+									
+		</If>	<!-- If our level is 60-62 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 58-60 -->
+		<If Condition="Me.Level &gt;= 58 &amp;&amp; Me.Level &lt; 60">
+			
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Smoked Talbuk Venison -->
+				<If Condition="!HasItem(27854)">
+				
+					<!-- Profile message - We don't have any Smoked Talbuk Venison -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Smoked Talbuk Venison."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the Sid Limbardi to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to Sid Limbardi to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Move to - inn - Honor Hold -->
+					<RunTo X="-709.9306" Y="2699.804" Z="94.41746" />
+					
+					<!-- Forced dismount -->
+					<CustomBehavior File="ForcedDismount" />
+
+					<!-- Move inside the inn -->
+					<RunTo X="-708.0077" Y="2736.445" Z="94.73333" />
+					
+					<!-- Interact with Sid Limbardi and buy 100 Smoked Talbuk Venison -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="1"
+												Range="75"
+												MobId="16826" 
+												BuyItemId="27854" 
+												BuyItemCount="40"
+												X="-708.8713" Y="2739.131" Z="94.73372" />
+
+					<!-- Wait timer - wait 30 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="30000" />
+
+					<!-- Move to - Honor Hold flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-668.9916" Y="2718.042" Z="94.38165" />
+					
+				</If>	<!-- If we don't have Smoked Talbuk Venison -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't haveSmoked Talbuk Venison -->
+				<If Condition="!HasItem(27854)">
+				
+					<!-- Profile message - We don't have any Smoked Talbuk Venison -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Smoked Talbuk Venison."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the Floyd Pinkus to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Floyd Pinkus to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Move to - Floyd Pinkus -->
+					<RunTo X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with Floyd Pinkus and buy 100 27854 -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="27854" 
+												BuyItemCount="40"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 30 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="30000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="229.219" Y="2634.052" Z="87.74729" />			
+			
+				</If>	<!-- If we don't have Smoked Talbuk Venison -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we have Smoked Talbuk Venison -->
+			<If Condition="HasItem(27854)">
+
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Smoked Talbuk Venison -->
+			
+		</If>	<!-- If our level is 58-60 -->	
+		
+	</QuestOrder>
+	
+</HBProfile>

@@ -1,0 +1,345 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-M][Solstice][58-90][riding-skill-training]</Name>
+   
+	<MinLevel>58</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>	
+	</ProtectedItems>
+
+	<Factions></Factions>
+	
+	<QuestOrder>
+
+		<!-- If our level is 60-90 -->
+		<If Condition="Me.Level &gt;= 60 &amp;&amp; Me.Level &lt; 90">
+
+			<!-- Profile message - Movement procedures initialized -->			
+			<CustomBehavior File="Message" 
+							Text="Movement procedures initialized." 
+							LogColor="Fuchsia" />
+
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance">
+			
+				<!-- If we are in Northrend -->
+				<If Condition="Me.MapId == 571">
+				
+					<CustomBehavior File="Message" 
+									Text="We are in Northrend." 
+									LogColor="Cyan" />
+
+						
+						
+				</If>	<!-- If we are in Northrend -->
+				
+				
+				<!-- ******************************************************************* -->
+				
+				
+				<!-- If we are in Outland -->
+				<If Condition="Me.MapId == 530">
+				
+					<!-- Profile message - We are in Outland -->
+					<CustomBehavior File="Message" 
+									Text="We are in Outland." 
+									LogColor="Cyan" />
+
+					<!-- Profile message - Moving to the Honor Hold flight master -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Honor Hold flight master."
+									LogColor="Orange" />
+					
+					<!-- Move to - Honor Hold flight master -->	
+					<RunTo X="-673.42" Y="2717.27" Z="94.18" />
+					
+					<!-- Profile message - Moving to the Dark portal -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Dark portal."
+									LogColor="Orange" />
+					
+					<!-- Move to - Dark portal flight master -->
+					<RunTo X="-327.35" Y="1020.49" Z="54.24786" />
+					
+					<!-- Profile message - Moving to the Stormwind portal -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Stormwind portal."
+									LogColor="Orange" />
+					
+					<!-- Move to - Stormwind portal -->
+					<RunTo X="-337.6065" Y="966.8323" Z="54.28506" />
+					
+					<!-- Custom behavior - Interactwith - Stormwind portal -->
+					<CustomBehavior File="InteractWith" 
+									MobId="195139" 
+									ObjectType="Gameobject"
+									Range="4.75" 
+									NumOfTimes="1"  
+									X="-337.4917" Y="962.618835" Z="54.2885323" />
+					
+					<!-- Profile message - Waiting 10 seconds for the game to load  -->
+					<CustomBehavior File="Message" 
+									Text="Waiting 10 seconds for the game to load."
+									LogColor="Orange" />
+					
+					<!-- Wait timer - wait 10 seconds - lag delay -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="10000" />
+					
+					<!-- Profile message - Moving to the Stormwind riding trainer -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Stormwind riding trainer."
+									LogColor="Orange" />
+					
+					<!-- Move to - Mage Tower ramp -->
+					<RunTo X="-8983.818" Y="864.348" Z="123.8877" />
+					
+					<!-- CTM to - off the Mage Tower ramp -->
+					<CustomBehavior File="MyCTM" 
+									X="-8951.183" Y="863.0986" Z="104.8665" />
+					
+					<!-- Move to - Stormwind riding trainer -->
+					<RunTo X="-8849.103" Y="499.1975" Z="109.6061" />	
+							
+				</If>	<!-- If we are in Outland -->
+				
+				
+				<!-- ******************************************************************* -->
+				
+				
+				<!-- If we are in Kalimdor -->
+				<If Condition="Me.MapId == 571">
+				
+					<CustomBehavior File="Message" 
+									Text="We are in Kalimdor." 
+									LogColor="Cyan" />
+
+						
+						
+				</If>	<!-- If we are in Kalimdor -->
+				
+				
+				<!-- ******************************************************************* -->
+				
+				
+				<!-- If we are in Eastern Kingdoms, but not in Stormwind -->
+				<If Condition="Me.MapId == 0">
+				
+					<CustomBehavior File="Message" 
+									Text="We are in Eastern Kingdoms, but not in Stormwind." 
+									LogColor="Cyan" />
+									
+					<!-- Profile message - Moving to the Stormwind riding trainer -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Stormwind riding trainer."
+									LogColor="Orange" />
+					
+					<!-- Move to - Stormwind riding trainer -->
+					<RunTo X="-8841.06" Y="489.656" Z="109.607" />					
+	
+				</If>	<!-- If we are in Eastern Kingdoms, but not in Stormwind -->
+
+			</If>	<!-- If we are Alliance -->
+
+			
+			<!-- ************************************************************ Horde ********************************************************************** -->
+			
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde">
+			
+				<!-- If we are in Northrend -->
+				<If Condition="Me.MapId == 571">
+				
+					<CustomBehavior File="Message" 
+									Text="We are in Northrend." 
+									LogColor="Cyan" />
+
+				
+						
+				</If>	<!-- If we are in Northrend -->
+				
+				
+				<!-- ******************************************************************* -->
+				
+				
+				<!-- If we are in Outland -->
+				<If Condition="Me.MapId == 530">
+				
+					<!-- Profile message - We are in Outland -->
+					<CustomBehavior File="Message" 
+									Text="We are in Outland." 
+									LogColor="Cyan" />
+
+					<!-- Profile message - Moving to the Thrallmar flight master -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Thrallmar flight master."
+									LogColor="Orange" />
+					
+					<!-- Move to - Thrallmar flight master -->	
+					<RunTo X="228.5" Y="2633.57" Z="87.66663" />
+					
+					<!-- Profile message - Moving to the Dark portal -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Dark portal."
+									LogColor="Orange" />
+					
+					<!-- Move to - Dark portal flight master -->
+					<RunTo X="-178.09" Y="1026.72" Z="54.19" />
+					
+					<!-- Profile message - Moving to the Orgrimmar portal -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Orgrimmar portal."
+									LogColor="Orange" />
+					
+					<!-- Move to - Orgrimmar portal -->
+					<RunTo X="-161.5322" Y="969.4727" Z="54.28319" />
+					
+					<!-- Custom behavior - Interactwith - Orgrimmar portal -->
+					<CustomBehavior File="InteractWith" 
+									MobId="195140" 
+									ObjectType="Gameobject"
+									Range="4.75" 
+									NumOfTimes="1"  
+									X="-161.317764" Y="965.409851" Z="54.29044" />
+					
+					<!-- Profile message - Waiting 10 seconds for the game to load  -->
+					<CustomBehavior File="Message" 
+									Text="Waiting 10 seconds for the game to load."
+									LogColor="Orange" />
+					
+					<!-- Wait timer - wait 10 seconds - lag delay -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="10000" />
+					
+					<!-- Profile message - Moving to the Valley of Strength -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Valley of Strength."
+									LogColor="Orange" />
+					
+					<!-- Move to - The Valley of Strength -->
+					<RunTo X="1709.422" Y="-4313.744" Z="31.33597" />
+										
+					<!-- Profile message - Moving to the Orgrimmar riding trainer -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Orgrimmar riding trainer."
+									LogColor="Orange" />					
+										
+					<!-- Move to - Orgrimmar riding trainer -->
+					<RunTo X="1796.897" Y="-4361.134" Z="102.4855" />	
+												
+				</If>	<!-- If we are in Outland -->
+				
+				
+				<!-- ******************************************************************* -->
+				
+				
+				<!-- If we are in Eastern Kingdoms -->
+				<If Condition="Me.MapId == 0">
+				
+					<CustomBehavior File="Message" 
+									Text="We are in Eastern Kingdoms." 
+									LogColor="Cyan" />
+									
+					<!-- Move to - Undercity zeppelin -->				
+					<RunTo X="2066.09" Y="288.9603" Z="97.03149" />				
+	
+					<!-- Forced dismount -->		
+					<CustomBehavior File="ForcedDismount" />
+
+					<!-- Custom behavior - UseTransport - move to Orgrimmar -->
+					<CustomBehavior File="UseTransport" 
+									TransportId="164871" 
+									WaitAtX="2066.09" 
+									WaitAtY="288.9603" 
+									WaitAtZ="97.03149"								
+									TransportStartX="2062.376" 
+									TransportStartY="292.998" 
+									TransportStartZ="114.973"								
+									StandOnX="2068.133" 
+									StandOnY="295.2583" 
+									StandOnZ="97.24683"
+									TransportEndX="1833.509" 
+									TransportEndY="-4391.543" 
+									TransportEndZ="152.7679"	
+									GetOffX="1847.108" 
+									GetOffY="-4397.473" 
+									GetOffZ="135.2055" />	
+								
+					<!-- Run to the center of the deck -->
+					<RunTo X="1847.108" Y="-4397.473" Z="135.2055" />				
+
+					<!-- Move to riding trainer -->
+					<RunTo X="1802.374" Y="-4368.528" Z="102.6684" />	
+						
+				</If>	<!-- If we are in Eastern Kingdoms -->
+				
+				
+				<!-- ******************************************************************* -->
+				
+				
+				<!-- If we are in Kalimdor, but not in Orgrimmar -->
+				<If Condition="Me.MapId == 571">
+				
+					<CustomBehavior File="Message" 
+									Text="We are in Kalimdor, but not in Orgrimmar." 
+									LogColor="Cyan" />
+
+						
+						
+				</If>	<!-- If we are in Kalimdor, but not in Orgrimmar -->
+				
+			</If>	<!-- If we are Horde -->
+			
+				
+			<!-- ******************************************************************* -->
+				
+				
+			<!-- If we are in Stormwind or Orgrimmar -->
+			<If Condition="Me.ZoneId == 1519 || Me.ZoneId == 1637">
+			
+				<!-- Profile message - We are in Stormwind or Orgrimmar -->
+				<CustomBehavior File="Message" 
+									Text="We are in Stormwind or Orgrimmar."  
+									LogColor="Orange" />
+				
+				<!-- Custom behavior - LoadProfile - Vendors\[QO-N][Solstice][58-90][riding-skill-training] -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="Vendors\[QO-N][Solstice][58-90][riding-skill-training]" />
+										
+			</If>	<!-- If we are in Stormwind or Orgrimmar -->
+	
+		</If>	<!-- If our level is 60-90 -->			
+
+	</QuestOrder>
+	
+</HBProfile>

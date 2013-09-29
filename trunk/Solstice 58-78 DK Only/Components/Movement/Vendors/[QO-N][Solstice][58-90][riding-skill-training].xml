@@ -1,0 +1,302 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][Solstice][58-90][riding-skill-training]</Name>
+   
+	<MinLevel>58</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>	
+	</ProtectedItems>
+
+	<Factions></Factions>
+	
+	<QuestOrder>
+
+		<!-- If our level is 60-90 -->
+		<If Condition="Me.Level &gt;= 60 &amp;&amp; Me.Level &lt; 90">
+			
+			<!-- If our riding skill is less than 225 -->
+			<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt; 225">
+
+				<!-- If we are Horde -->
+				<If Condition="Me.IsHorde">
+
+					<!-- Profile message - Moving to the riding trainer --> 
+					<CustomBehavior File="Message" 
+									Text="Moving to the riding trainer." 
+									LogColor="Cyan" />
+		
+					<!-- Move to riding trainer -->
+					<RunTo X="1802.374" Y="-4368.528" Z="102.6684" />
+					
+					<!-- Turn in flight quest -->
+					<If Condition="((HasQuest(32674)) &amp;&amp; (IsQuestCompleted(32674)))" >
+						<TurnIn QuestName="I Believe You Can Fly" 
+								QuestId="32674" 
+								TurnInName="Maztha" 
+								TurnInId="44919" />
+					</If> <!-- Turn in flight quest -->
+		
+					<!-- Interact with - Maztha -->
+					<CustomBehavior File="InteractWith" 
+									MobId="44919" 
+									WaitTime="1000"
+									CollectionDistance="50" 
+									X="1799.54" Y="-4357.09" Z="102.4019" />
+									
+					<!-- Train expert riding skill -->				
+					<CustomBehavior File="ForceTrainRiding" 
+									MobId="44919" />
+
+					<!-- Move to the flight master -->
+					<RunTo X="1802.141" Y="-4366.25" Z="102.5628" />
+					
+					<!-- Profile message - Moving to the mount vendor -->
+					<CustomBehavior File="Message" 
+									Text="Moving to Drakma."
+									LogColor="Orange" />
+				
+					<!-- Move to - Drakma -->
+					<RunTo X="1808.416" Y="-4344.173" Z="102.131" />
+			
+					<!-- Interact with Drakma and buy a Green Wind Rider -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												Range="75"
+												MobId="44918" 
+												BuyItemId="25476" 
+												BuyItemCount="1"
+												X="1806.94" Y="-4340.67" Z="102.0503" />
+
+					<!-- Custom behavior - Misc/RunLua - equip the Green Wind Rider -->
+					<CustomBehavior File="Misc\RunLua" 
+									Lua="UseItemByName(25476)" 
+									WaitTime="1000" />
+						
+					<!-- Move to the flight master -->
+					<RunTo X="1802.141" Y="-4366.25" Z="102.5628" /> 
+					
+				</If> <!-- If we are Horde -->	
+				
+				
+				<!-- **************************************************************************************** -->
+				
+				
+				<!-- If we are Alliance -->
+				<If Condition="Me.IsAlliance">
+				
+					<!-- Profile message - Moving to the riding trainer --> 
+					<CustomBehavior File="Message" 
+									Text="Moving to the riding trainer." 
+									LogColor="Cyan" />
+					
+					<!-- Move to riding trainer -->
+					<RunTo X="-8841.06" Y="489.656" Z="109.607" />	
+								
+					<If Condition="((HasQuest(32675)) &amp;&amp; (IsQuestCompleted(32675)))" >
+					
+						<TurnIn QuestName="I Believe You Can Fly" 
+								QuestId="32675" 
+								TurnInName="" 
+								TurnInId="43769" />
+								
+					</If> <!-- Turn in flight quest -->			
+								
+					<!-- Move to - away from the questgiver -->
+					<RunTo X="-8856.547" Y="494.4493" Z="109.6052" />			
+								
+					<!-- Interact with - Bralla Cloudwing -->
+					<CustomBehavior File="InteractWith" 
+									MobId="43769" 
+									WaitTime="1000"
+									CollectionDistance="50" 
+									X="-8845.4" Y="502.653" Z="109.617" />
+												
+					<!-- Train expert riding skill -->				
+					<CustomBehavior File="ForceTrainRiding" 
+									MobId="43769" />
+									
+					<!-- Move to the flight master -->				
+					<RunTo X="-8838.103" Y="487.391" Z="109.6082" />
+					
+					<!-- Move to - Tannec Stonebeak -->
+						<RunTo X="-8831.157" Y="480.9298" Z="109.6124" />
+				
+					<!-- Interact with Drakma and buy a Green Wind Rider -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												Range="75"
+												MobId="43768" 
+												BuyItemId="25472" 
+												BuyItemCount="1"
+												X="-8829.18" Y="482.34" Z="109.6165" />
+
+					<!-- Move to - away from the vendor -->
+					<RunTo X="-8841.869" Y="471.8244" Z="109.6148" />						
+												
+					<!-- Custom behavior - Misc/RunLua - equip the Green Wind Rider -->
+					<CustomBehavior File="Misc\RunLua" 
+									Lua="UseItemByName(25472)" 
+									WaitTime="1000" />
+			
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+					
+				</If> <!-- If we are Alliance -->
+
+				<!-- If our riding skill is 225 or greater -->
+				<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &gt;= 225" >
+				
+					<!-- Profile message - We have learned Expert Riding -->
+					<CustomBehavior File="Message" 
+											Text="We have learned Expert Riding." 
+											LogColor="Orange" />
+											
+					<!-- Custom behavior - LoadProfile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+					<CustomBehavior File="LoadProfile" 
+											ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />						
+						
+				</If>	<!-- If our riding skill is 225 or greater -->	
+				
+			</If>	<!-- If our riding skill is less than 225 -->
+
+		</If>	<!-- If our level is 60-90 -->
+
+		
+		<!-- ********************************************************************************************************************************** -->
+		
+		
+		<!-- If our level is 78-90 -->
+		<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 90">
+		
+			<!-- If we don't have Cold Weather Flying -->
+			<If Condition="!HasSpell(54197)" >
+
+				<!-- If we are Horde -->
+				<If Condition="Me.IsHorde">
+
+					<!-- Profile message - Moving to the riding trainer --> 
+					<CustomBehavior File="Message" 
+									Text="Moving to the riding trainer." 
+									LogColor="Cyan" />
+		
+					<!-- Move to riding trainer -->
+					<RunTo X="1802.374" Y="-4368.528" Z="102.6684" />
+					
+					<!-- Turn in flight quest -->
+					<If Condition="((HasQuest(32674)) &amp;&amp; (IsQuestCompleted(32674)))" >
+						<TurnIn QuestName="I Believe You Can Fly" 
+								QuestId="32674" 
+								TurnInName="Maztha" 
+								TurnInId="44919" />
+					</If> <!-- Turn in flight quest -->
+		
+					<!-- Interact with - XXXXXXXXXXXXXX -->
+					<CustomBehavior File="InteractWith" 
+									MobId="44919" 
+									WaitTime="1000"
+									CollectionDistance="50" 
+									X="1799.54" Y="-4357.09" Z="102.4019" />
+									
+					<!-- Train expert riding skill -->				
+					<CustomBehavior File="ForceTrainRiding" 
+									MobId="44919" />
+									
+					<!-- Move to the flight master -->
+					<RunTo X="1801.847" Y="-4366.449" Z="102.5676" />
+
+				</If>	<!-- If we are Horde -->
+				
+				<!-- If we are Alliance -->
+				<If Condition="Me.IsAlliance">
+				
+					<!-- Profile message - Moving to the riding trainer --> 
+					<CustomBehavior File="Message" 
+									Text="Moving to the riding trainer." 
+									LogColor="Cyan" />
+					
+					<!-- Move to riding trainer -->
+					<RunTo X="-8847.744" Y="500.6151" Z="109.6094" />	
+								
+					<!-- Interact with - XXXXXXXXXXXXXX -->
+					<CustomBehavior File="InteractWith" 
+									MobId="43769" 
+									WaitTime="1000"
+									CollectionDistance="50" 
+									X="-8845.4" Y="502.653" Z="109.617" />
+												
+					<!-- Train expert riding skill -->				
+					<CustomBehavior File="ForceTrainRiding" 
+									MobId="44919" />
+									
+					<!-- Move to the flight master -->				
+
+				</If> <!-- If we are Alliance -->
+					
+				<!-- If we do have Cold Weather Flying -->
+				<If Condition="HasSpell(54197)" >
+				
+					<!-- Profile message - We have learned Expert Riding -->
+					<CustomBehavior File="Message" 
+											Text="We have learned Cold Weather Flying." 
+											LogColor="Orange" />
+											
+				</If>	<!-- If we do have Cold Weather Flying -->	
+				
+			</If>	<!-- If we don't have Cold Weather Flying -->
+			
+			<!-- If we are done, load the weapon enchant profile -->
+			<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &gt;= 225">
+			
+				<!-- Load profile - [QO-N][Solstice][58-90][weapon-enchant] -->
+				<CustomBehavior File="LoadProfile" 
+									ProfileName="[QO-N][Solstice][58-90][weapon-enchant]" />
+		
+				<!-- Else our riding skill is => 225 -->
+				<Else>
+				
+					<!-- Profile message - We did not train our Riding skill for some reason. Stopping the bot --> 
+					<CustomBehavior File="Message" 
+									Text="We did not train our Riding skill for some reason. Stopping the bot." 
+									LogColor="Orange" />
+									
+					<CustomBehavior File="UserSettings" StopBot="true" />				
+				
+				</Else>
+		
+			</If>	<!-- If our riding skill is less than 225 -->
+			
+		</If>	<!-- If our level is 68-90 -->
+		
+	</QuestOrder>
+
+</HBProfile>

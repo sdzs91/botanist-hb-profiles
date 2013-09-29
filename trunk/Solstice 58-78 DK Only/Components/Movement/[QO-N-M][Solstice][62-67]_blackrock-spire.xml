@@ -1,0 +1,422 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-M][Solstice][62-67]_blackrock-spire</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>	
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-7120.994" Y="-1208.281" Z="299.876" Radius="6" />
+		<Blackspot X="-7119.151" Y="-1225.816" Z="290.3206" Radius="3" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+
+	<Factions>
+	</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+		<!-- Level check -->
+		<If Condition="Me.Level &gt;= 62">
+							
+			<!-- Profile message - Movement procedures initialized -->			
+			<CustomBehavior File="Message" 
+							Text="Movement procedures initialized." 
+							LogColor="Fuchsia" />				
+							
+			<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							FindVendorsAutomatically="False"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootChests="False"
+							LootMobs="False"
+							LootRadius="1"
+							MountDistance="75"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							PullDistance="45"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseFlightPaths="True"
+							UseMount="True" 
+							UseRandomMount="False" />
+							
+			<!-- If we are in Outlands, move to Stormwind/Orgrimmar -->				
+			<If Condition="Me.MapId == 530" >	
+
+				<!-- Profile message - We are in Outlands. Moving to Stormwind/Orgrimmar -->
+				<CustomBehavior File="Message" 
+								Text="We are in Outlands. Moving to Stormwind/Orgrimmar" 
+								LogColor="Cyan" />
+								
+				<!-- If we are Alliance -->
+				<If Condition="Me.IsAlliance">
+					
+					<!-- Move to Honor Hold and fly to the Dark portal -->
+					<RunTo X="-673.42" Y="2717.27" Z="94.18" />
+					
+					<!-- Use the flight master to fly to the Dark portal -->
+					<RunTo X="-327.35" Y="1020.49" Z="54.24791" />
+					
+					<!-- Move to the Stormwind portal -->
+					<RunTo X="-337.2882" Y="965.1047" Z="54.27977" />
+					
+					<!-- Interact with the Stormwind portal -->
+					<CustomBehavior File="InteractWith" MobId="195139" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-337.4917" Y="962.618835" Z="54.2885323" />
+				</If>		
+				
+				<!-- If we are Horde -->			
+				<If Condition="Me.IsHorde">		
+				
+					<!-- Move to Thrallmar and fly to the Dark portal -->
+					<Runto X="220.9109" Y="2639.406" Z="87.91273" />
+					
+					<!-- Use the flight master to fly to the Dark portal -->
+					<Runto X="-179.2556" Y="1027.916" Z="54.17752" />
+					
+					<!-- Move to the Ogrimmar portal -->
+					<Runto X="-160.91" Y="967.9704" Z="54.28086" />
+					
+					<!-- Interact with the portal -->
+					<CustomBehavior File="Message" Text="Taking the portal to Orgrimmar." LogColor="Cyan" />	
+					<CustomBehavior File="InteractWith" MobId="195140" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="-161.317764" Y="965.409851" Z="54.29044" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />	
+				</If>						
+			</If>								
+							
+			<!-- If we are in Kalimdor -->
+			<If Condition="Me.MapId == 1" >
+			
+				<!-- If we are Alliance -->
+				<If Condition="Me.IsAlliance">
+				
+					<!-- Profile message - Alliance must start this profile from Eastern Kingdoms -->
+					<CustomBehavior File="Message" 
+								Text="Alliance must start this profile from Eastern Kingdoms. Stopping the bot" 
+								LogColor="Cyan" />
+					
+					<!-- Usersettings - stopbot -->					
+					<CustomBehavior File="UserSettings" StopBot="true" />
+					
+				</If>	<!-- If we are Alliance -->
+				
+				<!-- We are Horde -->
+				<If Condition="Me.IsHorde">
+				
+					<!-- Profile message - e are in Kalimdor -->
+					<CustomBehavior File="Message" 
+									Text="We are in Kalimdor." 
+									LogColor="Cyan" />
+							
+					<!-- Profile message - We are on the wrong continent. Moving to Blackrock Mountain in Eastern Kingdoms -->
+					<CustomBehavior File="Message" 
+									Text="We are on the wrong continent. Moving to Blackrock Mountain in Eastern Kingdoms." 
+									LogColor="Cyan" />		
+
+					<!-- Move to - Orgrimmar zeppelin to Grom'gol -->
+					<RunTo X="1868.09" Y="-4417.422" Z="135.232" />				
+			
+					<!-- Forced dismount -->		
+					<CustomBehavior File="ForcedDismount" />						
+									
+					<!-- Profile message - Waiting for the zeppelin -->
+					<CustomBehavior File="Message" 
+									Text="Waiting for the zeppelin." 
+									LogColor="Cyan" />
+									
+					<!-- Custom behavior - UseTransport - move to Grom'gol -->				
+					<CustomBehavior File="UseTransport" 
+						TransportId="175080" 
+						WaitAtX="1868.477" 
+						WaitAtY="-4418.234" 
+						WaitAtZ="135.2331"								
+						TransportStartX="1880.818" 
+						TransportStartY="-4435.269" 
+						TransportStartZ="152.8608"								
+						StandOnX="1874.312" 
+						StandOnY="-4423.42" 
+						StandOnZ="135.1067"
+						TransportEndX="-12464.34" 
+						TransportEndY="233.1597" 
+						TransportEndZ="49.53437"	
+						GetOffX="-12448.95" 
+						GetOffY="217.8102" 
+						GetOffZ="31.58583" />	
+						
+					<!-- Wait timer - Waiting 3 seconds - safety -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />	
+						
+					<!-- Profile message - Moving to the flight master -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the flight master." 
+									LogColor="Cyan" /> 
+									
+					<!-- Move to - Grom'gol flight master -->
+					<RunTo X="-12414.2" Y="146.29" Z="3.266916" />
+					
+					<!-- Profile message - Moving to the flight master -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Iron Summit flight master." 
+									LogColor="Cyan" />
+									
+					<!-- Move to - Iron Summit flight master -->
+					<RunTo X="-7123.06" Y="-1236.63" Z="290.131" />
+					
+				</If> 	<!-- We are horde in Kalimdor -->	
+				
+			</If> 	<!-- If we are in Kalimdor -->
+			
+			<!-- If we are inside Blackrock Depths -->
+			<If Condition="Me.ZoneId == 1584">
+
+				<CustomBehavior File="Message" 
+								Text="Blackrock Depths detected. Running out."
+								LogColor="Cyan" />
+				
+				<!-- If we are north of the 2nd mole machine -->
+				<If Condition="Me.X &gt; 900" >
+					
+					<!-- Run to the 2nd mole machine -->
+					<RunTo X="932.7762" Y="-286.2478" Z="-49.93694" />
+					
+					<!-- Interact with the 2nd mole machine -->		
+					<CustomBehavior File="InteractWith" 
+									MobId="207402" 
+									ObjectType="Gameobject" 
+									GossipOptions="1" 
+									Range="4.75" 
+									NumOfTimes="1"  
+									WaitTime="1" X="933.2972" Y="-290.390167" Z="-49.9389954" />
+				
+				</If>					
+
+				<!-- Move to the zone in location -->
+				<RunTo X="456.929" Y="34.0923" Z="-69.56171" />
+				
+				<!-- Go through the portal -->
+				<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
+				
+				<!-- Move to the zone out location -->
+				<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+
+				<!-- Profile message - Waiting 3 seconds - Bag and durability check -->
+				<CustomBehavior File="Message" 
+								Text="Waiting 3 seconds - Bag and durability check."  
+								LogColor="Orange" />
+				
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />
+				
+				<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+				<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+											
+					<!-- Load profile - [QO-N][Solstice][58-90][repair-mail] -->
+					<CustomBehavior File="LoadProfile" 
+												ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][repair-mail]" />
+
+				</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+
+				<!-- Profile message - Waiting 3 seconds - Food check - Homemade Cherry Pie -->
+				<CustomBehavior File="Message" 
+								Text="Waiting 3 seconds - Food check - Homemade Cherry Pie."  
+								LogColor="Orange" />
+				
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />
+
+				<!-- If we don't have any Homemade Cherry Pie -->
+				<If Condition="!HasItem(8950)">
+				
+					<!-- Load profile - Custom behavior - LoadProfile - [QO-N][Solstice][58-90][repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+												ProfileName="Vendors\[QO-N][Solstice][58-90][repair-mail]" />
+				
+				</If>	<!-- If we don't have any Homemade Cherry Pie -->
+	
+	
+				<!-- Profile message - All checks complete -->
+				<CustomBehavior File="Message" 
+								Text="All checks complete."  
+								LogColor="Orange" />
+	
+				<!-- Profile message - Moving to Blackrock Spire -->
+				<CustomBehavior File="Message" 
+									Text="Moving to Blackrock Spire." 
+									LogColor="Cyan" />
+
+				<!-- Move to BRS -->
+				<RunTo X="-7482.167" Y="-1163.467" Z="277.9067" />
+									
+				<CustomBehavior File="MyCTM" X="-7470.056" Y="-1164.558" Z="273.2744" />
+				<CustomBehavior File="MyCTM" X="-7469.265" Y="-1186.581" Z="273.9157" />
+				<CustomBehavior File="MyCTM" X="-7480.061" Y="-1194.603" Z="278.3599" />
+				<CustomBehavior File="MyCTM" X="-7501.622" Y="-1200.502" Z="281.8502" />
+				<CustomBehavior File="MyCTM" X="-7517.264" Y="-1210.495" Z="290.9408" />
+				<CustomBehavior File="MyCTM" X="-7530.776" Y="-1209.405" Z="285.4507" />
+				<CustomBehavior File="MyCTM" X="-7534.965" Y="-1214.374" Z="285.4137" />
+				
+				<!-- Moving to the instance box -->
+				<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
+				
+			</If> <!-- If we are inside Blackrock Depths -->
+			
+			<!-- If we are in Eastern Kingdoms -->
+			<If Condition="Me.MapId == 0">
+				<CustomBehavior File="Message" 
+								Text="We are in Eastern Kingdoms." 
+								LogColor="Cyan" />
+
+				<!-- If our hearthstone is set here, use it -->
+				<If Condition="Me.HearthstoneAreaId == 5628" >
+				
+					<CustomBehavior File="Message" 
+									Text="Our Innkeeper is set at Iron Summit." 
+									LogColor="Cyan" />
+										
+					<!-- Our hearth isn't set to Iron Summit -->
+					<Else>
+						<CustomBehavior File="Message" 
+										Text="Our Hearthstone isn't set in the proper location. Moving to set it." 
+										LogColor="Cyan" />
+				
+						<CustomBehavior File="Message" 
+										Text="Moving to Iron Summit." 
+										LogColor="Cyan" />
+										
+						<!-- Run to the innkeep in Iron Summit -->
+						<Runto X="-7083.119" Y="-1201.846" Z="324.2862" />
+						
+						<CustomBehavior File="ForcedDismount" />
+						
+						<!-- Set hearthstone -->
+						<CustomBehavior File="Message" 
+										Text="Setting my Hearthstone." 
+										LogColor="Cyan" />
+										
+						<!-- Set hearthstone -->				
+						<CustomBehavior File="SetHearthstone" 
+										MobId="47942" 
+										X="-7085.53" Y="-1202.19" Z="323.9885" />
+										
+					</Else>		<!-- Our hearth isn't set to Iron Summit -->
+					
+				</If>	<!-- If our hearthstone is set here, use it -->
+
+				<!-- Not in the BRD instance box -->
+				<If Condition="Me.X &gt; -7500 || Me.X &lt; -7550 || Me.Y &lt; -1260 || Me.Y &gt; -1200" >
+					<CustomBehavior File="Message" 
+									Text="We are not in the instance box." 
+									LogColor="Cyan" />
+
+					<!-- If we aren't in Blackrock Mountain or Searing Gorge -->
+					<If Condition="Me.ZoneId != 51 || Me.ZoneId != 25 || ">
+
+						<!-- Run to Iron Summit flight master -->
+						<RunTo X="-7123.06" Y="-1236.63" Z="290.131" />
+						
+					</If>	<!-- If we aren't in Blackrock Mountain or Searing Gorge -->
+					
+					<!-- If we have less then 15 empty bag slots or our durability is less than 30% -->
+					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					
+						<!-- Load profile - Vendors\[QO-N][Solstice][58-90][repair-mail] -->
+							<CustomBehavior File="LoadProfile" 
+													ProfileName="Vendors\[QO-N][Solstice][58-90][repair-mail]" />
+					
+					</If>	<!-- If we have less then 15 empty bag slots or our durability is less than 30% -->
+					
+					<!-- If we don't have any Homemade Cherry Pie -->
+					<If Condition="!HasItem(8950)">
+			
+					<!-- Load profile - Vendors\[QO-N][Solstice][58-90][repair-mail] -->
+					<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\[QO-N][Solstice][58-90][repair-mail]" />
+			
+					</If>	<!-- If we don't have any Homemade Cherry Pie -->
+														
+					<!-- Profile message - Moving to Blackrock Spire -->					
+					<CustomBehavior File="Message" 
+									Text="Moving to Blackrock Spire." 
+									LogColor="Cyan" />
+							
+					<!-- Forced ground mount -->
+					<CustomBehavior File="ForcedMount"
+									MountType="Ground" />
+					
+					<!-- Move to - exit of Iron Summit -->
+					<RunTo X="-7108.294" Y="-1296.693" Z="261.7335" />		
+
+					<!-- Move to end of chain -->
+					<CustomBehavior File="NoCombatMoveTo" X="-7501.785" Y="-1152.014" Z="269.5282" />
+					<CustomBehavior File="NoCombatMoveTo" X="-7496.333" Y="-1158.112" Z="271.9786" />
+					<CustomBehavior File="MyCTM" X="-7482.119" Y="-1163.4" Z="277.913" />
+					<CustomBehavior File="MyCTM" X="-7466.77" Y="-1164.503" Z="273.4051" />
+					<CustomBehavior File="MyCTM" X="-7469.265" Y="-1186.581" Z="273.9157" />
+					<CustomBehavior File="MyCTM" X="-7480.061" Y="-1194.603" Z="278.3599" />
+					<CustomBehavior File="MyCTM" X="-7501.622" Y="-1200.502" Z="281.8502" />
+					<CustomBehavior File="MyCTM" X="-7517.264" Y="-1210.495" Z="290.9408" />
+					<CustomBehavior File="MyCTM" X="-7530.776" Y="-1209.405" Z="285.4507" />
+					<CustomBehavior File="MyCTM" X="-7534.965" Y="-1214.374" Z="285.4137" />
+					
+					<!-- Moving to the instance box -->
+					<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
+					
+				</If>	<!-- Not in the BRD instance box -->
+				
+				<!-- Inside the instance box, load the profile -->
+				<If Condition="Me.X &lt; -7500 &amp;&amp; Me.X &gt; -7550 &amp;&amp; Me.Y &gt; -1260 &amp;&amp; Me.Y &lt; -1200" >
+					<CustomBehavior File="Message" 
+									Text="We are in the box." 
+									LogColor="Cyan" />
+					
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="..\[QO-N][Solstice][62-67]_blackrock-spire" />
+				</If> <!-- Load profile -->
+				
+			</If> <!-- Eastern Kingdoms -->
+			
+		</If> <!-- Level check -->
+	</QuestOrder>
+</HBProfile>
+

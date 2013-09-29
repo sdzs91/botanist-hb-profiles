@@ -1,0 +1,326 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+<Name>[QO-N][Solstice][58-90][weapon-enchant]</Name>
+
+<MinLevel>1</MinLevel>
+<MaxLevel>151</MaxLevel>
+
+<MinDurability>-1</MinDurability>
+<MinFreeBagSlots>-1</MinFreeBagSlots>
+
+<MailGrey>False</MailGrey>
+<MailWhite>False</MailWhite>
+<MailGreen>False</MailGreen>
+<MailBlue>False</MailBlue>
+<MailPurple>False</MailPurple>
+
+<SellGrey>False</SellGrey>
+<SellWhite>False</SellWhite>
+<SellGreen>False</SellGreen>
+<SellBlue>False</SellBlue>
+<SellPurple>False</SellPurple>
+
+<TargetElites>False</TargetElites>
+
+<AvoidMobs>		 
+</AvoidMobs>
+
+<Blackspots>
+</Blackspots>
+
+<Mailboxes>
+</Mailboxes>
+
+<Vendors>
+</Vendors>
+
+<ProtectedItems>	
+</ProtectedItems>
+
+<ClearVendor />
+<ClearMailbox />
+	
+	<QuestOrder>
+	
+	<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						AdvancedSettingsMode="True"
+						FindMountAutomatically="True"
+						FindVendorsAutomatically="False"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="True"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootChests="False"
+						LootMobs="False"
+						LootRadius="1"
+						MountDistance="10"
+						MountName=""
+						NinjaSkin="False"
+						ProfileDebuggingMode="False"
+						PullDistance="1"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseFlightPaths="True"
+						UseMount="True" 
+						UseRandomMount="False" />
+
+		<!-- If we are a Death Knight -->
+		<If Condition="(Me.Class == WoWClass.DeathKnight)" >
+		
+			<!-- Profile message - We are a Death Knight. Opening Deaths Gate so we can enchant our weapon -->
+			<CustomBehavior File="Message" 
+							Text="We are a Death Knight. Opening a Death Gate so we can enchant our weapon." 
+							LogColor="Orange" />
+		
+			<!-- Custom behavior - Jumpforward -->
+			<CustomBehavior File="Misc\JumpForward" />
+		
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+		
+			<!-- Cast - Death Gate -->
+			<CustomBehavior File="RunMacro" 
+							Macro="/cast Death Gate" />	
+							
+			<!-- Wait timer - wait 12 seconds for the gate to open -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="12000" />
+			
+			<!-- Interact with the Death Gate -->						
+			<CustomBehavior File="InteractWith" 
+							MobId="190942" 
+							ObjectType="Gameobject" 
+							Range="25" 
+							NumOfTimes="1" 
+							WaitTime="1" />
+			
+			<!-- Wait timer - wait 10 seconds for the game to load -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="10000" />
+							
+			<!-- Profile message - Moving to the portal -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the portal." 
+							LogColor="Orange" />				
+							
+			<!-- Move to - base of the stairs -->
+			<CustomBehavior File="NoCombatMoveTo"
+							X="2392.35" Y="-5649.685" Z="379.3205" />
+							
+			<!-- Move to - jump - pivot location -->				
+			<CustomBehavior File="NoCombatMoveTo"
+							X="2421.825" Y="-5627.245" Z="376.0217" />
+
+			<!-- Move to - align our jump location -->				
+			<CustomBehavior File="NoCombatMoveTo"
+							X="2414.727" Y="-5629.233" Z="376.9042" />				
+							
+			<!-- Custom behavior - Jumpforward -->
+							<CustomBehavior File="Misc\JumpForward" />				
+							
+			<!-- Wait timer - wait 10 second - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="10000" />
+
+			<!-- Profile message - Moving to the Runeforge -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Runeforge." 
+							LogColor="Orange" />				
+							
+			<!-- Move to - forge -->
+			<CustomBehavior File="NoCombatMoveTo" 
+							X="2489.72" Y="-5637.246" Z="420.6439" />
+						
+			<!-- Custom behavior - macro - cast Runeforging-->
+			<CustomBehavior File="RunMacro" 
+							Macro="/cast Runeforging" />
+			
+			<!-- Wait timer - wait 1 second - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+
+			<!-- If we have Aura of Spellshattering -->
+			<If  Condition="Me.HasAura(53362)" >
+			
+				<!-- Profile message - Our weapon is enchanted -->
+				<CustomBehavior File="Message" 
+								Text="Our weapon is enchanted." 
+								LogColor="Orange" />
+			
+				<Else>
+
+					<!-- If we have the Great Sword of the Ebon Blade -->
+					<If  Condition="HasItem(38632)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - Moving to the Runeforge -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Greatsword of the Ebon Blade as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging-TradeSkillId = 53428, SpellId=53342 (Rune of Spellshattering), on Greatsword of the Ebon Blade -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="38632" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Great Sword of the Ebon Blade -->	
+
+					<!-- If we have the Skeletal Broadsword -->
+					<If  Condition="HasItem(25158)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - Moving to the Runeforge -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Skeletal Broadsword as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging-TradeSkillId = 53428, SpellId=53342 (Rune of Spellshattering), on Greatsword of the Ebon Blade -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="25158" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Skeletal Broadsword -->
+					
+					<!-- If we have the Blade of Misfortune -->
+					<If  Condition="HasItem(31134)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - Moving to the Runeforge -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Blade of Misfortune as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging-TradeSkillId = 53428, SpellId=53342 (Rune of Spellshattering), on Blade of Misfortune -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="31134" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Great Sword of the Ebon Blade -->
+					
+					<!-- If we have the War Glaive -->
+					<If  Condition="HasItem(25232)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - Moving to the Runeforge -->
+						<CustomBehavior File="Message" 
+										Text="We are using the War Glaive as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging-TradeSkillId = 53428, SpellId=53342 (Rune of Spellshattering), on War Glaive -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="25232" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the War Glaive -->
+						
+					<!-- If we have the Elexorien Blade -->
+					<If  Condition="HasItem(25163)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Elexorien Blade as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Elexorien Blade as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Elexorien Blade -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="25163" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the War Glaive -->
+						
+				</Else>
+
+			</If>	<!-- If we don't have Aura of Spellshattering -->
+
+			<!-- If we have Aura of Spellshattering -->				
+			<If  Condition="Me.HasAura(53362)" >				
+							
+				<!-- Wait timer - wait 60 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="60000" />
+			
+				<!-- Cast - Death Gate -->
+				<CustomBehavior File="RunMacro" 
+								Macro="/cast Death Gate" />	
+								
+				<!-- Wait timer - wait 12 seconds for the gate to open -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="12000" />
+				
+				<!-- Interact with the Death Gate -->						
+				<CustomBehavior File="InteractWith" 
+								MobId="190942" 
+								ObjectType="Gameobject" 
+								Range="25" 
+								NumOfTimes="1" 
+								WaitTime="1" />
+				
+				<!-- Wait timer - wait 10 seconds for the game to load -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="10000" />
+		
+				<!-- Load profile - [QO-N-M][Solstice][58-90][food] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+								
+			</If>	<!-- If we have Aura of Spellshattering -->	
+					
+		</If>	<!-- If we are a Death Knight -->	
+
+	</QuestOrder>
+
+</HBProfile>
