@@ -663,13 +663,13 @@
 							<!-- @@@@@@@@@@@@@@@@@@@@ 13th pull @@@@@@@@@@@@@@@@@@@@ -->					
 												
 												
-							<!-- Move to - past the tiki - 3rd group on the top right ramp in lbrs - pivot position -->
+							<!-- Move to - 3rd group on the top right ramp in lbrs - pivot position -->
 							<CustomBehavior File="NoCombatMoveTo"
-											X="459.9458" Y="16.78549" Z="-71.061" />
+											X="11.07169" Y="-283.7907" Z="65.37117" />
 											
 							<!-- Move to - align our target macro -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="11.04118" Y="-275.5451" Z="65.35217" />
+							<CustomBehavior File="MyCTM"
+											X="12.79045" Y="-276.4984" Z="65.3597" />
 
 							<!-- Profile message - Targeting the enemy -->
 							<CustomBehavior File="Message" 
@@ -693,8 +693,7 @@
 
 							<!-- Disable combat -->
 							<DisableBehavior Name="Combat" />				
-											
-											
+												
 							<!-- Profile message - Casting Death Grip -->
 							<CustomBehavior File="Message" 
 											Text="Casting Death Grip."  
@@ -707,7 +706,7 @@
 
 							<!-- Move to - corner -->
 							<CustomBehavior File="NoCombatMoveTo"
-											X="1.011199" Y="-269.0247" Z="65.31799" />				
+											X="1.137496" Y="-269.3934" Z="65.31726" />				
 											
 							<!-- Profile message - Enabling combat -->
 							<CustomBehavior File="Message" 

@@ -1998,8 +1998,13 @@
 					<CustomBehavior File="Misc\InInstance" 
 									X="456.8561" Y="38.7443" Z="-68.99432" />	
 					
+					<!-- Move to - away from the portal -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="-7179.112" Y="-916.5982" Z="165.4889" />
+					
 					<!-- Move to - zone out location -->
-					<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+					<CustomBehavior File="MyCTM" 
+									X="-7178.41" Y="-922.152" Z="166.092" />	
 					
 					<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
 					<If  Condition="Me.HasAura(53362)" >

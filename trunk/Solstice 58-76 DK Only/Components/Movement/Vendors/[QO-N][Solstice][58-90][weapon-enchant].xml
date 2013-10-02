@@ -104,20 +104,31 @@
 							
 			<!-- Move to - base of the stairs -->
 			<CustomBehavior File="NoCombatMoveTo"
-							X="2398.093" Y="-5639.18" Z="377.0674" />				
+							X="2387.784" Y="-5632.015" Z="377.1465" />				
+
+			<!-- Move to - jump pivot location -->
+			<CustomBehavior File="NoCombatMoveTo" 
+							X="2410.612" Y="-5627.151" Z="376.9041" />
 							
-			<!-- Move to - through the portal -->
-			<CustomBehavior File="NoCombatMoveTo"
-							X="2391.8" Y="-5640.124" Z="377.1113" />
-							
+			<!-- Move to - jump location -->				
+			<CustomBehavior File="NoCombatMoveTo" 
+							X="2401.803" Y="-5633.846" Z="377.0209" />
+
+			<!-- Custom behavior - Jumpforward -->
+			<CustomBehavior File="Misc\JumpForward" />
+			
 			<!-- Wait timer - wait 10 second - delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="10000" />				
-							
+
 			<!-- Profile message - Moving to the Runeforge -->
 			<CustomBehavior File="Message" 
 							Text="Moving to the Runeforge." 
 							LogColor="Orange" />				
+							
+			<!-- Move to - forge -->
+			<CustomBehavior File="NoCombatMoveTo" 
+							X="2489.72" Y="-5637.246" Z="420.6439" />				
 							
 			<!-- Move to - forge -->
 			<CustomBehavior File="NoCombatMoveTo" 

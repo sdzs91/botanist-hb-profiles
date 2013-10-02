@@ -69,7 +69,7 @@
 			
 			<!-- Custom behavior - macro - DepositGuildBankMoney(10000000) -->		
 			<CustomBehavior File="RunMacro" 
-							Macro="/run DepositGuildBankMoney(10000000)" /> 
+							Macro="/run DepositGuildBankMoney(GetMoney() - 1000000)" /> 
 
 			<!-- Wait timer - wait 3 seconds - reaction time -->		
 			<CustomBehavior File="WaitTimer" 
