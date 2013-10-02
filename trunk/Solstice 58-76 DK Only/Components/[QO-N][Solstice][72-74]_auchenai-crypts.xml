@@ -263,34 +263,54 @@
 					<CustomBehavior File="Message" 
 									Text="Deleting unwanted items from our bags." 
 									LogColor="Orange" />
+
+					<!-- Morning Glory Dew -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="8766" />
 									
-					<!-- Delete these items -->				
+					<!-- Major Mana Potion -->				
 					<CustomBehavior File="DeleteItems" 
-									Ids="8766" />	<!-- Morning Glory Dew -->
+									Ids="13444" />	
 									
+					<!-- Libram of Voracity -->										
 					<CustomBehavior File="DeleteItems" 
-									Ids="13444" />	<!-- Major Mana Potion -->
-															
+									Ids="11737" />
+									
+					<!-- Libram of Resilience -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="11737" />	<!-- Libram of Voracity -->	
-
+									Ids="11736" />	
+									
+					<!-- Roasted Quail -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="11736" />	<!-- Libram of Resilience -->
-
+									Ids="8952" />	
+									
+					<!-- Superior Mana Potion -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="8952" />	<!-- Roasted Quail -->	
-
+									Ids="22256" />	
+									
+					<!-- Mana Potion -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="13443" />	<!-- Superior Mana Potion -->
-
+									Ids="26480" />
+									
+					<!-- Light Feather -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="22832" />	<!-- Super Mana Potion -->
-							
+									Ids="17056" />
+									
+					<!-- Dark Iron Bullet -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="28399" />	<!-- Filtered Draenic Water -->		
-							
+									Ids="62916" />	
+									
+					<!-- Mag'har Grainbread -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="27860" />	<!-- Purified Draenic Water -->			
+									Ids="27855" />
+									
+					<!-- Homemade Cherry Pie -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="8950" />
+									
+					<!-- Smoked Talbuk Venison -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="27854" />		
 							
 					<!-- Instance timer -->
 					<CustomBehavior File="Misc\InstanceTimer" 

@@ -691,7 +691,7 @@
 		
 		
 		
-		<!-- If our level is 77-79 -->
+		<!-- If our level is 78-79 -->
 		<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 79">
 		
 			<!-- If we are Alliance -->
@@ -814,8 +814,150 @@
 		
 		
 		
-		<!-- If our level is 74-78 -->
-		<If Condition="Me.Level &gt;= 74 &amp;&amp; Me.Level &lt; 78">
+		
+		
+		<!-- If our level is 76-78 -->
+		<If Condition="Me.Level &gt;= 76 &amp;&amp; Me.Level &lt; 78">
+			
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Mag'har Grainbread -->
+				<If Condition="!HasItem(27855)">
+				
+					<!-- Profile message - We don't have any Mag'har Grainbread -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Mag'har Grainbread."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to Kizzie to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to Kizzie to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Move to - Area 52 - Hover Point -->
+					<CustomBehavior File="FlyTo"
+									X="3073.289" Y="3637.481" Z="173.0833" />
+				
+					<!-- Fly to - Kizzie -->
+					<CustomBehavior File="FlyTo"
+									X="2957.96" Y="3637.302" Z="144.2798" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Kizzie -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="2957.673" Y="3636.953" Z="144.279" />
+					
+					<!-- Interact with Kizzie and buy 100 Mag'har Grainbread -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												Range="75"
+												MobId="19574" 
+												BuyItemId="27855" 
+												BuyItemCount="100"
+												X="2953.864" Y="3636.462" Z="144.2808" />
+
+					<!-- Wait timer - wait 60 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Area 52 - Hover Point -->
+					<CustomBehavior File="FlyTo"
+									X="3073.289" Y="3637.481" Z="173.0833" />
+					
+				</If>	<!-- If we don't have Mag'har Grainbread -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Mag'har Grainbread -->
+				<If Condition="!HasItem(27855)">
+				
+					<!-- Profile message - We don't have any Mag'har Grainbread -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Mag'har Grainbread."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to Kizzie to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to Kizzie to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Move to - Area 52 - Hover Point -->
+					<CustomBehavior File="FlyTo"
+									X="3073.289" Y="3637.481" Z="173.0833" />
+				
+					<!-- Fly to - Kizzie -->
+					<CustomBehavior File="FlyTo"
+									X="2957.96" Y="3637.302" Z="144.2798" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - Kizzie -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="2957.673" Y="3636.953" Z="144.279" />
+					
+					<!-- Interact with Kizzie and buy 100 Mag'har Grainbread -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												Range="75"
+												MobId="19574" 
+												BuyItemId="27855" 
+												BuyItemCount="100"
+												X="2953.864" Y="3636.462" Z="144.2808" />
+
+					<!-- Wait timer - wait 60 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Area 52 - flight master -->
+				<RunTo X="3056.502" Y="3589.417" Z="144.2936" />
+					
+				</If>	<!-- If we don't have Mag'har Grainbread -->
+			
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we have Mag'har Grainbread  -->
+			<If Condition="HasItem(27855)">
+							
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Mag'har Grainbread  -->
+			
+		</If>	<!-- If our level is 76-78 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 74-76 -->
+		<If Condition="Me.Level &gt;= 74 &amp;&amp; Me.Level &lt; 76">
 			
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
@@ -932,7 +1074,7 @@
 										
 			</If>	<!-- If we do have Clefthoof Ribs or Mag'har Mild Cheese -->
 			
-		</If>	<!-- If our level is 74-78 -->
+		</If>	<!-- If our level is 74-76 -->
 		
 		
 		

@@ -396,13 +396,13 @@
 							<!-- @@@@@@@@@@@@@@@@@@@@ 4th pull @@@@@@@@@@@@@@@@@@@@ -->								
 														
 														
-							<!-- Move to - pivot point in the center of the room -->			
+							<!-- Move to - pivot point - left of the room -->			
 							<CustomBehavior File="NoCombatMoveTo" 
-											X="80.42005" Y="-286.6462" Z="60.69919" />
+											X="90.32764" Y="-290.7039" Z="60.64268" />
 											
-							<!-- Pivot center - pull the center group-->
+							<!-- Pivot center - pull the center group -->
 							<CustomBehavior File="NoCombatMoveTo"
-											X="80.29209" Y="-292.0475" Z="60.70147" />				
+											X="86.76073" Y="-297.5365" Z="60.70156" />				
 							
 							<!-- Profile message - Targeting the enemy -->
 							<CustomBehavior File="Message" 
@@ -419,6 +419,24 @@
 											NumOfTimes="1"
 											Macro="/targetenemy [noharm]" />
 											
+							<!-- Profile message - Disabling combat -->
+							<CustomBehavior File="Message" 
+												Text="Disabling combat." 
+												LogColor="Fuchsia" />
+
+							<!-- Disable combat -->
+							<DisableBehavior Name="Combat" />				
+	
+							<!-- Profile message - Casting Icebound Fortitude -->
+							<CustomBehavior File="Message" 
+											Text="Casting Icebound Fortitude."  
+											LogColor="Orange" />
+											
+							<!-- Macro - Cast Icebound Fortitude -->
+							<CustomBehavior File="RunMacro"
+											NumOfTimes="1"
+											Macro="/cast Icebound Fortitude" />
+
 							<!-- Profile message - Casting Death Grip -->
 							<CustomBehavior File="Message" 
 											Text="Casting Death Grip."  
@@ -429,14 +447,29 @@
 											NumOfTimes="1"
 											Macro="/cast Death Grip" />
 
-							<!-- Wait timer - wait 3 seconds to aggro the mobs -->
+							<!-- Move to - kite - center group -->			
+							<CustomBehavior File="NoCombatMoveTo" 
+											X="95.21806" Y="-275.3589" Z="60.67893" />
+
+							<!-- Profile message - Enabling combat -->
+							<CustomBehavior File="Message" 
+												Text="Enabling combat." 
+												LogColor="Fuchsia" />
+							
+							<!-- enable combat -->
+							<EnableBehavior Name="Combat" />
+										
+							<!-- Wait timer - wait 3 seconds - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />					
+							
+							<!-- Move to - center group - safety -->					
+							<RunTo X="82.90974" Y="-315.8469" Z="55.78075" />
+
+							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="3000" />
-																		
-							<!-- Move to - center of the lower tier - beneath the overhead bridge -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="79.98363" Y="-319.2299" Z="55.78152" />		
-										
+
 										
 							<!-- @@@@@@@@@@@@@@@@@@@@ 5th pull @@@@@@@@@@@@@@@@@@@@ -->
 				
@@ -598,7 +631,6 @@
 												WaitTime="3000" />
 								
 							</If>	<!-- If we are level 63 or greater -->
-
 
 							<!-- UserSettings -->
 							<CustomBehavior File="UserSettings"
@@ -1686,9 +1718,68 @@
 							<!-- @@@@@@@@@@@@@@@@@@@@ 42nd pull @@@@@@@@@@@@@@@@@@@@ -->
 							
 							
-							<!-- Move to - center group before the 1st bridge exiting LBRS  -->
-							<RunTo X="-38.04668" Y="-559.8997" Z="29.18919" />
-							
+							<!-- Move to - center group before the 1st bridge exiting LBRS - pivot location  -->
+							<CustomBehavior File="NoCombatMoveTo" 
+											X="-63.13292" Y="-529.7286" Z="29.18942" />
+														
+							<!-- Move to - align our target macro -->					
+							<CustomBehavior File="NoCombatMoveTo" 
+											X="-59.08543" Y="-537.3517" Z="29.18942" />
+
+							<!-- Profile message - Targeting the enemy -->
+							<CustomBehavior File="Message" 
+											Text="Targeting the enemy."  
+											LogColor="Orange" />
+										
+							<!-- Macro - Clear target -->					
+							<CustomBehavior File="RunMacro" 
+											Macro="/cleartarget" 
+											NumOfTimes="1" 
+											WaitTime="0"/>			
+										
+							<!-- Macro - targetenemy -->						
+							<CustomBehavior File="RunMacro"
+											NumOfTimes="2"
+											Macro="/targetenemy [noharm]" />
+
+							<!-- Profile message - Casting Lichborne -->
+							<CustomBehavior File="Message" 
+											Text="Casting Lichborne."  
+											LogColor="Orange" />
+
+							<!-- Macro - Cast Lichborne -->
+							<CustomBehavior File="RunMacro"
+											NumOfTimes="1"
+											Macro="/cast Lichborne" />				
+											
+							<!-- Profile message - Casting Icy Touch -->
+							<CustomBehavior File="Message" 
+											Text="Casting Icy Touch."  
+											LogColor="Orange" />
+										
+							<!-- Macro - Cast Icy Touch -->
+							<CustomBehavior File="RunMacro"
+											NumOfTimes="1"
+											Macro="/cast Icy Touch" />				
+		
+							<!-- Profile message - Casting Death Grip -->
+							<CustomBehavior File="Message" 
+											Text="Casting Death Grip."  
+											LogColor="Orange" />
+										
+							<!-- Macro - Cast Death Grip -->
+							<CustomBehavior File="RunMacro"
+											NumOfTimes="1"
+											Macro="/cast Death Grip" />					
+
+							<!-- Wait timer - wait 3 seconds - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />				
+											
+							<!-- Move to - center group before the 1st bridge exiting LBRS - safety -->					
+							<CustomBehavior File="NoCombatMoveTo"
+											X="-31.53409" Y="-564.2172" Z="29.19088" />				
+					
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="3000" />

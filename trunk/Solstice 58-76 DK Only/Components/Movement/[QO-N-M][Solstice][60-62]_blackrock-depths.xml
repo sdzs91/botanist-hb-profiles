@@ -29,7 +29,7 @@
 		<!-- Rock and branch in Burning Steppes -->
 		<Blackspot X="-8370.098" Y="-2562.423" Z="138.6694" Radius="17.55468" />
 		
-		<Blackspot X="-7119.151" Y="-1225.816" Z="290.3206" Radius="3" />
+		<Blackspot X="-7119.151" Y="-1225.816" Z="290.3206" Radius="1" />
 	</Blackspots>
 
 	<Mailboxes>

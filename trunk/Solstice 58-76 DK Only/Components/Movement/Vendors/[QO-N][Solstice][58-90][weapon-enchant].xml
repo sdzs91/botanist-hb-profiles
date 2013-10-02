@@ -97,10 +97,6 @@
 							NumOfTimes="1" 
 							WaitTime="1" />
 			
-			<!-- Wait timer - wait 10 seconds for the game to load -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="10000" />
-							
 			<!-- Profile message - Moving to the portal -->
 			<CustomBehavior File="Message" 
 							Text="Moving to the portal." 
@@ -108,23 +104,16 @@
 							
 			<!-- Move to - base of the stairs -->
 			<CustomBehavior File="NoCombatMoveTo"
-							X="2392.35" Y="-5649.685" Z="379.3205" />
+							X="2398.093" Y="-5639.18" Z="377.0674" />				
 							
-			<!-- Move to - jump - pivot location -->				
+			<!-- Move to - through the portal -->
 			<CustomBehavior File="NoCombatMoveTo"
-							X="2421.825" Y="-5627.245" Z="376.0217" />
-
-			<!-- Move to - align our jump location -->				
-			<CustomBehavior File="NoCombatMoveTo"
-							X="2414.727" Y="-5629.233" Z="376.9042" />				
-							
-			<!-- Custom behavior - Jumpforward -->
-							<CustomBehavior File="Misc\JumpForward" />				
+							X="2391.8" Y="-5640.124" Z="377.1113" />
 							
 			<!-- Wait timer - wait 10 second - delay -->
 			<CustomBehavior File="WaitTimer" 
-							WaitTime="10000" />
-
+							WaitTime="10000" />				
+							
 			<!-- Profile message - Moving to the Runeforge -->
 			<CustomBehavior File="Message" 
 							Text="Moving to the Runeforge." 
@@ -255,6 +244,32 @@
 										Lua="CloseTradeSkill()" />
 					
 					</If>	<!-- If we have the War Glaive -->
+					
+					<!-- If we have the Rending Claw -->
+					<If  Condition="HasItem(25219)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - Moving to the Runeforge -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Rending Claw as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging-TradeSkillId = 53428, SpellId=53342 (Rune of Spellshattering), on Rending Claw -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="25219" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Rending Claw -->
 						
 					<!-- If we have the Elexorien Blade -->
 					<If  Condition="HasItem(25163)" >
@@ -288,6 +303,10 @@
 
 			<!-- If we have Aura of Spellshattering -->				
 			<If  Condition="Me.HasAura(53362)" >				
+							
+				<!-- Move to - move away from the Runeforge -->
+				<CustomBehavior File="NoCombatMoveTo"
+								X="2456.208" Y="-5642.337" Z="420.6425" />			
 							
 				<!-- Wait timer - wait 60 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 

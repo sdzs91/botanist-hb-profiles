@@ -172,16 +172,22 @@
 									ProfileName="Components\[QO-N][Solstice][79-84]_drak'tharon-keep" />
 		</If>
 		
-		<!-- If our level is 77-79 -->
+		<!-- If our level is 78-79 -->
 		<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 79">
 			<CustomBehavior File="LoadProfile" 
 									ProfileName="Components\[QO-N][Solstice][78-79]_utgarde-keep" />
 		</If>
 		
-		<!-- If our level is 74-77 -->
-		<If Condition="Me.Level &gt;= 74 &amp;&amp; Me.Level &lt; 78">
+		<!-- If our level is 76-78 -->
+		<If Condition="Me.Level &gt;= 76 &amp;&amp; Me.Level &lt; 78">
 			<CustomBehavior File="LoadProfile" 
-									ProfileName="Components\[QO-N][Solstice][74-78]_sethekk-halls" />
+									ProfileName="Components\[QO-N][Solstice][76-78]_botanica" />
+		</If>
+		
+		<!-- If our level is 74-76 -->
+		<If Condition="Me.Level &gt;= 74 &amp;&amp; Me.Level &lt; 76">
+			<CustomBehavior File="LoadProfile" 
+									ProfileName="Components\[QO-N][Solstice][74-76]_sethekk-halls" />
 		</If>
 		
 		<!-- If our level is 72-74 -->

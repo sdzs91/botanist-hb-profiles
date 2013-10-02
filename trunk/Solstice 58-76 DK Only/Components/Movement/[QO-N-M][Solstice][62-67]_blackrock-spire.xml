@@ -252,7 +252,7 @@
 											
 					<!-- Load profile - [QO-N][Solstice][58-90][repair-mail] -->
 					<CustomBehavior File="LoadProfile" 
-												ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][repair-mail]" />
+												ProfileName="Vendors\[QO-N][Solstice][58-90][repair-mail]" />
 
 				</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 

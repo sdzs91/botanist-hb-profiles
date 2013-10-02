@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][Solstice][74-78]_sethekk-halls</Name>
+	<Name>[QO-N][Solstice][74-76]_sethekk-halls</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -140,7 +140,26 @@
 					
 					<!-- Move to - zone out location -->
 					<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
-					
+						
+				</If> <!-- Sethekk Halls -->
+				
+				<!-- If we are not in the sethekk halls instance box, load the movement profile -->
+				<If Condition="Me.X &lt; -3400 || Me.X &gt; -3300 || Me.Y &lt; 4600 || Me.Y &gt; 4700" >
+				
+					<!-- Profile message - Distance from portal is not within our proximity, initializing movement to get there -->
+					<CustomBehavior File="Message" 
+									Text="Distance from portal is not within our proximity, initializing movement to get there."
+									LogColor="Fuchsia" />	
+									
+					<!-- Load profile - [QO-N-M][Solstice][74-78]_sethekk-halls -->				
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\[QO-N-M][Solstice][74-76]_sethekk-halls" />
+									
+				</If>	<!-- If we are not in the Sethekk Halls instance box, load the movement profile -->
+				
+				<!-- If we are in the Sethekk Halls instance box -->
+				<If Condition="Me.X &gt; -3400 &amp;&amp; Me.X &lt; -3300 &amp;&amp; Me.Y &gt; 4600 &amp;&amp; Me.Y &lt; 4700" >
+				
 					<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
 					<If  Condition="Me.HasAura(53362)" >
 						
@@ -158,7 +177,7 @@
 											LogColor="Orange" />
 											
 							<!-- Move to - face away from the portal -->
-							<RunTo X="-3361.794" Y="5209.119" Z="-101.0487" />				
+							<RunTo X="-3362.097" Y="4680.118" Z="-101.0496" />				
 											
 							<!-- Custom behavior - LoadProfile - Components\Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant] -->				
 							<CustomBehavior File="LoadProfile"  
@@ -167,25 +186,6 @@
 						</Else>	<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->
 					
 					</If>	<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
-						
-				</If> <!-- Sethekk Halls -->
-				
-				<!-- If we are not in the sethekk halls instance box, load the movement profile -->
-				<If Condition="Me.X &lt; -3400 || Me.X &gt; -3300 || Me.Y &lt; 4600 || Me.Y &gt; 4700" >
-				
-					<!-- Profile message - Distance from portal is not within our proximity, initializing movement to get there -->
-					<CustomBehavior File="Message" 
-									Text="Distance from portal is not within our proximity, initializing movement to get there."
-									LogColor="Fuchsia" />	
-									
-					<!-- Load profile - [QO-N-M][Solstice][74-78]_sethekk-halls -->				
-					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][Solstice][74-78]_sethekk-halls" />
-									
-				</If>	<!-- If we are not in the Sethekk Halls instance box, load the movement profile -->
-				
-				<!-- If we are in the Sethekk Halls instance box -->
-				<If Condition="Me.X &gt; -3400 &amp;&amp; Me.X &lt; -3300 &amp;&amp; Me.Y &gt; 4600 &amp;&amp; Me.Y &lt; 4700" >
 				
 					<!-- Profile message - Portal detected nearby --> 
 					<CustomBehavior File="Message" 
@@ -254,34 +254,54 @@
 					<CustomBehavior File="Message" 
 									Text="Deleting unwanted items from our bags." 
 									LogColor="Orange" />
+
+					<!-- Morning Glory Dew -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="8766" />
 									
-					<!-- Delete these items -->				
+					<!-- Major Mana Potion -->				
 					<CustomBehavior File="DeleteItems" 
-									Ids="8766" />	<!-- Morning Glory Dew -->
+									Ids="13444" />	
 									
+					<!-- Libram of Voracity -->										
 					<CustomBehavior File="DeleteItems" 
-									Ids="13444" />	<!-- Major Mana Potion -->
-															
+									Ids="11737" />
+									
+					<!-- Libram of Resilience -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="11737" />	<!-- Libram of Voracity -->	
-
+									Ids="11736" />	
+									
+					<!-- Roasted Quail -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="11736" />	<!-- Libram of Resilience -->
-
+									Ids="8952" />	
+									
+					<!-- Superior Mana Potion -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="8952" />	<!-- Roasted Quail -->	
-
+									Ids="22256" />	
+									
+					<!-- Mana Potion -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="13443" />	<!-- Superior Mana Potion -->
-
+									Ids="26480" />
+									
+					<!-- Light Feather -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="22832" />	<!-- Super Mana Potion -->
-							
+									Ids="17056" />
+									
+					<!-- Dark Iron Bullet -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="28399" />	<!-- Filtered Draenic Water -->		
-							
+									Ids="62916" />	
+									
+					<!-- Mag'har Grainbread -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="27860" />	<!-- Purified Draenic Water -->			
+									Ids="27855" />
+									
+					<!-- Homemade Cherry Pie -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="8950" />
+									
+					<!-- Smoked Talbuk Venison -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="27854" />		
 							
 					<!-- Instance timer -->
 					<CustomBehavior File="Misc\InstanceTimer" 
@@ -392,11 +412,11 @@
 					
 						<!-- Move to - 1st group right - veil sethekk - pivot location -->
 						<CustomBehavior File="NoCombatMoveTo"
-										X="36.08749" Y="51.97651" Z="0.006396611" />
+										X="40.65759" Y="49.90061" Z="0.00739847" />
 
 						<!-- Move to - align our target macro -->	
 						<CustomBehavior File="NoCombatMoveTo"
-										X="42.29496" Y="57.61463" Z="0.006396611" />
+										X="43.69154" Y="61.74584" Z="0.00739847" />S
 
 						<!-- Profile message - Targeting the enemy -->
 						<CustomBehavior File="Message" 
@@ -566,11 +586,11 @@
 					
 						<!-- Move to - middle group - veil sethekk - pivot location -->
 						<CustomBehavior File="NoCombatMoveTo"
-										X="83.25839" Y="101.5124" Z="0.04234826" />
+										X="75.46484" Y="118.735" Z="0.2442407" />
 
 						<!-- Move to - align our target macro -->	
 						<CustomBehavior File="NoCombatMoveTo"
-										X="74.6745" Y="102.7326" Z="0.04629672" />
+										X="65.60752" Y="117.4173" Z="-0.1724801" />
 
 						<!-- Profile message - Targeting the enemy -->
 						<CustomBehavior File="Message" 
@@ -674,11 +694,11 @@
 					
 						<!-- Move to - left-hand group entering - veil sethekk - pivot location -->
 						<CustomBehavior File="NoCombatMoveTo"
-										X="57.98482" Y="88.48394" Z="0.1479109" />
+										X="49.477" Y="69.51765" Z="0.009284662" />
 
 						<!-- Move to - align our target macro -->	
 						<CustomBehavior File="NoCombatMoveTo"
-										X="47.8987" Y="87.1455" Z="0.1498769" />
+										X="40.42266" Y="68.61723" Z="0.1519398" />
 
 						<!-- Profile message - Targeting the enemy -->
 						<CustomBehavior File="Message" 
@@ -874,7 +894,14 @@
 						<!-- Wait timer - wait 3 seconds to aggro -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
-														
+													
+						<!-- Move to - 1st group right - Sethekk Halls - safety -->
+						<CustomBehavior File="NoCombatMoveTo"
+										X="-54.60594" Y="111.0746" Z="0.007504882" />
+													
+						<!-- Wait timer - wait 3 seconds to aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />				
 										
 						<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 					
@@ -937,6 +964,31 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 					
 
+						<!-- Use4rsettings -->
+						<CustomBehavior File="UserSettings" 
+										PullDistance="25" />
+					
+						<!-- Profile message - Pulling the last door guards Sethekk Halls -->
+						<CustomBehavior File="Message" 
+										Text="Pulling the last door guards Sethekk Halls."  
+										LogColor="Orange" />
+					
+						<!-- Move to - right to avoid aggro -->
+						<CustomBehavior File="NoCombatMoveTo"
+										X="-51.03638" Y="100.9891" Z="0.007798305" />
+					
+						<!-- Move to - last door guards - Sethekk Halls -->
+						<CustomBehavior File="NoCombatMoveTo"
+										X="-70.4052" Y="129.6383" Z="0.007223532" />
+								
+						<!-- Wait timer - wait 3 seconds to aggro the patrol-->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+						
+						
+						<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+
 						<!-- Profile message - Pulling the back group Sethekk Halls -->
 						<CustomBehavior File="Message" 
 										Text="Pulling the back group Sethekk Halls."  
@@ -944,11 +996,11 @@
 					
 						<!-- Move to - back group - Sethekk Halls - pivot location -->
 						<CustomBehavior File="NoCombatMoveTo"
-										X="-61.77629" Y="89.73086" Z="0.07371935" />
+										X="-68.12437" Y="132.4697" Z="0.007798305" />
 
 						<!-- Move to - align our target macro -->	
 						<CustomBehavior File="NoCombatMoveTo"
-										X="-71.53372" Y="92.5966" Z="0.007223532" />
+										X="-69.25114" Y="124.7487" Z="0.007798305" />
 
 						<!-- Profile message - Targeting the enemy -->
 						<CustomBehavior File="Message" 
@@ -986,69 +1038,7 @@
 						<!-- Wait timer - wait 3 seconds to aggro the patrol-->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
-						
-						
-						<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
-					
 
-						<!-- Use4rsettings -->
-						<CustomBehavior File="UserSettings" 
-										PullDistance="25" />
-					
-						<!-- Profile message - Pulling the last door guards Sethekk Halls -->
-						<CustomBehavior File="Message" 
-										Text="Pulling the last door guards Sethekk Halls."  
-										LogColor="Orange" />
-					
-						<!-- Move to - last door guards - Sethekk Halls -->
-						<RunTo X="-70.4052" Y="129.6383" Z="0.007223532" />
-								
-						<!-- Wait timer - wait 3 seconds to aggro the patrol-->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-					
-					
 					</If>	<!-- If we are between level 72-74 -->
 
 					<!-- Move to - zone in location -->
@@ -1056,8 +1046,8 @@
 					
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
-								MinLevel="78" 
-								ProfileName="[QO-N][Solstice][78-79]_utgarde-keep.xml"  />									
+								MinLevel="76" 
+								ProfileName="[QO-N][Solstice][76-78]_botanica.xml"  />									
 
 					<!-- Profile message - Waiting 3 seconds - Bag and durability check -->
 					<CustomBehavior File="Message" 
