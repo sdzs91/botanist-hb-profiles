@@ -221,7 +221,8 @@
 									LogColor="Orange" />
 
 					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
+					<CustomBehavior File="Misc\InInstance" 
+									X="456.8561" Y="38.7443" Z="-68.99432" />	
 					
 					<!-- Move to - zone out location -->
 					<RunTo X="-7178.41" Y="-922.152" Z="166.092" />
@@ -1112,13 +1113,9 @@
 											NumOfTimes="1"
 											Macro="/cast Death Grip" />				
 											
-							<!-- Move to - down the ramp-->					
+							<!-- Move to - door exiting the Mold Foundry -->					
 							<CustomBehavior File="NoCombatMoveTo"
-											X="1097.195" Y="-144.9616" Z="-66.92449" />	
-											
-							<!-- Move to - base of the ramp-->					
-							<CustomBehavior File="NoCombatMoveTo"
-											X="1105.255" Y="-136.4538" Z="-73.31699" />			
+											X="1074.529" Y="-179.9564" Z="-64.92219" />			
 											
 							<!-- Profile message - Enabling combat -->
 							<CustomBehavior File="Message" 
@@ -1688,7 +1685,7 @@
 									
 									<!-- Move to - right-hand side of the big column -->
 									<CustomBehavior File="NoCombatMoveTo" 
-													X="1149.087" Y="-156.9642" Z="-74.92413" />		
+													X="1157.326" Y="-169.0683" Z="-74.92893" />		
 											
 									<!-- Clear target -->
 									<CustomBehavior File="RunMacro" 
@@ -1999,7 +1996,7 @@
 							
 					<!-- Custom behavior - Misc\InInstance - exit the instance -->
 					<CustomBehavior File="Misc\InInstance" 
-									X="456.6543" Y="46.70397" Z="-69.00373" />	
+									X="456.8561" Y="38.7443" Z="-68.99432" />	
 					
 					<!-- Move to - zone out location -->
 					<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	

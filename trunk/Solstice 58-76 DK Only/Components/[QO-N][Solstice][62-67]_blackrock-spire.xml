@@ -665,11 +665,11 @@
 												
 							<!-- Move to - past the tiki - 3rd group on the top right ramp in lbrs - pivot position -->
 							<CustomBehavior File="NoCombatMoveTo"
-											X="18.67742" Y="-287.3919" Z="65.37585" />
+											X="459.9458" Y="16.78549" Z="-71.061" />
 											
 							<!-- Move to - align our target macro -->
 							<CustomBehavior File="NoCombatMoveTo"
-											X="17.61682" Y="-279.5201" Z="65.37584" />
+											X="11.04118" Y="-275.5451" Z="65.35217" />
 
 							<!-- Profile message - Targeting the enemy -->
 							<CustomBehavior File="Message" 
@@ -686,6 +686,15 @@
 											NumOfTimes="1"
 											Macro="/targetenemy [noharm]" />
 											
+							<!-- Profile message - Disabling combat -->
+							<CustomBehavior File="Message" 
+												Text="Disabling combat." 
+												LogColor="Fuchsia" />
+
+							<!-- Disable combat -->
+							<DisableBehavior Name="Combat" />				
+											
+											
 							<!-- Profile message - Casting Death Grip -->
 							<CustomBehavior File="Message" 
 											Text="Casting Death Grip."  
@@ -696,6 +705,18 @@
 											NumOfTimes="1"
 											Macro="/cast Death Grip" />				
 
+							<!-- Move to - corner -->
+							<CustomBehavior File="NoCombatMoveTo"
+											X="1.011199" Y="-269.0247" Z="65.31799" />				
+											
+							<!-- Profile message - Enabling combat -->
+							<CustomBehavior File="Message" 
+												Text="Enabling combat." 
+												LogColor="Fuchsia" />
+							
+							<!-- enable combat -->
+							<EnableBehavior Name="Combat" />				
+											
 							<!-- Wait timer - wait 3 seconds to aggro the mobs -->
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="3000" />				
@@ -1085,10 +1106,17 @@
 							
 							<!-- UserSettings -->
 							<CustomBehavior File="UserSettings"
-											PullDistance="10" />
+											PullDistance="25" />
 							
 							<!-- Move to - 2nd group - right  -->
-							<RunTo X="-72.70537" Y="-408.5571" Z="-18.93499" />
+							<RunTo X="-54.82116" Y="-408.1086" Z="-18.93495" />
+							
+							<!-- Wait timer - wait 3 seconds - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
+							
+							<!-- Move to - back corner  -->
+							<RunTo X="-73.95113" Y="-405.4464" Z="-18.93495" />
 							
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
@@ -1655,7 +1683,7 @@
 							
 							<!-- Move to - jump - alignment -->
 							<CustomBehavior File="MyCTM" 
-											X="-50.27602" Y="-404.9652" Z="77.76133" />
+											X="-47.91906" Y="-406.7904" Z="77.75994" />
 							
 							<!-- Jump -->
 							<CustomBehavior File="Misc\JumpForward" />
@@ -1666,14 +1694,17 @@
 							
 							<!-- Move to - jump location -->
 							<CustomBehavior File="MyCTM"
-											X="-37.54775" Y="-401.4668" Z="49.11541" />
+											X="-37.50918" Y="-383.7154" Z="48.73549" />
 							
 							<!-- Move to - Jump -->
 							<CustomBehavior File="MyCTM"
-											X="-37.03053" Y="-414.149" Z="31.57309" />
+											X="-37.32213" Y="-398.0318" Z="49.02579" />
+							
+							<!-- Jump -->
+							<CustomBehavior File="Misc\JumpForward" />
 							
 							<!-- Move to - ogre below jump location -->
-							<CustomBehavior File="MyCTM"
+							<CustomBehavior File="NoCombatMoveTo"
 											X="-36.96705" Y="-401.5688" Z="31.55282" />
 							
 							<!-- Wait timer - wait 3 seconds - delay -->
