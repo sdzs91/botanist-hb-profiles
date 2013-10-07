@@ -74,21 +74,62 @@
 									Text="We are in Outland." 
 									LogColor="Cyan" />
 
-					<!-- Profile message - Moving to the Honor Hold flight master -->
-					<CustomBehavior File="Message" 
-									Text="Moving to the Honor Hold flight master."
-									LogColor="Orange" />
+					<!-- If we are not in Netherstorm -->
+					<If Condition="Me.ZoneId != 3523">				
+									
+						<!-- Profile message - We are not in Netherstorm -->
+						<CustomBehavior File="Message" 
+										Text="We are not in Netherstorm." 
+										LogColor="Cyan" />			
+									
+						<!-- Profile message - Moving to the Honor Hold flight master -->
+						<CustomBehavior File="Message" 
+										Text="Moving to the Honor Hold flight master."
+										LogColor="Orange" />
+						
+						<!-- Move to - Honor Hold flight master -->	
+						<RunTo X="-673.42" Y="2717.27" Z="94.18" />
+						
+						<!-- Profile message - Moving to the Dark portal -->
+						<CustomBehavior File="Message" 
+										Text="Moving to the Dark portal."
+										LogColor="Orange" />
+						
+						<!-- Move to - Dark portal flight master -->
+						<RunTo X="-327.35" Y="1020.49" Z="54.24786" />
+						
+						<!-- Else we are in Netherstorm -->	
+						<Else>	
+							
+							<!-- If we are in Netherstorm -->
+							<If Condition="Me.ZoneId == 3523">
+							
+								<!-- Profile message - We are in Netherstorm -->
+								<CustomBehavior File="Message" 
+												Text="We are in Netherstorm." 
+												LogColor="Cyan" />
+							
+								<!-- Fly to Cosmowrench -->
+								<CustomBehavior File="FlyTo" 
+												X="2966.004" Y="1776.225" Z="215.44" />
+												
+								<!-- CTM to - the Dark Portal -->
+								<CustomBehavior File="MyCTM" 
+												X="2966.004" Y="1776.225" Z="215.44" />
+
+								<!-- CTM to - land near the stairs -->
+								<CustomBehavior File="MyCTM" 
+												X="-250.3617" Y="1021.303" Z="54.32681" />
+
+								<!-- Move to - Dark portal flight master -->
+								<RunTo X="-178.09" Y="1026.72" Z="54.19" />				
+							
+							</If>	<!-- If we are in Netherstorm -->	
+							
+						</Else>		<!-- Else we are in Netherstorm -->
+
+					</If>	<!-- If we are not in Netherstorm -->
 					
-					<!-- Move to - Honor Hold flight master -->	
-					<RunTo X="-673.42" Y="2717.27" Z="94.18" />
-					
-					<!-- Profile message - Moving to the Dark portal -->
-					<CustomBehavior File="Message" 
-									Text="Moving to the Dark portal."
-									LogColor="Orange" />
-					
-					<!-- Move to - Dark portal flight master -->
-					<RunTo X="-327.35" Y="1020.49" Z="54.24786" />
 					
 					<!-- Profile message - Moving to the Stormwind portal -->
 					<CustomBehavior File="Message" 
@@ -194,27 +235,67 @@
 				
 				<!-- If we are in Outland -->
 				<If Condition="Me.MapId == 530">
-				
+					
 					<!-- Profile message - We are in Outland -->
 					<CustomBehavior File="Message" 
 									Text="We are in Outland." 
 									LogColor="Cyan" />
+					
+					<!-- If we are not in Netherstorm -->
+					<If Condition="Me.ZoneId != 3523">
+				
+						<!-- Profile message - We are not in Netherstorm -->
+						<CustomBehavior File="Message" 
+										Text="We are not in Netherstorm." 
+										LogColor="Cyan" />
 
-					<!-- Profile message - Moving to the Thrallmar flight master -->
-					<CustomBehavior File="Message" 
-									Text="Moving to the Thrallmar flight master."
-									LogColor="Orange" />
-					
-					<!-- Move to - Thrallmar flight master -->	
-					<RunTo X="228.5" Y="2633.57" Z="87.66663" />
-					
-					<!-- Profile message - Moving to the Dark portal -->
-					<CustomBehavior File="Message" 
-									Text="Moving to the Dark portal."
-									LogColor="Orange" />
-					
-					<!-- Move to - Dark portal flight master -->
-					<RunTo X="-178.09" Y="1026.72" Z="54.19" />
+						<!-- Profile message - Moving to the Thrallmar flight master -->
+						<CustomBehavior File="Message" 
+										Text="Moving to the Thrallmar flight master."
+										LogColor="Orange" />
+
+						<!-- Move to - Thrallmar flight master -->	
+						<RunTo X="228.5" Y="2633.57" Z="87.66663" />
+
+						<!-- Profile message - Moving to the Dark portal -->
+						<CustomBehavior File="Message" 
+										Text="Moving to the Dark portal."
+										LogColor="Orange" />
+						
+						<!-- Move to - Dark portal flight master -->
+						<RunTo X="-178.09" Y="1026.72" Z="54.19" />
+							
+						<!-- Else we are in Netherstorm -->	
+						<Else>	
+							
+							<!-- If we are in Netherstorm -->
+							<If Condition="Me.ZoneId == 3523">
+							
+								<!-- Profile message - We are in Netherstorm -->
+								<CustomBehavior File="Message" 
+												Text="We are in Netherstorm." 
+												LogColor="Cyan" />
+							
+								<!-- Fly to Cosmowrench -->
+								<CustomBehavior File="FlyTo" 
+												X="2966.004" Y="1776.225" Z="215.44" />
+												
+								<!-- CTM to - the Dark Portal -->
+								<CustomBehavior File="MyCTM" 
+												X="-247.9034" Y="1137.371" Z="198.7545" />
+
+								<!-- CTM to - land near the stairs -->
+								<CustomBehavior File="MyCTM" 
+												X="-250.3617" Y="1021.303" Z="54.32681" />
+
+								<!-- Move to - Dark portal flight master -->
+								<RunTo X="-178.09" Y="1026.72" Z="54.19" />				
+							
+							</If>	<!-- If we are in Netherstorm -->	
+							
+						</Else>		<!-- Else we are in Netherstorm -->
+
+					</If>	<!-- If we are not in Netherstorm -->	
 					
 					<!-- Profile message - Moving to the Orgrimmar portal -->
 					<CustomBehavior File="Message" 

@@ -89,19 +89,28 @@
 								LogColor="Cyan" />
 			
 				<!-- Fly to last hilltop before Dalaran -->
-				<CustomBehavior File="FlyTo" X="6238.808" Y="-155.1916" Z="603.1764" />
+				<CustomBehavior File="FlyTo" 
+								X="6238.808" Y="-155.1916" Z="603.1764" />
 			
 				<!-- CTM to the same altitude as the hover point in Dalaran -->
-				<CustomBehavior File="MyCTM" X="6195.48" Y="-80.85192" Z="816.6508" />
+				<CustomBehavior File="MyCTM" 
+								X="6195.48" Y="-80.85192" Z="816.6508" />
 				
 				<!-- CTM to the hover point in Dalaran -->
-				<CustomBehavior File="MyCTM" X="5804.329" Y="640.8198" Z="816.6508" />
+				<CustomBehavior File="MyCTM" 
+								X="5804.329" Y="640.8198" Z="816.6508" />
 			
 				<!-- If we are Alliance, use the portal to Stormwind -->
 				<If Condition="Me.IsAlliance">
-					<CustomBehavior File="FlyTo" X="5763.367" Y="710.6233" Z="643.6194" />
-					<CustomBehavior File="FlyTo" X="5732.852" Y="735.7708" Z="644.6849" />
-					<CustomBehavior File="FlyTo" X="5720.347" Y="721.5897" Z="643.5318" />
+					<CustomBehavior File="FlyTo" 
+									X="5763.367" Y="710.6233" Z="643.6194" />
+									
+					<CustomBehavior File="FlyTo" 
+									X="5732.852" Y="735.7708" Z="644.6849" />
+									
+					<CustomBehavior File="FlyTo" 
+									X="5720.347" Y="721.5897" Z="643.5318" />
+									
 					<CustomBehavior File="ForcedDismount" />
 					
 					<!-- Interact with the portal to Stormwind -->

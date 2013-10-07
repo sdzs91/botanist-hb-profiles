@@ -691,18 +691,18 @@
 		
 		
 		
-		<!-- If our level is 78-79 -->
-		<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 79">
+		<!-- If our level is 78-80 -->
+		<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 80">
 		
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
 				
-				<!-- If we don't have Clefthoof Ribs -->
-				<If Condition="!HasItem(29451)">
+				<!-- If we don't have Briny Hardcheese -->
+				<If Condition="!HasItem(35952)">
 				
-					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<!-- Profile message - We don't have any Briny Hardcheese -->
 					<CustomBehavior File="Message" 
-									Text="We don't have any Clefthoof Ribs."
+									Text="We don't have any Briny Hardcheese."
 									LogColor="Orange" />
 									
 					<!-- Profile message - Moving to the innkeep to purchase some -->
@@ -746,12 +746,12 @@
 			<!-- If we are Horde -->
 			<If Condition="Me.IsHorde" >
 				
-				<!-- If we don't have Clefthoof Ribs -->
-				<If Condition="!HasItem(29451)">
+				<!-- If we don't have Briny Hardcheese -->
+				<If Condition="!HasItem(35952)">
 				
-					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<!-- Profile message - We don't have any Briny Hardcheese -->
 					<CustomBehavior File="Message" 
-									Text="We don't have any Clefthoof Ribs."
+									Text="We don't have any Briny Hardcheese."
 									LogColor="Orange" />
 									
 					<!-- Profile message - Moving to the innkeep to purchase some -->
@@ -759,49 +759,53 @@
 									Text="Moving to the innkeep to purchase some."
 									LogColor="Orange" />				
 				
-					<!-- Fly to - Floyd Pinkus -->
+					<!-- Fly to - Vengeance Landing hover point -->
 					<CustomBehavior File="FlyTo"
-									X="177.9547" Y="2629.776" Z="87.03335" />
+									X="1926.545" Y="-6153.184" Z="70.18691" />
+				
+					<!-- Fly to - front of the inn - Timothy Holland -->
+					<CustomBehavior File="FlyTo"
+									X="1895.527" Y="-6170.808" Z="23.68682" />
 					
 					<!-- Forced dismount -->				
 					<CustomBehavior File="ForcedDismount" />
 				
-					<!-- Move to - Floyd Pinkus -->
+					<!-- Move to - Timothy Holland -->
 					<CustomBehavior File="NoCombatMoveTo" 
-									X="189.3407" Y="2613.765" Z="87.28365" />
+									X="1874.815" Y="-6215.049" Z="13.09039" />
 					
-					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
+					<!-- Interact with Timothy Holland and buy 100 Briny Hardcheese -->
 					<CustomBehavior File="InteractWith"
 												ObjectType="Npc"
 												GossipOptions="2"
 												Range="75"
-												MobId="16602" 
-												BuyItemId="29451" 
+												MobId="24342" 
+												BuyItemId="35952" 
 												BuyItemCount="100"
-												X="190.8758" Y="2610.927" Z="87.28384" />
+												X="1873.319" Y="-6218.146" Z="13.10098" />
 
 					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="60000" />
 
-					<!-- Move to - Thrallmar flight master -->				
+					<!-- Move to - Vengeance Landing flight master -->				
 					<CustomBehavior File="NoCombatMoveTo" 
-									X="229.219" Y="2634.052" Z="87.74729" />			
+									X="1920.288" Y="-6173.525" Z="24.17891" />			
 			
-				</If>	<!-- If we don't have Clefthoof Ribs -->
+				</If>	<!-- If we don't have Briny Hardcheese -->
 	
 			</If>	<!-- If we are Horde -->
 			
-			<!-- If we have Clefthoof Ribs -->
-			<If Condition="HasItem(29451)">
+			<!-- If we do have Briny Hardcheese -->
+				<If Condition="HasItem(35952)">
 			
 				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
 				<CustomBehavior File="LoadProfile" 
 										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
 										
-			</If>	<!-- If we do have Clefthoof Ribs -->
+			</If>	<!-- If we do have Briny Hardcheese -->
 			
-		</If>	<!-- If our level is 77-79 -->
+		</If>	<!-- If our level is 78-80 -->
 		
 		
 		

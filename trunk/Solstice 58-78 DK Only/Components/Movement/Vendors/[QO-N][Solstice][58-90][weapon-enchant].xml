@@ -307,6 +307,84 @@
 										Lua="CloseTradeSkill()" />
 					
 					</If>	<!-- If we have the War Glaive -->
+					
+					<!-- If we have the Ethereal-Etched Glaive -->
+					<If  Condition="HasItem(25235)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Ethereal-Etched Glaive as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Ethereal-Etched Glaive as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Ethereal-Etched Glaive -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="25235" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the War Glaive -->
+					
+					<!-- If we have the Frostbiter -->
+					<If  Condition="HasItem(37054)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Frostbiter as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Frostbiter as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Frostbiter -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="37054" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Frostbiter -->
+						
+					<!-- If we have the Heart Fire Warhammer -->
+					<If  Condition="HasItem(24094)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Heart Fire Warhammer as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Heart Fire Warhammer as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Heart Fire Warhammer -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="24094" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Heart Fire Warhammer -->	
 						
 				</Else>
 

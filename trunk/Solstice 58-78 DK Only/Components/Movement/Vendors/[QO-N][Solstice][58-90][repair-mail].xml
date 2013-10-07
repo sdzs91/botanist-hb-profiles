@@ -530,30 +530,31 @@
 		</If>
 				
 
-		<!-- *******************************************    level is 84-86 ******************************************************* -->
+		<!-- *******************************************    level is 78-80 ******************************************************* -->
 		
 		
-		<!-- If our level is 79-84 -->
-		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 84">
+		<!-- If our level is 78-80 -->
+		<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 80">
 		
 			<!-- Profile message - Our durability is less than 30% or we have less than 25 empty bag slots remaining -->
 			<CustomBehavior File="Message" 
 							Text="Our durability is less than 30% or we have less than 25 empty bag slots remaining." 
 							LogColor="Fuchsia" />
 								
-			<!-- If we are in Blackrock Depths -->
-			<If Condition="Me.ZoneId == 1584">	
+			<!-- If we are in Utgarde Keep -->
+			<If Condition="Me.MapId == 574">	
 				
-				<!-- If our hearthstone/innkeepers daughter is set to Iron Summit -->
-				<If Condition="Me.HearthstoneAreaId == 5628" >
+				<!-- If our hearthstone/innkeepers daughter is set to Vengeance Landing or  -->
+				<If Condition="Me.HearthstoneAreaId == 4532 || Me.HearthstoneAreaId == 4532" >
 				
-					<!-- Profile message - We are in Blackrock Depths, using our Hearthstone/Innkeeper's Daughter -->
+					<!-- Profile message - We are in Utgarde Keep, using our Hearthstone/Innkeeper's Daughter -->
 					<CustomBehavior File="Message" 
-									Text="We are in Blackrock Depths, using our Hearthstone/Innkeeper's Daughter." 
+									Text="We are in Utgarde Keep, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
 					<!-- Have hearthstone -->
 					<If Condition="HasItem(6948)">
+					
 						<CustomBehavior File="Message" 
 										Text="Using Hearthstone." 
 										LogColor="Fuchsia" />
@@ -564,10 +565,12 @@
 										
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
+										
 					</If> <!-- Have hearthstone -->
 				
 					<!-- Have Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
+					
 						<CustomBehavior File="Message" 
 										Text="Using Innkeeper's Daughter." 
 										LogColor="Fuchsia" />
@@ -578,63 +581,123 @@
 							
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
+										
 					</If> <!-- Have Innkeeper's Daughter -->
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
-			</If>	<!-- If we are in Blackrock Depths -->
+			</If>	<!-- If we are in Utgarde Keep -->
 		
-			<!-- If we are still in Blackrock Depths, exit the instance -->
-			<If Condition="Me.ZoneId == 1584">
+			<!-- If we are still in Utgarde Keep exit the instance -->
+			<If Condition="Me.MapId == 574">
 			
 				<!-- Profile message - Our Hearthstone/Innkeeper's Daughter didn't work. Moving to the exit -->
 				<CustomBehavior File="Message" 
 								Text="Our Hearthstone/Innkeeper's Daughter didn't work. Moving to the exit."
 								LogColor="Fuchsia" />
-				
-				<!-- Move to the zone in location -->
-				<RunTo X="460.6402" Y="15.41037" Z="-71.11736" />
-				
+
+				<!-- Make our way to the exit -->
+				<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+
 				<!-- Go through the portal -->
-				<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
+				<CustomBehavior File="Misc\InInstance" X="125.1626" Y="-87.67013" Z="12.55168" />
 				
-				<!-- Move to the zone out location -->
-				<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+				<!-- Move to - zone out location -->
+				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
 				
-			</If>	<!-- If we are still in Blackrock Depths, exit the instance -->
+				<!-- Move to - outside Utgarde Keep -->
+				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				
+			</If>	<!-- If we are still in Utgarde Keep, exit the instance -->
 
-			<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
-			<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
-
-				<!-- Vendor conditions -->
-				<CustomBehavior File="ForceSetVendor" 
-								DoMail="True" 
-								DoRepair="True" 
-								DoSell="True" 
-								DoTrain="False" />
-				
-				<!-- Repair vendor -->
-				<SetVendor>
-					<Vendors>
-						<!-- Iron Summit -->
-						<Vendor Name="Fergus Gravelsmash" 
-								Entry="47937" 
-								Type="Repair" 
-								X="-7093.68" Y="-1268.31" Z="270.4849" />
-					</Vendors>
-				</SetVendor>
-		
-				<!-- Mailbox -->
-				<SetMailbox>
-					<Mailboxes>
-						<!-- Iron Summit -->
-						<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
-					</Mailboxes>
-				</SetMailbox>
-							
-			</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
-				
+			<!-- If we are Howling Fjord -->
+			<If Condition="Me.ZoneId == 495">
 			
+				<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+				<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+
+					<!-- If we are Alliance -->
+					<If Condition="Me.IsAlliance" >
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+						<!-- Vendor conditions -->
+						<CustomBehavior File="ForceSetVendor" 
+										DoMail="True" 
+										DoRepair="True" 
+										DoSell="True" 
+										DoTrain="False" />
+						
+						<!-- Repair vendor -->
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Fergus Gravelsmash" 
+										Entry="47937" 
+										Type="Repair" 
+										X="-7093.68" Y="-1268.31" Z="270.4849" />
+							</Vendors>
+						</SetVendor>
+				
+						<!-- Mailbox -->
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+							</Mailboxes>
+						</SetMailbox>
+						
+					</If>	<!-- If we are Alliance -->
+					
+					<!-- If we are Horde -->
+					<If Condition="Me.IsHorde" >
+					
+						<!-- Fly to - Vengeance Landing hover point -->
+						<CustomBehavior File="FlyTo"
+										X="1926.545" Y="-6153.184" Z="70.18691" />
+					
+						<!-- Fly to - Vengeance Landing - repair - Alexis Walker -->
+						<CustomBehavior File="FlyTo"
+										X="1952.455" Y="-6186.166" Z="24.18039" />
+					
+						<!-- Forced dismount -->				
+						<CustomBehavior File="ForcedDismount" />
+
+						<!-- Vendor conditions -->
+						<CustomBehavior File="ForceSetVendor" 
+										DoMail="True" 
+										DoRepair="True" 
+										DoSell="True" 
+										DoTrain="False" />
+						
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Alexis Walker" 
+										Entry="24347" 
+										Type="Repair" 
+										X="1951.365" Y="-6189.404" Z="24.16514" />
+							</Vendors>
+						</SetVendor>
+
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="1887.699" Y="-6170.498" Z="23.80573" />
+							</Mailboxes>
+						</SetMailbox>
+						
+					</If>	<!-- If we are Horde -->
+				
+				</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+					
+			</If>	<!-- If we are Howling Fjord -->		
+					
 			<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->
 			<If Condition="(Me.FreeBagSlots &gt; 25) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
 			
@@ -642,7 +705,8 @@
 				<CustomBehavior File="LoadProfile" 
 										ProfileName="[QO-N][Solstice][58-90][food]" />
 										
-			</If>		
+			</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->
+			
 		</If>
 				
 

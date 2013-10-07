@@ -110,6 +110,33 @@
 					<!-- Move to - zone in location -->				
 					<RunTo X="80.03099" Y="-258.143" Z="60.70329" />
 					
+					<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
+					<If  Condition="Me.HasAura(53362)" >
+						
+						<!-- Profile message - Our weapon has been Rune-forged -->
+						<CustomBehavior File="Message" 
+										Text="Our weapon has been Runeforged with Rune of Spellshattering."  
+										LogColor="Orange" />
+							
+						<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->	
+						<Else>
+
+							<!-- Move to - away from the portal -->
+						
+						
+							<!-- Profile message - Our weapon has not been Rune-forged -->
+							<CustomBehavior File="Message" 
+											Text="Our weapon has not been Runeforged with Rune of Spellshattering."  
+											LogColor="Orange" />
+											
+							<!-- Custom behavior - LoadProfile - Components\Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant] -->				
+							<CustomBehavior File="LoadProfile"  
+												ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant]" />				
+
+						</Else>	<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->
+					
+					</If>	<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
+					
 					<!-- Profile message - Waiting 3 seconds - Bag and durability check -->
 					<CustomBehavior File="Message" 
 									Text="Waiting 3 seconds - Bag and durability check."  
@@ -474,8 +501,8 @@
 							<!-- @@@@@@@@@@@@@@@@@@@@ 5th pull @@@@@@@@@@@@@@@@@@@@ -->
 				
 				
-							<!-- If we are level 63 or greater -->	
-							<If Condition="Me.Level &gt;= 63">
+							<!-- If we are level 64 or greater -->	
+							<If Condition="Me.Level &gt;= 64">
 							
 								<!-- 1st room on the left -->
 								<CustomBehavior File="NoCombatMoveTo" 
@@ -616,7 +643,7 @@
 												
 								<!-- Move to - inside the lbrs entrance - los pull -->				
 								<CustomBehavior File="NoCombatMoveTo"
-												X="36.65374" Y="-349.4109" Z="48.67748" />			
+												X="16.26467" Y="-345.9327" Z="48.67374" />			
 		
 								<!-- Profile message - Enabling combat -->
 								<CustomBehavior File="Message" 
@@ -630,7 +657,7 @@
 								<CustomBehavior File="WaitTimer" 
 												WaitTime="3000" />
 								
-							</If>	<!-- If we are level 63 or greater -->
+							</If>	<!-- If we are level 64 or greater -->
 
 							<!-- UserSettings -->
 							<CustomBehavior File="UserSettings"
@@ -1952,9 +1979,8 @@
 					
 				</If>	<!-- If we are inside Blackrock Spire -->
 					
-				<!-- If we are inside Blackrock Spire -->
+				<!-- If we didn't need to repair -->
 				<If Condition="Me.ZoneId == 1583">
-				
 				
 					<!-- Profile message - We have more than 25 empty bag slots. Our gear is above 30% durability and we have Homemade Cherry Pie -->
 					<CustomBehavior File="Message" 
@@ -1978,32 +2004,8 @@
 					
 					<!--Move to - zone out location -->
 					<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
-					
-					<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
-					<If  Condition="Me.HasAura(53362)" >
-						
-						<!-- Profile message - Our weapon has been Rune-forged -->
-						<CustomBehavior File="Message" 
-										Text="Our weapon has been Runeforged with Rune of Spellshattering."  
-										LogColor="Orange" />
-							
-						<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->	
-						<Else>
 
-							<!-- Profile message - Our weapon has not been Rune-forged -->
-							<CustomBehavior File="Message" 
-											Text="Our weapon has not been Runeforged with Rune of Spellshattering."  
-											LogColor="Orange" />
-											
-							<!-- Custom behavior - LoadProfile - Components\Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant] -->				
-							<CustomBehavior File="LoadProfile"  
-												ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant]" />				
-
-						</Else>	<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->
-					
-					</If>	<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
-					
-				</If> <!-- BRS -->
+				</If>	<!-- If we didn't need to repair -->
 				
 			</While> <!-- Infinite loop -->
 			
