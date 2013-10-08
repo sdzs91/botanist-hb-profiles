@@ -193,7 +193,7 @@
 					
 					</If>	<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
 					
-				</If>	<!-- If we are in Hellfire Ramparts -->
+				</If>	<!-- If we are in Botanica -->
 
 				<!-- If we are not in the Botanica instance box, load the movement profile -->
 				<If Condition="Me.X &lt; 3359.2 || Me.X &gt; 3459.858 || Me.Y &lt; 1436.971 || Me.Y &gt; 1516.012" >
@@ -1231,7 +1231,7 @@
 						<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
 										MovementBy="NavigatorOnly" 
 										AvoidMobId="17976" 
-										AvoidDistance="40"
+										AvoidDistance="35"
 										X="144.4046" Y="270.0136" Z="-4.078014" >	<!-- Our wait location - pole arm rack -->
 							
 						</CustomBehavior>	<!--WFP to avoid Commander Sarannis -->	
@@ -1287,6 +1287,10 @@
 						<CustomBehavior File="RunMacro"
 										NumOfTimes="1"
 										Macro="/cast Death Grip" />	
+
+						<!-- Move to - kite - base of the side ramp-->
+						<CustomBehavior File="NoCombatMoveTo"
+										X="123.5665" Y="274.1054" Z="-5.427229" />
 		
 						<!-- Profile message - Casting Raise Dead -->
 						<CustomBehavior File="Message" 
@@ -1297,10 +1301,6 @@
 						<CustomBehavior File="RunMacro"
 										NumOfTimes="1"
 										Macro="/cast Raise Dead" />
-		
-						<!-- Move to - kite -->
-						<CustomBehavior File="NoCombatMoveTo"
-										X="143.1496" Y="267.6131" Z="-4.150917" />
 		
 						<!-- Profile message - Enabling combat -->
 						<CustomBehavior File="Message" 
@@ -1313,14 +1313,14 @@
 						<!-- Forces kill of the 2nd Bloodwarder Steward -->
 						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="18404"
-										EventX="143.1496" EventY="267.6131" EventZ="-4.150917"
+										EventX="123.5665" EventY="274.1054" EventZ="-5.427229"
 										MoveOutOfGroundEffectAuraId1="34821"
 										MoveAwayFromMobCastingSpellId1="34821"
 										MoveAwayFromMobWithAuraId1="34821">
 							<Safespots>
-								<Hotspot X="130.8764" Y="274.0828" Z="-5.383926" />
-								<Hotspot X="125.554" Y="287.9893" Z="-5.413508" />
-								<Hotspot X="113.7896" Y="274.7498" Z="-6.998891" />
+								<Hotspot X="118.6726" Y="287.6479" Z="-5.414421" />
+								<Hotspot X="105.0481" Y="283.0478" Z="-6.848835" />
+								<Hotspot X="108.5299" Y="270.4735" Z="-6.852351" />
 							</Safespots>
 						</CustomBehavior>				
 

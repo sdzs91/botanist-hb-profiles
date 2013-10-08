@@ -343,21 +343,34 @@
 					<CustomBehavior File="ForcedMount"
 									MountType="Ground" />	
 											
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Fuchsia" />
+
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />						
+											
 					<!-- Move to the overhead gate entering Blackrock Mountain -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-7498.54" Y="-1076.006" Z="264.7504" />
+					<RunTo X="-7498.54" Y="-1076.006" Z="264.7504" />
 					
 					<!-- Move to the chain leading to BRD -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-7502.87" Y="-1154.363" Z="269.5318" />
+					<RunTo X="-7502.87" Y="-1154.363" Z="269.5318" />
 					
 					<!-- Move to the Summoning Stone -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-7587.533" Y="-1123.904" Z="262.8472" />
+					<RunTo X="-7587.533" Y="-1123.904" Z="262.8472" />
 									
 					<!-- Forced dismount -->
 					<CustomBehavior File="ForcedDismount" />
 					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+									Text="Enabling combat." 
+									LogColor="Fuchsia" />
+					
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+
 					<!-- UserSettings -->
 					<CustomBehavior File="UserSettings"
 									UseMount="False" />

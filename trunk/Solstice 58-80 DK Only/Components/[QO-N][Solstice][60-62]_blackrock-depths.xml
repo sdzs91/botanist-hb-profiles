@@ -433,18 +433,77 @@
 			
 			
 						<!-- UserSettings -->
-							<CustomBehavior File="UserSettings"
-											PullDistance="10" />
+						<CustomBehavior File="UserSettings"
+										PullDistance="10" />
+
+						<!-- Move to -  1st group on the right - pivot location -->
+						<CustomBehavior File="NoCombatMoveTo"
+											X="805.2371" Y="-250.8078" Z="-43.3019" />
 			
-						<!-- Move to -  1st group on the right -->
-						<RunTo X="797.2119" Y="-218.0243" Z="-43.28658" />
+						<!-- Move to - align our target macro -->
+						<CustomBehavior File="NoCombatMoveTo"
+										X="795.4343" Y="-237.6867" Z="-43.29972" />				
+						
+						<!-- Profile message - Targeting the enemy -->
+						<CustomBehavior File="Message" 
+										Text="Targeting the enemy."  
+										LogColor="Orange" />
+
+						<!-- Clear target -->					
+						<CustomBehavior File="RunMacro" 
+										Macro="/cleartarget"  
+										WaitTime="0"/>
+
+						<!-- Macro - targetenemy -->						
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/targetenemy [noharm]" />
+										
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Fuchsia" />
+
+						<!-- Disable combat -->
+						<DisableBehavior Name="Combat" />				
+										
+						<!-- Profile message - Casting Death Grip -->
+						<CustomBehavior File="Message" 
+										Text="Casting Death Grip."  
+										LogColor="Orange" />				
+										
+						<!-- Cast Death Grip -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Death Grip" />
+
+						<!-- Move to - kite - 1st group on the right - mole machine  -->
+						<CustomBehavior File="NoCombatMoveTo"
+										X="805.2835" Y="-243.9377" Z="-43.30264" />				
+
+						<!-- Profile message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Fuchsia" />
+						
+						<!-- enable combat -->
+						<EnableBehavior Name="Combat" />				
+										
+						<!-- Wait timer - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+						
+						<!-- Move to - 1st group on the right - safety -->
+						<CustomBehavior File="NoCombatMoveTo"
+										X="795.8849" Y="-223.3814" Z="-43.29011" />
+						
+						<!-- Wait timer - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
 						
 						<!-- Wait timer - wait 3 seconds - aggro -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
-								
-						<!-- Move to - center of the room - avoid stuck -->	
-						<RunTo X="795.9555" Y="-223.175" Z="-43.29002" />
 						
 						
 						<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -1099,6 +1158,9 @@
 												Text="Disabling combat." 
 												LogColor="Fuchsia" />
 
+							<!-- Disable combat -->
+							<DisableBehavior Name="Combat" />					
+	
 							<!-- Macro - Clear target -->					
 							<CustomBehavior File="RunMacro" 
 											Macro="/cleartarget" 
@@ -1167,10 +1229,38 @@
 							<!-- @@@@@@@@@@@@@@@@@@@@ 5th Pull @@@@@@@@@@@@@@@@@@@@ -->
 							
 							
-							<!-- Move to - group at the base of the ramp - staging location -->					
+							<!-- Move to - group at the base of the ramp - pivot location -->					
 							<CustomBehavior File="NoCombatMoveTo" 
-											X="1119.237" Y="-139.429" Z="-74.35947" />
+											X="1112.841" Y="-184.8344" Z="-65.30779" />
 							
+							<!-- Profile message - Disabling combat -->
+							<CustomBehavior File="Message" 
+												Text="Disabling combat." 
+												LogColor="Fuchsia" />
+
+							<!-- Disable combat -->
+							<DisableBehavior Name="Combat" />
+
+							<!-- Move to - align our target macro -->					
+							<CustomBehavior File="MyCTM" 
+											X="1118.775" Y="-172.7455" Z="-65.30779" />
+
+							<!-- Profile message - Targeting the enemy -->
+							<CustomBehavior File="Message" 
+											Text="Targeting the enemy."  
+											LogColor="Orange" />
+										
+							<!-- Macro - Clear target -->					
+							<CustomBehavior File="RunMacro" 
+											Macro="/cleartarget" 
+											NumOfTimes="1" 
+											WaitTime="0"/>			
+										
+							<!-- Macro - targetenemy -->						
+							<CustomBehavior File="RunMacro"
+											NumOfTimes="2"
+											Macro="/targetenemy [noharm]" />
+
 							<!-- Profile message - Casting Lichborne -->
 							<CustomBehavior File="Message" 
 											Text="Casting Lichborne."  
@@ -1179,49 +1269,44 @@
 							<!-- Macro - Cast Lichborne -->
 							<CustomBehavior File="RunMacro"
 											NumOfTimes="1"
-											Macro="/cast Lichborne" />
-							
-							<!-- Profile message - Disabling combat -->
+											Macro="/cast Lichborne" />				
+														
+							<!-- Profile message - Casting Death Grip -->
 							<CustomBehavior File="Message" 
-												Text="Disabling combat." 
-												LogColor="Fuchsia" />
+											Text="Casting Death Grip."  
+											LogColor="Orange" />
+										
+							<!-- Macro - Cast Death Grip -->
+							<CustomBehavior File="RunMacro"
+											NumOfTimes="2"
+											Macro="/cast Death Grip" />					
 
-							<!-- Disable combat -->
-							<DisableBehavior Name="Combat" />			
-									
-							<!-- Move to - group at the base of the ramp -->
-							<CustomBehavior File="NoCombatMoveTo" 
-											X="1127.229" Y="-149.4446" Z="-74.35947" />
-
-							<!-- Move to - top of the ramp -->					
-							<CustomBehavior File="NoCombatMoveTo"
-											X="1099.969" Y="-157.4268" Z="-65.30907" />				
-											
-							<!-- Macro - Clear target -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/cleartarget" 
-											NumOfTimes="1" 
-											WaitTime="0"/>		
-									
+							<!-- Move to - kite - top of the ramp -->					
+							<CustomBehavior File="MyCTM"
+											X="1099.935" Y="-164.9155" Z="-65.30779" />				
+						
 							<!-- Profile message - Enabling combat -->
 							<CustomBehavior File="Message" 
-											Text="Enabling combat." 
-											LogColor="Fuchsia" />
+												Text="Enabling combat." 
+												LogColor="Fuchsia" />
 							
 							<!-- enable combat -->
-							<EnableBehavior Name="Combat" />				
-											
+							<EnableBehavior Name="Combat" />
+
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
-											WaitTime="3000" />				
-													
+											WaitTime="3000" />
+
 											
 							<!-- @@@@@@@@@@@@@@@@@@@@ 6th Pull @@@@@@@@@@@@@@@@@@@@ -->
 							
 							
+							<!-- Move to - base of the ramp -->					
+							<RunTo X="1120.721" Y="-143.4691" Z="-74.35932" />
+							
 							<!-- Move to - back corner - big column -->					
-							<CustomBehavior File="NoCombatMoveTo"
-											X="1145.298" Y="-186.1695" Z="-74.92873" />
+							<CustomBehavior File="MyCTM"
+											X="1143.333" Y="-185.0086" Z="-74.92897" />
 							
 							<!-- Move to - corner before the Summoners Tomb  -->
 							<CustomBehavior File="MyCTM"
@@ -1236,12 +1321,10 @@
 							<DisableBehavior Name="Combat" />			
 									
 							<!-- Move to - group - Summoners Tomb -->
-							<CustomBehavior File="NoCombatMoveTo" 
-											X="1189.08" Y="-161.8219" Z="-74.36228" />
+							<MoveTo X="1189.08" Y="-161.8219" Z="-74.36228" />
 							
-							<!-- Move to - kite - to the ramp - Summoners Tomb -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="1213.637" Y="-188.1076" Z="-77.87379" />
+							<!-- Move to - kite - to the right-hand crypt - Summoners Tomb -->
+							<MoveTo X="1245.503" Y="-270.4072" Z="-78.21926" />
 									
 							<!-- Macro - Clear target -->					
 							<CustomBehavior File="RunMacro" 
@@ -1262,8 +1345,7 @@
 											WaitTime="3000" />
 											
 							<!-- Move to - group - Summoners Tomb -->
-							<CustomBehavior File="NoCombatMoveTo" 
-											X="1189.08" Y="-161.8219" Z="-74.36228" />
+							<RunTo X="1189.068" Y="-158.8517" Z="-74.36301" />
 
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
@@ -1275,74 +1357,19 @@
 			
 							<!-- Usersettings -->
 							<CustomBehavior File="UserSettings" 
-											PullDistance="20" />
+											PullDistance="5" />
 			
-							<!-- Move to - group at the big molds - staging location-->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="1173.461" Y="-153.2493" Z="-74.36171" />
+							<!-- Move to - back corner of the big column -->
+							<CustomBehavior File="MyCTM" 
+											X="1170.643" Y="-160.6721" Z="-74.3595" />
 											
-							<!-- Profile message - Targeting the enemy -->
-							<CustomBehavior File="Message" 
-											Text="Targeting the enemy."  
-											LogColor="Orange" />
-										
-							<!-- Macro - Clear target -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/cleartarget" 
-											NumOfTimes="1" 
-											WaitTime="0"/>			
-										
-							<!-- Macro - targetenemy -->						
-							<CustomBehavior File="RunMacro"
-											NumOfTimes="1"
-											Macro="/target Doomforge Arcanasmith" />
-
-							<!-- Profile message - Casting Lichborne -->
-							<CustomBehavior File="Message" 
-											Text="Casting Lichborne."  
-											LogColor="Orange" />
-
-							<!-- Macro - Cast Lichborne -->
-							<CustomBehavior File="RunMacro"
-											NumOfTimes="1"
-											Macro="/cast Lichborne" />				
-	
-							<!-- Profile message - Disabling combat -->
-							<CustomBehavior File="Message" 
-												Text="Disabling combat." 
-												LogColor="Fuchsia" />
-
-							<!-- Disable combat -->
-							<DisableBehavior Name="Combat" />				
-			
-							<!-- Move to - group at the big molds -->					
-							<CustomBehavior File="NoCombatMoveTo" 
-											X="1152.382" Y="-132.4311" Z="-74.36453" />
-													
-							<!-- Move to - top of the ramp -->					
-							<CustomBehavior File="NoCombatMoveTo"
-											X="1097.334" Y="-162.2922" Z="-65.30869" />			
-				
-							<!-- Profile message - Enabling combat -->
-							<CustomBehavior File="Message" 
-												Text="Enabling combat." 
-												LogColor="Fuchsia" />
-							
-							<!-- enable combat -->
-							<EnableBehavior Name="Combat" />
-
-							<!-- Wait timer - wait 3 seconds - delay -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="3000" />
+							<!-- Move to - back of the big column -->
+							<CustomBehavior File="MyCTM"
+											X="1143.843" Y="-186.5611" Z="-74.92923" />				
 											
-							<!-- Move to - group at the big molds -->					
-							<CustomBehavior File="NoCombatMoveTo" 
-											X="1152.382" Y="-132.4311" Z="-74.36453" />				
-
-							<!-- Wait timer - wait 3 seconds - delay -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="3000" />				
-											
+							<!-- Move to - top of the ramp -->
+							<RunTo X="1097.341" Y="-160.4514" Z="-65.30898" />				
+ 
 
 							<!-- @@@@@@@@@@@@@@@@@@@@ 4th pull @@@@@@@@@@@@@@@@@@@@ -->	
 						
@@ -1370,16 +1397,13 @@
 											Macro="/cast Lichborne" />				
 
 							<!-- Move to - 2nd group on the right -->					
-							<CustomBehavior File="NoCombatMoveTo"
-											X="1171.162" Y="-191.2657" Z="-65.44874" />	
+							<RunTo X="1171.162" Y="-191.2657" Z="-65.44874" />	
 											
 							<!-- Move to - jump pivot location -->
-							<CustomBehavior File="NoCombatMoveTo" 
-											X="1167.048" Y="-193.1599" Z="-65.45195" />
+							<RunTo X="1167.048" Y="-193.1599" Z="-65.45195" />
 											
 							<!-- Move to - jump location -->				
-							<CustomBehavior File="NoCombatMoveTo" 
-											X="1162.383" Y="-188.2297" Z="-65.30891" />
+							<RunTo X="1162.383" Y="-188.2297" Z="-65.30891" />
 
 							<!-- Custom behavior - Jumpforward -->
 							<CustomBehavior File="Misc\JumpForward" />
@@ -1388,6 +1412,11 @@
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="3000" />				
 
+							<!-- Move to - back corner of the big column -->				
+							<CustomBehavior File="MyCTM"
+											X="1142.752" Y="-190.9465" Z="-74.92918" />				
+											
+											
 							<!-- Profile message - Enabling combat -->
 							<CustomBehavior File="Message" 
 											Text="Enabling combat." 
