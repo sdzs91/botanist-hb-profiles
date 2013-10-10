@@ -93,7 +93,8 @@
 					<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
 
 					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="125.1626" Y="-87.67013" Z="12.55168" />
+					<CustomBehavior File="Misc\InInstance" 
+									X="125.1626" Y="-87.67013" Z="12.55168" />
 					
 					<!-- Move to - zone out location -->
 					<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
@@ -127,9 +128,10 @@
 						<Else>
 
 							<!-- Move to - away from the portal -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="1207.645" Y="-4869.466" Z="41.2481" />
-						
+							<DisableBehavior Name="Combat" />
+								<MoveTo X="1207.645" Y="-4869.466" Z="41.2481" />
+							<EnableBehavior Name="Combat" />
+
 							<!-- Profile message - Our weapon has not been Rune-forged -->
 							<CustomBehavior File="Message" 
 											Text="Our weapon has not been Runeforged with Rune of Spellshattering."  
@@ -298,13 +300,12 @@
 						
 						
 						<!-- Move to - entrance guards - pivot location -->
-						<CustomBehavior File="NoCombatMoveTo"
-											X="176.0377" Y="-85.71993" Z="12.55168" />
-			
-						<!-- Move to - align our target macro-->
-						<CustomBehavior File="NoCombatMoveTo"
-										X="192.6162" Y="-79.20293" Z="18.61517" />				
-						
+						<MoveTo X="176.0377" Y="-85.71993" Z="12.55168" />
+								
+						<!-- CTM to - align our target macro -->
+						<CustomBehavior File="MyCTM"
+										X="192.6162" Y="-79.20293" Z="18.61517" />
+
 						<!-- Profile message - Targeting the enemy -->
 						<CustomBehavior File="Message" 
 										Text="Targeting the enemy."  
@@ -335,9 +336,8 @@
 										WaitTime="3000" />
 						
 						<!-- Move to - entrance guards - safety -->
-						<CustomBehavior File="NoCombatMoveTo"
-										X="209.6392" Y="-67.928" Z="24.67863" />
-						
+							<MoveTo X="209.6392" Y="-67.928" Z="24.67863" />
+							
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
@@ -347,13 +347,12 @@
 						
 										
 						<!-- Move to - 1st group left-hand side - pivot location -->
-						<CustomBehavior File="NoCombatMoveTo"
-											X="221.5442" Y="-71.81171" Z="24.67863" />
-			
-						<!-- Move to - align our target macro-->
-						<CustomBehavior File="NoCombatMoveTo"
-										X="232.3499" Y="-58.77731" Z="24.67858" />				
-						
+						<MoveTo X="221.5442" Y="-71.81171" Z="24.67863" />
+
+						<!-- CTM to - align our target macro -->
+						<CustomBehavior File="MyCTM"
+										X="232.3499" Y="-58.77731" Z="24.67858" />
+							
 						<!-- Profile message - Targeting the enemy -->
 						<CustomBehavior File="Message" 
 										Text="Targeting the enemy."  
@@ -382,15 +381,29 @@
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
-						
+
 						<!-- Move to - left-hand wall - safety -->
-						<CustomBehavior File="NoCombatMoveTo"
-										X="233.1737" Y="-49.77694" Z="24.67858" />
+						<MoveTo X="233.1737" Y="-49.77694" Z="24.67858" />
+
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+						
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />
 						
 						<!-- Move to - 1st group left-hand side - safety -->
-						<CustomBehavior File="NoCombatMoveTo"
-										X="246.6297" Y="-30.85753" Z="24.67862" />
-						
+						<MoveTo X="246.6297" Y="-30.85753" Z="24.67862" />
+
+						<!-- Profile message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
+
+						<!-- enable combat -->
+						<EnableBehavior Name="Combat" />
+
 						<!-- Wait timer - wait 3 seconds - aggro the patrol -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
@@ -399,17 +412,50 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 						
+						
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+						
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />
+						
 						<!-- Move to - front of the left anvil -->
-						<RunTo X="259.1027" Y="-23.90401" Z="24.67862" />
+						<MoveTo X="259.1027" Y="-23.90401" Z="24.67862" />
+							
+						<!-- Profile message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
+
+						<!-- enable combat -->
+						<EnableBehavior Name="Combat" />
 						
 						
 						<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 						
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+						
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />
+						
 						<!-- Move to - end of the left weapon rack -->
-						<RunTo X="302.7747" Y="-31.67596" Z="24.67868" />
-						
-						
+						<MoveTo X="302.7747" Y="-31.67596" Z="24.67868" />
+							
+						<!-- Profile message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
+
+						<!-- enable combat -->
+						<EnableBehavior Name="Combat" />
+
+												
 						<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 						
@@ -422,86 +468,27 @@
 
 						<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
 						
-						
-						<!-- UserSettings -->
-						<CustomBehavior File="UserSettings"
-										PullDistance="25" />
-						
-						<!-- Move to - left-hand anvil -->
-						<CustomBehavior File="NoCombatMoveTo"
-											X="272.615" Y="-38.02671" Z="24.67868" />
-						
-						<!-- Move to - 1st group right-hand side - pivot location -->
-						<CustomBehavior File="NoCombatMoveTo"
-											X="229.8286" Y="-51.07646" Z="24.67863" />
-			
-						<!-- Move to - align our target macro-->
-						<CustomBehavior File="NoCombatMoveTo"
-										X="242.0551" Y="-53.56339" Z="24.67863" />				
-						
-						<!-- Profile message - Targeting the enemy -->
-						<CustomBehavior File="Message" 
-										Text="Targeting the enemy."  
-										LogColor="Orange" />
 
-						<!-- Clear target -->					
-						<CustomBehavior File="RunMacro" 
-										Macro="/cleartarget"  
-										WaitTime="0"/>
-
-						<!-- Macro - targetenemy -->						
-						<CustomBehavior File="RunMacro"
-										NumOfTimes="1"
-										Macro="/targetenemy [noharm]" />
-										
-						<!-- Profile message - Casting Raise Dead -->
-						<CustomBehavior File="Message" 
-										Text="Casting Raise Dead."  
-										LogColor="Orange" />
-									
-						<!-- Macro - Cast Raise Dead -->
-						<CustomBehavior File="RunMacro"
-										NumOfTimes="1"
-										Macro="/cast Raise Dead" />					
-										
-						<!-- Profile message - Casting Bone Shield -->
-						<CustomBehavior File="Message" 
-										Text="Casting Bone Shield."  
-										LogColor="Orange" />
-									
-						<!-- Macro - Cast Bone Shield -->
-						<CustomBehavior File="RunMacro"
-										NumOfTimes="1"
-										Macro="/cast Bone Shield" />				
-
-						<!-- Profile message - Casting Icebound Fortitude -->
-						<CustomBehavior File="Message" 
-										Text="Casting Icebound Fortitude."  
-										LogColor="Orange" />
-										
-						<!-- Macro - Cast Icebound Fortitude -->
-						<CustomBehavior File="RunMacro"
-										NumOfTimes="1"
-										Macro="/cast Icebound Fortitude" />				
-										
-						<!-- Profile message - Casting Death Grip -->
-						<CustomBehavior File="Message" 
-										Text="Casting Death Grip."  
-										LogColor="Orange" />				
-										
-						<!-- Cast Death Grip -->
-						<CustomBehavior File="RunMacro"
-										NumOfTimes="1"
-										Macro="/cast Death Grip" />
-
-						<!-- Wait timer - wait 3 seconds - delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />
-										
-						<!-- Move to - 1st group right-hand side - safety -->
-						<CustomBehavior File="NoCombatMoveTo"
-										X="262.0369" Y="-71.40858" Z="24.67863" />
 						
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+						
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />
+
+						<!-- Move to - 1st group right-hand side -->
+						<MoveTo X="274.3025" Y="-70.14041" Z="24.6786" />
+							
+						<!-- Profile message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
+
+						<!-- enable combat -->
+						<EnableBehavior Name="Combat" />
+
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
@@ -511,21 +498,19 @@
 						
 						
 						<!-- Move to - patrol wait location -->
-						<RunTo X="304.091" Y="-35.68795" Z="24.67863" />
+						<MoveTo  X="304.091" Y="-35.68795" Z="24.67863" />
 						
-				
-										
+		
 						<!-- @@@@@@@@@@@@@@@@@@@@ 5th pull @@@@@@@@@@@@@@@@@@@@ -->
 						
-										
-										
-						<!-- Move to - group at the first anvil - pivot location -->
-						<RunTo X="324.0199" Y="-25.63305" Z="22.75604" />
 			
-						<!-- Move to - align our target macro-->
-						<CustomBehavior File="NoCombatMoveTo"
-										X="333.5295" Y="-34.38729" Z="22.96349" />				
-						
+						<!-- Move to - group at the first anvil - pivot location -->
+						<MoveTo  X="324.0199" Y="-25.63305" Z="22.75604" />
+
+						<!-- CTM to - align our target macro -->
+						<CustomBehavior File="MyCTM"
+										X="333.5295" Y="-34.38729" Z="22.96349" />
+
 						<!-- Profile message - Targeting the enemy -->
 						<CustomBehavior File="Message" 
 										Text="Targeting the enemy."  
@@ -554,11 +539,10 @@
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
-						
+
 						<!-- Move to - group at the first anvil - safety -->
-						<CustomBehavior File="NoCombatMoveTo"
-										X="358.0963" Y="-51.61237" Z="22.75492" />
-						
+						<MoveTo X="358.0963" Y="-51.61237" Z="22.75492" />
+
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />				
@@ -567,14 +551,14 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 6th pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 										
+						
 						<!-- Move to - group at the second anvil - pivot location -->
-						<CustomBehavior File="NoCombatMoveTo" 
-										X="398.502" Y="-43.3487" Z="22.7549" />
-										
-						<!-- Move to - align our target macro -->	
-						<CustomBehavior File="NoCombatMoveTo" 
-										X="395.6492" Y="-31.61772" Z="22.7549" />				
-										
+						<MoveTo X="398.502" Y="-43.3487" Z="22.7549" />
+
+						<!-- CTM to - align our target macro -->
+						<CustomBehavior File="MyCTM"
+										X="395.6492" Y="-31.61772" Z="22.7549" />
+
 						<!-- Macro - Clear target -->					
 						<CustomBehavior File="RunMacro" 
 										Macro="/cleartarget" 
@@ -609,11 +593,10 @@
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
-										
-						<!-- Move to - group at the second anvil -->
-						<CustomBehavior File="NoCombatMoveTo" 
-										X="385.5883" Y="2.366929" Z="23.23494" />				
-						
+
+						<!-- Move to - group at the second anvil - safety -->
+						<MoveTo X="385.5883" Y="2.366929" Z="23.23494" />
+
 						<!-- Profile message - Waiting 30 seconds for cool downs -->
 						<CustomBehavior File="Message" 
 										Text="Waiting 30 seconds for cool downs."  
@@ -628,11 +611,10 @@
 						
 										
 						<!-- Move to - group at the third anvil - pivot location -->
-						<CustomBehavior File="NoCombatMoveTo" 
-										X="373.3524" Y="25.26271" Z="22.75493" />
+						<MoveTo X="373.3524" Y="25.26271" Z="22.75493" />
 										
-						<!-- Move to - align our target macro -->	
-						<CustomBehavior File="NoCombatMoveTo" 
+						<!-- CTM to - align our target macro -->
+						<CustomBehavior File="MyCTM"
 										X="362.8379" Y="21.28446" Z="22.75493" />				
 										
 						<!-- Macro - Clear target -->					
@@ -690,31 +672,19 @@
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
 										
-						<!-- Move to - group at the second anvil -->
-						<CustomBehavior File="NoCombatMoveTo" 
-										X="389.5577" Y="2.449432" Z="22.75495" />				
+						<!-- Move to - group at the third anvil - safety -->
+						<MoveTo X="341.5074" Y="10.55831" Z="22.75618" />				
 						
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
 										
-						
-						<!-- @@@@@@@@@@@@@@@@@@@@ 7th pull @@@@@@@@@@@@@@@@@@@@ -->
-						
-										
-						<!-- Move to - group at the third anvil -->
-						<RunTo X="344.1386" Y="13.43578" Z="22.75493" />
-						
-						<!-- Wait timer - wait 3 seconds - delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />						
-						
 						
 						<!-- @@@@@@@@@@@@@@@@@@@@ 7th pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 										
 						<!-- Move to - 1st drake - left -->
-						<RunTo X="343.481" Y="101.1277" Z="30.76304" />
+						<MoveTo X="343.481" Y="101.1277" Z="30.76304" />
 						
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
@@ -724,9 +694,96 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 7th pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 										
-						<!-- Move to - drake and trainer -->
-						<RunTo X="348.9515" Y="148.5573" Z="30.75699" />
+						<!-- Move to - drake and trainer - left -->
+						<MoveTo X="360.8966" Y="120.3735" Z="30.74864" />
+										
+						<!-- CTM to - align our target macro -->
+						<CustomBehavior File="MyCTM"
+										X="353.7291" Y="133.5221" Z="30.74433" />				
+										
+						<!-- Macro - Clear target -->					
+						<CustomBehavior File="RunMacro" 
+										Macro="/cleartarget" 
+										NumOfTimes="1" 
+										WaitTime="0"/>				
+										
+						<!-- Macro - targetenemy -->						
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/targetenemy [noharm]" />				
+
+						<!-- Profile message - Casting Death Grip -->
+						<CustomBehavior File="Message" 
+										Text="Casting Death Grip."  
+										LogColor="Orange" />
+									
+						<!-- Macro - Cast Death Grip -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Death Grip" />
 						
+						<!-- Wait timer - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+										
+						<!-- Move to - drake and trainer - left - safety -->
+						<MoveTo X="348.623" Y="151.934" Z="30.75898" />				
+						
+						<!-- Wait timer - wait 30 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="30000" />
+						
+						
+						<!-- @@@@@@@@@@@@@@@@@@@@ 7th pull @@@@@@@@@@@@@@@@@@@@ -->
+						
+										
+						<!-- Move to - 2nd drake and trainer - right - pivot location-->
+						<MoveTo X="375.5398" Y="106.7515" Z="30.76959" />
+										
+						<!-- CTM to - align our target macro -->
+						<CustomBehavior File="MyCTM"
+										X="380.7204" Y="114.7967" Z="30.76242" />				
+										
+						<!-- Macro - Clear target -->					
+						<CustomBehavior File="RunMacro" 
+										Macro="/cleartarget" 
+										NumOfTimes="1" 
+										WaitTime="0"/>				
+										
+						<!-- Macro - targetenemy -->						
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/targetenemy [noharm]" />				
+
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+						
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />
+
+						<!-- Profile message - Casting Death Grip -->
+						<CustomBehavior File="Message" 
+										Text="Casting Death Grip."  
+										LogColor="Orange" />
+									
+						<!-- Macro - Cast Death Grip -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Death Grip" />
+
+						<!-- Move to - kite - around the corner -->
+						<MoveTo X="389.6134" Y="86.88935" Z="30.74204" />				
+										
+						<!-- Profile message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
+
+						<!-- enable combat -->
+						<EnableBehavior Name="Combat" />				
+		
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
@@ -735,20 +792,46 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 7th pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 										
-						<!-- Move to - 2nd drake and trainer -->
-						<RunTo X="392.726" Y="149.7639" Z="30.77593" />
+						<!-- Move to - 3rd drake and trainer - right -->
+						<RunTo X="391.2078" Y="149.0951" Z="30.77503" />
+										
+						<!-- Move to - align our target macro -->	
+						<RunTo X="388.4576" Y="160.4869" Z="30.77503" />				
+										
+						<!-- Macro - Clear target -->					
+						<CustomBehavior File="RunMacro" 
+										Macro="/cleartarget" 
+										NumOfTimes="1" 
+										WaitTime="0"/>				
+										
+						<!-- Macro - targetenemy -->						
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/targetenemy [noharm]" />				
+
+						<!-- Profile message - Casting Death Grip -->
+						<CustomBehavior File="Message" 
+										Text="Casting Death Grip."  
+										LogColor="Orange" />
+									
+						<!-- Macro - Cast Death Grip -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Death Grip" />
 						
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
-						
-						
-						<!-- @@@@@@@@@@@@@@@@@@@@ 7th pull @@@@@@@@@@@@@@@@@@@@ -->
-						
 										
-						<!-- Move to - 3rd drake and trainer -->
-						<RunTo X="378.0969" Y="179.7416" Z="30.77518" />
+						<!-- Move to - 3rd drake and trainer - right - safety -->
+						<DisableBehavior Name="Combat" />
 						
+						
+							<MoveTo X="377.6816" Y="183.172" Z="30.77579" />
+							
+							
+						<EnableBehavior Name="Combat" />
+
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
@@ -760,22 +843,37 @@
 						<!-- Move to - 2nd drake - left -->
 						<RunTo X="321.7218" Y="170.4056" Z="30.79211" />
 						
-						<!-- Wait timer - wait 3 seconds - delay -->
+						<!-- Profile message - Waiting 1 minute for cool downs -->
+						<CustomBehavior File="Message" 
+										Text="Waiting 1 minute for cool downs."  
+										LogColor="Orange" />
+						
+						<!-- Wait timer - wait 60 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />
+										WaitTime="60000" />
 						
 						
 						<!-- @@@@@@@@@@@@@@@@@@@@ 7th pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 										
-						<!-- Move to - group at the door - pivot location -->	
-						<CustomBehavior File="NoCombatMoveTo" 
-										X="331.489" Y="170.1099" Z="30.80198" />
-										
-						<!-- Move to - align our target macro -->	
-						<CustomBehavior File="NoCombatMoveTo" 
-										X="334.2432" Y="176.6282" Z="30.81443" />				
-										
+						<!-- Move to - group at the door - pivot location -->
+						<DisableBehavior Name="Combat" />
+						
+						
+							<MoveTo X="331.489" Y="170.1099" Z="30.80198" />
+							
+							
+						<EnableBehavior Name="Combat" />
+
+						<!-- Move to - align our target macro -->
+						<DisableBehavior Name="Combat" />
+						
+						
+							<MoveTo X="334.2432" Y="176.6282" Z="30.81443" />
+							
+							
+						<EnableBehavior Name="Combat" />						
+
 						<!-- Macro - Clear target -->					
 						<CustomBehavior File="RunMacro" 
 										Macro="/cleartarget" 
@@ -835,14 +933,24 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 7th pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 										
-						<!-- Move to - group inside  the door - pivot location -->	
-						<CustomBehavior File="NoCombatMoveTo" 
-										X="339.146" Y="195.0486" Z="30.81314" />
-										
-						<!-- Move to - align our target macro -->	
-						<CustomBehavior File="NoCombatMoveTo" 
-										X="337.4769" Y="219.9278" Z="30.79003" />				
-										
+						<!-- Move to - group inside  the door - pivot location -->
+						<DisableBehavior Name="Combat" />
+						
+						
+							<MoveTo X="339.146" Y="195.0486" Z="30.81314" />
+							
+							
+						<EnableBehavior Name="Combat" />
+
+						<!-- Move to - align our target macro -->
+						<DisableBehavior Name="Combat" />
+						
+						
+							<MoveTo X="337.4769" Y="219.9278" Z="30.79003" />
+							
+							
+						<EnableBehavior Name="Combat" />
+
 						<!-- Macro - Clear target -->					
 						<CustomBehavior File="RunMacro" 
 										Macro="/cleartarget" 
@@ -880,11 +988,12 @@
 										
 					</If>	<!-- If we are between level 78-80 -->					
 										
+										
 					<!-- ***************************************************************************************************************************** -->
 					
 									
 					<!-- Make our way to the exit -->
-					<RunTo X="157.878" Y="-84.7025" Z="12.55168" />
+					<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
 
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -989,9 +1098,9 @@
 									Text="Exiting the instance so we can reset it."
 									LogColor="Fuchsia" />
 					
-					<!-- Move to - zone in location -->
-					<RunTo X="40.5531" Y="-28.7947" Z="-1.11728" />
-					
+					<!-- Make our way to the exit -->
+					<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" 
 									X="125.1626" Y="-87.67013" Z="12.55168" />

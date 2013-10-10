@@ -47,6 +47,8 @@
 		
 		<!-- Level check -->
 		<If Condition="Me.Level &gt;= 70">
+		
+			<!-- Profile message - You meet the level requirement to run this profile -->
 			<CustomBehavior File="Message" 
 							Text="You meet the level requirement to run this profile." 
 							LogColor="Fuchsia" />
@@ -313,6 +315,7 @@
 									NumOfTimes="1" 
 									WaitTime="1000" />
 								
+					<!-- Profile message - Sethekk Halls initialized -->			
 					<CustomBehavior File="Message" 
 									Text="Sethekk Halls initialized."  
 									LogColor="Fuchsia" />

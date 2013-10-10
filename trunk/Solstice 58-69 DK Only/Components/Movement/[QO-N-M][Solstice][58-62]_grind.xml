@@ -120,22 +120,28 @@
 							<!-- Move to - Dark portal -->
 							<RunTo X="-11896.8" Y="-3206.77" Z="-14.6724" />
 											
-							<!-- Move to - through Dark Portal -->
+							<!-- Forced dismount -->	
+							<CustomBehavior File="ForcedDismount" />				
+											
+							<!-- Run through Dark Portal -->
 							<CustomBehavior File="Misc\InInstance" 
-											X="-11908.54" Y="-3209.042" Z="-14.84263" />			
+											X="-11908.3" Y="-3207.804" Z="-14.82459" />
 					
 							<!-- Wait timer - wait 10 seconds - game to load -->
 							<CustomBehavior File="WaitTimer" 
-										WaitTime="10000" />
-					
-							<!-- Profile message - Moving to the flight master -->
-							<CustomBehavior File="Message" 
-											Text="Moving to the flight master." 
-											LogColor="Fuchsia" />
+											WaitTime="10000" />
 					
 							<!-- Move to Alliance flight master -->
 							<CustomBehavior File="NoCombatMoveTo"
 											X="-320.2289" Y="1026.322" Z="54.17362" />
+							
+							<!-- Custom behavior - InteractWith the flight master -->
+							<CustomBehavior File="InteractWith"
+											ObjectType="Npc"
+											MobId="18931"
+											NumOfTimes="1"
+											CollectionDistance="50"
+											X="-323.8098" Y="1027.611" Z="54.15654" />
 							
 							<!-- Forced dismount -->	
 							<CustomBehavior File="ForcedDismount" />
@@ -143,11 +149,6 @@
 							<!-- Wait timer - wait 3 seconds - lag delay -->
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="3000" />
-							
-							<!-- Profile message - Moving to Honor Hold -->
-							<CustomBehavior File="Message" 
-											Text="Moving to Honor Hold." 
-											LogColor="Fuchsia" />
 							
 							<!-- Move to Honor Hold -->
 							<RunTo X="-673.42" Y="2717.27" Z="94.18" />
@@ -158,22 +159,28 @@
 								<!-- Move to - Dark portal -->
 								<RunTo X="-11896.8" Y="-3206.77" Z="-14.6724" />
 												
-								<!-- Move to - through Dark Portal -->
+								<!-- Forced dismount -->	
+								<CustomBehavior File="ForcedDismount" />				
+												
+								<!-- Run through Dark Portal -->
 								<CustomBehavior File="Misc\InInstance" 
-												X="-11908.54" Y="-3209.042" Z="-14.84263" />			
+												X="-11908.3" Y="-3207.804" Z="-14.82459" />
 						
 								<!-- Wait timer - wait 10 seconds - game to load -->
 								<CustomBehavior File="WaitTimer" 
-											WaitTime="10000" />
-						
-								<!-- Profile message - Moving to the flight master -->
-								<CustomBehavior File="Message" 
-												Text="Moving to the flight master." 
-												LogColor="Fuchsia" />
+												WaitTime="10000" />
 						
 								<!-- Move to Alliance flight master -->
 								<CustomBehavior File="NoCombatMoveTo"
 												X="-320.2289" Y="1026.322" Z="54.17362" />
+								
+								<!-- Custom behavior - InteractWith the flight master -->
+								<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												MobId="18931"
+												NumOfTimes="1"
+												CollectionDistance="50"
+												X="-323.8098" Y="1027.611" Z="54.15654" />
 								
 								<!-- Forced dismount -->	
 								<CustomBehavior File="ForcedDismount" />
@@ -181,12 +188,7 @@
 								<!-- Wait timer - wait 3 seconds - lag delay -->
 								<CustomBehavior File="WaitTimer" 
 												WaitTime="3000" />
-											
-								<!-- Profile message - Moving to Honor Hold -->
-								<CustomBehavior File="Message" 
-												Text="Moving to Honor Hold." 
-												LogColor="Fuchsia" />			
-											
+								
 								<!-- Move to Honor Hold -->
 								<RunTo X="-673.42" Y="2717.27" Z="94.18" />
 							
@@ -365,9 +367,9 @@
 				<!-- If We are in Outland -->
 				<If Condition="Me.MapId == 530" >
 				
-					<!-- Load profile - [QO-N][Solstice][58-90][mobile-banking] -->
+					<!-- Load profile - [QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
 					<CustomBehavior File="LoadProfile" 
-											ProfileName="..\..\[QO-N][60-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+											ProfileName="..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
 
 				</If>	<!-- If We are in Outland -->
 				

@@ -563,18 +563,18 @@
 		
 		
 		
-		<!-- If our level is 79-84 -->
-		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 84">
+		<!-- If our level is 79-81 -->
+		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 81">
 		
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
 				
-				<!-- If we don't have Clefthoof Ribs -->
-				<If Condition="!HasItem(29451)">
+				<!-- If we don't have Mead Basted Caribou -->
+				<If Condition="!HasItem(35953)">
 				
-					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<!-- Profile message - We don't have any Mead Basted Caribou -->
 					<CustomBehavior File="Message" 
-									Text="We don't have any Clefthoof Ribs."
+									Text="We don't have any Mead Basted Caribou."
 									LogColor="Orange" />
 									
 					<!-- Profile message - Moving to the innkeep to purchase some -->
@@ -593,7 +593,7 @@
 					<CustomBehavior File="NoCombatMoveTo" 
 									X="189.3407" Y="2613.765" Z="87.28365" />
 					
-					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Clefthoof Ribs -->
+					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Mead Basted Caribou -->
 					<CustomBehavior File="InteractWith"
 												ObjectType="Npc"
 												GossipOptions="2"
@@ -608,22 +608,21 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Thrallmar flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="229.219" Y="2634.052" Z="87.74729" />
+					<RunTo X="229.219" Y="2634.052" Z="87.74729" />
 					
-				</If>	<!-- If we don't have Clefthoof Ribs -->
+				</If>	<!-- If we don't have Mead Basted Caribou -->
 					
 			</If>	<!-- If we are Alliance -->
 			
 			<!-- If we are Horde -->
 			<If Condition="Me.IsHorde" >
 				
-				<!-- If we don't have Clefthoof Ribs -->
-				<If Condition="!HasItem(29451)">
+				<!-- If we don't have Mead Basted Caribou -->
+				<If Condition="!HasItem(35953)">
 				
-					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<!-- Profile message - We don't have any Mead Basted Caribou -->
 					<CustomBehavior File="Message" 
-									Text="We don't have any Clefthoof Ribs."
+									Text="We don't have any Mead Basted Caribou."
 									LogColor="Orange" />
 									
 					<!-- Profile message - Moving to the innkeep to purchase some -->
@@ -631,52 +630,56 @@
 									Text="Moving to the innkeep to purchase some."
 									LogColor="Orange" />				
 				
-					<!-- Fly to - Floyd Pinkus -->
-					<CustomBehavior File="FlyTo"
-									X="177.9547" Y="2629.776" Z="87.03335" />
+					<!-- Profile message - Flying to Conquest Hold -->
+					<CustomBehavior File="Message" 
+									Text="Flying to Conquest Hold." 
+									LogColor="Cyan" />
+			
+					<!-- Fly to - Conquest Hold hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="3242.183" Y="-2287.45" Z="159.358" />
+
+					<!-- Fly to - doorway of the inn -->
+					<CustomBehavior File="FlyTo" 
+									X="3258.933" Y="-2226.123" Z="116.8299" />
 					
-					<!-- Forced dismount -->				
+					<!-- Custom behavior - ForcedDismount -->
 					<CustomBehavior File="ForcedDismount" />
-				
-					<!-- Move to - Floyd Pinkus -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="189.3407" Y="2613.765" Z="87.28365" />
+
+					<!-- Move to - inside the inn -->
+					<RunTo X="3258.109" Y="-2203.184" Z="117.0297" />
 					
-					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
+					<!-- Interact with Barracks Master Rhekku and buy 100 Mead Basted Caribou -->
 					<CustomBehavior File="InteractWith"
 												ObjectType="Npc"
 												GossipOptions="2"
 												Range="75"
-												MobId="16602" 
-												BuyItemId="29451" 
+												MobId="27125" 
+												BuyItemId="35953" 
 												BuyItemCount="100"
-												X="190.8758" Y="2610.927" Z="87.28384" />
+												X="3256.434" Y="-2202.075" Z="117.0294" />
 
 					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="60000" />
 
-					<!-- Move to - Thrallmar flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="229.219" Y="2634.052" Z="87.74729" />			
+					<!-- Move to - Conquest Hold flight master -->				
+					<RunTo X="3257.613" Y="-2261.269" Z="114.5332" />			
 			
-				</If>	<!-- If we don't have Clefthoof Ribs -->
+				</If>	<!-- If we don't have Mead Basted Caribou -->
 	
 			</If>	<!-- If we are Horde -->
 			
-			<!-- If we have Clefthoof Ribs -->
-			<If Condition="HasItem(29451)">
+			<!-- If we do have Mead Basted Caribou -->
+				<If Condition="HasItem(35953)">
 			
-				<!-- Move to - Thrallmar flight master -->
-				
-				
 				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
 				<CustomBehavior File="LoadProfile" 
 										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
 										
-			</If>	<!-- If we do have Clefthoof Ribs -->
+			</If>	<!-- If we do have Mead Basted Caribou -->
 			
-		</If>	<!-- If our level is 79-84 -->
+		</If>	<!-- If our level is 79-81 -->
 		
 		
 		
@@ -691,8 +694,8 @@
 		
 		
 		
-		<!-- If our level is 78-80 -->
-		<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 80">
+		<!-- If our level is 78-79 -->
+		<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 79">
 		
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
@@ -1582,139 +1585,9 @@
 			</If>	<!-- If we do have Homemade Cherry Pie -->
 
 		</If>	<!-- If our level is 62-67 -->
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<!-- If our level is 60-62 -->
-		<If Condition="Me.Level &gt;= 60 &amp;&amp; Me.Level &lt; 62">
-		
-			<!-- If we are Alliance -->
-			<If Condition="Me.IsAlliance" >
-			
-				<!-- If we don't have Homemade Cherry Pie -->
-				<If Condition="!HasItem(8950)">
-				
-					<!-- Profile message - We don't have any Homemade Cheery Pie -->
-					<CustomBehavior File="Message" 
-									Text="We don't have any Homemade Cheery Pie."
-									LogColor="Orange" />
-									
-					<!-- Profile message - Moving to the innkeep to purchase some -->
-					<CustomBehavior File="Message" 
-									Text="Moving to the innkeep to purchase some."
-									LogColor="Orange" />				
-				
-					<!-- Move to the food vendor -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-7083.726" Y="-1201.636" Z="324.2231" />
-					
-					<!-- Interact with the food vendor and buy 100 Homemade Cherry Pie -->
-					<CustomBehavior File="InteractWith"
-												ObjectType="Npc"
-												GossipOptions="2"
-												Range="75"
-												MobId="47942" 
-												BuyItemId="8950" 
-												BuyItemCount="100"
-												X="2438.781" Y="-5608.514" Z="419.9876" />
 
-					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="45000" />	
-
-					<!-- Move to - Thrallmar flight master -->				
-												
-				</If>	<!-- If we don't have Homemade Cherry Pie -->
-	
-			</If>	<!-- If we are Alliance -->
-	
-			<!-- If we are Horde -->
-			<If Condition="Me.IsHorde" >
-	
-				<!-- If we don't have Homemade Cherry Pie -->
-				<If Condition="!HasItem(8950)">
-				
-					<!-- Profile message - We don't have any Homemade Cheery Pie -->
-					<CustomBehavior File="Message" 
-									Text="We don't have any Homemade Cheery Pie."
-									LogColor="Orange" />
-									
-					<!-- Profile message - Moving to the innkeep to purchase some -->
-					<CustomBehavior File="Message" 
-									Text="Moving to the innkeep to purchase some."
-									LogColor="Orange" />				
-				
-					<!-- Move to the food vendor -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-7083.726" Y="-1201.636" Z="324.2231" />
-					
-					<!-- Interact with the food vendor and buy 100 Homemade Cherry Pie -->
-					<CustomBehavior File="InteractWith"
-												ObjectType="Npc"
-												GossipOptions="2"
-												Range="75"
-												MobId="47942" 
-												BuyItemId="8950" 
-												BuyItemCount="100"
-												X="2438.781" Y="-5608.514" Z="419.9876" />
-
-					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="45000" />	
-
-					<!-- Move to - Thrallmar flight master -->				
-												
-				</If>	<!-- If we don't have Homemade Cherry Pie -->
-
-			</If>	<!-- If we are Horde -->
-	
-			<!-- If we do have Homemade Cherry Pie -->
-			<If Condition="HasItem(8950)">
-			
-				<!-- Move to the Iron Summit flight master -->
-				<CustomBehavior File="NoCombatMoveTo"
-								X="-7121.381" Y="-1233.72" Z="290.1036" />
-								
-				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
-				<CustomBehavior File="LoadProfile" 
-										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
-										
-			</If>	<!-- If we do have Homemade Cherry Pie -->						
-									
-		</If>	<!-- If our level is 60-62 -->
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<!-- If our level is 58-60 -->
-		<If Condition="Me.Level &gt;= 58 &amp;&amp; Me.Level &lt; 60">
+		<!-- If our level is 58-62 -->
+		<If Condition="Me.Level &gt;= 58 &amp;&amp; Me.Level &lt; 62">
 			
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
@@ -1748,7 +1621,7 @@
 												Range="75"
 												MobId="16826" 
 												BuyItemId="27854" 
-												BuyItemCount="40"
+												BuyItemCount="100"
 												X="-708.8713" Y="2739.131" Z="94.73372" />
 
 					<!-- Wait timer - wait 30 seconds for for server lag and to give HB time to think -->
@@ -1789,7 +1662,7 @@
 												Range="75"
 												MobId="16602" 
 												BuyItemId="27854" 
-												BuyItemCount="40"
+												BuyItemCount="100"
 												X="190.8758" Y="2610.927" Z="87.28384" />
 
 					<!-- Wait timer - wait 30 seconds for for server lag and to give HB time to think -->
@@ -1813,7 +1686,7 @@
 										
 			</If>	<!-- If we do have Smoked Talbuk Venison -->
 			
-		</If>	<!-- If our level is 58-60 -->	
+		</If>	<!-- If our level is 58-62 -->	
 		
 	</QuestOrder>
 	

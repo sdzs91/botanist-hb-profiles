@@ -385,6 +385,188 @@
 										Lua="CloseTradeSkill()" />
 					
 					</If>	<!-- If we have the Heart Fire Warhammer -->	
+					
+					<!-- If we have the Troll Butcherer -->
+					<If  Condition="HasItem(35618)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Heart Fire Warhammer as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Troll Butcherer as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Troll Butcherer -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="35618" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Troll Butcherer -->
+					
+					<!-- If we have the Troll Butcherer -->
+					<If  Condition="HasItem(35618)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Heart Troll Butcherer as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Troll Butcherer as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Troll Butcherer -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="35618" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Troll Butcherer -->
+					
+					<!-- If we have the Razorwind Greatsword -->
+					<If  Condition="HasItem(55461)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Razorwind Greatsword as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Razorwind Greatsword as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Razorwind Greatsword -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="55461" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Razorwind Greatsword -->
+					
+					<!-- If we have the Nethergarde Broadaxe -->
+					<If  Condition="HasItem(55293)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Heart Nethergarde Broadaxe as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Troll Butcherer as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Nethergarde Broadaxe -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="55293" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Nethergarde Broadaxe -->
+					
+					<!-- If we have the Steelspark Broadaxe -->
+					<If  Condition="HasItem(55291)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Heart Steelspark Broadaxe as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Troll Butcherer as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Steelspark Broadaxe -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="55291" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Steelspark Broadaxe -->
+					
+					<!-- If we have the Angerfang Broadaxe -->
+					<If  Condition="HasItem(55292)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Angerfang Broadaxe as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Troll Butcherer as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Angerfang Broadaxe -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="55292" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Angerfang Broadaxe -->
+					
+					<!-- If we have the Whitefin Axe -->
+					<If  Condition="HasItem(56284)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Angerfang Broadaxe as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Whitefin Axe as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Whitefin Axe -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="56284" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Whitefin Axe -->
 						
 				</Else>
 

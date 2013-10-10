@@ -173,10 +173,10 @@
 									ProfileName="Components\[QO-N][Solstice][84-86]_gundrak" />
 		</If>
 		
-		<!-- If our level is 79-84 -->
-		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 84">
+		<!-- If our level is 79-81 -->
+		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 81">
 			<CustomBehavior File="LoadProfile" 
-									ProfileName="Components\[QO-N][Solstice][79-84]_drak'tharon-keep" />
+									ProfileName="Components\[QO-N][Solstice][79-81]_drak'tharon-keep" />
 		</If>
 		
 		<!-- If our level is 78-79 -->
@@ -221,17 +221,11 @@
 									ProfileName="Components\[QO-N][Solstice][62-67]_blackrock-spire" />
 		</If>
 		
-		<!-- If our level is 60-62 -->
-		<If Condition="Me.Level &gt;= 60 &amp;&amp; Me.Level &lt; 62">
+		<!-- If our level is 58-62 -->
+		<If Condition="Me.Level &gt;= 58 &amp;&amp; Me.Level &lt; 62">
 			<CustomBehavior File="LoadProfile" 
-									ProfileName="Components\[QO-N][Solstice][60-62]_blackrock-depths" />
+									ProfileName="Components\[QO-N][Solstice][58-62]_grind" />
 		</If>
-		
-		<!-- If our level is 58-60 -->
-		<If Condition="Me.Level &gt;= 58 &amp;&amp; Me.Level &lt; 60">
-			<CustomBehavior File="LoadProfile" 
-									ProfileName="Components\[QO-N][Solstice][58-60]_grind" />
-		</If>
-		
+				
 	</QuestOrder>
 </HBProfile>	
