@@ -563,8 +563,8 @@
 		
 		
 		
-		<!-- If our level is 79-81 -->
-		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 81">
+		<!-- If our level is 81-84 -->
+		<If Condition="Me.Level &gt;= 81 &amp;&amp; Me.Level &lt; 84">
 		
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
@@ -679,7 +679,265 @@
 										
 			</If>	<!-- If we do have Mead Basted Caribou -->
 			
-		</If>	<!-- If our level is 79-81 -->
+		</If>	<!-- If our level is 81-84 -->
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 80-82 -->
+		<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 82">
+		
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Briny Hardcheese -->
+				<If Condition="!HasItem(35952)">
+				
+					<!-- Profile message - We don't have any Briny Hardcheese -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Briny Hardcheese."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - XXXXXXXXXXXXXX-->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - XXXXXXXXXXXXXXXX -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Briny Hardcheese -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="35952" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<RunTo X="229.219" Y="2634.052" Z="87.74729" />
+					
+				</If>	<!-- If we don't have Briny Hardcheese -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Briny Hardcheese -->
+				<If Condition="!HasItem(35952)">
+				
+					<!-- Profile message - We don't have any Briny Hardcheese-->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Briny Hardcheese."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to Aegalas to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to Aegalas to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Profile message - Flying to Agmar's Hammer -->
+					<CustomBehavior File="Message" 
+									Text="Flying to Agmar's Hammer." 
+									LogColor="Cyan" />
+			
+					<!-- Fly to - Agmar's Hammer hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="3827.927" Y="1593.636" Z="169.1055" />
+
+					<!-- Fly to - Aegalas -->
+					<CustomBehavior File="FlyTo" 
+									X="3821.834" Y="1583.588" Z="86.69984" />
+					
+					<!-- Custom behavior - ForcedDismount -->
+					<CustomBehavior File="ForcedDismount" />
+
+					<!-- Move to - Aegalas /> -->
+					<RunTo X="3821.834" Y="1583.588" Z="86.69984" />
+					
+					<!-- Interact with Aegalas and buy 100 Briny Hardcheese -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												Range="75"
+												MobId="26567" 
+												BuyItemId="35952" 
+												BuyItemCount="100"
+												X="3256.434" Y="-2202.075" Z="117.0294" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Agmar's Hammer flight master -->				
+					<RunTo X="3867.424" Y="1526.952" Z="89.9874" />			
+			
+				</If>	<!-- If we don't have Briny Hardcheese -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we do have Briny Hardcheese -->
+			<If Condition="HasItem(35952)">
+			
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Briny Hardcheese -->
+			
+		</If>	<!-- If our level is 80-82 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level is 79-80 -->
+		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 80">
+		
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance" >
+				
+				<!-- If we don't have Briny Hardcheese -->
+				<If Condition="!HasItem(35952)">
+				
+					<!-- Profile message - We don't have any Briny Hardcheese -->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Briny Hardcheese."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to the innkeep to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the innkeep to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - XXXXXXXXXXXXXX-->
+					<CustomBehavior File="FlyTo"
+									X="177.9547" Y="2629.776" Z="87.03335" />
+					
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />
+				
+					<!-- Move to - XXXXXXXXXXXXXXXX -->
+					<CustomBehavior File="NoCombatMoveTo" 
+									X="189.3407" Y="2613.765" Z="87.28365" />
+					
+					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Briny Hardcheese -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												GossipOptions="2"
+												Range="75"
+												MobId="16602" 
+												BuyItemId="35952" 
+												BuyItemCount="100"
+												X="190.8758" Y="2610.927" Z="87.28384" />
+
+					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Thrallmar flight master -->				
+					<RunTo X="229.219" Y="2634.052" Z="87.74729" />
+					
+				</If>	<!-- If we don't have Briny Hardcheese -->
+					
+			</If>	<!-- If we are Alliance -->
+			
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde" >
+				
+				<!-- If we don't have Briny Hardcheese -->
+				<If Condition="!HasItem(35952)">
+				
+					<!-- Profile message - We don't have any Briny Hardcheese-->
+					<CustomBehavior File="Message" 
+									Text="We don't have any Briny Hardcheese."
+									LogColor="Orange" />
+									
+					<!-- Profile message - Moving to Williamson to purchase some -->
+					<CustomBehavior File="Message" 
+									Text="Moving to Williamson to purchase some."
+									LogColor="Orange" />				
+				
+					<!-- Fly to - Warsong Hold Hover point -->
+					<CustomBehavior File="FlyTo" 
+										X="2709.102" Y="6067.899" Z="153.4154" />
+					
+					<!-- Front doorway of the inn -->
+					<CustomBehavior File="MyCTM"
+									X="2768.69" Y="6122.245" Z="91.23241" />
+					
+					<!-- Custom behavior - ForcedDismount -->
+					<CustomBehavior File="ForcedDismount" />
+
+					<!-- Move to - Williamson -->
+					<MoveTo X="2799.678" Y="6151.585" Z="84.63966" />
+					
+					<!-- Interact with Williamson and buy 100 Briny Hardcheese -->
+					<CustomBehavior File="InteractWith"
+												ObjectType="Npc"
+												Range="75"
+												GossipOptions="2"
+												MobId="25278" 
+												BuyItemId="35952" 
+												BuyItemCount="100"
+												X="3256.434" Y="-2202.075" Z="117.0294" />
+
+					<!-- Wait timer - wait 60 seconds for for server lag and to give HB time to think -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
+					<!-- Move to - Warsong Hold flight master -->				
+					<RunTo X="3867.424" Y="1526.952" Z="89.9874" />			
+			
+				</If>	<!-- If we don't have Briny Hardcheese -->
+	
+			</If>	<!-- If we are Horde -->
+			
+			<!-- If we do have Briny Hardcheese -->
+			<If Condition="HasItem(35952)">
+			
+				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
+										
+			</If>	<!-- If we do have Briny Hardcheese -->
+			
+		</If>	<!-- If our level is 79-80 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -808,7 +1066,7 @@
 										
 			</If>	<!-- If we do have Briny Hardcheese -->
 			
-		</If>	<!-- If our level is 78-80 -->
+		</If>	<!-- If our level is 78-79 -->
 		
 		
 		

@@ -90,33 +90,43 @@
 									Text="We are in Blackrock Depths, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
-					<!-- Have hearthstone -->
+					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
 						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
+										Text="Using our Hearthstone." 
 										LogColor="Fuchsia" />
 										
+						<!-- Custom behavior - Misc\RunLua -->				
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
 										WaitTime="1000" />
 										
+						<!-- Wait timer - wait 20 seconds - delay -->				
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have hearthstone -->
+										
+					</If>	<!-- If we have a Hearthstone -->
 				
-					<!-- Have Innkeeper's Daughter -->
+					<!-- If we have a Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
 						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
+										Text="Using our Innkeeper's Daughter." 
 										LogColor="Fuchsia" />
 											
+						<!-- Custom behavior - Misc\RunLua -->					
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
 										WaitTime="1000" />
 							
+						<!-- Wait timer - wait 20 seconds - delay -->	
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have Innkeeper's Daughter -->
+										
+					</If>	<!-- If we have a Innkeeper's Daughter -->
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
@@ -205,33 +215,43 @@
 									Text="We are in Blackrock Depths, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
-					<!-- Have hearthstone -->
+					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
 						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
+										Text="Using our Hearthstone." 
 										LogColor="Fuchsia" />
 										
+						<!-- Custom behavior - Misc\RunLua -->				
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
 										WaitTime="1000" />
 										
+						<!-- Wait timer - wait 20 seconds - delay -->				
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have hearthstone -->
+										
+					</If>	<!-- If we have a Hearthstone -->
 				
-					<!-- Have Innkeeper's Daughter -->
+					<!-- If we have a Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
 						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
+										Text="Using our Innkeeper's Daughter." 
 										LogColor="Fuchsia" />
 											
+						<!-- Custom behavior - Misc\RunLua -->					
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
 										WaitTime="1000" />
 							
+						<!-- Wait timer - wait 20 seconds - delay -->	
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have Innkeeper's Daughter -->
+										
+					</If>	<!-- If we have a Innkeeper's Daughter -->
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
@@ -320,33 +340,43 @@
 									Text="We are in Blackrock Depths, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
-					<!-- Have hearthstone -->
+					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
 						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
+										Text="Using our Hearthstone." 
 										LogColor="Fuchsia" />
 										
+						<!-- Custom behavior - Misc\RunLua -->				
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
 										WaitTime="1000" />
 										
+						<!-- Wait timer - wait 20 seconds - delay -->				
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have hearthstone -->
+										
+					</If>	<!-- If we have a Hearthstone -->
 				
-					<!-- Have Innkeeper's Daughter -->
+					<!-- If we have a Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
 						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
+										Text="Using our Innkeeper's Daughter." 
 										LogColor="Fuchsia" />
 											
+						<!-- Custom behavior - Misc\RunLua -->					
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
 										WaitTime="1000" />
 							
+						<!-- Wait timer - wait 20 seconds - delay -->	
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have Innkeeper's Daughter -->
+										
+					</If>	<!-- If we have a Innkeeper's Daughter -->
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
@@ -414,11 +444,11 @@
 		</If>					
 				
 
-		<!-- *******************************************    level is 79-81 ******************************************************* -->
+		<!-- *******************************************    level is 82-84 ******************************************************* -->
 		
 		
-		<!-- If our level is 79-81 -->
-		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 81">
+		<!-- If our level is 82-84 -->
+		<If Condition="Me.Level &gt;= 82 &amp;&amp; Me.Level &lt; 84">
 		
 			<!-- Profile message - Our durability is less than 30% or we have less than 25 empty bag slots remaining -->
 			<CustomBehavior File="Message" 
@@ -453,34 +483,43 @@
 									Text="We are in Drak'Tharon Keep, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
-					<!-- Have hearthstone -->
+					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
 						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
+										Text="Using our Hearthstone." 
 										LogColor="Fuchsia" />
 										
+						<!-- Custom behavior - Misc\RunLua -->				
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
 										WaitTime="1000" />
 										
+						<!-- Wait timer - wait 20 seconds - delay -->				
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have hearthstone -->
+										
+					</If>	<!-- If we have a Hearthstone -->
 				
-					<!-- Have Innkeeper's Daughter -->
+					<!-- If we have a Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
 						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
+										Text="Using our Innkeeper's Daughter." 
 										LogColor="Fuchsia" />
 											
+						<!-- Custom behavior - Misc\RunLua -->					
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
 										WaitTime="1000" />
 							
+						<!-- Wait timer - wait 20 seconds - delay -->	
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
 										
-					</If> <!-- Have Innkeeper's Daughter -->
+					</If>	<!-- If we have a Innkeeper's Daughter -->
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
@@ -651,9 +690,578 @@
 				
 			</If>	<!-- If we are in Northrend -->
 			
-		</If> 	<!-- If our level is 79-81 -->	
+		</If> 	<!-- If our level is 81-84 -->	
 				
+				
+		<!-- *******************************************    level is 80-82 ******************************************************* -->
+		
+		
+		<!-- If our level is 80-82 -->
+		<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 82">
+		
+			<!-- Profile message - Our durability is less than 30% or we have less than 25 empty bag slots remaining -->
+			<CustomBehavior File="Message" 
+							Text="Our durability is less than 30% or we have less than 25 empty bag slots remaining." 
+							LogColor="Fuchsia" />
+								
+			<!-- If we are in Utgarde Keep exit the instance -->
+			<If Condition="Me.MapId == 574">
+			
+				<!-- Make our way to the exit -->
+				<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
 
+				<!-- Go through the portal -->
+				<CustomBehavior File="Misc\InInstance" X="125.1626" Y="-87.67013" Z="12.55168" />
+				
+				<!-- Move to - zone out location -->
+				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				
+				<!-- Move to - outside Utgarde Keep -->
+				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				
+			</If>	<!-- If we are in Utgarde Keep, exit the instance -->					
+							
+			<!-- If we are in Drak'Tharon Keep, exit the instance -->
+			<If Condition="Me.ZoneId == 4196">
+			
+				<!-- Make our way to the exit -->
+				<RunTo X="-517.15" Y="-489.201" Z="11.01775" />
+				
+				<!-- Go through the portal -->
+				<CustomBehavior File="Misc\InInstance" 
+								X="-518.2795" Y="-460.8023" Z="10.98073" />
+				
+				<!-- Move to - zone out location -->
+				<RunTo X="4774.44" Y="-2030.03" Z="229.38" />	
+					
+			</If>	<!-- If we are inside Drak'Tharon Keep -->
+
+			<!-- If we are in The Nexus -->
+			<If Condition="Me.MapId == 576">
+			
+				<!-- Profile message - The Nexus detected. Running out-->
+				<CustomBehavior File="Message" 
+								Text="The Nexus detected. Running out."
+								LogColor="Fuchsia" />
+				
+				<!-- Move to - zone in location -->
+				<MoveTo X="145.8687" Y="-12.01035" Z="-16.6367" />
+
+				<!-- Go through the portal -->
+				<CustomBehavior File="Misc\InInstance" 
+								X="145.9168" Y="-17.94392" Z="-16.6367" />
+				
+				<!-- Move to - zone out location -->
+				<Runto X="3896.74" Y="6985.4" Z="69.4879" />
+				
+			</If>	<!-- If we are in The Nexus -->
+			
+			<!-- If we are inside Ahn'kahet: The Old Kingdom -->
+			<If Condition="Me.ZoneId == 4494" >
+				
+				<!-- If our Hearthstone/Innkeepers Daughter is set at Amberpine Lodge or Agmar's Hammer -->
+				<If Condition="(Me.HearthstoneAreaId == 4204) || (Me.HearthstoneAreaId == 4165)">
+				
+					<!-- Profile message - We are in Ahn'kahet: The Old Kingdom, using our Hearthstone/Innkeeper's Daughter -->
+					<CustomBehavior File="Message" 
+									Text="We are in Ahn'kahet: The Old Kingdom, using our Hearthstone/Innkeeper's Daughter." 
+									LogColor="Cyan" />
+								
+					<!-- If we have a Hearthstone -->
+					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
+						<CustomBehavior File="Message" 
+										Text="Using our Hearthstone." 
+										LogColor="Fuchsia" />
+										
+						<!-- Custom behavior - Misc\RunLua -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="UseItemByName(6948)" 
+										WaitTime="1000" />
+										
+						<!-- Wait timer - wait 20 seconds - delay -->				
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" />
+										
+					</If>	<!-- If we have a Hearthstone -->
+				
+					<!-- If we have a Innkeeper's Daughter -->
+					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
+						<CustomBehavior File="Message" 
+										Text="Using our Innkeeper's Daughter." 
+										LogColor="Fuchsia" />
+											
+						<!-- Custom behavior - Misc\RunLua -->					
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="UseItemByName(64488)" 
+										WaitTime="1000" />
+							
+						<!-- Wait timer - wait 20 seconds - delay -->	
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" />
+										
+					</If>	<!-- If we have a Innkeeper's Daughter -->
+				
+				</If>	<!-- If our hearthstone is set here, use it -->
+				
+			</If>	<!-- If we are inside Ahn'kahet: The Old Kingdom -->
+
+			<!-- If we are still inside Ahn'kahet: The Old Kingdom -->
+			<If Condition="Me.ZoneId == 4494" >
+			
+				<!-- Profile message - Ahn'kahet: The Old Kingdom detected. Running out -->
+				<CustomBehavior File="Message" 
+								Text="Ahn'kahet: The Old Kingdom detected. Running out."
+								LogColor="Fuchsia" />
+				
+				<!-- Go through the portal -->
+				<CustomBehavior File="Misc\InInstance" 
+								X="332.1521" Y="-1111.701" Z="69.75838" />
+				
+				<!-- Move to - zone out location -->
+				<MoveTo X="3641.17" Y="2031.15" Z="2.59325" />
+
+				<!-- Move to - flying mount location -->
+				<Runto X="3676.57" Y="2099.666" Z="73.02065" />
+				
+			</If>	<!-- If we are still inside Ahn'kahet: The Old Kingdom -->
+
+			<!-- If we are in Northrend -->
+			<If Condition="Me.MapId == 571">
+
+				<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+				<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+				
+					<!-- If we are Alliance -->
+					<If Condition="Me.IsAlliance">
+					
+						<!-- Fly to - XXXXXXXXXXX hover point -->
+						<CustomBehavior File="FlyTo" 
+										X="3424.898" Y="-2753.648" Z="199.3004" />
+						
+						<!-- Fly to - ally repair vendor -->
+
+						
+						<!-- Custom behavior - ForcedDismount -->
+						<CustomBehavior File="ForcedDismount" />
+						
+						<!-- Profile message - Our durability is less than 30%, or our bags have less than 25 empty slots left -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30%, or our bags have less than 25 empty slots left."
+										LogColor="Cyan" />
+										
+						<!-- Vendor settings -->				
+						<CustomBehavior File="ForceSetVendor" 
+									DoMail="False" 
+									DoRepair="True" 
+									DoSell="False" 
+									DoTrain="False" />				
+					
+						<!-- Amberpine Lodge -->					
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Brom Armstrong" 
+										Entry="27062" 
+										Type="Repair" 
+										X="3421.368" Y="-2757.578" Z="199.3002" />
+							</Vendors>
+						</SetVendor>
+							
+						<!-- Mailbox -->
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+							</Mailboxes>
+						</SetMailbox>	
+						
+					</If>	<!-- If we are Alliance -->
+
+					<!-- If we are Horde -->
+					<If Condition="Me.IsHorde">
+					
+						<!-- Profile message - Flying to Agmar's Hammer -->
+						<CustomBehavior File="Message" 
+										Text="Flying to Agmar's Hammer." 
+										LogColor="Cyan" />
+				
+						<!-- Fly to - Agmar's Hammer hover point -->
+						<CustomBehavior File="FlyTo" 
+										X="3816.012" Y="1569.124" Z="176.2378" />
+						
+						<!-- Fly to - Agmar's Hammer repair vendor - Siegesmith Gulda -->
+						<CustomBehavior File="MyCTM"
+										X="3841.006" Y="1575.263" Z="86.69893" />
+
+						<!-- Custom behavior - ForcedDismount -->
+						<CustomBehavior File="ForcedDismount" />
+						
+						<!-- Profile message - Our durability is less than 30%, or our bags have less than 25 empty slots left -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30%, or our bags have less than 25 empty slots left."
+										LogColor="Cyan" />
+						
+						<!-- Vendor settings -->				
+						<CustomBehavior File="ForceSetVendor" 
+									DoMail="False" 
+									DoRepair="True" 
+									DoSell="False" 
+									DoTrain="False" />
+						
+						<!-- Agmar's Hammer -->
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Siegesmith Gulda" 
+										Entry="27019" 
+										Type="Repair" 
+										X="3845.488" Y="1572.724" Z="86.69913" />	
+							</Vendors>
+						</SetVendor>
+						
+						<!-- Mailbox -->
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="3827.762" Y="1537.921" Z="89.72385" />
+							</Mailboxes>
+						</SetMailbox>
+
+					</If>	<!-- If we are Horde -->
+
+					<!-- We are done repairing -->
+					<If Condition="(Me.FreeBagSlots &gt; 25) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+					
+						<!-- Profile message - Repairing complete -->
+						<CustomBehavior File="Message" 
+										Text="Repairing complete." 
+										LogColor="Cyan" />
+										
+					</If>	<!-- We are done repairing -->
+					
+					<!-- If we are Alliance -->
+					<If Condition="Me.IsAlliance">
+					
+						<!-- Hover point -->
+						<CustomBehavior File="FlyTo" X="3444.486" Y="-2777.132" Z="282.1241" />
+						
+					</If>	<!-- If we are Alliance -->
+					
+					<!-- If we are Horde -->
+					<If Condition="Me.IsHorde">
+					
+						<!-- Fly to - Agmar's Hammer hover point -->
+						<CustomBehavior File="FlyTo" 
+										X="3827.927" Y="1593.636" Z="169.1055" />
+						
+					</If>	<!-- If we are Horde -->
+					
+				</If> <!-- Repairing -->
+
+				<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->
+				<If Condition="(Me.FreeBagSlots &gt; 25) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+				
+					<!-- Load profile - [QO-N][Solstice][58-90][food] -->
+					<CustomBehavior File="LoadProfile" 
+											ProfileName="[QO-N][Solstice][58-90][food]" />
+											
+				</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->		
+				
+			</If>	<!-- If we are in Northrend -->
+			
+		</If> 	<!-- If our level is 80-82 -->	
+				
+				
+		<!-- *******************************************    level is 79-80 ******************************************************* -->
+		
+		<!-- If our level is 79-80 -->
+		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 80">
+		
+			<!-- Profile message - Our durability is less than 30% or we have less than 25 empty bag slots remaining -->
+			<CustomBehavior File="Message" 
+							Text="Our durability is less than 30% or we have less than 25 empty bag slots remaining." 
+							LogColor="Fuchsia" />
+								
+			<!-- If we are in Utgarde Keep exit the instance -->
+			<If Condition="Me.MapId == 574">
+			
+				<!-- Make our way to the exit -->
+				<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+
+				<!-- Go through the portal -->
+				<CustomBehavior File="Misc\InInstance" X="125.1626" Y="-87.67013" Z="12.55168" />
+				
+				<!-- Move to - zone out location -->
+				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				
+				<!-- Move to - outside Utgarde Keep -->
+				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				
+			</If>	<!-- If we are in Utgarde Keep, exit the instance -->					
+								
+			<!-- If we are inside The Nexus -->
+			<If Condition="Me.ZoneId == 4265" >
+				
+				<!-- If our hearthstone/innkeepers daughter is set at Amberpine Lodge or Warsong Hold -->
+				<If Condition="(Me.HearthstoneAreaId == 4204) || (Me.HearthstoneAreaId == 4129)">
+				
+					<!-- Profile message - We are in The Nexus, using our Hearthstone/Innkeeper's Daughter -->
+					<CustomBehavior File="Message" 
+									Text="We are in The Nexus, using our Hearthstone/Innkeeper's Daughter." 
+									LogColor="Cyan" />
+								
+					<!-- If we have a Hearthstone -->
+					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
+						<CustomBehavior File="Message" 
+										Text="Using our Hearthstone." 
+										LogColor="Fuchsia" />
+										
+						<!-- Custom behavior - Misc\RunLua -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="UseItemByName(6948)" 
+										WaitTime="1000" />
+										
+						<!-- Wait timer - wait 20 seconds - delay -->				
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" />
+										
+					</If>	<!-- If we have a Hearthstone -->
+				
+					<!-- If we have a Innkeeper's Daughter -->
+					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
+						<CustomBehavior File="Message" 
+										Text="Using our Innkeeper's Daughter." 
+										LogColor="Fuchsia" />
+											
+						<!-- Custom behavior - Misc\RunLua -->					
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="UseItemByName(64488)" 
+										WaitTime="1000" />
+							
+						<!-- Wait timer - wait 20 seconds - delay -->	
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" />
+										
+					</If>	<!-- If we have a Innkeeper's Daughter -->
+				
+				</If>	<!-- If our hearthstone is set here, use it -->
+				
+			</If>	<!-- If we are inside The Nexus -->
+		
+			<!-- If we are still in The Nexus, exit the instance -->
+			<If Condition="Me.ZoneId == 4265" >
+			
+				<!-- Profile message - Our Hearthstone/Innkeeper's Daughter didn't work. Moving to the exit -->
+				<CustomBehavior File="Message" 
+								Text="Our Hearthstone/Innkeeper's Daughter didn't work. Moving to the exit."
+								LogColor="Fuchsia" />
+					
+					<!-- Move to - Zone in location -->
+					<MoveTo X="335.736" Y="-1108.36" Z="68.5133" />
+					
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" 
+									X="332.1521" Y="-1111.701" Z="69.75838" />
+					
+					<!-- Move to - zone out location -->
+					<MoveTo X="3641.17" Y="2031.15" Z="2.59325" />
+
+					<!-- Move to - Ahn'kahet: The Old Kingdom outside the caverns -->
+					<MoveTo X="3641.17" Y="2031.15" Z="2.59325" />
+					
+			</If>	<!-- If we are inside Drak'Tharon Keep -->
+
+			<!-- If we are in Northrend -->
+			<If Condition="Me.MapId == 571">
+
+				<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+				<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+				
+					<!-- If we are Alliance -->
+					<If Condition="Me.IsAlliance">
+					
+						<!-- Fly to - XXXXXXXXXXX hover point -->
+						<CustomBehavior File="FlyTo" 
+										X="3424.898" Y="-2753.648" Z="199.3004" />
+						
+						<!-- Fly to - ally repair vendor -->
+
+						
+						<!-- Custom behavior - ForcedDismount -->
+						<CustomBehavior File="ForcedDismount" />
+						
+						<!-- Profile message - Our durability is less than 30%, or our bags have less than 25 empty slots left -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30%, or our bags have less than 25 empty slots left."
+										LogColor="Cyan" />
+										
+						<!-- Vendor settings -->				
+						<CustomBehavior File="ForceSetVendor" 
+									DoMail="False" 
+									DoRepair="True" 
+									DoSell="False" 
+									DoTrain="False" />				
+					
+						<!-- Amberpine Lodge -->					
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Brom Armstrong" 
+										Entry="27062" 
+										Type="Repair" 
+										X="3421.368" Y="-2757.578" Z="199.3002" />
+							</Vendors>
+						</SetVendor>
+							
+						<!-- Mailbox -->
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+							</Mailboxes>
+						</SetMailbox>	
+						
+					</If>	<!-- If we are Alliance -->
+
+					<!-- If we are Horde -->
+					<If Condition="Me.IsHorde">
+					
+						<!-- Fly to - Warsong Hold Hover point -->
+						<CustomBehavior File="FlyTo" 
+											X="2709.102" Y="6067.899" Z="153.4154" />
+						
+						<!-- Front doorway of the inn -->
+						<CustomBehavior File="MyCTM"
+										X="2768.69" Y="6122.245" Z="91.23241" />
+						
+						<!-- Custom behavior - ForcedDismount -->
+						<CustomBehavior File="ForcedDismount" />
+
+						<!-- Run inside the inn -->
+						<MoveTo X="2774.279" Y="6198.512" Z="83.63516" />
+						
+						<!-- Profile message - Our durability is less than 30%, or our bags have less than 25 empty slots left -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30%, or our bags have less than 25 empty slots left."
+										LogColor="Cyan" />
+						
+						<!-- Vendor settings -->				
+						<CustomBehavior File="ForceSetVendor" 
+									DoMail="False" 
+									DoRepair="True" 
+									DoSell="False" 
+									DoTrain="False" />
+						
+						<!-- Warsong Hold - vendor-->
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Armorer Orkuruk" 
+										Entry="25274" 
+										Type="Repair" 
+										X="2771.115" Y="6214.935" Z="83.45186" />	
+							</Vendors>
+						</SetVendor>
+						
+						<!-- Warsong Hold - Mailbox -->
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="2792.008" Y="6149.928" Z="84.70474" />
+							</Mailboxes>
+						</SetMailbox>
+
+					</If>	<!-- If we are Horde -->
+
+					<!-- We are done repairing -->
+					<If Condition="(Me.FreeBagSlots &gt; 25) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+					
+						<!-- Profile message - Repairing complete -->
+						<CustomBehavior File="Message" 
+										Text="Repairing complete." 
+										LogColor="Cyan" />
+										
+					</If>	<!-- We are done repairing -->
+					
+					<!-- If we are Alliance -->
+					<If Condition="Me.IsAlliance">
+					
+						<!-- Hover point -->
+						<CustomBehavior File="FlyTo" X="3444.486" Y="-2777.132" Z="282.1241" />
+						
+					</If>	<!-- If we are Alliance -->
+					
+					<!-- If we are Horde -->
+					<If Condition="Me.IsHorde">
+					
+						<!-- Move to - Outside the inn -->
+						<MoveTo X="2746.528" Y="6101.545" Z="77.64475" />
+					
+						<!-- Fly to - Warsong Hold Hover point -->
+						<CustomBehavior File="FlyTo" 
+											X="2709.102" Y="6067.899" Z="153.4154" />
+						
+					</If>	<!-- If we are Horde -->
+					
+				</If> <!-- Repairing -->
+
+				<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->
+				<If Condition="(Me.FreeBagSlots &gt; 25) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+				
+					<!-- Load profile - [QO-N][Solstice][58-90][food] -->
+					<CustomBehavior File="LoadProfile" 
+											ProfileName="[QO-N][Solstice][58-90][food]" />
+											
+				</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->		
+				
+			</If>	<!-- If we are in Northrend -->
+			
+		</If> 	<!-- If our level is 79-80 -->			
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<!-- *******************************************    level is 78-79 ******************************************************* -->
 		
 		
@@ -676,37 +1284,43 @@
 									Text="We are in Utgarde Keep, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
-					<!-- Have hearthstone -->
+					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
 					
+						<!-- Profile message - Using our Hearthstone -->
 						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
+										Text="Using our Hearthstone." 
 										LogColor="Fuchsia" />
 										
+						<!-- Custom behavior - Misc\RunLua -->				
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
 										WaitTime="1000" />
 										
+						<!-- Wait timer - wait 20 seconds - delay -->				
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
 										
-					</If> <!-- Have hearthstone -->
+					</If>	<!-- If we have a Hearthstone -->
 				
-					<!-- Have Innkeeper's Daughter -->
+					<!-- If we have a Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
 					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
 						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
+										Text="Using our Innkeeper's Daughter." 
 										LogColor="Fuchsia" />
 											
+						<!-- Custom behavior - Misc\RunLua -->					
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
 										WaitTime="1000" />
 							
+						<!-- Wait timer - wait 20 seconds - delay -->	
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
 										
-					</If> <!-- Have Innkeeper's Daughter -->
+					</If>	<!-- If we have a Innkeeper's Daughter -->
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
@@ -861,34 +1475,43 @@
 									Text="We are in Botanica, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
-					<!-- Have hearthstone -->
+					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
 						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
+										Text="Using our Hearthstone." 
 										LogColor="Fuchsia" />
 										
+						<!-- Custom behavior - Misc\RunLua -->				
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
 										WaitTime="1000" />
 										
+						<!-- Wait timer - wait 20 seconds - delay -->				
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have hearthstone -->
+										
+					</If>	<!-- If we have a Hearthstone -->
 				
-					<!-- Have Innkeeper's Daughter -->
+					<!-- If we have a Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
 						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
+										Text="Using our Innkeeper's Daughter." 
 										LogColor="Fuchsia" />
 											
+						<!-- Custom behavior - Misc\RunLua -->					
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
 										WaitTime="1000" />
 							
+						<!-- Wait timer - wait 20 seconds - delay -->	
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
 										
-					</If> <!-- Have Innkeeper's Daughter -->
+					</If>	<!-- If we have a Innkeeper's Daughter -->
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
@@ -1073,34 +1696,43 @@
 									Text="We are in Sethekk Halls, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
-					<!-- Have hearthstone -->
+					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
 						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
+										Text="Using our Hearthstone." 
 										LogColor="Fuchsia" />
 										
+						<!-- Custom behavior - Misc\RunLua -->				
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
 										WaitTime="1000" />
 										
+						<!-- Wait timer - wait 20 seconds - delay -->				
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have hearthstone -->
+										
+					</If>	<!-- If we have a Hearthstone -->
 				
-					<!-- Have Innkeeper's Daughter -->
+					<!-- If we have a Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
 						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
+										Text="Using our Innkeeper's Daughter." 
 										LogColor="Fuchsia" />
 											
+						<!-- Custom behavior - Misc\RunLua -->					
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
 										WaitTime="1000" />
 							
+						<!-- Wait timer - wait 20 seconds - delay -->	
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
 										
-					</If> <!-- Have Innkeeper's Daughter -->
+					</If>	<!-- If we have a Innkeeper's Daughter -->
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
@@ -1322,34 +1954,43 @@
 									Text="We are in Auchenai Crypts, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
-					<!-- Have hearthstone -->
+					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
 						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
+										Text="Using our Hearthstone." 
 										LogColor="Fuchsia" />
 										
+						<!-- Custom behavior - Misc\RunLua -->				
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
 										WaitTime="1000" />
 										
+						<!-- Wait timer - wait 20 seconds - delay -->				
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have hearthstone -->
+										
+					</If>	<!-- If we have a Hearthstone -->
 				
-					<!-- Have Innkeeper's Daughter -->
+					<!-- If we have a Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
 						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
+										Text="Using our Innkeeper's Daughter." 
 										LogColor="Fuchsia" />
 											
+						<!-- Custom behavior - Misc\RunLua -->					
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
 										WaitTime="1000" />
 							
+						<!-- Wait timer - wait 20 seconds - delay -->	
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
 										
-					</If> <!-- Have Innkeeper's Daughter -->
+					</If>	<!-- If we have a Innkeeper's Daughter -->
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
@@ -1545,33 +2186,43 @@
 									Text="We are in Mana Tombs, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
-					<!-- Have hearthstone -->
+					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
 						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
+										Text="Using our Hearthstone." 
 										LogColor="Fuchsia" />
 										
+						<!-- Custom behavior - Misc\RunLua -->				
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
 										WaitTime="1000" />
 										
+						<!-- Wait timer - wait 20 seconds - delay -->				
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have hearthstone -->
+										
+					</If>	<!-- If we have a Hearthstone -->
 				
-					<!-- Have Innkeeper's Daughter -->
+					<!-- If we have a Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
 						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
+										Text="Using our Innkeeper's Daughter." 
 										LogColor="Fuchsia" />
 											
+						<!-- Custom behavior - Misc\RunLua -->					
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
 										WaitTime="1000" />
 							
+						<!-- Wait timer - wait 20 seconds - delay -->	
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have Innkeeper's Daughter -->
+										
+					</If>	<!-- If we have a Innkeeper's Daughter -->
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
@@ -1769,33 +2420,43 @@
 									Text="We are in Hellfire Ramparts, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
-					<!-- Have hearthstone -->
+					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
 						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
+										Text="Using our Hearthstone." 
 										LogColor="Fuchsia" />
 										
+						<!-- Custom behavior - Misc\RunLua -->				
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
 										WaitTime="1000" />
 										
+						<!-- Wait timer - wait 20 seconds - delay -->				
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have hearthstone -->
+										
+					</If>	<!-- If we have a Hearthstone -->
 				
-					<!-- Have Innkeeper's Daughter -->
+					<!-- If we have a Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
 						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
+										Text="Using our Innkeeper's Daughter." 
 										LogColor="Fuchsia" />
 											
+						<!-- Custom behavior - Misc\RunLua -->					
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
 										WaitTime="1000" />
 							
+						<!-- Wait timer - wait 20 seconds - delay -->	
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have Innkeeper's Daughter -->
+										
+					</If>	<!-- If we have a Innkeeper's Daughter -->
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
@@ -1964,33 +2625,43 @@
 									Text="We are in Blackrock Spire, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
-					<!-- Have hearthstone -->
+					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
 						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
+										Text="Using our Hearthstone." 
 										LogColor="Fuchsia" />
 										
+						<!-- Custom behavior - Misc\RunLua -->				
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
 										WaitTime="1000" />
 										
+						<!-- Wait timer - wait 20 seconds - delay -->				
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have hearthstone -->
+										
+					</If>	<!-- If we have a Hearthstone -->
 				
-					<!-- Have Innkeeper's Daughter -->
+					<!-- If we have a Innkeeper's Daughter -->
 					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
 						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
+										Text="Using our Innkeeper's Daughter." 
 										LogColor="Fuchsia" />
 											
+						<!-- Custom behavior - Misc\RunLua -->					
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
 										WaitTime="1000" />
 							
+						<!-- Wait timer - wait 20 seconds - delay -->	
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000" />
-					</If> <!-- Have Innkeeper's Daughter -->
+										
+					</If>	<!-- If we have a Innkeeper's Daughter -->
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
@@ -2108,45 +2779,55 @@
 								
 			
 				
-				<!-- If our hearthstone/innkeepers daughter is set to Honor Hold or Thrallmar -->
-				<If Condition="(Me.HearthstoneAreaId == 3538) || (Me.HearthstoneAreaId == 3536)">
-				
-				
-					<!-- Profile message - Our Innkeeper is set at Honor Hold or Thrallmar -->
-					<CustomBehavior File="Message" 
-										Text="Our Innkeeper is set at Honor Hold or Thrallmar." 
-										LogColor="Cyan" />
-								
-					<!-- Have hearthstone -->
-					<If Condition="HasItem(6948)">
-						<CustomBehavior File="Message" 
-										Text="Using Hearthstone." 
-										LogColor="Fuchsia" />
-										
-						<CustomBehavior File="Misc\RunLua" 
-										Lua="UseItemByName(6948)" 
-										WaitTime="1000" />
-										
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="20000" />
-					</If> <!-- Have hearthstone -->
-				
-					<!-- Have Innkeeper's Daughter -->
-					<If Condition="HasItem(64488)">
-						<CustomBehavior File="Message" 
-										Text="Using Innkeeper's Daughter." 
-										LogColor="Fuchsia" />
-											
-						<CustomBehavior File="Misc\RunLua" 
-										Lua="UseItemByName(64488)" 
-										WaitTime="1000" />
+			<!-- If our hearthstone/innkeepers daughter is set to Honor Hold or Thrallmar -->
+			<If Condition="(Me.HearthstoneAreaId == 3538) || (Me.HearthstoneAreaId == 3536)">
+			
+			
+				<!-- Profile message - Our Innkeeper is set at Honor Hold or Thrallmar -->
+				<CustomBehavior File="Message" 
+									Text="Our Innkeeper is set at Honor Hold or Thrallmar." 
+									LogColor="Cyan" />
 							
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="20000" />
-					</If> <!-- Have Innkeeper's Daughter -->
+				<!-- If we have a Hearthstone -->
+				<If Condition="HasItem(6948)">
 				
-				</If>	<!-- If our hearthstone is set here, use it -->
+					<!-- Profile message - Using our Hearthstone -->
+					<CustomBehavior File="Message" 
+									Text="Using our Hearthstone." 
+									LogColor="Fuchsia" />
+									
+					<!-- Custom behavior - Misc\RunLua -->				
+					<CustomBehavior File="Misc\RunLua" 
+									Lua="UseItemByName(6948)" 
+									WaitTime="1000" />
+									
+					<!-- Wait timer - wait 20 seconds - delay -->				
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="20000" />
+									
+				</If>	<!-- If we have a Hearthstone -->
+			
+				<!-- If we have a Innkeeper's Daughter -->
+				<If Condition="HasItem(64488)">
+				
+					<!-- Profile message - Using our Innkeeper's Daughter -->
+					<CustomBehavior File="Message" 
+									Text="Using our Innkeeper's Daughter." 
+									LogColor="Fuchsia" />
+										
+					<!-- Custom behavior - Misc\RunLua -->					
+					<CustomBehavior File="Misc\RunLua" 
+									Lua="UseItemByName(64488)" 
+									WaitTime="1000" />
+						
+					<!-- Wait timer - wait 20 seconds - delay -->	
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="20000" />
+									
+				</If>	<!-- If we have a Innkeeper's Daughter -->
 
+			</If>	<!-- If our hearthstone/innkeepers daughter is set to Honor Hold or Thrallmar -->
+					
 			<!-- If we are in Outland -->
 			<If Condition="Me.MapId == 530">
 			
@@ -2256,7 +2937,7 @@
 										
 			</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->
 			
-		</If>	<!-- If our level is 58-60 -->	
+		</If>	<!-- If our level is 58-62 -->	
 		
 	</QuestOrder>
 	

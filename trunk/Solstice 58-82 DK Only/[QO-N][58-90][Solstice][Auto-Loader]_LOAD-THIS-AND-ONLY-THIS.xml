@@ -80,6 +80,7 @@
 					<!-- If we have gold -->
 					<If Condition="(Me.Gold &gt;= 250)" >
 			
+						<!-- Custom behavior - LoadProfile - [QO-N-M][Solstice][58-90][riding-skill-training] -->
 						<CustomBehavior File="LoadProfile" 
 										ProfileName="Components\Movement\[QO-N-M][Solstice][58-90][riding-skill-training]" />
 			
@@ -109,39 +110,55 @@
 		
 			</If>	<!-- If our level is > 60 and < 90 -->
 
-			<!-- If our level is => 68 -->
+			<!-- If our level is => 78 -->
 			<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 90">
 			
-				<!-- If we don't have Cold Weather Flying -->
-				<If Condition="!HasSpell(54197)" >
+				<!-- If we have Cold Weather Flying -->
+				<If Condition="HasSpell(54197)" >
 				
-					<!-- If we have gold -->
-					<If Condition="(Me.Gold &gt;= 500)" >
-			
-						<CustomBehavior File="LoadProfile"  
-										ProfileName="Components\Movement\[QO-N-M][Solstice][58-90][riding-skill-training]" />
-			
-						<!-- Else - We don't have 500 gold to train Cold weather Flying -->
-						<Else>
-						
-							<!-- Profile message - Moving to the riding trainer --> 
-							<CustomBehavior File="Message" 
-											Text="We don't have 500 gold to train Cold weather Flying." 
-											LogColor="Red" />
-						
-						</Else>	<!-- Else - We don't have 500 gold to train Cold weather Flying -->
-			
-					</If>	<!-- If we have gold -->
+					<!-- Profile message - We have learned Cold Weather Flying--> 
+					<CustomBehavior File="Message" 
+									Text="We have learned Cold Weather Flying." 
+									LogColor="Orange" />
 					
-					<!-- Else - We have Cold Weather Flying -->
+					<!-- Else we have not learned Cold Weather Flying -->
 					<Else>
 					
-						<!-- Profile message - We have learned Cold Weather Flying--> 
+						<!-- Profile message - We have not learned Cold Weather Flying --> 
 						<CustomBehavior File="Message" 
-										Text="We have  learned Cold Weather Flying." 
+										Text="We have not learned Cold Weather Flying." 
 										LogColor="Orange" />
-					
-					</Else>	<!-- Else - We have Cold Weather Flying -->
+
+						<!-- If we have 500 gold-->
+						<If Condition="(Me.Gold &gt;= 500)" >
+				
+							<!-- Custom behavior - LoadProfile - [QO-N-M][Solstice][58-90][riding-skill-training] -->
+							<CustomBehavior File="LoadProfile"  
+											ProfileName="Components\Movement\[QO-N-M][Solstice][58-90][riding-skill-training]" />
+				
+
+						</If>	<!-- If we have 500 gold-->				
+										
+						<!-- If we don't have gold -->
+						<If Condition="(Me.Gold &gt;= 500)" >
+				
+							<!-- Profile message - We don't have 500 gold to purchase Cold Weather Flying. Restart the profile with at least 500 gold or purchase Cold Weather Flying --> 
+							<CustomBehavior File="Message" 
+											Text="We don't have 500 gold to purchase Cold Weather Flying. Restart the profile with at least 500 gold or purchase Cold Weather Flying." 
+											LogColor="Orange" />
+											
+							<!-- Profile message - Stopping the bot !!! --> 
+							<CustomBehavior File="Message" 
+											Text="Stopping the bot !!!." 
+											LogColor="Red" />
+
+							<!-- Custom behavior - StopBot --> 				
+							<CustomBehavior File="UserSettings" 
+											StopBot="true" />				
+											
+						</If>	<!-- If we have gold -->				
+			
+					</Else>	<!-- Else we have not learned Cold Weather Flying -->
 					
 				</If>	<!-- If we don't have Cold Weather Flying -->
 		
@@ -149,6 +166,27 @@
 		
 		</If>	<!-- If our level is 60-90 -->
 
+		
+		
+		
+		
+		
+		
+		
+		
+					
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<!-- If our level is 88-90 -->
 		<If Condition="Me.Level &gt;= 88 &amp;&amp; Me.Level &lt; 90">
 			<CustomBehavior File="LoadProfile" 
@@ -172,29 +210,41 @@
 			<CustomBehavior File="LoadProfile" 
 									ProfileName="Components\[QO-N][Solstice][84-86]_gundrak" />
 		</If>
-		
-		<!-- If our level is 79-81 -->
-		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 81">
+
+		<!-- If our level is 81-84 -->
+		<If Condition="Me.Level &gt;= 81 &amp;&amp; Me.Level &lt; 84">
 			<CustomBehavior File="LoadProfile" 
-									ProfileName="Components\[QO-N][Solstice][79-81]_drak'tharon-keep" />
+							ProfileName="Components\[QO-N][Solstice][81-84]_drak'tharon-keep" />
+		</If>
+		
+		<!-- If our level is 80-82 -->
+		<If Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 82">
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Components\[QO-N][Solstice][80-82]_ahn'kahet-the-old-kingdom" />
+		</If>
+		
+		<!-- If our level is 79-80 -->
+		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 80">
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Components\[QO-N][Solstice][79-80]_the-nexus" />
 		</If>
 		
 		<!-- If our level is 78-79 -->
 		<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 79">
 			<CustomBehavior File="LoadProfile" 
-									ProfileName="Components\[QO-N][Solstice][78-79]_utgarde-keep" />
+							ProfileName="Components\[QO-N][Solstice][78-79]_utgarde-keep" />
 		</If>
 		
 		<!-- If our level is 76-78 -->
 		<If Condition="Me.Level &gt;= 76 &amp;&amp; Me.Level &lt; 78">
 			<CustomBehavior File="LoadProfile" 
-									ProfileName="Components\[QO-N][Solstice][76-78]_botanica" />
+							ProfileName="Components\[QO-N][Solstice][76-78]_botanica" />
 		</If>
 		
 		<!-- If our level is 74-76 -->
 		<If Condition="Me.Level &gt;= 74 &amp;&amp; Me.Level &lt; 76">
 			<CustomBehavior File="LoadProfile" 
-									ProfileName="Components\[QO-N][Solstice][74-76]_sethekk-halls" />
+							ProfileName="Components\[QO-N][Solstice][74-76]_sethekk-halls" />
 		</If>
 		
 		<!-- If our level is 72-74 -->

@@ -99,8 +99,18 @@
 					<!-- Move to the Stormwind portal -->
 					<RunTo X="-337.2882" Y="965.1047" Z="54.27977" />
 					
-					<!-- Interact with the Stormwind portal -->
-					<CustomBehavior File="InteractWith" MobId="195139" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-337.4917" Y="962.618835" Z="54.2885323" />
+					<!-- Interact with - Stormwind portal -->
+					<CustomBehavior File="InteractWith" 
+									MobId="195139" 
+									ObjectType="Gameobject" 
+									Range="4.75" 
+									NumOfTimes="1"  
+									X="-337.4917" Y="962.618835" Z="54.2885323" />
+									
+					<!-- Wait timer - wait 15 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />				
+									
 				</If>		
 				
 				<!-- If we are Horde -->			
@@ -116,9 +126,22 @@
 					<Runto X="-160.91" Y="967.9704" Z="54.28086" />
 					
 					<!-- Interact with the portal -->
-					<CustomBehavior File="Message" Text="Taking the portal to Orgrimmar." LogColor="Cyan" />	
-					<CustomBehavior File="InteractWith" MobId="195140" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="-161.317764" Y="965.409851" Z="54.29044" />
-					<CustomBehavior File="WaitTimer" WaitTime="15000" />	
+					<CustomBehavior File="Message" 
+									Text="Taking the portal to Orgrimmar." 
+									LogColor="Cyan" />
+					
+					<!-- Interact with - Orgrimmar portal -->
+					<CustomBehavior File="InteractWith" 
+									MobId="195140" 
+									ObjectType="Gameobject" 
+									Range="4.75" 
+									NumOfTimes="1" 
+									X="-161.317764" Y="965.409851" Z="54.29044" />
+					
+					<!-- Wait timer - wait 15 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />	
+									
 				</If>						
 			</If>								
 							
@@ -227,7 +250,7 @@
 									NumOfTimes="1"  
 									WaitTime="1" X="933.2972" Y="-290.390167" Z="-49.9389954" />
 				
-				</If>					
+				</If>	<!-- If we are north of the 2nd mole machine -->					
 
 				<!-- Move to the zone in location -->
 				<RunTo X="456.929" Y="34.0923" Z="-69.56171" />
@@ -303,35 +326,42 @@
 			
 			<!-- If we are in Eastern Kingdoms -->
 			<If Condition="Me.MapId == 0">
+			
+				<!-- Profile message - We are in Eastern Kingdoms -->
 				<CustomBehavior File="Message" 
 								Text="We are in Eastern Kingdoms." 
 								LogColor="Cyan" />
 
-				<!-- If our hearthstone is set here, use it -->
+				<!-- If our hearthstone is set here Iron Summit -->
 				<If Condition="Me.HearthstoneAreaId == 5628" >
 				
+					<!-- Profile message - Our Hearthstone/Innkeeper's Daughter is set at Iron Summit -->
 					<CustomBehavior File="Message" 
-									Text="Our Innkeeper is set at Iron Summit." 
+									Text="Our Hearthstone/Innkeeper's Daughter is set at Iron Summit." 
 									LogColor="Cyan" />
 										
 					<!-- Our hearth isn't set to Iron Summit -->
 					<Else>
+					
+						<!-- Profile message - Our Hearthstone/Innkeeper's Daughter is set at Iron Summit -->
 						<CustomBehavior File="Message" 
-										Text="Our Hearthstone isn't set in the proper location. Moving to set it." 
+										Text="Our Hearthstone/Innkeeper's Daughter isn't set in the proper location. Moving to set it." 
 										LogColor="Cyan" />
 				
+						<!-- Profile message - Moving to Iron Summit -->
 						<CustomBehavior File="Message" 
 										Text="Moving to Iron Summit." 
 										LogColor="Cyan" />
 										
 						<!-- Run to the innkeep in Iron Summit -->
-						<Runto X="-7083.119" Y="-1201.846" Z="324.2862" />
+						<MoveTo X="-7083.119" Y="-1201.846" Z="324.2862" />
 						
+						<!-- Custom behavior - ForcedDismount -->
 						<CustomBehavior File="ForcedDismount" />
 						
-						<!-- Set hearthstone -->
+						<!-- Profile message - Setting our Hearthstone -->
 						<CustomBehavior File="Message" 
-										Text="Setting my Hearthstone." 
+										Text="Setting our Hearthstone." 
 										LogColor="Cyan" />
 										
 						<!-- Set hearthstone -->				

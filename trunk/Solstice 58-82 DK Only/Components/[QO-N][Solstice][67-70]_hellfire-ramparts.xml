@@ -254,28 +254,58 @@
 					<CustomBehavior File="Message" 
 									Text="Deleting unwanted items from our bags." 
 									LogColor="Orange" />
+
+					<!-- Morning Glory Dew -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="8766" />
 									
-					<!-- Delete these items -->				
+					<!-- Major Mana Potion -->				
 					<CustomBehavior File="DeleteItems" 
-									Ids="8766" />	<!-- Morning Glory Dew -->
+									Ids="13444" />	
 									
+					<!-- Libram of Voracity -->										
 					<CustomBehavior File="DeleteItems" 
-									Ids="13444" />	<!-- Major Mana Potion -->
-															
+									Ids="11737" />
+									
+					<!-- Libram of Resilience -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="11737" />	<!-- Libram of Voracity -->	
-
+									Ids="11736" />	
+									
+					<!-- Roasted Quail -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="11736" />	<!-- Libram of Resilience -->
-
+									Ids="8952" />	
+									
+					<!-- Superior Mana Potion -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="8952" />	<!-- Roasted Quail -->	
-
+									Ids="22256" />	
+									
+					<!-- Mana Potion -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="13443" />	<!-- Superior Mana Potion -->
-
+									Ids="26480" />
+									
+					<!-- Light Feather -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="1111" />	<!--  -->
+									Ids="17056" />
+									
+					<!-- Dark Iron Bullet -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="62916" />	
+									
+					<!-- Mag'har Grainbread -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="27855" />
+									
+					<!-- Homemade Cherry Pie -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="8950" />
+									
+					<!-- Smoked Talbuk Venison -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="27854" />
+					
+					<!-- Soft Banana Bread -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="4601" />
 
 					<!-- Instance timer -->
 					<CustomBehavior File="Misc\InstanceTimer" 
@@ -320,7 +350,7 @@
 						
 					<!-- CTM to - align our target macro -->
 					<CustomBehavior File="MyCTM"
-									X="-1348.784" Y="1652.728" Z="68.8048" />	
+									X="-1349.986" Y="1655.942" Z="68.72022" />	
 
 					<!-- Profile message - Enabling combat -->
 					<CustomBehavior File="Message" 
@@ -726,11 +756,11 @@
 					<DisableBehavior Name="Combat" />
 					
 					<!-- Move to - 2nd group on the left - pivot location -->
-					<MoveTo X="-1267.29" Y="1651.943" Z="68.78744" />
+					<MoveTo X="-1264.102" Y="1647.001" Z="68.55363" />
 						
 					<!-- CTM to - align our target macro -->
 					<CustomBehavior File="MyCTM" 
-									X="-1259.924" Y="1644.5" Z="68.19891" />
+									X="-1257.559" Y="1638.108" Z="68.45851" />
 										
 					<!-- Profile message - Enabling combat -->
 					<CustomBehavior File="Message" 
@@ -844,7 +874,7 @@
 									WaitTime="3000" />		
 															
 					<!-- Move to the 2nd group on the right - safety -->
-					<MoveTo X="-1254.7" Y="1596.408" Z="68.57934" />
+					<MoveTo X="-1253.941" Y="1595.912" Z="68.57466" />
 
 					<!-- Profile message - Waiting 3 seconds - safety -->
 					<CustomBehavior File="Message" 
@@ -868,11 +898,11 @@
 					<DisableBehavior Name="Combat" />
 				
 					<!-- Move to - center group - pivot location -->
-					<MoveTo X="-1244.364" Y="1580.488" Z="68.4652" />
+					<MoveTo X="-1253.941" Y="1595.912" Z="68.57466" />
 						
 					<!-- CTM to - align our target macro -->
 					<CustomBehavior File="MyCTM"
-									X="-1255.025" Y="1572.543" Z="68.58245" />
+									X="-1254.995" Y="1585.928" Z="68.55029" />
 									
 					<!-- Profile message - Targeting the enemy -->
 					<CustomBehavior File="Message" 
@@ -1490,6 +1520,9 @@
 								<CustomBehavior File="WaitTimer" 
 												WaitTime="3000" />
 
+								<!-- Move to - rug - right - breaks loop -->
+								<MoveTo X="-1193.247" Y="1429.708" Z="68.50308" />				
+												
 								<!-- Move to - 5th group - right - breaks loop -->
 								<MoveTo X="-1177.963" Y="1444.135" Z="68.42396" />
 
@@ -1685,6 +1718,11 @@
 					<!-- If we are in a level 11 or greater guild -->
 					<If Condition="Me.GuildLevel &gt;= 11">
 					
+						<!-- Profile message - We are in a level 11+ guild -->
+						<CustomBehavior File="Message" 
+										Text="We are in a level 11+ guild."  
+										LogColor="Orange" />
+					
 						<!-- If we have friendly reputation with our guild -->
 						<If Condition="Me.GetReputationLevelWith(1168) &gt;= WoWUnitReaction.Friendly">
 						
@@ -1694,20 +1732,32 @@
 							
 								<!-- Load profile - [QO-N][Solstice][58-90][mobile-banking] -->
 								<CustomBehavior File="LoadProfile" 
-														ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][mobile-banking]" />
+												ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][mobile-banking]" />
 								
 							</If>	<!-- If we have spell (83958) - mobile banking -->
 							
-							<Else>
+							<!-- If we don't have spell (83958) - mobile banking -->
+							<If Condition="SpellManager.!HasSpell(&quot;Mobile Banking&quot;)">
 							
 								<!-- Profile message - We don't have friendly or greater reputation with our guild. Aborting Mobile Banking procedures -->
 								<CustomBehavior File="Message" 
-												Text="We don't have friendly or greater reputation with your guild. Aborting Mobile Banking procedures!"  
+												Text="We don't have friendly or greater reputation with our guild. Aborting Mobile Banking procedures!"  
 												LogColor="Red" />
-							
-							</Else>
+								
+							</If>	<!-- If we have spell (83958) - mobile banking -->
 
 						</If>	<!-- If we have friendly reputation with our guild -->
+					
+						<!-- If we are not in a level 11+ guild -->
+						<Else>
+						
+							<!-- Profile message - We are not in a level 11+ guild -->
+							<CustomBehavior File="Message" 
+											Text="We are not in a level 11+ guild."  
+											LogColor="Red" />
+						
+						</Else>		<!-- If we are not in a level 11+ guild -->
+					
 					
 					</If>	<!-- If we are in a level 11 or greater guild -->
 					

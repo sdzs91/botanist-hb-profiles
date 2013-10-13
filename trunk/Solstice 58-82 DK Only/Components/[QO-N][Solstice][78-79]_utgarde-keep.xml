@@ -85,6 +85,7 @@
 				<!-- Utgarde Keep -->
 				<If Condition="Me.MapId == 574">
 				
+					<!-- Profile message - Utgarde Keep detected. Running out -->
 					<CustomBehavior File="Message" 
 									Text="Utgarde Keep detected. Running out."
 									LogColor="Fuchsia" />
@@ -292,8 +293,8 @@
 					<!-- ************************************************************************************************************************ -->
 					
 					
-					<!-- If we are between level 78-80 -->
-					<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 80">
+					<!-- If we are between level 78-79 -->
+					<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 79">
 
 					
 						<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -986,19 +987,19 @@
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />	
 										
-					</If>	<!-- If we are between level 78-80 -->					
+					</If>	<!-- If we are between level 78-79 -->					
 										
 										
 					<!-- ***************************************************************************************************************************** -->
 					
 									
 					<!-- Make our way to the exit -->
-					<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+					<MoveTo X="155.1128" Y="-86.14938" Z="12.55292" />
 
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
-								MinLevel="80" 
-								ProfileName="[QO-N][Solstice][79-84]_drak'tharon-keep.xml"  />									
+									MinLevel="79" 
+									ProfileName="[QO-N][Solstice][79-80]_the-nexus.xml"  />									
 
 					<!-- Profile message - Waiting 3 seconds - Bag and durability check -->
 					<CustomBehavior File="Message" 
@@ -1048,6 +1049,11 @@
 					<!-- If we are in a level 11 or greater guild -->
 					<If Condition="Me.GuildLevel &gt;= 11">
 					
+						<!-- Profile message - We are in a level 11+ guild -->
+						<CustomBehavior File="Message" 
+										Text="We are in a level 11+ guild."  
+										LogColor="Orange" />
+					
 						<!-- If we have friendly reputation with our guild -->
 						<If Condition="Me.GetReputationLevelWith(1168) &gt;= WoWUnitReaction.Friendly">
 						
@@ -1061,16 +1067,28 @@
 								
 							</If>	<!-- If we have spell (83958) - mobile banking -->
 							
-							<Else>
+							<!-- If we don't have spell (83958) - mobile banking -->
+							<If Condition="SpellManager.!HasSpell(&quot;Mobile Banking&quot;)">
 							
 								<!-- Profile message - We don't have friendly or greater reputation with our guild. Aborting Mobile Banking procedures -->
 								<CustomBehavior File="Message" 
 												Text="We don't have friendly or greater reputation with our guild. Aborting Mobile Banking procedures!"  
 												LogColor="Red" />
-							
-							</Else>
+								
+							</If>	<!-- If we have spell (83958) - mobile banking -->
 
 						</If>	<!-- If we have friendly reputation with our guild -->
+					
+						<!-- If we are not in a level 11+ guild -->
+						<Else>
+						
+							<!-- Profile message - We are not in a level 11+ guild -->
+							<CustomBehavior File="Message" 
+											Text="We are not in a level 11+ guild."  
+											LogColor="Red" />
+						
+						</Else>		<!-- If we are not in a level 11+ guild -->
+					
 					
 					</If>	<!-- If we are in a level 11 or greater guild -->
 					

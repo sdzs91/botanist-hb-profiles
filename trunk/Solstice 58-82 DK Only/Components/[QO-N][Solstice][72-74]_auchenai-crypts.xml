@@ -984,6 +984,11 @@
 					<!-- If we are in a level 11 or greater guild -->
 					<If Condition="Me.GuildLevel &gt;= 11">
 					
+						<!-- Profile message - We are in a level 11+ guild -->
+						<CustomBehavior File="Message" 
+										Text="We are in a level 11+ guild."  
+										LogColor="Orange" />
+					
 						<!-- If we have friendly reputation with our guild -->
 						<If Condition="Me.GetReputationLevelWith(1168) &gt;= WoWUnitReaction.Friendly">
 						
@@ -993,20 +998,32 @@
 							
 								<!-- Load profile - [QO-N][Solstice][58-90][mobile-banking] -->
 								<CustomBehavior File="LoadProfile" 
-														ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][mobile-banking]" />
+												ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][mobile-banking]" />
 								
 							</If>	<!-- If we have spell (83958) - mobile banking -->
 							
-							<Else>
+							<!-- If we don't have spell (83958) - mobile banking -->
+							<If Condition="SpellManager.!HasSpell(&quot;Mobile Banking&quot;)">
 							
 								<!-- Profile message - We don't have friendly or greater reputation with our guild. Aborting Mobile Banking procedures -->
 								<CustomBehavior File="Message" 
 												Text="We don't have friendly or greater reputation with our guild. Aborting Mobile Banking procedures!"  
 												LogColor="Red" />
-							
-							</Else>
+								
+							</If>	<!-- If we have spell (83958) - mobile banking -->
 
 						</If>	<!-- If we have friendly reputation with our guild -->
+					
+						<!-- If we are not in a level 11+ guild -->
+						<Else>
+						
+							<!-- Profile message - We are not in a level 11+ guild -->
+							<CustomBehavior File="Message" 
+											Text="We are not in a level 11+ guild."  
+											LogColor="Red" />
+						
+						</Else>		<!-- If we are not in a level 11+ guild -->
+					
 					
 					</If>	<!-- If we are in a level 11 or greater guild -->
 					

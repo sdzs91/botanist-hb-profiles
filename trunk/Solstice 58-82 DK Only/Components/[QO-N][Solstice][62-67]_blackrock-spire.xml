@@ -103,12 +103,12 @@
 										LogColor="Orange" />
 						
 						<!-- Move to the center of the ramp between the burning braziers -->
-						<RunTo X="64.47768" Y="-319.3361" Z="65.46352" />
+						<MoveTo X="64.47768" Y="-319.3361" Z="65.46352" />
 						
 					</If>	<!-- If we are in UBRS -->				
 			
 					<!-- Move to - zone in location -->				
-					<RunTo X="80.03099" Y="-258.143" Z="60.70329" />
+					<MoveTo X="80.03099" Y="-258.143" Z="60.70329" />
 					
 					<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
 					<If  Condition="Me.HasAura(53362)" >
@@ -183,7 +183,7 @@
 									X="77.31385" Y="-210.969" Z="49.81922" />
 					
 					<!-- Move to - zone out location -->
-					<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
+					<MoveTo X="-7526.999" Y="-1225.375" Z="285.731" />
 
 					<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
 					<If  Condition="Me.HasAura(53362)" >
@@ -249,7 +249,7 @@
 					<While Condition="Me.ZoneId != 1583">
 					
 						<!-- Make sure we run to the right spot outside the portal -->
-						<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
+						<MoveTo X="-7526.999" Y="-1225.375" Z="285.731" />
 
 						<!-- Run back in the Blackrock Spire portal -->
 						<CustomBehavior File="Misc\InInstance" X="-7522.451" Y="-1233.457" Z="285.7389" />
@@ -278,31 +278,56 @@
 				<If Condition="Me.ZoneId == 1583">
 
 					<!-- Entrance -->
-					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					<MoveTo X="78.3534" Y="-226.841" Z="49.7662" />
 
 					<!--Profile message	- Deleting unwanted items from our bags -->				
 					<CustomBehavior File="Message" 
 									Text="Deleting unwanted items from our bags." 
 									LogColor="Orange" />
+
+					<!-- Morning Glory Dew -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="8766" />
 									
-					<!-- Delete these items -->				
+					<!-- Major Mana Potion -->				
 					<CustomBehavior File="DeleteItems" 
-									Ids="8766" />	<!-- Morning Glory Dew -->
+									Ids="13444" />	
 									
+					<!-- Libram of Voracity -->										
 					<CustomBehavior File="DeleteItems" 
-									Ids="13444" />	<!-- Major Mana Potion -->
-															
+									Ids="11737" />
+									
+					<!-- Libram of Resilience -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="11737" />	<!-- Libram of Voracity -->	
+									Ids="11736" />	
+									
+					<!-- Roasted Quail -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="8952" />	
+									
+					<!-- Superior Mana Potion -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="22256" />	
+									
+					<!-- Mana Potion -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="26480" />
+									
+					<!-- Light Feather -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="17056" />
+									
+					<!-- Dark Iron Bullet -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="62916" />	
+									
+					<!-- Mag'har Grainbread -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="27855" />
 
+					<!-- Smoked Talbuk Venison -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="11736" />	<!-- Libram of Resilience -->
-
-					<CustomBehavior File="DeleteItems" 
-									Ids="8952" />	<!-- Roasted Quail -->	
-
-					<CustomBehavior File="DeleteItems" 
-									Ids="13443" />	<!-- Superior Mana Potion -->
+									Ids="27854" />
 											
 					<!-- Instance timer -->
 					<CustomBehavior File="Misc\InstanceTimer" 
@@ -314,36 +339,13 @@
 									NumOfTimes="1" 
 									WaitTime="1000" />
 					
+					<!-- Profile message - Blackrock Spire initialized -->
 					<CustomBehavior File="Message" 
 									Text="Blackrock Spire initialized."  
 									LogColor="Fuchsia" />
-		
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+
 					<!-- If we are between level 62-67 -->
 					<If Condition="Me.Level &gt;= 62 &amp;&amp; Me.Level &lt; 68">
-
-					
-					
-					
-					
-					
-					
-					
-					
-					
 					
 						<!-- If we are between level 62-65 -->
 						<If Condition="Me.Level &gt;= 62 &amp;&amp; Me.Level &lt;= 64">
@@ -353,11 +355,10 @@
 					
 					
 							<!-- Move to - top of the ramp - pivot point -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="80.18515" Y="-253.9968" Z="60.70207" />
+							<MoveTo X="80.18515" Y="-253.9968" Z="60.70207" />
 
-							<!-- Move to - align our target macro -->	
-							<CustomBehavior File="NoCombatMoveTo"
+							<!-- CTM to - align our target macro -->
+							<CustomBehavior File="MyCTM"
 											X="82.2791" Y="-259.7008" Z="60.70203" />
 							
 							<!-- Profile message - Targeting the enemy -->
@@ -394,11 +395,10 @@
 											
 											
 							<!-- Move to - top of the ramp - pivot point -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="80.18515" Y="-253.9968" Z="60.70207" />
+							<MoveTo X="80.18515" Y="-253.9968" Z="60.70207" />
 
-							<!-- Move to - align our target macro -->	
-							<CustomBehavior File="NoCombatMoveTo"
+							<!-- CTM to - align our target macro -->
+							<CustomBehavior File="MyCTM"
 											X="78.14989" Y="-259.8033" Z="60.70204" />
 
 							<!-- Profile message - Targeting the enemy -->
@@ -435,9 +435,13 @@
 											
 											
 							<!-- Move to - center of the 1st room -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="80.09342" Y="-281.7637" Z="60.70078" />
+							<MoveTo X="80.09342" Y="-281.7637" Z="60.70078" />
 
+							<!-- Profile message - Targeting the enemy -->
+							<CustomBehavior File="Message" 
+											Text="Waiting 65 seconds to aggro the patrol."  
+											LogColor="Orange" />
+							
 							<!-- Wait timer - wait 65 seconds - aggro both patrols -->
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="65000" />
@@ -446,13 +450,12 @@
 							<!-- @@@@@@@@@@@@@@@@@@@@ 4th pull @@@@@@@@@@@@@@@@@@@@ -->								
 														
 														
-							<!-- Move to - pivot point - left of the room -->			
-							<CustomBehavior File="NoCombatMoveTo" 
-											X="90.32764" Y="-290.7039" Z="60.64268" />
+							<!-- Move to - left-hand side of the room - pivot location  -->			
+							<MoveTo X="93.08215" Y="-290.817" Z="60.61675" />
 											
-							<!-- Pivot center - pull the center group -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="86.76073" Y="-297.5365" Z="60.70156" />				
+							<!-- CTM to - align our target macro -->
+							<CustomBehavior File="MyCTM"
+											X="88.90633" Y="-298.4919" Z="60.15749" />				
 							
 							<!-- Profile message - Targeting the enemy -->
 							<CustomBehavior File="Message" 
@@ -497,9 +500,8 @@
 											NumOfTimes="1"
 											Macro="/cast Death Grip" />
 
-							<!-- Move to - kite - center group -->			
-							<CustomBehavior File="NoCombatMoveTo" 
-											X="95.21806" Y="-275.3589" Z="60.67893" />
+							<!-- Move to - center group - kite -->			
+							<MoveTo X="95.21806" Y="-275.3589" Z="60.67893" />
 
 							<!-- Profile message - Enabling combat -->
 							<CustomBehavior File="Message" 
@@ -514,7 +516,7 @@
 											WaitTime="3000" />					
 							
 							<!-- Move to - center group - safety -->					
-							<RunTo X="82.90974" Y="-315.8469" Z="55.78075" />
+							<MoveTo X="82.90974" Y="-315.8469" Z="55.78075" />
 
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
@@ -528,9 +530,9 @@
 							<If Condition="Me.Level &gt;= 64">
 							
 								<!-- 1st room on the left -->
-								<CustomBehavior File="NoCombatMoveTo" 
-												X="104.3891" Y="-309.2617" Z="53.91877" />
+								<MoveTo X="104.3891" Y="-309.2617" Z="53.91877" />
 								
+								<!-- Wait timer - wait 3 seconds - delay -->
 								<CustomBehavior File="WaitTimer" 
 												WaitTime="3000" />
 					
@@ -539,10 +541,9 @@
 											
 										
 								<!-- 1st room on the right -->
-								<CustomBehavior File="NoCombatMoveTo" 
-												X="53.97682" Y="-308.4626" Z="53.91876" />
+								<MoveTo X="53.97682" Y="-308.4626" Z="53.91876" />
 								
-								<!-- Wait timer - wait 3 seconds to aggro the mobs -->
+								<!-- Wait timer - wait 3 seconds - delay -->
 								<CustomBehavior File="WaitTimer" 
 												WaitTime="3000" />
 												
@@ -550,12 +551,11 @@
 								<!-- @@@@@@@@@@@@@@@@@@@@ 7th pull @@@@@@@@@@@@@@@@@@@@ -->				
 											
 														
-								<!-- 2nd room - left -->
-								<CustomBehavior File="NoCombatMoveTo" 
-												X="78.39996" Y="-320.3944" Z="55.78081" />
+								<!-- Move to - 2nd room - left -->
+								<MoveTo X="78.39996" Y="-320.3944" Z="55.78081" />
 																
-								<!-- Move to - align our target macro -->					
-								<CustomBehavior File="NoCombatMoveTo" 
+								<!-- CTM to - align our target macro -->
+								<CustomBehavior File="MyCTM"
 												X="87.44602" Y="-323.2943" Z="55.78311" />
 
 								<!-- Profile message - Targeting the enemy -->
@@ -589,7 +589,7 @@
 												WaitTime="3000" />
 								
 								<!-- Move to - 2nd room - left - safety -->					
-								<RunTo X="107.4123" Y="-329.5834" Z="53.92001" />
+								<MoveTo X="107.4123" Y="-329.5834" Z="53.92001" />
 
 								<!-- Wait timer - wait 3 seconds - delay -->
 								<CustomBehavior File="WaitTimer" 
@@ -600,11 +600,10 @@
 
 								
 								<!-- Move to - back center group -->				
-								<CustomBehavior File="NoCombatMoveTo" 
-												X="71.20026" Y="-334.9815" Z="57.43675" />
+								<MoveTo X="71.20026" Y="-334.9815" Z="57.43675" />
 																
-								<!-- Move to - align our target macro -->					
-								<CustomBehavior File="NoCombatMoveTo" 
+								<!-- CTM to - align our target macro -->
+								<CustomBehavior File="MyCTM"
 												X="73.73074" Y="-341.0096" Z="60.70209" />
 
 								<!-- Profile message - Targeting the enemy -->
@@ -638,7 +637,7 @@
 												WaitTime="3000" />
 								
 								<!-- Move to - back center group - safety -->					
-								<RunTo X="84.6333" Y="-358.471" Z="60.70203" />
+								<MoveTo X="84.6333" Y="-358.471" Z="60.70203" />
 
 								<!-- Wait timer - wait 3 seconds - delay -->
 								<CustomBehavior File="WaitTimer" 
@@ -649,8 +648,7 @@
 								
 								
 								<!-- Move to - split leading to lbrs  -->
-								<CustomBehavior File="NoCombatMoveTo"
-												X="47.5253" Y="-326.7086" Z="53.89308" />
+								<MoveTo X="47.5253" Y="-326.7086" Z="53.89308" />
 								
 								<!-- Profile message - Disabling combat -->
 								<CustomBehavior File="Message" 
@@ -661,12 +659,10 @@
 								<DisableBehavior Name="Combat" />				
 		
 								<!-- Move to - lbrs door guards -->				
-								<CustomBehavior File="NoCombatMoveTo"
-												X="15.79399" Y="-328.0825" Z="48.7785" />				
+								<MoveTo X="15.79399" Y="-328.0825" Z="48.7785" />				
 												
 								<!-- Move to - inside the lbrs entrance - los pull -->				
-								<CustomBehavior File="NoCombatMoveTo"
-												X="16.26467" Y="-345.9327" Z="48.67374" />			
+								<MoveTo X="16.26467" Y="-345.9327" Z="48.67374" />			
 		
 								<!-- Profile message - Enabling combat -->
 								<CustomBehavior File="Message" 
@@ -691,23 +687,20 @@
 											PullDistance="1" />
 										
 							<!-- Move to - split leading to lbrs  -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="47.5253" Y="-326.7086" Z="53.89308" />
+							<MoveTo X="47.5253" Y="-326.7086" Z="53.89308" />
 
-							<!-- Move to - past the tiki  -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="18.64488" Y="-288.9765" Z="65.37583" />
-	
-							<!-- Wait timer - wait 3 seconds to aggro the mobs -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="3000" />
+							<!-- Move to -  avoid aggro -->
+							<MoveTo X="35.2433" Y="-290.8109" Z="66.32254" />
+							
+							<!-- Move to - safe location past the tiki  -->
+							<MoveTo X="19.52767" Y="-286.01" Z="65.37584" />
+
 	
 							<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
 							
 											
 							<!-- Move to - solo mob -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="8.000992" Y="-277.0957" Z="65.33565" />
+							<MoveTo X="8.000992" Y="-277.0957" Z="65.33565" />
 																			
 							<!-- Wait timer - wait 3 seconds to give HB time to think -->
 							<CustomBehavior File="WaitTimer" 
@@ -717,9 +710,8 @@
 							<!-- @@@@@@@@@@@@@@@@@@@@ 13th pull @@@@@@@@@@@@@@@@@@@@ -->					
 												
 												
-							<!-- Move to - 3rd group on the top right ramp in lbrs - pivot position -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="11.07169" Y="-283.7907" Z="65.37117" />
+							<!-- Move to - 3rd group - pivot position -->
+							<MoveTo X="11.07169" Y="-283.7907" Z="65.37117" />
 											
 							<!-- Move to - align our target macro -->
 							<CustomBehavior File="MyCTM"
@@ -759,8 +751,7 @@
 											Macro="/cast Death Grip" />				
 
 							<!-- Move to - corner -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="1.137496" Y="-269.3934" Z="65.31726" />				
+							<MoveTo X="1.137496" Y="-269.3934" Z="65.31726" />				
 											
 							<!-- Profile message - Enabling combat -->
 							<CustomBehavior File="Message" 
@@ -779,13 +770,12 @@
 							<!-- @@@@@@@@@@@@@@@@@@@@ 10th pull @@@@@@@@@@@@@@@@@@@@ -->				
 											
 															
-							<!-- Move to - tiki  -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="25.19155" Y="-289.5489" Z="65.37434" />				
+							<!-- Move to -  1st group - pivot location  -->
+							<MoveTo X="25.88939" Y="-288.0374" Z="65.37583" />				
 
-							<!-- Move to - align our target macro -->					
-							<CustomBehavior File="NoCombatMoveTo" 
-											X="31.48281" Y="-286.7853" Z="65.37434" />
+							<!-- CTM to - align our target macro -->
+							<CustomBehavior File="MyCTM"
+											X="31.5725" Y="-285.6953" Z="65.58303" />
 
 							<!-- Profile message - Targeting the enemy -->
 							<CustomBehavior File="Message" 
@@ -811,6 +801,26 @@
 							<!-- Disable combat -->
 							<DisableBehavior Name="Combat" />
 
+							<!-- Profile message - Casting Raise Dead -->
+							<CustomBehavior File="Message" 
+											Text="Casting Raise Dead."  
+											LogColor="Orange" />
+										
+							<!-- Macro - Cast Raise Dead -->
+							<CustomBehavior File="RunMacro"
+											NumOfTimes="1"
+											Macro="/cast Raise Dead" />
+							
+							<!-- Profile message - Casting Icebound Fortitude -->
+							<CustomBehavior File="Message" 
+											Text="Casting Icebound Fortitude."  
+											LogColor="Orange" />
+										
+							<!-- Macro - Cast Icebound Fortitude -->
+							<CustomBehavior File="RunMacro"
+											NumOfTimes="1"
+											Macro="/cast Icebound Fortitude" />				
+
 							<!-- Profile message - Casting Death Grip -->
 							<CustomBehavior File="Message" 
 											Text="Casting Death Grip."  
@@ -822,8 +832,7 @@
 											Macro="/cast Death Grip" />					
 
 							<!-- Move to - kite - behind the mound -->				
-							<CustomBehavior File="NoCombatMoveTo" 
-											X="16.3757" Y="-266.3961" Z="65.35841" />				
+							<MoveTo X="18.42298" Y="-275.804" Z="65.37441" />				
 											
 							<!-- Profile message - Enabling combat -->
 							<CustomBehavior File="Message" 
@@ -838,7 +847,7 @@
 											WaitTime="3000" />					
 							
 							<!-- Move to - 1st group - top - right-hand ramp entering LBRS -->					
-							<RunTo X="43.94332" Y="-274.732" Z="65.3686" />
+							<MoveTo X="43.94332" Y="-274.732" Z="65.3686" />
 
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
@@ -849,16 +858,14 @@
 											
 															
 							<!-- Move to - 2nd group - top - right-hand ramp entering LBRS  -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="47.66274" Y="-256.3081" Z="65.35376" />			
+							<MoveTo X="47.66274" Y="-256.3081" Z="65.35376" />			
 										
 							<!-- Wait timer - wait 3 seconds to aggro the mobs -->
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="3000" />			
 
 							<!-- Move to - doorway of the lower tier at the entrance to BRS -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="70.57846" Y="-324.8912" Z="55.78739" />
+							<MoveTo X="70.57846" Y="-324.8912" Z="55.78739" />
 											
 											
 											
@@ -2088,123 +2095,80 @@
 							<!-- @@@@@@@@@@@@@@@@@@@@ 38th pull @@@@@@@@@@@@@@@@@@@@ -->
 							
 							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							<!-- Move to - jump - pivot location -->
-							<MoveTo X="-58.02576" Y="-420.1479" Z="77.75462" />
-							
-							<!-- Move to - jump - alignment -->
-							<CustomBehavior File="MyCTM" 
-											X="-47.91906" Y="-406.7904" Z="77.75994" />
-							
-							<!-- Jump -->
-							<CustomBehavior File="Misc\JumpForward" />
-							
-							<!-- Wait timer - wait 3 seconds - delay -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="3000" />
-							
 							<!-- Move to - jump location -->
+							<MoveTo X="-52.25925" Y="-448.6878" Z="77.77618" />
+							
+							<!-- CTM to - 1st jump off - ledge -->
 							<CustomBehavior File="MyCTM"
-											X="-37.50918" Y="-383.7154" Z="48.73549" />
+											X="-66.27016" Y="-341.1101" Z="55.31524" />
 							
-							<!-- Move to - Jump -->
+							<!-- CTM to - 2nd jump off - ledge -->
 							<CustomBehavior File="MyCTM"
-											X="-37.32213" Y="-398.0318" Z="49.02579" />
+											X="-71.13158" Y="-327.3603" Z="57.53645" />
 							
-							<!-- Jump -->
-							<CustomBehavior File="Misc\JumpForward" />
 							
-							<!-- Move to - ogre below jump location -->
-							<MoveTo X="-36.96705" Y="-401.5688" Z="31.55282" />
+							<!-- @@@@@@@@@@@@@@@@@@@@ 38th pull @@@@@@@@@@@@@@@@@@@@ -->
+							
+							
+							<!-- CTM to - 1st jump off - ledge - top 2 Ogres-->
+							<CustomBehavior File="MyCTM"
+											X="-55.90062" Y="-319.6693" Z="43.0875" />
 							
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="3000" />
 							
 							
-							<!-- @@@@@@@@@@@@@@@@@@@@ 39th pull @@@@@@@@@@@@@@@@@@@@ -->
+							<!-- @@@@@@@@@@@@@@@@@@@@ 38th pull @@@@@@@@@@@@@@@@@@@@ -->
 							
 							
-							<!-- Move to - pull the ogres to a safe location  -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="-36.97406" Y="-440.9066" Z="31.84023" />
+							<!-- CTM to - 3 Ogres near the door -->
+							<CustomBehavior File="MyCTM"
+											X="-42.76176" Y="-368.391" Z="31.61826" />
 							
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="3000" />
 							
 							
-							<!-- @@@@@@@@@@@@@@@@@@@@ 40th pull @@@@@@@@@@@@@@@@@@@@ -->
+							<!-- @@@@@@@@@@@@@@@@@@@@ 38th pull @@@@@@@@@@@@@@@@@@@@ -->
 							
 							
-							<!-- Move to - last group of ogres  -->
-							<RunTo X="-36.77527" Y="-499.6263" Z="29.15051" />
+							<!-- Move to - solo Ogre near the bridge -->
+							<MoveTo X="-36.95887" Y="-405.8747" Z="31.54501" />
+							
+							<!-- Wait timer - wait 3 seconds - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
+							
+							
+							<!-- @@@@@@@@@@@@@@@@@@@@ 38th pull @@@@@@@@@@@@@@@@@@@@ -->
+							
+							
+							<!-- Move to - 3 Ogres near the bridge -->
+							<MoveTo X="-37.35768" Y="-435.2386" Z="31.81027" />
+							
+							<!-- Wait timer - wait 3 seconds - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
+							
+							
+							<!-- @@@@@@@@@@@@@@@@@@@@ 38th pull @@@@@@@@@@@@@@@@@@@@ -->
+							
+							
+							<!-- Move to - 3 Ogres near the bridge -->
+							<MoveTo X="-37.35768" Y="-435.2386" Z="31.81027" />
+							
+							<!-- Wait timer - wait 3 seconds - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
+							
+							
+							<!-- @@@@@@@@@@@@@@@@@@@@ 38th pull @@@@@@@@@@@@@@@@@@@@ -->
+							
+							
+							<!-- Move to - last 2 Ogres -->
+							<MoveTo X="-37.04158" Y="-495.9242" Z="29.12918" />
 							
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
@@ -2215,7 +2179,7 @@
 							
 							
 							<!-- Move to - right-hand group exiting LBRS  -->
-							<RunTo X="-65.23962" Y="-532.903" Z="29.18919" />
+							<MoveTo X="-65.23962" Y="-532.903" Z="29.18919" />
 							
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
@@ -2226,11 +2190,10 @@
 							
 							
 							<!-- Move to - center group before the 1st bridge exiting LBRS - pivot location  -->
-							<CustomBehavior File="NoCombatMoveTo" 
-											X="-63.13292" Y="-529.7286" Z="29.18942" />
+							<MoveTo X="-63.13292" Y="-529.7286" Z="29.18942" />
 														
-							<!-- Move to - align our target macro -->					
-							<CustomBehavior File="NoCombatMoveTo" 
+							<!-- CTM to - align our target macro -->
+							<CustomBehavior File="MyCTM"
 											X="-59.08543" Y="-537.3517" Z="29.18942" />
 
 							<!-- Profile message - Targeting the enemy -->
@@ -2284,8 +2247,7 @@
 											WaitTime="3000" />				
 											
 							<!-- Move to - center group before the 1st bridge exiting LBRS - safety -->					
-							<CustomBehavior File="NoCombatMoveTo"
-											X="-31.53409" Y="-564.2172" Z="29.19088" />				
+							<MoveTo X="-31.53409" Y="-564.2172" Z="29.19088" />				
 					
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
@@ -2296,7 +2258,7 @@
 							
 							
 							<!-- Move to - group between the bridges  -->
-							<RunTo X="55.2912" Y="-569.4089" Z="30.58456" />
+							<MoveTo X="55.2912" Y="-569.4089" Z="30.58456" />
 							
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
@@ -2307,7 +2269,7 @@
 							
 							
 							<!-- Move to - end of the last bridge exiting LBRS - possible rare spawn here - Burning Felguard -->
-							<RunTo X="51.43346" Y="-507.7596" Z="29.15227" />
+							<MoveTo X="51.43346" Y="-507.7596" Z="29.15227" />
 							
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
@@ -2318,7 +2280,7 @@
 							
 							
 							<!-- Move to - doorway exiting LBRS  -->
-							<RunTo X="36.87722" Y="-360.7853" Z="48.67364" />
+							<MoveTo X="36.87722" Y="-360.7853" Z="48.67364" />
 							
 							<!-- If we are between levels 66-67 -->			
 							<If Condition="Me.Level &gt;= 66 &amp;&amp; Me.Level &lt; 67">
@@ -2340,7 +2302,7 @@
 					</If>	<!-- If we are between level 62-67 -->			
 
 					<!-- Run to the exit -->
-					<RunTo X="80.03099" Y="-258.143" Z="60.70329" />
+					<MoveTo X="80.03099" Y="-258.143" Z="60.70329" />
 									
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -2395,6 +2357,11 @@
 					<!-- If we are in a level 11 or greater guild -->
 					<If Condition="Me.GuildLevel &gt;= 11">
 					
+						<!-- Profile message - We are in a level 11+ guild -->
+						<CustomBehavior File="Message" 
+										Text="We are in a level 11+ guild."  
+										LogColor="Orange" />
+					
 						<!-- If we have friendly reputation with our guild -->
 						<If Condition="Me.GetReputationLevelWith(1168) &gt;= WoWUnitReaction.Friendly">
 						
@@ -2404,21 +2371,32 @@
 							
 								<!-- Load profile - [QO-N][Solstice][58-90][mobile-banking] -->
 								<CustomBehavior File="LoadProfile" 
-														ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][mobile-banking]" />
+												ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][mobile-banking]" />
 								
 							</If>	<!-- If we have spell (83958) - mobile banking -->
 							
-							<Else>
+							<!-- If we don't have spell (83958) - mobile banking -->
+							<If Condition="SpellManager.!HasSpell(&quot;Mobile Banking&quot;)">
 							
 								<!-- Profile message - We don't have friendly or greater reputation with our guild. Aborting Mobile Banking procedures -->
 								<CustomBehavior File="Message" 
 												Text="We don't have friendly or greater reputation with our guild. Aborting Mobile Banking procedures!"  
 												LogColor="Red" />
-							
-							</Else>
-						
-						
+								
+							</If>	<!-- If we have spell (83958) - mobile banking -->
+
 						</If>	<!-- If we have friendly reputation with our guild -->
+					
+						<!-- If we are not in a level 11+ guild -->
+						<Else>
+						
+							<!-- Profile message - We are not in a level 11+ guild -->
+							<CustomBehavior File="Message" 
+											Text="We are not in a level 11+ guild."  
+											LogColor="Red" />
+						
+						</Else>		<!-- If we are not in a level 11+ guild -->
+					
 					
 					</If>	<!-- If we are in a level 11 or greater guild -->
 					
@@ -2438,7 +2416,7 @@
 									LogColor="Orange" />
 									
 					<!-- Move to - zone in location -->				
-					<RunTo X="78.3534" Y="-226.841" Z="49.7662" />
+					<MoveTo X="78.3534" Y="-226.841" Z="49.7662" />
 					
 					<!-- Instance timer check if we didn't repair -->
 					<CustomBehavior File="Misc\InstanceTimer" 
@@ -2453,7 +2431,7 @@
 					<CustomBehavior File="Misc\InInstance" X="77.31385" Y="-210.969" Z="49.81922" />
 					
 					<!--Move to - zone out location -->
-					<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
+					<MoveTo X="-7526.999" Y="-1225.375" Z="285.731" />
 
 				</If>	<!-- If we didn't need to repair -->
 				
