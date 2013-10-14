@@ -346,6 +346,32 @@
 					
 						<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 						
+
+						<!-- Move to - base of the ramp -->
+						<MoveTo X="359.7634" Y="152.2394" Z="-33.5667" />
+						
+						<!-- Profile message - Waiting 30 seconds to aggro the patrol -->
+						<CustomBehavior File="Message" 
+										Text="Waiting 30 seconds to aggro the patrol."  
+										LogColor="Orange" />
+						
+						<!-- Profile message - Let's dance -->
+						<CustomBehavior File="Message" 
+										Text="Let's dance."  
+										LogColor="Orange" />
+						
+						<!-- Macro - Cast Dance -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/dance" />
+						
+						<!-- Wait timer - wait 30 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="30000" />
+					
+					
+						<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+						
 						
 						<!-- Move to - 1st group Hall of Stasis -->
 						<MoveTo X="390.278" Y="147.9585" Z="-35.0195" />
@@ -359,11 +385,11 @@
 						
 						
 						<!-- Move to - 2nd group Hall of Stasis - pivot location -->
-						<MoveTo X="392.8819" Y="145.0956" Z="-35.01954" />				
+						<MoveTo X="394.7276" Y="142.6275" Z="-35.01949" />				
 										
 						<!-- CTM to - align our target macro -->
 						<CustomBehavior File="MyCTM"
-										X="390.2831" Y="150.9453" Z="-35.01954" />
+										X="394.0258" Y="151.1396" Z="-35.01949" />
 							
 						<!-- Profile message - Targeting the enemy -->
 						<CustomBehavior File="Message" 
@@ -427,6 +453,34 @@
 										NumOfTimes="1"
 										Macro="/targetenemy [noharm]" />		
 										
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+						
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />				
+											
+						<!-- Profile message - Casting Bone Shield -->
+						<CustomBehavior File="Message" 
+										Text="Casting Bone Shield."  
+										LogColor="Orange" />
+									
+						<!-- Macro - Cast Bone Shield -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Bone Shield" />				
+
+						<!-- Profile message - Casting Raise Dead -->
+						<CustomBehavior File="Message" 
+										Text="Casting Raise Dead."  
+										LogColor="Orange" />
+									
+						<!-- Macro - Cast Raise Dead -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Raise Dead" />				
+										
 						<!-- Profile message - Casting Death Grip -->
 						<CustomBehavior File="Message" 
 										Text="Casting Death Grip."  
@@ -436,8 +490,19 @@
 						<CustomBehavior File="RunMacro"
 										NumOfTimes="1"
 										Macro="/cast Death Grip" />
-
-						<!-- Wait timer - wait 3 seconds - delay -->
+										
+						<!-- Move to - 3rd group Hall of Stasis - kite -->
+						<MoveTo X="362.6295" Y="155.808" Z="-34.62235" />				
+										
+						<!-- Profile message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
+						
+						<!-- EnableBehavior - Combat -->	
+						<EnableBehavior Name="Combat" />				
+											
+						<!-- Wait timer - wait 3 seconds - aggro -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
 
@@ -482,6 +547,36 @@
 						<!-- DisableBehavior - Combat -->
 						<DisableBehavior Name="Combat" />				
 										
+						<!-- Profile message - Casting Bone Shield -->
+						<CustomBehavior File="Message" 
+										Text="Casting Bone Shield."  
+										LogColor="Orange" />
+									
+						<!-- Macro - Cast Bone Shield -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Bone Shield" />
+	
+						<!-- Profile message - Casting Raise Dead -->
+						<CustomBehavior File="Message" 
+										Text="Casting Raise Dead."  
+										LogColor="Orange" />
+									
+						<!-- Macro - Cast Raise Dead -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Raise Dead" />				
+										
+						<!-- Profile message - Casting Icebound Fortitude -->
+						<CustomBehavior File="Message" 
+										Text="Casting Icebound Fortitude."  
+										LogColor="Orange" />
+									
+						<!-- Macro - Cast Icebound Fortitude -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Icebound Fortitude" />				
+										
 						<!-- Profile message - Casting Death Grip -->
 						<CustomBehavior File="Message" 
 										Text="Casting Death Grip."  
@@ -493,7 +588,7 @@
 										Macro="/cast Death Grip" />
 
 						<!-- Move to - 4th group Hall of Stasis - kite -->
-						<MoveTo X="366.7219" Y="155.1988" Z="-34.62225" />				
+						<MoveTo X="362.6295" Y="155.808" Z="-34.62235" />				
 										
 						<!-- Profile message - Enabling combat -->
 						<CustomBehavior File="Message" 
@@ -674,6 +769,16 @@
 						<CustomBehavior File="Message" 
 										Text="Waiting 85 seconds to aggro the patrol."  
 										LogColor="Orange" />
+						
+						<!-- Profile message - Let's dance -->
+						<CustomBehavior File="Message" 
+										Text="Let's dance."  
+										LogColor="Orange" />
+						
+						<!-- Macro - Cast Dance -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/dance" />
 						
 						<!-- Wait timer - wait 85 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 

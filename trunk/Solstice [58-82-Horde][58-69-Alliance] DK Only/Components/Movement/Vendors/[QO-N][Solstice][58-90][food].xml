@@ -563,8 +563,8 @@
 		
 		
 		
-		<!-- If our level is 81-84 -->
-		<If Condition="Me.Level &gt;= 81 &amp;&amp; Me.Level &lt; 84">
+		<!-- If our level is 82-84 -->
+		<If Condition="Me.Level &gt;= 82 &amp;&amp; Me.Level &lt; 84">
 		
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
@@ -907,8 +907,8 @@
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="60000" />
 
-					<!-- Move to - Warsong Hold flight master -->				
-					<RunTo X="3867.424" Y="1526.952" Z="89.9874" />			
+					<!-- Move to - Warsong Hold exit -->				
+					<RunTo X="2735.862" Y="6092.32" Z="75.89193" />			
 			
 				</If>	<!-- If we don't have Briny Hardcheese -->
 	

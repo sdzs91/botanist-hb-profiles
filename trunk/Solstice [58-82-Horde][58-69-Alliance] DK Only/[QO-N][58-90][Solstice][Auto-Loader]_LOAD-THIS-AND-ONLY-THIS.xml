@@ -211,8 +211,8 @@
 									ProfileName="Components\[QO-N][Solstice][84-86]_gundrak" />
 		</If>
 
-		<!-- If our level is 81-84 -->
-		<If Condition="Me.Level &gt;= 81 &amp;&amp; Me.Level &lt; 84">
+		<!-- If our level is 82-84 -->
+		<If Condition="Me.Level &gt;= 82 &amp;&amp; Me.Level &lt; 84">
 			<CustomBehavior File="LoadProfile" 
 							ProfileName="Components\[QO-N][Solstice][81-84]_drak'tharon-keep" />
 		</If>

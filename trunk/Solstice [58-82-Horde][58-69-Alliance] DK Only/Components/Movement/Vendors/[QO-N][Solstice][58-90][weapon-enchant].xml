@@ -420,7 +420,7 @@
 										Text="Enchanting our weapon." 
 										LogColor="Orange" />
 				
-						<!-- Profile message - We are using the Heart Troll Butcherer as our weapon -->
+						<!-- Profile message - We are using the Troll Butcherer as our weapon -->
 						<CustomBehavior File="Message" 
 										Text="We are using the Troll Butcherer as our weapon." 
 										LogColor="Orange" />
@@ -474,7 +474,7 @@
 				
 						<!-- Profile message - We are using the Heart Nethergarde Broadaxe as our weapon -->
 						<CustomBehavior File="Message" 
-										Text="We are using the Troll Butcherer as our weapon." 
+										Text="We are using the Nethergarde Broadaxe as our weapon." 
 										LogColor="Orange" />
 				
 						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Nethergarde Broadaxe -->
@@ -498,9 +498,9 @@
 										Text="Enchanting our weapon." 
 										LogColor="Orange" />
 				
-						<!-- Profile message - We are using the Heart Steelspark Broadaxe as our weapon -->
+						<!-- Profile message - We are using the Steelspark Broadaxe as our weapon -->
 						<CustomBehavior File="Message" 
-										Text="We are using the Troll Butcherer as our weapon." 
+										Text="We are using the Steelspark Broadaxe as our weapon." 
 										LogColor="Orange" />
 				
 						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Steelspark Broadaxe -->
@@ -526,7 +526,7 @@
 				
 						<!-- Profile message - We are using the Angerfang Broadaxe as our weapon -->
 						<CustomBehavior File="Message" 
-										Text="We are using the Troll Butcherer as our weapon." 
+										Text="We are using the Angerfang Broadaxe as our weapon." 
 										LogColor="Orange" />
 				
 						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Angerfang Broadaxe -->
@@ -550,7 +550,7 @@
 										Text="Enchanting our weapon." 
 										LogColor="Orange" />
 				
-						<!-- Profile message - We are using the Angerfang Broadaxe as our weapon -->
+						<!-- Profile message - We are using the Whitefin Axe as our weapon -->
 						<CustomBehavior File="Message" 
 										Text="We are using the Whitefin Axe as our weapon." 
 										LogColor="Orange" />
@@ -567,6 +567,58 @@
 										Lua="CloseTradeSkill()" />
 					
 					</If>	<!-- If we have the Whitefin Axe -->
+						
+					<!-- If we have the Fel-Touched Axe -->
+					<If  Condition="HasItem(25213)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Fel-Touched Axe as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Fel-Touched Axe as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Fel-Touched Axe -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="25213" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Fel-Touched Axe -->	
+					
+					<!-- If we have the Rust-Covered Polearm -->
+					<If  Condition="HasItem(36602)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Rust-Covered Polearm as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Rust-Covered Polearm as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Rust-Covered Polearm -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="36602" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Rust-Covered Polearm -->	
 						
 				</Else>
 

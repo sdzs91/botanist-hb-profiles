@@ -113,13 +113,13 @@
 												LogColor="Cyan" />
 						
 							<!-- Move to - Honor Hold -->
-							<RunTo X="-709.9306" Y="2699.804" Z="94.41746" />
+							<MoveTo X="-709.9306" Y="2699.804" Z="94.41746" />
 							
 							<!-- Forced dismount -->
 							<CustomBehavior File="ForcedDismount" />
 
 							<!-- Move to - innkeeper -->
-							<RunTo X="-708.0077" Y="2736.445" Z="94.73333" />
+							<MoveTo X="-708.0077" Y="2736.445" Z="94.73333" />
 							
 							<!-- Profile message - We have located the innkeep, setting our Hearthstone -->
 							<CustomBehavior File="Message" 
@@ -168,7 +168,7 @@
 											LogColor="Orange" />	
 
 							<!-- Move to - Honor Hold flight master --> 
-							<RunTo X="-709.9306" Y="2699.804" Z="94.41746" />
+							<MoveTo X="-709.9306" Y="2699.804" Z="94.41746" />
 
 						</Else>
 					
@@ -219,7 +219,7 @@
 										LogColor="Orange" />
 						
 						<!-- Move to - grinding location -->
-						<RunTo X="-908.0336" Y="2776.117" Z="16.10062" />
+						<MoveTo X="-908.0336" Y="2776.117" Z="16.10062" />
 						
 						<!-- Profile message - We have reached the grinding location. We will grind here until we reach level 60 -->
 						<CustomBehavior File="Message" 
@@ -301,14 +301,14 @@
 										LogColor="Orange" />
 						
 						<!-- Move to - the bridge near the grinding area -->
-						<RunTo X="-534.5937" Y="3553.632" Z="51.80806" />
+						<MoveTo X="-534.5937" Y="3553.632" Z="51.80806" />
 						
 						<!-- CTM to - down the bank -->
 						<CustomBehavior File="MyCTM" 
 											X="-529.6925" Y="3612.78" Z="28.99558" />
 						
 						<!-- Move to - grinding location -->
-						<RunTo X="-506.3479" Y="3695.365" Z="29.00221" />
+						<MoveTo X="-506.3479" Y="3695.365" Z="29.00221" />
 						
 						<!-- Profile message - We have reached the grinding location. We will grind here until we reach level 60 -->
 						<CustomBehavior File="Message" 
@@ -434,13 +434,13 @@
 												LogColor="Cyan" />
 						
 							<!-- Move to - Thrallmar -->
-							<RunTo X="178.6801" Y="2628.115" Z="87.12171" />
+							<MoveTo X="178.6801" Y="2628.115" Z="87.12171" />
 							
 							<!-- Forced dismount -->
 							<CustomBehavior File="ForcedDismount" />
 
 							<!-- Move to - innkeeper -->
-							<RunTo X="190.1132" Y="2611.777" Z="87.28358" />
+							<MoveTo X="190.1132" Y="2611.777" Z="87.28358" />
 							
 							<!-- Profile message - We have located the innkeep, setting our Hearthstone -->
 							<CustomBehavior File="Message" 
@@ -489,7 +489,7 @@
 											LogColor="Orange" />	
 
 							<!-- Move to - Thrallmar flight master --> 
-								<RunTo X="228.5" Y="2633.57" Z="87.66663" />
+								<MoveTo X="228.5" Y="2633.57" Z="87.66663" />
 
 						</Else>
 					
@@ -540,7 +540,7 @@
 										LogColor="Orange" />
 						
 						<!-- Move to - grinding location -->
-						<RunTo X="91.30276" Y="2398.917" Z="55.07299" />
+						<MoveTo X="91.30276" Y="2398.917" Z="55.07299" />
 						
 						<!-- Profile message - We have reached the grinding location. We will grind here until we reach level 62 -->
 						<CustomBehavior File="Message" 
@@ -620,14 +620,14 @@
 										LogColor="Orange" />
 						
 						<!-- Move to - the bridge near the grinding area -->
-						<RunTo X="-534.5937" Y="3553.632" Z="51.80806" />
+						<MoveTo X="-534.5937" Y="3553.632" Z="51.80806" />
 						
 						<!-- CTM to - down the bank -->
 						<CustomBehavior File="MyCTM" 
 											X="-529.6925" Y="3612.78" Z="28.99558" />
 						
 						<!-- Move to - grinding location -->
-						<RunTo X="-506.3479" Y="3695.365" Z="29.00221" />
+						<MoveTo X="-506.3479" Y="3695.365" Z="29.00221" />
 						
 						<!-- Profile message - We have reached the grinding location. We will grind here until we reach level 62 -->
 						<CustomBehavior File="Message" 

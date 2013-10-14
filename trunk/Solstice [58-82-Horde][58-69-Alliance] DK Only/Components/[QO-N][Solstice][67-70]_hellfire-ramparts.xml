@@ -91,7 +91,7 @@
 									LogColor="Fuchsia" />
 
 					<!-- Move to the zone in location -->
-					<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+					<MoveTo X="-1355.28" Y="1641.57" Z="68.274" />
 					
 					<!-- Profile message - Waiting 3 seconds - Bag and durability check -->
 					<CustomBehavior File="Message" 
@@ -143,7 +143,7 @@
 									X="-1358.403" Y="1629.539" Z="68.55495" />
 					
 					<!-- Move to - zone out location -->
-					<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
+					<MoveTo X="-363.436" Y="3078.43" Z="-15.0013" />
 					
 					<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
 					<If  Condition="Me.HasAura(53362)" >
@@ -215,7 +215,7 @@
 					<While Condition="Me.ZoneId != 3562">
 					
 						<!-- Move to - zone out location -->
-						<RunTo X="-363.436" Y="3078.43" Z="-15.00165" />
+						<MoveTo X="-363.436" Y="3078.43" Z="-15.00165" />
 
 						<!-- Move to - attempt to enter the instance -->
 						<CustomBehavior File="Misc\InInstance" 
@@ -248,7 +248,7 @@
 				<If Condition="Me.ZoneId == 3562">
 		
 					<!-- Zone in location -->
-					<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+					<MoveTo X="-1355.28" Y="1641.57" Z="68.274" />
 					
 					<!--Profile message	- Deleting unwanted items from our bags -->				
 					<CustomBehavior File="Message" 
@@ -729,7 +729,7 @@
 							
 								<!-- Profile message - My target is not the Bonechewer Destroyer -->
 								<CustomBehavior File="Message" 
-												Text="Scanning for the Bonechewer Ravener." 
+												Text="Scanning for the Bonechewer Destroyer." 
 												LogColor="Yellow" />
 													
 								<!-- Macro - Clear target -->					
@@ -1353,10 +1353,9 @@
 					
 						<!-- @@@@@@@@@@@@@@@@@@@@ 15th pull @@@@@@@@@@@@@@@@@@@@ -->				
 									
-											
 
 						<!-- Move to - 2nd burning brazier - right  -->
-						<MoveTo X="-1242.03" Y="1451.377" Z="68.59308" />
+						<MoveTo X="-1240.257" Y="1448.105" Z="68.59557" />
 							
 						<!-- Wait timer - Waiting 10 seconds - safety -->
 						<CustomBehavior File="WaitTimer" 
@@ -1411,12 +1410,22 @@
 										NumOfTimes="1"
 										Macro="/cast Death Grip" />
 
+						<!-- Profile message - Casting Icy Touch -->
+						<CustomBehavior File="Message" 
+										Text="Casting Icy Touch ."  
+										LogColor="Orange" />
+									
+						<!-- Macro - Cast Icy Touch  -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Icy Touch " />				
+										
 						<!-- Wait timer - wait 3 seconds - aggro -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />				
 										
 						<!-- Move to - 4th group on the right -->				
-						<RunTo X="-1204.638" Y="1438.186" Z="68.54324" />
+						<MoveTo X="-1193.706" Y="1429.757" Z="68.5044" />
 			
 						<!-- Wait timer - wait 3 seconds - aggro -->
 						<CustomBehavior File="WaitTimer" 
@@ -1426,115 +1435,82 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 16th pull @@@@@@@@@@@@@@@@@@@@ -->
 	
 
-						<!-- Move to - Watchkeeper Gargolmar - staging location -->
-						<MoveTo X="-1225.14" Y="1445.514" Z="68.59036" />
-						
-						<!-- Move to - Watchkeeper Gargolmar - staging location -->	
-						<MoveTo X="-1201.461" Y="1439.771" Z="68.5265" />
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+				
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />
 
-						<!-- Clear target -->
+						<!--WFP to avoid Watchkeeper Gargolmar -->	
+						<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
+										MovementBy="NavigatorOnly" 
+										AvoidMobId="17306" 
+										AvoidDistance="55"
+										X="-1193.706" Y="1429.757" Z="68.5044" >	<!-- Our wait location -->
+							
+						</CustomBehavior>	<!--WFP to avoid Watchkeeper Gargolmar if he is spawned -->	
+
+						<!-- Move to - 5th group - right - pivot location -->
+						<MoveTo X="-1208.005" Y="1441.595" Z="68.55248" />
+
+						<!-- CTM to - align our target macro -->
+						<CustomBehavior File="MyCTM"
+										X="-1197.363" Y="1439.981" Z="68.50584" />
+
+						<!-- Profile message - Targeting the enemy -->
+						<CustomBehavior File="Message" 
+										Text="Targeting the enemy."  
+										LogColor="Orange" />
+									
+						<!-- Macro - Clear target -->					
 						<CustomBehavior File="RunMacro" 
 										Macro="/cleartarget" 
 										NumOfTimes="1" 
-										WaitTime="0"/>
-						
-						<!-- Target Watchkeeper Gargolmar -->
-						<CustomBehavior File="Message" 
-										Text="Targeting Watchkeeper Gargolmar. DO NOT TOUCH !!!" 
-										LogColor="Orange" />
-							
-						<!-- Custom behavior - Runmacro - target Watchkeeper Gargolmar -->	
-						<CustomBehavior File="RunMacro" 
-										Macro="/target Watchkeeper Gargolmar" />
-						
-						<!-- If our target is Watchkeeper Gargolmar -->
-						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 17306)" >
+										WaitTime="0"/>			
+									
+						<!-- Macro - targetenemy -->						
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/targetenemy [noharm]" />
 				
-							<!-- Profile message - My target is Watchkeeper Gargolmar, waiting for him to path away from us -->
-							<CustomBehavior File="Message" 
-											Text="My target is Watchkeeper Gargolmar, waiting for him to path away from us." 
-											LogColor="Fuchsia" />			
-
-							<!--While condition - while our X < -1190 -->
-							<While Condition="Me.X &lt; -1190" >
-															
-								<!--WFP to avoid Watchkeeper Gargolmar -->	
-								<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
-												MovementBy="NavigatorOnly" 
-												AvoidMobId="17306" 
-												AvoidDistance="60"
-												X="-1201.461" Y="1439.771" Z="68.5265" >	<!-- Our wait location -->
+						<!-- Profile message - Casting Death Grip -->
+						<CustomBehavior File="Message" 
+										Text="Casting Death Grip."  
+										LogColor="Orange" />
 									
-								</CustomBehavior>	<!--WFP to avoid Watchkeeper Gargolmar if he is spawned -->	
+						<!-- Macro - Cast Death Grip -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Death Grip" />
 
-								<!-- Profile message - Disabling combat -->
-								<CustomBehavior File="Message" 
-													Text="Disabling combat." 
-													LogColor="Gold" />
-						
-								<!-- DisableBehavior - Combat -->
-								<DisableBehavior Name="Combat" />
-						
-								<!-- Move to - 5th group - right - pivot location -->
-								<MoveTo X="-1224.853" Y="1446.998" Z="68.58858" />
-
-								<!-- CTM to - align our target macro -->
-								<CustomBehavior File="MyCTM"
-												X="-1210.505" Y="1442.273" Z="68.56388" />
+						<!-- Profile message - Casting Icy Touch -->
+						<CustomBehavior File="Message" 
+										Text="Casting Icy Touch ."  
+										LogColor="Orange" />
 									
-								<!-- Profile message - Enabling combat -->
-								<CustomBehavior File="Message" 
-													Text="Enabling combat." 
-													LogColor="Gold" />
-								
-								<!-- enable combat -->
-								<EnableBehavior Name="Combat" />
+						<!-- Macro - Cast Icy Touch  -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Icy Touch " />
 
-								<!-- Profile message - Targeting the enemy -->
-								<CustomBehavior File="Message" 
-												Text="Targeting the enemy."  
-												LogColor="Orange" />
-											
-								<!-- Macro - Clear target -->					
-								<CustomBehavior File="RunMacro" 
-												Macro="/cleartarget" 
-												NumOfTimes="1" 
-												WaitTime="0"/>			
-											
-								<!-- Macro - targetenemy -->						
-								<CustomBehavior File="RunMacro"
-												NumOfTimes="1"
-												Macro="/targetenemy [noharm]" />
+						<!-- Move to - 5th group - right - kite -->
+						<MoveTo X="-1217.258" Y="1446.252" Z="68.58669" />
+
+						<!-- Profile message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
 						
-								<!-- Profile message - Casting Death Grip -->
-								<CustomBehavior File="Message" 
-												Text="Casting Death Grip."  
-												LogColor="Orange" />
-											
-								<!-- Macro - Cast Death Grip -->
-								<CustomBehavior File="RunMacro"
-												NumOfTimes="1"
-												Macro="/cast Death Grip" />
+						<!-- enable combat -->
+						<EnableBehavior Name="Combat" />				
+										
+						<!-- Wait timer - wait 3 seconds - aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
 
-								<!-- Wait timer - wait 3 seconds - aggro -->
-								<CustomBehavior File="WaitTimer" 
-												WaitTime="3000" />
-
-								<!-- Move to - rug - right - breaks loop -->
-								<MoveTo X="-1193.247" Y="1429.708" Z="68.50308" />				
 												
-								<!-- Move to - 5th group - right - breaks loop -->
-								<MoveTo X="-1177.963" Y="1444.135" Z="68.42396" />
-
-								<!-- Wait timer - wait 3 seconds - aggro -->
-								<CustomBehavior File="WaitTimer" 
-												WaitTime="3000" />				
-												
-							</While>	<!--While condition - while our X < -1190 -->	
-								
-						</If>	<!-- If our target is Watchkeeper Gargolmar -->
-								
-								
 						<!-- @@@@@@@@@@@@@@@@@@@@ 16th pull @@@@@@@@@@@@@@@@@@@@ -->
 
 
@@ -1564,7 +1540,7 @@
 								
 								
 						<!-- Move to - 5th group on the left -->																
-						<RunTo X="-1179.856" Y="1482.069" Z="68.45663" />		
+						<MoveTo X="-1179.856" Y="1482.069" Z="68.45663" />		
 								
 						<!-- Wait timer - wait 3 seconds - aggro -->
 						<CustomBehavior File="WaitTimer" 
@@ -1579,10 +1555,10 @@
 										PullDistance="10"/>
 						
 						<!-- Move to - 6th group on the right -->
-						<RunTo X="-1180.387" Y="1455.617" Z="68.43394" />
+						<MoveTo X="-1180.387" Y="1455.617" Z="68.43394" />
 									
 						<!-- Move to - 6th group on the right -->																
-						<RunTo X="-1162.444" Y="1463.175" Z="68.41734" />
+						<MoveTo X="-1162.444" Y="1463.175" Z="68.41734" />
 										
 						<!-- Profile message - Waiting 3 seconds - safety -->
 						<CustomBehavior File="Message" 
@@ -1598,7 +1574,7 @@
 
 
 						<!-- Move to - 7th group on the right -->																
-						<RunTo X="-1157.772" Y="1485.663" Z="68.42736" />
+						<MoveTo X="-1157.772" Y="1485.663" Z="68.42736" />
 
 						<!-- Profile message - Waiting 3 seconds - safety -->
 						<CustomBehavior File="Message" 
@@ -1614,7 +1590,7 @@
 
 
 						<!-- Move to - last group - base of the stairs -->																
-						<RunTo X="-1210.267" Y="1543.345" Z="68.53117" />
+						<MoveTo X="-1210.267" Y="1543.345" Z="68.53117" />
 
 						<!-- Profile message - Waiting 3 seconds - safety -->
 						<CustomBehavior File="Message" 
@@ -1789,7 +1765,7 @@
 										LogColor="Fuchsia" />				
 										
 						<!-- Move to - zone in location -->				
-						<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+						<MoveTo X="-1355.28" Y="1641.57" Z="68.274" />
 						
 						<!-- Instance timer check if we didn't repair -->
 						<CustomBehavior File="Misc\InstanceTimer" 
@@ -1800,7 +1776,7 @@
 										X="-1358.403" Y="1629.539" Z="68.55495" />
 						
 						<!-- Move to - zone out location -->
-						<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
+						<MoveTo X="-363.436" Y="3078.43" Z="-15.0013" />
 						
 						<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
 						<If  Condition="Me.HasAura(53362)" >
