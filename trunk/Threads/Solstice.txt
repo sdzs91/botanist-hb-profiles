@@ -1,12 +1,16 @@
 [B][CENTER][SIZE=4][COLOR="#ffcc00"]Solstice[/COLOR][/SIZE][/CENTER][/B]
-[B][U][CENTER][SIZE=3][COLOR="#FF0000"]Coming Soon[/COLOR][/SIZE][/CENTER][/U][/B]
 
+[B][U][CENTER][SIZE=3][COLOR="#FF0000"]58-82 Now Available For Beta Testing[/COLOR][/SIZE][/CENTER][/U][/B]
 
 [CENTER]
-[IMG]http://img829.imageshack.us/img829/4108/yy30.jpg[/IMG]
+[IMG]http://img11.imageshack.us/img11/7056/5qfi.jpg[/IMG]
 
 
-[B][U][SIZE=3]I will have a trailer video soon !!![/SIZE][/U][/B]
+[video=youtube;VPv3Sr7OPNY]http://www.youtube.com/watch?v=VPv3Sr7OPNY[/video]
+
+[SIZE=3][COLOR="#800000"][B]Solstice 74-76 Sethekk Halls Trailer[/B][/COLOR][/SIZE]
+
+[B][SIZE=2][COLOR="#0000CD"]*** Watch the video in 1080 HD for better quality (If you have the bandwidth) ***[/COLOR][/SIZE][/B]
 
 
 [B][SIZE=2]Solstice is an [U]alternative[/U] method for farming gold. It uses "Death Knights", level 58 or above to farm instances and vendor all the unprotected items.[/SIZE][/B]
@@ -28,7 +32,22 @@ Solstice allows users to purchase a new [URL="http://us.blizzard.com/store/detai
 [B][U][COLOR="#000000"][SIZE=3][B][U]Revenge[/U][/B] is a dish best served cold !!! [/SIZE][/COLOR][/U][/B]
 
 
+[B][SIZE=4][COLOR="#FF0000"]***** Warning *****[/COLOR][/SIZE][/B]
+
+[CODE]
+
+[CENTER]In most cases, you do not need to clear the entire instance, only enough to last at least 12 minutes. Then you can run out and reset without getting instance locked.
+
+The profile uses [U]Mobile Banking[/U] to deposit [U]all your gold except 100g[/U]. If your toons are in guilds that you don't own, [U]it will deposit all your gold into those guilds[/U]. 
+
+And no, I can't change that. If you wish to do so, you have to change every profile, good luck.[/CENTER]
+
+[/CODE]
+
+
 [B][COLOR="#ffcc00"][SIZE=4]***** Information *****[/SIZE][/COLOR][/B]
+
+[/CENTER]
 
 [CODE]
 
@@ -63,9 +82,7 @@ Solstice actively scans for rare spawns within instances. It will intelligently 
 Solstice will level according to the chart below:
 [INDENT]
 
-[58-60] Grinding
-
-[60-62] Blackrock Depths
+[58-62] Grinding in high-mob-concentration areas of Hellfire Peninsula
 
 [62-67] Blackrock Spire
 
@@ -75,11 +92,17 @@ Solstice will level according to the chart below:
 
 [72-74] Auchenai Crypts
 
-[74-78] Sethekk Halls
+[74-76] Sethekk Halls
+
+[76-78] Botanica
 
 [78-79] Utgarde Keep
 
-[79-84] Drak'tharon Keep
+[79-80] The Nexus
+
+[80-82] Ahn'kahet: The Old Kingdom
+
+[82-84] Drak'tharon Keep
 
 [84-86] Gundrak
 
@@ -135,19 +158,19 @@ Solstice will level according to the chart below:
 [*] Click start on the bot.
 [/LIST]
 [LIST]
-If your Death Knight is [U]below[/U] level 60, it will travel to Outlands and [U]grind until level 60 (around Honor Hold or Thrallmar)[/U].
+If your Death Knight is [U]below[/U] level 62, it will travel to Outlands and [U]grind until level 62 (in high-mob-concentration areas around Honor Hold or Thrallmar)[/U].
 [/LIST]
 [LIST]
-If your Death Knight is [U]above[/U] level 60, it will [U]automatically[/U] detect the highest level instance it can [U]solo[/U] and fly there.
+If your Death Knight is [U]above[/U] level 62, it will [U]automatically[/U] detect the highest level instance it can [U]solo[/U] and move there on its own.
 [/LIST]
 [LIST]
-*
+You can start the profile in any "reasonable" location in Eastern Kingdoms, Kalidor, Outland, or Northrend on any Death Knight level 58 or above.
 [/LIST]
 [LIST]
-*
+I suggest setting a mail recipient in the HB settings and tools window,.
 [/LIST]
 [LIST]
-*
+I suggest using the following plugins: Autoequip : set to use axes, polearms or swords - Talented : set to use Death Knight Blood spec - Gankoff  : if you play on a PVP server.
 [/LIST]
 [LIST]
 *
@@ -227,7 +250,7 @@ Set Potion @ health % 30
 [/INDENT]
 [/LIST]
 [/CODE]
-
+[CENTER]
 [B][COLOR="#FF0000"][SIZE=2] Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/B]
 
 [URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
@@ -239,10 +262,10 @@ Set Potion @ health % 30
 [CODE]
 
 [LIST]
-[*]Solstice will be available [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FF0000"]HERE[/COLOR][/URL] when it is released.
+[*]Solstice is available via the Public SVN [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FF0000"]HERE[/COLOR][/URL]
 [/LIST]
 [LIST]
-Or you will be able download a zip file below.
+Or attached zip file below.
 [/LIST]
 [/CODE]
 
