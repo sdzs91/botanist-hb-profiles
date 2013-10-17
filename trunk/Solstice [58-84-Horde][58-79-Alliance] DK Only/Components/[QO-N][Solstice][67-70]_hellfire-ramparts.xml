@@ -1069,11 +1069,11 @@
 					<DisableBehavior Name="Combat" />
 
 					<!-- Move to - Bonechewer Ravener - pivot location -->					
-					<MoveTo X="-1252.157" Y="1560.526" Z="68.65016" />
+					<MoveTo X="-1252.636" Y="1569.501" Z="68.53796" />
 					
 					<!-- CTM to - align our target macro -->
 					<CustomBehavior File="MyCTM"
-									X="-1262.58" Y="1556.141" Z="68.56393" />
+									X="-1259.98" Y="1555.868" Z="68.59188" />
 
 					<!-- Profile message - Casting Anti-Magic Shell -->
 					<CustomBehavior File="Message" 
@@ -1131,6 +1131,9 @@
 									NumOfTimes="1"
 									Macro="/cast Death Grip" />				
 									
+					<!-- Move to - Bonechewer Ravener - kite -->					
+					<MoveTo X="-1234.781" Y="1583.39" Z="68.41426" />				
+			
 					<!-- Profile message - Enabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Enabling combat." 
@@ -1144,12 +1147,38 @@
 									WaitTime="3000" />				
 	
 					<!-- Move to - Bonechewer Ravener - safety -->					
-					<MoveTo X="-1276.397" Y="1549.55" Z="68.57596" />				
+					<MoveTo X="-1277.09" Y="1545.784" Z="68.5726" />				
 
 					<!-- Wait timer - Waiting 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />	
 					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Move to - patrol wait location -->					
+					<MoveTo X="-1293.742" Y="1531.071" Z="68.59325" />				
+
+					<!-- Profile message - Waiting 60 seconds to aggro the patrol in case we missed him -->
+					<CustomBehavior File="Message" 
+									Text="Waiting 60 seconds to aggro the patrol in case we missed him."  
+									LogColor="Orange" />
+					
+					<!-- Profile message - Let's dance -->
+					<CustomBehavior File="Message" 
+									Text="Let's dance."  
+									LogColor="Gold" />
+					
+					<!-- Macro - Cast Dance -->
+					<CustomBehavior File="RunMacro"
+									NumOfTimes="1"
+									Macro="/dance" />				
+									
+					<!-- Wait timer - wait 60 seconds - aggro -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
+
 					<!-- If we are between levels 67-68 -->			
 					<If Condition="Me.Level &gt;= 67 &amp;&amp; Me.Level &lt; 69">
 					
@@ -1410,14 +1439,10 @@
 										
 						<!-- Wait timer - wait 3 seconds - aggro -->
 						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />				
-										
-						<!-- Move to - 4th group on the right -->				
-						<MoveTo X="-1193.706" Y="1429.757" Z="68.5044" />
-			
-						<!-- Wait timer - wait 3 seconds - aggro -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />
+										WaitTime="3000" />	
+
+						<!-- CTM to - 4th group on the right -->
+						<MoveTo X="-1225.14" Y="1445.514" Z="68.59036" />				
 										
 
 						<!-- @@@@@@@@@@@@@@@@@@@@ 16th pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -1607,16 +1632,16 @@
 						
 						<!-- Move to - between the two burning braziers - exiting -->
 						<MoveTo X="-1231.851" Y="1459.054" Z="68.57854" />
+						
+						<!-- Move to - war-hound spawn location - exiting -->
+						<MoveTo X="-1298.459" Y="1521.493" Z="68.59739" />
 								
 					</If>	<!-- If we are between levels 68-70 -->					
 
 					
 					<!-- @@@@@@@@@@@@@@@@@@@@ 22nd pull @@@@@@@@@@@@@@@@@@@@ -->
-					
-					
-					<!-- Move to - war-hound spawn location - exiting -->
-					<MoveTo X="-1298.459" Y="1521.493" Z="68.59739" />
 
+					
 					<!-- Wait timer - Waiting 30 seconds - safety -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
