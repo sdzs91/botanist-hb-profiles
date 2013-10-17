@@ -973,164 +973,17 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
 										
 			
-						<!-- Move to - 1st mob in the raptor pen  -->
-						<MoveTo X="-507.4833" Y="-724.6221" Z="30.24644" />				
-				
-						<!-- Wait timer - wait 3 seconds - delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />
-				
-				
-						<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->	
-						
-
-						<!-- Move to - King Dred - pivot location -->
-						<MoveTo X="-504.4045" Y="-728.2174" Z="30.24644" />
-						
-						<!-- Profile message - Disabling combat -->
-						<CustomBehavior File="Message" 
-											Text="Disabling combat." 
-											LogColor="Gold" />
-						
-						<!-- DisableBehavior - Combat -->
-						<DisableBehavior Name="Combat" />
-						
-						<!-- CTM to - align our target macro -->
-						<CustomBehavior File="MyCTM" 
-										X="-511.2532" Y="-722.1533" Z="30.24644" />
-
-						<!-- While condition - while our X > -520 -->			
-						<While Condition="Me.X &gt; -520" >
-					
-							<!-- Profile message - Targeting King Dred, DO NOT TOUCH !!! -->
-							<CustomBehavior File="Message" 
-											Text="Targeting King Dred, DO NOT TOUCH !!!" 
-											LogColor="Orange" />
-
-							<!-- Macro - Clear target -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/cleartarget" 
-											NumOfTimes="1" 
-											WaitTime="0"/>
-
-							<!-- Macro - targetenemy -->						
-							<CustomBehavior File="RunMacro"
-											NumOfTimes="1"
-											Macro="/targetenemy [noharm]" />
-							
-							<!-- If condition equals true - allows for multiple targets  -->
-							<If Condition="true">
-							
-								<!-- If our current target is the King Dred -->
-								<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 27483)">
-								
-									<!-- Profile message - My target is King Dred, casting Icy Touch/Death Grip -->
-									<CustomBehavior File="Message" 
-													Text="My target is King Dred, casting Icy Touch/Death Grip." 
-													LogColor="Fuchsia" />				
-				
-									<!-- Profile message - Casting Icy Touch -->
-									<CustomBehavior File="Message" 
-													Text="Casting Icy Touch ."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Icy Touch  -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Icy Touch " />
-				
-									<!-- Profile message - Casting Death Grip -->
-									<CustomBehavior File="Message" 
-													Text="Casting Death Grip."  
-													LogColor="Orange" />
-				
-									<!-- Macro - Cast Death Grip -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="2"
-													Macro="/cast Death Grip" />
-
-									<!-- Profile message - Casting Bone Shield -->
-									<CustomBehavior File="Message" 
-													Text="Casting Bone Shield."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Bone Shield -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Bone Shield" />
-				
-									<!-- Profile message - Casting Raise Dead -->
-									<CustomBehavior File="Message" 
-													Text="Casting Raise Dead."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Raise Dead -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Raise Dead" />
-
-									<!-- Profile message - Casting Icebound Fortitude -->
-									<CustomBehavior File="Message" 
-													Text="Casting Icebound Fortitude."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Icebound Fortitude -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Icebound Fortitude" />				
-													
-									<!-- Move to - King Dred - kite -->
-									<MoveTo X="-481.2945" Y="-711.4234" Z="30.24644" />				
-													
-									<!-- Profile message - Casting Army of the Dead -->
-									<CustomBehavior File="Message" 
-													Text="Casting Army of the Dead."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Army of the Dead -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Army of the Dead" />				
-													
-									<!-- Wait timer - wait 6 seconds - delay -->
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="6000" />				
-													
-									<!-- Profile message - Enabling combat -->
-									<CustomBehavior File="Message" 
-														Text="Enabling combat." 
-														LogColor="Gold" />
-									
-									<!-- EnableBehavior - Combat -->	
-									<EnableBehavior Name="Combat" />				
-														
-									<!-- Wait timer - wait 3 seconds - aggro -->
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="3000" />
-
-									<!-- Move to - 2nd raptor pen - break while loop - safety -->
-									<MoveTo X="-535.612" Y="-718.2311" Z="30.24643" />
-
-									<!-- Wait timer - wait 3 - delay -->
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="3000" />			
-
-									
-								</If>	<!-- If our current target is the Wretched Belcher -->	
-
-								<!-- If our current target is not the Wretched Belcher -->
-								<Else>
-								
-									<!-- Profile message - No targets available. Initiating scan sequence. -->
-									<CustomBehavior File="Message" 
-													Text="No targets available. Initiating scan sequence." 
-													LogColor="Yellow" />
-															
-								</Else>	<!-- If our current target is not the Wretched Belcher -->	
-								
-							</If>	<!-- If condition equals true - allows for multiple targets  -->					
-												
-						</While>	<!-- While condition - while our X > -520 -->
+						<!-- Forces kill of King Dred -->
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="27483"
+										EventX="-520.3641" EventY="-722.0757" EventZ="30.24656"
+										MoveOutOfGroundEffectAuraId1="111111"
+										MoveAwayFromMobCastingSpellId1="111111"
+										MoveAwayFromMobWithAuraId1="111111">
+							<Safespots>
+								<Hotspot X="-520.3641" Y="-722.0757" Z="30.24656" />
+							</Safespots>
+						</CustomBehavior>
 										
 				
 						<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
