@@ -475,8 +475,8 @@
 			<!-- If we are inside Drak'Tharon Keep -->
 			<If Condition="Me.ZoneId == 4196">
 				
-				<!-- If our hearthstone/innkeepers daughter is set at Amberpine Lodge or Conquest Hold -->
-				<If Condition="(Me.HearthstoneAreaId == 4204) || (Me.HearthstoneAreaId == 4206)">
+				<!-- If our Hearthstone/Innkeepers Daughter is set at The Argent Stand -->
+				<If Condition="(Me.HearthstoneAreaId == 4275)">
 				
 					<!-- Profile message - We are in Drak'Tharon Keep, using our Hearthstone/Innkeeper's Daughter -->
 					<CustomBehavior File="Message" 
@@ -532,23 +532,6 @@
 				<CustomBehavior File="Message" 
 								Text="Our Hearthstone/Innkeeper's Daughter didn't work. Moving to the exit."
 								LogColor="Fuchsia" />
-
-				<!-- If we aren't at the quest givers, run to 3rd raised section -->				
-				<If Condition="Me.Y &lt; -536.2922" > 
-				
-				
-					<RunTo X="-531.3202" Y="-593.3092" Z="2.484553" />
-					
-					<CustomBehavior File="MyCTM" 
-									X="-540.0514" Y="-571.1459" Z="2.484182" />
-									
-					<CustomBehavior File="MyCTM" 
-									X="-540.216" Y="-554.3991" Z="2.485743" />
-									
-					<CustomBehavior File="MyCTM" 
-									X="-520.3536" Y="-528.2415" Z="11.01161" />
-									
-				</If>
 					
 					<!-- Make our way to the exit -->
 					<RunTo X="-517.15" Y="-489.201" Z="11.01775" />
@@ -559,6 +542,8 @@
 					
 					<!-- Move to - zone out location -->
 					<RunTo X="4774.44" Y="-2030.03" Z="229.38" />	
+					
+					<!-- Move to - flying mount location -->
 					
 			</If>	<!-- If we are inside Drak'Tharon Keep -->
 
@@ -571,12 +556,13 @@
 					<!-- If we are Alliance -->
 					<If Condition="Me.IsAlliance">
 					
-						<!-- Fly to - XXXXXXXXXXX hover point -->
+						<!-- Fly to - The Argent Stand hover point -->
 						<CustomBehavior File="FlyTo" 
-										X="3424.898" Y="-2753.648" Z="199.3004" />
+										X="5382.631" Y="-2629.626" Z="354.096" />
 						
-						<!-- Fly to - ally repair vendor -->
-
+						<!-- CTM to - ally repair vendor -->
+						<CustomBehavior File="MyCTM" 
+											X="5405.251" Y="-2657.311" Z="303.9556" />
 						
 						<!-- Custom behavior - ForcedDismount -->
 						<CustomBehavior File="ForcedDismount" />
@@ -588,25 +574,24 @@
 										
 						<!-- Vendor settings -->				
 						<CustomBehavior File="ForceSetVendor" 
-									DoMail="False" 
+									DoMail="True" 
 									DoRepair="True" 
-									DoSell="False" 
+									DoSell="True" 
 									DoTrain="False" />				
 					
-						<!-- Amberpine Lodge -->					
+						<!-- The Argent Stand -->					
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Brom Armstrong" 
-										Entry="27062" 
+								<Vendor Name="Arlen Brighthammer" 
+										Entry="28796" 
 										Type="Repair" 
-										X="3421.368" Y="-2757.578" Z="199.3002" />
+										X="5410.7" Y="-2658.249" Z="303.9539" />
 							</Vendors>
 						</SetVendor>
-							
-						<!-- Mailbox -->
+
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+								<Mailbox X="5412.528" Y="-2623.317" Z="306.1588" />
 							</Mailboxes>
 						</SetMailbox>	
 						
@@ -615,14 +600,14 @@
 					<!-- If we are Horde -->
 					<If Condition="Me.IsHorde">
 					
-						<!-- Fly to - Conquest Hold hover point -->
+						<!-- Fly to - The Argent Stand hover point -->
 						<CustomBehavior File="FlyTo" 
-										X="3242.183" Y="-2287.45" Z="159.358" />
+										X="5382.631" Y="-2629.626" Z="354.096" />
 						
-						<!-- Fly to - Conquest Hold repair vendor - Smith Prigka -->
-						<CustomBehavior File="FlyTo" 
-										X="3308.259" Y="-2337.812" Z="110.551" />
-
+						<!-- CTM to - ally repair vendor -->
+						<CustomBehavior File="MyCTM" 
+											X="5405.251" Y="-2657.311" Z="303.9556" />
+						
 						<!-- Custom behavior - ForcedDismount -->
 						<CustomBehavior File="ForcedDismount" />
 						
@@ -630,23 +615,29 @@
 						<CustomBehavior File="Message" 
 										Text="Our durability is less than 30%, or our bags have less than 25 empty slots left."
 										LogColor="Cyan" />
-						
+										
 						<!-- Vendor settings -->				
 						<CustomBehavior File="ForceSetVendor" 
-									DoMail="False" 
+									DoMail="True" 
 									DoRepair="True" 
-									DoSell="False" 
-									DoTrain="False" />
-						
-						<!-- Conquest Hold -->
+									DoSell="True" 
+									DoTrain="False" />				
+					
+						<!-- The Argent Stand -->					
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Smith Prigka" 
-										Entry="27134" 
+								<Vendor Name="Arlen Brighthammer" 
+										Entry="28796" 
 										Type="Repair" 
-										X="3309.34" Y="-2338.626" Z="110.8466" />	
+										X="5410.7" Y="-2658.249" Z="303.9539" />
 							</Vendors>
 						</SetVendor>
+
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="5412.528" Y="-2623.317" Z="306.1588" />
+							</Mailboxes>
+						</SetMailbox>
 						
 					</If>	<!-- If we are Horde -->
 
@@ -663,17 +654,18 @@
 					<!-- If we are Alliance -->
 					<If Condition="Me.IsAlliance">
 					
-						<!-- Hover point -->
-						<CustomBehavior File="FlyTo" X="3444.486" Y="-2777.132" Z="282.1241" />
+						<!-- Fly to - The Argent Stand hover point -->
+						<CustomBehavior File="FlyTo" 
+										X="5382.631" Y="-2629.626" Z="354.096" />
 						
 					</If>	<!-- If we are Alliance -->
 					
 					<!-- If we are Horde -->
 					<If Condition="Me.IsHorde">
 					
-						<!-- Fly to - Conquest Hold hover point -->
+						<!-- Fly to - The Argent Stand hover point -->
 						<CustomBehavior File="FlyTo" 
-										X="3242.183" Y="-2287.45" Z="159.358" />
+										X="5382.631" Y="-2629.626" Z="354.096" />
 						
 					</If>	<!-- If we are Horde -->
 					
@@ -855,9 +847,9 @@
 										
 						<!-- Vendor settings -->				
 						<CustomBehavior File="ForceSetVendor" 
-									DoMail="False" 
+									DoMail="True" 
 									DoRepair="True" 
-									DoSell="False" 
+									DoSell="True" 
 									DoTrain="False" />				
 					
 						<!-- Amberpine Lodge -->					
@@ -905,9 +897,9 @@
 						
 						<!-- Vendor settings -->				
 						<CustomBehavior File="ForceSetVendor" 
-									DoMail="False" 
+									DoMail="True" 
 									DoRepair="True" 
-									DoSell="False" 
+									DoSell="True" 
 									DoTrain="False" />
 						
 						<!-- Agmar's Hammer -->
@@ -919,8 +911,6 @@
 										X="3845.488" Y="1572.724" Z="86.69913" />	
 							</Vendors>
 						</SetVendor>
-						
-						<!-- Mailbox -->
 						<SetMailbox>
 							<Mailboxes>
 								<Mailbox X="3827.762" Y="1537.921" Z="89.72385" />
@@ -1101,9 +1091,9 @@
 										
 						<!-- Vendor settings -->				
 						<CustomBehavior File="ForceSetVendor" 
-									DoMail="False" 
+									DoMail="True" 
 									DoRepair="True" 
-									DoSell="False" 
+									DoSell="True" 
 									DoTrain="False" />				
 					
 						<!-- Amberpine Lodge -->					
@@ -1149,9 +1139,9 @@
 						
 						<!-- Vendor settings -->				
 						<CustomBehavior File="ForceSetVendor" 
-									DoMail="False" 
+									DoMail="True" 
 									DoRepair="True" 
-									DoSell="False" 
+									DoSell="True" 
 									DoTrain="False" />
 						
 						<!-- Warsong Hold - vendor-->

@@ -66,7 +66,7 @@
 							LogoutInactivityUseForceQuit="False"
 							LootChests="False"
 							LootMobs="True"
-							LootRadius="1"
+							LootRadius="25"
 							MountDistance="20"
 							MountName=""
 							NinjaSkin="False"
@@ -397,9 +397,7 @@
 						<CustomBehavior File="RunMacro"
 										NumOfTimes="1"
 										Macro="/targetenemy [noharm]" />
-										
-						
-				
+
 						<!-- Profile message - Casting Bone Shield -->
 						<CustomBehavior File="Message" 
 										Text="Casting Bone Shield."  
@@ -1051,57 +1049,7 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 						
-						<!-- Move to - right-hand spiders after the stairs - pivot location -->
-						<MoveTo X="573.2277" Y="-879.4479" Z="22.69209" />
-								
-						<!-- Profile message - Waiting 15 seconds -->
-						<CustomBehavior File="Message" 
-										Text="Waiting 15 seconds."  
-										LogColor="Orange" />		
-
-						<!-- Wait timer - wait 15 seconds - delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="15000" />		
-								
-						<!-- CTM to - align our target macro -->
-						<CustomBehavior File="MyCTM"
-										X="588.0308" Y="-889.627" Z="22.44853" />
-
-						<!-- Profile message - Targeting the enemy -->
-						<CustomBehavior File="Message" 
-										Text="Targeting the enemy."  
-										LogColor="Orange" />
-
-						<!-- Clear target -->					
-						<CustomBehavior File="RunMacro" 
-										Macro="/cleartarget"  
-										WaitTime="0"/>
-
-						<!-- Macro - targetenemy -->						
-						<CustomBehavior File="RunMacro"
-										NumOfTimes="1"
-										Macro="/targetenemy [noharm]" />
-
-						<!-- Profile message - Casting Death Grip -->
-						<CustomBehavior File="Message" 
-										Text="Casting Death Grip."  
-										LogColor="Orange" />				
-										
-						<!-- Cast Death Grip -->
-						<CustomBehavior File="RunMacro"
-										NumOfTimes="1"
-										Macro="/cast Death Grip" />
-
-						<!-- Wait timer - wait 3 seconds - delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />				
-										
-						<!-- Move to - right-hand spiders after the stairs -->
-						<MoveTo X="613.6383" Y="-901.4377" Z="22.44853" />				
-
-						<!-- Wait timer - wait 3 seconds - delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />
+						
 						
 						
 						<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -1201,11 +1149,11 @@
 						
 
 						<!-- Move to - 1st Bonegrinder - pivot position -->
-						<MoveTo X="640.8829" Y="-834.375" Z="-3.259415" />
+						<MoveTo X="642.3347" Y="-828.1076" Z="-3.229913" />
 							
 						<!-- CTM to - align our target macro -->
 						<CustomBehavior File="MyCTM" 
-										X="626.4021" Y="-828.605" Z="-2.937357" />
+										X="619.545" Y="-831.6296" Z="-3.243805" />
 										
 						<!-- Profile message - Disabling combat -->
 						<CustomBehavior File="Message" 
@@ -1242,6 +1190,16 @@
 												Text="Our target is the Bonegrinder." 
 												LogColor="Fuchsia" />				
 												
+								<!-- Profile message - Casting Icy Touch -->
+								<CustomBehavior File="Message" 
+												Text="Casting Icy Touch."  
+												LogColor="Orange" />
+											
+								<!-- Macro - Cast Icy Touch -->
+								<CustomBehavior File="RunMacro"
+												NumOfTimes="1"
+												Macro="/cast Icy Touch" />				
+												
 								<!-- Profile message - Casting Death Grip -->
 								<CustomBehavior File="Message" 
 												Text="Casting Death Grip."  
@@ -1253,7 +1211,7 @@
 												Macro="/cast Death Grip" />				
 
 								<!-- Move to - 1st Bonegrinder - kite -->
-								<MoveTo X="662.6338" Y="-852.3141" Z="-3.265179" />				
+								<MoveTo X="695.5143" Y="-859.0184" Z="9.470471" />				
 												
 								<!-- Profile message - Enabling combat -->
 								<CustomBehavior File="Message" 
@@ -1320,6 +1278,14 @@
 										NumOfTimes="1"
 										Macro="/targetenemy [noharm]" />
 
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+						
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />				
+										
 						<!-- Profile message - Casting Death Grip -->
 						<CustomBehavior File="Message" 
 										Text="Casting Death Grip."  
@@ -1330,9 +1296,23 @@
 										NumOfTimes="1"
 										Macro="/cast Death Grip" />
 
+						<!-- Move to - 2nd group - left  - Befouled Terrace - kite -->
+						<MoveTo X="661.9276" Y="-852.8224" Z="-3.301422" />				
+										
+						<!-- Profile message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
+						
+						<!-- EnableBehavior - Combat -->	
+						<EnableBehavior Name="Combat" />				
+										
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />				
+										
+						<!-- Move to - 2nd group - left  - hug left wall/corner - safety -->
+						<MoveTo X="574.9741" Y="-842.9178" Z="-3.272067" />					
 										
 						<!-- Move to - 2nd group - left  - Befouled Terrace - safety -->
 						<MoveTo X="569.2672" Y="-812.8748" Z="-3.272231" />				
@@ -1341,13 +1321,29 @@
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
 						
-						
+
 						<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 
-						<!-- Move to - 2nd Bonegrinder - base of the ramp before Prince Taldaram -->
-						<MoveTo X="585.07" Y="-777.0574" Z="-3.272359" />				
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+						
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />
+						
+						<!-- Move to - 2nd Bonegrinder - ramp before Prince Taldaram -->
+						<MoveTo X="531.5947" Y="-804.5134" Z="5.489058" />				
 
+						<!-- Profile message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
+						
+						<!-- EnableBehavior - Combat -->	
+						<EnableBehavior Name="Combat" />
+						
 						<!-- Profile message - Let's dance -->
 						<CustomBehavior File="Message" 
 										Text="Let's dance."  
@@ -1371,6 +1367,7 @@
 					<!-- If we are between level 81-82 -->
 					<If Condition="Me.Level &gt;= 81 &amp;&amp; Me.Level &lt; 82">
 
+					
 						<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 
@@ -1437,61 +1434,8 @@
 						<!-- Wait timer - wait 3 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
-						
 
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
+										
 						<!-- @@@@@@@@@@@@@@@@@@@@ exiting @@@@@@@@@@@@@@@@@@@@ -->
 						
 
@@ -1687,7 +1631,7 @@
 					<!-- **************************************************************************************************************************** -->				
 									
 
-					<!-- Profile message - Casting Death Grip -->
+					<!-- Profile message - Exiting the instance -->
 					<CustomBehavior File="Message" 
 									Text="Exiting the instance."  
 									LogColor="Orange" />

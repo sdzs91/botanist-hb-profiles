@@ -137,15 +137,15 @@
 								LogColor="Fuchsia" />
 								
 				<!-- Move to the zone in location -->				
-				<RunTo X="80.03099" Y="-258.143" Z="60.70329" />
+				<MoveTo X="80.03099" Y="-258.143" Z="60.70329" />
 				
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" 
 								X="77.31385" Y="-210.969" Z="49.81922" />
 				
-				<!-- Make sure we run to the right spot outside the portal -->
-				<RunTo X="-7535.651" Y="-1212.929" Z="285.4417" />
-				<RunTo X="-7528.938" Y="-1207.901" Z="285.4575" />
+				<!-- Move to - zone out location -->
+				<MoveTo X="-7535.651" Y="-1212.929" Z="285.4417" />
+				<MoveTo X="-7528.938" Y="-1207.901" Z="285.4575" />
 				
 				<!-- Jump -->
 				<CustomBehavior File="Misc\JumpForward" />
@@ -160,8 +160,7 @@
 								MountType="Ground" />
  
 				<!-- Move to Iron Summit -->				
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="-7120.929" Y="-1234.712" Z="289.9779" />
+				<MoveTo X="-7120.929" Y="-1234.712" Z="289.9779" />
 				
 			</If> <!-- If we still in BRS, run out -->
 
@@ -199,7 +198,7 @@
 										UseMount="False"  />				
 						
 						<!-- Move to - Stormwind portal to Blasted Lands -->
-						<RunTo X="-9005.403" Y="869.1169" Z="129.6929" />
+						<MoveTo X="-9005.403" Y="869.1169" Z="129.6929" />
 
 						<!-- Custom behavior - Interactwith the Blasted Lands portal -->
 						<CustomBehavior File="InteractWith" 
@@ -218,7 +217,7 @@
 										UseMount="True"  />		
 				
 						<!-- Move to - Dark portal -->
-						<RunTo X="-11896.8" Y="-3206.77" Z="-14.6724" />
+						<MoveTo X="-11896.8" Y="-3206.77" Z="-14.6724" />
 										
 						<!-- Forced dismount -->	
 						<CustomBehavior File="ForcedDismount" />				
@@ -232,17 +231,8 @@
 										WaitTime="10000" />
 				
 						<!-- Move to Alliance flight master -->
-						<CustomBehavior File="NoCombatMoveTo"
-										X="-320.2289" Y="1026.322" Z="54.17362" />
-						
-						<!-- Custom behavior - InteractWith the flight master -->
-						<CustomBehavior File="InteractWith"
-										ObjectType="Npc"
-										MobId="18931"
-										NumOfTimes="1"
-										CollectionDistance="50"
-										X="-323.8098" Y="1027.611" Z="54.15654" />
-						
+						<MoveTo X="-320.2289" Y="1026.322" Z="54.17362" />
+
 						<!-- Forced dismount -->	
 						<CustomBehavior File="ForcedDismount" />
 						
@@ -251,7 +241,8 @@
 										WaitTime="3000" />
 						
 						<!-- Move to Honor Hold -->
-						<RunTo X="-673.42" Y="2717.27" Z="94.18" />
+						<CustomBehavior File="FlyTo"
+										X="-673.42" Y="2717.27" Z="94.18" />
 
 						<!-- We are not in Stormwind -->
 						<Else>
@@ -267,7 +258,7 @@
 										LogColor="Cyan" />
 						
 							<!-- Move to - Dark portal -->
-							<RunTo X="-11896.8" Y="-3206.77" Z="-14.6724" />
+							<MoveTo X="-11896.8" Y="-3206.77" Z="-14.6724" />
 											
 							<!-- Forced dismount -->	
 							<CustomBehavior File="ForcedDismount" />				
@@ -281,16 +272,7 @@
 											WaitTime="10000" />
 					
 							<!-- Move to Alliance flight master -->
-							<CustomBehavior File="NoCombatMoveTo"
-											X="-320.2289" Y="1026.322" Z="54.17362" />
-							
-							<!-- Custom behavior - InteractWith the flight master -->
-							<CustomBehavior File="InteractWith"
-											ObjectType="Npc"
-											MobId="18931"
-											NumOfTimes="1"
-											CollectionDistance="50"
-											X="-323.8098" Y="1027.611" Z="54.15654" />
+							<MoveTo X="-320.2289" Y="1026.322" Z="54.17362" />
 							
 							<!-- Forced dismount -->	
 							<CustomBehavior File="ForcedDismount" />
@@ -300,7 +282,8 @@
 											WaitTime="3000" />
 							
 							<!-- Move to Honor Hold -->
-							<RunTo X="-673.42" Y="2717.27" Z="94.18" />
+							<CustomBehavior File="FlyTo"
+											X="-673.42" Y="2717.27" Z="94.18" />
 						
 						</Else>	<!-- We are not in Stormwind -->
 					
@@ -312,7 +295,7 @@
 				<If Condition="Me.IsHorde" >
 						
 					<!-- Move to - Dark portal -->
-					<RunTo X="-11896.8" Y="-3206.77" Z="-14.6724" />
+					<MoveTo X="-11896.8" Y="-3206.77" Z="-14.6724" />
 									
 					<!-- Forced dismount -->	
 					<CustomBehavior File="ForcedDismount" />				
@@ -326,8 +309,7 @@
 									WaitTime="10000" />
 			
 					<!-- Move to Horde flight master -->
-					<CustomBehavior File="NoCombatMoveTo"
-									X="-178.09" Y="1026.72" Z="54.19" />
+					<MoveTo X="-178.09" Y="1026.72" Z="54.19" />
 					
 					<!-- Forced dismount -->	
 					<CustomBehavior File="ForcedDismount" />
@@ -356,13 +338,13 @@
 									LogColor="Cyan" />
 									
 					<!-- Move to Ratchet docks -->				
-					<RunTo X="-996.9926" Y="-3824.178" Z="5.496727" />	
+					<MoveTo X="-996.9926" Y="-3824.178" Z="5.496727" />	
 						
 					<!-- Forced dismount -->	
 					<CustomBehavior File="ForcedDismount" />
 					
 					<!-- Run to the wait position -->
-					<RunTo X="-996.7842" Y="-3827.834" Z="5.570349" />
+					<MoveTo X="-996.7842" Y="-3827.834" Z="5.570349" />
 					
 					<!-- Profile message - Waiting for the transport to Bootybay -->
 					<CustomBehavior File="Message" 
@@ -389,14 +371,14 @@
 									GetOffZ="6.696649" />
 									
 					<!-- Run to the dock after getting off the transport -->				
-					<RunTo X="-14280.22" Y="567.6113" Z="6.696649" />
+					<MoveTo X="-14280.22" Y="567.6113" Z="6.696649" />
 					
 					<!-- Forced ground mount -->
 					<CustomBehavior File="ForcedMount"
 									MountType="Ground" />
 	 
 					<!-- Move to - Dark portal -->
-					<RunTo X="-11896.8" Y="-3206.77" Z="-14.6724" />
+					<MoveTo X="-11896.8" Y="-3206.77" Z="-14.6724" />
 									
 					<!-- Forced dismount -->	
 					<CustomBehavior File="ForcedDismount" />				
@@ -410,16 +392,7 @@
 									WaitTime="10000" />
 			
 					<!-- Move to Alliance flight master -->
-					<CustomBehavior File="NoCombatMoveTo"
-									X="-320.2289" Y="1026.322" Z="54.17362" />
-					
-					<!-- Custom behavior - InteractWith the flight master -->
-					<CustomBehavior File="InteractWith"
-									ObjectType="Npc"
-									MobId="18931"
-									NumOfTimes="1"
-									CollectionDistance="50"
-									X="-323.8098" Y="1027.611" Z="54.15654" />
+					<MoveTo X="-320.2289" Y="1026.322" Z="54.17362" />
 					
 					<!-- Forced dismount -->	
 					<CustomBehavior File="ForcedDismount" />
@@ -429,7 +402,8 @@
 									WaitTime="3000" />
 					
 					<!-- Move to Honor Hold -->
-					<RunTo X="-673.42" Y="2717.27" Z="94.18" />
+					<CustomBehavior File="FlyTo"
+									X="-673.42" Y="2717.27" Z="94.18" />
 									
 				</If>	<!-- If we are Alliance -->	
 				
@@ -442,7 +416,7 @@
 				<If Condition="Me.IsHorde" >
 
 					<!-- Move to - Orgrimmar portal to Blasted Lands -->
-					<RunTo X="1773.622" Y="-4329.713" Z="-8.128812" />
+					<MoveTo X="1773.622" Y="-4329.713" Z="-8.128812" />
 
 					<!-- Custom behavior - Interactwith the Blasted Lands portal -->
 					<CustomBehavior File="InteractWith" 
@@ -461,7 +435,7 @@
 									UseMount="True"  />		
 
 					<!-- Move to - Dark portal -->
-					<RunTo X="-11896.8" Y="-3206.77" Z="-14.6724" />
+					<MoveTo X="-11896.8" Y="-3206.77" Z="-14.6724" />
 									
 					<!-- Run through Dark Portal -->
 					<CustomBehavior File="Misc\InInstance" 
@@ -472,8 +446,7 @@
 								WaitTime="10000" />
 			
 					<!-- Move to Horde flight master -->
-					<CustomBehavior File="NoCombatMoveTo"
-									X="-178.09" Y="1026.72" Z="54.19" />
+					<MoveTo X="-178.09" Y="1026.72" Z="54.19" />
 					
 					<!-- Forced dismount -->	
 					<CustomBehavior File="ForcedDismount" />
@@ -483,7 +456,7 @@
 									WaitTime="3000" />
 									
 					<!-- Move to Thrallmar -->
-					<CustomBehavior File="FlyTo" 
+					<CustomBehavior File="FlyTo"
 									X="228.5" Y="2633.57" Z="87.66663" />
 
 				</If>	<!-- If we are Horde -->	
@@ -493,6 +466,7 @@
 			<!-- If we are in Outlands -->
 			<If Condition="Me.MapId == 530">
 			
+				<!-- Profile message - We are in Outland -->
 				<CustomBehavior File="Message" 
 								Text="We are in Outland." 
 								LogColor="Cyan" />
@@ -533,7 +507,7 @@
 							<CustomBehavior File="ForcedDismount" />
 
 							<!-- Move inside the inn -->
-							<RunTo X="-708.0077" Y="2736.445" Z="94.73333" />
+							<MoveTo X="-708.0077" Y="2736.445" Z="94.73333" />
 							
 							<!-- Set hearthstone -->
 							<CustomBehavior File="WaitTimer" 
@@ -547,7 +521,7 @@
 											X="-708.8713" Y="2739.131" Z="94.73363" />
 								
 							<!-- Move outside of inn -->
-							<RunTo X="-709.9306" Y="2699.804" Z="94.41746" />
+							<MoveTo X="-709.9306" Y="2699.804" Z="94.41746" />
 							
 							<!-- Hover point -->
 							<CustomBehavior File="FlyTo" 
@@ -579,7 +553,7 @@
 							<CustomBehavior File="ForcedDismount" />
 
 							<!-- Move inside the inn -->
-							<RunTo X="190.1132" Y="2611.777" Z="87.28358" />
+							<MoveTo X="190.1132" Y="2611.777" Z="87.28358" />
 							
 							<!-- Profile message - Setting our Hearthstone -->			
 							<CustomBehavior File="Message" 
@@ -592,7 +566,7 @@
 											X="190.8758" Y="2610.927" Z="87.28391" />
 
 							<!-- Move outside of the inn -->
-							<RunTo X="178.6801" Y="2628.115" Z="87.12171" />
+							<MoveTo X="178.6801" Y="2628.115" Z="87.12171" />
 							
 							<!-- Fly to the Thrallmar hover point -->
 							<CustomBehavior File="FlyTo" 
@@ -667,7 +641,7 @@
 				<CustomBehavior File="ForcedDismount" />
 				
 				<!-- Move to the zone out location -->
-				<RunTo X="-363.436" Y="3078.43" Z="-15.00139" />
+				<MoveTo X="-363.436" Y="3078.43" Z="-15.00139" />
 					
 				<!-- Wait timer - wait 3 seconds to give HB time to think -->
 								<CustomBehavior File="WaitTimer" 
