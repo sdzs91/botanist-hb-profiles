@@ -53,7 +53,7 @@
 							Text="You meet the level requirement to run this profile." 
 							LogColor="Fuchsia" />
 		
-		 	<!-- Booster UserSettings -->
+		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
@@ -66,7 +66,7 @@
 							LogoutInactivityUseForceQuit="False"
 							LootChests="False"
 							LootMobs="True"
-							LootRadius="25"
+							LootRadius="35"
 							MountDistance="20"
 							MountName=""
 							NinjaSkin="False"
@@ -86,10 +86,10 @@
 				
 					<!-- Profile message - Drak'Tharon Keep detected. Running out -->
 					<CustomBehavior File="Message" 
-									Text="Drak'Tharon Keep detected. Running out."
+									Text="Drak'Tharon Keep detected, running out."
 									LogColor="Fuchsia" />
 					
-					<!-- If we are not in the Drak'Tharon Keep box, load the movement profile -->
+					<!-- If we are beyond Novos the Summoner, avoid aggro while exiting -->
 					<If Condition="Me.X &lt; -396.797 &amp;&amp; Me.Y &lt; -641.9761" >
 
 						<!-- Move to - Temple of the Forgotten -->
@@ -105,8 +105,8 @@
 					
 					</If>	<!-- If we are not in the Drak'Tharon Keep box, load the movement profile -->
 					
-					<!-- Make our way to the exit -->
-					<RunTo X="-517.15" Y="-489.201" Z="11.01775" />
+					<!-- Move to - zone in location -->
+					<MoveTo X="-517.15" Y="-489.201" Z="11.01775" />
 
 					<!-- Profile message - Waiting 3 seconds - Bag and durability check -->
 					<CustomBehavior File="Message" 
@@ -158,7 +158,7 @@
 									X="-518.2795" Y="-460.8023" Z="10.98073" />
 					
 					<!-- Move to - zone out location -->
-					<RunTo X="4774.44" Y="-2030.03" Z="229.38" />	
+					<MoveTo X="4774.44" Y="-2030.03" Z="229.38" />	
 					
 				</If>	<!-- If we are inside Drak'Tharon Keep -->
 				
@@ -196,7 +196,7 @@
 											LogColor="Orange" />
 											
 							<!-- Move to - face away from the portal -->
-							<RunTo X="4779.122" Y="-2039.026" Z="229.4198" />				
+							<MoveTo X="4779.122" Y="-2039.026" Z="229.4198" />				
 											
 							<!-- Custom behavior - LoadProfile - Components\Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant] -->				
 							<CustomBehavior File="LoadProfile"  
@@ -233,7 +233,7 @@
 					<While Condition="Me.ZoneId != 4196">
 					
 						<!-- Move to - zone out location -->
-						<RunTo X="4774.44" Y="-2030.03" Z="229.38" />	
+						<MoveTo X="4774.44" Y="-2030.03" Z="229.38" />	
 
 						<!-- Move to - attempt to enter the instance -->
 						<CustomBehavior File="Misc\InInstance" 
@@ -922,51 +922,13 @@
 					<!-- Move to - 1st patrols entering the raptor pens -->
 					<MoveTo X="-456.1544" Y="-652.5953" Z="28.43067" />				
 			
-					<!-- Profile message - Waiting 30 seconds for the patrol -->
-					<CustomBehavior File="Message" 
-										Text="Waiting 30 seconds for the patrol." 
-										LogColor="Gold" />
 			
-					<!-- Profile message - Let's dance -->
-					<CustomBehavior File="Message" 
-									Text="Let's dance."  
-									LogColor="Gold" />
-					
-					<!-- Macro - Cast Dance -->
-					<CustomBehavior File="RunMacro"
-									NumOfTimes="1"
-									Macro="/dance" />
-			
-					<!-- Wait timer - wait 30 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="30000" />
-
-
 					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
 									
 		
 					<!-- Move to - 2nd patrols entering the raptor pens -->
 					<MoveTo X="-507.2745" Y="-661.5894" Z="30.24499" />				
 			
-					<!-- Profile message - Waiting 50 seconds for the patrol -->
-					<CustomBehavior File="Message" 
-										Text="Waiting 50 seconds for the patrol." 
-										LogColor="Gold" />
-			
-					<!-- Profile message - Let's dance -->
-					<CustomBehavior File="Message" 
-									Text="Let's dance."  
-									LogColor="Gold" />
-					
-					<!-- Macro - Cast Dance -->
-					<CustomBehavior File="RunMacro"
-									NumOfTimes="1"
-									Macro="/dance" />
-			
-					<!-- Wait timer - wait 50 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="50000" />
-
 					<!-- If we are level 83+ -->
 					<If Condition="Me.Level &gt;= 83">				
 
@@ -999,20 +961,215 @@
 					</If>	<!-- If we are level 83+ -->				
 									
 									
-					<!-- @@@@@@@@@@@@@@@@@@@@ Exit @@@@@@@@@@@@@@@@@@@@ -->
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+									
+		
+					<!-- Move to - top of the stairs -->
+					<MoveTo X="-478.9688" Y="-633.879" Z="72.60501" />					
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- Move to - 1st group of mobs at the top of the stairs  -->
+					<MoveTo X="-445.3143" Y="-602.8896" Z="72.60879" />				
+			
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- Move to - 2nd group of mobs at the top of the stairs  -->
+					<MoveTo X="-418.5779" Y="-596.5187" Z="72.60651" />				
+			
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- Move to - 3rd group of mobs at the top of the stairs  -->
+					<MoveTo X="-342.0143" Y="-596.8195" Z="72.60912" />			
+			
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- Move to - 4th group of mobs at the top of the stairs  -->
+					<MoveTo X="-311.8768" Y="-609.6534" Z="72.60629" />			
+			
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- Move to - 5th group of mobs at the top of the stairs  -->
+					<MoveTo X="-283.6621" Y="-695.6186" Z="101.7916" />			
+			
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- Move to - 6th group of mobs at the top of the stairs  -->
+					<MoveTo X="-276.4302" Y="-733.2482" Z="101.7886" />			
+			
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- Move to - top of the stairs before The Prophet Tharon'ja -->
+					<MoveTo X="-237.0164" Y="-721.1686" Z="116.4962" />			
+			
+					<!-- Profile message - Casting Bone Shield -->
+					<CustomBehavior File="Message" 
+									Text="Casting Bone Shield."  
+									LogColor="Orange" />
+								
+					<!-- Macro - Cast Bone Shield -->
+					<CustomBehavior File="RunMacro"
+									NumOfTimes="1"
+									Macro="/cast Bone Shield" />				
+									
+					<!-- Profile message - Casting Icebound Fortitude -->
+					<CustomBehavior File="Message" 
+									Text="Casting Icebound Fortitude."  
+									LogColor="Orange" />
+								
+					<!-- Macro - Cast Icebound Fortitude -->
+					<CustomBehavior File="RunMacro"
+									NumOfTimes="1"
+									Macro="/cast Icebound Fortitude" />				
+									
+					<!-- Profile message - Casting Raise Dead -->
+					<CustomBehavior File="Message" 
+									Text="Casting Raise Dead."  
+									LogColor="Orange" />
+								
+					<!-- Macro - Cast Raise Dead -->
+					<CustomBehavior File="RunMacro"
+									NumOfTimes="1"
+									Macro="/cast Raise Dead" />					
+
+					<!-- Profile message - Casting Army of the Dead -->
+					<CustomBehavior File="Message" 
+									Text="Casting Army of the Dead."  
+									LogColor="Orange" />
+								
+					<!-- Macro - Cast Army of the Dead -->
+					<CustomBehavior File="RunMacro"
+									NumOfTimes="1"
+									Macro="/cast Army of the Dead" />
+			
+					<!-- Forces kill of The Prophet Tharon'ja -->
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="26632"
+									EventX="-237.4624" EventY="-683.4427" EventZ="132.1888"
+									MoveOutOfGroundEffectAuraId1="111111"
+									MoveAwayFromMobCastingSpellId1="111111"
+									MoveAwayFromMobWithAuraId1="111111">
+						<Safespots>
+							<Hotspot X="-237.4624" Y="-683.4427" Z="132.1888" />
+						</Safespots>
+					</CustomBehavior>
+			
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- Move to - stairs behind The Prophet Tharon'ja -->
+					<MoveTo X="-238.0919" Y="-619.3063" Z="116.4725" />				
+									
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- CTM to - jumps off the 1st ledge -->
+					<CustomBehavior File="MyCTM"
+									X="-267.3794" Y="-619.9714" Z="89.09382" />					
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- CTM to - moves out of the water -->
+					<CustomBehavior File="MyCTM"
+									X="-250.2645" Y="-620.0826" Z="90.78381" />
 
 									
-					<!-- Move to - Temple of the Forgotten -->
-					<MoveTo X="-406.9257" Y="-731.8883" Z="28.5802" />
-					
-					<!-- CTM to - avoid Novos the Summoner -->
-					<CustomBehavior File="MyCTM"
-									X="-395.8303" Y="-720.7462" Z="28.58746" />
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
 										
-					<!-- CTM to - avoid Novos the Summoner -->
+			
+					<!-- Move to - move to the 2nd jump -->
+					<MoveTo X="-240.454" Y="-628.7222" Z="90.7827" />				
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- CTM to - jumps off the 2nd ledge -->
 					<CustomBehavior File="MyCTM"
-									X="-338.8145" Y="-722.0858" Z="28.57786" />					
+									X="-240.1711" Y="-643.9132" Z="61.81971" />
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- CTM to - moves to 3rd jump -->
+					<CustomBehavior File="MyCTM"
+									X="-239.8714" Y="-622.0859" Z="64.55508" />	
 
+
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- CTM to - jumps off 3rd ledge -->
+					<CustomBehavior File="MyCTM"
+									X="-239.5077" Y="-609.8862" Z="8.38357" />				
+									
+
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- CTM to - moves out of the water -->
+					<CustomBehavior File="MyCTM"
+									X="-238.0657" Y="-580.873" Z="11.04209" />				
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->					
+										
+			
+					<!-- CTM to - moves to the Hall of Return -->
+					<CustomBehavior File="MyCTM"
+									X="-238.0657" Y="-580.873" Z="11.04209" />				
+									
+
+					<!-- @@@@@@@@@@@@@@@@@@@@ Exit @@@@@@@@@@@@@@@@@@@@ -->
+
+					
 					<!-- Move to - zone in location -->
 					<MoveTo X="-517.15" Y="-489.201" Z="11.01775" />				
 					
@@ -1109,7 +1266,6 @@
 						
 						</Else>		<!-- If we are not in a level 11+ guild -->
 					
-					
 					</If>	<!-- If we are in a level 11 or greater guild -->
 					
 					<!-- Profile message - All checks complete -->
@@ -1127,31 +1283,15 @@
 									Text="Drak'Tharon Keep detected. Running out to reset."
 									LogColor="Fuchsia" />
 				
-					<!-- If we are not near the entrance, run to 3rd raised section -->				
-					<If Condition="Me.Y &lt; -536.2922" > 
-					
-						<RunTo X="-531.3202" Y="-593.3092" Z="2.484553" />
-						
-						<CustomBehavior File="MyCTM" 
-										X="-540.0514" Y="-571.1459" Z="2.484182" />
-										
-						<CustomBehavior File="MyCTM" 
-										X="-540.216" Y="-554.3991" Z="2.485743" />
-										
-						<CustomBehavior File="MyCTM" 
-										X="-520.3536" Y="-528.2415" Z="11.01161" />
-										
-					</If>	<!-- if we aren't at the quest givers, run to 3rd raised section -->
-				
 					<!-- Move to - zone in location -->
-					<RunTo X="-517.15" Y="-489.201" Z="11.01775" />
+					<MoveTo X="-517.15" Y="-489.201" Z="11.01775" />
 
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" 
 									X="-518.2795" Y="-460.8023" Z="10.98073" />
 					
 					<!-- Move to - zone out location -->
-					<RunTo X="4774.44" Y="-2030.03" Z="229.38" />	
+					<MoveTo X="4774.44" Y="-2030.03" Z="229.38" />	
 					
 				</If>	<!-- If we don't need to vendor -->
 				

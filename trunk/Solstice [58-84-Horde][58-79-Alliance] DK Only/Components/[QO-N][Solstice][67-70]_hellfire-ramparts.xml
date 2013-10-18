@@ -935,126 +935,70 @@
 					<!-- DisableBehavior - Combat -->
 					<DisableBehavior Name="Combat" />
 
-					<!-- Move to - Bonechewer Ravener - pivot location -->					
-					<MoveTo X="-1247.631" Y="1591.51" Z="68.52014" />
-					
-					<!-- Move to - align our target macro -->					
+					<!-- Move to - center group - pivot location -->
+					<MoveTo X="-1246.595" Y="1591.524" Z="68.51317" />
+						
+					<!-- CTM to - align our target macro -->
 					<CustomBehavior File="MyCTM"
-									X="-1257.854" Y="1586.559" Z="68.5694" />
-
-					<!-- While condition - while our Y > 1575 -->			
-					<While Condition="Me.Y &gt; 1575" >
-				
-						<!-- Profile message - Targeting the Bonechewer Ravener, DO NOT TOUCH !!! -->
-						<CustomBehavior File="Message" 
-										Text="Targeting the Bonechewer Ravener, DO NOT TOUCH !!!" 
-										LogColor="Orange" />
-
-						<!-- Macro - Clear target -->					
-						<CustomBehavior File="RunMacro" 
-										Macro="/cleartarget" 
-										NumOfTimes="1" 
-										WaitTime="0"/>
-
-						<!-- Macro - targetenemy -->						
-						<CustomBehavior File="RunMacro"
-										NumOfTimes="1"
-										Macro="/targetenemy [noharm]" />
-						
-						<!-- If our target is the Bonechewer Ravener -->
-						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 17264)">
-						
-							<!-- Profile message - My target is the Bonechewer Ravener -->
-							<CustomBehavior File="Message" 
-											Text="My target is the Bonechewer Ravener." 
-											LogColor="Fuchsia" />
-														
-							<!-- Profile message - Waiting 5 seconds for the patrol to path away from us -->
-							<CustomBehavior File="Message" 
-											Text="Waiting 5 seconds for the patrol to path away from us." 
-											LogColor="Fuchsia" />							
-														
-							<!-- Wait timer - Waiting 5 seconds - delay -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="5000" />				
-											
-							<!-- Move to - center group - pivot location -->
-							<MoveTo X="-1253.941" Y="1595.912" Z="68.57466" />
-								
-							<!-- CTM to - align our target macro -->
-							<CustomBehavior File="MyCTM"
-											X="-1254.995" Y="1585.928" Z="68.55029" />
-												
-							<!-- Profile message - Targeting the enemy -->
-							<CustomBehavior File="Message" 
-											Text="Targeting the enemy."  
-											LogColor="Orange" />
-			
-							<!-- Macro - Clear target -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/cleartarget" 
-											NumOfTimes="1" 
-											WaitTime="0"/>
-			
-							<!-- Macro - targetenemy -->						
-							<CustomBehavior File="RunMacro"
-											NumOfTimes="1"
-											Macro="/targetenemy [noharm]" />
-							
-							<!-- Profile message - Casting Death Grip -->
-							<CustomBehavior File="Message" 
-											Text="Casting Death Grip."  
-											LogColor="Orange" />
-
-							<!-- Macro - Cast Death Grip -->
-							<CustomBehavior File="RunMacro"
-											NumOfTimes="1"
-											Macro="/cast Death Grip" />
-											
-							<!-- Move to - kite - center group -->
-							<MoveTo X="-1267.103" Y="1646.577" Z="68.83662" />				
-											
-							<!-- Move to - kite - center group -->
-							<MoveTo X="-1254.594" Y="1616.686" Z="68.59886" />
-								
-							<!-- Profile message - Enabling combat -->
-							<CustomBehavior File="Message" 
-												Text="Enabling combat." 
-												LogColor="Gold" />
-
-							<!-- Macro - Clear target -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/cleartarget" 
-											NumOfTimes="1" 
-											WaitTime="0"/>
-											
-							<!-- enable combat -->
-							<EnableBehavior Name="Combat" />
-			
-							<!-- Wait timer - Waiting 3 seconds - delay -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="3000" />
-
-							<!-- Move to - center group - breaks the while loop - safety -->
-							<MoveTo X="-1262.098" Y="1568.197" Z="68.64626" />				
-
-							<!-- Wait timer - Waiting 3 seconds - delay -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="3000" />	
+									X="-1249.309" Y="1580.242" Z="68.49638" />
+										
+					<!-- Profile message - Targeting the enemy -->
+					<CustomBehavior File="Message" 
+									Text="Targeting the enemy."  
+									LogColor="Orange" />
+	
+					<!-- Macro - Clear target -->					
+					<CustomBehavior File="RunMacro" 
+									Macro="/cleartarget" 
+									NumOfTimes="1" 
+									WaitTime="0"/>
+	
+					<!-- Macro - targetenemy -->						
+					<CustomBehavior File="RunMacro"
+									NumOfTimes="1"
+									Macro="/targetenemy [noharm]" />
 					
-							<!-- If our target is not the Bonechewer Ravener -->					
-							<Else>
-							
-								<!-- Profile message - Scanning for the patrol -->
-								<CustomBehavior File="Message" 
-												Text="Scanning for the patrol." 
-												LogColor="Yellow" />
-								
-							</Else>		<!-- If our target is not the Bonechewer Ravener -->
-							
-						</If>	<!-- If our target is the Bonechewer Ravener -->					
-											
-					</While>	<!-- While condition - while our Y > 1575 -->
+					<!-- Profile message - Casting Death Grip -->
+					<CustomBehavior File="Message" 
+									Text="Casting Death Grip."  
+									LogColor="Orange" />
+
+					<!-- Macro - Cast Death Grip -->
+					<CustomBehavior File="RunMacro"
+									NumOfTimes="1"
+									Macro="/cast Death Grip" />
+									
+					<!-- Move to - kite - center group -->
+					<MoveTo X="-1267.103" Y="1646.577" Z="68.83662" />				
+									
+					<!-- Move to - kite - center group -->
+					<MoveTo X="-1254.594" Y="1616.686" Z="68.59886" />
+						
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- Macro - Clear target -->					
+					<CustomBehavior File="RunMacro" 
+									Macro="/cleartarget" 
+									NumOfTimes="1" 
+									WaitTime="0"/>
+									
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+	
+					<!-- Wait timer - Waiting 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+
+					<!-- Move to - center group  - safety -->
+					<MoveTo X="-1259.751" Y="1570.705" Z="68.64433" />				
+
+					<!-- Wait timer - Waiting 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />	
+					
 				
 			
 					<!-- @@@@@@@@@@@@@@@@@@@@ 10th pull @@@@@@@@@@@@@@@@@@@@ -->	
@@ -1439,15 +1383,15 @@
 										
 						<!-- Wait timer - wait 3 seconds - aggro -->
 						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />	
-
-						<!-- CTM to - 4th group on the right -->
-						<MoveTo X="-1225.14" Y="1445.514" Z="68.59036" />				
+										WaitTime="3000" />					
 										
 
 						<!-- @@@@@@@@@@@@@@@@@@@@ 16th pull @@@@@@@@@@@@@@@@@@@@ -->
 	
 
+						<!-- Move to - avoid patrol staging location  -->
+						<MoveTo X="-1207.83" Y="1445.705" Z="68.54546" />
+	
 						<!-- Profile message - Disabling combat -->
 						<CustomBehavior File="Message" 
 											Text="Disabling combat." 
@@ -1460,8 +1404,8 @@
 						<CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" 
 										MovementBy="NavigatorOnly" 
 										AvoidMobId="17306" 
-										AvoidDistance="55"
-										X="-1193.706" Y="1429.757" Z="68.5044" >	<!-- Our wait location -->
+										AvoidDistance="45"
+										X="-1207.83" Y="1445.705" Z="68.54546" >	<!-- Our wait location -->
 							
 						</CustomBehavior>	<!--WFP to avoid Watchkeeper Gargolmar if he is spawned -->	
 

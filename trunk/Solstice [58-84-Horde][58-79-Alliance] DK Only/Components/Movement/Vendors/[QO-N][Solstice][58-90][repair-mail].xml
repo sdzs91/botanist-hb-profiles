@@ -321,23 +321,27 @@
 		
 		
 		
-		<!-- If our level is 86-87 -->
-		<If Condition="Me.Level &gt;= 86 &amp;&amp; Me.Level &lt; 87">
-			
+		<!-- *******************************************    level is 84-86 ******************************************************* -->
+		
+		
+		<!-- If our level is 84-86 -->
+		<If Condition="Me.Level &gt;= 84 &amp;&amp; Me.Level &lt; 86">
+		
 			<!-- Profile message - Our durability is less than 30% or we have less than 25 empty bag slots remaining -->
 			<CustomBehavior File="Message" 
 							Text="Our durability is less than 30% or we have less than 25 empty bag slots remaining." 
 							LogColor="Fuchsia" />
 								
-			<!-- If we are in Blackrock Depths -->
-			<If Condition="Me.ZoneId == 1584">	
+	
+			<!-- If we are inside Gundrak -->
+			<If Condition="Me.ZoneId == 4416">
 				
-				<!-- If our hearthstone/innkeepers daughter is set to Iron Summit -->
-				<If Condition="Me.HearthstoneAreaId == 5628" >
+				<!-- If our Hearthstone/Innkeepers Daughter is set at The Argent Stand -->
+				<If Condition="(Me.HearthstoneAreaId == 4275)">
 				
-					<!-- Profile message - We are in Blackrock Depths, using our Hearthstone/Innkeeper's Daughter -->
+					<!-- Profile message - We are in Gundrak, using our Hearthstone/Innkeeper's Daughter -->
 					<CustomBehavior File="Message" 
-									Text="We are in Blackrock Depths, using our Hearthstone/Innkeeper's Daughter." 
+									Text="We are in Gundrak, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
 					<!-- If we have a Hearthstone -->
@@ -380,68 +384,166 @@
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
-			</If>	<!-- If we are in Blackrock Depths -->
+			</If>	<!-- If we are inside Gundrak -->
 		
-			<!-- If we are still in Blackrock Depths, exit the instance -->
-			<If Condition="Me.ZoneId == 1584">
+			<!-- If we are still in Gundrak, exit the instance -->
+			<If Condition="Me.ZoneId == 4416">
 			
 				<!-- Profile message - Our Hearthstone/Innkeeper's Daughter didn't work. Moving to the exit -->
 				<CustomBehavior File="Message" 
 								Text="Our Hearthstone/Innkeeper's Daughter didn't work. Moving to the exit."
 								LogColor="Fuchsia" />
-				
-				<!-- Move to the zone in location -->
-				<RunTo X="460.6402" Y="15.41037" Z="-71.11736" />
-				
-				<!-- Go through the portal -->
-				<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
-				
-				<!-- Move to the zone out location -->
-				<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
-				
-			</If>	<!-- If we are still in Blackrock Depths, exit the instance -->
+					
+					<!-- Move to - zone in location -->
+					<MoveTo X="1887.432" Y="839.571" Z="176.6754" />
 
-			<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
-			<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" 
+									X="1900.536" Y="815.8542" Z="176.637" />
+					
+					<!-- Move to - zone out location -->
+					<MoveTo X="6717.32" Y="-4645.55" Z="450.017" />		
+					
+					<!-- Move to - flying mount location -->
+					
+			</If>	<!-- If we are inside Gundrak -->
 
-				<!-- Vendor conditions -->
-				<CustomBehavior File="ForceSetVendor" 
-								DoMail="True" 
-								DoRepair="True" 
-								DoSell="True" 
-								DoTrain="False" />
+			<!-- If we are in Northrend -->
+			<If Condition="Me.MapId == 571">
+
+				<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+				<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 				
-				<!-- Repair vendor -->
-				<SetVendor>
-					<Vendors>
-						<!-- Iron Summit -->
-						<Vendor Name="Fergus Gravelsmash" 
-								Entry="47937" 
-								Type="Repair" 
-								X="-7093.68" Y="-1268.31" Z="270.4849" />
-					</Vendors>
-				</SetVendor>
-		
-				<!-- Mailbox -->
-				<SetMailbox>
-					<Mailboxes>
-						<!-- Iron Summit -->
-						<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
-					</Mailboxes>
-				</SetMailbox>
-							
-			</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
-				
-			
-			<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->
-			<If Condition="(Me.FreeBagSlots &gt; 25) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
-			
-				<!-- Load profile - [QO-N][Solstice][58-90][food] -->
-				<CustomBehavior File="LoadProfile" 
-										ProfileName="[QO-N][Solstice][58-90][food]" />
+					<!-- If we are Alliance -->
+					<If Condition="Me.IsAlliance">
+					
+						<!-- Fly to - The Argent Stand hover point -->
+						<CustomBehavior File="FlyTo" 
+										X="5382.631" Y="-2629.626" Z="354.096" />
+						
+						<!-- CTM to - ally repair vendor -->
+						<CustomBehavior File="MyCTM" 
+											X="5405.251" Y="-2657.311" Z="303.9556" />
+						
+						<!-- Custom behavior - ForcedDismount -->
+						<CustomBehavior File="ForcedDismount" />
+						
+						<!-- Profile message - Our durability is less than 30%, or our bags have less than 25 empty slots left -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30%, or our bags have less than 25 empty slots left."
+										LogColor="Cyan" />
 										
-			</If>		
-		</If>					
+						<!-- Vendor settings -->				
+						<CustomBehavior File="ForceSetVendor" 
+									DoMail="True" 
+									DoRepair="True" 
+									DoSell="True" 
+									DoTrain="False" />				
+					
+						<!-- The Argent Stand -->					
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Arlen Brighthammer" 
+										Entry="28796" 
+										Type="Repair" 
+										X="5410.7" Y="-2658.249" Z="303.9539" />
+							</Vendors>
+						</SetVendor>
+
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="5412.528" Y="-2623.317" Z="306.1588" />
+							</Mailboxes>
+						</SetMailbox>	
+						
+					</If>	<!-- If we are Alliance -->
+
+					<!-- If we are Horde -->
+					<If Condition="Me.IsHorde">
+					
+						<!-- Fly to - The Argent Stand hover point -->
+						<CustomBehavior File="FlyTo" 
+										X="5382.631" Y="-2629.626" Z="354.096" />
+						
+						<!-- CTM to - ally repair vendor -->
+						<CustomBehavior File="MyCTM" 
+											X="5405.251" Y="-2657.311" Z="303.9556" />
+						
+						<!-- Custom behavior - ForcedDismount -->
+						<CustomBehavior File="ForcedDismount" />
+						
+						<!-- Profile message - Our durability is less than 30%, or our bags have less than 25 empty slots left -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30%, or our bags have less than 25 empty slots left."
+										LogColor="Cyan" />
+										
+						<!-- Vendor settings -->				
+						<CustomBehavior File="ForceSetVendor" 
+									DoMail="True" 
+									DoRepair="True" 
+									DoSell="True" 
+									DoTrain="False" />				
+					
+						<!-- The Argent Stand -->					
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Arlen Brighthammer" 
+										Entry="28796" 
+										Type="Repair" 
+										X="5410.7" Y="-2658.249" Z="303.9539" />
+							</Vendors>
+						</SetVendor>
+
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="5412.528" Y="-2623.317" Z="306.1588" />
+							</Mailboxes>
+						</SetMailbox>
+						
+					</If>	<!-- If we are Horde -->
+
+					<!-- We are done repairing -->
+					<If Condition="(Me.FreeBagSlots &gt; 25) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+					
+						<!-- Profile message - Repairing complete -->
+						<CustomBehavior File="Message" 
+										Text="Repairing complete." 
+										LogColor="Cyan" />
+										
+					</If>	<!-- We are done repairing -->
+					
+					<!-- If we are Alliance -->
+					<If Condition="Me.IsAlliance">
+					
+						<!-- Fly to - The Argent Stand hover point -->
+						<CustomBehavior File="FlyTo" 
+										X="5382.631" Y="-2629.626" Z="354.096" />
+						
+					</If>	<!-- If we are Alliance -->
+					
+					<!-- If we are Horde -->
+					<If Condition="Me.IsHorde">
+					
+						<!-- Fly to - The Argent Stand hover point -->
+						<CustomBehavior File="FlyTo" 
+										X="5382.631" Y="-2629.626" Z="354.096" />
+						
+					</If>	<!-- If we are Horde -->
+					
+				</If> <!-- Repairing -->
+
+				<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->
+				<If Condition="(Me.FreeBagSlots &gt; 25) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+				
+					<!-- Load profile - [QO-N][Solstice][58-90][food] -->
+					<CustomBehavior File="LoadProfile" 
+											ProfileName="[QO-N][Solstice][58-90][food]" />
+											
+				</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->		
+				
+			</If>	<!-- If we are in Northrend -->
+			
+		</If> 	<!-- If our level is 84-86 -->					
 				
 
 		<!-- *******************************************    level is 82-84 ******************************************************* -->
