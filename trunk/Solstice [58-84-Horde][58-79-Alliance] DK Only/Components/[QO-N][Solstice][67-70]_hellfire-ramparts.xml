@@ -1145,10 +1145,6 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
 
 
-						<!-- UserSettings -->
-						<CustomBehavior File="UserSettings"
-										PullDistance="20" />
-						
 						<!-- Profile message - Disabling combat -->
 						<CustomBehavior File="Message" 
 											Text="Disabling combat." 
@@ -1202,7 +1198,7 @@
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />		
 												
-						<!-- Move to -  3rd group on the right - safety -->
+						<!-- Move to - 3rd group on the right - safety -->
 						<MoveTo X="-1293.195" Y="1493.801" Z="68.60017" />
 							
 						<!-- Profile message - Waiting 3 seconds - safety -->
@@ -1215,35 +1211,7 @@
 										WaitTime="3000" />
 		
 
-										
 						<!-- @@@@@@@@@@@@@@@@@@@@ 13th pull @@@@@@@@@@@@@@@@@@@@ -->				
-										
-										
-										
-						<!-- Profile message - Disabling combat -->
-						<CustomBehavior File="Message" 
-											Text="Disabling combat." 
-											LogColor="Gold" />
-				
-						<!-- DisableBehavior - Combat -->
-						<DisableBehavior Name="Combat" />				
-
-						<!-- Move to - 1st right-hand burning brazier -->
-						<MoveTo X="-1248.516" Y="1446.725" Z="68.60198" />
-							
-						<!-- Profile message - Enabling combat -->
-						<CustomBehavior File="Message" 
-											Text="Enabling combat." 
-											LogColor="Gold" />
-						
-						<!-- enable combat -->
-						<EnableBehavior Name="Combat" />
-						
-						<!-- Wait timer - wait 15 seconds - aggro -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="15000" />				
-										
-						<!-- @@@@@@@@@@@@@@@@@@@@ 14th pull @@@@@@@@@@@@@@@@@@@@ -->				
 										
 
 						<!-- Profile message - Disabling combat -->
@@ -1254,12 +1222,12 @@
 						<!-- DisableBehavior - Combat -->
 						<DisableBehavior Name="Combat" />
 
-						<!-- Move to - 1st right-hand burning brazier - 4th group on the left - pivot location -->
-						<MoveTo X="-1248.516" Y="1446.725" Z="68.60198" />
+						<!-- Move to - 4th group on the left - pivot location -->
+						<MoveTo X="-1273.586" Y="1485.362" Z="68.58128" />
 							
 						<!-- CTM to - align our target macro -->
 						<CustomBehavior File="MyCTM"
-										X="-1243.85" Y="1451.977" Z="68.59377" />
+										X="-1257.278" Y="1482.188" Z="68.56715" />
 						
 						<!-- Profile message - Targeting the enemy -->
 						<CustomBehavior File="Message" 
@@ -1277,6 +1245,36 @@
 										NumOfTimes="1"
 										Macro="/targetenemy [noharm]" />
 
+						<!-- Profile message - Casting Anti-Magic Shell -->
+						<CustomBehavior File="Message" 
+										Text="Casting Anti-Magic Shell."  
+										LogColor="Orange" />
+									
+						<!-- Macro - Cast Anti-Magic Shell -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Anti-Magic Shell" />
+			
+						<!-- Profile message - Raise Dead -->
+						<CustomBehavior File="Message" 
+										Text="Casting Raise Dead."  
+										LogColor="Orange" />
+
+						<!-- Macro - Cast Raise Dead -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Raise Dead" />
+
+						<!-- Profile message - Icebound Fortitude -->
+						<CustomBehavior File="Message" 
+										Text="Casting Icebound Fortitude."  
+										LogColor="Orange" />
+
+						<!-- Macro - Cast Icebound Fortitude -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Icebound Fortitude" />				
+										
 						<!-- Profile message - Casting Death Grip -->
 						<CustomBehavior File="Message" 
 										Text="Casting Death Grip."  

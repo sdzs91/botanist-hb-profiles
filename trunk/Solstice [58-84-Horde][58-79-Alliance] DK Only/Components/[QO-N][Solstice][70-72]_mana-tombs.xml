@@ -355,6 +355,9 @@
 					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 					
 					
+					<!-- Move to - entrance staging location -->
+					<MoveTo X="-23.04072" Y="0.8457491" Z="-0.954329" />
+					
 					<!-- Profile message - Casting Anti-Magic Shell -->
 					<CustomBehavior File="Message" 
 									Text="Casting Anti-Magic Shell."  
@@ -384,6 +387,16 @@
 					<CustomBehavior File="RunMacro"
 									NumOfTimes="1"
 									Macro="/cast Icebound Fortitude" />
+									
+					<!-- Profile message - Horn of Winter -->
+					<CustomBehavior File="Message" 
+									Text="Casting Horn of Winter."  
+									LogColor="Orange" />
+
+					<!-- Macro - Cast Horn of Winter -->
+					<CustomBehavior File="RunMacro"
+									NumOfTimes="1"
+									Macro="/cast Horn of Winter" />				
 
 					<!-- Move to - 1st set of patrols before the Ethereal Crypt Raider -->
 					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
@@ -508,10 +521,25 @@
 									WaitTime="3000" />
 									
 									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 7th pull @@@@@@@@@@@@@@@@@@@@ -->				
+									
+													
+					<!-- Move to - patrol wait location -->			
+					<MoveTo X="-60.59151" Y="-80.6927" Z="-2.097009" />
+
+					<!-- Profile message - Waiting 60 seconds - safety -->
+					<CustomBehavior File="Message" 
+									Text="Waiting 60 seconds - safety."  
+									LogColor="Orange" />				
+																	
+					<!-- Wait timer - wait 60 seconds to aggro the patrol -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />				
+
+									
 					<!-- @@@@@@@@@@@@@@@@@@@@ 7th pull @@@@@@@@@@@@@@@@@@@@ -->
 									
-								
-								
+										
 					<!-- Move to - left-hand mound - pivot location -->
 					<MoveTo X="-13.85218" Y="-56.98798" Z="7.558555" />			
 								
@@ -795,10 +823,7 @@
 						<CustomBehavior File="RunMacro"
 										NumOfTimes="1"
 										Macro="/cast Icebound Fortitude" />				
-										
-										
-										
-										
+	
 						<!-- Profile message - Disabling combat -->
 						<CustomBehavior File="Message" 
 											Text="Disabling combat." 
@@ -806,9 +831,7 @@
 
 						<!-- Disable combat -->
 						<DisableBehavior Name="Combat" />				
-										
-										
-										
+	
 						<!-- Profile message - Casting Death Grip -->
 						<CustomBehavior File="Message" 
 										Text="Casting Death Grip."  
@@ -818,14 +841,10 @@
 						<CustomBehavior File="RunMacro"
 										NumOfTimes="1"
 										Macro="/cast Death Grip" />
-								
-								
-								
+
 						<!-- Move to - kite - 2nd door guards - leaving Ravaged Crypt-->
 						<MoveTo X="-60.23307" Y="-153.8667" Z="-0.9542529" />		
 
-						
-						
 						<!-- Profile message - Enabling combat -->
 						<CustomBehavior File="Message" 
 											Text="Enabling combat." 
@@ -833,13 +852,10 @@
 						
 						<!-- enable combat -->
 						<EnableBehavior Name="Combat" />		
-								
-								
-								
+
 						<!-- Wait timer - wait 3 seconds - aggro -->
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />		
-												
 
 						<!-- Move to - 2nd door guards - safety -->
 						<MoveTo X="-66.9006" Y="-179.6387" Z="-1.339514" />
@@ -853,7 +869,7 @@
 
 
 						<!-- Move to - 1st group - left after leaving Ravaged Crypt - pivot location -->
-						<MoveTo 	X="-68.21644" Y="-180.6827" Z="-1.418511" />
+						<MoveTo X="-68.21644" Y="-180.6827" Z="-1.418511" />
 
 						<!-- CTM to - align our target macro -->
 						<CustomBehavior File="MyCTM" 
@@ -959,6 +975,9 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 9th pull @@@@@@@@@@@@@@@@@@@@ -->
 									
 									
+						<!-- Move to - towards the door -->
+						<MoveTo X="-68.62197" Y="-189.1009" Z="-1.941455" />			
+									
 						<!-- Move to - patrols -->
 						<MoveTo X="-64.48909" Y="-213.3403" Z="-0.3034122" />			
 
@@ -1035,7 +1054,7 @@
 										WaitTime="3000" />		
 												
 						<!-- Move to - group at the teleporter - safety - teleporter -->			
-						<MoveTo X="-30.83863" Y="-224.3053" Z="-0.0607775" />
+						<MoveTo X="-25.2556" Y="-225.1036" Z="0.2590847" />
 
 						<!-- Profile message - Waiting 3 seconds -->
 						<CustomBehavior File="Message" 
@@ -1047,24 +1066,94 @@
 										WaitTime="3000" />	
 
 										
+						<!-- @@@@@@@@@@@@@@@@@@@@ 11th pull @@@@@@@@@@@@@@@@@@@@ -->
+									
+														
+						<!-- Move to - left-hand bone pile -->
+						<MoveTo X="-29.83088" Y="-251.3274" Z="4.078189" />								
+														
+						<!-- Move to the 2nd set of mana leeches -->
+						<MoveTo X="-54.04385" Y="-252.778" Z="0.02959088" />
+										
+						<!-- Profile message - Waiting 3 seconds - safety -->
+						<CustomBehavior File="Message" 
+										Text="Waiting 3 seconds - safety."  
+										LogColor="Orange" />				
+										
+						<!-- Wait timer - Waiting 3 seconds - safety -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />				
+										
+										
+						<!-- @@@@@@@@@@@@@@@@@@@@ 13th pull @@@@@@@@@@@@@@@@@@@@ -->
+																	
+
+						<!-- Move to - corner behind the tall tesla coil group - pivot location -->
+						<MoveTo X="-118.9508" Y="-256.8227" Z="-0.9784887" />											
+																	
+						<!-- CTM to - align our target macro -->
+						<CustomBehavior File="MyCTM" 
+										X="-115.7396" Y="-251.1404" Z="-0.03614783" />
+
+						<!-- Profile message - Targeting the enemy -->
+						<CustomBehavior File="Message" 
+										Text="Targeting the enemy."  
+										LogColor="Orange" />
+		
+						<!-- Macro - Clear target -->					
+						<CustomBehavior File="RunMacro" 
+										Macro="/cleartarget" 
+										NumOfTimes="1" 
+										WaitTime="0"/>
+		
+						<!-- Macro - targetenemy -->						
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/targetenemy [noharm]" />
+						
+						<!-- Profile message - Casting Death Grip -->
+						<CustomBehavior File="Message" 
+										Text="Casting Death Grip."  
+										LogColor="Orange" />
+
+						<!-- Macro - Cast Death Grip -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Death Grip" />
+								
+						<!-- Wait timer - wait 3 seconds - aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />		
+								
+						<!-- Move to - tesla coil group - safety -->
+						<MoveTo X="-108.3643" Y="-244.2634" Z="0.2621945" />		
+
+						<!-- Wait timer - wait 3 seconds - aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />				
+												
+										
 						<!-- @@@@@@@@@@@@@@@@@@@@ 11th pull @@@@@@@@@@@@@@@@@@@@ -->				
 										
 										
-						<!-- Move to - right-hand crypt -->
-						<MoveTo X="-22.53713" Y="-197.0349" Z="-0.3258763" />				
+						<!-- Move to - right-hand corner - tesla group -->
+						<MoveTo X="-80.05529" Y="-255.8634" Z="-1.115458" />				
 										
+						<!-- Move to - left-hand bone pile -->
+						<MoveTo X="-31.89958" Y="-250.4491" Z="3.311637" />				
+										
+						<!-- Move to - corner right-hand crypt -->
+						<MoveTo X="-20.4248" Y="-196.7543" Z="-0.3414205" />					
+												
 						<!-- Move to - base of the mound -->
-						<MoveTo X="-75.38445" Y="-191.4629" Z="-1.887362" />				
+						<MoveTo X="-74.80985" Y="-192.2069" Z="-2.009569" />				
 										
-						<!-- Move to - top of the mound -->
+						<!-- Move to - top of the crypt - pivot location -->
 						<MoveTo X="-85.86423" Y="-185.2876" Z="6.506018" />				
 										
-						<!-- Move to - top of the mound - pivot point-->
-						<MoveTo X="-91.7332" Y="-184.4915" Z="8.519301" />				
-
 						<!-- CTM to - align our target macro -->
 						<CustomBehavior File="MyCTM" 
-										X="-97.0471" Y="-185.7956" Z="7.47575" />
+										X="-98.07893" Y="-198.9863" Z="1.981191" />
 
 						<!-- Profile message - Disabling combat -->
 						<CustomBehavior File="Message" 
@@ -1101,7 +1190,7 @@
 										Macro="/cast Death Grip" />
 								
 						<!-- Move to - kite - mound group -->
-						<MoveTo 	X="-79.10893" Y="-198.9489" Z="-2.437749" />		
+						<MoveTo X="-72.28182" Y="-165.3469" Z="-0.9559982" />		
 								
 						<!-- Profile message - Enabling combat -->
 						<CustomBehavior File="Message" 
@@ -1115,82 +1204,12 @@
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />				
 										
-										
-						<!-- @@@@@@@@@@@@@@@@@@@@ 11th pull @@@@@@@@@@@@@@@@@@@@ -->
-									
-														
-						<!-- Move to - right-hand crypt -->
-						<MoveTo X="-56.26576" Y="-216.0235" Z="0.01630898" />								
-														
-						<!-- Move to the 2nd set of mana leeches -->
-						<MoveTo X="-59.81129" Y="-246.1002" Z="-0.612443" />
-										
-						<!-- Profile message - Waiting 3 seconds - safety -->
-						<CustomBehavior File="Message" 
-										Text="Waiting 3 seconds - safety."  
-										LogColor="Orange" />				
-										
-						<!-- Wait timer - Waiting 3 seconds - safety -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />			
-										
-									
-						<!-- @@@@@@@@@@@@@@@@@@@@ 13th pull @@@@@@@@@@@@@@@@@@@@ -->
-																	
-
-						<!-- Move to - behind the big rock -->
-						<MoveTo X="-67.49059" Y="-253.9997" Z="-0.2882214" />											
-																	
-						<!-- Move to - left-hand group after the Nexus Terror - pivot location -->
-						<MoveTo X="-118.6937" Y="-256.4126" Z="-0.91375" />				
-
-						<!-- CTM to - align our target macro -->
-						<CustomBehavior File="MyCTM" 
-										X="-113.1108" Y="-253.1418" Z="-0.7433537" />
-
-						<!-- Profile message - Targeting the enemy -->
-						<CustomBehavior File="Message" 
-										Text="Targeting the enemy."  
-										LogColor="Orange" />
-		
-						<!-- Macro - Clear target -->					
-						<CustomBehavior File="RunMacro" 
-										Macro="/cleartarget" 
-										NumOfTimes="1" 
-										WaitTime="0"/>
-		
-						<!-- Macro - targetenemy -->						
-						<CustomBehavior File="RunMacro"
-										NumOfTimes="1"
-										Macro="/targetenemy [noharm]" />
-						
-						<!-- Profile message - Casting Death Grip -->
-						<CustomBehavior File="Message" 
-										Text="Casting Death Grip."  
-										LogColor="Orange" />
-
-						<!-- Macro - Cast Death Grip -->
-						<CustomBehavior File="RunMacro"
-										NumOfTimes="1"
-										Macro="/cast Death Grip" />
-								
-						<!-- Wait timer - wait 3 seconds - aggro -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />		
-								
-						<!-- Move to - left-hand group after the Nexus Terror - safety -->
-						<MoveTo 	X="-103.3636" Y="-240.1347" Z="0.5474213" />		
-
-						<!-- Wait timer - wait 3 seconds - aggro -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />
-
-										
+	
 						<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
 									
 															
 						<!-- Move to - 1st crypt - Nexus Terror - staging location  -->					
-						<MoveTo 	X="-84.56848" Y="-255.2848" Z="-1.34016" />
+						<MoveTo X="-84.56848" Y="-255.2848" Z="-1.34016" />
 						
 
 						<!-- @@@@@@@@@@@@@@@@@@@@ 14th pull @@@@@@@@@@@@@@@@@@@@ -->				
