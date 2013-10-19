@@ -371,12 +371,12 @@
 								Text="We are in Northrend." 
 								LogColor="Cyan" />
 									
-				<!-- If our hearthstone is set here -->
-				<If Condition="(Me.HearthstoneAreaId == 4204) || (Me.HearthstoneAreaId == 4165)">
+				<!-- If our hearthstone is set at Stars' Rest or Agmar's Hammer -->
+				<If Condition="(Me.HearthstoneAreaId == 4158) || (Me.HearthstoneAreaId == 4165)">
 				
-					<!-- Profile message - Our Hearthstone is set at Amberpine Lodge or Agmar's Hammer -->
+					<!-- Profile message - Our Hearthstone is set at Stars' Rest or Agmar's Hammer -->
 					<CustomBehavior File="Message" 
-									Text="Our Hearthstone is set at Amberpine Lodge or Agmar's Hammer." 
+									Text="Our Hearthstone is set at Stars' Rest or Agmar's Hammer." 
 									LogColor="Cyan" />
 
 					<!-- Our hearth isn't set, we need to go to the zone -->
@@ -390,24 +390,24 @@
 						<!-- If we are Alliance -->
 						<If Condition="Me.IsAlliance">
 						
-							<!-- Profile message - Flying to Amberpine Lodge -->
+							<!-- Profile message - Flying to Stars' Rest -->
 							<CustomBehavior File="Message" 
-											Text="Flying to Amberpine Lodge." 
+											Text="Flying to Stars' Rest." 
 											LogColor="Cyan" />
 						
-							<!-- Fly to - Amberpine Lodge hover point -->
+							<!-- Fly to - Stars' Rest hover point -->
 							<CustomBehavior File="FlyTo" 
-											X="3444.486" Y="-2777.132" Z="282.1241" />
+											X="3497.904" Y="2003.362" Z="107.9757" />
 
 							<!-- Fly to - doorway of the inn -->
 							<CustomBehavior File="FlyTo" 
-											X="3437.849" Y="-2772.048" Z="200.4837" />
+											X="3479.655" Y="2002.768" Z="64.89557" />
 							
 							<!-- Custom behavior - ForcedDismount -->
 							<CustomBehavior File="ForcedDismount" />
 
 							<!-- Move to - inside the inn -->
-							<RunTo X="3408.015" Y="-2793.484" Z="201.5198" />
+							<RunTo X="3479.655" Y="2002.768" Z="64.89557" />
 							
 							<!-- Profile message - Setting our Hearthstone -->
 							<CustomBehavior File="Message" 
@@ -416,19 +416,19 @@
 											
 							<!-- Custom behavior - SetHearthstone -->				
 							<CustomBehavior File="SetHearthstone" 
-											MobId="27066" 
-											X="3406.959" Y="-2788.631" Z="201.5214" />
+											MobId="27052" 
+											X="3477.54" Y="2006.678" Z="64.86252" />
 											
 							<!-- Move to - outside of the inn -->
-							<RunTo X="3437.849" Y="-2772.048" Z="200.4837" />
+							<RunTo X="3479.655" Y="2002.768" Z="64.89557" />
 							
-							<!-- Fly to - Amberpine Lodge hover point -->
+							<!-- Fly to - Stars' Rest hover point -->
 							<CustomBehavior File="FlyTo" 
-											X="3444.486" Y="-2777.132" Z="282.1241" />
+											X="3497.904" Y="2003.362" Z="107.9757" />
 							
 							<!-- Profile message - We are in Amberpine Lodge -->
 							<CustomBehavior File="Message" 
-											Text="We are in Amberpine Lodge." 
+											Text="We are in Stars' Rest." 
 											LogColor="Cyan" />
 
 							<!-- Else we are Horde -->

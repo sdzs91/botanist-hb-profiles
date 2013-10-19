@@ -473,7 +473,7 @@
 					<CustomBehavior File="ForcedDismount" />
 
 					<!-- Move to - inside the inn -->
-					<RunTo X="5460.455" Y="-2635.566" Z="306.5505" />
+					<MoveTo X="5460.455" Y="-2635.566" Z="306.5505" />
 					
 					<!-- Interact with Marissa Everwatch and buy 100 Sweet Potato Bread -->
 					<CustomBehavior File="InteractWith"
@@ -524,7 +524,7 @@
 					<CustomBehavior File="ForcedDismount" />
 
 					<!-- Move to - inside the inn -->
-					<RunTo X="5460.455" Y="-2635.566" Z="306.5505" />
+					<MoveTo X="5460.455" Y="-2635.566" Z="306.5505" />
 					
 					<!-- Interact with Marissa Everwatch and buy 100 Sweet Potato Bread -->
 					<CustomBehavior File="InteractWith"
@@ -598,7 +598,7 @@
 					<CustomBehavior File="ForcedDismount" />
 
 					<!-- Move to - inside the inn -->
-					<RunTo X="5460.455" Y="-2635.566" Z="306.5505" />
+					<MoveTo X="5460.455" Y="-2635.566" Z="306.5505" />
 					
 					<!-- Interact with Marissa Everwatch and buy 100 Sweet Potato Bread -->
 					<CustomBehavior File="InteractWith"
@@ -649,7 +649,7 @@
 					<CustomBehavior File="ForcedDismount" />
 
 					<!-- Move to - inside the inn -->
-					<RunTo X="5460.455" Y="-2635.566" Z="306.5505" />
+					<MoveTo X="5460.455" Y="-2635.566" Z="306.5505" />
 					
 					<!-- Interact with Marissa Everwatch and buy 100 Sweet Potato Bread -->
 					<CustomBehavior File="InteractWith"
@@ -708,33 +708,36 @@
 									Text="Moving to the innkeep to purchase some."
 									LogColor="Orange" />				
 				
-					<!-- Fly to - XXXXXXXXXXXXXX-->
-					<CustomBehavior File="FlyTo"
-									X="177.9547" Y="2629.776" Z="87.03335" />
+					<!-- Fly to - Stars' Rest hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="3497.904" Y="2003.362" Z="107.9757" />
+
+					<!-- Fly to - doorway of the inn -->
+					<CustomBehavior File="FlyTo" 
+									X="3479.655" Y="2002.768" Z="64.89557" />
 					
-					<!-- Forced dismount -->				
+					<!-- Custom behavior - ForcedDismount -->
 					<CustomBehavior File="ForcedDismount" />
-				
-					<!-- Move to - XXXXXXXXXXXXXXXX -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="189.3407" Y="2613.765" Z="87.28365" />
+
+					<!-- Move to - inside the inn -->
+					<MoveTo X="3479.655" Y="2002.768" Z="64.89557" />
 					
-					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Briny Hardcheese -->
+					<!-- Interact with Naohain and buy 100 Briny Hardcheese -->
 					<CustomBehavior File="InteractWith"
 												ObjectType="Npc"
 												GossipOptions="2"
 												Range="75"
-												MobId="16602" 
+												MobId="27052" 
 												BuyItemId="35952" 
 												BuyItemCount="100"
-												X="190.8758" Y="2610.927" Z="87.28384" />
+												X="3477.54" Y="2006.678" Z="64.86252" />
 
 					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="60000" />
 
-					<!-- Move to - Thrallmar flight master -->				
-					<RunTo X="229.219" Y="2634.052" Z="87.74729" />
+					<!-- Move to - Stars' Rest flight master -->				
+					<MoveTo X="3504.065" Y="1993.816" Z="64.91144" />
 					
 				</If>	<!-- If we don't have Briny Hardcheese -->
 					
@@ -773,7 +776,7 @@
 					<CustomBehavior File="ForcedDismount" />
 
 					<!-- Move to - Aegalas /> -->
-					<RunTo X="3821.834" Y="1583.588" Z="86.69984" />
+					<MoveTo X="3821.834" Y="1583.588" Z="86.69984" />
 					
 					<!-- Interact with Aegalas and buy 100 Briny Hardcheese -->
 					<CustomBehavior File="InteractWith"
@@ -789,7 +792,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Agmar's Hammer flight master -->				
-					<RunTo X="3867.424" Y="1526.952" Z="89.9874" />			
+					<MoveTo X="3867.424" Y="1526.952" Z="89.9874" />			
 			
 				</If>	<!-- If we don't have Briny Hardcheese -->
 	
@@ -859,7 +862,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Thrallmar flight master -->				
-					<RunTo X="229.219" Y="2634.052" Z="87.74729" />
+					<MoveTo X="229.219" Y="2634.052" Z="87.74729" />
 					
 				</If>	<!-- If we don't have Briny Hardcheese -->
 					
@@ -910,7 +913,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Warsong Hold exit -->				
-					<RunTo X="2735.862" Y="6092.32" Z="75.89193" />			
+					<MoveTo X="2735.862" Y="6092.32" Z="75.89193" />			
 			
 				</If>	<!-- If we don't have Briny Hardcheese -->
 	
@@ -960,12 +963,12 @@
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
 				
-				<!-- If we don't have Briny Hardcheese -->
-				<If Condition="!HasItem(35952)">
+				<!-- If we don't have Briny Hardcheese or Mead Basted Caribou -->
+				<If Condition="(!HasItem(35952)) &amp;&amp; (!HasItem(35953))">
 				
 					<!-- Profile message - We don't have any Briny Hardcheese -->
 					<CustomBehavior File="Message" 
-									Text="We don't have any Briny Hardcheese."
+									Text="We don't have any Briny Hardcheese/Mead Basted Caribou."
 									LogColor="Orange" />
 									
 					<!-- Profile message - Moving to the innkeep to purchase some -->
@@ -973,44 +976,51 @@
 									Text="Moving to the innkeep to purchase some."
 									LogColor="Orange" />				
 				
-					<!-- Fly to - XXXXXXXXXXXXXX-->
-					<CustomBehavior File="FlyTo"
-									X="177.9547" Y="2629.776" Z="87.03335" />
-					
-					<!-- Forced dismount -->				
-					<CustomBehavior File="ForcedDismount" />
+					<!-- Profile message - Flying to Fizzcrank Airstrip -->
+					<CustomBehavior File="Message" 
+									Text="Flying to Fizzcrank Airstrip." 
+									LogColor="Cyan" />
 				
-					<!-- Move to - XXXXXXXXXXXXXXXX -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="189.3407" Y="2613.765" Z="87.28365" />
+					<!-- Fly to the Fizzcrank Airstrip hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="4136.879" Y="5238.005" Z="73.28379" />
+
+					<!-- Fly to - doorway of the inn -->
+					<CustomBehavior File="FlyTo" 
+									X="4162.544" Y="5281.484" Z="26.37667" />
 					
-					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Clefthoof Ribs -->
+					<!-- Custom behavior - ForcedDismount -->
+					<CustomBehavior File="ForcedDismount" />
+
+					<!-- Move to - inside the inn -->
+					<MoveTo X="4175.812" Y="5280.616" Z="26.69315" />
+					
+					<!-- Interact with "Charlie" Northtop and buy 100 Mead Basted Caribou -->
 					<CustomBehavior File="InteractWith"
 												ObjectType="Npc"
 												GossipOptions="2"
 												Range="75"
-												MobId="16602" 
-												BuyItemId="29451" 
+												MobId="26596" 
+												BuyItemId="35953" 
 												BuyItemCount="100"
-												X="190.8758" Y="2610.927" Z="87.28384" />
+												X="4178.471" Y="5278.223" Z="26.69429" />
 
 					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="60000" />
 
-					<!-- Move to - Thrallmar flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="229.219" Y="2634.052" Z="87.74729" />
+					<!-- Move to - Fizzcrank Airstrip flight master -->				
+					<MoveTo X="4125.934" Y="5311.984" Z="28.6756" />
 					
-				</If>	<!-- If we don't have Clefthoof Ribs -->
+				</If>	<!-- If we don't have Briny Hardcheese or Mead Basted Caribou -->
 					
 			</If>	<!-- If we are Alliance -->
 			
 			<!-- If we are Horde -->
 			<If Condition="Me.IsHorde" >
 				
-				<!-- If we don't have Briny Hardcheese -->
-				<If Condition="!HasItem(35952)">
+				<!-- If we don't have Briny Hardcheese or Mead Basted Caribou -->
+				<If Condition="(!HasItem(35952)) &amp;&amp; (!HasItem(35953))">
 				
 					<!-- Profile message - We don't have any Briny Hardcheese -->
 					<CustomBehavior File="Message" 
@@ -1055,7 +1065,7 @@
 					<CustomBehavior File="NoCombatMoveTo" 
 									X="1920.288" Y="-6173.525" Z="24.17891" />			
 			
-				</If>	<!-- If we don't have Briny Hardcheese -->
+				</If>	<!-- If we don't have Briny Hardcheese or Mead Basted Caribou -->
 	
 			</If>	<!-- If we are Horde -->
 			
@@ -1183,7 +1193,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Area 52 - flight master -->
-				<RunTo X="3056.502" Y="3589.417" Z="144.2936" />
+				<MoveTo X="3056.502" Y="3589.417" Z="144.2936" />
 					
 				</If>	<!-- If we don't have Mag'har Grainbread -->
 			
@@ -1648,7 +1658,7 @@
 					<CustomBehavior File="ForcedDismount" />
 
 					<!-- Move inside the inn -->
-					<RunTo X="-708.0077" Y="2736.445" Z="94.73333" />
+					<MoveTo X="-708.0077" Y="2736.445" Z="94.73333" />
 					
 					<!-- Interact with Sid Limbardi and buy 100 Clefthoof Ribs -->
 					<CustomBehavior File="InteractWith"
@@ -1866,13 +1876,13 @@
 									LogColor="Orange" />				
 				
 					<!-- Move to - inn - Honor Hold -->
-					<RunTo X="-709.9306" Y="2699.804" Z="94.41746" />
+					<MoveTo X="-709.9306" Y="2699.804" Z="94.41746" />
 					
 					<!-- Forced dismount -->
 					<CustomBehavior File="ForcedDismount" />
 
 					<!-- Move inside the inn -->
-					<RunTo X="-708.0077" Y="2736.445" Z="94.73333" />
+					<MoveTo X="-708.0077" Y="2736.445" Z="94.73333" />
 					
 					<!-- Interact with Sid Limbardi and buy 100 Smoked Talbuk Venison -->
 					<CustomBehavior File="InteractWith"
@@ -1913,7 +1923,7 @@
 									LogColor="Orange" />				
 				
 					<!-- Move to - Floyd Pinkus -->
-					<RunTo X="189.3407" Y="2613.765" Z="87.28365" />
+					<MoveTo X="189.3407" Y="2613.765" Z="87.28365" />
 					
 					<!-- Interact with Floyd Pinkus and buy 100 27854 -->
 					<CustomBehavior File="InteractWith"

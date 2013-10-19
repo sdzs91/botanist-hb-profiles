@@ -830,6 +830,8 @@
 					
 			</If>	<!-- If we are inside Drak'Tharon Keep -->
 
+			
+			
 			<!-- If we are in The Nexus -->
 			<If Condition="Me.MapId == 576">
 			
@@ -853,8 +855,8 @@
 			<!-- If we are inside Ahn'kahet: The Old Kingdom -->
 			<If Condition="Me.ZoneId == 4494" >
 				
-				<!-- If our Hearthstone/Innkeepers Daughter is set at Amberpine Lodge or Agmar's Hammer -->
-				<If Condition="(Me.HearthstoneAreaId == 4204) || (Me.HearthstoneAreaId == 4165)">
+				<!-- If our hearthstone is set at Stars' Rest or Agmar's Hammer -->
+				<If Condition="(Me.HearthstoneAreaId == 4158) || (Me.HearthstoneAreaId == 4165)">
 				
 					<!-- Profile message - We are in Ahn'kahet: The Old Kingdom, using our Hearthstone/Innkeeper's Daughter -->
 					<CustomBehavior File="Message" 
@@ -932,12 +934,13 @@
 					<!-- If we are Alliance -->
 					<If Condition="Me.IsAlliance">
 					
-						<!-- Fly to - XXXXXXXXXXX hover point -->
+						<!-- Fly to - Stars' Rest hover point -->
 						<CustomBehavior File="FlyTo" 
-										X="3424.898" Y="-2753.648" Z="199.3004" />
+										X="3497.904" Y="2003.362" Z="107.9757" />
 						
 						<!-- Fly to - ally repair vendor -->
-
+						<CustomBehavior File="FlyTo" 
+										X="3509.89" Y="2002.35" Z="65.17567" />
 						
 						<!-- Custom behavior - ForcedDismount -->
 						<CustomBehavior File="ForcedDismount" />
@@ -954,20 +957,20 @@
 									DoSell="True" 
 									DoTrain="False" />				
 					
-						<!-- Amberpine Lodge -->					
+						<!-- Stars' Rest -->					
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Brom Armstrong" 
-										Entry="27062" 
+								<Vendor Name="Sentinel Amberline" 
+										Entry="27055" 
 										Type="Repair" 
-										X="3421.368" Y="-2757.578" Z="199.3002" />
+										X="3514.701" Y="1999.156" Z="64.88631" />
 							</Vendors>
 						</SetVendor>
 							
 						<!-- Mailbox -->
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+								<Mailbox X="3477.86" Y="2001.093" Z="64.93382" />
 							</Mailboxes>
 						</SetMailbox>	
 						
@@ -1034,8 +1037,9 @@
 					<!-- If we are Alliance -->
 					<If Condition="Me.IsAlliance">
 					
-						<!-- Hover point -->
-						<CustomBehavior File="FlyTo" X="3444.486" Y="-2777.132" Z="282.1241" />
+						<!-- Fly to - Stars' Rest hover point -->
+						<CustomBehavior File="FlyTo" 
+										X="3497.904" Y="2003.362" Z="107.9757" />
 						
 					</If>	<!-- If we are Alliance -->
 					
@@ -1094,8 +1098,8 @@
 			<!-- If we are inside The Nexus -->
 			<If Condition="Me.ZoneId == 4265" >
 				
-				<!-- If our hearthstone/innkeepers daughter is set at Amberpine Lodge or Warsong Hold -->
-				<If Condition="(Me.HearthstoneAreaId == 4204) || (Me.HearthstoneAreaId == 4129)">
+				<!-- If our hearthstone/innkeepers daughter is set at Fizzcrank Airstrip or Warsong Hold -->
+				<If Condition="(Me.HearthstoneAreaId == 4108) || (Me.HearthstoneAreaId == 4129)">
 				
 					<!-- Profile message - We are in The Nexus, using our Hearthstone/Innkeeper's Daughter -->
 					<CustomBehavior File="Message" 
@@ -1176,12 +1180,18 @@
 					<!-- If we are Alliance -->
 					<If Condition="Me.IsAlliance">
 					
-						<!-- Fly to - XXXXXXXXXXX hover point -->
+						<!-- Profile message - Flying to Fizzcrank Airstrip -->
+						<CustomBehavior File="Message" 
+										Text="Flying to Fizzcrank Airstrip." 
+										LogColor="Cyan" />
+					
+						<!-- Fly to the Fizzcrank Airstrip hover point -->
 						<CustomBehavior File="FlyTo" 
-										X="3424.898" Y="-2753.648" Z="199.3004" />
+										X="4136.879" Y="5238.005" Z="73.28379" />
 						
 						<!-- Fly to - ally repair vendor -->
-
+						<CustomBehavior File="FlyTo" 
+										X="4139.759" Y="5280.504" Z="24.97566" />
 						
 						<!-- Custom behavior - ForcedDismount -->
 						<CustomBehavior File="ForcedDismount" />
@@ -1198,20 +1208,19 @@
 									DoSell="True" 
 									DoTrain="False" />				
 					
-						<!-- Amberpine Lodge -->					
+						<!-- Fizzcrank Airstrip -->					
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Brom Armstrong" 
-										Entry="27062" 
+								<Vendor Name="Willis Wobblewheel" 
+										Entry="26599" 
 										Type="Repair" 
-										X="3421.368" Y="-2757.578" Z="199.3002" />
+										X="4135.004" Y="5281.168" Z="25.08808" />
 							</Vendors>
 						</SetVendor>
 							
-						<!-- Mailbox -->
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+								<Mailbox X="4163.485" Y="5284.322" Z="26.37681" />
 							</Mailboxes>
 						</SetMailbox>	
 						
@@ -1278,8 +1287,14 @@
 					<!-- If we are Alliance -->
 					<If Condition="Me.IsAlliance">
 					
-						<!-- Hover point -->
-						<CustomBehavior File="FlyTo" X="3444.486" Y="-2777.132" Z="282.1241" />
+						<!-- Profile message - Flying to Fizzcrank Airstrip -->
+							<CustomBehavior File="Message" 
+											Text="Flying to Fizzcrank Airstrip." 
+											LogColor="Cyan" />
+						
+							<!-- Fly to the Fizzcrank Airstrip hover point -->
+							<CustomBehavior File="FlyTo" 
+											X="4136.879" Y="5238.005" Z="73.28379" />
 						
 					</If>	<!-- If we are Alliance -->
 					
@@ -1311,49 +1326,7 @@
 		</If> 	<!-- If our level is 79-80 -->			
 
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		<!-- *******************************************    level is 78-79 ******************************************************* -->
 		
 		
