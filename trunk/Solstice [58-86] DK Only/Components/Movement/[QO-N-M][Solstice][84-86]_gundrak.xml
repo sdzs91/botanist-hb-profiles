@@ -85,7 +85,7 @@
 								Text="Moving to Shattrath portals." 
 								LogColor="Cyan" />				
 								
-				<!-- Fly to shattrath -->
+				<!-- Fly to Shattrath -->
 				<CustomBehavior File="FlyTo" X="-1977.775" Y="5373.526" Z="54.82305" />
 
 				<!-- Go to the ground -->
@@ -101,10 +101,10 @@
 									Text="Taking Stormwind portal." 
 									LogColor="Cyan" />		
 								
-					<!-- Portal to stormwind -->
+					<!-- Portal to Stormwind -->
 					<CustomBehavior File="FlyTo" X="-1892.733" Y="5390.708" Z="-12.42776" />
 					
-					<!-- Interact with stormwind portal -->
+					<!-- Interact with Stormwind portal -->
 					<CustomBehavior File="InteractWith" 
 									MobId="183325" 
 									ObjectType="Gameobject" 
@@ -340,7 +340,7 @@
 				
 			</If> <!-- Eastern Kingdoms -->				
 							
-			<!-- If we are still in Drak'Tharon Keep, exit the instance -->
+			<!-- If we are in Drak'Tharon Keep, exit the instance -->
 			<If Condition="Me.ZoneId == 4196">
 			
 				<!-- Profile message - Drak'Tharon Keep detected, exiting the instance -->

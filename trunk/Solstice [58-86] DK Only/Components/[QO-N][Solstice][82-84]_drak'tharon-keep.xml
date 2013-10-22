@@ -84,16 +84,26 @@
 				<!-- If we are inside Drak'Tharon Keep -->
 				<If Condition="Me.ZoneId == 4196" >
 				
-					<!-- Profile message - Drak'Tharon Keep detected. Running out -->
+					<!-- Profile message - Drak'Tharon Keep detected -->
 					<CustomBehavior File="Message" 
-									Text="Drak'Tharon Keep detected, running out."
+									Text="Drak'Tharon Keep detected."
 									LogColor="Fuchsia" />
 					
 					<!-- If we are beyond Novos the Summoner, avoid aggro while exiting -->
 					<If Condition="Me.X &lt; -396.797 &amp;&amp; Me.Y &lt; -641.9761" >
 
+						<!-- Profile message - Moving to Temple of the Forgotten -->
+						<CustomBehavior File="Message" 
+										Text="Moving to Temple of the Forgotten."
+										LogColor="Fuchsia" />
+					
 						<!-- Move to - Temple of the Forgotten -->
 						<MoveTo X="-406.9257" Y="-731.8883" Z="28.5802" />
+						
+						<!-- Profile message - Moving to the portal -->
+						<CustomBehavior File="Message" 
+										Text="Avoiding Novos the Summoner."
+										LogColor="Fuchsia" />
 						
 						<!-- CTM to - avoid Novos the Summoner -->
 						<CustomBehavior File="MyCTM"
@@ -104,6 +114,11 @@
 										X="-338.8145" Y="-722.0858" Z="28.57786" />
 					
 					</If>	<!-- If we are not in the Drak'Tharon Keep box, load the movement profile -->
+					
+					<!-- Profile message - Moving to the portal -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the portal."
+									LogColor="Fuchsia" />
 					
 					<!-- Move to - zone in location -->
 					<MoveTo X="-517.15" Y="-489.201" Z="11.01775" />

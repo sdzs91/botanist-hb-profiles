@@ -414,7 +414,7 @@
 						
 							<!-- Load profile - [QO-N][Solstice][58-90][repair-mail] -->
 							<CustomBehavior File="LoadProfile" 
-														ProfileName="Movement\[QO-N-M][Solstice][58-60]_grind" />
+														ProfileName="Movement\[QO-N-M][Solstice][58-62]_grind" />
 					
 					</If>	<!-- If we are not in Outland -->
 					

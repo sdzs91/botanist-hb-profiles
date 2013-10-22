@@ -630,23 +630,38 @@
 			<!-- If we are still in Drak'Tharon Keep, exit the instance -->
 			<If Condition="Me.ZoneId == 4196">
 			
-				<!-- Profile message - Our Hearthstone/Innkeeper's Daughter didn't work. Moving to the exit -->
+				<!-- Profile message - Drak'Tharon Keep detected, exiting the instance -->
 				<CustomBehavior File="Message" 
-								Text="Our Hearthstone/Innkeeper's Daughter didn't work. Moving to the exit."
+								Text="Our Hearthstone/Innkeepers Daughter didn't work. Moving to the Argent Stand."
 								LogColor="Fuchsia" />
 					
-					<!-- Make our way to the exit -->
-					<RunTo X="-517.15" Y="-489.201" Z="11.01775" />
-					
-					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" 
-									X="-518.2795" Y="-460.8023" Z="10.98073" />
-					
-					<!-- Move to - zone out location -->
-					<RunTo X="4774.44" Y="-2030.03" Z="229.38" />	
-					
-					<!-- Move to - flying mount location -->
-					
+				<!-- Make our way to the exit -->
+				<MoveTo X="-517.15" Y="-489.201" Z="11.01775" />
+				
+				<!-- Go through the portal -->
+				<CustomBehavior File="Misc\InInstance" 
+								X="-518.2795" Y="-460.8023" Z="10.98073" />
+				
+				<!-- Move to - zone out location -->
+				<MoveTo X="4774.44" Y="-2030.03" Z="229.38" />	
+				
+				<!-- Move to - base of the northern ramp -->
+				<MoveTo X="4789.506" Y="-2044.945" Z="229.4409" />
+				
+				<!-- Move to - top of the northern ramp -->
+				<MoveTo X="4824.082" Y="-2045.761" Z="250.1382" />
+				
+				<!-- Move to - flying mount location - NW corner-->
+				<MoveTo X="4879.953" Y="-2032.887" Z="250.0568" />
+				
+				<!-- Custom behavior - Forced Dismount -->				
+				<CustomBehavior File="ForcedMount"
+								MountType="Flying" />
+
+				<!-- Fly outside of Drak'tharon Keep - hover point -->
+				<CustomBehavior File="MyCTM" 
+								X="5069.032" Y="-2051.748" Z="416.996" />
+
 			</If>	<!-- If we are inside Drak'Tharon Keep -->
 
 			<!-- If we are in Northrend -->

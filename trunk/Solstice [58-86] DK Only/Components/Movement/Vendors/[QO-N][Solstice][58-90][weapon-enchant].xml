@@ -672,7 +672,58 @@
 					
 					</If>	<!-- If we have the Battle Scythe -->
 					
-						
+					<!-- If we have the Ebonsoul Maul -->
+					<If  Condition="HasItem(72991)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Ebonsoul Maul as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Ebonsoul Maul as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Ebonsoul Maul -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="72991" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Ebonsoul Maul -->
+					
+					<!-- If we have the Helboar Carving Blade -->
+					<If  Condition="HasItem(25987)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Helboar Carving Blade as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Helboar Carving Blade as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Helboar Carving Blade -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="25987" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Helboar Carving Blade -->
+					
 				</Else>
 
 			</If>	<!-- If we don't have Aura of Spellshattering -->

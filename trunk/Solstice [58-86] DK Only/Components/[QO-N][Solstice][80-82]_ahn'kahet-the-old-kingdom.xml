@@ -369,11 +369,15 @@
 						<DisableBehavior Name="Combat" />	
 							
 						<!-- Move to - right-hand spiders - pivot location -->
-						<MoveTo X="468.003" Y="-1016.081" Z="30.35196" />				
+						<MoveTo X="475.0877" Y="-1037.027" Z="30.35514" />				
+										
+						<!-- Wait timer - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />				
 										
 						<!-- CTM to - align our target macro -->
 						<CustomBehavior File="MyCTM"
-										X="478.8846" Y="-1028.182" Z="30.35196" />
+										X="484.1889" Y="-1037.563" Z="30.36884" />
 							
 						<!-- Profile message - Enabling combat -->
 						<CustomBehavior File="Message" 
@@ -461,325 +465,20 @@
 						<!-- DisableBehavior - Combat -->
 						<DisableBehavior Name="Combat" />
 
-						<!-- Move to - bottom of the right incline -->
-						<MoveTo X="491.9808" Y="-1030.489" Z="30.35871" />
-						
-						<!-- CTM to - up the incline -->
-						<CustomBehavior File="MyCTM" 
-										X="501.2187" Y="-1022.118" Z="34.97657" />
+						<!-- Move to - chase - Ahn'kahar Spell Flinger -->
+						<MoveTo X="518.0477" Y="-1007.622" Z="37.94538" />				
 
-						<!-- Wait timer - wait 3 seconds - delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="3000" />					
-											
-						<!-- While condition - while our X < 510 -->			
-						<While Condition="Me.X &lt; 510" >
-					
-							<!-- Profile message - Targeting the patrol, DO NOT TOUCH !!! -->
-							<CustomBehavior File="Message" 
-											Text="Targeting the patrol, DO NOT TOUCH !!!" 
-											LogColor="Orange" />
-
-							<!-- Macro - Clear target -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/cleartarget" 
-											NumOfTimes="1" 
-											WaitTime="0"/>
-
-							<!-- Macro - targetenemy -->						
-							<CustomBehavior File="RunMacro"
-											NumOfTimes="1"
-											Macro="/targetenemy [noharm]" />
-							
-							<!-- If condition equals true -->
-							<If Condition="true">
-							
-								<!-- If our current target is the Ahn'kahar Spell Flinger -->
-								<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 30278)">
-								
-									<!-- Profile message - My target is the Ahn'kahar Spell Flinger -->
-									<CustomBehavior File="Message" 
-													Text="My target is Ahn'kahar Spell Flinger, casting Death Grip." 
-													LogColor="Fuchsia" />				
-				
-									<!-- Profile message - Casting Bone Shield -->
-									<CustomBehavior File="Message" 
-													Text="Casting Bone Shield."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Bone Shield -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Bone Shield" />
-				
-									<!-- Profile message - Casting Raise Dead -->
-									<CustomBehavior File="Message" 
-													Text="Casting Raise Dead."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Raise Dead -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Raise Dead" />
-				
-									<!-- Move to - chase - Ahn'kahar Spell Flinger -->
-									<CustomBehavior File="MyCTM"
-													X="506.4545" Y="-1017.469" Z="37.96931" />				
-													
-									<!-- Macro - Cast Death Grip -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="2"
-													Macro="/cast Death Grip" />
-
-									<!-- Profile message - Enabling combat -->
-									<CustomBehavior File="Message" 
-														Text="Enabling combat." 
-														LogColor="Gold" />
-									
-									<!-- EnableBehavior - Combat -->	
-									<EnableBehavior Name="Combat" />				
-														
-									<!-- Wait timer - wait 3 seconds - aggro -->
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="3000" />
-											
-									<!-- Move to - patrol - safety -->
-									<MoveTo X="528.571" Y="-1006.355" Z="37.9397" />
-
-									<!-- Wait timer - wait 3 - delay -->
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="3000" />			
-									
-									<!-- Macro - Clear target -->					
-									<CustomBehavior File="RunMacro" 
-													Macro="/cleartarget" 
-													NumOfTimes="1" 
-													WaitTime="0"/>
-									
-								</If>	<!-- If our current target is the Ahn'kahar Spell Flinger -->	
-								
-								<!-- If our current target is the Plague Walker -->
-								<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 30283)">
-								
-									<!-- Profile message - My target is the Plague Walker -->
-									<CustomBehavior File="Message" 
-													Text="My target is Plague Walker, casting Death Grip." 
-													LogColor="Fuchsia" />				
-				
-									<!-- Profile message - Casting Bone Shield -->
-									<CustomBehavior File="Message" 
-													Text="Casting Bone Shield."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Bone Shield -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Bone Shield" />
-				
-									<!-- Profile message - Casting Raise Dead -->
-									<CustomBehavior File="Message" 
-													Text="Casting Raise Dead."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Raise Dead -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Raise Dead" />
-				
-									<!-- Move to - chase - Plague Walker -->
-									<CustomBehavior File="MyCTM"
-													X="506.4545" Y="-1017.469" Z="37.96931" />				
-													
-									<!-- Macro - Cast Death Grip -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="2"
-													Macro="/cast Death Grip" />
-
-									<!-- Profile message - Enabling combat -->
-									<CustomBehavior File="Message" 
-														Text="Enabling combat." 
-														LogColor="Gold" />
-									
-									<!-- EnableBehavior - Combat -->	
-									<EnableBehavior Name="Combat" />				
-														
-									<!-- Wait timer - wait 3 seconds - aggro -->
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="3000" />
-											
-									<!-- Move to - patrol - safety -->
-									<MoveTo X="528.571" Y="-1006.355" Z="37.9397" />
-
-									<!-- Wait timer - wait 3 - delay -->
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="3000" />			
-									
-									<!-- Macro - Clear target -->					
-									<CustomBehavior File="RunMacro" 
-													Macro="/cleartarget" 
-													NumOfTimes="1" 
-													WaitTime="0"/>			
-									
-								</If>	<!-- If our current target is the Plague Walker -->
-								
-								<!-- If our current target is the Ahn'kahar Slasher -->
-								<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 30277)">
-								
-									<!-- Profile message - My target is the Ahn'kahar Slasher -->
-									<CustomBehavior File="Message" 
-													Text="My target is Ahn'kahar Slasher, casting Death Grip." 
-													LogColor="Fuchsia" />				
-				
-									<!-- Profile message - Casting Bone Shield -->
-									<CustomBehavior File="Message" 
-													Text="Casting Bone Shield."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Bone Shield -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Bone Shield" />
-				
-									<!-- Profile message - Casting Raise Dead -->
-									<CustomBehavior File="Message" 
-													Text="Casting Raise Dead."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Raise Dead -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Raise Dead" />
-				
-									<!-- Move to - chase - Ahn'kahar Slasher -->
-									<CustomBehavior File="MyCTM"
-													X="506.4545" Y="-1017.469" Z="37.96931" />				
-													
-									<!-- Macro - Cast Death Grip -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="2"
-													Macro="/cast Death Grip" />
-
-									<!-- Profile message - Enabling combat -->
-									<CustomBehavior File="Message" 
-														Text="Enabling combat." 
-														LogColor="Gold" />
-									
-									<!-- EnableBehavior - Combat -->	
-									<EnableBehavior Name="Combat" />				
-														
-									<!-- Wait timer - wait 3 seconds - aggro -->
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="3000" />
-											
-									<!-- Move to - patrol - safety -->
-									<MoveTo X="528.571" Y="-1006.355" Z="37.9397" />
-
-									<!-- Wait timer - wait 3 - delay -->
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="3000" />			
-									
-									<!-- Macro - Clear target -->					
-									<CustomBehavior File="RunMacro" 
-													Macro="/cleartarget" 
-													NumOfTimes="1" 
-													WaitTime="0"/>			
-									
-								</If>	<!-- If our current target is the Ahn'kahar Slasher -->
-
-								<!-- If our current target is the Ahn'kahar Web Winder -->
-								<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 30276)">
-								
-									<!-- Profile message - My target is the Ahn'kahar Web Winder -->
-									<CustomBehavior File="Message" 
-													Text="My target is Ahn'kahar Web Winder, casting Death Grip." 
-													LogColor="Fuchsia" />				
-				
-									<!-- Profile message - Casting Bone Shield -->
-									<CustomBehavior File="Message" 
-													Text="Casting Bone Shield."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Bone Shield -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Bone Shield" />
-				
-									<!-- Profile message - Casting Raise Dead -->
-									<CustomBehavior File="Message" 
-													Text="Casting Raise Dead."  
-													LogColor="Orange" />
-												
-									<!-- Macro - Cast Raise Dead -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="1"
-													Macro="/cast Raise Dead" />
-				
-									<!-- Move to - chase - Ahn'kahar Web Winder -->
-									<CustomBehavior File="MyCTM"
-													X="506.4545" Y="-1017.469" Z="37.96931" />				
-													
-									<!-- Macro - Cast Death Grip -->
-									<CustomBehavior File="RunMacro"
-													NumOfTimes="2"
-													Macro="/cast Death Grip" />
-
-									<!-- Profile message - Enabling combat -->
-									<CustomBehavior File="Message" 
-														Text="Enabling combat." 
-														LogColor="Gold" />
-									
-									<!-- EnableBehavior - Combat -->	
-									<EnableBehavior Name="Combat" />				
-														
-									<!-- Wait timer - wait 3 seconds - aggro -->
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="3000" />
-											
-									<!-- Move to - patrol - safety -->
-									<MoveTo X="528.571" Y="-1006.355" Z="37.9397" />
-
-									<!-- Wait timer - wait 3 - delay -->
-									<CustomBehavior File="WaitTimer" 
-													WaitTime="3000" />			
-									
-									<!-- Macro - Clear target -->					
-									<CustomBehavior File="RunMacro" 
-													Macro="/cleartarget" 
-													NumOfTimes="1" 
-													WaitTime="0"/>			
-									
-								</If>	<!-- If our current target is the Ahn'kahar Web Winder -->
-								
-								<!-- If our current target is not the Ahn'kahar Spell Flinger -->
-								<Else>
-								
-									<!-- Profile message - No targets available. Initiating scan sequence. -->
-									<CustomBehavior File="Message" 
-													Text="No targets available. Initiating scan sequence." 
-													LogColor="Yellow" />
-														
-									<!-- Macro - Clear target -->					
-									<CustomBehavior File="RunMacro" 
-													Macro="/cleartarget" 
-													NumOfTimes="1" 
-													WaitTime="0"/>	
-									
-								</Else>	<!-- If our current target is not the Ahn'kahar Spell Flinger -->	
-								
-							</If>	<!-- If condition equals true  -->					
-												
-						</While>	<!-- While condition - while our X < 510 -->
-						
-						
-						<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
-						
-						
-						<!-- Move to - left-hand spiders - pivot location -->
-						<MoveTo X="536.6164" Y="-1009.828" Z="37.93966" />
-								
-						<!-- Profile message - Waiting 50 seconds for our cool downs to reset -->
+						<!-- Profile message - Enabling combat -->
 						<CustomBehavior File="Message" 
-											Text="Waiting 50 seconds for our cool downs to reset." 
+											Text="Enabling combat." 
+											LogColor="Gold" />
+						
+						<!-- EnableBehavior - Combat -->	
+						<EnableBehavior Name="Combat" />				
+												
+						<!-- Profile message - Waiting 120 seconds to be sure we aggro the patrols and allow our CD's to reset -->
+						<CustomBehavior File="Message" 
+											Text="Waiting 120 seconds to be sure we aggro the patrols and allow our CD's to reset." 
 											LogColor="Gold" />		
 								
 						<!-- Profile message - Let's dance -->
@@ -792,10 +491,17 @@
 										NumOfTimes="1"
 										Macro="/dance" />		
 								
-						<!-- Wait timer - wait 50 seconds - delay -->
+						<!-- Wait timer - wait 120 seconds - delay -->
 						<CustomBehavior File="WaitTimer" 
-										WaitTime="50000" />		
-								
+										WaitTime="120000" />
+												
+									
+						<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
+						
+						
+						<!-- Move to - left-hand spiders - pivot location -->
+						<MoveTo X="536.6164" Y="-1009.828" Z="37.93966" />
+
 						<!-- CTM to - align our target macro -->
 						<CustomBehavior File="MyCTM"
 										X="539.1569" Y="-1000.962" Z="37.93966" />
