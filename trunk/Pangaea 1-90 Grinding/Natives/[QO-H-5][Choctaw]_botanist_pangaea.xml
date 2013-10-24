@@ -340,7 +340,7 @@
 				<CustomBehavior File="ForcedDismount" />
 					<RunTo X="5569.071" Y="5762.41" Z="-75.22579" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
-				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+				<CustomBehavior File="Message" Text="Setting my Hearthstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="28038"  X="5566.248" Y="5763.706" Z="-75.22616" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -375,12 +375,12 @@
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />													
 						<SetVendor>
 							<Vendors>
-								<Vendor Name="Mardan Thunderhoof" Entry="28040" Type="Repair" X="5552.257" Y="5738.877" Z="-76.21824" />
+								<Vendor Name="Armorer Orkuruk" Entry="25274" Type="Repair" X="2762.784" Y="6199.83" Z="83.44633" />
 							</Vendors>
 						</SetVendor>
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="5560.921" Y="5757.347" Z="-76.03406" />
+								<Mailbox X="2792.48" Y="6152.152" Z="84.76149" />
 							</Mailboxes>
 						</SetMailbox>				
 						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />

@@ -583,8 +583,12 @@
 								LogColor="Lime" />
 				
 				<!-- Road entering bough shadow near entrance to azshara -->
-				<RunTo X="2934.957" Y="-3655.47" Z="99.57008" />
+				<RunTo X="3085.449" Y="-3404.837" Z="142.0021" />
 				<CustomBehavior File="ForcedDismount" />	
+								 
+				<!-- UserSettings -->
+				<CustomBehavior File="UserSettings"
+								UseMount="False" />			 
 								 
 					<!-- User notification - we have reached the farming area -->			 
 					<CustomBehavior File="Message" 
@@ -629,7 +633,10 @@
 					<!-- Farm here until our bags are full, gear is broke or until we reach level 27 -->	
 					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 27)"  />
 					
-
+					<!-- UserSettings -->
+					<CustomBehavior File="UserSettings"
+									UseMount="True" />
+					
 					<!-- Bag and durability check -->
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" >
 					
