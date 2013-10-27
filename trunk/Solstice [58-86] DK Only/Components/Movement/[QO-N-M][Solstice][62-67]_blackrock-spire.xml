@@ -26,6 +26,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="-8830.189" Y="616.5771" Z="94.05379" Radius="1" />
 		<Blackspot X="-7120.994" Y="-1208.281" Z="299.876" Radius="6" />
 		<Blackspot X="-7119.151" Y="-1225.816" Z="290.3206" Radius="3" />
 	</Blackspots>
@@ -91,13 +92,13 @@
 				<If Condition="Me.IsAlliance">
 					
 					<!-- Move to Honor Hold and fly to the Dark portal -->
-					<RunTo X="-673.42" Y="2717.27" Z="94.18" />
+					<MoveTo X="-673.42" Y="2717.27" Z="94.18" />
 					
 					<!-- Use the flight master to fly to the Dark portal -->
-					<RunTo X="-327.35" Y="1020.49" Z="54.24791" />
+					<MoveTo X="-327.35" Y="1020.49" Z="54.24791" />
 					
 					<!-- Move to the Stormwind portal -->
-					<RunTo X="-337.2882" Y="965.1047" Z="54.27977" />
+					<MoveTo X="-337.2882" Y="965.1047" Z="54.27977" />
 					
 					<!-- Interact with - Stormwind portal -->
 					<CustomBehavior File="InteractWith" 
@@ -117,13 +118,13 @@
 				<If Condition="Me.IsHorde">		
 				
 					<!-- Move to Thrallmar and fly to the Dark portal -->
-					<Runto X="220.9109" Y="2639.406" Z="87.91273" />
+					<MoveTo X="220.9109" Y="2639.406" Z="87.91273" />
 					
 					<!-- Use the flight master to fly to the Dark portal -->
-					<Runto X="-179.2556" Y="1027.916" Z="54.17752" />
+					<MoveTo X="-179.2556" Y="1027.916" Z="54.17752" />
 					
 					<!-- Move to the Ogrimmar portal -->
-					<Runto X="-160.91" Y="967.9704" Z="54.28086" />
+					<MoveTo X="-160.91" Y="967.9704" Z="54.28086" />
 					
 					<!-- Interact with the portal -->
 					<CustomBehavior File="Message" 
@@ -175,7 +176,7 @@
 									LogColor="Cyan" />		
 
 					<!-- Move to - Orgrimmar zeppelin to Grom'gol -->
-					<RunTo X="1868.09" Y="-4417.422" Z="135.232" />				
+					<MoveTo X="1868.09" Y="-4417.422" Z="135.232" />				
 			
 					<!-- Forced dismount -->		
 					<CustomBehavior File="ForcedDismount" />						
@@ -214,7 +215,7 @@
 									LogColor="Cyan" /> 
 									
 					<!-- Move to - Grom'gol flight master -->
-					<RunTo X="-12414.2" Y="146.29" Z="3.266916" />
+					<MoveTo X="-12414.2" Y="146.29" Z="3.266916" />
 					
 					<!-- Profile message - Moving to the flight master -->
 					<CustomBehavior File="Message" 
@@ -222,7 +223,7 @@
 									LogColor="Cyan" />
 									
 					<!-- Move to - Iron Summit flight master -->
-					<RunTo X="-7123.06" Y="-1236.63" Z="290.131" />
+					<MoveTo X="-7123.06" Y="-1236.63" Z="290.131" />
 					
 				</If> 	<!-- We are horde in Kalimdor -->	
 				
@@ -239,7 +240,7 @@
 				<If Condition="Me.X &gt; 900" >
 					
 					<!-- Run to the 2nd mole machine -->
-					<RunTo X="932.7762" Y="-286.2478" Z="-49.93694" />
+					<MoveTo X="932.7762" Y="-286.2478" Z="-49.93694" />
 					
 					<!-- Interact with the 2nd mole machine -->		
 					<CustomBehavior File="InteractWith" 
@@ -253,13 +254,13 @@
 				</If>	<!-- If we are north of the 2nd mole machine -->					
 
 				<!-- Move to the zone in location -->
-				<RunTo X="456.929" Y="34.0923" Z="-69.56171" />
+				<MoveTo X="456.929" Y="34.0923" Z="-69.56171" />
 				
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
 				
 				<!-- Move to the zone out location -->
-				<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+				<MoveTo X="-7178.41" Y="-922.152" Z="166.092" />	
 
 				<!-- Profile message - Waiting 3 seconds - Bag and durability check -->
 				<CustomBehavior File="Message" 
@@ -297,31 +298,41 @@
 				
 				</If>	<!-- If we don't have any Homemade Cherry Pie -->
 	
-	
 				<!-- Profile message - All checks complete -->
 				<CustomBehavior File="Message" 
 								Text="All checks complete."  
 								LogColor="Orange" />
 	
-				<!-- Profile message - Moving to Blackrock Spire -->
+				<!-- Forced ground mount -->
+				<CustomBehavior File="ForcedMount"
+								MountType="Ground" />
+	
+				<!-- Profile message - Moving to Blackrock Mountain -->
 				<CustomBehavior File="Message" 
-									Text="Moving to Blackrock Spire." 
+									Text="Moving to Blackrock Mountain." 
 									LogColor="Cyan" />
 
-				<!-- Move to BRS -->
-				<RunTo X="-7482.167" Y="-1163.467" Z="277.9067" />
-									
-				<CustomBehavior File="MyCTM" X="-7470.056" Y="-1164.558" Z="273.2744" />
-				<CustomBehavior File="MyCTM" X="-7469.265" Y="-1186.581" Z="273.9157" />
-				<CustomBehavior File="MyCTM" X="-7480.061" Y="-1194.603" Z="278.3599" />
-				<CustomBehavior File="MyCTM" X="-7501.622" Y="-1200.502" Z="281.8502" />
-				<CustomBehavior File="MyCTM" X="-7517.264" Y="-1210.495" Z="290.9408" />
-				<CustomBehavior File="MyCTM" X="-7530.776" Y="-1209.405" Z="285.4507" />
+				<!-- Move to - overhead gate entering Blackrock Mountain -->
+				<MoveTo X="-7498.471" Y="-1077.106" Z="264.779" />
+
+				<!-- Move to - top of the rock -->
+				<MoveTo X="-7503.342" Y="-1154.527" Z="269.4097" />
+				
+				<!-- Move to end of chain -->
+				<MoveTo X="-7481.396" Y="-1163.809" Z="278.2525" />
+				
+				<!-- CTM to - jumps off the end of the chain -->
+				<CustomBehavior File="MyCTM" X="-7466.62" Y="-1165.778" Z="273.5352" />
+				
+				<!-- Move to - corner before the balcony -->
+				<MoveTo X="-7530.776" Y="-1209.405" Z="285.4507" />
+				
+				<!-- CTM to - the balcony -->
 				<CustomBehavior File="MyCTM" X="-7534.965" Y="-1214.374" Z="285.4137" />
 				
 				<!-- Moving to the instance box -->
-				<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
-				
+				<MoveTo X="-7526.999" Y="-1225.375" Z="285.731" />
+
 			</If> <!-- If we are inside Blackrock Depths -->
 			
 			<!-- If we are in Eastern Kingdoms -->
@@ -383,7 +394,7 @@
 					<If Condition="Me.ZoneId != 51 || Me.ZoneId != 25 || ">
 
 						<!-- Run to Iron Summit flight master -->
-						<RunTo X="-7123.06" Y="-1236.63" Z="290.131" />
+						<MoveTo X="-7123.06" Y="-1236.63" Z="290.131" />
 						
 					</If>	<!-- If we aren't in Blackrock Mountain or Searing Gorge -->
 					
@@ -405,32 +416,40 @@
 			
 					</If>	<!-- If we don't have any Homemade Cherry Pie -->
 														
-					<!-- Profile message - Moving to Blackrock Spire -->					
+					<!-- Profile message - All checks complete -->
 					<CustomBehavior File="Message" 
-									Text="Moving to Blackrock Spire." 
-									LogColor="Cyan" />
-							
+									Text="All checks complete."  
+									LogColor="Orange" />
+		
 					<!-- Forced ground mount -->
 					<CustomBehavior File="ForcedMount"
 									MountType="Ground" />
-					
-					<!-- Move to - exit of Iron Summit -->
-					<RunTo X="-7108.294" Y="-1296.693" Z="261.7335" />		
+		
+					<!-- Profile message - Moving to Blackrock Mountain -->
+					<CustomBehavior File="Message" 
+										Text="Moving to Blackrock Mountain." 
+										LogColor="Cyan" />
 
+					<!-- Move to - overhead gate entering Blackrock Mountain -->
+					<MoveTo X="-7498.471" Y="-1077.106" Z="264.779" />
+
+					<!-- Move to - top of the rock -->
+					<MoveTo X="-7503.342" Y="-1154.527" Z="269.4097" />
+					
 					<!-- Move to end of chain -->
-					<CustomBehavior File="NoCombatMoveTo" X="-7501.785" Y="-1152.014" Z="269.5282" />
-					<CustomBehavior File="NoCombatMoveTo" X="-7496.333" Y="-1158.112" Z="271.9786" />
-					<CustomBehavior File="MyCTM" X="-7482.119" Y="-1163.4" Z="277.913" />
-					<CustomBehavior File="MyCTM" X="-7466.77" Y="-1164.503" Z="273.4051" />
-					<CustomBehavior File="MyCTM" X="-7469.265" Y="-1186.581" Z="273.9157" />
-					<CustomBehavior File="MyCTM" X="-7480.061" Y="-1194.603" Z="278.3599" />
-					<CustomBehavior File="MyCTM" X="-7501.622" Y="-1200.502" Z="281.8502" />
-					<CustomBehavior File="MyCTM" X="-7517.264" Y="-1210.495" Z="290.9408" />
-					<CustomBehavior File="MyCTM" X="-7530.776" Y="-1209.405" Z="285.4507" />
+					<MoveTo X="-7481.396" Y="-1163.809" Z="278.2525" />
+					
+					<!-- CTM to - jumps off the end of the chain -->
+					<CustomBehavior File="MyCTM" X="-7466.62" Y="-1165.778" Z="273.5352" />
+					
+					<!-- Move to - corner before the balcony -->
+					<MoveTo X="-7530.776" Y="-1209.405" Z="285.4507" />
+					
+					<!-- CTM to - the balcony -->
 					<CustomBehavior File="MyCTM" X="-7534.965" Y="-1214.374" Z="285.4137" />
 					
 					<!-- Moving to the instance box -->
-					<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />
+					<MoveTo X="-7526.999" Y="-1225.375" Z="285.731" />
 					
 				</If>	<!-- Not in the BRD instance box -->
 				

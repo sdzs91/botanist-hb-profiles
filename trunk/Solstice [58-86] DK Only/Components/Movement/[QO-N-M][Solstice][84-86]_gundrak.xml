@@ -25,6 +25,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="-8830.189" Y="616.5771" Z="94.05379" Radius="1" />
 	</Blackspots>
 
 	<Mailboxes>
@@ -377,7 +378,7 @@
 
 			</If>	<!-- If we are inside Drak'Tharon Keep -->
 
-			<!-- Northrend -->
+			<!-- If we are in Northrend -->
 			<If Condition="Me.MapId == 571">
 			
 				<!-- Profile message - We are in Northrend -->

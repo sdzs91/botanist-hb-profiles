@@ -25,6 +25,7 @@
 </AvoidMobs>
 
 <Blackspots>
+	<Blackspot X="-8830.189" Y="616.5771" Z="94.05379" Radius="3" />
 </Blackspots>
 
 <Mailboxes>
@@ -73,10 +74,7 @@
 			<CustomBehavior File="Message" 
 							Text="We are a Death Knight. Opening a Death Gate so we can enchant our weapon." 
 							LogColor="Orange" />
-		
-			<!-- Custom behavior - Jumpforward -->
-			<CustomBehavior File="Misc\JumpForward" />
-		
+
 			<!-- Wait timer - wait 3 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="3000" />
@@ -103,20 +101,16 @@
 							LogColor="Orange" />				
 							
 			<!-- Move to - base of the stairs -->
-			<CustomBehavior File="NoCombatMoveTo"
-							X="2387.784" Y="-5632.015" Z="377.1465" />				
+			<MoveTo X="2387.784" Y="-5632.015" Z="377.1465" />				
 
-			<!-- Move to - jump pivot location -->
-			<CustomBehavior File="NoCombatMoveTo" 
-							X="2410.612" Y="-5627.151" Z="376.9041" />
+			<!-- CTM to - front of the portal -->
+			<CustomBehavior File="MyCTM"
+							X="2402.62" Y="-5633.28" Z="377.021" />
 							
-			<!-- Move to - jump location -->				
-			<CustomBehavior File="NoCombatMoveTo" 
-							X="2401.803" Y="-5633.846" Z="377.0209" />
+			<!-- CTM to - front of the lower portal -->				
+			<CustomBehavior File="MyCTM"
+							X="2391.013" Y="-5640.382" Z="420.8476" />
 
-			<!-- Custom behavior - Jumpforward -->
-			<CustomBehavior File="Misc\JumpForward" />
-			
 			<!-- Wait timer - wait 10 second - delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="10000" />				
@@ -127,12 +121,17 @@
 							LogColor="Orange" />				
 							
 			<!-- Move to - forge -->
-			<CustomBehavior File="NoCombatMoveTo" 
-							X="2489.72" Y="-5637.246" Z="420.6439" />				
+			<MoveTo X="2489.72" Y="-5637.246" Z="420.6439" />				
 							
 			<!-- Move to - forge -->
-			<CustomBehavior File="NoCombatMoveTo" 
-							X="2489.72" Y="-5637.246" Z="420.6439" />
+			<MoveTo X="2489.72" Y="-5637.246" Z="420.6439" />
+						
+			<!-- Custom behavior - ForcedDismount -->
+			<CustomBehavior File="ForcedDismount" />			
+						
+			<!-- Wait timer - wait 1 second - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />			
 						
 			<!-- Custom behavior - macro - cast Runeforging-->
 			<CustomBehavior File="RunMacro" 
@@ -153,7 +152,7 @@
 				<Else>
 
 					<!-- If we have the Great Sword of the Ebon Blade -->
-					<If  Condition="HasItem(38632)" >
+					<If Condition="HasItem(38632)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -179,7 +178,7 @@
 					</If>	<!-- If we have the Great Sword of the Ebon Blade -->	
 
 					<!-- If we have the Skeletal Broadsword -->
-					<If  Condition="HasItem(25158)" >
+					<If Condition="HasItem(25158)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -205,7 +204,7 @@
 					</If>	<!-- If we have the Skeletal Broadsword -->
 					
 					<!-- If we have the Blade of Misfortune -->
-					<If  Condition="HasItem(31134)" >
+					<If Condition="HasItem(31134)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -231,7 +230,7 @@
 					</If>	<!-- If we have the Great Sword of the Ebon Blade -->
 					
 					<!-- If we have the War Glaive -->
-					<If  Condition="HasItem(25232)" >
+					<If Condition="HasItem(25232)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -257,7 +256,7 @@
 					</If>	<!-- If we have the War Glaive -->
 					
 					<!-- If we have the Rending Claw -->
-					<If  Condition="HasItem(25219)" >
+					<If Condition="HasItem(25219)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -283,7 +282,7 @@
 					</If>	<!-- If we have the Rending Claw -->
 						
 					<!-- If we have the Elexorien Blade -->
-					<If  Condition="HasItem(25163)" >
+					<If Condition="HasItem(25163)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -309,7 +308,7 @@
 					</If>	<!-- If we have the War Glaive -->
 					
 					<!-- If we have the Ethereal-Etched Glaive -->
-					<If  Condition="HasItem(25235)" >
+					<If Condition="HasItem(25235)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -335,7 +334,7 @@
 					</If>	<!-- If we have the War Glaive -->
 					
 					<!-- If we have the Frostbiter -->
-					<If  Condition="HasItem(37054)" >
+					<If Condition="HasItem(37054)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -361,7 +360,7 @@
 					</If>	<!-- If we have the Frostbiter -->
 						
 					<!-- If we have the Heart Fire Warhammer -->
-					<If  Condition="HasItem(24094)" >
+					<If Condition="HasItem(24094)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -387,7 +386,7 @@
 					</If>	<!-- If we have the Heart Fire Warhammer -->	
 					
 					<!-- If we have the Troll Butcherer -->
-					<If  Condition="HasItem(35618)" >
+					<If Condition="HasItem(35618)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -413,7 +412,7 @@
 					</If>	<!-- If we have the Troll Butcherer -->
 					
 					<!-- If we have the Troll Butcherer -->
-					<If  Condition="HasItem(35618)" >
+					<If Condition="HasItem(35618)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -439,7 +438,7 @@
 					</If>	<!-- If we have the Troll Butcherer -->
 					
 					<!-- If we have the Razorwind Greatsword -->
-					<If  Condition="HasItem(55461)" >
+					<If Condition="HasItem(55461)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -465,7 +464,7 @@
 					</If>	<!-- If we have the Razorwind Greatsword -->
 					
 					<!-- If we have the Nethergarde Broadaxe -->
-					<If  Condition="HasItem(55293)" >
+					<If Condition="HasItem(55293)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -491,7 +490,7 @@
 					</If>	<!-- If we have the Nethergarde Broadaxe -->
 					
 					<!-- If we have the Steelspark Broadaxe -->
-					<If  Condition="HasItem(55291)" >
+					<If Condition="HasItem(55291)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -517,7 +516,7 @@
 					</If>	<!-- If we have the Steelspark Broadaxe -->
 					
 					<!-- If we have the Angerfang Broadaxe -->
-					<If  Condition="HasItem(55292)" >
+					<If Condition="HasItem(55292)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -543,7 +542,7 @@
 					</If>	<!-- If we have the Angerfang Broadaxe -->
 					
 					<!-- If we have the Whitefin Axe -->
-					<If  Condition="HasItem(56284)" >
+					<If Condition="HasItem(56284)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -569,7 +568,7 @@
 					</If>	<!-- If we have the Whitefin Axe -->
 						
 					<!-- If we have the Fel-Touched Axe -->
-					<If  Condition="HasItem(25213)" >
+					<If Condition="HasItem(25213)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -595,7 +594,7 @@
 					</If>	<!-- If we have the Fel-Touched Axe -->	
 					
 					<!-- If we have the Rust-Covered Polearm -->
-					<If  Condition="HasItem(36602)" >
+					<If Condition="HasItem(36602)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -621,7 +620,7 @@
 					</If>	<!-- If we have the Rust-Covered Polearm -->	
 					
 					<!-- If we have the Banner Slicer -->
-					<If  Condition="HasItem(37813)" >
+					<If Condition="HasItem(37813)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -647,7 +646,7 @@
 					</If>	<!-- If we have the Banner Slicer -->
 					
 					<!-- If we have the Battle Scythe -->
-					<If  Condition="HasItem(25233)" >
+					<If Condition="HasItem(25233)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -673,7 +672,7 @@
 					</If>	<!-- If we have the Battle Scythe -->
 					
 					<!-- If we have the Ebonsoul Maul -->
-					<If  Condition="HasItem(72991)" >
+					<If Condition="HasItem(72991)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -699,7 +698,7 @@
 					</If>	<!-- If we have the Ebonsoul Maul -->
 					
 					<!-- If we have the Helboar Carving Blade -->
-					<If  Condition="HasItem(25987)" >
+					<If Condition="HasItem(25987)" >
 				
 						<!-- Profile message - Enchanting our weapon -->
 						<CustomBehavior File="Message" 
@@ -724,6 +723,188 @@
 					
 					</If>	<!-- If we have the Helboar Carving Blade -->
 					
+					<!-- If we have the Rage Reaver -->
+					<If Condition="HasItem(29908)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Rage Reaver as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Rage Reaver as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Rage Reaver -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="29908" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Rage Reaver -->
+					
+					<!-- If we have the Runed Soulblade -->
+					<If Condition="HasItem(38707)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Runed Soulblade as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Runed Soulblade as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Runed Soulblade -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="38707" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Runed Soulblade -->
+					
+					<!-- If we have the Darkened Broadsword -->
+					<If Condition="HasItem(25162)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Darkened Broadsword as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Darkened Broadsword as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Darkened Broadsword -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="25162" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Darkened Broadsword -->
+					
+					<!-- If we have the Deforester Axe -->
+					<If Condition="HasItem(36592)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Deforester Axe as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Deforester Axe as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Deforester Axe -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="36592" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Deforester Axe -->
+					
+					<!-- If we have the Hellreaver -->
+					<If Condition="HasItem(24044)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Hellreaver as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Hellreaver as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Hellreaver -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="24044" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Hellreaver -->
+					
+					<!-- If we have the War Scythe -->
+					<If Condition="HasItem(25226)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the War Scythe as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the War Scythe as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on War Scythe -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="25226" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the War Scythe -->
+					
+					<!-- If we have the Wasteland Greatsword -->
+					<If Condition="HasItem(83270)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using theWasteland Greatsword as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Wasteland Handaxe as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Wasteland Greatsword -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="83270" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Wasteland Greatsword -->
+					
 				</Else>
 
 			</If>	<!-- If we don't have Aura of Spellshattering -->
@@ -732,8 +913,12 @@
 			<If  Condition="Me.HasAura(53362)" >				
 							
 				<!-- Move to - move away from the Runeforge -->
-				<CustomBehavior File="NoCombatMoveTo"
-								X="2456.208" Y="-5642.337" Z="420.6425" />			
+				<MoveTo X="2456.208" Y="-5642.337" Z="420.6425" />			
+							
+				<!-- Profile message - Waiting 60 seconds for our Death Gate to reset -->
+				<CustomBehavior File="Message" 
+								Text="Waiting 60 seconds for our Death Gate to reset." 
+								LogColor="Orange" />			
 							
 				<!-- Wait timer - wait 60 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 

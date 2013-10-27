@@ -220,7 +220,8 @@
 						<MoveTo X="6717.32" Y="-4645.55" Z="450.017" />
 
 						<!-- Move to - attempt to enter the instance -->
-						<CustomBehavior File="Misc\InInstance" X="6690.202" Y="-4670.903" Z="441.5623" />
+						<CustomBehavior File="Misc\InInstance" 
+										X="6690.202" Y="-4670.903" Z="441.5623" />
 										
 										
 						<!-- Profile message - Waiting for the dungeon to load -->				

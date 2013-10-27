@@ -25,6 +25,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="-8830.189" Y="616.5771" Z="94.05379" Radius="3" />
 		<Blackspot X="-7118.711" Y="-1225.894" Z="290.2633" Radius="3" />
 	</Blackspots>
 
@@ -103,8 +104,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - XXXXXXXXXXXXXXXX -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="189.3407" Y="2613.765" Z="87.28365" />
+					<MoveTo X="189.3407" Y="2613.765" Z="87.28365" />
 					
 					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Clefthoof Ribs -->
 					<CustomBehavior File="InteractWith"
@@ -121,8 +121,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Thrallmar flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="229.219" Y="2634.052" Z="87.74729" />
+					<MoveTo X="229.219" Y="2634.052" Z="87.74729" />
 					
 				</If>	<!-- If we don't have Clefthoof Ribs -->
 					
@@ -152,8 +151,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - Floyd Pinkus -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="189.3407" Y="2613.765" Z="87.28365" />
+					<MoveTo X="189.3407" Y="2613.765" Z="87.28365" />
 					
 					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
 					<CustomBehavior File="InteractWith"
@@ -170,8 +168,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Thrallmar flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="229.219" Y="2634.052" Z="87.74729" />			
+					<MoveTo X="229.219" Y="2634.052" Z="87.74729" />			
 			
 				</If>	<!-- If we don't have Clefthoof Ribs -->
 	
@@ -225,8 +222,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - XXXXXXXXXXXXXXXX -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="189.3407" Y="2613.765" Z="87.28365" />
+					<MoveTo X="189.3407" Y="2613.765" Z="87.28365" />
 					
 					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Clefthoof Ribs -->
 					<CustomBehavior File="InteractWith"
@@ -243,8 +239,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Thrallmar flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="229.219" Y="2634.052" Z="87.74729" />
+					<MoveTo X="229.219" Y="2634.052" Z="87.74729" />
 					
 				</If>	<!-- If we don't have Clefthoof Ribs -->
 					
@@ -274,8 +269,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - Floyd Pinkus -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="189.3407" Y="2613.765" Z="87.28365" />
+					<MoveTo X="189.3407" Y="2613.765" Z="87.28365" />
 					
 					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
 					<CustomBehavior File="InteractWith"
@@ -292,8 +286,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Thrallmar flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="229.219" Y="2634.052" Z="87.74729" />			
+					<MoveTo X="229.219" Y="2634.052" Z="87.74729" />			
 			
 				</If>	<!-- If we don't have Clefthoof Ribs -->
 	
@@ -326,12 +319,12 @@
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
 				
-				<!-- If we don't have Clefthoof Ribs -->
-				<If Condition="!HasItem(29451)">
+				<!-- If we don't have Sweet Potato Bread -->
+				<If Condition="!HasItem(35950)">
 				
-					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<!-- Profile message - We don't have any Sweet Potato Bread -->
 					<CustomBehavior File="Message" 
-									Text="We don't have any Clefthoof Ribs."
+									Text="We don't have any Sweet Potato Bread."
 									LogColor="Orange" />
 									
 					<!-- Profile message - Moving to the innkeep to purchase some -->
@@ -339,48 +332,50 @@
 									Text="Moving to the innkeep to purchase some."
 									LogColor="Orange" />				
 				
-					<!-- Fly to - XXXXXXXXXXXXXX-->
-					<CustomBehavior File="FlyTo"
-									X="177.9547" Y="2629.776" Z="87.03335" />
+					<!-- Fly to - Bouldercrag's Refuge hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="8471.806" Y="-301.3479" Z="976.4656" />
+
+					<!-- Front doorway of the inn -->
+					<CustomBehavior File="FlyTo" 
+									X="8446.114" Y="-333.7011" Z="906.6091" />
 					
-					<!-- Forced dismount -->				
+					<!-- Custom behavior - ForcedDismount -->
 					<CustomBehavior File="ForcedDismount" />
-				
-					<!-- Move to - XXXXXXXXXXXXXXXX -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="189.3407" Y="2613.765" Z="87.28365" />
 					
-					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Clefthoof Ribs -->
+					<!-- Move to - inside the inn -->
+					<RunTo X="8429.057" Y="-352.7012" Z="906.4023" />
+					
+					<!-- Interact with Magorn and buy 60 Sweet Potato Bread -->
 					<CustomBehavior File="InteractWith"
 												ObjectType="Npc"
 												GossipOptions="2"
 												Range="75"
-												MobId="16602" 
-												BuyItemId="29451" 
-												BuyItemCount="100"
-												X="190.8758" Y="2610.927" Z="87.28384" />
+												MobId="29963" 
+												BuyItemId="35950" 
+												BuyItemCount="60"
+												X="8426.41" Y="-355.5836" Z="906.4028" />
 
 					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="60000" />
+									WaitTime="45000" />
 
-					<!-- Move to - Thrallmar flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="229.219" Y="2634.052" Z="87.74729" />
+					<!-- Move to - Bouldercrag's Refuge flight master -->				
+					<MoveTo X="8469.269" Y="-335.0423" Z="906.9643" />
 					
-				</If>	<!-- If we don't have Clefthoof Ribs -->
+				</If>	<!-- If we don't have Sweet Potato Bread -->
 					
 			</If>	<!-- If we are Alliance -->
 			
 			<!-- If we are Horde -->
 			<If Condition="Me.IsHorde" >
 				
-				<!-- If we don't have Clefthoof Ribs -->
-				<If Condition="!HasItem(29451)">
+				<!-- If we don't have Sweet Potato Bread -->
+				<If Condition="!HasItem(35950)">
 				
-					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<!-- Profile message - We don't have any Sweet Potato Bread -->
 					<CustomBehavior File="Message" 
-									Text="We don't have any Clefthoof Ribs."
+									Text="We don't have any Sweet Potato Bread."
 									LogColor="Orange" />
 									
 					<!-- Profile message - Moving to the innkeep to purchase some -->
@@ -388,47 +383,49 @@
 									Text="Moving to the innkeep to purchase some."
 									LogColor="Orange" />				
 				
-					<!-- Fly to - Floyd Pinkus -->
-					<CustomBehavior File="FlyTo"
-									X="177.9547" Y="2629.776" Z="87.03335" />
+					<!-- Fly to - Bouldercrag's Refuge hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="8471.806" Y="-301.3479" Z="976.4656" />
+
+					<!-- Front doorway of the inn -->
+					<CustomBehavior File="FlyTo" 
+									X="8446.114" Y="-333.7011" Z="906.6091" />
 					
-					<!-- Forced dismount -->				
+					<!-- Custom behavior - ForcedDismount -->
 					<CustomBehavior File="ForcedDismount" />
-				
-					<!-- Move to - Floyd Pinkus -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="189.3407" Y="2613.765" Z="87.28365" />
 					
-					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
+					<!-- Move to - inside the inn -->
+					<RunTo X="8429.057" Y="-352.7012" Z="906.4023" />
+					
+					<!-- Interact with Magorn and buy 60 Sweet Potato Bread -->
 					<CustomBehavior File="InteractWith"
 												ObjectType="Npc"
 												GossipOptions="2"
 												Range="75"
-												MobId="16602" 
-												BuyItemId="29451" 
-												BuyItemCount="100"
-												X="190.8758" Y="2610.927" Z="87.28384" />
+												MobId="29963" 
+												BuyItemId="35950" 
+												BuyItemCount="60"
+												X="8426.41" Y="-355.5836" Z="906.4028" />
 
 					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="60000" />
+									WaitTime="45000" />
 
-					<!-- Move to - Thrallmar flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="229.219" Y="2634.052" Z="87.74729" />			
-			
-				</If>	<!-- If we don't have Clefthoof Ribs -->
-	
+					<!-- Move to - Bouldercrag's Refuge flight master -->				
+					<MoveTo X="8469.269" Y="-335.0423" Z="906.9643" />
+					
+				</If>	<!-- If we don't have Sweet Potato Bread -->
+					
 			</If>	<!-- If we are Horde -->
 			
-			<!-- If we have Clefthoof Ribs -->
+			<!-- If we have Sweet Potato Bread -->
 			<If Condition="HasItem(29451)">
 			
 				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
 				<CustomBehavior File="LoadProfile" 
 										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
 										
-			</If>	<!-- If we do have Clefthoof Ribs -->
+			</If>	<!-- If we do have Sweet Potato Bread -->
 									
 		</If>	<!-- If our level is 86-87 -->
 
@@ -844,8 +841,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - XXXXXXXXXXXXXXXX -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="189.3407" Y="2613.765" Z="87.28365" />
+					<MoveTo X="189.3407" Y="2613.765" Z="87.28365" />
 					
 					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Briny Hardcheese -->
 					<CustomBehavior File="InteractWith"
@@ -1044,8 +1040,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - Timothy Holland -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="1874.815" Y="-6215.049" Z="13.09039" />
+					<MoveTo X="1874.815" Y="-6215.049" Z="13.09039" />
 					
 					<!-- Interact with Timothy Holland and buy 100 Briny Hardcheese -->
 					<CustomBehavior File="InteractWith"
@@ -1062,8 +1057,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Vengeance Landing flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="1920.288" Y="-6173.525" Z="24.17891" />			
+					<MoveTo X="1920.288" Y="-6173.525" Z="24.17891" />			
 			
 				</If>	<!-- If we don't have Briny Hardcheese or Mead Basted Caribou -->
 	
@@ -1124,8 +1118,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - Kizzie -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="2957.673" Y="3636.953" Z="144.279" />
+					<MoveTo X="2957.673" Y="3636.953" Z="144.279" />
 					
 					<!-- Interact with Kizzie and buy 100 Mag'har Grainbread -->
 					<CustomBehavior File="InteractWith"
@@ -1176,8 +1169,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - Kizzie -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="2957.673" Y="3636.953" Z="144.279" />
+					<MoveTo X="2957.673" Y="3636.953" Z="144.279" />
 					
 					<!-- Interact with Kizzie and buy 100 Mag'har Grainbread -->
 					<CustomBehavior File="InteractWith"
@@ -1264,8 +1256,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - Innkeeper Biribi -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-2920.801" Y="4019.86" Z="0.422266" />
+					<MoveTo X="-2920.801" Y="4019.86" Z="0.422266" />
 					
 					<!-- Interact with Innkeeper Biribi and buy 100 Mag'har Mild Cheese -->
 					<CustomBehavior File="InteractWith"
@@ -1282,8 +1273,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Allerian Stronghold flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-2990.889" Y="3872.223" Z="9.294443" />
+					<MoveTo X="-2990.889" Y="3872.223" Z="9.294443" />
 					
 				</If>	<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
 					
@@ -1317,8 +1307,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - Innkeeper Grilka -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-2621.776" Y="4450.3" Z="36.09357" />
+					<MoveTo X="-2621.776" Y="4450.3" Z="36.09357" />
 					
 					<!-- Interact with Innkeeper Grilka and buy 100 Clefthoof Ribs -->
 					<CustomBehavior File="InteractWith"
@@ -1335,8 +1324,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Stonebreaker Hold - flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-2567.424" Y="4427.083" Z="39.22084" />			
+					<MoveTo X="-2567.424" Y="4427.083" Z="39.22084" />			
 			
 				</If>	<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
 	
@@ -1395,8 +1383,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - Innkeeper Biribi -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-2920.801" Y="4019.86" Z="0.422266" />
+					<MoveTo X="-2920.801" Y="4019.86" Z="0.422266" />
 					
 					<!-- Interact with Innkeeper Biribi and buy 100 Mag'har Mild Cheese -->
 					<CustomBehavior File="InteractWith"
@@ -1413,8 +1400,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Allerian Stronghold flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-2990.889" Y="3872.223" Z="9.294443" />
+					<MoveTo X="-2990.889" Y="3872.223" Z="9.294443" />
 					
 				</If>	<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
 					
@@ -1448,8 +1434,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - Innkeeper Grilka -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-2621.776" Y="4450.3" Z="36.09357" />
+					<MoveTo X="-2621.776" Y="4450.3" Z="36.09357" />
 					
 					<!-- Interact with Innkeeper Grilka and buy 100 Clefthoof Ribs -->
 					<CustomBehavior File="InteractWith"
@@ -1466,8 +1451,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Stonebreaker Hold - flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-2567.424" Y="4427.083" Z="39.22084" />			
+					<MoveTo X="-2567.424" Y="4427.083" Z="39.22084" />			
 			
 				</If>	<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
 	
@@ -1529,8 +1513,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - Innkeeper Biribi -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-2920.801" Y="4019.86" Z="0.422266" />
+					<MoveTo X="-2920.801" Y="4019.86" Z="0.422266" />
 					
 					<!-- Interact with Innkeeper Biribi and buy 100 Mag'har Mild Cheese -->
 					<CustomBehavior File="InteractWith"
@@ -1547,8 +1530,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Allerian Stronghold flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-2990.889" Y="3872.223" Z="9.294443" />
+					<MoveTo X="-2990.889" Y="3872.223" Z="9.294443" />
 					
 				</If>	<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
 					
@@ -1582,8 +1564,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - Innkeeper Grilka -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-2621.776" Y="4450.3" Z="36.09357" />
+					<MoveTo X="-2621.776" Y="4450.3" Z="36.09357" />
 					
 					<!-- Interact with Innkeeper Grilka and buy 100 Clefthoof Ribs -->
 					<CustomBehavior File="InteractWith"
@@ -1600,8 +1581,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Stonebreaker Hold - flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-2567.424" Y="4427.083" Z="39.22084" />			
+					<MoveTo X="-2567.424" Y="4427.083" Z="39.22084" />			
 			
 				</If>	<!-- If we don't have Clefthoof Ribs or Mag'har Mild Cheese -->
 	
@@ -1675,8 +1655,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Honor Hold flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-668.9916" Y="2718.042" Z="94.38165" />
+					<MoveTo X="-668.9916" Y="2718.042" Z="94.38165" />
 					
 				</If>	<!-- If we don't have Clefthoof Ribs -->
 					
@@ -1706,8 +1685,7 @@
 					<CustomBehavior File="ForcedDismount" />
 				
 					<!-- Move to - Floyd Pinkus -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="189.3407" Y="2613.765" Z="87.28365" />
+					<MoveTo X="189.3407" Y="2613.765" Z="87.28365" />
 					
 					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
 					<CustomBehavior File="InteractWith"
@@ -1724,8 +1702,7 @@
 									WaitTime="60000" />
 
 					<!-- Move to - Thrallmar flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="229.219" Y="2634.052" Z="87.74729" />			
+					<MoveTo X="229.219" Y="2634.052" Z="87.74729" />			
 			
 				</If>	<!-- If we don't have Clefthoof Ribs -->
 	
@@ -1778,8 +1755,7 @@
 									LogColor="Orange" />				
 				
 					<!-- Move to the food vendor -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-7083.726" Y="-1201.636" Z="324.2231" />
+					<MoveTo X="-7083.726" Y="-1201.636" Z="324.2231" />
 					
 					<!-- Interact with the food vendor and buy 100 Homemade Cherry Pie -->
 					<CustomBehavior File="InteractWith"
@@ -1818,8 +1794,7 @@
 									LogColor="Orange" />				
 				
 					<!-- Move to the food vendor -->
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-7083.726" Y="-1201.636" Z="324.2231" />
+					<MoveTo X="-7083.726" Y="-1201.636" Z="324.2231" />
 					
 					<!-- Interact with the food vendor and buy 100 Homemade Cherry Pie -->
 					<CustomBehavior File="InteractWith"
@@ -1845,8 +1820,7 @@
 			<If Condition="HasItem(8950)">
 			
 				<!-- Move to the Iron Summit flight master -->
-				<CustomBehavior File="NoCombatMoveTo"
-								X="-7121.381" Y="-1233.72" Z="290.1036" />
+				<MoveTo X="-7121.381" Y="-1233.72" Z="290.1036" />
 								
 				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
 				<CustomBehavior File="LoadProfile" 
@@ -1899,8 +1873,7 @@
 									WaitTime="30000" />
 
 					<!-- Move to - Honor Hold flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="-668.9916" Y="2718.042" Z="94.38165" />
+					<MoveTo X="-668.9916" Y="2718.042" Z="94.38165" />
 					
 				</If>	<!-- If we don't have Smoked Talbuk Venison -->
 					
@@ -1940,8 +1913,7 @@
 									WaitTime="30000" />
 
 					<!-- Move to - Thrallmar flight master -->				
-					<CustomBehavior File="NoCombatMoveTo" 
-									X="229.219" Y="2634.052" Z="87.74729" />			
+					<MoveTo X="229.219" Y="2634.052" Z="87.74729" />			
 			
 				</If>	<!-- If we don't have Smoked Talbuk Venison -->
 	

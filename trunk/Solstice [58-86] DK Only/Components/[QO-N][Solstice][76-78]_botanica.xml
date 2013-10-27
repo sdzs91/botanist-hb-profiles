@@ -504,132 +504,77 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
 					
 
-						<!-- Move to - third door guards - pivot position -->
-						<CustomBehavior File="NoCombatMoveTo"
-										X="-1.069568" Y="76.25737" Z="-5.676621" />
-																
-						<!-- Move to - align our target macro -->						
-						<CustomBehavior File="NoCombatMoveTo"
-										X="-1.199921" Y="85.68719" Z="-5.668509" />		
-				
-						<!-- While our Y < 95 -->			
-						<While Condition="Me.Y &lt; 95" >
+						<!-- Move to - trigger door guards to spawn -->	
+						<CustomBehavior File="NoCombatMoveTo" 
+										X="-1.236276" Y="98.45931" Z="-5.651451" />
+										
+						<!-- Wait timer - wait 3 seconds to aggro the patrol-->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />				
 					
-							<!-- Profile message - Targeting the Tempest-Forge Peacekeeper, DO NOT TOUCH !!! -->
-							<CustomBehavior File="Message" 
-											Text="Targeting the Tempest-Forge Peacekeeper, DO NOT TOUCH !!!" 
-											LogColor="Orange" />
+					
+						<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
+						
+					
+						<!-- Move to - third door guards - pivot location -->
+						<CustomBehavior File="NoCombatMoveTo"
+										X="-1.418183" Y="91.91684" Z="-5.651988" />
+					
+						<!-- Move to - align out target macro -->	
+						<CustomBehavior File="NoCombatMoveTo" 
+										X="-0.7675794" Y="106.4031" Z="-5.614716" />				
+										
+						<!-- Macro - Clear target -->					
+						<CustomBehavior File="RunMacro" 
+										Macro="/cleartarget" 
+										NumOfTimes="1" 
+										WaitTime="0"/>				
+										
+						<!-- Macro - targetenemy -->						
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/targetenemy [noharm]" />
 
-							<!-- Macro - Clear target -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/cleartarget" 
-											NumOfTimes="1" 
-											WaitTime="0"/>
+						<!-- Profile message - Casting Death Grip -->
+						<CustomBehavior File="Message" 
+										Text="Casting Death Grip."  
+										LogColor="Orange" />
+									
+						<!-- Macro - Cast Death Grip -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/cast Death Grip" />				
+										
+						<!-- Move to - kite - 3rd door guards -->	
+						<CustomBehavior File="NoCombatMoveTo" 
+										X="-6.509668" Y="89.43451" Z="-5.642545" />				
 
-							<!-- Macro - targetenemy -->						
-							<CustomBehavior File="RunMacro"
-											NumOfTimes="1"
-											Macro="/targetenemy [noharm]" />
+						<!-- Profile message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Fuchsia" />
+						
+						<!-- enable combat -->
+						<EnableBehavior Name="Combat" />				
+	
+						<!-- Wait timer - wait 3 seconds - aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
 							
-							<!-- If our current target is the Tempest-Forge Peacekeeper -->
-							<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 18405)">
-		
-								<!-- Profile message - Waiting 5 seconds for the patrol to path away from us -->
-								<CustomBehavior File="Message" 
-												Text="Waiting 5 seconds for the patrol to path away from us." 
-												LogColor="Fuchsia" />				
-												
-								<!-- Wait timer - wait 5 seconds for the patrol to path away from us -->
-								<CustomBehavior File="WaitTimer" 
-												WaitTime="5000" />
-												
-								<!-- Profile message - Disabling combat -->
-								<CustomBehavior File="Message" 
-													Text="Disabling combat." 
-													LogColor="Fuchsia" />
+						<!-- Move to - 3rd door guards -->	
+						<CustomBehavior File="NoCombatMoveTo" 
+										X="-0.8796865" Y="129.6464" Z="-5.540368" />	
+							
+						<!-- Profile message - Waiting for the Tempest-Forge Peacekeeper -->
+							<CustomBehavior File="Message" 
+											Text="Waiting for the Tempest-Forge Peacekeeper." 
+											LogColor="Yellow" />	
+							
+						<!-- Wait timer - wait 45 seconds - aggro -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="45000" />	
 
-								<!-- Disable combat -->
-								<DisableBehavior Name="Combat" />		
-
-								<!-- Move to - 3rd door guards - pivot location -->	
-								<CustomBehavior File="NoCombatMoveTo" 
-												X="-1.199921" Y="85.68719" Z="-5.668509" />
 												
-								<!-- Move to - align out target macro -->	
-								<CustomBehavior File="NoCombatMoveTo" 
-												X="-0.7676855" Y="104.7368" Z="-5.621348" />				
-												
-								<!-- Macro - Clear target -->					
-								<CustomBehavior File="RunMacro" 
-												Macro="/cleartarget" 
-												NumOfTimes="1" 
-												WaitTime="0"/>				
-												
-								<!-- Macro - targetenemy -->						
-								<CustomBehavior File="RunMacro"
-												NumOfTimes="1"
-												Macro="/targetenemy [noharm]" />
-
-								<!-- Profile message - Casting Death Grip -->
-								<CustomBehavior File="Message" 
-												Text="Casting Death Grip."  
-												LogColor="Orange" />
-											
-								<!-- Macro - Cast Death Grip -->
-								<CustomBehavior File="RunMacro"
-												NumOfTimes="1"
-												Macro="/cast Death Grip" />				
-												
-								<!-- Move to - kite - 3rd door guards -->	
-								<CustomBehavior File="NoCombatMoveTo" 
-												X="-6.509668" Y="89.43451" Z="-5.642545" />				
-
-								<!-- Profile message - Enabling combat -->
-								<CustomBehavior File="Message" 
-													Text="Enabling combat." 
-													LogColor="Fuchsia" />
-								
-								<!-- enable combat -->
-								<EnableBehavior Name="Combat" />				
-			
-								<!-- Wait timer - wait 3 seconds - aggro -->
-								<CustomBehavior File="WaitTimer" 
-												WaitTime="3000" />
-									
-								<!-- Move to - 3rd door guards -->	
-								<CustomBehavior File="NoCombatMoveTo" 
-												X="-0.8796865" Y="129.6464" Z="-5.540368" />	
-									
-								<!-- Profile message - Waiting for the Tempest-Forge Peacekeeper -->
-									<CustomBehavior File="Message" 
-													Text="Waiting for the Tempest-Forge Peacekeeper." 
-													LogColor="Yellow" />	
-									
-								<!-- Wait timer - wait 45 seconds - aggro -->
-								<CustomBehavior File="WaitTimer" 
-												WaitTime="45000" />	
-									
-								<!-- If our current target is not the Tempest-Forge Peacekeeper -->
-								<Else>
-								
-									<!-- Profile message - Scanning for the Tempest-Forge Peacekeeper-->
-									<CustomBehavior File="Message" 
-													Text="Scanning for the Tempest-Forge Peacekeeper." 
-													LogColor="Yellow" />
-														
-									<!-- Macro - Clear target -->					
-									<CustomBehavior File="RunMacro" 
-													Macro="/cleartarget" 
-													NumOfTimes="1" 
-													WaitTime="0"/>	
-									
-								</Else>	<!-- If our current target is not the Tempest-Forge Peacekeeper -->
-								
-							</If>	<!-- If our current target is the Tempest-Forge Peacekeeper -->					
-												
-						</While>	<!-- While our Y < 95 -->
-										
-										
 						<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
 					
 

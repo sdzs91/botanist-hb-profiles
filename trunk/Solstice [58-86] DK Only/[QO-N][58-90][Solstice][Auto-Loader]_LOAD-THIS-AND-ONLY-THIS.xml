@@ -110,8 +110,53 @@
 		
 			</If>	<!-- If our level is > 60 and < 90 -->
 
-			<!-- If our level is => 78 -->
-			<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 90">
+			<!-- If our level is => 68 -->
+			<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt; 90">
+			
+				<!-- If we have a Flight Master's License -->
+				<If Condition="HasSpell(90267)" >
+				
+					<!-- Profile message - We have a Flight Master's License --> 
+					<CustomBehavior File="Message" 
+									Text="We have a Flight Master's License." 
+									LogColor="Orange" />
+					
+					<!-- Else we e have not purchased a Flight Master's License -->
+					<Else>
+					
+						<!-- Profile message - We have not purchased a Flight Master's License --> 
+						<CustomBehavior File="Message" 
+										Text="We have not purchased a Flight Master's License." 
+										LogColor="Orange" />
+
+						<!-- If we have 250 gold-->
+						<If Condition="(Me.Gold &gt;= 250)" >
+				
+							<!-- Custom behavior - LoadProfile - [QO-N-M][Solstice][58-90][riding-skill-training] -->
+							<CustomBehavior File="LoadProfile"  
+											ProfileName="Components\Movement\[QO-N-M][Solstice][58-90][riding-skill-training]" />
+				
+
+						</If>	<!-- If we have 250 gold-->				
+										
+						<!-- If we don't have gold -->
+						<If Condition="(Me.Gold &gt;= 250)" >
+				
+							<!-- Profile message - We don't have 250 gold to purchased a Flight Master's License. Restart the profile with at least 250 gold or purchased a Flight Master's License --> 
+							<CustomBehavior File="Message" 
+											Text="We don't have 250 gold to purchased a Flight Master's License. Restart the profile with at least 250 gold or purchased a Flight Master's License." 
+											LogColor="Orange" />
+															
+						</If>	<!-- If we have gold -->				
+			
+					</Else>		<!-- Else we e have not purchased a Flight Master's License -->
+					
+				</If>	<!-- If we don't have Cold Weather Flying -->
+		
+			</If>	<!-- If our level is => 78 -->
+
+			<!-- If our level is => 68 -->
+			<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt; 90">
 			
 				<!-- If we have Cold Weather Flying -->
 				<If Condition="HasSpell(54197)" >
@@ -162,31 +207,10 @@
 					
 				</If>	<!-- If we don't have Cold Weather Flying -->
 		
-			</If>	<!-- If our level is => 78 -->
+			</If>	<!-- If our level is => 68 -->
 		
 		</If>	<!-- If our level is 60-90 -->
 
-		
-		
-		
-		
-		
-		
-		
-		
-					
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		<!-- If our level is 88-90 -->
 		<If Condition="Me.Level &gt;= 88 &amp;&amp; Me.Level &lt; 90">
 			<CustomBehavior File="LoadProfile" 
