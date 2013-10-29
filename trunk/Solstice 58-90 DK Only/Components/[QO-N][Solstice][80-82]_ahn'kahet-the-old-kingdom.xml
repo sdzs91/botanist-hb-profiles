@@ -917,7 +917,7 @@
 												Macro="/cast Death Grip" />				
 
 								<!-- Move to - 1st Bonegrinder - kite -->
-								<MoveTo X="695.5143" Y="-859.0184" Z="9.470471" />				
+								<MoveTo X="662.6338" Y="-852.3141" Z="-3.265179" />				
 												
 								<!-- Profile message - Enabling combat -->
 								<CustomBehavior File="Message" 

@@ -43,7 +43,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-
+		<!-- Level check -->
 		<If Condition="Me.Level &gt;= 86">
 		
 		
@@ -234,7 +234,6 @@
 										
 						<!-- If we are not in Halls of Lightning -->
 						<If Condition="Me.ZoneId != 4272">
-						
 						
 							<!-- Profile message - We are instance locked, initiating loop procedures until we enter the instance -->
 							<CustomBehavior File="Message" 
@@ -738,8 +737,8 @@
 					
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
-									MinLevel="100" 
-									ProfileName="[QO-N][Solstice][86-87]_halls-of-lightning.xml"  />
+									MinLevel="87" 
+									ProfileName="[QO-N][Solstice][87-88]_blackrock-caverns.xml"  />
 									
 					<!-- Profile message - Waiting 3 seconds - Bag and durability check -->
 					<CustomBehavior File="Message" 

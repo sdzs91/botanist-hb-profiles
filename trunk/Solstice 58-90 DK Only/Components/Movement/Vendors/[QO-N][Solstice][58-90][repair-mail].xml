@@ -80,7 +80,7 @@
 							Text="Our durability is less than 30% or we have less than 25 empty bag slots remaining." 
 							LogColor="Fuchsia" />
 								
-			<!-- If we are in Blackrock Depths -->
+			<!-- If we are in Ramkahen -->
 			<If Condition="Me.ZoneId == 1584">	
 				
 				<!-- If our hearthstone/innkeepers daughter is set to Iron Summit -->
@@ -152,41 +152,78 @@
 				
 			</If>	<!-- If we are still in Blackrock Depths, exit the instance -->
 
-			<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
-			<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+			<!-- If we are in Uldum -->
+			<If Condition="Me.ZoneId == 5034">
 
-				<!-- Vendor conditions -->
-				<CustomBehavior File="ForceSetVendor" 
-								DoMail="True" 
-								DoRepair="True" 
-								DoSell="True" 
-								DoTrain="False" />
+				<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+				<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+
+					<!-- If we are Alliance -->
+					<If Condition="Me.IsAlliance">
+					
+						<!-- Fly to - Ramkahen hover point -->
+						<CustomBehavior File="FlyTo" 
+										X="-9453.837" Y="-962.6011" Z="139.4122" />
+
+						<!-- Front doorway of the inn -->
+						<CustomBehavior File="FlyTo" 
+										X="8446.114" Y="-333.7011" Z="906.6091" />
+						
+						<!-- Custom behavior - ForcedDismount -->
+						<CustomBehavior File="ForcedDismount" />
+						
+						<!-- Move to - inside the inn -->
+						<RunTo X="8388.318" Y="-388.8239" Z="903.1187" />
+						
+						<!-- Profile message - Our durability is less than 30%, or our bags have less than 25 empty slots left -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30%, or our bags have less than 25 empty slots left."
+										LogColor="Cyan" />
+										
+						<!-- Repair vendor -->
+					<SetVendor>
+						<Vendors>
+							<!-- Ramkahen  -->
+							<Vendor Name="Blacksmith Abasi" 
+									Entry="48617" 
+									Type="Repair" 
+									X="-9404.68" Y="-906.438" Z="112.5411" />
+						</Vendors>
+					</SetVendor>
+					
+					<!-- Mailbox -->
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+						</Mailboxes>
+					</SetMailbox>
+								
+					<!-- Vendor conditions -->
+					<CustomBehavior File="ForceSetVendor" 
+									DoMail="True" 
+									DoRepair="True" 
+									DoSell="True" 
+									DoTrain="False" />	
+						
+					</If>	<!-- If we are Alliance -->
 				
-				<!-- Repair vendor -->
-				<SetVendor>
-					<Vendors>
-						<!-- Iron Summit -->
-						<Vendor Name="Fergus Gravelsmash" 
-								Entry="47937" 
-								Type="Repair" 
-								X="-7093.68" Y="-1268.31" Z="270.4849" />
-					</Vendors>
-				</SetVendor>
-		
-				<!-- Move to - avoid stuck spot -->
-				<RunTo X="-7132.243" Y="-1204.871" Z="300.6862" />
 				
-				<!-- Mailbox -->
-				<SetMailbox>
-					<Mailboxes>
-						<!-- Iron Summit -->
-						<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
-					</Mailboxes>
-				</SetMailbox>
-							
-			</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+								
+								
+				</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 			
+			</If>	<!-- If we are in Uldum -->			
+
 			<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->
 			<If Condition="(Me.FreeBagSlots &gt; 25) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
 			
