@@ -491,6 +491,31 @@
 					<!-- Move to - right-hand group past General Umbriss -->
 					<MoveTo X="-572.3192" Y="-502.1165" Z="276.5973" />				
 									
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />				
+									
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+				
+				
+					<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->				
+									
+									
+									
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />				
+									
 					<!-- Move to - 1st Gronn Brute -->
 					<MoveTo X="-534.5671" Y="-479.7933" Z="276.8659" />					
 									
