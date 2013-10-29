@@ -161,7 +161,7 @@
 					<!-- Profile message - Flying to Thundermar -->
 					<CustomBehavior File="Message" 
 										Text="Flying to Thundermar." 
-										LogColor="Lime" />
+										LogColor="Fuchsia" />
 							
 					<!-- Fly to the Thundermar hover point -->
 					<CustomBehavior File="FlyTo" 
@@ -212,7 +212,7 @@
 					<!-- Profile message - Flying to Bloodgulch -->
 					<CustomBehavior File="Message" 
 										Text="Flying to Bloodgulch." 
-										LogColor="Lime" />
+										LogColor="Fuchsia" />
 							
 					<!-- Fly to the Bloodgulch hover point -->
 					<CustomBehavior File="FlyTo" 
