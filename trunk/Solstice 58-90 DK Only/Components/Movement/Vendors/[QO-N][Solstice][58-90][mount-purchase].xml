@@ -42,29 +42,25 @@
 	<QuestOrder>
 
 		<!-- UserSettings -->
-			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
-							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
-							GroundMountFarmingMode="False"
-							HarvestHerbs="False"
-							HarvestMinerals="False"
-							KillBetweenHotspots="True"
-							LogoutForInactivity="False"
-							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
-							LootMobs="False"
-							LootRadius="1"
-							MountDistance="75"
-							MountName=""
-							NinjaSkin="False"
-							ProfileDebuggingMode="False"
-							PullDistance="45"
-							RessAtSpiritHealers="False"
-							SkinMobs="False"
-							UseFlightPaths="True"
-							UseMount="True" 
-							UseRandomMount="False" />
+		<CustomBehavior File="UserSettings"
+						AdvancedSettingsMode="True"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="True"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootMobs="True"
+						LootRadius="35"
+						MountName=""
+						NinjaSkin="False"
+						ProfileDebuggingMode="False"
+						PullDistance="25"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />
 
 		<!-- If our level is 58-90 -->
 		<If Condition="Me.Level &gt;= 58 &amp;&amp; Me.Level &lt; 90">

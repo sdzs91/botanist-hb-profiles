@@ -44,34 +44,26 @@
 	<QuestOrder>
 
 		<!-- UserSettings -->
-			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
-							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
-							GroundMountFarmingMode="False"
-							HarvestHerbs="False"
-							HarvestMinerals="False"
-							KillBetweenHotspots="True"
-							LogoutForInactivity="False"
-							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
-							LootMobs="False"
-							LootRadius="1"
-							MountDistance="30"
-							MountName=""
-							NinjaSkin="False"
-							ProfileDebuggingMode="False"
-							PullDistance="1"
-							RessAtSpiritHealers="False"
-							SkinMobs="False"
-							UseFlightPaths="True"
-							UseMount="True" 
-							UseRandomMount="False" />
+		<CustomBehavior File="UserSettings"
+						AdvancedSettingsMode="True"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="True"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootMobs="True"
+						LootRadius="35"
+						MountName=""
+						NinjaSkin="False"
+						ProfileDebuggingMode="False"
+						PullDistance="25"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />
 
-							
-							
-							
-	
 		<!-- If our level is 88-90 -->
 		<If Condition="Me.Level &gt;= 88 &amp;&amp; Me.Level &lt; 90">
 			
@@ -181,45 +173,81 @@
 										LogColor="Cyan" />
 										
 						<!-- Repair vendor -->
-					<SetVendor>
-						<Vendors>
-							<!-- Ramkahen  -->
-							<Vendor Name="Blacksmith Abasi" 
-									Entry="48617" 
-									Type="Repair" 
-									X="-9404.68" Y="-906.438" Z="112.5411" />
-						</Vendors>
-					</SetVendor>
-					
-					<!-- Mailbox -->
-					<SetMailbox>
-						<Mailboxes>
-							<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
-						</Mailboxes>
-					</SetMailbox>
-								
-					<!-- Vendor conditions -->
-					<CustomBehavior File="ForceSetVendor" 
-									DoMail="True" 
-									DoRepair="True" 
-									DoSell="True" 
-									DoTrain="False" />	
+						<SetVendor>
+							<Vendors>
+								<!-- Ramkahen  -->
+								<Vendor Name="Blacksmith Abasi" 
+										Entry="48617" 
+										Type="Repair" 
+										X="-9404.68" Y="-906.438" Z="112.5411" />
+							</Vendors>
+						</SetVendor>
+						
+						<!-- Mailbox -->
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+							</Mailboxes>
+						</SetMailbox>
+									
+						<!-- Vendor conditions -->
+						<CustomBehavior File="ForceSetVendor" 
+										DoMail="True" 
+										DoRepair="True" 
+										DoSell="True" 
+										DoTrain="False" />	
 						
 					</If>	<!-- If we are Alliance -->
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-								
-								
+					<!-- If we are Alliance -->
+					<If Condition="Me.IsAlliance">
+					
+						<!-- Fly to - Ramkahen hover point -->
+						<CustomBehavior File="FlyTo" 
+										X="-9453.837" Y="-962.6011" Z="139.4122" />
+
+						<!-- Front doorway of the inn -->
+						<CustomBehavior File="FlyTo" 
+										X="8446.114" Y="-333.7011" Z="906.6091" />
+						
+						<!-- Custom behavior - ForcedDismount -->
+						<CustomBehavior File="ForcedDismount" />
+						
+						<!-- Move to - inside the inn -->
+						<RunTo X="8388.318" Y="-388.8239" Z="903.1187" />
+						
+						<!-- Profile message - Our durability is less than 30%, or our bags have less than 25 empty slots left -->
+						<CustomBehavior File="Message" 
+										Text="Our durability is less than 30%, or our bags have less than 25 empty slots left."
+										LogColor="Cyan" />
+										
+						<!-- Repair vendor -->
+						<SetVendor>
+							<Vendors>
+								<!-- Ramkahen  -->
+								<Vendor Name="Blacksmith Abasi" 
+										Entry="48617" 
+										Type="Repair" 
+										X="-9404.68" Y="-906.438" Z="112.5411" />
+							</Vendors>
+						</SetVendor>
+						
+						<!-- Mailbox -->
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+							</Mailboxes>
+						</SetMailbox>
+									
+						<!-- Vendor conditions -->
+						<CustomBehavior File="ForceSetVendor" 
+										DoMail="True" 
+										DoRepair="True" 
+										DoSell="True" 
+										DoTrain="False" />	
+						
+					</If>	<!-- If we are Alliance -->
+					
 				</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 			
 			</If>	<!-- If we are in Uldum -->			
@@ -231,15 +259,136 @@
 				<CustomBehavior File="LoadProfile" 
 										ProfileName="[QO-N][Solstice][58-90][food]" />
 										
-			</If>		
+			</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->	
+			
 		</If>
 
 		
+		<!-- *******************************************    level is 87-88 ******************************************************* -->
 		
 		
+		<!-- If our level is 87-88 -->
+		<If Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt; 101">
+			
+			<!-- Profile message - Our durability is less than 30% or we have less than 25 empty bag slots remaining -->
+			<CustomBehavior File="Message" 
+							Text="Our durability is less than 30% or we have less than 25 empty bag slots remaining." 
+							LogColor="Fuchsia" />
+								
+			<!-- If we are inside Blackrock Caverns -->
+			<If Condition="Me.ZoneId == 4926">
+				
+				<!-- If our hearthstone is set to Iron Summit -->
+				<If Condition="Me.HearthstoneAreaId == 5628" >
+				
+					<!-- Profile message - We are in Blackrock Caverns, using our Hearthstone/Innkeeper's Daughter -->
+					<CustomBehavior File="Message" 
+									Text="We are in Blackrock Depths, using our Hearthstone/Innkeeper's Daughter." 
+									LogColor="Cyan" />
+								
+					<!-- If we have a Hearthstone -->
+					<If Condition="HasItem(6948)">
+					
+						<!-- Profile message - Using our Hearthstone -->
+						<CustomBehavior File="Message" 
+										Text="Using our Hearthstone." 
+										LogColor="Fuchsia" />
+										
+						<!-- Custom behavior - Misc\RunLua -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="UseItemByName(6948)" 
+										WaitTime="1000" />
+										
+						<!-- Wait timer - wait 20 seconds - delay -->				
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" />
+										
+					</If>	<!-- If we have a Hearthstone -->
+				
+					<!-- If we have a Innkeeper's Daughter -->
+					<If Condition="HasItem(64488)">
+					
+						<!-- Profile message - Using our Innkeeper's Daughter -->
+						<CustomBehavior File="Message" 
+										Text="Using our Innkeeper's Daughter." 
+										LogColor="Fuchsia" />
+											
+						<!-- Custom behavior - Misc\RunLua -->					
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="UseItemByName(64488)" 
+										WaitTime="1000" />
+							
+						<!-- Wait timer - wait 20 seconds - delay -->	
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="20000" />
+										
+					</If>	<!-- If we have a Innkeeper's Daughter -->
+				
+				</If>	<!-- If our hearthstone is set here, use it -->
+				
+			</If>	<!-- If we are in Blackrock Depths -->
 		
+			<!-- If we are in Blackrock Caverns -->
+			<If Condition="Me.ZoneId == 4926">
+			
+				<!-- Profile message - Blackrock Caverns detected. Running out -->
+				<CustomBehavior File="Message" 
+								Text="Blackrock Caverns detected. Running out."
+								LogColor="Fuchsia" />
+					
+				<!-- Move to - zone in location -->
+				<MoveTo X="209.903" Y="1133.02" Z="205.569" />
+				
+				<!-- Go through the portal -->
+				<CustomBehavior File="Misc\InInstance" 
+								X="215.7276" Y="1150.736" Z="206.7795" />
+				
+				<!-- Move to - zone out location -->
+				<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
+				
+			</If>	<!-- If we are in Blackrock Caverns -->
+
+			<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+			<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+
+				<!-- Vendor conditions -->
+				<CustomBehavior File="ForceSetVendor" 
+								DoMail="True" 
+								DoRepair="True" 
+								DoSell="True" 
+								DoTrain="False" />
+				
+				<!-- Repair vendor -->
+				<SetVendor>
+					<Vendors>
+						<!-- Iron Summit -->
+						<Vendor Name="Fergus Gravelsmash" 
+								Entry="47937" 
+								Type="Repair" 
+								X="-7093.68" Y="-1268.31" Z="270.4849" />
+					</Vendors>
+				</SetVendor>
 		
-		
+				<!-- Mailbox -->
+				<SetMailbox>
+					<Mailboxes>
+						<!-- Iron Summit -->
+						<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+					</Mailboxes>
+				</SetMailbox>
+							
+			</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+				
+			<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->
+			<If Condition="(Me.FreeBagSlots &gt; 25) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+			
+				<!-- Load profile - [QO-N][Solstice][58-90][food] -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="[QO-N][Solstice][58-90][food]" />
+
+			</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->
+			
+		</If>	<!-- If our level is 87-88 -->
 		
 		
 		<!-- *******************************************    level is 86-87 ******************************************************* -->
@@ -467,8 +616,6 @@
 			</If>		
 		</If>
 
-		
-		
 		
 		<!-- *******************************************    level is 84-86 ******************************************************* -->
 		
@@ -1234,6 +1381,7 @@
 				
 		<!-- *******************************************    level is 79-80 ******************************************************* -->
 		
+		
 		<!-- If our level is 79-80 -->
 		<If Condition="Me.Level &gt;= 79 &amp;&amp; Me.Level &lt; 80">
 		
@@ -1490,7 +1638,6 @@
 		</If> 	<!-- If our level is 79-80 -->			
 
 		
-
 		<!-- *******************************************    level is 78-79 ******************************************************* -->
 		
 		
@@ -1586,17 +1733,6 @@
 					<!-- If we are Alliance -->
 					<If Condition="Me.IsAlliance" >
 					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
 						<!-- Vendor conditions -->
 						<CustomBehavior File="ForceSetVendor" 
 										DoMail="True" 
@@ -1674,7 +1810,7 @@
 										
 			</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->
 			
-		</If>
+		</If>	<!-- If our level is 78-79 -->
 				
 
 		<!-- *******************************************    level is 76-78 ******************************************************* -->
@@ -1892,11 +2028,11 @@
 										ProfileName="[QO-N][Solstice][58-90][food]" />
 										
 			</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->	
-		</If>
+			
+		</If>	<!-- If our level is 76-78 -->
 				
 
 		<!-- *******************************************    level is 74-76 ******************************************************* -->
-		
 		
 
 		<!-- If our level is 74-76 -->
@@ -2153,7 +2289,7 @@
 										
 			</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->	
 			
-		</If>
+		</If>	<!-- If our level is 74-76 -->
 				
 
 		<!-- *******************************************    level is 72-74 ******************************************************* -->
@@ -2385,7 +2521,7 @@
 										
 			</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->	
 			
-		</If>
+		</If>	<!-- If our level is 72-74 -->
 		
 				
 		<!-- *******************************************    level is 70-72 ******************************************************* -->
@@ -2618,7 +2754,7 @@
 										
 			</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->	
 			
-		</If>
+		</If>	<!-- If our level is 70-72 -->
 				
 
 		<!-- *******************************************    level is 67-70 ******************************************************* -->
@@ -2990,7 +3126,7 @@
 				<CustomBehavior File="LoadProfile" 
 										ProfileName="[QO-N][Solstice][58-90][food]" />
 										
-			</If>	
+			</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->	
 			
 		</If>	<!-- If our level is 62-67 -->
 		
@@ -3006,11 +3142,8 @@
 							Text="Our durability is less than 30% or we have less than 25 empty bag slots remaining." 
 							LogColor="Fuchsia" />
 								
-			
-				
 			<!-- If our hearthstone/innkeepers daughter is set to Honor Hold or Thrallmar -->
 			<If Condition="(Me.HearthstoneAreaId == 3538) || (Me.HearthstoneAreaId == 3536)">
-			
 			
 				<!-- Profile message - Our Innkeeper is set at Honor Hold or Thrallmar -->
 				<CustomBehavior File="Message" 
@@ -3059,7 +3192,6 @@
 					
 			<!-- If we are in Outland -->
 			<If Condition="Me.MapId == 530">
-			
 			
 				<!-- If we are Alliance -->
 				<If Condition="Me.IsAlliance" >

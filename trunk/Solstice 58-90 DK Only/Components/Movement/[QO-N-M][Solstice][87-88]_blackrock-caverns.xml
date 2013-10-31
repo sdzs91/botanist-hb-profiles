@@ -56,24 +56,20 @@
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
-							KillBetweenHotspots="False"
+							KillBetweenHotspots="True"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
-							LootMobs="False"
-							LootRadius="1"
-							MountDistance="75"
+							LootMobs="True"
+							LootRadius="35"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="1"
+							PullDistance="25"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
-							UseFlightPaths="True"
 							UseMount="True" 
 							UseRandomMount="False" />
 							
@@ -257,23 +253,27 @@
 
 				</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 
-				<!-- Profile message - Waiting 3 seconds - Food check - Sweet Potato Bread -->
+				<!-- Profile message - Waiting 3 seconds - Food check - Frybread -->
 				<CustomBehavior File="Message" 
-								Text="Waiting 3 seconds - Food check - Sweet Potato Bread."  
+								Text="Waiting 3 seconds - Food check - Frybread."  
 								LogColor="Orange" />
 				
 				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />
-				
-				<!-- If we don't have Sweet Potato Bread -->
-				<If Condition="!HasItem(35950)">
+								
+				<!-- If we don't have Frybread -->
+				<If Condition="!HasItem(82451)">
 		
 					<!-- Load profile - [QO-N][Solstice][58-90][repair-mail] -->
 					<CustomBehavior File="LoadProfile" 
 									ProfileName="Vendors\[QO-N][Solstice][58-90][repair-mail]" />
 		
-				</If>	<!-- If we don't have Sweet Potato Bread -->
+				</If>	<!-- If we don't have Frybread -->
+				
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />
 				
 				<!-- Profile message - All checks complete -->
 				<CustomBehavior File="Message" 

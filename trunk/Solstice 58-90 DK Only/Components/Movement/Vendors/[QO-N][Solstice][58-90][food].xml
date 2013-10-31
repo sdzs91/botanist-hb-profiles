@@ -43,39 +43,25 @@
 	<QuestOrder>
 
 		<!-- UserSettings -->
-			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
-							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
-							GroundMountFarmingMode="False"
-							HarvestHerbs="False"
-							HarvestMinerals="False"
-							KillBetweenHotspots="True"
-							LogoutForInactivity="False"
-							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
-							LootMobs="False"
-							LootRadius="1"
-							MountDistance="75"
-							MountName=""
-							NinjaSkin="False"
-							ProfileDebuggingMode="False"
-							PullDistance="45"
-							RessAtSpiritHealers="False"
-							SkinMobs="False"
-							UseFlightPaths="True"
-							UseMount="True" 
-							UseRandomMount="False" />
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		<CustomBehavior File="UserSettings"
+						AdvancedSettingsMode="True"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="True"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootMobs="True"
+						LootRadius="35"
+						MountName=""
+						NinjaSkin="False"
+						ProfileDebuggingMode="False"
+						PullDistance="25"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />
 	
 		<!-- If our level is 88-90 -->
 		<If Condition="Me.Level &gt;= 88 &amp;&amp; Me.Level &lt; 90">
@@ -196,17 +182,17 @@
 		
 		
 		<!-- If our level is 87-88 -->
-		<If Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt; 88">
+		<If Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt; 100">
 		
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
 				
-				<!-- If we don't have Clefthoof Ribs -->
-				<If Condition="!HasItem(29451)">
+				<!-- If we don't have Frybread -->
+				<If Condition="!HasItem(82451)">
 				
-					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<!-- Profile message - We don't have any Frybread -->
 					<CustomBehavior File="Message" 
-									Text="We don't have any Clefthoof Ribs."
+									Text="We don't have any Frybread."
 									LogColor="Orange" />
 									
 					<!-- Profile message - Moving to the innkeep to purchase some -->
@@ -214,34 +200,38 @@
 									Text="Moving to the innkeep to purchase some."
 									LogColor="Orange" />				
 				
-					<!-- Fly to - XXXXXXXXXXXXXX-->
+					<!-- Fly to - Dwarven District inn hover point -->
 					<CustomBehavior File="FlyTo"
-									X="177.9547" Y="2629.776" Z="87.03335" />
+									X="-8390.737" Y="633.5543" Z="145.7344" />
+					
+					<!-- CTM to - land in front of the inn -->
+					<CustomBehavior File="MyCTM"
+									X="-8378.795" Y="613.2543" Z="95.36865" />
 					
 					<!-- Forced dismount -->				
 					<CustomBehavior File="ForcedDismount" />
 				
-					<!-- Move to - XXXXXXXXXXXXXXXX -->
-					<MoveTo X="189.3407" Y="2613.765" Z="87.28365" />
+					<!-- Move to - Thaegra Tillstone -->
+					<MoveTo X="-8369.775" Y="594.0609" Z="96.99989" />
 					
-					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Clefthoof Ribs -->
+					<!-- Interact with Thaegra Tillstone and buy 60 Frybread -->
 					<CustomBehavior File="InteractWith"
 												ObjectType="Npc"
 												GossipOptions="2"
 												Range="75"
-												MobId="16602" 
-												BuyItemId="29451" 
-												BuyItemCount="100"
-												X="190.8758" Y="2610.927" Z="87.28384" />
+												MobId="44235" 
+												BuyItemId="82451" 
+												BuyItemCount="60"
+												X="-8365.76" Y="594.658" Z="97.00069" />
 
 					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="60000" />
 
-					<!-- Move to - Thrallmar flight master -->				
-					<MoveTo X="229.219" Y="2634.052" Z="87.74729" />
+					<!-- Move to - outside the inn -->				
+					<MoveTo X="-8393.448" Y="622.7878" Z="95.32439" />
 					
-				</If>	<!-- If we don't have Clefthoof Ribs -->
+				</If>	<!-- If we don't have Frybread -->
 					
 			</If>	<!-- If we are Alliance -->
 			
@@ -292,14 +282,14 @@
 	
 			</If>	<!-- If we are Horde -->
 			
-			<!-- If we have Clefthoof Ribs -->
-			<If Condition="HasItem(29451)">
+			<!-- If we do have Frybread -->
+				<If Condition="HasItem(82451)">
 			
 				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
 				<CustomBehavior File="LoadProfile" 
 										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
 										
-			</If>	<!-- If we do have Clefthoof Ribs -->
+			</If>	<!-- If we do have Frybread -->
 			
 		</If>	<!-- If our level is 87-88 -->
 
@@ -1865,7 +1855,7 @@
 												Range="75"
 												MobId="16826" 
 												BuyItemId="27854" 
-												BuyItemCount="100"
+												BuyItemCount="40"
 												X="-708.8713" Y="2739.131" Z="94.73372" />
 
 					<!-- Wait timer - wait 30 seconds for for server lag and to give HB time to think -->
@@ -1905,7 +1895,7 @@
 												Range="75"
 												MobId="16602" 
 												BuyItemId="27854" 
-												BuyItemCount="100"
+												BuyItemCount="40"
 												X="190.8758" Y="2610.927" Z="87.28384" />
 
 					<!-- Wait timer - wait 30 seconds for for server lag and to give HB time to think -->

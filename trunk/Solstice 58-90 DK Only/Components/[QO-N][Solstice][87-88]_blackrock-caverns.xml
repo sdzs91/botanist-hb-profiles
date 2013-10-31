@@ -54,28 +54,24 @@
 							Text="You meet the level requirement to run this profile." 
 							LogColor="Fuchsia" />
 		
-		 	<!-- Booster UserSettings -->
+		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
 							KillBetweenHotspots="True"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
 							LootMobs="True"
-							LootRadius="25"
-							MountDistance="20"
+							LootRadius="35"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
 							PullDistance="25"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
-							UseFlightPaths="True"
 							UseMount="True" 
 							UseRandomMount="False" />
 							
@@ -83,7 +79,7 @@
 			<While Condition="true" >
 						
 				<!-- If we are in Blackrock Caverns -->
-				<If Condition="Me.ZoneId == 4926">
+				<If Condition="Me.MapId == 645">
 				
 					<!-- Profile message - Blackrock Caverns detected. Running out -->
 					<CustomBehavior File="Message" 
@@ -111,23 +107,23 @@
 
 					</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 
-					<!-- Profile message - Waiting 3 seconds - Food check - Sweet Potato Bread -->
+					<!-- Profile message - Waiting 3 seconds - Food check - Frybread -->
 					<CustomBehavior File="Message" 
-									Text="Waiting 3 seconds - Food check - Sweet Potato Bread."  
+									Text="Waiting 3 seconds - Food check - Frybread."  
 									LogColor="Orange" />
 					
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
 									
-					<!-- If we don't have Sweet Potato Bread -->
-					<If Condition="!HasItem(35950)">
+					<!-- If we don't have Frybread -->
+					<If Condition="!HasItem(82451)">
 			
 						<!-- Load profile - [QO-N][Solstice][58-90][repair-mail] -->
 						<CustomBehavior File="LoadProfile" 
 										ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][repair-mail]" />
 			
-					</If>	<!-- If we don't have Sweet Potato Bread -->
+					</If>	<!-- If we don't have Frybread -->
 					
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
@@ -215,7 +211,7 @@
 									LogColor="Fuchsia" />	
 						
 					<!-- While we didn't enter Blackrock Caverns -->
-					<While Condition="Me.ZoneId != 4926">
+					<While Condition="Me.MapId != 645">
 					
 						<!-- Move to - zone out location -->
 						<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
@@ -235,7 +231,7 @@
 										VariantTime="20000" />
 										
 						<!-- If we are not in Blackrock Caverns -->
-						<If Condition="Me.ZoneId != 4926">
+						<If Condition="Me.MapId != 645">
 						
 							<!-- Profile message - We are instance locked, initiating loop procedures until we enter the instance -->
 							<CustomBehavior File="Message" 
@@ -249,10 +245,10 @@
 				</If>	<!-- If we are in the Blackrock Caverns instance box -->
 				
 				<!-- If we are inside Blackrock Caverns -->
-				<If Condition="Me.ZoneId == 4926">
+				<If Condition="Me.MapId == 645">
 				
 					<!-- Move to - zone in location -->
-					<MoveTo X="1331.41" Y="241.904" Z="52.5046" />
+					<MoveTo X="209.903" Y="1133.02" Z="205.569" />
 					
 					<!--Profile message	- Deleting unwanted items from our bags -->				
 					<CustomBehavior File="Message" 
@@ -323,13 +319,217 @@
 									LogColor="Fuchsia" />
 				
 				
-				<!-- **************************************************************************************************************************** -->
+					<!-- **************************************************************************************************************************** -->
 					
 					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 					
+					<!-- Move to - left Twilight Flame Caller -->
+					<MoveTo X="247.5191" Y="1081.444" Z="206.3376" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					<!-- Move to - right Twilight Flame Caller -->
+					<MoveTo X="172.7622" Y="1086.165" Z="206.1144" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					<!-- Move to - base of the incline -->
+					<MoveTo X="203.1193" Y="996.3237" Z="194.7687" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					<!-- Move to - left-hand group -->
+					<MoveTo X="254.972" Y="991.0488" Z="190.8913" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					<!-- Move to - right-hand group -->
+					<MoveTo X="181.6928" Y="957.9458" Z="190.7628" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Forces kill of Rom'ogg Bonecrusher -->
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="39665"
+									EventX="210.8808" EventY="933.5485" EventZ="191.0887"
+									MoveOutOfGroundEffectAuraId1="111111"
+									MoveAwayFromMobCastingSpellId1="111111"
+									MoveAwayFromMobWithAuraId1="111111">
+						<Safespots>
+							<Hotspot X="210.8808" Y="933.5485" Z="191.0887" />
+						</Safespots>
+					</CustomBehavior>
+
+					<!-- Profile message - Hall of Lightning initialized -->			
+					<CustomBehavior File="Message" 
+									Text="Waiting 35 seconds for Raz the Crazed to clear the Evolved Twilight Zealot."  
+									LogColor="Fuchsia" />
+					
+					<!-- Wait timer - wait 35 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="35000" />
+					
+					<!-- Move to - right-hand side of the room to avoid getting stuck -->
+					<MoveTo X="244.4503" Y="903.2211" Z="191.0177" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					<!-- Move to - 1st Evolved Twilight Zealot -->
+					<MoveTo X="549.5881" Y="908.681" Z="169.5618" />
+					
+					<!-- Wait timer - wait 15 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Move to - 1st group  -->
+					<MoveTo X="549.5881" Y="908.681" Z="169.5618" />
+					
+					<!-- Wait timer - wait 15 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					<!-- Move to - 2nd Evolved Twilight Zealot at the bottom of the ramp -->
+					<MoveTo X="599.1043" Y="935.3484" Z="163.9968" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Fuchsia" />
+
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<!-- CTM to - move to edge of edge of ramp -->
+					<CustomBehavior File="MyCTM"
+									X="589.579" Y="932.0184" Z="166.1623" />	
+					
+					<!-- CTM to - jump off of ramp -->
+					<CustomBehavior File="MyCTM"
+									X="571.7339" Y="931.0037" Z="155.3551" />
+					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+					
+					<!-- EnableBehavior - Combat -->	
+					<EnableBehavior Name="Combat" />
+					
+					<!-- Profile message - Waiting 45 seconds for the patrols -->
+					<CustomBehavior File="Message" 
+										Text="Waiting 45 seconds for the patrols." 
+										LogColor="Fuchsia" />
+					
+					<!-- Profile message - Let's dance -->
+					<CustomBehavior File="Message" 
+									Text="Let's dance."  
+									LogColor="Gold" />
+					
+					<!-- Macro - Cast Dance -->
+					<CustomBehavior File="RunMacro"
+									NumOfTimes="1"
+									Macro="/dance" />
+					
+					<!-- Wait timer - wait 45 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="45000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
 					
 
+					<!-- Kill Corla, Herald of Twilight -->
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" 
+									EventCompleteDeadMobId="39679"
+									EventX="573.4445" EventY="987.6875" EventZ="155.3536"
+									MoveOutOfGroundEffectAuraId1="111111"
+									MoveAwayFromMobCastingSpellId1="111111"
+									MoveAwayFromMobWithAuraId1="111111">
+						<Safespots>
+							<Hotspot X="573.4445" Y="987.6875" Z="155.3536" />
+						</Safespots>
+					</CustomBehavior>
 					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Move to - 1st group on the right after Corla, Herald of Twilight -->
+					<MoveTo X="558.66" Y="897.497" Z="155.3758" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Move to - solo mobs on the left -->
+					<MoveTo X="579.863" Y="896.743" Z="155.3757" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Move to - back group before the ramp -->
+					<MoveTo X="579.5712" Y="868.316" Z="155.4734" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
 					
 					
 					<!-- @@@@@@@@@@@@@@@@@@@@ Exit @@@@@@@@@@@@@@@@@@@@ -->
@@ -343,7 +543,7 @@
 									MobId="51340" />
 					
 					<!-- Move to - zone in location -->
-					<MoveTo X="223.3936" Y="1110.335" Z="205.6088" />
+					<MoveTo X="209.903" Y="1133.02" Z="205.569" />
 					
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -377,14 +577,14 @@
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
 					
-					<!-- If we don't have Sweet Potato Bread -->
-					<If Condition="!HasItem(35950)">
+					<!-- If we don't have Frybread -->
+					<If Condition="!HasItem(82451)">
 
-							<!-- Load profile - [QO-N][Solstice][58-90][repair-mail] -->
-							<CustomBehavior File="LoadProfile" 
-											ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][repair-mail]" />
+						<!-- Load profile - [QO-N][Solstice][58-90][repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][repair-mail]" />
 			
-					</If>	<!-- If we don't have Sweet Potato Bread -->
+					</If>	<!-- If we don't have Frybread-->
 
 					<!-- Profile message - Waiting 3 seconds - Mobile Banking check -->
 					<CustomBehavior File="Message" 
@@ -448,7 +648,7 @@
 				</If>	<!-- If we are inside Blackrock Caverns -->
 				
 				<!-- If we don't need to vendor -->
-				<If Condition="Me.ZoneId == 4926">
+				<If Condition="Me.MapId == 645">
 				
 					<!-- Profile message - Blackrock Caverns detected. Running out to reset -->
 					<CustomBehavior File="Message" 

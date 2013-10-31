@@ -53,28 +53,24 @@
 							Text="Movement procedures initialized." 
 							LogColor="Fuchsia" />
 		
-		 	<!-- UserSettings -->
+			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
-							KillBetweenHotspots="False"
+							KillBetweenHotspots="True"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
 							LootMobs="True"
 							LootRadius="35"
-							MountDistance="20"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="1"
+							PullDistance="25"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
-							UseFlightPaths="True"
 							UseMount="True" 
 							UseRandomMount="False" />
 							
