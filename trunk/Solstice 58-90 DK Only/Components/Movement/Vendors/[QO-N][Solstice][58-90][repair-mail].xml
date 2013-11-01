@@ -141,7 +141,7 @@
 								X="-10687.2" Y="-1309.713" Z="17.66455" />	
 				
 				<!-- Move to the zone out location -->
-				<RunTo X="-10679.7" Y="-1307.1" Z="17.34235" />	
+				<MoveTo X="-10679.7" Y="-1307.1" Z="17.34235" />	
 				
 			</If>	<!-- If we are still in Blackrock Depths, exit the instance -->
 
@@ -158,15 +158,15 @@
 						<CustomBehavior File="FlyTo" 
 										X="-9453.837" Y="-962.6011" Z="139.4122" />
 
-						<!-- Front doorway of the inn -->
-						<CustomBehavior File="FlyTo" 
-										X="8446.114" Y="-333.7011" Z="906.6091" />
-						
+						<!-- Fly to - Blacksmith Abasi - repair vendor -->
+						<CustomBehavior File="MyCTM" 
+										X="-9409.589" Y="-904.8812" Z="112.5402" />
+								
 						<!-- Custom behavior - ForcedDismount -->
 						<CustomBehavior File="ForcedDismount" />
 						
-						<!-- Move to - inside the inn -->
-						<RunTo X="8388.318" Y="-388.8239" Z="903.1187" />
+						<!-- Move to - Blacksmith Abasi - repair vendor -->
+						<MoveTo X="-9409.589" Y="-904.8812" Z="112.5402" />
 						
 						<!-- Profile message - Our durability is less than 30%, or our bags have less than 25 empty slots left -->
 						<CustomBehavior File="Message" 
@@ -180,14 +180,12 @@
 								<Vendor Name="Blacksmith Abasi" 
 										Entry="48617" 
 										Type="Repair" 
-										X="-9404.68" Y="-906.438" Z="112.5411" />
+										X="-9404.68" Y="-906.438" Z="112.5408" />
 							</Vendors>
 						</SetVendor>
-						
-						<!-- Mailbox -->
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+								<Mailbox X="-9416.835" Y="-933.4434" Z="112.5406" />
 							</Mailboxes>
 						</SetMailbox>
 									
@@ -200,22 +198,22 @@
 						
 					</If>	<!-- If we are Alliance -->
 				
-					<!-- If we are Alliance -->
-					<If Condition="Me.IsAlliance">
+					<!-- If we are Horde -->
+					<If Condition="Me.IsHorde">
 					
 						<!-- Fly to - Ramkahen hover point -->
 						<CustomBehavior File="FlyTo" 
 										X="-9453.837" Y="-962.6011" Z="139.4122" />
 
-						<!-- Front doorway of the inn -->
-						<CustomBehavior File="FlyTo" 
-										X="8446.114" Y="-333.7011" Z="906.6091" />
-						
+						<!-- Fly to - Blacksmith Abasi - repair vendor -->
+						<CustomBehavior File="MyCTM" 
+										X="-9409.589" Y="-904.8812" Z="112.5402" />
+								
 						<!-- Custom behavior - ForcedDismount -->
 						<CustomBehavior File="ForcedDismount" />
 						
-						<!-- Move to - inside the inn -->
-						<RunTo X="8388.318" Y="-388.8239" Z="903.1187" />
+						<!-- Move to - Blacksmith Abasi - repair vendor -->
+						<MoveTo X="-9409.589" Y="-904.8812" Z="112.5402" />
 						
 						<!-- Profile message - Our durability is less than 30%, or our bags have less than 25 empty slots left -->
 						<CustomBehavior File="Message" 
@@ -229,14 +227,12 @@
 								<Vendor Name="Blacksmith Abasi" 
 										Entry="48617" 
 										Type="Repair" 
-										X="-9404.68" Y="-906.438" Z="112.5411" />
+										X="-9404.68" Y="-906.438" Z="112.5408" />
 							</Vendors>
 						</SetVendor>
-						
-						<!-- Mailbox -->
 						<SetMailbox>
 							<Mailboxes>
-								<Mailbox X="-7112.428" Y="-1201.948" Z="306.7885" />
+								<Mailbox X="-9416.835" Y="-933.4434" Z="112.5406" />
 							</Mailboxes>
 						</SetMailbox>
 									
@@ -247,7 +243,7 @@
 										DoSell="True" 
 										DoTrain="False" />	
 						
-					</If>	<!-- If we are Alliance -->
+					</If>	<!-- If we are Horde -->
 					
 				</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 			
@@ -465,13 +461,13 @@
 								LogColor="Fuchsia" />
 				
 				<!-- Move to the zone in location -->
-				<RunTo X="460.6402" Y="15.41037" Z="-71.11736" />
+				<MoveTo X="460.6402" Y="15.41037" Z="-71.11736" />
 				
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
 				
 				<!-- Move to the zone out location -->
-				<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+				<MoveTo X="-7178.41" Y="-922.152" Z="166.092" />	
 				
 			</If>	<!-- If we are still in Halls of Lightning, exit the instance -->
 
@@ -496,7 +492,7 @@
 						<CustomBehavior File="ForcedDismount" />
 						
 						<!-- Move to - inside the inn -->
-						<RunTo X="8388.318" Y="-388.8239" Z="903.1187" />
+						<MoveTo X="8388.318" Y="-388.8239" Z="903.1187" />
 						
 						<!-- Profile message - Our durability is less than 30%, or our bags have less than 25 empty slots left -->
 						<CustomBehavior File="Message" 
@@ -543,7 +539,7 @@
 						<CustomBehavior File="ForcedDismount" />
 						
 						<!-- Move to - inside the inn -->
-						<RunTo X="8388.318" Y="-388.8239" Z="903.1187" />
+						<MoveTo X="8388.318" Y="-388.8239" Z="903.1187" />
 						
 						<!-- Profile message - Our durability is less than 30%, or our bags have less than 25 empty slots left -->
 						<CustomBehavior File="Message" 
@@ -858,16 +854,16 @@
 			<If Condition="Me.MapId == 574">
 			
 				<!-- Make our way to the exit -->
-				<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+				<MoveTo X="155.1128" Y="-86.14938" Z="12.55292" />
 
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" X="125.1626" Y="-87.67013" Z="12.55168" />
 				
 				<!-- Move to - zone out location -->
-				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				<MoveTo X="1221.63" Y="-4864.75" Z="41.2481" />
 				
 				<!-- Move to - outside Utgarde Keep -->
-				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				<MoveTo X="1221.63" Y="-4864.75" Z="41.2481" />
 				
 			</If>	<!-- If we are in Utgarde Keep, exit the instance -->					
 								
@@ -1114,16 +1110,16 @@
 			<If Condition="Me.MapId == 574">
 			
 				<!-- Make our way to the exit -->
-				<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+				<MoveTo X="155.1128" Y="-86.14938" Z="12.55292" />
 
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" X="125.1626" Y="-87.67013" Z="12.55168" />
 				
 				<!-- Move to - zone out location -->
-				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				<MoveTo X="1221.63" Y="-4864.75" Z="41.2481" />
 				
 				<!-- Move to - outside Utgarde Keep -->
-				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				<MoveTo X="1221.63" Y="-4864.75" Z="41.2481" />
 				
 			</If>	<!-- If we are in Utgarde Keep, exit the instance -->					
 							
@@ -1131,14 +1127,14 @@
 			<If Condition="Me.ZoneId == 4196">
 			
 				<!-- Make our way to the exit -->
-				<RunTo X="-517.15" Y="-489.201" Z="11.01775" />
+				<MoveTo X="-517.15" Y="-489.201" Z="11.01775" />
 				
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" 
 								X="-518.2795" Y="-460.8023" Z="10.98073" />
 				
 				<!-- Move to - zone out location -->
-				<RunTo X="4774.44" Y="-2030.03" Z="229.38" />	
+				<MoveTo X="4774.44" Y="-2030.03" Z="229.38" />	
 					
 			</If>	<!-- If we are inside Drak'Tharon Keep -->
 
@@ -1160,7 +1156,7 @@
 								X="145.9168" Y="-17.94392" Z="-16.6367" />
 				
 				<!-- Move to - zone out location -->
-				<Runto X="3896.74" Y="6985.4" Z="69.4879" />
+				<MoveTo X="3896.74" Y="6985.4" Z="69.4879" />
 				
 			</If>	<!-- If we are in The Nexus -->
 			
@@ -1233,7 +1229,7 @@
 				<MoveTo X="3641.17" Y="2031.15" Z="2.59325" />
 
 				<!-- Move to - flying mount location -->
-				<Runto X="3676.57" Y="2099.666" Z="73.02065" />
+				<MoveTo X="3676.57" Y="2099.666" Z="73.02065" />
 				
 			</If>	<!-- If we are still inside Ahn'kahet: The Old Kingdom -->
 
@@ -1395,16 +1391,16 @@
 			<If Condition="Me.MapId == 574">
 			
 				<!-- Make our way to the exit -->
-				<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+				<MoveTo X="155.1128" Y="-86.14938" Z="12.55292" />
 
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" X="125.1626" Y="-87.67013" Z="12.55168" />
 				
 				<!-- Move to - zone out location -->
-				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				<MoveTo X="1221.63" Y="-4864.75" Z="41.2481" />
 				
 				<!-- Move to - outside Utgarde Keep -->
-				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				<MoveTo X="1221.63" Y="-4864.75" Z="41.2481" />
 				
 			</If>	<!-- If we are in Utgarde Keep, exit the instance -->					
 								
@@ -1712,16 +1708,16 @@
 								LogColor="Fuchsia" />
 
 				<!-- Make our way to the exit -->
-				<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+				<MoveTo X="155.1128" Y="-86.14938" Z="12.55292" />
 
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" X="125.1626" Y="-87.67013" Z="12.55168" />
 				
 				<!-- Move to - zone out location -->
-				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				<MoveTo X="1221.63" Y="-4864.75" Z="41.2481" />
 				
 				<!-- Move to - outside Utgarde Keep -->
-				<Runto X="1221.63" Y="-4864.75" Z="41.2481" />
+				<MoveTo X="1221.63" Y="-4864.75" Z="41.2481" />
 				
 			</If>	<!-- If we are still in Utgarde Keep, exit the instance -->
 
@@ -1892,16 +1888,16 @@
 								LogColor="Orange" />
 
 				<!-- Move to - zone in location -->
-				<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
+				<MoveTo X="2.63209" Y="-0.209401" Z="0.005755" />
 					
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" X="-20.722509" Y="0.3174916" Z="0.005990623" />
 				
 				<!-- Move to - zone out location -->
-				<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
+				<MoveTo X="-3362.1" Y="4668.9" Z="-101.048" />
 
 				<!-- Move to - mount location -->
-				<RunTo X="-3362.1" Y="4761.123" Z="-101.396" />
+				<MoveTo X="-3362.1" Y="4761.123" Z="-101.396" />
 			
 				<!-- Move to - Botanica hover point -->
 				<CustomBehavior File="FlyTo" 
@@ -1937,7 +1933,7 @@
 									LogColor="Cyan" />
 					
 					<!-- Move to - Blazzle - repair -->
-					<RunTo X="3062.79" Y="3674.078" Z="142.5128" />
+					<MoveTo X="3062.79" Y="3674.078" Z="142.5128" />
 					
 						<!-- Vendor conditions -->
 						<CustomBehavior File="ForceSetVendor" 
@@ -1988,7 +1984,7 @@
 									LogColor="Cyan" />
 					
 					<!-- Move to - Blazzle - repair -->
-					<RunTo X="3062.79" Y="3674.078" Z="142.5128" />
+					<MoveTo X="3062.79" Y="3674.078" Z="142.5128" />
 					
 						<!-- Vendor conditions -->
 						<CustomBehavior File="ForceSetVendor" 
@@ -2113,16 +2109,16 @@
 								LogColor="Orange" />
 
 				<!-- Move to - zone in location -->
-				<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
+				<MoveTo X="2.63209" Y="-0.209401" Z="0.005755" />
 					
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" X="-20.722509" Y="0.3174916" Z="0.005990623" />
 				
 				<!-- Move to - zone out location -->
-				<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
+				<MoveTo X="-3362.1" Y="4668.9" Z="-101.048" />
 
 				<!-- Move to - mount location -->
-				<RunTo X="-3362.1" Y="4761.123" Z="-101.396" />
+				<MoveTo X="-3362.1" Y="4761.123" Z="-101.396" />
 			
 				<!-- Move to - Sethekk Halls hover point -->
 				<CustomBehavior File="FlyTo" 
@@ -2139,16 +2135,16 @@
 								LogColor="Orange" />
 			
 				<!-- Run to the exit -->
-				<RunTo X="-16.7899" Y="-0.071496" Z="-0.120559" />
+				<MoveTo X="-16.7899" Y="-0.071496" Z="-0.120559" />
 
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" X="-28.9178" Y="0.09100415" Z="-0.1205578" />
 				
 				<!-- Make sure we run to the right spot outside the portal -->
-				<RunTo X="-3361.8" Y="5209.2" Z="-101.049" />
+				<MoveTo X="-3361.8" Y="5209.2" Z="-101.049" />
 
 				<!-- Move to - mount location -->
-				<RunTo X="-3361.594" Y="5110.184" Z="-101.3954" />
+				<MoveTo X="-3361.594" Y="5110.184" Z="-101.3954" />
 			
 				<!-- Move to - Auchenai Crypts hover point -->
 				<CustomBehavior File="FlyTo" 
@@ -2184,7 +2180,7 @@
 									LogColor="Cyan" />
 					
 					<!-- Move to - Cecil Meyers - repair -->
-					<RunTo X="-2974.844" Y="4026.831" Z="3.573579" />
+					<MoveTo X="-2974.844" Y="4026.831" Z="3.573579" />
 					
 						<!-- Vendor conditions -->
 						<CustomBehavior File="ForceSetVendor" 
@@ -2217,7 +2213,7 @@
 					<If Condition="Me.X &gt; -2657.777 &amp;&amp; Me.X &lt; -2573.507 &amp;&amp; Me.Y &gt; 4414.723 &amp;&amp; Me.Y &lt; 4500.264" >
 					
 						<!-- Move to - Stonebreaker Hold - flight master -->
-						<RunTo X="-2566.725" Y="4426.855" Z="39.26406" />
+						<MoveTo X="-2566.725" Y="4426.855" Z="39.26406" />
 						
 					</If>	<!-- If we are inside Stonebreaker Hold -->	
 					
@@ -2272,7 +2268,7 @@
 						<If Condition="Me.X &gt; -2657.777 &amp;&amp; Me.X &lt; -2573.507 &amp;&amp; Me.Y &gt; 4414.723 &amp;&amp; Me.Y &lt; 4500.264" >
 						
 							<!-- Move to - Stonebreaker Hold - flight master -->
-							<RunTo X="-2566.725" Y="4426.855" Z="39.26406" />
+							<MoveTo X="-2566.725" Y="4426.855" Z="39.26406" />
 							
 						</If>	<!-- If we are inside Stonebreaker Hold -->		
 							
@@ -2371,16 +2367,16 @@
 								LogColor="Orange" />
 			
 				<!-- Run to the exit -->
-				<RunTo X="-16.7899" Y="-0.071496" Z="-0.120559" />
+				<MoveTo X="-16.7899" Y="-0.071496" Z="-0.120559" />
 
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" X="-28.9178" Y="0.09100415" Z="-0.1205578" />
 				
 				<!-- Make sure we run to the right spot outside the portal -->
-				<RunTo X="-3361.8" Y="5209.2" Z="-101.049" />
+				<MoveTo X="-3361.8" Y="5209.2" Z="-101.049" />
 
 				<!-- Move to - mount location -->
-				<RunTo X="-3361.594" Y="5110.184" Z="-101.3954" />
+				<MoveTo X="-3361.594" Y="5110.184" Z="-101.3954" />
 			
 				<!-- Move to - Auchenai Crypts hover point -->
 				<CustomBehavior File="FlyTo" 
@@ -2416,7 +2412,7 @@
 									LogColor="Cyan" />
 					
 					<!-- Move to - Cecil Meyers - repair -->
-					<RunTo X="-2974.844" Y="4026.831" Z="3.573579" />
+					<MoveTo X="-2974.844" Y="4026.831" Z="3.573579" />
 					
 						<!-- Vendor conditions -->
 						<CustomBehavior File="ForceSetVendor" 
@@ -2449,7 +2445,7 @@
 					<If Condition="Me.X &gt; -2657.777 &amp;&amp; Me.X &lt; -2573.507 &amp;&amp; Me.Y &gt; 4414.723 &amp;&amp; Me.Y &lt; 4500.264" >
 					
 						<!-- Move to - Stonebreaker Hold - flight master -->
-						<RunTo X="-2566.725" Y="4426.855" Z="39.26406" />
+						<MoveTo X="-2566.725" Y="4426.855" Z="39.26406" />
 						
 					</If>	<!-- If we are inside Stonebreaker Hold -->	
 					
@@ -2504,7 +2500,7 @@
 						<If Condition="Me.X &gt; -2657.777 &amp;&amp; Me.X &lt; -2573.507 &amp;&amp; Me.Y &gt; 4414.723 &amp;&amp; Me.Y &lt; 4500.264" >
 						
 							<!-- Move to - Stonebreaker Hold - flight master -->
-							<RunTo X="-2566.725" Y="4426.855" Z="39.26406" />
+							<MoveTo X="-2566.725" Y="4426.855" Z="39.26406" />
 							
 						</If>	<!-- If we are inside Stonebreaker Hold -->		
 							
@@ -2603,17 +2599,17 @@
 								LogColor="Orange" />
 
 				<!-- Move to - zone in location -->
-				<RunTo X="-4.81115" Y="1.00236" Z="-0.954329" />
+				<MoveTo X="-4.81115" Y="1.00236" Z="-0.954329" />
 				
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" 
 								X="7.24442" Y="1.005781" Z="-0.954329" />
 				
 				<!-- Move to - zone out location -->
-				<RunTo X="-3080.679" Y="4942.799" Z="-101.047" />
+				<MoveTo X="-3080.679" Y="4942.799" Z="-101.047" />
 			
 				<!-- Move to - mount location -->
-				<RunTo X="-3190.779" Y="4942.563" Z="-101.3955" />
+				<MoveTo X="-3190.779" Y="4942.563" Z="-101.3955" />
 			
 				<!-- Move to - Mana Tombs hover point -->
 				<CustomBehavior File="FlyTo" 
@@ -2649,7 +2645,7 @@
 									LogColor="Cyan" />
 					
 					<!-- Move to - Cecil Meyers - repair -->
-					<RunTo X="-2974.844" Y="4026.831" Z="3.573579" />
+					<MoveTo X="-2974.844" Y="4026.831" Z="3.573579" />
 					
 						<!-- Vendor conditions -->
 						<CustomBehavior File="ForceSetVendor" 
@@ -2682,7 +2678,7 @@
 					<If Condition="Me.X &gt; -2657.777 &amp;&amp; Me.X &lt; -2573.507 &amp;&amp; Me.Y &gt; 4414.723 &amp;&amp; Me.Y &lt; 4500.264" >
 					
 						<!-- Move to - Stonebreaker Hold - flight master -->
-						<RunTo X="-2566.725" Y="4426.855" Z="39.26406" />
+						<MoveTo X="-2566.725" Y="4426.855" Z="39.26406" />
 						
 					</If>	<!-- If we are inside Stonebreaker Hold -->	
 					
@@ -2737,7 +2733,7 @@
 						<If Condition="Me.X &gt; -2657.777 &amp;&amp; Me.X &lt; -2573.507 &amp;&amp; Me.Y &gt; 4414.723 &amp;&amp; Me.Y &lt; 4500.264" >
 						
 							<!-- Move to - Stonebreaker Hold - flight master -->
-							<RunTo X="-2566.725" Y="4426.855" Z="39.26406" />
+							<MoveTo X="-2566.725" Y="4426.855" Z="39.26406" />
 							
 						</If>	<!-- If we are inside Stonebreaker Hold -->		
 							
@@ -2837,14 +2833,14 @@
 								LogColor="Orange" />
 
 				<!-- Move to - zone in location -->
-				<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+				<MoveTo X="-1355.28" Y="1641.57" Z="68.274" />
 				
 				<!-- Go through the portal -->
 				<CustomBehavior File="Misc\InInstance" 
 								X="-1358.403" Y="1629.539" Z="68.55495" />
 				
 				<!-- Move to - zone out location -->
-				<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
+				<MoveTo X="-363.436" Y="3078.43" Z="-15.0013" />
 			
 			</If>	<!-- If we are still in Hellfire Ramparts, exit the instance -->
 			
@@ -2876,7 +2872,7 @@
 									LogColor="Cyan" />
 					
 					<!-- Move to - Humphry - repair -->
-					<RunTo X="-713.475" Y="2607.182" Z="91.00004" />
+					<MoveTo X="-713.475" Y="2607.182" Z="91.00004" />
 					
 						<!-- Vendor conditions -->
 						<CustomBehavior File="ForceSetVendor" 
@@ -3055,19 +3051,19 @@
 									LogColor="Orange" />
 					
 					<!-- Move to the center of the ramp between the burning braziers -->
-					<RunTo X="64.47768" Y="-319.3361" Z="65.46352" />
+					<MoveTo X="64.47768" Y="-319.3361" Z="65.46352" />
 					
 				</If>	<!-- If we are in UBRS -->				
 		
 				<!-- Move to - zone in location -->				
-				<RunTo X="80.03099" Y="-258.143" Z="60.70329" />
+				<MoveTo X="80.03099" Y="-258.143" Z="60.70329" />
 				
 				<!-- Go through  portal -->
 				<CustomBehavior File="Misc\InInstance" 
 								X="77.31385" Y="-210.969" Z="49.81922" />
 				
 				<!-- Move to - zone out location -->
-				<RunTo X="-7526.999" Y="-1225.375" Z="285.731" />	
+				<MoveTo X="-7526.999" Y="-1225.375" Z="285.731" />	
 
 				<!-- Move to - center of the balcony -->
 				<CustomBehavior File="NoCombatMoveTo"
@@ -3085,7 +3081,7 @@
 										WaitTime="3000" />
 				
 				<!-- Move to - overhead gate -->
-				<Runto X="-7498.533" Y="-1075.821" Z="264.7475" />
+				<MoveTo X="-7498.533" Y="-1075.821" Z="264.7475" />
 
 			</If>	<!-- If we are still in Blackrock Depths, exit the instance -->
 
@@ -3203,7 +3199,7 @@
 									LogColor="Orange" />
 													
 					<!-- Move to - Honor Hold - repair vendor -->
-					<RunTo X="-708.8553" Y="2620.628" Z="89.705" />
+					<MoveTo X="-708.8553" Y="2620.628" Z="89.705" />
 
 					<!-- Forced dismount -->				
 					<CustomBehavior File="ForcedDismount" />
@@ -3214,7 +3210,7 @@
 									LogColor="Cyan" />
 					
 					<!-- Move to - Humphry - repair -->
-					<RunTo X="-713.475" Y="2607.182" Z="91.00004" />
+					<MoveTo X="-713.475" Y="2607.182" Z="91.00004" />
 					
 						<!-- Vendor conditions -->
 						<CustomBehavior File="ForceSetVendor" 
@@ -3249,7 +3245,7 @@
 									LogColor="Orange" />
 									
 					<!-- Move to - Thrallmar - repair vendor -->
-					<RunTo X="178.3041" Y="2627.994" Z="87.11761" />
+					<MoveTo X="178.3041" Y="2627.994" Z="87.11761" />
 					
 					<!-- Profile message - We are in Thrallmar -->
 					<CustomBehavior File="Message" 
