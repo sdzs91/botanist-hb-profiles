@@ -64,23 +64,23 @@
 						UseMount="True" 
 						UseRandomMount="False" />
 
-		<!-- If our level is 88-90 -->
-		<If Condition="Me.Level &gt;= 88 &amp;&amp; Me.Level &lt; 90">
+		<!-- If our level is 88-91 -->
+		<If Condition="Me.Level &gt;= 88 &amp;&amp; Me.Level &lt; 91">
 			
 			<!-- Profile message - Our durability is less than 30% or we have less than 25 empty bag slots remaining -->
 			<CustomBehavior File="Message" 
 							Text="Our durability is less than 30% or we have less than 25 empty bag slots remaining." 
 							LogColor="Fuchsia" />
 								
-			<!-- If we are in Ramkahen -->
-			<If Condition="Me.ZoneId == 1584">	
+			<!-- If we are in Lost City of the Tol'vir -->
+			<If Condition="Me.ZoneId == 5396">	
 				
 				<!-- If our hearthstone/innkeepers daughter is set to Iron Summit -->
-				<If Condition="Me.HearthstoneAreaId == 5628" >
+				<If Condition="Me.HearthstoneAreaId == 5466" >
 				
-					<!-- Profile message - We are in Blackrock Depths, using our Hearthstone/Innkeeper's Daughter -->
+					<!-- Profile message - We are in the Lost City of the Tol'vir, using our Hearthstone/Innkeeper's Daughter -->
 					<CustomBehavior File="Message" 
-									Text="We are in Blackrock Depths, using our Hearthstone/Innkeeper's Daughter." 
+									Text="We are in the Lost City of the Tol'vir, using our Hearthstone/Innkeeper's Daughter." 
 									LogColor="Cyan" />
 								
 					<!-- If we have a Hearthstone -->
@@ -123,24 +123,25 @@
 				
 				</If>	<!-- If our hearthstone is set here, use it -->
 				
-			</If>	<!-- If we are in Blackrock Depths -->
+			</If>	<!-- If we are in Lost City of the Tol'vir -->
 		
-			<!-- If we are still in Blackrock Depths, exit the instance -->
-			<If Condition="Me.ZoneId == 1584">
+			<!-- If we are still in in Lost City of the Tol'vir, exit the instance -->
+			<If Condition="Me.ZoneId == 5396">	
 			
 				<!-- Profile message - Our Hearthstone/Innkeeper's Daughter didn't work. Moving to the exit -->
 				<CustomBehavior File="Message" 
 								Text="Our Hearthstone/Innkeeper's Daughter didn't work. Moving to the exit."
 								LogColor="Fuchsia" />
 				
-				<!-- Move to the zone in location -->
-				<RunTo X="460.6402" Y="15.41037" Z="-71.11736" />
+				<!-- Move to - zone in location -->
+				<MoveTo X="-10700.4" Y="-1312.69" Z="17.6029" />
 				
 				<!-- Go through the portal -->
-				<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
+				<CustomBehavior File="Misc\InInstance" 
+								X="-10687.2" Y="-1309.713" Z="17.66455" />	
 				
 				<!-- Move to the zone out location -->
-				<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+				<RunTo X="-10679.7" Y="-1307.1" Z="17.34235" />	
 				
 			</If>	<!-- If we are still in Blackrock Depths, exit the instance -->
 

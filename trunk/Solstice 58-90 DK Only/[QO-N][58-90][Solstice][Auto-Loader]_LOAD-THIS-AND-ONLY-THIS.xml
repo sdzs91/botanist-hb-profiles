@@ -232,8 +232,8 @@
 		
 		</If>	<!-- If our level is 60-90 -->
 
-		<!-- If our level is 88-90 -->
-		<If Condition="Me.Level &gt;= 88 &amp;&amp; Me.Level &lt; 90">
+		<!-- If our level is 88-91 -->
+		<If Condition="Me.Level &gt;= 88 &amp;&amp; Me.Level &lt; 91">
 			<CustomBehavior File="LoadProfile" 
 									ProfileName="Components\[QO-N][Solstice][88-90]_lost-city-of-the-tol'vir" />
 		</If>

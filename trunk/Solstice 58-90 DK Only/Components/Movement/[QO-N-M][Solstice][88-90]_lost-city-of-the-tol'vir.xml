@@ -175,6 +175,9 @@
 				<!-- Move to - zone out location -->
 				<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
 				
+				<!-- Move to - exit of Blackrock Mountain -->
+				<MoveTo X="-7300.694" Y="-1063.43" Z="277.0697" />
+				
 			</If>	<!-- If we are in Blackrock Caverns -->
 
 			<!-- If we are in Eastern Kingdoms -->
@@ -189,6 +192,10 @@
 				<CustomBehavior File="Message" 
 									Text="Flying to Booty Bay." 
 									LogColor="Orange" />
+									
+				<!-- Fly to - mountain peak entering the Cape of Stranglethorn -->
+				<CustomBehavior File="FlyTo" 
+								X="-13249.23" Y="-669.3178" Z="315.0258" />					
 									
 				<!-- Fly to - Booty Bay hover point -->
 				<CustomBehavior File="FlyTo" 
@@ -367,17 +374,17 @@
 
 				</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 
-				<!-- Profile message - Waiting 3 seconds - Food check - Sweet Potato Bread -->
+				<!-- Profile message - Waiting 3 seconds - Food check - Buttery Wheat Roll -->
 				<CustomBehavior File="Message" 
-								Text="Waiting 3 seconds - Food check - Sweet Potato Bread."  
+								Text="Waiting 3 seconds - Food check - Buttery Wheat Roll."  
 								LogColor="Orange" />
 				
 				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />
 				
-				<!-- If we don't have Sweet Potato Bread -->
-				<If Condition="!HasItem(35950)">
+				<!-- If we don't have Buttery Wheat Roll -->
+				<If Condition="!HasItem(58261)">
 		
 					<!-- Load profile - [QO-N][Solstice][58-90][repair-mail] -->
 					<CustomBehavior File="LoadProfile" 
@@ -390,9 +397,9 @@
 								Text="All checks complete."  
 								LogColor="Orange" />
 
-				<!-- Profile message - Flying to the rendzvous -->
+				<!-- Profile message - Flying to the Lost City of the Tol'vir -->
 				<CustomBehavior File="Message" 
-								Text="Flying to the rendzvous point.." 
+								Text="Flying to the Lost City of the Tol'vir." 
 								LogColor="Cyan" />
 				
 				<!-- Fly to - the Lost City of the Tol'vir-->

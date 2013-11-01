@@ -458,21 +458,20 @@
 					<!-- EnableBehavior - Combat -->	
 					<EnableBehavior Name="Combat" />
 					
-					<!-- Profile message - Waiting 45 seconds for the patrols -->
-					<CustomBehavior File="Message" 
-										Text="Waiting 45 seconds for the patrols." 
-										LogColor="Fuchsia" />
-					
-					<!-- Profile message - Let's dance -->
-					<CustomBehavior File="Message" 
-									Text="Let's dance."  
-									LogColor="Gold" />
+					<!-- Wait timer - wait 1 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="1000" />
 					
 					<!-- Macro - Cast Dance -->
 					<CustomBehavior File="RunMacro"
 									NumOfTimes="1"
 									Macro="/dance" />
 					
+					<!-- Profile message - Waiting 45 seconds for the patrols -->
+					<CustomBehavior File="Message" 
+										Text="Waiting 45 seconds for the patrols." 
+										LogColor="Fuchsia" />
+
 					<!-- Wait timer - wait 45 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="45000" />
@@ -532,8 +531,254 @@
 									WaitTime="3000" />
 					
 					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Move to - bridge with the groups of Evolved Twilight Zealot  -->
+					<MoveTo X="414.3755" Y="817.3176" Z="103.4983" />
+					
+					<!-- Profile message - Waiting 30 seconds for Raz to kill the Evolved Twilight Zealots -->
+					<CustomBehavior File="Message" 
+										Text="Waiting 30 seconds for Raz to kill the Evolved Twilight Zealots." 
+										LogColor="Fuchsia" />
+					
+					<!-- Wait timer - wait 20 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="30000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Move to - the Twilight Forge entrance - top of the ramp -->
+					<MoveTo X="293.1744" Y="816.106" Z="103.5193" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Fuchsia" />
+
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<!-- Move to - 1st group left-hand Bellows Slaves -->
+					<MoveTo X="298.7108" Y="773.4961" Z="95.94894" />
+					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Fuchsia" />
+
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<!-- Move to - 2nd group left-hand Bellows Slaves -->
+					<MoveTo X="286.3282" Y="756.5021" Z="95.94909" />
+					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Fuchsia" />
+
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<!-- Move to - 3rd group left-hand Bellows Slaves -->
+					<MoveTo X="264.4809" Y="738.32" Z="95.9505" />
+					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Fuchsia" />
+
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<!-- Move to - left-hand group top of the incline -->
+					<MoveTo X="225.9472" Y="711.8027" Z="108.5219" />
+					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Fuchsia" />
+
+					<!-- Disable combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<!-- Move to - right-hand group top of the incline -->
+					<MoveTo X="197.1196" Y="703.7241" Z="107.5381" />
+					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+
+					<!-- Move to - start of patrol path -->
+					<MoveTo X="227.3062" Y="557.7526" Z="75.14723" />
+					
+					<!-- Profile message - Waiting for the patrol -->
+					<CustomBehavior File="Message" 
+										Text="Waiting 45 seconds for the patrol." 
+										LogColor="Gold" />
+					
+					<!-- Wait timer - wait 45 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="45000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Move to - lower right-hand group -->
+					<MoveTo X="265.2991" Y="545.7269" Z="70.76485" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Move to - entrance to Beauty's cave -->
+					<MoveTo X="216.7236" Y="588.9176" Z="75.24318" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+
+					<!-- Move to - start of patrol path -->
+					<MoveTo X="207.3048" Y="695.2477" Z="101.7548" />
+					
+					<!-- Profile message - Waiting for the patrol -->
+					<CustomBehavior File="Message" 
+										Text="Waiting 35 seconds for the patrol." 
+										LogColor="Gold" />
+					
+					<!-- Wait timer - wait 35 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="35000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Move to - 2nd lower right-hand group -->
+					<MoveTo X="262.3306" Y="547.6819" Z="71.35816" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+
+					<!-- Kill Beauty -->
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" 
+									EventCompleteDeadMobId="39700"
+									EventX="102.8576" EventY="583.9549" EventZ="76.78666"
+									MoveOutOfGroundEffectAuraId1="111111"
+									MoveAwayFromMobCastingSpellId1="111111"
+									MoveAwayFromMobWithAuraId1="111111">
+						<Safespots>
+							<Hotspot X="102.8576" Y="583.9549" Z="76.78666" />
+						</Safespots>
+					</CustomBehavior>
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+
 					<!-- @@@@@@@@@@@@@@@@@@@@ Exit @@@@@@@@@@@@@@@@@@@@ -->
 					
+					
+					<!-- Move to - top of the incline before Karsh Steelbender -->
+					<MoveTo X="225.6111" Y="714.3964" Z="107.8129" />
+					
+					<!-- Move to - move to right-hand side to avoid Karsh Steelbender -->
+					<MoveTo X="283.2339" Y="759.6547" Z="95.95143" />
 					
 					<!-- Move to - the teleporter -->
 					<MoveTo X="223.3936" Y="1110.335" Z="205.6088" />
