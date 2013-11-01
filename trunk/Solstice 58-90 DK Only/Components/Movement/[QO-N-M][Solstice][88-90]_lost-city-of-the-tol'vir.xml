@@ -270,7 +270,7 @@
 						
 							<!-- Fly to - Ramkahen hover point -->
 							<CustomBehavior File="FlyTo" 
-											X="-9453.837" Y="-962.6011" Z="139.4122" />
+											X="-9475.864" Y="-963.2589" Z="152.8976" />
 
 							<!-- Fly to - doorway of the inn -->
 							<CustomBehavior File="MyCTM" 
@@ -297,7 +297,7 @@
 							
 							<!-- Fly to - Ramkahen hover point -->
 							<CustomBehavior File="FlyTo" 
-											X="-9453.837" Y="-962.6011" Z="139.4122" />
+											X="-9475.864" Y="-963.2589" Z="152.8976" />
 							
 							<!-- Profile message - We are in Ramkahen -->
 							<CustomBehavior File="Message" 
@@ -313,8 +313,8 @@
 												LogColor="Cyan" />
 							
 								<!-- Fly to - Ramkahen hover point -->
-								<CustomBehavior File="FlyTo" 
-												X="-9453.837" Y="-962.6011" Z="139.4122" />
+							<CustomBehavior File="FlyTo" 
+											X="-9475.864" Y="-963.2589" Z="152.8976" />
 
 								<!-- Fly to - doorway of the inn -->
 								<CustomBehavior File="MyCTM" 
@@ -341,7 +341,7 @@
 								
 								<!-- Fly to - Ramkahen hover point -->
 								<CustomBehavior File="FlyTo" 
-												X="-9453.837" Y="-962.6011" Z="139.4122" />
+												X="-9475.864" Y="-963.2589" Z="152.8976" />
 								
 								<!-- Profile message - We are in Ramkahen -->
 								<CustomBehavior File="Message" 

@@ -967,61 +967,6 @@
 										ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][repair-mail]" />
 			
 					</If>	<!-- If we don't have Clefthoof Ribs and don't have Mag'har Mild Cheese -->
-
-					<!-- Profile message - Waiting 3 seconds - Mobile Banking check -->
-					<CustomBehavior File="Message" 
-									Text="Waiting 3 seconds - Mobile Banking check."  
-									LogColor="Orange" />
-					
-					<!-- Wait timer - wait 3 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
-					
-					<!-- If we are in a level 11 or greater guild -->
-					<If Condition="Me.GuildLevel &gt;= 11">
-					
-						<!-- Profile message - We are in a level 11+ guild -->
-						<CustomBehavior File="Message" 
-										Text="We are in a level 11+ guild."  
-										LogColor="Orange" />
-					
-						<!-- If we have friendly reputation with our guild -->
-						<If Condition="Me.GetReputationLevelWith(1168) &gt;= WoWUnitReaction.Friendly">
-						
-						
-							<!-- If we have spell (83958) - mobile banking -->
-							<If Condition="SpellManager.HasSpell(&quot;Mobile Banking&quot;)">
-							
-								<!-- Load profile - [QO-N][Solstice][58-90][mobile-banking] -->
-								<CustomBehavior File="LoadProfile" 
-												ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][mobile-banking]" />
-								
-							</If>	<!-- If we have spell (83958) - mobile banking -->
-							
-							<!-- If we don't have spell (83958) - mobile banking -->
-							<If Condition="SpellManager.!HasSpell(&quot;Mobile Banking&quot;)">
-							
-								<!-- Profile message - We don't have friendly or greater reputation with our guild. Aborting Mobile Banking procedures -->
-								<CustomBehavior File="Message" 
-												Text="We don't have friendly or greater reputation with our guild. Aborting Mobile Banking procedures!"  
-												LogColor="Red" />
-								
-							</If>	<!-- If we have spell (83958) - mobile banking -->
-
-						</If>	<!-- If we have friendly reputation with our guild -->
-					
-						<!-- If we are not in a level 11+ guild -->
-						<Else>
-						
-							<!-- Profile message - We are not in a level 11+ guild -->
-							<CustomBehavior File="Message" 
-											Text="We are not in a level 11+ guild."  
-											LogColor="Red" />
-						
-						</Else>		<!-- If we are not in a level 11+ guild -->
-					
-					
-					</If>	<!-- If we are in a level 11 or greater guild -->
 					
 					<!-- Profile message - All checks complete -->
 					<CustomBehavior File="Message" 
