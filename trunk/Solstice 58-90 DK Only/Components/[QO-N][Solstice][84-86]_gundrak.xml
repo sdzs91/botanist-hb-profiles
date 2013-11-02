@@ -1070,6 +1070,10 @@
 									Text="Gundrak detected. Running out to reset."
 									LogColor="Fuchsia" />
 				
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Check" />
+				
 					<!-- Move to - alternate exit after Gal'darah -->
 					<MoveTo X="1972.546" Y="834.9451" Z="135.2546" />
 

@@ -1043,15 +1043,15 @@
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.MapId == 574">	
 
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Check" />
+				
 					<!-- Profile message - We have more than 25 empty bag slots. Our gear is above 30% durability and we have Clefthoof Ribs -->
 					<CustomBehavior File="Message" 
 									Text="We have more than 25 empty bag slots. Our gear is above 30% durability and we have Clefthoof Ribs."
 									LogColor="Orange" />
-				
-					<!-- Instance timer check if we didn't repair -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
-									
+
 					<!-- Profile message - Exiting the instance so we can reset it -->
 					<CustomBehavior File="Message" 
 									Text="Exiting the instance so we can reset it."

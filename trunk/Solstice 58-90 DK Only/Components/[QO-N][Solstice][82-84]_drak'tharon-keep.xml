@@ -1467,6 +1467,10 @@
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.ZoneId == 4196">
 				
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Check" />
+				
 					<!-- Profile message - Drak'Tharon Keep detected. Running out to reset -->
 					<CustomBehavior File="Message" 
 									Text="Drak'Tharon Keep detected. Running out to reset."

@@ -978,14 +978,14 @@
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.ZoneId == 3790">
 				
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Check" />
+				
 					<!-- Profile message - We have more than 25 empty bag slots. Our gear is above 30% durability and we have Clefthoof Ribs -->
-						<CustomBehavior File="Message" 
-										Text="We have more than 25 empty bag slots. Our gear is above 30% durability and we have Clefthoof Ribs or Mag'har Mild Cheese."
-										LogColor="Orange" />
-					
-						<!-- Instance timer check if we didn't repair -->
-						<CustomBehavior File="Misc\InstanceTimer" 
-										Timer="Check" />
+					<CustomBehavior File="Message" 
+									Text="We have more than 25 empty bag slots. Our gear is above 30% durability and we have Clefthoof Ribs or Mag'har Mild Cheese."
+									LogColor="Orange" />
 										
 						<!-- Profile message - Exiting the instance so we can reset it -->
 						<CustomBehavior File="Message" 
@@ -994,9 +994,6 @@
 					
 					<!-- Make our way to the exit from the ground floor -->
 					<RunTo X="-20.15984" Y="-0.1140493" Z="-0.120559" />
-					
-					<!-- Instance timer check if we didn't repair -->
-					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
 					
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" X="-28.9178" Y="0.09100415" Z="-0.1205578" />

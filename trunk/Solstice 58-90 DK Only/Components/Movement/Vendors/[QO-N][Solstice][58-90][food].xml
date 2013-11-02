@@ -258,45 +258,98 @@
 			<!-- If we are Horde -->
 			<If Condition="Me.IsHorde" >
 				
-				<!-- If we don't have Clefthoof Ribs -->
-				<If Condition="!HasItem(29451)">
+				<!-- If we don't have Frybread -->
+				<If Condition="!HasItem(82451)">
 				
-					<!-- Profile message - We don't have any Clefthoof Ribs -->
+					<!-- Profile message - We don't have any Frybread -->
 					<CustomBehavior File="Message" 
-									Text="We don't have any Clefthoof Ribs."
+									Text="We don't have any Frybread."
 									LogColor="Orange" />
 									
 					<!-- Profile message - Moving to the innkeep to purchase some -->
 					<CustomBehavior File="Message" 
 									Text="Moving to the innkeep to purchase some."
 									LogColor="Orange" />				
-				
-					<!-- Fly to - Floyd Pinkus -->
+
+					<!-- Move to - Undercity to Orgrimmar - zeppelin -->
 					<CustomBehavior File="FlyTo"
-									X="177.9547" Y="2629.776" Z="87.03335" />
+								X="2014.59" Y="267.2065" Z="162.6157" />
+								
+					<!-- Land on the deck -->
+					<CustomBehavior File="MyCTM"
+								X="2067.364" Y="285.8986" Z="97.03163" />				
+						
+					<!-- Forced dismount -->		
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="UseTransport" 
+									TransportId="164871" 
+									WaitAtX="2066.103" 
+									WaitAtY="289.5949" 
+									WaitAtZ="97.03154"								
+									TransportStartX="2062.376" 
+									TransportStartY="292.998" 
+									TransportStartZ="114.973"								
+									StandOnX="2068.104" 
+									StandOnY="295.6651" 
+									StandOnZ="97.25005"
+									TransportEndX="1833.509" 
+									TransportEndY="-4391.543" 
+									TransportEndZ="152.7679"	
+									GetOffX="1843.231" 
+									GetOffY="-4395.24" 
+									GetOffZ="135.233" />	
+								
+					<!-- Run to the center of the deck -->
+					<RunTo X="1843.231" Y="-4395.24" Z="135.233" />	
+				
+					<!-- Fly to - Valley of Wisdom hover point -->
+					<CustomBehavior File="FlyTo"
+									X="1940.551" Y="-4236.492" Z="73.52203" />
+					
+					<!-- Fly to - Miwana -->
+					<CustomBehavior File="FlyTo"
+									X="1926.057" Y="-4194.097" Z="36.93166" />
 					
 					<!-- Forced dismount -->				
 					<CustomBehavior File="ForcedDismount" />
 				
-					<!-- Move to - Floyd Pinkus -->
-					<MoveTo X="189.3407" Y="2613.765" Z="87.28365" />
+					<!-- Move to - Miwana -->
+					<MoveTo X="1926.057" Y="-4194.097" Z="36.93166" />
 					
-					<!-- Interact with Floyd Pinkus and buy 100 Clefthoof Ribs -->
+					<!-- Interact with Miwana and buy 60 Frybread -->
 					<CustomBehavior File="InteractWith"
 												ObjectType="Npc"
 												GossipOptions="2"
 												Range="75"
-												MobId="16602" 
-												BuyItemId="29451" 
-												BuyItemCount="100"
-												X="190.8758" Y="2610.927" Z="87.28384" />
+												MobId="44785" 
+												BuyItemId="82451" 
+												BuyItemCount="60"
+												X="1926.057" Y="-4194.097" Z="36.93166" />
 
 					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="60000" />
 
-					<!-- Move to - Thrallmar flight master -->				
-					<MoveTo X="229.219" Y="2634.052" Z="87.74729" />			
+					<!-- Move to - outside the inn -->
+					<MoveTo X="1926.057" Y="-4194.097" Z="36.93166" />				
+									
+					<!-- Fly to - the Cleft of Shadow -->
+					<CustomBehavior File="FlyTo"
+									X="1857.4" Y="-4250.474" Z="38.79448" />				
+									
+					<!-- Forced dismount -->				
+					<CustomBehavior File="ForcedDismount" />				
+									
+					<!-- Move to the Blastedlands portal -->
+					<MoveTo X="1771.456" Y="-4326.629" Z="-8.225829" />
+					
+					<!-- Interact with the portal to Blastedlands -->
+					<CustomBehavior File="InteractWith" 
+									MobId="195142" 
+									ObjectType="Gameobject" 
+									Range="4.75" 
+									NumOfTimes="1"  
+									X="1768.45" Y="-4325.86" Z="-8.3711" />			
 			
 				</If>	<!-- If we don't have Clefthoof Ribs -->
 	

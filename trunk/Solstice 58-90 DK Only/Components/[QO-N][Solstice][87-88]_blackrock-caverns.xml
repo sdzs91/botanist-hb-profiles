@@ -841,6 +841,10 @@
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.MapId == 645">
 				
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Check" />
+				
 					<!-- Profile message - Blackrock Caverns detected. Running out to reset -->
 					<CustomBehavior File="Message" 
 									Text="Blackrock Caverns detected. Running out to reset."
