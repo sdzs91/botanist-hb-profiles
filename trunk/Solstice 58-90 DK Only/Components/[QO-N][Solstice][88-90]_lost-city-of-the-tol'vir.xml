@@ -447,7 +447,7 @@
 					
 					
 					<!-- Move to - Oathsworn Scorpid Keeper - left-hand group -->
-					<MoveTo X="-10961.67" Y="-1495.508" Z="6.677856" />
+					<MoveTo X="-10997.63" Y="-1507.026" Z="6.675105" />
 					
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
