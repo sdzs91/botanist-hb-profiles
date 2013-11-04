@@ -156,7 +156,6 @@
 							<!-- Custom behavior - LoadProfile - [QO-N-M][Solstice][58-90][riding-skill-training] -->
 							<CustomBehavior File="LoadProfile"  
 											ProfileName="Components\Movement\[QO-N-M][Solstice][58-90][riding-skill-training]" />
-				
 
 						</If>	<!-- If we have 250 gold-->				
 										
