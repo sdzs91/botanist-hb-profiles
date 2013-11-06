@@ -927,6 +927,32 @@
 					
 					</If>	<!-- If we have the Gronn-Bone Club -->
 					
+					<!-- If we have the Honed Voidaxe -->
+					<If Condition="HasItem(25762)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Honed Voidaxe as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Honed Voidaxe as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Honed Voidaxe -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="25762" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Honed Voidaxe -->
+					
 				</Else>
 
 			</If>	<!-- If we don't have Aura of Spellshattering -->

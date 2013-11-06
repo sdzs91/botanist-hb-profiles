@@ -4657,16 +4657,6 @@
 							</If>	<!-- If we have spell (83958) - mobile banking -->
 
 						</If>	<!-- If we have friendly reputation with our guild -->
-					
-						<!-- If we are not in a level 11+ guild -->
-						<Else>
-						
-							<!-- Profile message - We are not in a level 11+ guild -->
-							<CustomBehavior File="Message" 
-											Text="We are not in a level 11+ guild."  
-											LogColor="Red" />
-						
-						</Else>		<!-- If we are not in a level 11+ guild -->
 
 					</If>	<!-- If we are in a level 11 or greater guild -->
 						
@@ -4757,16 +4747,6 @@
 							</If>	<!-- If we have spell (83958) - mobile banking -->
 
 						</If>	<!-- If we have friendly reputation with our guild -->
-					
-						<!-- If we are not in a level 11+ guild -->
-						<Else>
-						
-							<!-- Profile message - We are not in a level 11+ guild -->
-							<CustomBehavior File="Message" 
-											Text="We are not in a level 11+ guild."  
-											LogColor="Red" />
-						
-						</Else>		<!-- If we are not in a level 11+ guild -->
 
 					</If>	<!-- If we are in a level 11 or greater guild -->	
 							
