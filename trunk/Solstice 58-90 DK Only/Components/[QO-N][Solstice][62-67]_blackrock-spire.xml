@@ -6,7 +6,7 @@
    
 	<MinDurability>-1</MinDurability>
 	<MinFreeBagSlots>-1</MinFreeBagSlots>
-	<TargetingDistance>1</TargetingDistance>
+	<TargetingDistance>15</TargetingDistance>
 	
 	<MailGrey>False</MailGrey>
 	<MailWhite>False</MailWhite>
@@ -75,7 +75,6 @@
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="25"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseMount="True" 

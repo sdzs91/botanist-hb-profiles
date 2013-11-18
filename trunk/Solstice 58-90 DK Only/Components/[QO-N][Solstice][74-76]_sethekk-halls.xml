@@ -3,7 +3,8 @@
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
-   
+    <TargetingDistance>15</TargetingDistance>
+	
 	<MinDurability>-1</MinDurability>
 	<MinFreeBagSlots>-1</MinFreeBagSlots>
 	
@@ -68,7 +69,6 @@
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="25"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseMount="True" 
