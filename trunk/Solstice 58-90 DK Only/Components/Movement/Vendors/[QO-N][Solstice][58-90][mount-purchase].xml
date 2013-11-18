@@ -166,7 +166,6 @@
 			</If>	<!-- If we are Horde -->
 
 			<!-- If we have a flying mount -->
-			<!-- If we have a flying mount -->
 			<If Condition="((HasSpell(32245)) || (HasSpell(32240)))">
 			
 				<!-- Profile message - Flying mount check -->

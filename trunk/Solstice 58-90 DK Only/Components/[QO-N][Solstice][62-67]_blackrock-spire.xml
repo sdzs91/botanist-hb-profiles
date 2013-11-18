@@ -6,6 +6,7 @@
    
 	<MinDurability>-1</MinDurability>
 	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	<TargetingDistance>1</TargetingDistance>
 	
 	<MailGrey>False</MailGrey>
 	<MailWhite>False</MailWhite>

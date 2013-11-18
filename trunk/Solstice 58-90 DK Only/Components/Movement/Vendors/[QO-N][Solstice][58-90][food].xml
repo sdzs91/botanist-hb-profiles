@@ -1025,7 +1025,7 @@
 				<!-- If we don't have Briny Hardcheese or Mead Basted Caribou -->
 				<If Condition="(!HasItem(35952)) &amp;&amp; (!HasItem(35953))">
 				
-					<!-- Profile message - We don't have any Briny Hardcheese -->
+					<!-- Profile message - We don't have any Briny Hardcheese/Mead Basted Caribou -->
 					<CustomBehavior File="Message" 
 									Text="We don't have any Briny Hardcheese/Mead Basted Caribou."
 									LogColor="Orange" />
@@ -1035,41 +1035,41 @@
 									Text="Moving to the innkeep to purchase some."
 									LogColor="Orange" />				
 				
-					<!-- Profile message - Flying to Fizzcrank Airstrip -->
+					<!-- Profile message - Flying to Valgarde Airstrip -->
 					<CustomBehavior File="Message" 
-									Text="Flying to Fizzcrank Airstrip." 
+									Text="Flying to Valgarde Airstrip." 
 									LogColor="Cyan" />
 				
-					<!-- Fly to the Fizzcrank Airstrip hover point -->
+					<!-- Fly to the Valgarde hover point -->
 					<CustomBehavior File="FlyTo" 
-									X="4136.879" Y="5238.005" Z="73.28379" />
+									X="559.7667" Y="-5001.531" Z="66.78531" />
 
 					<!-- Fly to - doorway of the inn -->
 					<CustomBehavior File="FlyTo" 
-									X="4162.544" Y="5281.484" Z="26.37667" />
+									X="568.382" Y="-4945.406" Z="18.19972" />
 					
 					<!-- Custom behavior - ForcedDismount -->
 					<CustomBehavior File="ForcedDismount" />
 
 					<!-- Move to - inside the inn -->
-					<MoveTo X="4175.812" Y="5280.616" Z="26.69315" />
+					<MoveTo X="596.6542" Y="-4926.678" Z="17.8835" />
 					
-					<!-- Interact with "Charlie" Northtop and buy 100 Mead Basted Caribou -->
+					<!-- Interact with Innkeeper Hazel Lagras and buy 100 Briny Hardcheese -->
 					<CustomBehavior File="InteractWith"
 												ObjectType="Npc"
 												GossipOptions="2"
 												Range="75"
-												MobId="26596" 
-												BuyItemId="35953" 
+												MobId="23731" 
+												BuyItemId="35952" 
 												BuyItemCount="100"
-												X="4178.471" Y="5278.223" Z="26.69429" />
+												X="599.0399" Y="-4928.184" Z="17.88327" />
 
-					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
+					<!-- Wait timer - wait 60 seconds for for server lag and to give HB time to think -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="60000" />
 
-					<!-- Move to - Fizzcrank Airstrip flight master -->				
-					<MoveTo X="4125.934" Y="5311.984" Z="28.6756" />
+					<!-- Move to - Valgarde flight master -->				
+					<MoveTo X="563.4134" Y="-5009.92" Z="11.86864" />
 					
 				</If>	<!-- If we don't have Briny Hardcheese or Mead Basted Caribou -->
 					

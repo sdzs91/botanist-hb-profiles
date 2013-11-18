@@ -89,9 +89,9 @@
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="3000" GoalText="TimeRemaining}" />   
 			
-			<!-- Custom behavior - macro - DepositGuildBankMoney(10000000) -->		
+			<!-- Custom behavior - macro - DepositGuildBankMoney(30000000) -->		
 			<CustomBehavior File="RunMacro" 
-							Macro="/run DepositGuildBankMoney(GetMoney() - 1000000)" /> 
+							Macro="/run DepositGuildBankMoney(GetMoney() - 3000000)" /> 
 
 			<!-- Wait timer - wait 3 seconds - reaction time -->		
 			<CustomBehavior File="WaitTimer" 

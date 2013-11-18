@@ -367,16 +367,6 @@
 									NumOfTimes="1"
 									Macro="/targetenemy [noharm]" />
 
-					<!-- Profile message - Casting Raise Dead -->
-					<CustomBehavior File="Message" 
-									Text="Casting Raise Dead."  
-									LogColor="Orange" />
-								
-					<!-- Macro - Cast Raise Dead -->
-					<CustomBehavior File="RunMacro"
-									NumOfTimes="1"
-									Macro="/cast Raise Dead" />				
-									
 					<!-- Profile message - Casting Icebound Fortitude -->
 					<CustomBehavior File="Message" 
 									Text="Casting Icebound Fortitude."  
