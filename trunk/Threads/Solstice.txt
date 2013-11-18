@@ -1,6 +1,8 @@
 [B][CENTER][SIZE=4][COLOR="#ffcc00"]Solstice[/COLOR][/SIZE][/CENTER][/B]
 
-[B][U][CENTER][SIZE=3][COLOR="#FF0000"]58-82 Now Available For Beta Testing[/COLOR][/SIZE][/CENTER][/U][/B]
+[B][U][CENTER][SIZE=3][COLOR="#FF0000"]55-90 Available For Beta Testing[/COLOR][/SIZE][/CENTER][/U][/B]
+
+[B][U][CENTER][SIZE=3][COLOR="#0000FF"]Now includes BamBam922's edited version of the DK Starting Zone (55-58) !![/COLOR] [/SIZE][/CENTER][/U][/B]
 
 [CENTER]
 [IMG]http://img11.imageshack.us/img11/7056/5qfi.jpg[/IMG]
@@ -44,6 +46,9 @@ And no, I can't change that. If you wish to do so, you have to change every prof
 
 [/CODE]
 
+[QUOTE=Slite62;1304853]Oh thank you Botanist.... I now need a new screen... I had a mouthfull of tea when my DK slayed the last Scarshield Legionare and started dancing with the corpse.
+
+Tea all over the screen is not a good thing... really :)[/QUOTE]
 
 [B][COLOR="#ffcc00"][SIZE=4]***** Information *****[/SIZE][/COLOR][/B]
 
@@ -146,13 +151,16 @@ Solstice will level according to the chart below:
 [/LIST]
 [LIST]
 [*] Click the load profile button and browse to where you have Soltice stored. Double click the profile named:
+[/LIST]
 [INDENT]
 [QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS
 [/INDENT]
+
 [LIST]
-[INDENT]
-[/INDENT]
+[*] Open the WoW System window, click on advanced, enable and adjust the two frame per second sliders until you are maintaining 33-35 fps. Save and close.
 [/LIST]
+[LIST]
+[*] Click the Class Config button on the HonorBuddy window. Adjust the eat perccentage to 85%. Save and close.
 [/LIST]
 [LIST]
 [*] Click start on the bot.
