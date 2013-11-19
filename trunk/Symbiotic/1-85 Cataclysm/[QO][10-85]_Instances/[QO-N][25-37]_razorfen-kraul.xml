@@ -54,25 +54,20 @@
 		 	<!-- Booster UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
-							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
 							KillBetweenHotspots="True"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
 							LootMobs="True"
-							LootRadius="1"
-							MountDistance="75"
+							LootRadius="15"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
 							PullDistance="25"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
-							UseFlightPaths="True"
 							UseMount="True" 
 							UseRandomMount="False" />
 							
@@ -635,27 +630,23 @@
 				</ElseIf>
 			</If>
 							
+			<!-- RAF User Settings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
-							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
 							KillBetweenHotspots="False"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
 							LootMobs="False"
 							LootRadius="1"
-							MountDistance="75"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
 							PullDistance="1"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
-							UseFlightPaths="True"
 							UseMount="True" 
 							UseRandomMount="False" />
 							

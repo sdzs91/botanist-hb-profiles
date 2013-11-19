@@ -422,6 +422,7 @@
 					
 			<!-- Eastern Kingdoms -->
 			<If Condition="Me.MapId == 0">
+			
 				<!-- Stormwind -->
 				<If Condition="Me.ZoneId == 1519">
 					<CustomBehavior File="Message" 
@@ -475,7 +476,7 @@
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="5000" />
 									
-					<!-- RAF re-enable mount in blastedlands-->
+					<!-- RAF re-enable mount in blasted lands-->
 					<CustomBehavior File="UserSettings"
 									UseMount="True"  />		
 				</If> <!-- Stormwind City -->
