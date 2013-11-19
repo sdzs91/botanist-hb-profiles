@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][Flying][Ranged-Attack][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle</Name>
+	<Name>[QO-N][Flying][Ranged-Attack][Reins of the Drake of the North Wind]</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -49,28 +49,24 @@
 
 		<If Condition="Me.Level &gt;= 90">
 		
-		 	<!-- Booster UserSettings -->
+		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
 							KillBetweenHotspots="True"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
 							LootMobs="True"
 							LootRadius="25"
 							MountDistance="75"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="25"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
-							UseFlightPaths="True"
 							UseMount="True" 
 							UseRandomMount="False" />
 						
@@ -100,7 +96,7 @@
 				<If Condition="Me.X &gt; -11413 || Me.X &lt; -11613 || Me.Y &lt; -2409 || Me.Y &gt; -2209 || Me.Z &lt; 575" >
 					
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][Flying][Ranged-Attack][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle" />
+									ProfileName="Movement\[QO-N-M][Flying][Ranged-Attack][Reins of the Drake of the North Wind]" />
 					
 				</If> <!-- Not in box -->
 				
@@ -323,7 +319,7 @@
 					</CustomBehavior>
 					<RunTo X="-1021.897" Y="-126.2177" Z="694.9169" />			
 									
-					<!-- Profile message - Fifth pull complete -->
+					<!-- Profile message - Seventh pull complete -->
 					<CustomBehavior File="Message" 
 										Text="Seventh pull complete." 
 										LogColor="Fuchsia" />
@@ -339,10 +335,9 @@
 					<!-- Disable combat -->
 					<DisableBehavior Name="Combat" />
 					
-					<!-- Run to the first Howling Gale -->				
+					<!-- Move to the first Howling Gale -->				
 					<RunTo X="-1039.558" Y="-69.81506" Z="700.4934" />				
 	
-										
 					<!-- Target the Howling Gale -->
 					<CustomBehavior File="RunMacro" 
 									Macro="/tar Howling Gale" 
@@ -352,14 +347,15 @@
 					<!-- Cast one of the following spells -->
 					<CustomBehavior File="Misc\RangeAttack" />
 
-					<!-- NoCombatMoveTo to the second Howling Gale -->				
-					<CustomBehavior File="NoCombatMoveTo"  
-									X="-1061.07" Y="-48.62126" Z="700.4818" />
+					<!-- Custom behavior - RunMacro - cleartarget -->	
+					<CustomBehavior File="RunMacro" 
+									Macro="/cleartarget" 
+									NumOfTimes="1" 
+									WaitTime="0"/>
 					
-					<!-- Wait timer to wait 1 second -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="1000" />
-
+					<!-- MoveTo to the second Howling Gale -->				
+					<MoveTo X="-1061.07" Y="-48.62126" Z="700.4818" />
+					
 					<!-- Clear target -->				
 					<CustomBehavior File="RunMacro" 
 									Macro="/cleartarget" 
@@ -375,17 +371,28 @@
 					<!-- Cast one of the following spells -->
 					<CustomBehavior File="Misc\RangeAttack" />
 									
-					<!-- NoCombatMoveTo to the top of the stairs -->				
-					<CustomBehavior File="NoCombatMoveTo"  
-									X="-1099.821" Y="-9.875572" Z="704.7399" />
+					<!-- MoveTo to the top of the stairs -->				
+					<MoveTo X="-1099.821" Y="-9.875572" Z="704.7399" />
+					
+					<!-- Custom behavior - RunMacro - cleartarget -->	
+					<CustomBehavior File="RunMacro" 
+									Macro="/cleartarget" 
+									NumOfTimes="1" 
+									WaitTime="0"/>
 					
 					<!-- Profile message - Enabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Enabling combat." 
 										LogColor="Fuchsia" />
-					
+
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />			
+									
+					<!-- Custom behavior - RunMacro - cleartarget -->	
+					<CustomBehavior File="RunMacro" 
+									Macro="/cleartarget" 
+									NumOfTimes="1" 
+									WaitTime="0"/>
 									
 					<!-- Pull Young Storm Dragon -->				
 					<CustomBehavior File="RunLikeHell" 
