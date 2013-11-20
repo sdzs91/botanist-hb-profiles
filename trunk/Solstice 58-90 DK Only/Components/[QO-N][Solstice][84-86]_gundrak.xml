@@ -786,54 +786,11 @@
 					<!-- Disable combat -->
 					<DisableBehavior Name="Combat" />				
 
-					<!-- Profile message - Targeting the enemy -->
-					<CustomBehavior File="Message" 
-									Text="Targeting the enemy."  
-									LogColor="Orange" />
-	
-					<!-- Macro - Clear target -->					
-					<CustomBehavior File="RunMacro" 
-									Macro="/cleartarget" 
-									NumOfTimes="1" 
-									WaitTime="0"/>
-	
-					<!-- Macro - targetenemy -->						
-					<CustomBehavior File="RunMacro"
-									NumOfTimes="1"
-									Macro="/targetenemy [noharm]" />
-					
-					<!-- Profile message - Casting Dark Command -->
-					<CustomBehavior File="Message" 
-									Text="Casting Dark Command."  
-									LogColor="Orange" />
-								
-					<!-- Macro - Cast Dark Command  -->
-					<CustomBehavior File="RunMacro"
-									NumOfTimes="2"
-									Macro="/cast Dark Command" />
-					
-					<!-- Profile message - Casting Icy Touch -->
-					<CustomBehavior File="Message" 
-									Text="Casting Icy Touch."  
-									LogColor="Orange" />
-								
-					<!-- Macro - Cast Icy Touch  -->
-					<CustomBehavior File="RunMacro"
-									NumOfTimes="1"
-									Macro="/cast Icy Touch" />
-					
-					<!-- Profile message - Casting Death Grip -->
-					<CustomBehavior File="Message" 
-									Text="Casting Death Grip."  
-									LogColor="Orange" />
-
-					<!-- Macro - Cast Death Grip -->
-					<CustomBehavior File="RunMacro"
-									NumOfTimes="1"
-									Macro="/cast Death Grip" />
+					<!-- Move to - aggro - Slad'ran -->
+					<MoveTo X="1775.129" Y="674.9809" Z="129.2167" />
 							
 					<!-- Move to - kite - Slad'ran -->
-					<MoveTo X="1868.598" Y="652.3614" Z="176.6819" />		
+					<MoveTo X="1827.449" Y="622.3249" Z="152.2444" />		
 							
 					<!-- Profile message - Enabling combat -->
 					<CustomBehavior File="Message" 
@@ -846,12 +803,12 @@
 					<!-- Kill Slad'ran -->
 					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="29304"
-									EventX="1868.598" EventY="652.3614" EventZ="176.6819"
+									EventX="1827.449" EventY="622.3249" EventZ="152.2444"
 									MoveOutOfGroundEffectAuraId1="111111"
 									MoveAwayFromMobCastingSpellId1="111111"
 									MoveAwayFromMobWithAuraId1="111111" >
 						<Safespots>
-							<Hotspot X="1868.598" Y="652.3614" Z="176.6819" />
+							<Hotspot X="1827.449" Y="622.3249" Z="152.2444" />
 						</Safespots>
 					</CustomBehavior>
 					

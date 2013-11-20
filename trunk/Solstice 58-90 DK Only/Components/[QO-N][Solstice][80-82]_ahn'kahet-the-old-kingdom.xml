@@ -850,12 +850,15 @@
 						<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
 						
 
+						<!-- Move to - safety -->
+						<MoveTo X="660.6105" Y="-829.446" Z="-3.274339" />
+						
 						<!-- Move to - 1st Bonegrinder - pivot position -->
-						<MoveTo X="642.3347" Y="-828.1076" Z="-3.229913" />
+						<MoveTo X="644.5938" Y="-827.9222" Z="-3.273087" />
 							
 						<!-- CTM to - align our target macro -->
 						<CustomBehavior File="MyCTM" 
-										X="619.545" Y="-831.6296" Z="-3.243805" />
+										X="617.7592" Y="-831.2189" Z="-3.243675" />
 										
 						<!-- Profile message - Disabling combat -->
 						<CustomBehavior File="Message" 

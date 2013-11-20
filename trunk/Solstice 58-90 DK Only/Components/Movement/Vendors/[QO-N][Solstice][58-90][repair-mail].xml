@@ -1717,38 +1717,6 @@
 			<CustomBehavior File="Message" 
 							Text="Our durability is less than 30% or we have less than 25 empty bag slots remaining." 
 							LogColor="Fuchsia" />
-								
-			<!-- If we are in Utgarde Keep exit the instance -->
-			<If Condition="Me.MapId == 574">
-			
-				<!-- Make our way to the exit -->
-				<MoveTo X="155.1128" Y="-86.14938" Z="12.55292" />
-
-				<!-- Go through the portal -->
-				<CustomBehavior File="Misc\InInstance" X="125.1626" Y="-87.67013" Z="12.55168" />
-				
-				<!-- Move to - zone out location -->
-				<MoveTo X="1221.63" Y="-4864.75" Z="41.2481" />
-				
-				<!-- Move to - outside Utgarde Keep -->
-				<MoveTo X="1221.63" Y="-4864.75" Z="41.2481" />
-				
-			</If>	<!-- If we are in Utgarde Keep, exit the instance -->					
-							
-			<!-- If we are in Drak'Tharon Keep, exit the instance -->
-			<If Condition="Me.ZoneId == 4196">
-			
-				<!-- Make our way to the exit -->
-				<MoveTo X="-517.15" Y="-489.201" Z="11.01775" />
-				
-				<!-- Go through the portal -->
-				<CustomBehavior File="Misc\InInstance" 
-								X="-518.2795" Y="-460.8023" Z="10.98073" />
-				
-				<!-- Move to - zone out location -->
-				<MoveTo X="4774.44" Y="-2030.03" Z="229.38" />	
-					
-			</If>	<!-- If we are inside Drak'Tharon Keep -->
 
 			<!-- If we are in The Nexus -->
 			<If Condition="Me.MapId == 576">
@@ -1840,6 +1808,10 @@
 
 				<!-- Move to - flying mount location -->
 				<MoveTo X="3676.57" Y="2099.666" Z="73.02065" />
+				
+				<!-- Fly to - Ahn'kahet: The Old Kingdom - hover point -->
+				<CustomBehavior File="FlyTo" 
+								X="3766.74" Y="2141.23" Z="133.6681" />
 				
 			</If>	<!-- If we are still inside Ahn'kahet: The Old Kingdom -->
 

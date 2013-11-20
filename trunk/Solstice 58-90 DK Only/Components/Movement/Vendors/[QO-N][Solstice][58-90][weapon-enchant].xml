@@ -1031,6 +1031,32 @@
 					
 					</If>	<!-- If we have the Royal Crusader Sword -->
 					
+					<!-- If we have the Crusader's Greatblade -->
+					<If Condition="HasItem(39802)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Crusader's Greatblade as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Crusader's Greatblade as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Crusader's Greatblade -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="39802" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Crusader's Greatblade -->
+					
 				</Else>
 
 			</If>	<!-- If we don't have Aura of Spellshattering -->

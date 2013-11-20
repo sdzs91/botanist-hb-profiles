@@ -120,12 +120,12 @@
 								Text="We are in Outland." 
 								LogColor="Cyan" />
 								
-				<!-- Profile message - Moving to Shattrath portals -->				
+				<!-- Profile message - Moving to Shattrath City portals -->				
 				<CustomBehavior File="Message" 
-								Text="Moving to Shattrath portals." 
+								Text="Moving to Shattrath City portals." 
 								LogColor="Cyan" />				
 								
-				<!-- Fly to Shattrath -->
+				<!-- Fly to - Shattrath City - hover point -->
 				<CustomBehavior File="FlyTo" X="-1977.775" Y="5373.526" Z="54.82305" />
 
 				<!-- Go to the ground -->
