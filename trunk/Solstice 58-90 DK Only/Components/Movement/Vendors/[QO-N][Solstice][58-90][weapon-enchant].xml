@@ -1005,6 +1005,32 @@
 					
 					</If>	<!-- If we have the Hatebringer -->
 					
+					<!-- If we have the Royal Crusader Sword -->
+					<If Condition="HasItem(25156)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Royal Crusader Sword as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Royal Crusader Sword as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Royal Crusader Sword -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="25156" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Royal Crusader Sword -->
+					
 				</Else>
 
 			</If>	<!-- If we don't have Aura of Spellshattering -->

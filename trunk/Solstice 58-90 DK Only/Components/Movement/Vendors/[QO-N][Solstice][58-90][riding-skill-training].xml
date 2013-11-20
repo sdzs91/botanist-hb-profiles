@@ -218,7 +218,7 @@
 		
 		
 		<!-- If our level is 78-90 -->
-		<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &lt; 90">
+		<If Condition="Me.Level &gt;= 68 &amp;&amp; Me.Level &lt; 90">
 		
 			<!-- If we don't have Cold Weather Flying -->
 			<If Condition="!HasSpell(54197)" >
