@@ -294,7 +294,7 @@
 			<!-- In box -->
 			<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][Flying][Ranged-Attack][Single-Pulls][Mount-Reins of the Drake of the North Wind]_The Vortex Pinnacle" />
+								ProfileName="..\[QO-N][Flying][Ranged-Attack][Single-Pulls][Reins of the Drake of the North Wind]" />
 			</If> <!-- In box -->		
 		</If> <!-- Booster -->
 	</QuestOrder>
