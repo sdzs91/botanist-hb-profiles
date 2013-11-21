@@ -663,16 +663,17 @@
 				<CustomBehavior File="Message" 
 								Text="Our Hearthstone/Innkeeper's Daughter didn't work. Moving to the exit."
 								LogColor="Fuchsia" />
-				
-				<!-- Move to the zone in location -->
-				<MoveTo X="460.6402" Y="15.41037" Z="-71.11736" />
+
+				<!-- Move to - zone in location -->
+				<MoveTo X="1331.41" Y="241.904" Z="52.5046" />
 				
 				<!-- Go through the portal -->
-				<CustomBehavior File="Misc\InInstance" X="456.6543" Y="46.70397" Z="-69.00373" />	
+				<CustomBehavior File="Misc\InInstance" 
+								X="1333.524" Y="290.7161" Z="52.81057" />	
 				
-				<!-- Move to the zone out location -->
-				<MoveTo X="-7178.41" Y="-922.152" Z="166.092" />	
-				
+				<!-- Move to - zone out location -->
+				<MoveTo X="9175.68" Y="-1378.8" Z="1103.57" />
+						
 			</If>	<!-- If we are still in Halls of Lightning, exit the instance -->
 
 			<!-- If we are in Northrend -->

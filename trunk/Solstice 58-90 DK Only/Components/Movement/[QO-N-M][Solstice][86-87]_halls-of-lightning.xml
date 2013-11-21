@@ -361,7 +361,7 @@
 								LogColor="Cyan" />
 								
 				<!-- If our Hearthstone/Innkeepers Daughter is set at Bouldercrag's Refuge -->				
-				<If Condition="Me.HearthstoneAreaId == 4275">
+				<If Condition="Me.HearthstoneAreaId == 4484">
 				
 					<!-- Profile message - Our Innkeeper is set at Bouldercrag's Refuge -->
 					<CustomBehavior File="Message" 

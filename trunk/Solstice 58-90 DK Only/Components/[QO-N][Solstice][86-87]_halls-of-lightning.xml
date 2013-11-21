@@ -297,6 +297,10 @@
 					<CustomBehavior File="DeleteItems" 
 									Ids="8950" />
 									
+					<!-- Salted Venison -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="33454" />				
+									
 					<!-- Smoked Talbuk Venison -->
 					<CustomBehavior File="DeleteItems" 
 									Ids="27854" />		
@@ -684,6 +688,28 @@
 									WaitTime="3000" />
 					
 					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Move to - left-hand side of the stairs - front of Loken -->
+					<MoveTo X="1078.368" Y="62.60248" Z="53.40939" />
+					
+					<!-- Wait timer - wait 15 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />
+					
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
+					
+					
+					<!-- Move to - left-hand side of the stairs - front of Loken -->
+					<MoveTo X="1080.149" Y="4.194992" Z="53.37827" />
+					
+					<!-- Wait timer - wait 5 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="5000" />
+
 					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
 					
 					

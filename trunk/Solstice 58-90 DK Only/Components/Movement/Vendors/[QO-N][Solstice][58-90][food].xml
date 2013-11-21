@@ -482,7 +482,7 @@
 			</If>	<!-- If we are Horde -->
 			
 			<!-- If we have Sweet Potato Bread -->
-			<If Condition="HasItem(29451)">
+			<If Condition="HasItem(35950)">
 			
 				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
 				<CustomBehavior File="LoadProfile" 

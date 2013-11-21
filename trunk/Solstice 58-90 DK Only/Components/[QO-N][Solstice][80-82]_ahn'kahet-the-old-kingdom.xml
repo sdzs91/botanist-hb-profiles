@@ -1367,17 +1367,17 @@
 
 					</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 
-					<!-- Profile message - Waiting 3 seconds - Food check - Mead Basted Caribou -->
+					<!-- Profile message - Waiting 3 seconds - Food check - Briny Hardcheese -->
 					<CustomBehavior File="Message" 
-									Text="Waiting 3 seconds - Food check - Mead Basted Caribou."  
+									Text="Waiting 3 seconds - Food check - Briny Hardcheese."  
 									LogColor="Orange" />
 					
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
 					
-					<!-- If we don't have Mead Basted Caribou -->
-					<If Condition="!HasItem(35953)">
+					<!-- If we don't have Briny Hardcheese -->
+					<If Condition="!HasItem(35952)">
 
 							<!-- Load profile - [QO-N][Solstice][58-90][repair-mail] -->
 							<CustomBehavior File="LoadProfile" 
