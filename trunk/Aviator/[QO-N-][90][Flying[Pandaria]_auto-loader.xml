@@ -1,7 +1,7 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-M][60+][Flying]_outland</Name>
+	<Name>[QO-N-][90][Flying[Pandaria]_auto-loader</Name>
    
-	<MinLevel>1</MinLevel>
+	<MinLevel>60</MinLevel>
 	<MaxLevel>101</MaxLevel>
    
 	<MinDurability>-1</MinDurability>
@@ -62,19 +62,8 @@
 						RessAtSpiritHealers="False"
 						SkinMobs="False"
 						UseMount="True" 
-						UseRandomMount="False" />	
+						UseRandomMount="False" />
 
-		<!-- Profile message - Initializing Outland flight path mechanics -->
-		<CustomBehavior File="Message" 
-						Text="Initializing Outland flight path mechanics."  
-						LogColor="Orange" />
-						
-						
-						
-						
-						
-						
-						
 		<!-- Profile message - This portion has not been added yet -->
 		<CustomBehavior File="Message" 
 						Text="This portion has not been added yet."  
@@ -92,7 +81,7 @@
 		<!-- Custom behavior - Usersettings - StopBot -->				
 		<CustomBehavior File="UserSettings" 
 						StopBot="true" />
-
+	
 	</QuestOrder>
 	
-</HBProfile>
+</HBProfile>	

@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][60+][Aviator][Flying]_auto-loader</Name>
+	<Name>[QO-N][90][Aviator-All-Flight-Paths][Flying]_auto-loader</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -111,7 +111,7 @@
 								Text="This portion has not been added yet."  
 								LogColor="Orange" />
 			
-				<!-- Wait timer - wait 1 seconds - delay -->
+				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />
 								
