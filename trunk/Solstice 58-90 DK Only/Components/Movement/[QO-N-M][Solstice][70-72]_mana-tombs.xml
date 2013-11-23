@@ -402,6 +402,7 @@
 										
 					<!-- Our hearth isn't set, we need to go to the zone -->
 					<Else>
+					
 						<CustomBehavior File="Message" 
 										Text="Our Hearthstone isn't set in the proper location. Moving to set it." 
 										LogColor="Cyan" />
@@ -418,6 +419,7 @@
 
 							<!-- Front doorway of the inn -->
 							<CustomBehavior File="FlyTo" X="-2931.109" Y="4013.582" Z="-1.410047" />
+							
 							<CustomBehavior File="ForcedDismount" />
 
 							<!-- Run inside the inn -->

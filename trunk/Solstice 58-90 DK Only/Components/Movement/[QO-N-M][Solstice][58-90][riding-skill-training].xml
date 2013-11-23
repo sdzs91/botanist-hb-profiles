@@ -80,8 +80,26 @@
 									Text="We are in Northrend." 
 									LogColor="Cyan" />
 
-						
-						
+					<!-- Profile message - Flying to Dalaran -->
+					<CustomBehavior File="Message" 
+									Text="Flying to Dalaran." 
+									LogColor="Cyan" />
+				
+					<!-- Fly to - last hilltop before Dalaran -->
+					<CustomBehavior File="FlyTo" 
+									X="6285.581" Y="396.274" Z="692.8207" />
+
+					<!-- CTM to - hover point in Dalaran -->
+					<CustomBehavior File="MyCTM" 
+									X="5815.257" Y="607.0639" Z="811.6552" />	
+
+					<!-- CTM to - Dalaran riding trainer -->
+					<CustomBehavior File="MyCTM" 
+									X="5812.728" Y="461.4962" Z="658.7665" />
+
+					<!-- Custom behavior - ForcedDismount -->				
+					<CustomBehavior File="ForcedDismount" />
+
 				</If>	<!-- If we are in Northrend -->
 				
 				
@@ -267,7 +285,7 @@
 				
 				
 				<!-- If we are in Kalimdor -->
-				<If Condition="Me.MapId == 571">
+				<If Condition="Me.MapId == 1">
 				
 					<CustomBehavior File="Message" 
 									Text="We are in Kalimdor." 
@@ -314,8 +332,26 @@
 									Text="We are in Northrend." 
 									LogColor="Cyan" />
 
+					<!-- Profile message - Flying to Dalaran -->
+					<CustomBehavior File="Message" 
+									Text="Flying to Dalaran." 
+									LogColor="Cyan" />
 				
-						
+					<!-- Fly to - last hilltop before Dalaran -->
+					<CustomBehavior File="FlyTo" 
+									X="6285.581" Y="396.274" Z="692.8207" />
+
+					<!-- CTM to - hover point in Dalaran -->
+					<CustomBehavior File="MyCTM" 
+									X="5815.257" Y="607.0639" Z="811.6552" />	
+
+					<!-- CTM to - Dalaran riding trainer -->
+					<CustomBehavior File="MyCTM" 
+									X="5812.728" Y="461.4962" Z="658.7665" />
+
+					<!-- Custom behavior - ForcedDismount -->				
+					<CustomBehavior File="ForcedDismount" />
+
 				</If>	<!-- If we are in Northrend -->
 				
 				
@@ -484,12 +520,12 @@
 			<!-- ******************************************************************* -->
 				
 				
-			<!-- If we are in Stormwind or Orgrimmar -->
-			<If Condition="Me.ZoneId == 1519 || Me.ZoneId == 1637">
+			<!-- If we are in Stormwind or Orgrimmar or Dalaran -->
+			<If Condition="Me.ZoneId == 1519 || Me.ZoneId == 1637 || Me.ZoneId == 4395">
 			
-				<!-- Profile message - We are in Stormwind or Orgrimmar -->
+				<!-- Profile message - We are in Stormwind, Orgrimmar or Dalaran -->
 				<CustomBehavior File="Message" 
-									Text="We are in Stormwind or Orgrimmar."  
+									Text="We are in Stormwind, Orgrimmar or Dalaran."  
 									LogColor="Orange" />
 				
 				<!-- Custom behavior - LoadProfile - Vendors\[QO-N][Solstice][58-90][riding-skill-training] -->

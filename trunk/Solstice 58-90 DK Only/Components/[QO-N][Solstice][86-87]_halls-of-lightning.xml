@@ -703,7 +703,7 @@
 					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
 					
 					
-					<!-- Move to - left-hand side of the stairs - front of Loken -->
+					<!-- Move to - right-hand side of the stairs - front of Loken -->
 					<MoveTo X="1080.149" Y="4.194992" Z="53.37827" />
 					
 					<!-- Wait timer - wait 5 seconds - delay -->
@@ -713,46 +713,16 @@
 					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
 					
 					
-					<!-- Move to - base of the stairs in front of Loken -->
-					<MoveTo X="1107.141" Y="34.47266" Z="53.38864" />
-					
-					<!-- Wait timer - wait 15 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="15000" />
+					<!-- Move to - Ionar -->
+					<MoveTo X="1072.901" Y="-261.1833" Z="61.22717" />
 					
 					
+					<!-- Move to the Iron Crucible -->
+					<MoveTo X="1331.97" Y="-196.5727" Z="23.22557" />
+					
+
 					<!-- @@@@@@@@@@@@@@@@@@@@ Avoid Loken - Exit @@@@@@@@@@@@@@@@@@@@ -->
 					
-					
-
-					<!-- Move to - right-hand side of the room -  front of Loken -->
-					<MoveTo X="1126.938" Y="-2.181023" Z="58.8947" />
-					
-					<!-- Profile message - Disabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Disabling combat." 
-										LogColor="Gold" />				
-									
-					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />
-					
-					<!-- Move to - right-hand corner beside Loken -->
-					<MoveTo X="1194.323" Y="-1.72115" Z="60.67307" />
-					
-					<!-- Move to - behind Loken -->
-					<MoveTo X="1245.66" Y="33.17139" Z="58.11303" />
-
-					<!-- CTM to - jump off ledge -->
-					<CustomBehavior File="MyCTM"
-									X="1269.231" Y="33.21934" Z="33.50591" />
-					
-					<!-- Profile message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />				
-									
-					<!-- EnableBehavior - Combat -->				
-					<EnableBehavior Name="Combat" />
 					
 					<!-- Move to - zone in location -->
 					<MoveTo X="1331.41" Y="241.904" Z="52.5046" />
