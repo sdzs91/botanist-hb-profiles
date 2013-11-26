@@ -76,9 +76,9 @@
 							WaitTime="3000" GoalText="TimeRemaining}" />
 			
 			<!-- Profile message - Interacting with the Mobile Bank -->
-		<CustomBehavior File="Message" 
-						Text="Interacting with the Mobile Bank." 
-						LogColor="Gold" />
+			<CustomBehavior File="Message" 
+							Text="Interacting with the Mobile Bank." 
+							LogColor="Gold" />
 			
 			<!-- Custom behavior - Ianteractwith - Mobile Bank -->		
 			<CustomBehavior File="InteractWith" 

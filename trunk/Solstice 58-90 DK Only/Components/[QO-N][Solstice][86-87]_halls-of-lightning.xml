@@ -762,9 +762,9 @@
 					<!-- If we don't have Sweet Potato Bread -->
 					<If Condition="!HasItem(35950)">
 
-							<!-- Load profile - [QO-N][Solstice][58-90][repair-mail] -->
-							<CustomBehavior File="LoadProfile" 
-											ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][repair-mail]" />
+						<!-- Load profile - [QO-N][Solstice][58-90][repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][repair-mail]" />
 			
 					</If>	<!-- If we don't have Sweet Potato Bread -->
 					

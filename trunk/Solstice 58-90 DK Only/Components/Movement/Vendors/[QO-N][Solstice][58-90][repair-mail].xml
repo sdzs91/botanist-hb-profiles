@@ -607,7 +607,7 @@
 			<If Condition="Me.ZoneId == 4272">	
 				
 				<!-- If our Hearthstone/Innkeepers Daughter is set at Bouldercrag's Refuge -->				
-				<If Condition="Me.HearthstoneAreaId == 4275">
+				<If Condition="Me.HearthstoneAreaId == 4484">
 				
 					<!-- Profile message - We are in Blackrock Depths, using our Hearthstone/Innkeeper's Daughter -->
 					<CustomBehavior File="Message" 

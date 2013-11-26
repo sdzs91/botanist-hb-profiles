@@ -1473,25 +1473,8 @@
 							<!-- Move to - across from the two sleepers -->
 							<MoveTo X="-68.24995" Y="-423.0212" Z="-18.93498" />
 			
-							<!-- Profile message - Disabling combat -->
-							<CustomBehavior File="Message" 
-												Text="Disabling combat." 
-												LogColor="Fuchsia" />
-
-							<!-- Disable combat -->
-							<DisableBehavior Name="Combat" />
-			
 							<!-- Move to - back corner -->
-							<CustomBehavior File="MyCTM" 
-											X="-110.448" Y="-420.8993" Z="-18.93491" />
-			
-							<!-- Profile message - Enabling combat -->
-							<CustomBehavior File="Message" 
-												Text="Enabling combat." 
-												LogColor="Fuchsia" />
-							
-							<!-- enable combat -->
-							<EnableBehavior Name="Combat" />
+							<MoveTo X="-110.448" Y="-420.8993" Z="-18.93491" />
 
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
