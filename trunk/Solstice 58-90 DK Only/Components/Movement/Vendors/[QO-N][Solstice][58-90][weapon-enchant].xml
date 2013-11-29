@@ -1056,6 +1056,59 @@
 					
 					</If>	<!-- If we have the Crusader's Greatblade -->
 					
+					<!-- If we have the Poisonfire Greatsword -->
+					<If Condition="HasItem(39802)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Poisonfire Greatsword as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Poisonfire Greatsword as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Poisonfire Greatsword -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="57294" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Poisonfire Greatsword -->
+					
+					<!-- If we have the Silver-Edged Axe -->
+					<If Condition="HasItem(39802)" >
+				
+						<!-- Profile message - Enchanting our weapon -->
+						<CustomBehavior File="Message" 
+										Text="Enchanting our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Profile message - We are using the Silver-Edged Axe as our weapon -->
+						<CustomBehavior File="Message" 
+										Text="We are using the Silver-Edged Axe as our weapon." 
+										LogColor="Orange" />
+				
+						<!-- Custom behavior - PerformTradeSkillOn - Runeforging - TradeSkillId = 53428, SpellId = 53342 (Rune of Spellshattering), on Silver-Edged Axe -->
+						<CustomBehavior File="PerformTradeskillOn" 
+										TradeSkillId="53428" 
+										TradeSkillItemId="53342" 
+										NumOfTimes="1" 
+										CastOnItemId="25218" /> 
+										
+						<!-- Custom behavior - Misc\RunLua - CloseTradeSkill -->				
+						<CustomBehavior File="Misc\RunLua" 
+										Lua="CloseTradeSkill()" />
+					
+					</If>	<!-- If we have the Silver-Edged Axe -->
+					
+					
 				</Else>
 
 			</If>	<!-- If we don't have Aura of Spellshattering -->
