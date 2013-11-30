@@ -27,6 +27,7 @@
 	</AvoidMobs>
 	
 	<Blackspots>
+		<Blackspot X="4624.624" Y="-2052.815" Z="188.0074" Radius="60.94419" />
 		<Blackspot X="-8830.189" Y="616.5771" Z="94.05379" Radius="1" />
 		<Blackspot X="-295.7177" Y="-744.481" Z="29.66842" Radius="3" />
 	</Blackspots>
@@ -584,17 +585,37 @@
 				
 				<!-- Fly outside of Drak'tharon Keep - hover point -->
 				<CustomBehavior File="FlyTo" 
-								X="5069.032" Y="-2051.748" Z="416.996" />
+								X="4475.757" Y="-2027.768" Z="232.2339" />
 								
-				<!-- Fly to - rear entrance to Drak'tharon Keep -->
-				<CustomBehavior File="MyCTM" 
-								X="4873.453" Y="-2032.883" Z="250.0714" />
+				<!-- Profile message - Disabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Disabling combat." 
+									LogColor="Fuchsia" />
 
+				<!-- Disable combat -->
+				<DisableBehavior Name="Combat" />
+						
+				<!-- Fly to - front of Drak'tharon Keep -->
+				<CustomBehavior File="MyCTM" 
+								X="4562.394" Y="-2024.447" Z="201.9748" />
+
+				<!-- Fly to - into Drak'tharon Keep -->
+				<CustomBehavior File="MyCTM" 
+								X="4650.298" Y="-2027.943" Z="184.1819" />
+				
 				<!-- Custom behavior - Forced Dismount -->				
 				<CustomBehavior File="ForcedDismount" />				
 
 				<!-- Move to the zone out location -->
-				<RunTo X="4774.44" Y="-2030.03" Z="229.38" />
+				<MoveTo X="4774.44" Y="-2030.03" Z="229.38" />
+				
+				<!-- Profile message - Enabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Enabling combat." 
+									LogColor="Gold" />
+				
+				<!-- EnableBehavior - Combat -->	
+				<EnableBehavior Name="Combat" />
 				
 			</If> <!-- Northrend -->
 			
