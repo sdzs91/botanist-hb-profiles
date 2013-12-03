@@ -43,32 +43,28 @@
 	<QuestOrder>
 
 		<!-- UserSettings -->
-			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
-							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
-							GroundMountFarmingMode="False"
-							HarvestHerbs="False"
-							HarvestMinerals="False"
-							KillBetweenHotspots="True"
-							LogoutForInactivity="False"
-							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
-							LootMobs="False"
-							LootRadius="1"
-							MountDistance="30"
-							MountName=""
-							NinjaSkin="False"
-							ProfileDebuggingMode="False"
-							PullDistance="1"
-							RessAtSpiritHealers="False"
-							SkinMobs="False"
-							UseFlightPaths="True"
-							UseMount="True" 
-							UseRandomMount="False" />
+		<CustomBehavior File="UserSettings"
+						AdvancedSettingsMode="True"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="True"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootMobs="True"
+						LootRadius="25"
+						MountName=""
+						NinjaSkin="False"
+						ProfileDebuggingMode="False"
+						PullDistance="25"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />
 
 		<!-- If our level is => -->
-		<If Condition="Me.Level &gt;= 90">
+		<If Condition="Me.Level &gt;= 80">
 			
 			<!-- If we are inside Grim Batol -->
 				<If Condition="Me.ZoneId == 4950">	
@@ -165,17 +161,21 @@
 							
 					<!-- Fly to the Thundermar hover point -->
 					<CustomBehavior File="FlyTo" 
-									X="-3213.797" Y="-5007.835" Z="173.0237" />
+									X="-3208.278" Y="-4977.597" Z="159.7892" />
 
-					<!-- Fly to - Caelyb Coppercrag - Thundermar repair vendor -->
-					<CustomBehavior File="FlyTo" 
-									X="-3189.508" Y="-5024.534" Z="120.4736" />
+					<!-- CTM to - Caelyb Coppercrag - Thundermar repair vendor -->
+					<CustomBehavior File="MyCTM" 
+									X="-3200.014" Y="-5043.748" Z="119.6321" />
 					
 					<!-- Custom behavior - ForcedDismount -->
 					<CustomBehavior File="ForcedDismount" />
 					
+					<!-- UserSettings - usemount - false -->
+					<CustomBehavior File="UserSettings"
+									UseMount="False" />
+					
 					<!-- Move to - Caelyb Coppercrag - Thundermar repair vendor -->
-					<MoveTo X="-3179.502" Y="-5023.363" Z="121.2182" />
+					<MoveTo X="-3185.851" Y="-5024.844" Z="120.5098" />
 					
 					<!-- Vendor conditions -->
 					<CustomBehavior File="ForceSetVendor" 
@@ -199,6 +199,13 @@
 							<Mailbox X="-3205.434" Y="-5045.54" Z="120.2964" />
 						</Mailboxes>
 					</SetMailbox>
+					
+					<!-- Move to - mount location -->
+					<MoveTo X="-3200.014" Y="-5043.748" Z="119.6321" />
+					
+					<!-- UserSettings - usemount - true -->
+					<CustomBehavior File="UserSettings"
+									UseMount="True" />
 					
 					<!-- Fly to the Thundermar hover point -->
 					<CustomBehavior File="FlyTo" 

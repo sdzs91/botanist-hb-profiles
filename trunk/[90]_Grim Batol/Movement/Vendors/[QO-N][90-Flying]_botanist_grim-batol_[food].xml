@@ -45,29 +45,25 @@
 		<CustomBehavior File="UserSettings"
 						AdvancedSettingsMode="True"
 						FindMountAutomatically="True"
-						FindVendorsAutomatically="False"
 						GroundMountFarmingMode="False"
 						HarvestHerbs="False"
 						HarvestMinerals="False"
 						KillBetweenHotspots="True"
 						LogoutForInactivity="False"
 						LogoutInactivityUseForceQuit="False"
-						LootChests="False"
-						LootMobs="False"
-						LootRadius="1"
-						MountDistance="75"
+						LootMobs="True"
+						LootRadius="25"
 						MountName=""
 						NinjaSkin="False"
 						ProfileDebuggingMode="False"
-						PullDistance="45"
+						PullDistance="25"
 						RessAtSpiritHealers="False"
 						SkinMobs="False"
-						UseFlightPaths="True"
 						UseMount="True" 
 						UseRandomMount="False" />
 
 		<!-- If our level is => -->
-		<If Condition="Me.Level &gt;= 90">
+		<If Condition="Me.Level &gt;= 80">
 			
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
