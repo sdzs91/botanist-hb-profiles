@@ -361,7 +361,7 @@
 					<DisableBehavior Name="Combat" />
 
 					<!-- Move to - 5th group -->
-					<MoveTo X="-10870.2" Y="-1322.68" Z="15.35369" />
+					<MoveTo X="-10855.1" Y="-1410.81" Z="15.35347" />
 					
 					<!-- Move to - 1st bridge -->
 					<MoveTo X="-10866.01" Y="-1454.577" Z="16.86907" />
