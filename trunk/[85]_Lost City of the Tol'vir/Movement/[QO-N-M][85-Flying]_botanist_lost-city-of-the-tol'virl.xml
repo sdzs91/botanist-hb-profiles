@@ -82,7 +82,7 @@
 					<!-- Profile message - Our Hearthstone/Innkeepers Daughter has been set to Ramkahen -->
 					<CustomBehavior File="Message" 
 									Text="Our Hearthstone/Innkeepers Daughter has been set to Ramkahen." 
-									LogColor="Orange" />
+									LogColor="Plum" />
 						
 					<!-- Else our hearthstone is not set to Ramkahen -->
 					<Else>
@@ -90,7 +90,7 @@
 						<!-- Profile message - Our Hearthstone/Innkeepers Daughter has not been set to Ramkahen -->
 						<CustomBehavior File="Message" 
 										Text="Our Hearthstone/Innkeepers Daughter has not been set to Ramkahen." 
-										LogColor="Orange" />
+										LogColor="Plum" />
 											
 						<!-- If we are Alliance -->					
 						<If Condition="Me.IsAlliance">					
@@ -98,7 +98,7 @@
 							<!-- Profile message - Flying to Ramkahen -->
 							<CustomBehavior File="Message" 
 												Text="Flying to Ramkahen." 
-												LogColor="Orange" />
+												LogColor="Plum" />
 									
 							<!-- Fly to the Ramkahen hover point -->
 							<CustomBehavior File="FlyTo" 
@@ -144,7 +144,7 @@
 							<!-- Profile message - Flying to Ramkahen -->
 							<CustomBehavior File="Message" 
 												Text="Flying to Ramkahen." 
-												LogColor="Orange" />
+												LogColor="Plum" />
 									
 							<!-- Fly to the Ramkahen hover point -->
 							<CustomBehavior File="FlyTo" 
@@ -193,7 +193,7 @@
 			<!-- Profile message - Waiting 3 seconds - Bag and durability check -->
 			<CustomBehavior File="Message" 
 							Text="Waiting 3 seconds - Bag and durability check."  
-							LogColor="Orange" />
+							LogColor="Plum" />
 			
 			<!-- Wait timer - wait 3 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
@@ -211,7 +211,7 @@
 			<!-- Profile message - Waiting 3 seconds - Food check - Pine Nut Bread -->
 			<CustomBehavior File="Message" 
 							Text="Waiting 3 seconds - Food check - Pine Nut Bread."  
-							LogColor="Orange" />
+							LogColor="Plum" />
 			
 			<!-- Wait timer - wait 3 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
@@ -229,12 +229,12 @@
 			<!-- Profile message - All checks complete -->
 			<CustomBehavior File="Message" 
 							Text="All checks complete."  
-							LogColor="Orange" />
+							LogColor="Plum" />
 
 			<!-- Profile message - Flying to Lost City of the Tol'vir -->
 			<CustomBehavior File="Message" 
 							Text="Flying to Lost City of the Tol'vir."  
-							LogColor="Orange" />
+							LogColor="Plum" />
 
 			<!-- Fly to - Flying to Lost City of the Tol'vir hover point -->
 			<CustomBehavior File="FlyTo" 
