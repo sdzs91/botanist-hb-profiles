@@ -101,6 +101,7 @@
 					<!-- Interact with Kazemde and buy 60 Pine Nut Bread -->
 					<CustomBehavior File="InteractWith"
 									ObjectType="Npc"
+									GossipOptions="2"
 									Range="75"
 									MobId="48886" 
 									BuyItemId="58260" 
@@ -154,6 +155,7 @@
 					<!-- Interact with Kazemde and buy 60 Pine Nut Bread -->
 					<CustomBehavior File="InteractWith"
 									ObjectType="Npc"
+									GossipOptions="2"
 									Range="75"
 									MobId="48886" 
 									BuyItemId="58260" 
