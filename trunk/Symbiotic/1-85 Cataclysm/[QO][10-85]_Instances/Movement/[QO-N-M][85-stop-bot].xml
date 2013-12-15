@@ -45,6 +45,25 @@
 
 		<!-- *******************************************************  Booster ************************************************************** -->
 		
+		<!-- Booster UserSettings -->
+		<CustomBehavior File="UserSettings"
+						AdvancedSettingsMode="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="True"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootMobs="True"
+						LootRadius="15"
+						MountName=""
+						NinjaSkin="False"
+						ProfileDebuggingMode="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+							UseRandomMount="False" />
+							
 		<!-- Profile message - We are a Booster -->
 		<If Condition="Me.Level &gt;= 90">
 			<CustomBehavior File="Message" 
@@ -94,6 +113,25 @@
 			<CustomBehavior File="Message" 
 							Text="We are a RAF." 
 							LogColor="Cyan" />
+		
+			<!-- RAF UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootMobs="True"
+							LootRadius="15"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseMount="True" 
+							UseRandomMount="False" />
 		
 			<!-- Profile message - All the RAF toons have reach level 80. Stopping the bot -->				
 			<CustomBehavior File="Message" 

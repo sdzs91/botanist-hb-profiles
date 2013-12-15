@@ -48,7 +48,7 @@
 		<ClearMailbox />
 		
 		<!-- *******************************************************  Booster ************************************************************** -->
-		<If Condition="Me.Level &gt;= 90">
+		<If Condition="Me.Level &gt;= 85">
 			<CustomBehavior File="Message" 
 							Text="We are a booster." 
 							LogColor="Cyan" />
@@ -56,25 +56,19 @@
 			<!-- Booster UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
-							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
 							KillBetweenHotspots="True"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
-							LootMobs="False"
-							LootRadius="1"
-							MountDistance="75"
+							LootMobs="True"
+							LootRadius="15"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="45"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
-							UseFlightPaths="True"
 							UseMount="True" 
 							UseRandomMount="False" />
 							
@@ -309,7 +303,7 @@
 	
 	
 		<!-- RAF Toons -->		
-		<If Condition="Me.Level &lt;= 85">
+		<If Condition="Me.Level &lt;= 84">
 			<CustomBehavior File="Message" 
 							Text="We are a RAF." 
 							LogColor="Cyan" />
@@ -339,25 +333,19 @@
 			<!-- RAF UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
-							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
-							KillBetweenHotspots="False"
+							KillBetweenHotspots="True"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
-							LootMobs="False"
-							LootRadius="1"
-							MountDistance="75"
+							LootMobs="True"
+							LootRadius="15"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="1"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
-							UseFlightPaths="True"
 							UseMount="True" 
 							UseRandomMount="False" />
 				
