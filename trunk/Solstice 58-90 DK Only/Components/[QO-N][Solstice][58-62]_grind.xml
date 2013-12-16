@@ -307,9 +307,9 @@
 						<!-- Move to - grinding location -->
 						<MoveTo X="-506.3479" Y="3695.365" Z="29.00221" />
 						
-						<!-- Profile message - We have reached the grinding location. We will grind here until we reach level 60 -->
+						<!-- Profile message - We have reached the grinding location. We will grind here until we reach level 62 -->
 						<CustomBehavior File="Message" 
-										Text="We have reached the grinding location. We will grind here until we reach level 60." 
+										Text="We have reached the grinding location. We will grind here until we reach level 62." 
 										LogColor="Orange" />		
 						
 						<!-- UserSettings -->
@@ -341,7 +341,7 @@
 						</SetGrindArea>		<!-- Grind area -->	
 						
 						<!-- Grind conditions -->
-						<GrindTo Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3) || (!HasItem(27854)) || (Me.Level &gt;= 62)" GoalText="Grinding to level 60" />
+						<GrindTo Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3) || (!HasItem(27854)) || (Me.Level &gt;= 62)" GoalText="Grinding to level 62" />
 					
 						<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 						<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
@@ -660,7 +660,7 @@
 						</SetGrindArea>		<!-- Grind area -->	
 						
 						<!-- Grind conditions -->
-						<GrindTo Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3) || (!HasItem(27854)) || (Me.Level &gt;= 62)" GoalText="Grinding to level 60" />
+						<GrindTo Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3) || (!HasItem(27854)) || (Me.Level &gt;= 62)" GoalText="Grinding to level 62" />
 					
 						<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 						<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
