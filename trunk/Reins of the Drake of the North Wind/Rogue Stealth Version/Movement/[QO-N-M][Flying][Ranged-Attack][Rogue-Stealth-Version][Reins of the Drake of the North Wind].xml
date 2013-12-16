@@ -160,27 +160,28 @@
 			<If Condition="Me.MapId == 1">	<!-- Kalimdor -->
 				<If Condition="Me.HearthstoneAreaId == 5466">	<!-- hearth -->
 												
-						<!-- Profile message - Flying to the sphinx in south eastern Uldum -->
-								<CustomBehavior File="Message" 
-												Text="Flying to the sphinx in south eastern Uldum." 
-												LogColor="Cyan" />
-												
-						<!-- Fly to the hover point at the last ridge near the sphinx-->
-						<CustomBehavior File="FlyTo" X="-10703.96" Y="-1767.715" Z="353.466" />
-												
-						<CustomBehavior File="Message" 
-										Text="CTM to The Vortex Pinnacle hover point." 
-										LogColor="Cyan" />
-						
-						<!-- CTM to hover point above The Vortex Pinnacle -->
-						<CustomBehavior File="MyCTM" X="-11446.21" Y="-2263.146" Z="651.7057" />
-						
-						<!-- CTM to the instance box -->
-						<CustomBehavior File="MyCTM" X="-11513.3" Y="-2309.88" Z="608.393" />
-						<CustomBehavior File="ForcedDismount" />	
-						
-						<!-- Run to the instance box -->
-						<Runto X="-11513.3" Y="-2309.88" Z="608.393" />
+						<!-- Profile message - Moving to the river delta -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the river delta." 
+									LogColor="Plum" />					
+											
+					<!-- Fly to - river bed -->
+					<CustomBehavior File="FlyTo" 
+									X="-11260.66" Y="-1804.485" Z="31.9262" />
+											
+					
+					<!-- CTM to The Vortex Pinnacle hover point -->
+					<CustomBehavior File="MyCTM" 
+									X="-11355.9" Y="-2183.812" Z="674.7065" />
+					
+					<!-- CTM to the instance box -->
+					<CustomBehavior File="MyCTM" 
+									X="-11513.3" Y="-2309.88" Z="608.393" />
+					
+					<CustomBehavior File="ForcedDismount" />	
+					
+					<!-- Run to the instance box -->
+					<MoveTo X="-11513.3" Y="-2309.88" Z="608.393" />
 					
 					<!-- Our hearth isn't set, we need to go to the zone -->
 					<Else>

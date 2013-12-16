@@ -463,7 +463,6 @@
 						</Else>		<!-- Else if we are not stealthed -->					
 						
 					</If>	<!-- If we are stealthed -->
-					
 					<MoveTo X="-490.8129" Y="-154.7145" Z="638.9378" />
 					
 					<!-- If we are stealthed -->
@@ -1053,6 +1052,10 @@
 						</Safespots>
 					</CustomBehavior>
 							
+					<!-- Custom behavior -  Wait timer- 10 second loot delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="10000" />		
+
 					<!-- If we are stealthed -->
 					<If Condition="Me.HasAura(&quot;Stealth&quot;)">	
 					
@@ -1212,7 +1215,7 @@
 					<!-- Profile message - Our durability is less than 30%, or we need to vendor -->
 					<CustomBehavior File="Message" 
 									Text="Our durability is less than 30%, or we need to vendor." 
-									LogColor="Lime" />
+									LogColor="Plum" />
 									
 					<!-- Use our hearthstone or innkeeps daughter -->				
 					<If Condition="Me.HearthstoneAreaId == 5466 ">
@@ -1224,7 +1227,7 @@
 						<If Condition="HasItem(6948)">
 							<CustomBehavior File="Message" 
 											Text="Using Hearthstone." 
-											LogColor="Lime" />
+											LogColor="Plum" />
 											
 							<CustomBehavior File="Misc\RunLua" 
 											Lua="UseItemByName(6948)" 
@@ -1238,7 +1241,7 @@
 						<If Condition="HasItem(64488)">
 							<CustomBehavior File="Message" 
 											Text="Using Innkeeper's Daughter." 
-											LogColor="Lime" />
+											LogColor="Plum" />
 												
 							<CustomBehavior File="Misc\RunLua" 
 											Lua="UseItemByName(64488)" 
@@ -1278,29 +1281,30 @@
 										DoTrain="False" />
 					
 					</If>	<!-- If we have hearthed to Uldum -->	
+					
 				</If> <!-- Repair if necessary -->
 				
 				<!-- If we aren't in the box -->
 				<If Condition="Me.X &gt; -11413 || Me.X &lt; -11613 || Me.Y &lt; -2409 || Me.Y &gt; -2209 || Me.Z &lt; 575" >
 					
-					<!-- Profile message - Flying to the sphinx in south eastern Uldum -->
+					<!-- Profile message - Moving to the river delta -->
 					<CustomBehavior File="Message" 
-									Text="Flying to the sphinx in south eastern Uldum." 
-									LogColor="Lime" />					
+									Text="Moving to the river delta." 
+									LogColor="Plum" />					
 											
-					<!-- Fly to the hover point at the last ridge near the sphinx-->
-					<CustomBehavior File="FlyTo" X="-10703.96" Y="-1767.715" Z="353.466" />
+					<!-- Fly to - river bed -->
+					<CustomBehavior File="FlyTo" 
+									X="-11260.66" Y="-1804.485" Z="31.9262" />
 											
-					<!-- Profile message - CTM to The Vortex Pinnacle hover point -->						
-					<CustomBehavior File="Message" 
-									Text="CTM to The Vortex Pinnacle hover point." 
-									LogColor="Lime" />
 					
 					<!-- CTM to The Vortex Pinnacle hover point -->
-					<CustomBehavior File="MyCTM" X="-11446.21" Y="-2263.146" Z="651.7057" />
+					<CustomBehavior File="MyCTM" 
+									X="-11355.9" Y="-2183.812" Z="674.7065" />
 					
 					<!-- CTM to the instance box -->
-					<CustomBehavior File="MyCTM" X="-11513.3" Y="-2309.88" Z="608.393" />
+					<CustomBehavior File="MyCTM" 
+									X="-11513.3" Y="-2309.88" Z="608.393" />
+					
 					<CustomBehavior File="ForcedDismount" />	
 					
 					<!-- Run to the instance box -->
