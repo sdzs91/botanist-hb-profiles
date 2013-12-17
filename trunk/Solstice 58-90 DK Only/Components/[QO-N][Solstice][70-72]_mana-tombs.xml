@@ -185,32 +185,14 @@
 				<!-- If we are in the instance  box -->
 				<If Condition="Me.X &gt; -3106 &amp;&amp; Me.X &lt; -3066 &amp;&amp; Me.Y &gt; 4922 &amp;&amp; Me.Y &lt; 4962" >
 				
-					<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
-					<If  Condition="Me.HasAura(53362)" >
+					<!-- Move to - weapon enchant location -->
+					<MoveTo X="-3099.723" Y="4949.929" Z="-100.9493" />
 						
-						<!-- Profile message - Our weapon has been Rune-forged -->
-						<CustomBehavior File="Message" 
-										Text="Our weapon has been Runeforged with Rune of Spellshattering."  
-										LogColor="Orange" />
-							
-						<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->	
-						<Else>
-
-							<!-- Profile message - Our weapon has not been Rune-forged -->
-							<CustomBehavior File="Message" 
-											Text="Our weapon has not been Runeforged with Rune of Spellshattering."  
-											LogColor="Orange" />
-											
-							<!-- Move to - face away from the instance portal to cast Death Gate -->
-							<MoveTo X="-3101.921" Y="4944.11" Z="-101.3689" />
-	
-							<!-- Custom behavior - LoadProfile - Components\Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant] -->				
-							<CustomBehavior File="LoadProfile"  
-												ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant]" />				
-
-						</Else>	<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->
+					<!-- Custom behavior - DKEnchantWeapon -->
+					<CustomBehavior File="Misc\DKEnchantWeapon" SpellID="53342" />	
 					
-					</If>	<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
+					<!-- Move to - zone out location -->
+					<MoveTo X="-3086.51" Y="4942.43" Z="-101.047" />
 				
 					<!-- Profile message - Portal detected nearby -->
 					<CustomBehavior File="Message" 
@@ -1419,30 +1401,6 @@
 					
 					<!-- Move to - zone out location -->
 					<MoveTo X="-3086.51" Y="4942.43" Z="-101.047" />
-					
-					<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
-					<If  Condition="Me.HasAura(53362)" >
-						
-						<!-- Profile message - Our weapon has been Rune-forged -->
-						<CustomBehavior File="Message" 
-										Text="Our weapon has been Runeforged with Rune of Spellshattering."  
-										LogColor="Orange" />
-							
-						<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->	
-						<Else>
-
-							<!-- Profile message - Our weapon has not been Rune-forged -->
-							<CustomBehavior File="Message" 
-											Text="Our weapon has not been Runeforged with Rune of Spellshattering."  
-											LogColor="Orange" />
-											
-							<!-- Custom behavior - LoadProfile - Components\Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant] -->				
-							<CustomBehavior File="LoadProfile"  
-												ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant]" />				
-
-						</Else>	<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->
-					
-					</If>	<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
 					
 				</If> <!-- If we don't need to vendor  -->
 				

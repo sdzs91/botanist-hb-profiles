@@ -20,6 +20,10 @@ namespace Styx.Bot.Quest_Behaviors {
         // Constants
         // ===========================================================
 
+        private const int TradeSkillID = 53428;
+
+        private const int DeathgateId = 50977;
+        
         // ===========================================================
         // Fields
         // ===========================================================
@@ -32,10 +36,12 @@ namespace Styx.Bot.Quest_Behaviors {
 
         private bool _isBehaviorDone;
         private bool _runOnce;
+        private bool _tookTeleporter;
+
         private WoWObject _runeforge;
+        private WoWObject _teleporter;
+        private WoWObject _deathgate;
 
-
-        private const int TradeSkillID = 53428;
         private int _itemID;
         private int _enchantID;
         private int _weaponEnchantID;
@@ -92,6 +98,7 @@ namespace Styx.Bot.Quest_Behaviors {
 
                 _isBehaviorDone = false;
                 _runeforge = null;
+                _tookTeleporter = false;
 
                 if(Lua.GetReturnVal<bool>("return TradeSkillFrame:IsVisible()", 0)) {
                     Lua.DoString("CloseTradeSkill()");
@@ -114,33 +121,53 @@ namespace Styx.Bot.Quest_Behaviors {
                         new Sequence(
                             new Action(ret => SetIDs()),
                             new DecoratorContinue(context => _enchantID == _weaponEnchantID,
-                                new Action(ret => _isBehaviorDone = true)
+                                new PrioritySelector(
+                                    new Decorator(context => Me.ZoneId == 139,
+                                        new Sequence(
+                                            new Action(ret => CastDeathgate()),
+                                            new Action(ret => UseDeathgate())
+                                        )
+                                    ),
+                                    new Decorator(context => Me.ZoneId != 139,
+                                        new Action(ret => _isBehaviorDone = true)
+                                    )
+                                )
                             ),
                             new DecoratorContinue(context => _enchantID != _weaponEnchantID,
                                 new DecoratorContinue(context => IsViable(Me) && Me.IsAlive && !Me.Combat,
-                                    new Sequence(
-                                        new DecoratorContinue(context => _runeforge == null,
-                                            new Action(ret => FindRuneforge())
-                                        ),
-                                        new DecoratorContinue(context => _runeforge != null,
-                                            new Action(ret => NavigateToRuneforge())
-                                        ),
-                                        new DecoratorContinue(context => _runeforge.WithinInteractRange,
+                                    new PrioritySelector(
+                                        new Decorator(context => Me.ZoneId != 139,
                                             new Sequence(
-                                                new DecoratorContinue(context => Lua.GetReturnVal<bool>("return StaticPopup1:IsVisible()", 0),
-                                                    new Action(ret => Lua.DoString("StaticPopup1Button1:Click()"))
+                                                new Action(ret => CastDeathgate()),
+                                                new Action(ret => UseDeathgate())
+                                            )
+                                        ),
+                                        new Decorator(context => Me.ZoneId == 139,
+                                            new Sequence(
+                                                new DecoratorContinue(context => !_tookTeleporter,
+                                                    new Action(ret => NavigateToTeleporter())
                                                 ),
-                                                new DecoratorContinue(context => !Lua.GetReturnVal<bool>("return TradeSkillFrame:IsVisible()", 0),
-                                                    new Action(ret => WoWSpell.FromId(TradeSkillID).Cast())
-                                                ),
-                                                new DecoratorContinue(context => Lua.GetReturnVal<bool>("return TradeSkillFrame:IsVisible()", 0) && !_runOnce,
+                                                
+                                                new Action(ret => NavigateToRuneforge()),
+                                              
+                                                new DecoratorContinue(context => _runeforge.WithinInteractRange,
                                                     new Sequence(
-                                                        new Action(ret => Lua.DoString("DoTradeSkill(" + GetTradeSkillIndex() + ", 1)")),
-                                                        new Action(ret => StyxWoW.Me.CarriedItems.FirstOrDefault(i => i.Entry == _itemID).Use()),
                                                         new DecoratorContinue(context => Lua.GetReturnVal<bool>("return StaticPopup1:IsVisible()", 0),
                                                             new Action(ret => Lua.DoString("StaticPopup1Button1:Click()"))
                                                         ),
-                                                        new Action(ret => _runOnce = true)
+                                                        new DecoratorContinue(context => !Lua.GetReturnVal<bool>("return TradeSkillFrame:IsVisible()", 0),
+                                                            new Action(ret => WoWSpell.FromId(TradeSkillID).Cast())
+                                                        ),
+                                                        new DecoratorContinue(context => Lua.GetReturnVal<bool>("return TradeSkillFrame:IsVisible()", 0) && !_runOnce,
+                                                            new Sequence(
+                                                                new Action(ret => Lua.DoString("DoTradeSkill(" + GetTradeSkillIndex() + ", 1)")),
+                                                                new Action(ret => StyxWoW.Me.CarriedItems.FirstOrDefault(i => i.Entry == _itemID).Use()),
+                                                                new DecoratorContinue(context => Lua.GetReturnVal<bool>("return StaticPopup1:IsVisible()", 0),
+                                                                    new Action(ret => Lua.DoString("StaticPopup1Button1:Click()"))
+                                                                ),
+                                                                new Action(ret => _runOnce = true)
+                                                            )
+                                                        )
                                                     )
                                                 )
                                             )
@@ -166,16 +193,48 @@ namespace Styx.Bot.Quest_Behaviors {
             return (pWoWObject != null) && pWoWObject.IsValid;
         }
 
-        public void FindRuneforge() {
-            _runeforge = ObjectManager.GetObjectsOfTypeFast<WoWObject>().FirstOrDefault(runeforge => runeforge.IsValid && (runeforge.Entry == 207577 || runeforge.Entry == 207578 || runeforge.Entry == 207579));
-        }
-
-        public void NavigateToRuneforge() {
-            if(_runeforge.WithinInteractRange) {
+        public void CastDeathgate() {
+            if(Me.IsCasting || Me.IsChanneling) {
                 return;
             }
 
-            CustomNormalLog("Not within range of a runeforge.");
+            if(SpellManager.CanCast(DeathgateId)) {
+                SpellManager.Cast(DeathgateId);
+            }
+        }
+
+        public void UseDeathgate() {
+            _deathgate = ObjectManager.GetObjectsOfTypeFast<WoWObject>().FirstOrDefault(gate => gate.IsValid && gate.Entry == 190942);
+
+            if(_deathgate != null) {
+                _deathgate.Interact();
+            }
+        }
+
+        public void NavigateToTeleporter() {
+            // Upper teleporter - 207580
+            // Lower teleporter - 207581
+            _teleporter = ObjectManager.GetObjectsOfTypeFast<WoWObject>().FirstOrDefault(teleportPad => teleportPad.IsValid && teleportPad.Entry == 207580);
+
+            if(_teleporter == null) {
+                CustomNormalLog("No teleporter found.");
+                return;
+            }
+
+            if(_teleporter != null && _teleporter.Location.Distance(Me.Location) <= 3) {
+                _tookTeleporter = true;
+                return;
+            }
+
+            Navigator.MoveTo(_teleporter.Location);
+        }
+        
+        public void NavigateToRuneforge() {
+            _runeforge = ObjectManager.GetObjectsOfTypeFast<WoWObject>().FirstOrDefault(runeforge => runeforge.IsValid && (runeforge.Entry == 207577));
+
+            if(_runeforge == null || _runeforge.WithinInteractRange) {
+                return;
+            }
 
             var runeforgeLocation = WoWMovement.CalculatePointFrom(_runeforge.Location, 7f);
 
@@ -333,7 +392,7 @@ namespace Styx.Bot.Quest_Behaviors {
             var link = GetInventoryItemLink("player", 16);
             GetIDsFromString(link);
             
-            if(_itemID == 0 || _enchantID == _weaponEnchantID) {
+            if(_itemID == 0 || _enchantID == _weaponEnchantID && Me.ZoneId != 139) {
                 _isBehaviorDone = true;
             }
         }

@@ -178,37 +178,15 @@
 									Text="Portal detected nearby."
 									LogColor="Fuchsia" />	
 						
-					<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
-					<If  Condition="Me.HasAura(53362)" >
+					<!-- Move to - weapon enchant location -->
+					<MoveTo X="-7530.884" Y="-1218.612" Z="285.7556" />
 						
-						<!-- Profile message - Our weapon has been Rune-forged -->
-						<CustomBehavior File="Message" 
-										Text="Our weapon has been Runeforged with Rune of Spellshattering."  
-										LogColor="Orange" />
-							
-						<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->	
-						<Else>
-
-							<!-- Profile message - Our weapon has not been Rune-forged -->
-							<CustomBehavior File="Message" 
-											Text="Our weapon has not been Runeforged with Rune of Spellshattering."  
-											LogColor="Orange" />
-											
-							<!-- Move to - away from the portal -->
-							<MoveTo X="-7591.775" Y="-1243.847" Z="284.8725" />
-
-							<!-- Wait timer - wait 3 seconds to aggro the patrol-->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="3000" />				
-											
-							<!-- Custom behavior - LoadProfile - Components\Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant] -->				
-							<CustomBehavior File="LoadProfile"  
-												ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant]" />				
-
-						</Else>	<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->
+					<!-- Custom behavior - DKEnchantWeapon -->
+					<CustomBehavior File="Misc\DKEnchantWeapon" SpellID="53342" />	
 					
-					</If>	<!-- If our weapon has been Runeforged with Rune of Spellshattering -->	
-						
+					<!-- Move to - zone out location -->
+					<MoveTo X="-7524.65" Y="-1229.13" Z="285.731" />
+					
 					<!-- Profile message - Resetting the instance -->
 					<CustomBehavior File="Message" 
 									Text="Resetting the instance." 

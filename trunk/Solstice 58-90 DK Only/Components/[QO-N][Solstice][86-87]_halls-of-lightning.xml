@@ -155,35 +155,17 @@
 									
 				</If> 	<!-- If we are not in the Halls of Lightning instance box, load the movement profile -->
 				
-				<!-- If we are in the Halls of Lightning instance box, load the movement profile -->
+				<!-- If we are in the Halls of Lightning instance box -->
 				<If Condition="Me.X &gt; 9100 &amp;&amp; Me.X &lt; 9200 &amp;&amp; Me.Y &gt; -1400 &amp;&amp; Me.Y &lt; -1300" >
 					
-					<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
-					<If  Condition="Me.HasAura(53362)" >
+					<!-- Move to - weapon enchant location -->
+					<MoveTo X="9162.704" Y="-1366.123" Z="1090.014" />
 						
-						<!-- Profile message - Our weapon has been Rune-forged -->
-						<CustomBehavior File="Message" 
-										Text="Our weapon has been Runeforged with Rune of Spellshattering."  
-										LogColor="Orange" />
-							
-						<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->	
-						<Else>
-
-							<!-- Profile message - Our weapon has not been Rune-forged -->
-							<CustomBehavior File="Message" 
-											Text="Our weapon has not been Runeforged with Rune of Spellshattering."  
-											LogColor="Orange" />
-											
-							<!-- Move to - face away from the portal -->
-							<MoveTo X="9132.04" Y="-1337.649" Z="1061.315" />				
-											
-							<!-- Custom behavior - LoadProfile - Components\Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant] -->				
-							<CustomBehavior File="LoadProfile"  
-											ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant]" />				
-
-						</Else>	<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->
+					<!-- Custom behavior - DKEnchantWeapon -->
+					<CustomBehavior File="Misc\DKEnchantWeapon" SpellID="53342" />	
 					
-					</If>	<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
+					<!-- Move to - zone out location -->
+					<MoveTo X="9175.68" Y="-1378.8" Z="1103.57" />
 					
 					<!-- Profile message - Portal detected nearby --> 
 					<CustomBehavior File="Message" 

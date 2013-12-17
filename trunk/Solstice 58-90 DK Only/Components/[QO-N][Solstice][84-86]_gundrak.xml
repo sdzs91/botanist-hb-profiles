@@ -136,15 +136,6 @@
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" 
 									X="1900.536" Y="815.8542" Z="176.637" />
-
-					<!-- Move to - face away from the portal -->
-					<MoveTo X="6738.279" Y="-4623.743" Z="450.5191" />
-					
-					<!-- Custom behavior - DKEnchantWeapon -->
-					<CustomBehavior File="Misc\DKEnchantWeapon" SpellID="53342" />
-					
-					<!-- Move to - zone out location -->
-					<MoveTo X="6717.32" Y="-4645.55" Z="450.017" />
 					
 				</If>	<!-- If we are inside Gundrak -->
 
@@ -165,6 +156,15 @@
 				<!-- If we are in the Gundrak instance box -->
 				<If Condition="Me.X &gt; 6650 &amp;&amp; Me.X &lt; 6750 &amp;&amp; Me.Y &gt; -4700 &amp;&amp; Me.Y &lt; -4600" >
 
+					<!-- Move to - weapon enchant location -->
+					<MoveTo X="6737.965" Y="-4626.453" Z="450.518" />
+						
+					<!-- Custom behavior - DKEnchantWeapon -->
+					<CustomBehavior File="Misc\DKEnchantWeapon" SpellID="53342" />	
+					
+					<!-- Move to - zone out location -->
+					<MoveTo X="6717.32" Y="-4645.55" Z="450.017" />
+					
 					<!-- Profile message - Portal detected nearby --> 
 					<CustomBehavior File="Message" 
 									Text="Portal detected nearby."

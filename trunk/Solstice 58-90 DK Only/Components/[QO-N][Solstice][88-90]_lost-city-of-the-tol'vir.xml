@@ -160,32 +160,14 @@
 				<!-- If we are inside the Lost city of the Tol'vir instance box -->
 				<If Condition="Me.X &lt; -10658.9 &amp;&amp; Me.X &gt; -10684.36 &amp;&amp; Me.Y &gt; -1320.377 &amp;&amp; Me.Y &lt; -1291.219" >
 				
-					<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
-					<If  Condition="Me.HasAura(53362)" >
+					<!-- Move to - weapon enchant location -->
+					<MoveTo X="-10667.19" Y="-1303.452" Z="15.35308" />
 						
-						<!-- Profile message - Our weapon has been Rune-forged -->
-						<CustomBehavior File="Message" 
-										Text="Our weapon has been Runeforged with Rune of Spellshattering."  
-										LogColor="Orange" />
-							
-						<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->	
-						<Else>
-
-							<!-- Profile message - Our weapon has not been Rune-forged -->
-							<CustomBehavior File="Message" 
-											Text="Our weapon has not been Runeforged with Rune of Spellshattering."  
-											LogColor="Orange" />
-											
-							<!-- Move to - face away from the portal -->
-							<MoveTo X="9132.04" Y="-1337.649" Z="1061.315" />				
-											
-							<!-- Custom behavior - LoadProfile - Components\Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant] -->				
-							<CustomBehavior File="LoadProfile"  
-											ProfileName="Movement\Vendors\[QO-N][Solstice][58-90][weapon-enchant]" />				
-
-						</Else>	<!-- Else our weapon has not been Runeforged with Rune of Spellshattering -->
+					<!-- Custom behavior - DKEnchantWeapon -->
+					<CustomBehavior File="Misc\DKEnchantWeapon" SpellID="53342" />	
 					
-					</If>	<!-- If our weapon has been Runeforged with Rune of Spellshattering -->
+					<!-- Move to - zone out location -->
+					<MoveTo X="-10679.7" Y="-1307.1" Z="17.34235" />
 					
 					<!-- Profile message - Portal detected nearby --> 
 					<CustomBehavior File="Message" 
