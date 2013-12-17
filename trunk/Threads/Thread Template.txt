@@ -1,16 +1,16 @@
-[B][CENTER][SIZE=4][COLOR="#800080"]Botanist's Aviator[/COLOR][/SIZE][/CENTER][/B]
+[B][CENTER][SIZE=4][COLOR="#800080"]XXXXXXXXX[/COLOR][/SIZE][/CENTER][/B]
 [CENTER]
 
 [ATTACH=CONFIG]111140[/ATTACH]
 
-[B][I][U][CENTER][COLOR="#800080"][SIZE=3]Coming Soon[/SIZE][/COLOR][/CENTER][/U][/I][/B]
+[B][I][U][CENTER][COLOR="#800080"][SIZE=3]XXXXXXXXXXXXX[/SIZE][/COLOR][/CENTER][/U][/I][/B]
 
 
 [B][COLOR="#800080"][SIZE=4]***** Information *****[/SIZE][/COLOR][/B]
 
 [CODE]
 [LIST]
-[*]Aviator [B][U]will fly[/U][/B] to every [B][U]available[/U][/B] flight path in WoW and learn the flight path based on your characters current level.
+[*]XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 [/LIST]
 [LIST]
 [*]-
@@ -66,10 +66,9 @@
 
 [CODE]
 [LIST]
-[*]Your character [U]must[/U] be a minimum of level 60 to begin the profile.
-[/LIST]
+[*]XXXXXXXXXXXXXXXXXXXX
 [LIST]
-[*]Your character [U]must[/U] have 500+ gold in their bags if you have not already trained [URL="http://www.wowhead.com/spell=34090"][COLOR="#800080"][SIZE=3][B]Expert Riding[/B][/SIZE][/COLOR][/URL] [SIZE=5]&[/SIZE] purchased a [URL="http://www.wowhead.com/spell=90267"][COLOR="#800080"][SIZE=3][B]Flight Master's License[/B][/SIZE][/COLOR][/URL].
+[*]XXXXXXXXXXXXXXXXXXXX
 [/LIST]
 
 [LIST]
