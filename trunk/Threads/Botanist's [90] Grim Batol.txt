@@ -72,7 +72,7 @@ Should you have questions that [SIZE=3][U][COLOR="#40E0D0"]are not[/COLOR][/U][/
 
 [SIZE=3][COLOR="#40E0D0"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
 [CODE]
-
+[CENTER]
 
 [LIST]
 [*]Available via the Public SVN [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#40E0D0"]HERE[/COLOR][/URL]
@@ -80,6 +80,8 @@ Should you have questions that [SIZE=3][U][COLOR="#40E0D0"]are not[/COLOR][/U][/
 [LIST]
 Or attached zip file below.
 [/LIST]
+
+[/CENTER]
 [/CODE]
 
 
