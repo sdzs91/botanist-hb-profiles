@@ -285,8 +285,9 @@
 						<Hotspot X="2030.273" Y="1726.449" Z="60.34645" />
 						<Hotspot X="2031.241" Y="1741.752" Z="60.54807" />
 						<Hotspot X="2036.474" Y="1756.048" Z="60.44797" />
-						<Hotspot X="2038.172" Y="1771.122" Z="60.05798" />
-						<Hotspot X="2038.996" Y="1772.236" Z="60.04771" />
+						
+						<Hotspot X="2050.033" Y="1761.643" Z="59.01884" />
+						
 						<Hotspot X="2053.279" Y="1772.526" Z="58.6341" />
 						<Hotspot X="2068.322" Y="1770.57" Z="57.18457" />
 						<Hotspot X="2079.857" Y="1780.436" Z="54.80866" />
@@ -762,7 +763,7 @@
 					
 					<!-- Begin the instance once all party members are within range  -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
-									CheckRange="2" />
+									CheckRange="5" />
 									
 					<CustomBehavior File="Misc\InstanceTimer" 
 									Timer="Start" />
@@ -784,9 +785,6 @@
 									MinLevel="37" 
 									ProfileName="[QO-N][37-42]_razorfen-downs.xml"  />
 									
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="5000" />
-									
 					<!-- Wait 30 seconds so the main can get away from us and we can leave the instance -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="30000" />
@@ -795,6 +793,7 @@
 
 					<!-- enableable combat -->
 					<EnableBehavior Name="Combat" />
+					
 				</If> <!-- RFK -->
 			</While> <!-- Infinite loop -->
 		</If> <!-- RAF -->

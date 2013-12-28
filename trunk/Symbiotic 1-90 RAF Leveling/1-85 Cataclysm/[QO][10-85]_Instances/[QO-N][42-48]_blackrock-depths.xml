@@ -394,11 +394,8 @@
 						<Hotspot X="670.4365" Y="-141.8819" Z="-46.23371" />
 						<Hotspot X="681.0413" Y="-145.5933" Z="-46.23371" />
 						<Hotspot X="689.3929" Y="-138.1237" Z="-46.23371" />
-						
-						<Hotspot X="691.7713" Y="-132.3411" Z="-46.2327" />
-						<!-- Finish off locked door pack -->
-					</CustomBehavior>
-					<RunTo X="691.7713" Y="-132.3411" Z="-46.2327" />
+					</CustomBehavior>	<!-- Finish off locked door pack -->
+					<RunTo X="682.5198" Y="-144.2282" Z="-46.23371" />
 					
 					
 					<!-- Arena -->
@@ -406,7 +403,6 @@
 									UseCTM="false" 
 									NumOfTimes="1" 
 									AllowCombat="false">
-						<Hotspot X="691.644" Y="-130.901" Z="-46.23371" />
 						<Hotspot X="682.5198" Y="-144.2282" Z="-46.23371" />
 						<Hotspot X="654.0659" Y="-130.6733" Z="-46.23371" />
 						<Hotspot X="629.1316" Y="-118.3349" Z="-46.1991" />
