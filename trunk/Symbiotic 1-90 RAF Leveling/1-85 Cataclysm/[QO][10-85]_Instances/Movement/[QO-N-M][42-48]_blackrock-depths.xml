@@ -379,7 +379,14 @@
 					<CustomBehavior File="FlyTo" X="-7331.136" Y="-1088.396" Z="277.2122" />
 					<CustomBehavior File="ForcedDismount" />				
 									
-					<RunTo X="-7496.008" Y="-1077.208" Z="264.9117" />
+					<MoveTo X="-7496.008" Y="-1077.208" Z="264.9117" />
+
+					<CustomBehavior File="ForcedDismount" />
+					
+					<CustomBehavior File="ForcedMount"
+										MountType="Flying" />
+
+					<CustomBehavior File="MyCTM" X="-7599.884" Y="-1164.009" Z="292.6249" />
 
 					<CustomBehavior File="FlyTo" X="-7545.021" Y="-1100.068" Z="281.5943" />
 					<CustomBehavior File="FlyTo" X="-7562.541" Y="-1050.832" Z="251.9265" />
@@ -387,6 +394,7 @@
 					<!-- Lothos -->
 					<CustomBehavior File="FlyTo" 
 									X="-7515.52" Y="-1045.57" Z="182.3" />
+									
 					<CustomBehavior File="ForcedDismount" />
 					
 					<CustomBehavior File="WaitTimer" 
