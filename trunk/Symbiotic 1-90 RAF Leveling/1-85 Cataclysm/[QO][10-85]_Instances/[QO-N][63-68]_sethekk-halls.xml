@@ -483,8 +483,21 @@
 					<!-- Entrance -->
 					<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
 				
-					<!-- Disable combat -->
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Combat -->
 					<DisableBehavior Name="Combat" />
+					
+					<!-- Profile message - Disabling Pull -->
+					<CustomBehavior File="Message" 
+										Text="Disabling Pull." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Pull -->
+					<DisableBehavior Name="Pull" />
 					
 					<!-- Run to corner -->
 					<RunTo X="-2.395998" Y="9.060452" Z="0.006508276" />
@@ -519,6 +532,22 @@
 					<!-- Run to first boss -->
 					<RunTo X="-143.9473" Y="173.6023" Z="1.685322" />
 					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+					
+					<!-- Profile message - Enabling Pull -->
+					<CustomBehavior File="Message" 
+										Text="Enabling Pull." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Pull" />
+
 					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="18473"
 									EventX="-143.9473" EventY="173.6023" EventZ="1.685322"
@@ -572,7 +601,7 @@
 							<RunTo X="2.63209" Y="-0.209401" Z="0.005755" />
 
 							<!-- enableable combat -->
-					<EnableBehavior Name="Combat" />
+							<EnableBehavior Name="Combat" />
 					
 							<!-- Go through the portal -->
 							<CustomBehavior File="Misc\InInstance" X="-20.722509" Y="0.3174916" Z="0.005990623" />
