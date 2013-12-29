@@ -386,23 +386,22 @@
 					<CustomBehavior File="ForcedMount"
 										MountType="Flying" />
 
-					<CustomBehavior File="MyCTM" X="-7599.884" Y="-1164.009" Z="292.6249" />
-
-					<CustomBehavior File="FlyTo" X="-7545.021" Y="-1100.068" Z="281.5943" />
-					<CustomBehavior File="FlyTo" X="-7562.541" Y="-1050.832" Z="251.9265" />
-					
-					<!-- Lothos -->
-					<CustomBehavior File="FlyTo" 
-									X="-7515.52" Y="-1045.57" Z="182.3" />
+					<CustomBehavior File="MyCTM" 
+									X="-7537.99" Y="-1091.768" Z="289.8986" />
 									
+					<CustomBehavior File="MyCTM" 
+									X="-7583.45" Y="-1066.868" Z="211.7766" />
+					
+					<CustomBehavior File="MyCTM" 
+									X="-7533.832" Y="-1064.96" Z="180.9769" />
+					
 					<CustomBehavior File="ForcedDismount" />
 					
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="2000" />
 									
 					<!-- Run through lothos door -->
-					<CustomBehavior File="MyCTM" 
-									X="-7507.644" Y="-1055.035" Z="182.0239" />
+					<MoveTo X="-7507.644" Y="-1055.035" Z="182.0239" />
 					<!-- Run to end of ramp -->
 					<CustomBehavior File="MyCTM" 
 									X="-7484.931" Y="-1040.697" Z="177.6217" />
