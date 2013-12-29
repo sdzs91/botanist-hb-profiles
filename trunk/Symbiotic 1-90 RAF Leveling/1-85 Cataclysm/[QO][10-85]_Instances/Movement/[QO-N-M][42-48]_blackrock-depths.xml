@@ -371,49 +371,7 @@
 					
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="2000" />
-					
-					<!-- Go back to our last leave spot and start killing again -->
-					<CustomBehavior File="FlyTo" 
-									X="-7143.572" Y="-1308.579" Z="246.7252" />
-					<CustomBehavior File="ForcedDismount" />
-					
-					<!-- Booster UserSettings -->
-					<CustomBehavior File="UserSettings"
-									UseMount="False" />	
-					
-					<RunTo X="-7143.572" Y="-1308.579" Z="246.7252" />
-					<RunTo X="-7169.964" Y="-1330.564" Z="247.5242" />
-					<RunTo X="-7182.364" Y="-1303.439" Z="242.5386" />
-					<RunTo X="-7187.052" Y="-1273.421" Z="244.9267" />
-					<RunTo X="-7178.392" Y="-1239.179" Z="246.8482" />
-					<RunTo X="-7187.637" Y="-1219.275" Z="244.9425" />
-					<RunTo X="-7184.294" Y="-1181.005" Z="244.9425" />
-					<RunTo X="-7190.382" Y="-1137.132" Z="243.8344" />
-					<RunTo X="-7147.213" Y="-1111.265" Z="245.8435" />
-					<RunTo X="-7169.028" Y="-1141.529" Z="249.0567" />
-					<RunTo X="-7139.049" Y="-1126.662" Z="254.2248" />
-					<RunTo X="-7171.263" Y="-1086.613" Z="241.6556" />
-					<RunTo X="-7144.901" Y="-1050.811" Z="238.3396" />
-					<RunTo X="-7215.875" Y="-1071.765" Z="243.3449" />
-					<RunTo X="-7227.504" Y="-1091.397" Z="246.6404" />
-					<RunTo X="-7234.762" Y="-1073.553" Z="248.9345" />
-					
-					<!-- Stairs -->
-					<RunTo X="-7264.027" Y="-1073.335" Z="265.2971" />
-									
-					<!-- Booster UserSettings -->
-					<CustomBehavior File="UserSettings"
-									UseMount="True" />				
-									
-					<!-- Tag rafs -->
-					<CustomBehavior File="FlyTo" X="-7122.62" Y="-1236.388" Z="290.09" />
-					<CustomBehavior File="ForcedDismount" />
-					
-					<RunTo X="-7122.62" Y="-1236.388" Z="290.09" />
-					
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="5000" />
-									
+
 					<CustomBehavior File="Message" 
 									Text="Flying to Lothos." 
 									LogColor="Lime" />
@@ -448,7 +406,7 @@
 									X="-7492.638" Y="-1055.325" Z="179.0631" />
 
 					<CustomBehavior File="Misc\LoadProfileOn" 
-									CheckRange="1" />
+									CheckRange="5" />
 					
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="2000" />
@@ -904,15 +862,15 @@
 								<!-- Grom'gol Base Camp to Undercity -->
 								<CustomBehavior File="UseTransport"
 												TransportId="176495"
-												WaitAtX="-12407.97"
-												WaitAtY="200.2348"
-												WaitAtZ="31.8366"
+												WaitAtX="-12409.75"
+												WaitAtY="206.5992"
+												WaitAtZ="31.69508"
 												TransportStartX="-12406.8906"
 												TransportStartY="211.837677"
 												TransportStartZ="49.6984367"
-												StandOnX="-12398.64"
-												StandOnY="197.7412"
-												StandOnZ="33.84207"
+												StandOnX="-12403.15"
+												StandOnY="206.804"
+												StandOnZ="31.98196"
 												TransportEndX="2062.59888"
 												TransportEndY="235.264465"
 												TransportEndZ="117.733627"
@@ -1157,37 +1115,6 @@
 											LogColor="Cyan" /> 
 						
 							<RunTo X="-7122.62" Y="-1236.388" Z="290.09" />
-							
-							<!-- Let the booster tag us to move forward to blackrock mountain -->				
-							<CustomBehavior File="Misc\LoadProfileOn" 
-											CheckRange="5" />	
-											
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="20000"  />
-												
-							<CustomBehavior File="ForcedMount"
-											MountType="Ground" />
-							
-							<CustomBehavior File="Message" 
-											Text="Moving to Blackrock Mountain."
-											LogColor="Lime" /> 
-											
-							<RunTo X="-7103.172" Y="-1263.081" Z="271.5759" />				
-											
-							<CustomBehavior File="RunLikeHell"
-											UseCTM="false" 
-											NumOfTimes="1" 
-											AllowCombat="false">
-								
-								<Hotspot X="-7096.932" Y="-1287.883" Z="264.9058" />
-								<Hotspot X="-7172.023" Y="-1322.176" Z="245.5945" />
-								<Hotspot X="-7192.887" Y="-1231.302" Z="246.1976" />
-								<Hotspot X="-7198.388" Y="-1159.72" Z="248.2891" />
-								<Hotspot X="-7184.917" Y="-1100.892" Z="242.1992" />
-								<Hotspot X="-7207.204" Y="-1073.342" Z="242.8684" />
-								<Hotspot X="-7286.402" Y="-1071.193" Z="272.4984" />
-								<Hotspot X="-7364.705" Y="-1101.888" Z="277.8402" />
-							</CustomBehavior>	
 						
 							<!-- Run into Blackrock Mountain -->
 							<RunTo X="-7493.929" Y="-1076.466" Z="265.0071" />
