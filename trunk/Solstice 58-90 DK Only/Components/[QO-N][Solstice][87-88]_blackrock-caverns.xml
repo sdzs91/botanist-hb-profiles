@@ -167,7 +167,7 @@
 					<CustomBehavior File="Misc\DKEnchantWeapon" SpellID="53342" />	
 					
 					<!-- Move to - zone out location -->
-					<MoveToX="-7571.14" Y="-1324.96" Z="245.538" />
+					<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
 					
 					<!-- Profile message - Portal detected nearby --> 
 					<CustomBehavior File="Message" 
