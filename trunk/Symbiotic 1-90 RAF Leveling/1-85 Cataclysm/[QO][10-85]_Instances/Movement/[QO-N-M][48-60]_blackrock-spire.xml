@@ -304,32 +304,24 @@
 					
 					<CustomBehavior File="ForcedDismount" />
 					
-					<!-- MyCTM through gates -->
-					<CustomBehavior File="MyCTM" 
-									X="-7327.033" Y="-1086.471" Z="277.1177" />
-					<CustomBehavior File="MyCTM" 
-									X="-7355.349" Y="-1105.106" Z="277.8396" />
-					<CustomBehavior File="MyCTM" 
-									X="-7372.676" Y="-1096.317" Z="277.8396" />
-									
-					<CustomBehavior File="ForcedMount" 
-									MountType="Flying" />			
+					<!-- Move to end of chain -->
+					<RunTo X="-7482.167" Y="-1163.467" Z="277.9067" />
 					
-					<CustomBehavior File="FlyTo" 
-									X="-7410.899" Y="-1092.86" Z="282.3109" />
-					<CustomBehavior File="FlyTo" 
-									X="-7431.083" Y="-1058.615" Z="273.6184" />
-					<CustomBehavior File="FlyTo" 
-									X="-7484.258" Y="-1072.198" Z="265.4306" />
-					<CustomBehavior File="FlyTo" 
-									X="-7559.865" Y="-1166.235" Z="300.4927" />
-					<CustomBehavior File="FlyTo" 
-									X="-7529.142" Y="-1222.366" Z="285.7316" />
-									
 					<CustomBehavior File="ForcedDismount" />
+					
+					<CustomBehavior File="MyCTM" X="-7470.056" Y="-1164.558" Z="273.2744" />
+					<CustomBehavior File="MyCTM" X="-7469.265" Y="-1186.581" Z="273.9157" />
+					<CustomBehavior File="MyCTM" X="-7480.061" Y="-1194.603" Z="278.3599" />
+					<CustomBehavior File="MyCTM" X="-7501.622" Y="-1200.502" Z="281.8502" />
+					<CustomBehavior File="MyCTM" X="-7517.264" Y="-1210.495" Z="290.9408" />
+					<CustomBehavior File="MyCTM" X="-7530.776" Y="-1209.405" Z="285.4507" />
+					<CustomBehavior File="MyCTM" X="-7534.965" Y="-1214.374" Z="285.4137" />
 					
 					<!-- Moving to the instance box -->
 					<RunTo X="-7524.65" Y="-1229.13" Z="285.731" />
+
+					<CustomBehavior File="ForcedDismount" />
+					
 				</If> <!-- Not in box -->
 				
 				<!-- Inside the instance box, load the profile -->

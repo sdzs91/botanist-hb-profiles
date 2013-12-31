@@ -6,6 +6,7 @@
    
 	<MinDurability>-1</MinDurability>
 	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	<TargetingDistance>45</TargetingDistance>
 	
 	<MailGrey>False</MailGrey>
 	<MailWhite>False</MailWhite>
@@ -492,14 +493,11 @@
 					<RunTo X="-7199.958" Y="-905.6967" Z="165.4879" />
 					
 					<!-- Make sure we kill the fire elemental for the RAFs -->
-					<CustomBehavior File="TargetAndMoveToMob" 
-									MobId="9026" 
-									MoveWithinMaxRangeOfMob="1" 
-									WaitForNpcs="false"
-									X="-7250.287" Y="-907.6682" Z="165.3785" />
+					<RunTo X="-7250.287" Y="-907.6682" Z="165.3785" />
 					
 					<!-- Moving to the instance box -->
 					<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+					
 				</If> <!-- Not in box -->
 				
 				<!-- Inside the instance box, load the profile -->
