@@ -329,14 +329,6 @@
 					<RunTo X="269.5512" Y="-126.7503" Z="-25.16308" />
 					<RunTo X="-2.869573" Y="-108.3897" Z="-41.34134" />
 					<RunTo X="5.557644" Y="-92.14471" Z="-41.33173" />
-					
-					<!-- Targetandmoveto a rogue on the way out to keep the rafs safe -->
-					<CustomBehavior File="TargetAndMoveToMob" 
-									MobId="17491" 
-									MoveWithinMaxRangeOfMob="1" 
-									WaitForNpcs="false"
-									TargetOnlyIfHealthPercentAbove="5" 
-									X="162.3682" Y="-91.31461" Z="9.602009" />
 						
 					<!-- Tag the rafs -->
 					<RunTo X="255.5342" Y="-84.35275" Z="9.617249" />
