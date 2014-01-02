@@ -39,7 +39,10 @@
 
 	<Factions></Factions>
 	
-	<ProtectedItems>		
+	<ProtectedItems>
+		<Item Name="Battered Hilt" Entry="50380" />
+		<Item Name="Book of Glyph Mastery" Entry="45912" />
+		<Item Name="Frostweave Cloth" Entry="33470" />
 	</ProtectedItems>
 	
 	<QuestOrder>
