@@ -8,13 +8,13 @@
 	<MinFreeBagSlots>-1</MinFreeBagSlots>
 	
 	<MailGrey>False</MailGrey>
-	<MailWhite>False</MailWhite>
+	<MailWhite>True</MailWhite>
 	<MailGreen>False</MailGreen>
 	<MailBlue>False</MailBlue>
 	<MailPurple>False</MailPurple>
    
 	<SellGrey>True</SellGrey>
-	<SellWhite>True</SellWhite>
+	<SellWhite>False</SellWhite>
 	<SellGreen>True</SellGreen>
 	<SellBlue>True</SellBlue>
 	<SellPurple>True</SellPurple>
@@ -390,43 +390,6 @@
 			<MoveTo X="838.9632" Y="109.2633" Z="509.9375" />
 			<MoveTo X="812.3692" Y="122.604" Z="509.2249" />
 					
-			
-			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
-			
-			
-			<MoveTo X="848.2501" Y="26.29651" Z="510.7635" />
-			
-			<!-- Wait timer - wait 15 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="15000" />
-
-			<MoveTo X="916.7297" Y="78.69077" Z="555.1337" />
-			<MoveTo X="941.1301" Y="19.51259" Z="574.6401" />
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
-							
-							
-			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
-			
-			
-			<MoveTo X="927.0947" Y="-30.69282" Z="588.7007" />
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
-			
-			
-			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
-			
-			
-			<MoveTo X="1054.091" Y="116.8946" Z="628.1563" />
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
-			
 			
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
