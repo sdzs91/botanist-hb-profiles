@@ -1,7 +1,10 @@
 [B][CENTER][SIZE=4][COLOR="#FFA07A"]Botanist's [90] Pit of Saron[/COLOR][/SIZE][/CENTER][/B]
 [CENTER]
+[CENTER][B][I][COLOR="#FFA07A"][SIZE=4]Available for Testing ![/SIZE][/COLOR][/I][/B]
 
-[CENTER][B][I][COLOR="#FFA07A"][SIZE=4]Coming Soon ![/SIZE][/COLOR][/I][/B]
+
+
+[CENTER][B][I][COLOR="#FFA07A"][SIZE=4][COLOR="#800080"]Battered Hilt[/COLOR] Farm [COLOR="#000000"]also[/COLOR] Available for Testing[/SIZE][/COLOR][/I][/B]
 
 [video=youtube;0QG8AnYKCi4]https://www.youtube.com/watch?v=0QG8AnYKCi4[/video][/CENTER]
 
@@ -66,10 +69,10 @@
 
 [CODE]
 [LIST]
-[*]Your character must have completed the questline in Forge of Souls.
+[*]Your character [U][B]must[/B][/U] have completed the questline in Forge of Souls
 [/LIST]
 [LIST]
-[*]-
+[*]Your character [U][B]must[/B][/U] be level 90
 [/LIST]
 [LIST]
 [*]-
@@ -108,10 +111,16 @@
 
 [SIZE=3][COLOR="#FFA07A"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
 [CODE]
+[CENTER]
 
 [LIST]
-[*]Will be added.
+[*]Available via the Public SVN [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FFA07A"]HERE[/COLOR][/URL]
 [/LIST]
+[LIST]
+Or attached zip file below.
+[/LIST]
+
+[/CENTER]
 [/CODE]
 
 [B][U][COLOR="#FFA07A"][SIZE=3]NOTE:[/SIZE][/COLOR][/U][/B] The zip files below will not be up-to-date with the SVN
