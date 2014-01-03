@@ -64,7 +64,6 @@
 						UseMount="True" 
 						UseRandomMount="False" />		
 				
-				
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance">
 				
@@ -77,9 +76,9 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />
 				
-				<!-- Load profile - Components\[QO-A-M][60+][Flying]_stormwind -->
+				<!-- Load profile - Components\all\[QO-A-M][60+][Flying]_stormwind -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="Components\[QO-A-M][60+][Flying]_stormwind" />
+								ProfileName="Components\all\[QO-A-M][60+][Flying]_stormwind" />
 				
 			</If>	<!-- If we are Alliance -->	
 				

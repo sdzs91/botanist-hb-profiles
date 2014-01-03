@@ -1435,63 +1435,9 @@
 			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="5000" />
-				
-							
-							
-			<!-- ************************************************** Moving to Menethil Harbor docks ************************************************************** -->
-
-							
-			<!-- Profile message - Moving to Menethil Harbor docks -->
-			<CustomBehavior File="Message" 
-							Text="Moving to Menethil Harbor docks."  
-							LogColor="Cyan" />				
-			
-			<!-- Move to - Menethil Harbor docks -->			
-			<MoveTo X="-3862.272" Y="-656.2274" Z="5.336261" />
-
-			<!-- Forced dismount -->	
-			<CustomBehavior File="ForcedDismount" />
-			
-			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="5000" />				
 							
 		</If>	<!-- If we are at the Stormwind flight master -->	
 							
-		<!-- If we are on the Menethil Harbor docks -->
-		<If Condition="Me.X &gt; -3910.375 &amp;&amp; Me.X &lt; -3827.406 &amp;&amp; Me.Y &gt; -734.3277 &amp;&amp; Me.Y &lt; -631.5504" >		
-				
-		<!-- Custom behavior - UseTransport	- Menethril Harbor to Theramore Isle -->	
-		<CustomBehavior File="UseTransport" 
-						TransportId="176231" 
-						WaitAtX="-3862.272" 
-						WaitAtY="-656.2274" 
-						WaitAtZ="5.336261"
-						TransportStartX="-3872.35" 
-						TransportStartY="-639.944" 
-						TransportStartZ="-0.0055067873"
-						StandOnX="-3867.742" 
-						StandOnY="-637.0014" 
-						StandOnZ="6.116831"
-						TransportEndX="-4016.39" 
-						TransportEndY="-4740.588338" 
-						TransportEndZ="-0.04059135"	
-						GetOffX="-3998.461" 
-						GetOffY="-4721.858" 
-						GetOffZ="4.263693" />						
-				
-			<!-- Move to - Theramore Isle docks -->			
-			<MoveTo X="-3998.461" Y="-4721.858" Z="4.263693" />	
-			
-			<!-- Move to - Theramore Isle flight master -->			
-			<MoveTo X="-3828.75" Y="-4520.198" Z="10.86853" />
-				
-			<!-- Load profile - [QO-A-M][60+][Flying]_kalimdor -->
-			<CustomBehavior File="LoadProfile" 
-							ProfileName="[QO-A-M][60+][Flying]_kalimdor" />	
-				
-		</If>	<!-- If we are on the Menethil Harbor docks -->		
-	
 	</QuestOrder>
 	
 </HBProfile>	
