@@ -1,0 +1,162 @@
+<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H-M][90][Flying]_orgrimmar</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		
+	</ProtectedItems>
+	
+	<ClearVendor />
+	<ClearMailbox />
+		
+	<QuestOrder>
+				
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						AdvancedSettingsMode="True"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="True"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootMobs="True"
+						LootRadius="35"
+						MountName=""
+						NinjaSkin="False"
+						ProfileDebuggingMode="False"
+						PullDistance="25"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />		
+				
+		<!-- If we can fly -->		
+		<If Condition="CanFly()">
+                
+			<!-- Profile message - We can fly -->
+			<CustomBehavior File="Message" 
+							Text="We can fly."  
+							LogColor="Orange" />	
+			
+			<!-- Else we can not fly -->
+			<Else>
+
+				<!-- Profile message - We can not fly -->
+				<CustomBehavior File="Message" 
+								Text="We can not fly."  
+								LogColor="Red" />
+								
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />
+
+				<!-- Profile message - Initiating training procedures -->
+				<CustomBehavior File="Message" 
+								Text="Initiating training procedures."  
+								LogColor="Orange" />
+
+				<!-- If we have more than 500 gold -->
+				<If Condition="(Me.Gold &gt;= 500)" >
+
+					<!-- Profile message - We have the gold to purchase Expert Riding and a Flight Master's License -->
+					<CustomBehavior File="Message" 
+									Text="We have the gold to purchase Expert Riding and a Flight Master's License."  
+									LogColor="Orange" />
+				
+					<!-- Load profile - Training\[QO-H-M][90][Flying]_orgrimmar -->
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Training\[QO-H-M][90][Flying]_orgrimmar" />
+				
+					<!-- Else we don't have more than 500 gold -->
+					<Else>
+					
+						<!-- Profile message - We have the gold to purchase Expert Riding and a Flight Master's License -->
+						<CustomBehavior File="Message" 
+										Text="We don't have the gold to purchase Expert Riding and a Flight Master's License."  
+										LogColor="Red" />
+										
+						<!-- Wait timer - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+
+						<!-- Profile message - Restart the profile with a minimum of 505 gold on your character. Stopping the bot! -->
+						<CustomBehavior File="Message" 
+										Text="Restart the profile with a minimum of 505 gold on your character. Stopping the bot!"  
+										LogColor="Red" />
+
+						<!-- Wait timer - wait 1 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="1000" />
+
+										
+						<!-- Custom behavior - Usersettings - StopBot -->				
+						<CustomBehavior File="UserSettings" 
+										StopBot="true" />				
+					
+					</Else>		<!-- Else we don't have more than 500 gold -->
+					
+				</If>	<!-- If we have more than 500 gold -->
+				
+			</Else>		<!-- Else we can not fly -->
+				
+        </If>	<!-- If we can fly -->
+		
+		<!-- If we are in Pandaria -->
+		<If
+		
+		<!-- If we are in Northrend -->
+		
+		
+		<!-- If we are in Outland -->
+		
+		
+		<!-- If we are in Kalimdor -->
+				
+				
+		<!-- If we are in Deepholme -->		
+				
+				
+		<!-- If we are in Eastern Kingdoms -->		
+				
+				
+		<!-- Move to - Orgrimmar flight master -->		
+				
+		
+	</QuestOrder>
+	
+</HBProfile>

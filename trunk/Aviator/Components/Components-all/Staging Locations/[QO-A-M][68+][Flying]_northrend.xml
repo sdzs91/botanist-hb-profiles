@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-A-M][60+][Flying]_outland</Name>
+	<Name>[QO-A-M][68+][Flying]_northrend</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -62,37 +62,10 @@
 						RessAtSpiritHealers="False"
 						SkinMobs="False"
 						UseMount="True" 
-						UseRandomMount="False" />	
-
-		<!-- Profile message - Initializing Outland flight path mechanics -->
-		<CustomBehavior File="Message" 
-						Text="Initializing Outland flight path mechanics."  
-						LogColor="Orange" />
-						
-						
-						
-						
-						
-						
-						
-		<!-- Profile message - This portion has not been added yet -->
-		<CustomBehavior File="Message" 
-						Text="This portion has not been added yet."  
-						LogColor="Orange" />
-	
-		<!-- Wait timer - wait 3 seconds - delay -->
-		<CustomBehavior File="WaitTimer" 
-						WaitTime="3000" />
-						
-		<!-- Profile message - Stopping the bot -->
-		<CustomBehavior File="Message" 
-						Text="Stopping the bot."  
-						LogColor="Red" />				
-						
-		<!-- Custom behavior - Usersettings - StopBot -->				
-		<CustomBehavior File="UserSettings" 
-						StopBot="true" />
-
+						UseRandomMount="False" />		
+				
+		
+				
 	</QuestOrder>
 	
 </HBProfile>

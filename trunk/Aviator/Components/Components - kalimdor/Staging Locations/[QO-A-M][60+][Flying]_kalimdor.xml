@@ -631,7 +631,7 @@
 							
 			<!-- Fly to - Thal'darah Overlook flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="2147.25" Y="1537.87" Z="341.24" />
+							X="2159.01" Y="1550.875" Z="341.2547" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
