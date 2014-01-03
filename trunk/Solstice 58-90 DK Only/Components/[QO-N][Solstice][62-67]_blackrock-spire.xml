@@ -2033,27 +2033,7 @@
 							
 							
 							<!-- Move to - jump location -->
-							<MoveTo X="-81.40967" Y="-341.1529" Z="70.95248" />
-							
-							<!-- CTM to - 1st jump off - ledge -->
-							<CustomBehavior File="MyCTM"
-											X="-65.61311" Y="-340.3815" Z="55.43575" />
-							
-							<!-- CTM to - above the three Ogres - ledge -->
-							<CustomBehavior File="MyCTM"
-											X="-70.5983" Y="-326.8433" Z="57.61976" />
-							
-							
-							<!-- @@@@@@@@@@@@@@@@@@@@ 38th pull @@@@@@@@@@@@@@@@@@@@ -->
-							
-							
-							<!-- Profile message - Disabling combat -->
-							<CustomBehavior File="Message" 
-												Text="Disabling combat." 
-												LogColor="Gold" />
-							
-							<!-- DisableBehavior - Combat -->
-							<DisableBehavior Name="Combat" />
+							<MoveTo X="-71.57956" Y="-328.0751" Z="57.42141" />
 
 							<!-- Profile message - Casting Icebound Fortitude -->
 							<CustomBehavior File="Message" 
@@ -2067,26 +2047,8 @@
 
 							<!-- CTM to - jump off - ledge - top 3 Ogres-->
 							<CustomBehavior File="MyCTM"
-											X="-50.03535" Y="-320.4305" Z="43.06311" />
-							
-							<!-- Profile message - Casting Raise Dead -->
-							<CustomBehavior File="Message" 
-											Text="Casting Raise Dead."  
-											LogColor="Orange" />
-										
-							<!-- Macro - Cast Raise Dead -->
-							<CustomBehavior File="RunMacro"
-											NumOfTimes="1"
-											Macro="/cast Raise Dead" />	
-							
-							<!-- Profile message - Enabling combat -->
-							<CustomBehavior File="Message" 
-												Text="Enabling combat." 
-												LogColor="Gold" />
-
-							<!-- enable combat -->
-							<EnableBehavior Name="Combat" />
-							
+											X="-49.28157" Y="-320.5941" Z="43.0577" />
+											
 							<!-- Wait timer - wait 3 seconds - delay -->
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="3000" />
