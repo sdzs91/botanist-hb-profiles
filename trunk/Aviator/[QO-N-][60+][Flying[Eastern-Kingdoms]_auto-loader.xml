@@ -77,9 +77,9 @@
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="3000" />
 			
-			<!-- Load profile - Components\[QO-A-M][60+][Flying]_stormwind -->
+			<!-- Load profile - Components\eastern-kingdoms\[QO-A-M][60+][Flying]_stormwind -->
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="Components\[QO-A-M][60+][Flying]_stormwind" />
+							ProfileName="Components\eastern-kingdoms\[QO-A-M][60+][Flying]_stormwind" />
 			
 		</If>	<!-- If we are Alliance -->	
 			
@@ -132,9 +132,9 @@
 			
 			
 			
-			<!-- Load profile - Components\[QO-H-M][90][Flying]_orgrimmar -->
+			<!-- Load profile - Components\eastern-kingdoms\[QO-H-M][90][Flying]_orgrimmar -->
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="Components\[QO-H-M][90][Flying]_orgrimmar" />
+							ProfileName="Components\eastern-kingdoms\[QO-H-M][90][Flying]_orgrimmar" />
 			
 		</If>	<!-- If we are Horde -->
 			
