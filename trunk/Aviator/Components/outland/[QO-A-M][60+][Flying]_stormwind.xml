@@ -395,7 +395,7 @@
 		
 			<!-- Load profile - Staging Locations\[QO-A-M][60+][Flying]_eastern-kingdoms -->
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="Staging Locations\[QO-A-M][60+][Flying]_eastern-kingdoms" />
+							ProfileName="Staging Locations\[QO-A-M][60+][Flying]_outland" />
 		
 		</If>	<!-- If we are at the Stormwind flight master -->
 

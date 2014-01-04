@@ -1153,6 +1153,17 @@
 			<!-- Move to - Booty Bay docks -->				
 			<MoveTo X="-14280.22" Y="567.6113" Z="6.696649" />
 		
+		
+		
+			<!-- ************************************************** Moving to Stormwind ************************************************************** -->
+			
+			
+							
+			<!-- Profile message - Moving to the Stormwind flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Stormwind flight master."  
+							LogColor="Cyan" />				
+							
 			<!-- Move to - Stormwind flight master - hover point -->				
 			<CustomBehavior File="FlyTo" 
 							X="-8933.752" Y="451.1799" Z="134.7807" />				
@@ -1164,14 +1175,23 @@
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
 			
-			<!-- If we are at the Stormwind flight master -->
-			<If Condition="Me.X &gt; -8873 &amp;&amp; Me.X &lt; -8807 &amp;&amp; Me.Y &gt; 438 &amp;&amp; Me.Y &lt; 560" >
-			
-				<!-- Load profile - [QO-A-M][60+][Flying]_outland -->
-				<CustomBehavior File="LoadProfile" 
-								ProfileName="[QO-A-M][60+][Flying]_outland" />
-			
-			</If>	<!-- If we are at the Stormwind flight master -->
+			<!-- Profile message - his portion of the profile has completed -->
+			<CustomBehavior File="Message" 
+							Text="This portion of the profile has completed."  
+							LogColor="Orange" />
+		
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+							
+			<!-- Profile message - Stopping the bot -->
+			<CustomBehavior File="Message" 
+							Text="Stopping the bot."  
+							LogColor="Red" />				
+							
+			<!-- Custom behavior - Usersettings - StopBot -->				
+			<CustomBehavior File="UserSettings" 
+							StopBot="true" />
 		
 		</If>	<!-- If we are in Kalimdor -->
 	

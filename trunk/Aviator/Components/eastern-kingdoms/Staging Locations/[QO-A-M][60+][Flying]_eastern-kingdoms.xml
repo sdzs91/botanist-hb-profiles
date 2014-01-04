@@ -1436,6 +1436,46 @@
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="5000" />
 							
+							
+							
+			<!-- ************************************************** Moving to Stormwind ************************************************************** -->
+			
+			
+							
+			<!-- Profile message - Moving to the Stormwind flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Stormwind flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Move to - Stormwind flight master - hover point -->				
+			<CustomBehavior File="FlyTo" 
+							X="-8933.752" Y="451.1799" Z="134.7807" />				
+							
+			<!-- CTM to - grounding at the Stormwind flight master -->
+			<CustomBehavior File="MyCTM" 
+							X="-8845.87" Y="495.948" Z="109.6085" />	
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+			
+			<!-- Profile message - his portion of the profile has completed -->
+			<CustomBehavior File="Message" 
+							Text="This portion of the profile has completed."  
+							LogColor="Orange" />
+		
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+							
+			<!-- Profile message - Stopping the bot -->
+			<CustomBehavior File="Message" 
+							Text="Stopping the bot."  
+							LogColor="Red" />				
+							
+			<!-- Custom behavior - Usersettings - StopBot -->				
+			<CustomBehavior File="UserSettings" 
+							StopBot="true" />
+							
 		</If>	<!-- If we are at the Stormwind flight master -->	
 							
 	</QuestOrder>
