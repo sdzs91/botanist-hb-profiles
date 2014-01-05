@@ -387,6 +387,46 @@
 
 			<!-- Fly to - Telredor flight master -->				
 			<CustomBehavior File="FlyTo" 
+							X="510.5252" Y="6072.934" Z="57.9116" />				
+									
+			<!-- CTM to - Telredor flight master -->				
+			<CustomBehavior File="MyCTM" 
+							X="384.3324" Y="6094.453" Z="166.4558" />				
+
+			<!-- CTM to - Telredor flight master -->				
+			<CustomBehavior File="MyCTM" 
+							X="217.6488" Y="6041.06" Z="173.5681" />
+
+			<!-- CTM to - Telredor flight master -->				
+			<CustomBehavior File="MyCTM" 
+							X="212.8272" Y="6064.362" Z="148.3173" />				
+							
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - InteractWith Telredor flight master -->
+			<CustomBehavior File="InteractWith"
+							ObjectType="Npc"
+							MobId="18788"
+							NumOfTimes="1"
+							X="210.4924" Y="6065.088" Z="148.3181" />
+							   
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+							
+							
+							
+			<!-- ************************************************** Moving to Telaar ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Telaar flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Telaar flight master."  
+							LogColor="Cyan" />				
+
+			<!-- Fly to - Telaar flight master -->				
+			<CustomBehavior File="FlyTo" 
 							X="-2716.865" Y="7299.215" Z="88.6204" />
 
 			<!-- Forced dismount -->	
@@ -394,8 +434,8 @@
 
 			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
-							WaitTime="5000" />
-			
+							WaitTime="5000" /> 
+							
 
 			
 			<!-- ************************************************** Moving to Allerian Stronghold ************************************************************** -->				
@@ -409,7 +449,7 @@
 
 			<!-- Fly to - Allerian Stronghold flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="-2989.471" Y="3872.417" Z="9.183017" />
+							X="-2987.24" Y="3872.78" Z="9.13" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -431,7 +471,7 @@
 
 			<!-- Fly to - Wildhammer Stronghold flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="-2989.471" Y="3872.417" Z="9.183017" />
+							X="-3987.92" Y="2153.324" Z="104.2453" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -453,7 +493,7 @@
 
 			<!-- Fly to - Shattrath flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="-2716.865" Y="7299.215" Z="88.6204" />
+							X="-1837.23" Y="5301.9" Z="-12.43" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -480,6 +520,10 @@
 							WaitTime="10000" 
 							X="-1894.18921" Y="5387.93945" Z="-12.4282484" />
 			
+			<!-- Custom behavior - WaitTimer - wait 10 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="10000" />
+			
 			<!-- Profile message - Moving to the Stormwind flight master -->
 			<CustomBehavior File="Message" 
 							Text="Moving to the Stormwind flight master."  
@@ -495,7 +539,7 @@
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
-
+			
 			<!-- If we are at the Stormwind flight master -->
 			<If Condition="Me.X &gt; -8873 &amp;&amp; Me.X &lt; -8807 &amp;&amp; Me.Y &gt; 438 &amp;&amp; Me.Y &lt; 560" >
 			
