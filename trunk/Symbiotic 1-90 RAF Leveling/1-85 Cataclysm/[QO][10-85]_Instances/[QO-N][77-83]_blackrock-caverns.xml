@@ -490,7 +490,9 @@
 									WaitTime="3000" />
 									
 					
+					
 					<!-- ************************** 1st Mobs after Karsh ********************************************* -->
+					
 					
 					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
@@ -503,6 +505,26 @@
 					<!-- Move to - left-hand group after Karsh -->
 					<MoveTo X="224.8825" Y="708.1334" Z="109.0304" />
 					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+									
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
+					
 					<!-- Move to - right-hand group after Karsh -->
 					<MoveTo X="194.7648" Y="708.052" Z="109.6713" />
 					
@@ -511,6 +533,26 @@
 					
 					<!-- Move to - middle of the patrols path -->
 					<MoveTo X="212.9294" Y="655.6936" Z="90.0681" />
+					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+									
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
 					
 					<!-- Move to - bottom of the patrols path -->
 					<MoveTo X="207.5424" Y="604.1732" Z="75.4519" />
@@ -525,15 +567,11 @@
 
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />
-
+					
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
-					
-					
-					<!-- ************************** 2nd mobs after Karsh ********************************************* -->
-					
-					
+									
 					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Disabling combat." 
@@ -541,6 +579,10 @@
 					
 					<!-- DisableBehavior - Combat -->
 					<DisableBehavior Name="Combat" />
+					
+					
+					<!-- ************************** 2nd mobs after Karsh ********************************************* -->
+					
 					
 					<!-- Move to - left-hand group  -->
 					<MoveTo X="235.7731" Y="586.729" Z="74.98917" />

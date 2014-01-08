@@ -230,10 +230,15 @@
 						<Hotspot X="324.9991" Y="67.60344" Z="9.614052" />
 						<Hotspot X="329.5138" Y="133.9504" Z="9.617323" />
 						<Hotspot X="327.4166" Y="44.01584" Z="9.613595" />
+						<Hotspot X="326.5659" Y="144.0777" Z="9.61676" />
 					</CustomBehavior>
 					
 					<!-- exit of 1st boss room -->
-					<RunTo X="327.177" Y="143.3894" Z="9.615238" />
+					<RunTo X="326.5659" Y="144.0777" Z="9.61676" />
+					
+					<!-- Wait timer - wait 10 seconds to aggro the patrol-->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="10000" />
 					
 					<!-- Clears the lab corridor, up to the cell lever -->
 					<CustomBehavior File="RunLikeHell" 
@@ -269,18 +274,19 @@
 									NumOfTimes="1" 
 									X="456.0855" Y="60.3489151" Z="9.47833" />
 										
-					<!-- Forces kill of Broggok -->
-					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="17380"
-									EventX="442.7055" EventY="50.42463" EventZ="9.614821"
-									MoveOutOfGroundEffectAuraId1="111111"
-									MoveAwayFromMobCastingSpellId1="111111"
-									MoveAwayFromMobWithAuraId1="111111">
-						<Safespots>
-							<Hotspot X="442.7055" Y="50.42463" Z="9.614821" />
-						</Safespots>
-					</CustomBehavior>
+
+					<MoveTo X="442.9911" Y="50.34563" Z="9.616624" />
+
+					<!-- Wait timer - wait 60 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="60000" />
 					
+					<MoveTo X="457.1964" Y="47.10152" Z="9.617157" />
+					
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+									
 					<!-- Exit after Broggok -->
 					<RunTo X="455.9192" Y="41.57648" Z="9.61687" />
 					
@@ -579,9 +585,6 @@
 									
 					<!-- Entrance -->
 					<RunTo X="-2.73782" Y="19.8424" Z="-44.79826" />
-				
-					<!-- Disable combat -->
-					<DisableBehavior Name="Combat" />
 					
 					<!-- Run to quest givers -->
 					<RunTo X="0.2994731" Y="-15.27276" Z="-42.70581" />
@@ -608,9 +611,17 @@
 					<!-- Move to top of stairs --> 
 					<RunTo X="255.5342" Y="-84.35275" Z="9.617249" />
 					
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
+					
 					<CustomBehavior File="Misc\LoadProfileOn" 
 									CheckRange="5" />
-									
+
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
 									MinLevel="63" 
@@ -631,14 +642,22 @@
 									
 					<RunTo X="-4.093049" Y="17.00105" Z="-44.78368" />
 					
-					<!-- enableable combat -->
-					<EnableBehavior Name="Combat" />
+
 					
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" X="0.3497318" Y="33.50735" Z="-44.84385" />
 					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+					
 					<!-- Make sure we run to the right spot outside the portal -->
 					<RunTo X="-302.408" Y="3162.92" Z="31.7273" />
+					
 				</If> <!-- BF -->
 			</While> <!-- Infinite loop -->
 		</If> <!-- RAF -->

@@ -627,12 +627,41 @@
 				</If> <!-- Hearth check -->
 			</If> <!-- SH -->
 
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			<!-- Outland -->
 			<If Condition="Me.MapId == 530">
 				<CustomBehavior File="Message" 
 								Text="You must be inside of Sethekk Halls to proceed. Go in the instance and restart the profile." 
 								LogColor="Lime" />
 			</If> <!-- Outland -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			<!-- Kalimdor -->
 			<If Condition="Me.MapId == 1">
@@ -718,30 +747,33 @@
 							
 						<!-- trained -->
 						<If Condition="HasSpell(54197)" >
+						
 							<!-- Run to the deck -->
 							<RunTo X="1868.09" Y="-4417.422" Z="135.232" />
 
-							<!-- Orgrimmar to Grom'gol Base Camp -->
-							<CustomBehavior File="UseTransport"
-								TransportId="175080"
-								WaitAtX="1869.635"
-								WaitAtY="-4419.227"
-								WaitAtZ="135.2332"
-								TransportStartX="1880.818"
-								TransportStartY="-4435.269"
-								TransportStartZ="152.8608"
-								StandOnX="1883.553"
-								StandOnY="-4419.312"
-								StandOnZ="136.8681"
-								TransportEndX="-12464.34"
-								TransportEndY="233.1597"
-								TransportEndZ="49.53437"
-								GetOffX="-12445.94"
-								GetOffY="218.9818"
-								GetOffZ="31.86087" />
-
-							<!-- Run to the western side of the deck -->
-							<RunTo X="-12424.07" Y="225.4187" Z="32.17282" />
+							<!-- Orgrimmar to Undercity -->
+							<MoveTo X="1844.287" Y="-4395.305" Z="135.2319" />				
+									
+							<!-- Forced dismount -->		
+							<CustomBehavior File="ForcedDismount" />						
+													
+							<CustomBehavior File="UseTransport" 
+								TransportId="164871" 
+								WaitAtX="1840.016" 
+								WaitAtY="-4391.266" 
+								WaitAtZ="135.2319"								
+								TransportStartX="1833.50867" 
+								TransportStartY="-4391.54346" 
+								TransportStartZ="152.767868"								
+								StandOnX="1834.315" 
+								StandOnY="-4385.276" 
+								StandOnZ="135.0402"
+								TransportEndX="2062.376" 
+								TransportEndY="292.998047" 
+								TransportEndZ="114.972954"	
+								GetOffX="2066.645" 
+								GetOffY="285.7304" 
+								GetOffZ="97.03136" />
 						</If> <!-- Trained riding -->
 					</If> <!-- Orgrimmar -->
 				</If> <!-- Horde -->
@@ -877,24 +909,25 @@
 							<!-- Grom'gol Base Camp to Undercity -->
 							<CustomBehavior File="UseTransport"
 											TransportId="176495"
-											WaitAtX="-12407.97"
-											WaitAtY="200.2348"
-											WaitAtZ="31.8366"
+											WaitAtX="-12409.75"
+											WaitAtY="206.5992"
+											WaitAtZ="31.69508"
 											TransportStartX="-12406.8906"
 											TransportStartY="211.837677"
 											TransportStartZ="49.6984367"
-											StandOnX="-12398.64"
-											StandOnY="197.7412"
-											StandOnZ="33.84207"
+											StandOnX="-12403.15"
+											StandOnY="206.804"
+											StandOnZ="31.98196"
 											TransportEndX="2062.59888"
 											TransportEndY="235.264465"
 											TransportEndZ="117.733627"
 											GetOffX="2057.45"
 											GetOffY="238.7743"
-											GetOffZ="99.76712" />
+											GetOffZ="99.76712" />	
 											
 							<!-- Run to the doorway -->
 							<RunTo X="2060.382" Y="254.9573" Z="99.76746" />
+
 						</If> <!-- Northern Stranglethorn -->
 							
 						<!-- Tirisfal Glades -->
