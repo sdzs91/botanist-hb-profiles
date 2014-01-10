@@ -8,13 +8,13 @@
 	<MinFreeBagSlots>-1</MinFreeBagSlots>
 	
 	<MailGrey>False</MailGrey>
-	<MailWhite>True</MailWhite>
+	<MailWhite>False</MailWhite>
 	<MailGreen>False</MailGreen>
 	<MailBlue>False</MailBlue>
 	<MailPurple>False</MailPurple>
    
 	<SellGrey>True</SellGrey>
-	<SellWhite>False</SellWhite>
+	<SellWhite>True</SellWhite>
 	<SellGreen>True</SellGreen>
 	<SellBlue>True</SellBlue>
 	<SellPurple>True</SellPurple>
@@ -39,10 +39,7 @@
 
 	<Factions></Factions>
 	
-	<ProtectedItems>
-		<Item Name="Battered Hilt" Entry="50380" />
-		<Item Name="Book of Glyph Mastery" Entry="45912" />
-		<Item Name="Frostweave Cloth" Entry="33470" />
+	<ProtectedItems>		
 	</ProtectedItems>
 	
 	<QuestOrder>
@@ -127,16 +124,6 @@
 
 		</If>	<!-- If we are not in the Pit of Saron instance box -->
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		<!-- Durability and free bag-slot check -->
 		<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" > 
 
@@ -171,34 +158,71 @@
 			<!-- XXXXXXXXXXXXXXXXXXXX -->
 			<CustomBehavior File="ForcedDismount" />
 			
-			<!-- XXXXXXXXXXXXXXXXXXXX -->
-			<SetVendor>
-				<Vendors>
-					<Vendor Name="Brollen Wheatbeard" 
-							Entry="33599" 
-							Type="Repair" 
-							X="8548.112" Y="933.3629" Z="547.2943" />
-				</Vendors>
-			</SetVendor>						
-			<SetMailbox>
-				<Mailboxes>
-					<Mailbox X="8589.71" Y="695.7098" Z="547.2932" />
-				</Mailboxes>
-			</SetMailbox>
+			<!-- If we are Alliance -->					
+			<If Condition="Me.IsAlliance">
+
+				<!-- Brollen Wheatbeard -->
+				<SetVendor>
+					<Vendors>
+						<Vendor Name="Brollen Wheatbeard" 
+								Entry="33599" 
+								Type="Repair" 
+								X="8548.112" Y="933.3629" Z="547.2943" />
+					</Vendors>
+				</SetVendor>						
+				<SetMailbox>
+					<Mailboxes>
+						<Mailbox X="8589.71" Y="695.7098" Z="547.2932" />
+					</Mailboxes>
+				</SetMailbox>
+				
+				<!-- ForceSetVendor -->
+				<CustomBehavior File="ForceSetVendor" 
+								DoMail="True" 
+								DoRepair="True" 
+								DoSell="True" 
+								DoTrain="False" />
+								
+			</If>	<!-- If we are Alliance -->	
 			
-			<!-- XXXXXXXXXXXXXXXXXXXX -->
-			<CustomBehavior File="ForceSetVendor" 
-							DoMail="True" 
-							DoRepair="True" 
-							DoSell="True" 
-							DoTrain="False" />
-			
-			<!-- XXXXXXXXXXXXXXXXXXXX -->
+			<!-- If we are Horde -->					
+			<If Condition="Me.IsHorde">
+
+				<!-- Fizzix Blastbolt -->
+				<SetVendor>
+					<Vendors>
+						<Vendor Name="Fizzix Blastbolt" 
+								Entry="33594" 
+								Type="Repair" 
+								X="8553.434" Y="915.6268" Z="547.3928" />
+					</Vendors>
+				</SetVendor>						
+				<SetMailbox>
+					<Mailboxes>
+						<Mailbox X="8455.704" Y="685.0724" Z="547.2927" />
+					</Mailboxes>
+				</SetMailbox>
+				
+				<!-- ForceSetVendor -->
+				<CustomBehavior File="ForceSetVendor" 
+								DoMail="True" 
+								DoRepair="True" 
+								DoSell="True" 
+								DoTrain="False" />
+								
+			</If>	<!-- If we are Horde -->	
+				
+		</If>	<!-- Durability and free bag-slot check -->
+
+		<!-- If we have more than 35 empty bag slots and our durability is greater than 30% -->
+		<If Condition="(Me.FreeBagSlots &gt; 35) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+
+			<!-- Profile message - Flying to the Frozen Halls -->
 			<CustomBehavior File="Message" 
 							Text="Flying to the Frozen Halls." 
 							LogColor="Plum" />
 			
-			<!-- Fly to - XXXXXXXXXXXXXX -->					
+			<!-- Fly to - XXXXXXXX -->					
 			<CustomBehavior File="FlyTo" 
 							X="8586.275" Y="939.3901" Z="616.4142" />
 							
@@ -220,20 +244,8 @@
 			
 			<!-- Move to - zone out location -->
 			<MoveTo X="5595.78" Y="2013.27" Z="798.041" />
-				
-		</If>	<!-- Durability and free bag-slot check -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
 		
+		</If>	<!-- If we have more than 35 empty bag slots and our durability is greater than 30% -->
 		
 		<!-- If we are inside the Pit of Saron instance box -->
 		<If Condition="Me.X &gt; 5583 &amp;&amp; Me.X &lt; 5603 &amp;&amp; Me.Y &gt; 2001 &amp;&amp; Me.Y &lt; 2021.057" >
@@ -249,7 +261,7 @@
 							
 			<!-- Custom behavior - macro - set dungeon difficulty to normal -->					
 			<CustomBehavior File="RunMacro" 
-							Macro="/script SetDungeonDifficultyID(2)" /> 
+							Macro="/script SetDungeonDifficultyID(1)" /> 
 							
 			<!-- Profile message - I have reset Pit of Saron -->			
 			<CustomBehavior File="Message" 
@@ -306,15 +318,20 @@
 			<CustomBehavior File="Misc\InstanceTimer" 
 							Timer="Start" />							
 						
+			<!--Profile message	- Initiallizing a 12 minute and 30 second instance timer -->				
+			<CustomBehavior File="Message" 
+							Text="Initiallizing a 12 minute and 30 second instance timer." 
+							LogColor="Orange" />			
+						
 			<!-- Turn on autolooting -->
 			<CustomBehavior File="RunMacro" 
 							Macro="/script SetCVar('AutoLootDefault', 1)" 
 							NumOfTimes="1" 
 							WaitTime="1000" />
 
-			<!-- Profile message - Ahn'kahet: The Old Kingdom initialized -->			
+			<!-- Profile message - Pit of Saron initialized -->			
 			<CustomBehavior File="Message" 
-							Text="Ahn'kahet: The Old Kingdom initialized."  
+							Text="Pit of Saron initialized."  
 							LogColor="Fuchsia" />
 			
 			
@@ -395,7 +412,7 @@
 			
 
 			<!-- Move to - zone in location -->
-			<MoveTo X="432.568" Y="212.344" Z="528.7089" /> 
+			<MoveTo X="432.568" Y="212.344" Z="528.7089" />
 			
 			<!-- Instance timer check if we didn't repair -->
 			<CustomBehavior File="Misc\InstanceTimer" 
