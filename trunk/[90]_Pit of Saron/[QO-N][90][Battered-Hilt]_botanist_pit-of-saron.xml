@@ -217,33 +217,38 @@
 		<!-- If we have more than 35 empty bag slots and our durability is greater than 30% -->
 		<If Condition="(Me.FreeBagSlots &gt; 35) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
 
-			<!-- Profile message - Flying to the Frozen Halls -->
-			<CustomBehavior File="Message" 
-							Text="Flying to the Frozen Halls." 
-							LogColor="Plum" />
-			
-			<!-- Fly to - XXXXXXXX -->					
-			<CustomBehavior File="FlyTo" 
-							X="8586.275" Y="939.3901" Z="616.4142" />
-							
-			<!-- Move to - last peak before ICC -->				
-			<CustomBehavior File="MyCTM" 
-							X="6050.875" Y="1752.029" Z="855.2743" />
-			
-			<!-- Fly to - Ice Crown Citadel hover point -->
-			<CustomBehavior File="FlyTo" 
-							X="5961.686" Y="2153.792" Z="716.7491" />
-			
-			<!-- Move to - Frozen Halls point above the entrance to the Frozen Throne -->
-			<CustomBehavior File="MyCTM" 
-							X="5790.766" Y="2254.771" Z="888.5391" />
-			
-			<!-- CTM to - land at the entrance to the Frozen Throne -->
-			<CustomBehavior File="MyCTM" 
-							X="5692.304" Y="2159.46" Z="798.1241" />
-			
-			<!-- Move to - zone out location -->
-			<MoveTo X="5595.78" Y="2013.27" Z="798.041" />
+			<!-- If we are not inside the Pit of Saron instance box -->
+			<If Condition="Me.X &lt; 5583 || Me.X &gt; 5603 || Me.Y &lt; 2001 || Me.Y &gt; 2021.057" >
+		
+				<!-- Profile message - Flying to the Frozen Halls -->
+				<CustomBehavior File="Message" 
+								Text="Flying to the Frozen Halls." 
+								LogColor="Plum" />
+				
+				<!-- Fly to - XXXXXXXX -->					
+				<CustomBehavior File="FlyTo" 
+								X="8586.275" Y="939.3901" Z="616.4142" />
+								
+				<!-- Move to - last peak before ICC -->				
+				<CustomBehavior File="MyCTM" 
+								X="6050.875" Y="1752.029" Z="855.2743" />
+				
+				<!-- Fly to - Ice Crown Citadel hover point -->
+				<CustomBehavior File="FlyTo" 
+								X="5961.686" Y="2153.792" Z="716.7491" />
+				
+				<!-- Move to - Frozen Halls point above the entrance to the Frozen Throne -->
+				<CustomBehavior File="MyCTM" 
+								X="5790.766" Y="2254.771" Z="888.5391" />
+				
+				<!-- CTM to - land at the entrance to the Frozen Throne -->
+				<CustomBehavior File="MyCTM" 
+								X="5692.304" Y="2159.46" Z="798.1241" />
+				
+				<!-- Move to - zone out location -->
+				<MoveTo X="5595.78" Y="2013.27" Z="798.041" />
+				
+			</If>	<!-- If we are not inside the Pit of Saron instance box -->
 		
 		</If>	<!-- If we have more than 35 empty bag slots and our durability is greater than 30% -->
 		
