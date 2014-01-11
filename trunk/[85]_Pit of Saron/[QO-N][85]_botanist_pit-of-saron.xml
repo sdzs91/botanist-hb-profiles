@@ -693,7 +693,7 @@
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
 			
-			<MoveTo X="1054.091" Y="116.8946" Z="628.1563" />
+			<MoveTo X="1059.558" Y="107.6961" Z="629.2661" />
 
 			<!-- Wait timer - wait 3 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
@@ -703,7 +703,7 @@
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
 			
-			<MoveTo X="1021.723" Y="161.5104" Z="628.1563" />
+			<MoveTo X="1059.558" Y="107.6961" Z="629.2661" />
 			
 			<!-- Forces kill of Scourgelord Tyrannus -->
 			<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
@@ -717,30 +717,41 @@
 				</Safespots>
 			</CustomBehavior>
 			
-			<!-- Wait timer - wait 3 seconds - delay -->
+			<!-- Move to - Jaina -->
+			<MoveTo X="1067.93" Y="88.37322" Z="631.4492" />
+			
+			<!-- Wait timer - wait 30 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
+							WaitTime="30000" />
+							
 							
 							
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
 			
+			
+			<!-- Move to - jump location -->
 			<MoveTo X="938.6212" Y="180.8733" Z="628.1667" />
 			
-			<!-- CTM to - align our target macro -->
+			<!-- CTM to - jump -->
 			<CustomBehavior File="MyCTM"
 							X="895.9464" Y="177.9194" Z="562.7153" />
 			
+			<!-- Move to - eat food location -->
 			<MoveTo X="898.6442" Y="169.9752" Z="563.6775" />
 
 			<!-- Wait timer - wait 15 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="15000" />
 			
-			<!-- CTM to - align our target macro -->
+			<!-- CTM to - 2nd jump -->
 			<CustomBehavior File="MyCTM"
 							X="870.3493" Y="141.4269" Z="510.3929" />
 
+			<!-- Wait timer - wait 15 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="15000" />				
+							
 			<!-- Move to - zone in location -->
 			<MoveTo X="432.568" Y="212.344" Z="528.7089" /> 
 			
