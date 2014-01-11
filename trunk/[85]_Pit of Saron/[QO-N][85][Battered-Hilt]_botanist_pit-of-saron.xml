@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][85]_botanist_pit-of-saron</Name>
+	<Name>[QO-N][85][Battered-Hilt]_botanist_pit-of-saron</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -510,8 +510,8 @@
 			<!--Profile message	- Initiallizing a 12 minute and 30 second instance timer -->				
 			<CustomBehavior File="Message" 
 							Text="Initiallizing a 12 minute and 30 second instance timer." 
-							LogColor="Orange" />
-							
+							LogColor="Orange" />			
+						
 			<!-- Turn on autolooting -->
 			<CustomBehavior File="RunMacro" 
 							Macro="/script SetCVar('AutoLootDefault', 1)" 
@@ -530,7 +530,9 @@
 			
 			
 			<MoveTo X="503.9032" Y="202.8421" Z="528.7089" />
+			
 			<MoveTo X="501.0548" Y="241.8979" Z="528.7083" />
+			
 			<MoveTo X="597.8208" Y="274.5186" Z="506.1147" />
 			<MoveTo X="564.2429" Y="313.8267" Z="509.5386" />
 			<MoveTo X="628.8962" Y="331.616" Z="511.8988" />
@@ -539,10 +541,6 @@
 			<MoveTo X="619.3526" Y="213.0474" Z="507.2346" />
 			<MoveTo X="652.0519" Y="211.0064" Z="507.6022" />
 			<MoveTo X="714.0215" Y="185.6643" Z="512.3255" />
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
 							
 
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -555,12 +553,8 @@
 			<MoveTo X="585.6143" Y="159.4981" Z="510.2337" />
 			<MoveTo X="559.4708" Y="142.9642" Z="516.0651" />
 			<MoveTo X="549.5168" Y="77.31388" Z="526.1061" />
+						
 			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />				
-			
-
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
 			
@@ -571,48 +565,16 @@
 			<MoveTo X="621.3756" Y="79.37693" Z="512.4171" />
 			<MoveTo X="614.4464" Y="28.27111" Z="512.9081" />
 			<MoveTo X="627.027" Y="-25.65667" Z="513.8214" />
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />			
+						
 			
 			
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
 			<MoveTo X="683.4432" Y="-97.61732" Z="513.7358" />
 			
-			<MoveTo X="646.5347" Y="-120.1576" Z="513.5201" />
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />			
+			<MoveTo X="646.5347" Y="-120.1576" Z="513.5201" />			
 			
 			
-			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
-			
-			
-			<MoveTo X="695.326" Y="-155.7375" Z="528.0613" />
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
-							
-			<!-- Forces kill of Forgemaster Garfrost -->
-			<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-							EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="36494"
-							EventX="681.6887" EventY="-202.6112" EventZ="526.7175"
-							MoveOutOfGroundEffectAuraId1="111111"
-							MoveAwayFromMobCastingSpellId1="111111"
-							MoveAwayFromMobWithAuraId1="111111">
-				<Safespots>
-					<Hotspot X="681.6887" Y="-202.6112" Z="526.7175" />
-				</Safespots>
-			</CustomBehavior>	
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
-							
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
 			
@@ -622,10 +584,6 @@
 			<MoveTo X="786.0978" Y="-24.94733" Z="508.3118" />
 			<MoveTo X="827.8647" Y="3.969784" Z="509.7711" />
 			<MoveTo X="844.842" Y="-24.3854" Z="509.2504" />
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
 			
 			
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -637,112 +595,13 @@
 			<MoveTo X="803.0032" Y="84.43682" Z="509.5214" />
 			<MoveTo X="838.9632" Y="109.2633" Z="509.9375" />
 			<MoveTo X="812.3692" Y="122.604" Z="509.2249" />
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />			
-			
+					
 			
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
-			
-			<!-- Forces kill of Ick -->
-			<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-							EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="36476"
-							EventX="852.8489" EventY="123.5278" EventZ="509.946"
-							MoveOutOfGroundEffectAuraId1="111111"
-							MoveAwayFromMobCastingSpellId1="111111"
-							MoveAwayFromMobWithAuraId1="111111">
-				<Safespots>
-					<Hotspot X="852.8489" Y="123.5278" Z="509.946" />
-				</Safespots>
-			</CustomBehavior>	
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
-			
-			
-			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
-			
-			
-			<MoveTo X="848.2501" Y="26.29651" Z="510.7635" />
-			
-			<!-- Wait timer - wait 15 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="15000" />
-
-			<MoveTo X="916.7297" Y="78.69077" Z="555.1337" />
-			<MoveTo X="941.1301" Y="19.51259" Z="574.6401" />
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
-							
-							
-			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
-			
-			
-			<MoveTo X="927.0947" Y="-30.69282" Z="588.7007" />
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
-			
-			
-			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
-			
-			
-			<MoveTo X="1054.091" Y="116.8946" Z="628.1563" />
-
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
-			
-			
-			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
-			
-			
-			<MoveTo X="1021.723" Y="161.5104" Z="628.1563" />
-			
-			<!-- Forces kill of Scourgelord Tyrannus -->
-			<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-							EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="36658"
-							EventX="1040.345" EventY="129.5788" EventZ="628.1564"
-							MoveOutOfGroundEffectAuraId1="111111"
-							MoveAwayFromMobCastingSpellId1="111111"
-							MoveAwayFromMobWithAuraId1="111111">
-				<Safespots>
-					<Hotspot X="1040.345" Y="129.5788" Z="628.1564" />
-				</Safespots>
-			</CustomBehavior>
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
-							
-							
-			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
-			
-			
-			<MoveTo X="938.6212" Y="180.8733" Z="628.1667" />
-			
-			<!-- CTM to - align our target macro -->
-			<CustomBehavior File="MyCTM"
-							X="895.9464" Y="177.9194" Z="562.7153" />
-			
-			<MoveTo X="898.6442" Y="169.9752" Z="563.6775" />
-
-			<!-- Wait timer - wait 15 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="15000" />
-			
-			<!-- CTM to - align our target macro -->
-			<CustomBehavior File="MyCTM"
-							X="870.3493" Y="141.4269" Z="510.3929" />
 
 			<!-- Move to - zone in location -->
-			<MoveTo X="432.568" Y="212.344" Z="528.7089" /> 
+			<MoveTo X="432.568" Y="212.344" Z="528.7089" />
 			
 			<!-- Instance timer check if we didn't repair -->
 			<CustomBehavior File="Misc\InstanceTimer" 
