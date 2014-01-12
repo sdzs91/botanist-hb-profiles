@@ -640,7 +640,31 @@
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
 			
-			<MoveTo X="1054.091" Y="116.8946" Z="628.1563" />
+			<!-- Move to - midway -->
+			<MoveTo X="1053.958" Y="-93.05754" Z="632.7762" />
+			
+			<!-- Profile message - Enabling combat -->
+			<CustomBehavior File="Message" 
+							Text="Enabling combat." 
+							LogColor="Gold" />
+
+			<!-- enable combat -->
+			<EnableBehavior Name="Combat" />
+			
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+			
+			<!-- Profile message - Disabling combat -->
+			<CustomBehavior File="Message" 
+								Text="Disabling combat." 
+								LogColor="Gold" />
+			
+			<!-- DisableBehavior - Combat -->
+			<DisableBehavior Name="Combat" />
+
+			<!-- Move to - exit of the cave -->
+			<MoveTo X="1059.137" Y="108.2721" Z="629.1281" />
 			
 			<!-- Profile message - Enabling combat -->
 			<CustomBehavior File="Message" 
@@ -658,8 +682,9 @@
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
 			
-			<MoveTo X="1021.723" Y="161.5104" Z="628.1563" />
-			
+			<!-- Move to - Scourgelord Tyrannus -->
+			<MoveTo X="1015.987" Y="170.4955" Z="628.1563" />
+				
 			<!-- Forces kill of Scourgelord Tyrannus -->
 			<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 							EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="36658"
@@ -672,9 +697,10 @@
 				</Safespots>
 			</CustomBehavior>
 			
-			<!-- Wait timer - wait 30 seconds - delay -->
+
+			<!-- Wait timer - wait 40 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
-							WaitTime="30000" />
+							WaitTime="40000" />
 			
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			

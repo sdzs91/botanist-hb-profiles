@@ -689,12 +689,52 @@
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="3000" />
 			
+			<!-- Profile message - Disabling combat -->
+			<CustomBehavior File="Message" 
+								Text="Disabling combat." 
+								LogColor="Gold" />
+			
+			<!-- DisableBehavior - Combat -->
+			<DisableBehavior Name="Combat" />
+			
 			
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
 			
-			<MoveTo X="1059.558" Y="107.6961" Z="629.2661" />
+			<!-- Move to - midway -->
+			<MoveTo X="1053.958" Y="-93.05754" Z="632.7762" />
+			
+			<!-- Profile message - Enabling combat -->
+			<CustomBehavior File="Message" 
+							Text="Enabling combat." 
+							LogColor="Gold" />
 
+			<!-- enable combat -->
+			<EnableBehavior Name="Combat" />
+			
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+			
+			<!-- Profile message - Disabling combat -->
+			<CustomBehavior File="Message" 
+								Text="Disabling combat." 
+								LogColor="Gold" />
+			
+			<!-- DisableBehavior - Combat -->
+			<DisableBehavior Name="Combat" />
+
+			<!-- Move to - exit of the cave -->
+			<MoveTo X="1059.137" Y="108.2721" Z="629.1281" />
+			
+			<!-- Profile message - Enabling combat -->
+			<CustomBehavior File="Message" 
+							Text="Enabling combat." 
+							LogColor="Gold" />
+
+			<!-- enable combat -->
+			<EnableBehavior Name="Combat" />
+			
 			<!-- Wait timer - wait 3 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="3000" />
@@ -703,8 +743,9 @@
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
 			
-			<MoveTo X="1059.558" Y="107.6961" Z="629.2661" />
-			
+			<!-- Move to - Scourgelord Tyrannus -->
+			<MoveTo X="1015.987" Y="170.4955" Z="628.1563" />
+				
 			<!-- Forces kill of Scourgelord Tyrannus -->
 			<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 							EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="36658"
@@ -717,40 +758,40 @@
 				</Safespots>
 			</CustomBehavior>
 			
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+			
 			<!-- Move to - Jaina -->
 			<MoveTo X="1067.93" Y="88.37322" Z="631.4492" />
 			
-			<!-- Wait timer - wait 30 seconds - delay -->
+			<!-- Wait timer - wait 40 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
-							WaitTime="30000" />
+							WaitTime="40000" />
 							
 							
 							
 			<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 			
 			
+			<!-- Profile message - Disabling combat -->
+			<CustomBehavior File="Message" 
+								Text="Disabling combat." 
+								LogColor="Gold" />
 			
-			<!-- Move to - jump location -->
-			<MoveTo X="938.6212" Y="180.8733" Z="628.1667" />
+			<!-- DisableBehavior - Combat -->
+			<DisableBehavior Name="Combat" />
+							
+			<!-- Move to - cave exit -->
+			<MoveTo X="936.2067" Y="-76.06726" Z="592.2919" /> 				
+							
+			<!-- Profile message - Enabling combat -->
+			<CustomBehavior File="Message" 
+								Text="Enabling combat." 
+								LogColor="Gold" />
 			
-			<!-- CTM to - jump -->
-			<CustomBehavior File="MyCTM"
-							X="895.9464" Y="177.9194" Z="562.7153" />
-			
-			<!-- Move to - eat food location -->
-			<MoveTo X="898.6442" Y="169.9752" Z="563.6775" />
-
-			<!-- Wait timer - wait 15 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="15000" />
-			
-			<!-- CTM to - 2nd jump -->
-			<CustomBehavior File="MyCTM"
-							X="870.3493" Y="141.4269" Z="510.3929" />
-
-			<!-- Wait timer - wait 15 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="15000" />				
+			<!-- EnableBehavior - Combat -->	
+			<EnableBehavior Name="Combat" />				
 							
 			<!-- Move to - zone in location -->
 			<MoveTo X="432.568" Y="212.344" Z="528.7089" /> 
