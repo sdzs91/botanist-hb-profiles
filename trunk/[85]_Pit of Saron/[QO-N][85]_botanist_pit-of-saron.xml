@@ -708,12 +708,12 @@
 			<!-- Forces kill of Scourgelord Tyrannus -->
 			<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 							EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="36658"
-							EventX="1040.345" EventY="129.5788" EventZ="628.1564"
+							EventX="1017.205" EventY="88.37322" EventZ="631.4492"
 							MoveOutOfGroundEffectAuraId1="111111"
 							MoveAwayFromMobCastingSpellId1="111111"
 							MoveAwayFromMobWithAuraId1="111111">
 				<Safespots>
-					<Hotspot X="1040.345" Y="129.5788" Z="628.1564" />
+					<Hotspot X="1017.205" Y="167.4195" Z="628.1563" />
 				</Safespots>
 			</CustomBehavior>
 			
