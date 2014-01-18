@@ -1030,7 +1030,7 @@
 					<EnableBehavior Name="Pull" />
 		
 					<!-- Kill Altairus -->
-					<Move To X="-1192.2" Y="54.16493" Z="744.2992" />
+					<MoveTo X="-1192.2" Y="54.16493" Z="744.2992" />
 
 					<!-- Custom behavior -  Wait timer- 10 second loot delay -->
 					<CustomBehavior File="WaitTimer" 
