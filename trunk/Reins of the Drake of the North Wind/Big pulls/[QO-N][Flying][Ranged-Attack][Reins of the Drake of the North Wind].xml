@@ -413,19 +413,11 @@
 					<RunTo X="-1244.977" Y="76.2642" Z="731.8144" />
 									
 					<!-- Kill Altairus -->
-					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-									EventCompleteWhen="SpecificMobsDead" 
-									EventCompleteDeadMobId="43873"
-									EventX="-1192.2" 
-									EventY="54.16493" 
-									EventZ="744.2992"
-									MoveOutOfGroundEffectAuraId1="111111"
-									MoveAwayFromMobCastingSpellId1="111111"
-									MoveAwayFromMobWithAuraId1="111111">
-						<Safespots>
-							<Hotspot X="-1192.2" Y="54.16493" Z="744.2992" />
-						</Safespots>
-					</CustomBehavior>
+					<Move To X="-1192.2" Y="54.16493" Z="744.2992" />
+
+					<!-- Custom behavior -  Wait timer- 10 second loot delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="10000" />	
 									
 					<!-- Run to the top of the platform -->
 					<RunTo X="-1082.505" Y="28.14781" Z="705.6274" />					
