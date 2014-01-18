@@ -442,8 +442,9 @@
 	
 				</If><!-- If we are inside Vortex Pinnacle and have checked our reset -->
 						
-				<!--The Vortex Pinnacle -->
+				<!-- The Vortex Pinnacle -->
 				<If Condition="Me.ZoneId == 5035">
+				
 					<CustomBehavior File="Message" 
 									Text="The Vortex Pinnacle detected. Running out."
 									LogColor="Fuchsia" />
@@ -536,6 +537,7 @@
 										DoTrain="False" />
 					
 					</If>	<!-- If we have hearthed to Uldum -->	
+					
 				</If> <!-- Repair if necessary -->
 				
 				<!-- If we aren't in the box -->
