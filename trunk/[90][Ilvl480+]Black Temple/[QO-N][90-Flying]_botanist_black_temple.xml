@@ -1130,88 +1130,67 @@
 				<!-- Move to - safe ranged attack -->		
 				<MoveTo X="709.156" Y="273.4322" Z="277.4417" />
 						
-				<!-- While our Z < 300 -->
-				<While Condition="Me.Z &lt; 300" >
-				
-					<!-- Macro - Clear target -->					
-					<CustomBehavior File="RunMacro" 
-									Macro="/cleartarget" 
-									NumOfTimes="1" 
-									WaitTime="0"/>
 
-					<!-- Custom behavior - Runmacro - target Gathios the Shatterer-->	
-					<CustomBehavior File="RunMacro" 
-									Macro="/target Gathios the Shatterer" />				
-									
-					<!-- If our target is Gathios the Shatterer -->
-					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 22949)">				
+				<!-- Macro - Clear target -->					
+				<CustomBehavior File="RunMacro" 
+								Macro="/cleartarget" 
+								NumOfTimes="1" 
+								WaitTime="0"/>
 
-						<!-- Profile message  - Engaging Gathios the Shatterer -->	
+				<!-- Custom behavior - Runmacro - target Gathios the Shatterer-->	
+				<CustomBehavior File="RunMacro" 
+								Macro="/target Gathios the Shatterer" />				
+	
+				<!-- If our target is Gathios the Shatterer -->
+				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 22949)">				
+
+					<!-- Profile message  - Engaging Gathios the Shatterer -->	
+					<CustomBehavior File="Message" 
+									Text="Engaging Gathios the Shatterer." 
+									LogColor="Cyan" />
+					
+					<CustomBehavior File="KillUntilComplete" 
+									MobId="22949" 
+									X="700.7393" Y="302.7222" Z="277.4431" />	
+								
+					<Else>
+					
+						<!-- Profile message  - Illidari Council is not available -->	
 						<CustomBehavior File="Message" 
-										Text="Engaging Gathios the Shatterer." 
+										Text="Illidari Council is not available." 
 										LogColor="Cyan" />
+										
+						<!-- Profile message - Disabling 'Pull' behavior -->
+						<CustomBehavior File="Message" 
+										Text="Disabling 'Pull' behavior."
+										LogColor="Plum" />
 						
-						<!-- Move to - Gathios the Shatterer -->		
-						<MoveTo X="700.7393" Y="302.7222" Z="277.4431" />	
-									
-						<Else>
-						
-							<!-- Profile message  - Gathios the Shatterer is not available. Waiting 25 seconds to make sure all Illidari Council members are dead -->	
-							<CustomBehavior File="Message" 
-											Text="Gathios the Shatterer is not available. Waiting 25 seconds to make sure all Illidari Council members are dead." 
-											LogColor="Cyan" />
-				
-							<!-- Profile message - Enabling 'Pull' behavior -->
-							<CustomBehavior File="Message" 
-											Text="Enabling 'Pull' behavior."
-											LogColor="Plum" />
-							
-							<!-- EnableBehavior - Pull -->
-							<EnableBehavior Name="Pull" />
-							
-							<!-- Profile message - Enabling combat -->
-							<CustomBehavior File="Message" 
-												Text="Enabling combat." 
-												LogColor="Gold" />
+						<!-- DisableBehavior - Pull -->
+						<DisableBehavior Name="Pull" />	
+										
+					</Else>				
+								
+				</If>	<!-- If our target is Gathios the Shatterer -->				
 
-							<!-- enable combat -->
-							<EnableBehavior Name="Combat" />
-				
-							<!-- Custom behavior waitTimer - 25 second delay -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="25000" />
-											
-							<!-- Profile message - Disabling 'Pull' behavior -->
-							<CustomBehavior File="Message" 
-											Text="Disabling 'Pull' behavior."
-											LogColor="Plum" />
-							
-							<!-- DisableBehavior - Pull -->
-							<DisableBehavior Name="Pull" />	
-
-							<!-- Move to - top of the ramp to break the while loop -->	
-							<MoveTo X="747.9736" Y="308.8861" Z="311.9843" />
-
-							<!-- Custom behavior waitTimer - 5 second delay -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="5000" />
-											
-						</Else>				
-									
-					</If>	<!-- If our target is Lady Malande -->				
-				
-				</While>	<!-- While our Z < 300 -->
-				
 				
 				
 				<!-- ************************************************************* -->
 				
 				
+				
+				<!-- Profile message - Waiting 15 seconds for Akama -->
+				<CustomBehavior File="Message" 
+								Text="Waiting 15 seconds for Akama." 
+								LogColor="Plum" />
+								
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="15000" />
+								
 				<!-- Profile message - Moving to Akama -->
 				<CustomBehavior File="Message" 
 								Text="Moving to Akama." 
 								LogColor="Plum" />
-				
+
 				<CustomBehavior File="InteractWith" 
 								ObjectType="Npc"
 								MobId="23089" 
@@ -1222,16 +1201,18 @@
 				
 				<!-- ************************************************************* -->
 				 
-				 			
+				
+				<!-- Move to -top of the ramp-->				
 				<MoveTo X="754.4705" Y="304.6359" Z="312.1339"  />
 				
-				<!-- Profile message - Waiting for Akama -->
+				<!-- Profile message - Waiting 80 seconds for Akama -->
 				<CustomBehavior File="Message" 
-								Text="Waiting for Akama." 
+								Text="Waiting 80 seconds for Akama." 
 								LogColor="Plum" />
 								
+				<!-- Custom behavior waitTimer - 80 second delay -->				
 				<CustomBehavior File="WaitTimer" 
-								WaitTime="60000" />
+								WaitTime="80000" />
 				
 				
 				<!-- ************************************************************* -->
@@ -1266,18 +1247,9 @@
 				<!-- Move to - Illidan Stormrage -->
 				<MoveTo X="705.7319" Y="304.9877" Z="353.8415" />
 				
+				<!-- Custom behavior waitTimer - 120 second delay -->
 				<CustomBehavior File="WaitTimer" 
-								WaitTime="50000" />
-				
-				<!-- Custom behavior - Misc\TargetOfInterest - Illidan Stormrage -->
-				<CustomBehavior File="Misc\TargetOfInterest" 
-								BossId="22917" 
-								AddId1="23498" 
-								AddId2="22997" />
-								
-				<!-- Custom behavior waitTimer - 3 second delay -->
-				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />
+								WaitTime="1200000" />
 
 				<!-- Profile message - Disabling 'Pull' behavior -->
 				<CustomBehavior File="Message" 
@@ -1288,7 +1260,9 @@
 				<DisableBehavior Name="Pull" />				
 
 
+				
 				<!-- ************************************************************* -->
+
 
 								
 				<!-- Move to - zone in location -->
