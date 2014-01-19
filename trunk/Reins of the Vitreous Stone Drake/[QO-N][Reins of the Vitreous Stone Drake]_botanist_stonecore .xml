@@ -66,6 +66,27 @@
 						UseMount="True" 
 						UseRandomMount="False" />
 						
+		<If Condition="Me.MapId == 0" > 
+			<CustomBehavior File="Message" Text="I'm am somewhere in Eastern Kingdoms. I am flying to the Deepholm portal in Stormwind" LogColor="Lime" />
+			<CustomBehavior File="FlyTo" X="-8219.944" Y="448.447" Z="117.6114" DestName="Portal to Deepholme" />							
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="Message" Text="Taking the portal to Deepholme." LogColor="Lime" />
+			<CustomBehavior File="InteractWith" MobId="207693" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8223.319" Y="451.182281" Z="117.4883" />
+			<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+				<If Condition="Me.ZoneId == 5042" >
+					<CustomBehavior File="Message" Text="I have ported to Deepholm." LogColor="Lime" />
+				</If>	
+			<CustomBehavior File="ForcedMount" MountType="Ground" />
+				
+		</If>				
+						
+						
+						
+						
+						
+						
+						
+						
 		<While Condition="true" >
 
 			<!-- If we are in Stonecore -->
@@ -86,18 +107,134 @@
 							
 			</If>	<!-- If we are in Stonecore -->
 		
+			<!-- If we are in Deepholm -->
+			<If Condition="Me.MapId == 646">
+		
+				<!-- Profile message - We are in Deepholm --> 
+				<CustomBehavior File="Message" 
+								Text="We are in Deepholm."
+								LogColor="Plum" />
+		
+				<!-- If are inside Temple of the Earth -->
+				<If Condition="Me.Y &gt; 408.4768 &amp;&amp; Me.Y &lt; 649.2817 &amp;&amp; Me.X &gt; 964.1465 &amp;&amp; Me.X &lt; 1112.985 &amp;&amp; Me.Z &lt; 0" >
+				
+					<!-- Profile message - We are inside Temple of the Earth --> 
+					<CustomBehavior File="Message" 
+									Text="We are inside Temple of the Earth."
+									LogColor="Plum" />
+		
+					<!-- Move to - outside Temple of the Earth -->
+					<MoveTo X="847.6309" Y="497.956" Z="-63.26773" />
+					
+				</If>	<!-- If are inside Temple of the Eart -->
+				
+				<!-- If we are not in the Stonecore instance box -->
+				<If Condition="Me.Y &lt; 620.9702 || Me.Y &gt; 678.2952 || Me.X &lt; 987.7558 || Me.X &gt; 1062.086 || (Me.Z &lt; 150 &amp;&amp; Me.Z &gt; 160)" >	
+		
+					<!-- Profile message - Moving to Stonecore --> 
+					<CustomBehavior File="Message" 
+									Text="Moving to Stonecore."
+									LogColor="Plum" />
+					
+					<CustomBehavior File="FlyTo" X="773.7523" Y="596.1415" Z="43.54036" />
+
+					<CustomBehavior File="FlyTo" X="1027.767" Y="739.9456" Z="199.1932" />
+					
+					<CustomBehavior File="MyCTM" X="1026.425" Y="667.5716" Z="164.4908" /> 
+					
+					<CustomBehavior File="MyCTM" X="1029.969" Y="608.4313" Z="166.7135" />
+					
+					<!-- Wait timer - wait 10 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="10000" />
+
+					<!-- Move to - zone in location -->
+					<MoveTo X="851.052" Y="986.474" Z="317.2723" />
+
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" 
+									X="815.4514" Y="986.9715" Z="318.9995" />
+					
+					<!-- Move to - zone out location-->
+					<MoveTo X="1023.72" Y="644.747" Z="156.672" />				
+
+					<!-- Profile message - We have reached our destination --> 
+					<CustomBehavior File="Message" 
+									Text="We have reached our destination."
+									LogColor="Plum" />
+		
+				</If>	<!-- If we are not in the Stonecore instance box -->
+		
+			</If>	<!-- If we are in Deepholm -->
+
 			<!-- If we are in the Stonecore instance box -->
 			<If Condition="Me.Y &gt; 620.9702 &amp;&amp; Me.Y &lt; 678.2952 &amp;&amp; Me.X &gt; 987.7558 &amp;&amp; Me.X &lt; 1062.086 &amp;&amp; (Me.Z &gt; 150 &amp;&amp; Me.Z &lt; 160)" >	
+			
+				<!-- If our Hearthstone/Innkeepers Daughter is not set at Temple of the Earth -->				
+				<If Condition="Me.HearthstoneAreaId != 5303 ">
+			
+					<!-- Profile message - We have reached our destination --> 
+					<CustomBehavior File="Message" 
+									Text="Our Hearthstone/Innkeeper's Daughter isn't set to Temple of the Earth. Moving to Temple of the Earth."
+									LogColor="Plum" />
+			
+					<CustomBehavior File="FlyTo" 
+									X="840.5391" Y="492.2466" Z="-63.31997" />
+			
+					<CustomBehavior File="ForcedDismount" />
+					
+					<MoveTo X="1018.878" Y="545.7827" Z="-49.33431" />
+		
+					<CustomBehavior File="SetHearthstone" 
+									MobId="45300"  
+									X="1032.42" Y="542.142" Z="-49.32676" />
+
+					<!-- Move to - outside Temple of the Earth -->
+					<MoveTo X="847.6309" Y="497.956" Z="-63.26773" />
+					
+					<!-- Profile message - Moving to Stonecore --> 
+					<CustomBehavior File="Message" 
+									Text="Moving to Stonecore."
+									LogColor="Plum" />
+					
+					<CustomBehavior File="FlyTo" X="773.7523" Y="596.1415" Z="43.54036" />
+
+					<CustomBehavior File="FlyTo" X="1027.767" Y="739.9456" Z="199.1932" />
+					
+					<CustomBehavior File="MyCTM" X="1026.425" Y="667.5716" Z="164.4908" /> 
+					
+					<CustomBehavior File="MyCTM" X="1029.969" Y="608.4313" Z="166.7135" />
+					
+					<!-- Wait timer - wait 10 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="10000" />
+
+					<!-- Move to - zone in location -->
+					<MoveTo X="851.052" Y="986.474" Z="317.2723" />
+
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" 
+									X="815.4514" Y="986.9715" Z="318.9995" />
+					
+					<!-- Move to - zone out location-->
+					<MoveTo X="1023.72" Y="644.747" Z="156.672" />				
+
+					<!-- Profile message - We have reached our destination --> 
+					<CustomBehavior File="Message" 
+									Text="We have reached our destination."
+									LogColor="Plum" />
+
+				</If>	<!-- If our Hearthstone/Innkeepers Daughter is not set at Temple of the Earth -->
 			
 				<!-- Profile message - Portal detected nearby --> 
 				<CustomBehavior File="Message" 
 								Text="Portal detected nearby."
-								LogColor="Fuchsia" />	
+								LogColor="Plum" />	
 					
 				<!-- Profile message - Resetting the instance -->
 				<CustomBehavior File="Message" 
 								Text="Resetting the instance." 
-								LogColor="Fuchsia" />
+								LogColor="Plum" />
 				
 				<!-- Custom behavior - macro - reset the instance -->
 				<CustomBehavior File="RunMacro" 
@@ -110,7 +247,7 @@
 				<!-- Profile message - The instance has been reset -->
 				<CustomBehavior File="Message" 
 								Text="The instance has been reset." 
-								LogColor="Fuchsia" />
+								LogColor="Plum" />
 
 				<!-- While we didn't enter Stonecore -->
 				<While Condition="Me.MapId != 725">
@@ -125,7 +262,7 @@
 					<!-- Profile message - Waiting for the dungeon to load -->			
 					<CustomBehavior File="Message" 
 									Text="Waiting for the dungeon to load." 
-									LogColor="Fuchsia" />
+									LogColor="Plum" />
 								
 					<!-- Wait timer - wait 20-40 seconds -->			
 					<CustomBehavior File="WaitTimer" 
@@ -138,7 +275,7 @@
 						<!-- Profile message - We are instance locked, initiating loop procedures until we enter the instance -->
 						<CustomBehavior File="Message" 
 										Text="We are instance locked, initiating loop procedures until we enter the instance." 
-										LogColor="Fuchsia" />
+										LogColor="Plum" />
 										
 					</If>	<!-- If we are not in Stonecore -->
 					
@@ -177,7 +314,7 @@
 							
 				<CustomBehavior File="Message" 
 								Text="Stonecore initialized."  
-								LogColor="Fuchsia" />
+								LogColor="Plum" />
 			
 			
 				<!-- ************************************************************* Stonecore dungeon script ************************************************************************** -->
@@ -385,7 +522,7 @@
 							<SetVendor>
 								<Vendors>
 									<!-- Temple of the Earth Repair -->
-									<Vendor Name="Rixi "The Driller" 
+									<Vendor Name="Rixi 'The Driller' 
 											Bombdigger" 
 											Entry="45293" 
 											Type="Repair" 
@@ -427,7 +564,7 @@
 					<!-- Profile message - Exiting the instance so we can reset it -->
 					<CustomBehavior File="Message" 
 									Text="Exiting the instance so we can reset it."
-									LogColor="Fuchsia" />
+									LogColor="Plum" />
 					
 					<!-- Move to - zone in location -->
 					<MoveTo X="851.052" Y="986.474" Z="317.2723" />
