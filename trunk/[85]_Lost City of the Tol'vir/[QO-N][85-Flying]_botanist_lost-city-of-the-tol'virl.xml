@@ -488,6 +488,10 @@
 					<!-- Move to - zone in location -->
 					<MoveTo X="-10700.4" Y="-1312.69" Z="17.6029" />				
 									
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Check" />				
+									
 					<!-- Profile message - Waiting 3 seconds - Bag and durability check -->
 					<CustomBehavior File="Message" 
 									Text="Waiting 3 seconds - Bag and durability check."  
