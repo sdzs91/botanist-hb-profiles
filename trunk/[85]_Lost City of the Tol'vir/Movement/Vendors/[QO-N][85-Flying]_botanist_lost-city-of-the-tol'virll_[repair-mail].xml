@@ -64,7 +64,7 @@
 						UseRandomMount="False" />
 
 		<!-- If our level is => -->
-		<If Condition="Me.Level &gt;= 85">
+		<If Condition="Me.Level &gt;= 84">
 			
 			<!-- If we are inside Lost City of the Tol'vir -->
 			<If Condition="Me.MapId == 755">	

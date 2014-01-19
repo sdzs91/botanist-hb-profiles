@@ -63,7 +63,7 @@
 						UseRandomMount="False" />
 
 		<!-- If our level is => 85-->
-		<If Condition="Me.Level &gt;= 85">
+		<If Condition="Me.Level &gt;= 84">
 			
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >

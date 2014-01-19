@@ -48,7 +48,7 @@
 		<ClearMailbox />
 
 
-		<If Condition="Me.Level &gt;= 85">
+		<If Condition="Me.Level &gt;= 84">
 		
 		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
@@ -61,7 +61,7 @@
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
 							LootMobs="True"
-							LootRadius="25"
+							LootRadius="35"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
@@ -470,9 +470,53 @@
 									WaitTime="3000" />		
 
 									
-					<!-- @@@@@@@@@@@@@@@@@@@@ Exiting @@@@@@@@@@@@@@@@@@@@ -->
+					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
 													   
 					
+					
+					<!-- Move to - 13th group - Terrace of the Augurs -->
+					<MoveTo X="-11120.48" Y="-1405.849" Z="10.80721" />
+	
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+	
+					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
+													   
+					
+					<!-- Move to - 14th group - Terrace of the Augurs -->
+					<MoveTo X="-11156" Y="-1385.36" Z="10.8068" />
+	
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
+													   
+					
+					<!-- Move to - 14th group - Terrace of the Augurs -->
+					<MoveTo X="-11100.1" Y="-1360.74" Z="10.80748" />
+	
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
+													   
+					
+					<!-- Move to - 15th group - Terrace of the Augurs -->
+					<MoveTo X="-11014.6" Y="-1365.94" Z="10.80799" />
+	
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+	
+	
+					<!-- @@@@@@@@@@@@@@@@@@@@ Exiting @@@@@@@@@@@@@@@@@@@@ -->
+													   
 					
 					<!-- Move to - tigers - right of the exit -->
 					<MoveTo X="-10723.7" Y="-1351.58" Z="15.3538" />
@@ -487,10 +531,6 @@
 									
 					<!-- Move to - zone in location -->
 					<MoveTo X="-10700.4" Y="-1312.69" Z="17.6029" />				
-									
-					<!-- Instance timer check if we didn't repair -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />				
 									
 					<!-- Profile message - Waiting 3 seconds - Bag and durability check -->
 					<CustomBehavior File="Message" 

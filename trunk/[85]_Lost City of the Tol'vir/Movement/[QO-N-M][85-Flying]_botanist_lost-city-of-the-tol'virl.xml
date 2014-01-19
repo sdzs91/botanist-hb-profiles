@@ -45,7 +45,7 @@
 		<ClearMailbox />
 
 		<!-- Level check -->
-		<If Condition="Me.Level &gt;= 85">
+		<If Condition="Me.Level &gt;= 84">
 		
 		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
