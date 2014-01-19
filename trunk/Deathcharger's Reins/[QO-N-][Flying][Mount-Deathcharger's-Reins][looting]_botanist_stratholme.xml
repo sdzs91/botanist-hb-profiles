@@ -6,6 +6,7 @@
    
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>0</MinFreeBagSlots>
+	<TargetingDistance>1</TargetingDistance>
 	
 	<MailGrey>False</MailGrey>
 	<MailWhite>True</MailWhite>
@@ -53,22 +54,18 @@
 	
 	<QuestOrder>
 		
-	<CustomBehavior File="UserSettings" 
-					MountDistance="30"  
+	<CustomBehavior File="UserSettings"  
 					UseFlightPaths="True" 
 					LootMobs="True" 
 					SkinMobs="False" 
 					NinjaSkin="False" 
 					HarvestHerbs="False" 
 					HarvestMinerals="False" 
-					PullDistance="1" 
 					KillBetweenHotspots="True" 
 					RessAtSpiritHealers="False" 
-					FindVendorsAutomatically="True" 
 					LootRadius="10" 
 					LogoutForInactivity="True" />
 				
-		 
         <While Condition="true" >
 
 
