@@ -64,23 +64,81 @@
 						UseMount="True" 
 						UseRandomMount="False" />
 
-		<!-- Profile message - This portion has not been added yet -->
-		<CustomBehavior File="Message" 
-						Text="This portion has not been added yet."  
-						LogColor="Orange" />
-	
-		<!-- Wait timer - wait 3 seconds - delay -->
-		<CustomBehavior File="WaitTimer" 
-						WaitTime="3000" />
+		<!-- If we are Alliance -->
+		<If Condition="Me.IsAlliance">
+			
+			<!-- Profile message - We are Alliance -->
+			<CustomBehavior File="Message" 
+							Text="We are Alliance." 
+							LogColor="Cyan" />
+			
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+			
+			<!-- Load profile - Components\nothrend\[QO-A-M][60+][Flying]_stormwind -->
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Components\nothrend\[QO-A-M][60+][Flying]_stormwind" />
+			
+		</If>	<!-- If we are Alliance -->				
 						
-		<!-- Profile message - Stopping the bot -->
-		<CustomBehavior File="Message" 
-						Text="Stopping the bot."  
-						LogColor="Red" />				
 						
-		<!-- Custom behavior - Usersettings - StopBot -->				
-		<CustomBehavior File="UserSettings" 
-						StopBot="true" />
+						
+						
+						
+		<!-- If we are Horde -->
+		<If Condition="Me.IsHorde">
+			
+			<!-- Profile message - We are Horde -->
+			<CustomBehavior File="Message" 
+							Text="We are Horde." 
+							LogColor="Cyan" />
+			
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<!-- Profile message - This portion has not been added yet -->
+			<CustomBehavior File="Message" 
+							Text="This portion has not been added yet."  
+							LogColor="Orange" />
+		
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+							
+			<!-- Profile message - Stopping the bot -->
+			<CustomBehavior File="Message" 
+							Text="Stopping the bot."  
+							LogColor="Red" />				
+							
+			<!-- Custom behavior - Usersettings - StopBot -->				
+			<CustomBehavior File="UserSettings" 
+							StopBot="true" />
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<!-- Load profile - Components\eastern-kingdoms\[QO-H-M][90][Flying]_orgrimmar -->
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Components\eastern-kingdoms\[QO-H-M][90][Flying]_orgrimmar" />
+			
+		</If>	<!-- If we are Horde -->
 	
 	</QuestOrder>
 	

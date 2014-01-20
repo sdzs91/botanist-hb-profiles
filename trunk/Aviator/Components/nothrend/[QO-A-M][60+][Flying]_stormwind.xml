@@ -393,9 +393,9 @@
 		<!-- If we are at the Stormwind flight master -->
 		<If Condition="Me.X &gt; -8873 &amp;&amp; Me.X &lt; -8807 &amp;&amp; Me.Y &gt; 438 &amp;&amp; Me.Y &lt; 560" >
 		
-			<!-- Load profile - Staging Locations\[QO-A-M][60+][Flying]_eastern-kingdoms -->
+			<!-- Load profile - Staging Locations\[QO-A-M][68+][Flying]_northrend -->
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="Staging Locations\[QO-A-M][60+][Flying]_eastern-kingdoms" />
+							ProfileName="Staging Locations\[QO-A-M][68+][Flying]_northrend" />
 		
 		</If>	<!-- If we are at the Stormwind flight master -->
 
