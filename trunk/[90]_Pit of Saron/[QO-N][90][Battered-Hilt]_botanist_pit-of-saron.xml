@@ -266,7 +266,7 @@
 							
 			<!-- Custom behavior - macro - set dungeon difficulty to normal -->					
 			<CustomBehavior File="RunMacro" 
-							Macro="/script SetDungeonDifficultyID(1)" /> 
+							Macro="/script SetDungeonDifficultyID(2)" /> 
 							
 			<!-- Profile message - I have reset Pit of Saron -->			
 			<CustomBehavior File="Message" 
