@@ -1,5 +1,5 @@
 <HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-H-M][90][Flying]_pandaria</Name>
+	<Name>[QO-A-M][90][Flying]_pandaria</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -81,9 +81,9 @@
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="3000" />				
 							
-			<!-- Profile message - Moving to Pandaria portal -->
+			<!-- Profile message - Moving to the Pandaria portal -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Pandaria portal."  
+							Text="Moving to the Pandaria portal."  
 							LogColor="Cyan" />				
 							
 			<!-- Move to - Pandaria portal - hover point -->				
