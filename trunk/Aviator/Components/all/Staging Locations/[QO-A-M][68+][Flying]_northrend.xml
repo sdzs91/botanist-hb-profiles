@@ -646,24 +646,15 @@
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
 			
-			<!-- Profile message - This portion of the profile has completed -->
-			<CustomBehavior File="Message" 
-							Text="This portion of the profile has completed."  
-							LogColor="Orange" />
-		
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
-							
-			<!-- Profile message - Stopping the bot -->
-			<CustomBehavior File="Message" 
-							Text="Stopping the bot."  
-							LogColor="Red" />				
-							
-			<!-- Custom behavior - Usersettings - StopBot -->				
-			<CustomBehavior File="UserSettings" 
-							StopBot="true" />
-
+			<!-- If we are at the Stormwind flight master -->
+			<If Condition="Me.X &gt; -8873 &amp;&amp; Me.X &lt; -8807 &amp;&amp; Me.Y &gt; 438 &amp;&amp; Me.Y &lt; 560" >
+			
+				<!-- Load profile - [QO-A-M][90][Flying]_pandaria -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="[QO-A-M][90][Flying]_pandaria" />
+			
+			</If>	<!-- If we are at the Stormwind flight master -->
+			
 		</If>	<!-- If we are in Nothrend -->	
 		
 	</QuestOrder>

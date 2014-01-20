@@ -1,0 +1,433 @@
+<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H-M][90][Flying]_pandaria</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		
+	</ProtectedItems>
+	
+	<ClearVendor />
+	<ClearMailbox />
+		
+	<QuestOrder>
+				
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						AdvancedSettingsMode="True"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="True"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootMobs="True"
+						LootRadius="35"
+						MountName=""
+						NinjaSkin="False"
+						ProfileDebuggingMode="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />		
+				
+		<!-- Profile message - Initializing Pandaria flight path mechanics -->
+		<CustomBehavior File="Message" 
+						Text="Initializing Pandaria flight path mechanics."  
+						LogColor="Orange" />
+						
+		<!-- If we are in Stormwind -->
+		<If Condition="Me.ZoneId == 1519" >
+		
+			<!-- Profile message - We are in Eastern Kingdoms -->
+			<CustomBehavior File="Message" 
+							Text="We are in Eastern Kingdoms"  
+							LogColor="Orange" />
+							
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />				
+							
+			<!-- Profile message - Moving to Pandaria portal -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Pandaria portal."  
+							LogColor="Cyan" />				
+							
+			<!-- Move to - Pandaria portal - hover point -->				
+			<CustomBehavior File="FlyTo" 
+							X="-8240.943" Y="528.4667" Z="154.3051" />				
+							
+			<!-- CTM to - grounding at the Pandaria portal -->
+			<CustomBehavior File="MyCTM" 
+							X="-8198.1" Y="527.0742" Z="116.9559" />	
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+			
+			<!-- Interact with the teleporter -->
+			<CustomBehavior File="InteractWith" 
+							MobId="215457" />
+											
+			<!-- Custom behavior - WaitTimer - wait 15 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="15000" />
+			
+		</If>	<!-- If we are in Stormwind -->		
+			
+		<!-- If we are in Pandaria -->
+		<If Condition="Me.MapId == 870">
+	
+		
+			
+			<!-- ************************************************** Moving to Pearlfin Village ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Pearlfin Village flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Pearlfin Village flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Pearlfin Village flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="-186.097" Y="-2594.61" Z="0.944614" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+
+			
+			<!-- ************************************************** Moving to Jade Temple Grounds ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Jade Temple Grounds flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Pearlfin Village flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Jade Temple Grounds flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="781.7694" Y="-2359.108" Z="120.7303" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			<!-- ************************************************** Moving to Serpemt's Overlook ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Serpemt's Overlook flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Serpemt's Overlook flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Serpemt's Overlook flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="465.856" Y="-1558.56" Z="154.8866" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+							
+							
+			<!-- ************************************************** Moving to Dawn's Blossom ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Dawn's Blossom flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Dawn's Blossome flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Dawn's Blossom flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="1504.24" Y="-1828.234" Z="246.199" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+							
+							
+			<!-- ************************************************** Moving to Arboretum ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to the Arboretume flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Arboretum flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Arboretum flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="1598.095" Y="-2533.719" Z="152.2121" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+							
+							
+			<!-- ************************************************** Moving to Sri-la Village ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Sri-la Village flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Sri-la Village flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Sri-la Village flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="2548.906" Y="-2418.792" Z="24.07846" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+							
+							
+			<!-- ************************************************** Moving to Emperor's Omen ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Emperor's Omen flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Emperor's Omen flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Emperor's Omen flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="2400.154" Y="-2097.022" Z="227.9526" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+							
+							
+			<!-- ************************************************** Moving to Tian Monastery ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Tian Monastery flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Tian Monastery flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Tian Monastery flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="2505.411" Y="-1590.014" Z="400.8684" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+							
+							
+			<!-- ************************************************** Moving to Pang's Stead ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Pang's Stead flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Pang's Stead flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Pang's Stead flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="538.8298" Y="-632.7534" Z="258.5791" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+							
+							
+			<!-- ************************************************** Moving to Veiled Stair ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to the Veiled Stair flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Veiled Stair flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Veiled Stair flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="461.9167" Y="-100.3211" Z="179.4848" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+							
+							
+			<!-- ************************************************** Moving to Halfhill ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Halfhill flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Halfhill flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Halfhill flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="-221.236" Y="464.2044" Z="185.4419" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+							
+							
+			<!-- ************************************************** Moving to Stoneplow ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Stoneplow flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Stoneplow flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Stoneplow flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="-439.1245" Y="1884.72" Z="130.804" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+							
+			
+			
+			<!-- ************************************************** Stop the Bot ************************************************************** -->
+			
+			
+							
+			<!-- Fly to - Safety -->				
+			<CustomBehavior File="FlyTo" 
+							X="-461.4155" Y="1860.73" Z="201.2805" />
+			
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+							
+			<!-- Profile message - Stopping the bot -->
+			<CustomBehavior File="Message" 
+							Text="Stopping the bot."  
+							LogColor="Red" />				
+							
+			<!-- Custom behavior - Usersettings - StopBot -->				
+			<CustomBehavior File="UserSettings" 
+							StopBot="true" />
+			
+			
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<!-- **************************************************  Move to the Stormwind flight path and Stop the Bot ************************************************************** -->
+
+			
+			<!-- Profile message - Moving to the Stormwind flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Stormwind flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Move to - Stormwind flight master - hover point -->				
+			<CustomBehavior File="FlyTo" 
+							X="-8933.752" Y="451.1799" Z="134.7807" />				
+							
+			<!-- CTM to - grounding at the Stormwind flight master -->
+			<CustomBehavior File="MyCTM" 
+							X="-8845.87" Y="495.948" Z="109.6085" />	
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+			
+			<!-- Profile message - This portion of the profile has completed -->
+			<CustomBehavior File="Message" 
+							Text="This portion of the profile has completed."  
+							LogColor="Orange" />
+		
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+							
+			<!-- Profile message - Stopping the bot -->
+			<CustomBehavior File="Message" 
+							Text="Stopping the bot."  
+							LogColor="Red" />				
+							
+			<!-- Custom behavior - Usersettings - StopBot -->				
+			<CustomBehavior File="UserSettings" 
+							StopBot="true" />
+
+		</If>	<!-- If we are in Pandaria -->	
+				
+	</QuestOrder>
+	
+</HBProfile>
