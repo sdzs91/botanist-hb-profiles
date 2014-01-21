@@ -142,10 +142,46 @@
 			<CustomBehavior File="Message" 
 							Text="We are in Pandaria"  
 							LogColor="Orange" />
-							
-			<!-- Move to - Stormwind flight master -->				
+			
+			<!-- Profile message - Moving to Stormwind portal -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Stormwind portal." 
+							LogColor="Cyan" />
 		
-		</If>
+			<!-- Fly to - Shrine of Seven Stars hover point-->
+			<CustomBehavior File="FlyTo" 
+							X="902.952" Y="242.6688" Z="527.6846" />
+
+			<!-- CTM to - doorway entering the portal room -->
+			<CustomBehavior File="MyCTM" 
+							X="878.8149" Y="225.4941" Z="503.0988" />
+			
+			<!-- Custom behavior - ForcedDismount -->
+			<CustomBehavior File="ForcedDismount" />
+			
+			<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							UseMount="False" />
+			
+			<!-- Move to - stormwind portal -->
+			<Moveto X="829.231" Y="183.8077" Z="519.5355" />
+			
+			<!-- Interact with the teleporter -->
+			<CustomBehavior File="InteractWith" 
+							MobId="215119" />
+			
+			<!-- Wait timer for game to load -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="20000" />
+
+			<!-- Move to - exit of the mage tower -->
+			<MoveTo X="-8995.354" Y="860.3063" Z="127.8901" />
+		
+			<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							UseMount="True" />
+		
+		</If>	<!-- If we are in Pandaria -->
 		
 		<!-- If we are in Northrend -->
 		<If Condition="Me.MapId == 571">
@@ -201,7 +237,7 @@
 			<CustomBehavior File="UserSettings"
 							UseMount="True" />
 		
-		</If>	<!-- Northrend -->
+		</If>	<!-- If we are in Northrend -->
 		
 		<!-- If we are in Outland -->
 		<If Condition="Me.MapId == 530">
@@ -393,9 +429,9 @@
 		<!-- If we are at the Stormwind flight master -->
 		<If Condition="Me.X &gt; -8873 &amp;&amp; Me.X &lt; -8807 &amp;&amp; Me.Y &gt; 438 &amp;&amp; Me.Y &lt; 560" >
 		
-			<!-- Load profile - Staging Locations\[QO-A-M][60+][Flying]_kalimdor -->
+			<!-- Load profile - Staging Locations\[QO-A-M][60+][Flying]_eastern-kingdoms -->
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="Staging Locations\[QO-A-M][60+][Flying]_kalimdor" />
+							ProfileName="Staging Locations\[QO-A-M][60+][Flying]_eastern-kingdoms" />
 		
 		</If>	<!-- If we are at the Stormwind flight master -->
 

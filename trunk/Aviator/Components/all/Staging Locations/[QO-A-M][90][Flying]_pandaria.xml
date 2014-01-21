@@ -138,7 +138,7 @@
 							
 			<!-- Profile message - Moving to Jade Temple Grounds flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to the Pearlfin Village flight master."  
+							Text="Moving to the Jade Temple Grounds flight master."  
 							LogColor="Cyan" />				
 							
 			<!-- Fly to - Jade Temple Grounds flight master -->				
@@ -354,13 +354,249 @@
 							
 			
 			
+			<!-- ************************************************** Moving to Sentinel Basecamp ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Sentinel Basecamp flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Sentinel Basecamp flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Sentinel Basecamp flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="-1156.61" Y="1770.38" Z="16.989" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to Marista ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Marista flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Marista flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Marista flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="-2504.09" Y="491.583" Z="2.33204" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to The Incursion ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to The Incursion flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to The Incursion flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - The Incursion flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="-1125.31" Y="-227.747" Z="31.3673" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to Zhu's Watch ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Zhu's Watch  flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Zhu's Watch flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Zhu's Watch flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="-375.684" Y="-647.965" Z="117.516" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to Tavern in the Sky ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Tavern in the Sky flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Tavern in the Sky flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Tavern in the Sky flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="784.899" Y="-203.67" Z="402.192" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to Binan Village ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Binan Village flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Binan Village flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Binan Village flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="1689.519" Y="303.1532" Z="478.6343" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to Temple of the White Tiger ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Temple of the White Tiger flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Temple of the White Tiger flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Temple of the White Tiger flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="3502.254" Y="694.8128" Z="608.1859" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to Zouchin Village ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Zouchin Village flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Zouchin Village flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Zouchin Village flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="4351.086" Y="931.3436" Z="110.0713" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to One Keg ************************************************************** -->				
+							
+							
+							
+			<!-- Profile message - Moving to One Keg flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the One Keg flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - One Keg flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="3124.119" Y="1220.143" Z="654.2302" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to Kota Basecamp ************************************************************** -->				
+							
+							
+							
+			<!-- Profile message - Moving to Kota Basecamp flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Kota Basecamp flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Kota Basecamp flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="2716.291" Y="2165.125" Z="588.9083" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to Winter's Blossom ************************************************************** -->				
+							
+							
+							
+			<!-- Profile message - Moving to Winter's Blossom flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Winter's Blossom flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Winter's Blossom flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="3154.281" Y="2673.813" Z="579.8941" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+
+			
 			<!-- ************************************************** Stop the Bot ************************************************************** -->
 			
 			
 							
 			<!-- Fly to - Safety -->				
 			<CustomBehavior File="FlyTo" 
-							X="-461.4155" Y="1860.73" Z="201.2805" />
+							X="3105.919" Y="2729.135" Z="578.1302" />
 			
 			<!-- Wait timer - wait 3 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
@@ -391,6 +627,45 @@
 			
 			<!-- **************************************************  Move to the Stormwind flight path and Stop the Bot ************************************************************** -->
 
+
+			
+			<!-- Profile message - Moving to Stormwind portal -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Stormwind portal." 
+							LogColor="Cyan" />
+		
+			<!-- Fly to - Shrine of Seven Stars hover point-->
+			<CustomBehavior File="FlyTo" 
+							X="902.952" Y="242.6688" Z="527.6846" />
+
+			<!-- CTM to - doorway entering the portal room -->
+			<CustomBehavior File="MyCTM" 
+							X="878.8149" Y="225.4941" Z="503.0988" />
+			
+			<!-- Custom behavior - ForcedDismount -->
+			<CustomBehavior File="ForcedDismount" />
+			
+			<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							UseMount="False" />
+			
+			<!-- Move to - stormwind portal -->
+			<Moveto X="829.231" Y="183.8077" Z="519.5355" />
+			
+			<!-- Interact with the teleporter -->
+			<CustomBehavior File="InteractWith" 
+							MobId="215119" />
+			
+			<!-- Wait timer for game to load -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="20000" />
+
+			<!-- Move to - exit of the mage tower -->
+			<MoveTo X="-8995.354" Y="860.3063" Z="127.8901" />
+		
+			<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							UseMount="True" />
 			
 			<!-- Profile message - Moving to the Stormwind flight master -->
 			<CustomBehavior File="Message" 
