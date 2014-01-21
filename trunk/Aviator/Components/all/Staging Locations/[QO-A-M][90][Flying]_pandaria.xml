@@ -490,7 +490,15 @@
 							
 			<!-- Fly to - Temple of the White Tiger flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="3502.254" Y="694.8128" Z="608.1859" />
+							X="3452.852" Y="684.1588" Z="646.5812" />				
+							
+			<!-- CTM to -Temple of the White Tiger flight master -->
+			<CustomBehavior File="MyCTM" 
+							X="3501.685" Y="695.5787" Z="628.7909" />				
+							
+			<!-- CTM to -Temple of the White Tiger flight master -->
+			<CustomBehavior File="MyCTM" 
+							X="3506.11" Y="687.8101" Z="608.186" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -508,7 +516,7 @@
 			<CustomBehavior File="Message" 
 							Text="Moving to the Zouchin Village flight master."  
 							LogColor="Cyan" />				
-							
+				
 			<!-- Fly to - Zouchin Village flight master -->				
 			<CustomBehavior File="FlyTo" 
 							X="4351.086" Y="931.3436" Z="110.0713" />
@@ -587,43 +595,203 @@
 							WaitTime="5000" />
 			
 			
-			
-
-			
-			<!-- ************************************************** Stop the Bot ************************************************************** -->
-			
-			
+			<!-- ************************************************** Moving to Longying Outpost ************************************************************** -->				
 							
-			<!-- Fly to - Safety -->				
-			<CustomBehavior File="FlyTo" 
-							X="3105.919" Y="2729.135" Z="578.1302" />
-			
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
 							
-			<!-- Profile message - Stopping the bot -->
+							
+			<!-- Profile message - Moving to Longying Outpost flight master -->
 			<CustomBehavior File="Message" 
-							Text="Stopping the bot."  
-							LogColor="Red" />				
+							Text="Moving to the Longying Outpost flight master."  
+							LogColor="Cyan" />				
 							
-			<!-- Custom behavior - Usersettings - StopBot -->				
-			<CustomBehavior File="UserSettings" 
-							StopBot="true" />
-			
-			
+			<!-- Fly to - Longying Outpost flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="2363.23" Y="2994.39" Z="420.568" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
 
 			
 			
+			<!-- ************************************************** Moving to Shado-Pan Garrison ************************************************************** -->				
+							
+							
+							
+			<!-- Profile message - Moving to Shado-Pan Garrison flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Shado-Pan Garrison flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Shado-Pan Garrison flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="1803.32" Y="4204.23" Z="157.508" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
 			
 			
 			
+			<!-- ************************************************** Moving to Rensai's Watchpost ************************************************************** -->				
+							
+							
+							
+			<!-- Profile message - Moving to Rensai's Watchpost flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Rensai's Watchpost flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Rensai's Watchpost flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="1531.73" Y="3963.7" Z="227.666" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
 			
 			
 			
+			<!-- ************************************************** Moving to Rensai's Watchpost ************************************************************** -->				
+							
+							
+							
+			<!-- Profile message - Moving to Rensai's Watchpost flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Rensai's Watchpost flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Rensai's Watchpost flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="1531.73" Y="3963.7" Z="227.666" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
 			
 			
 			
+			<!-- ************************************************** Moving to Gao-Ran Battlefront ************************************************************** -->				
+							
+							
+							
+			<!-- Profile message - Moving to Gao-Ran Battlefront flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Gao-Ran Battlefront flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Gao-Ran Battlefront flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="1440.72" Y="2804.49" Z="301.9219" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to Klaxxi'vess ************************************************************** -->				
+							
+							
+							
+			<!-- Profile message - Moving to Klaxxi'vess flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Klaxxi'vess flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Klaxxi'vess flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="172.663" Y="3152.25" Z="215.54" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to Briny Muck ************************************************************** -->				
+							
+							
+							
+			<!-- Profile message - Moving to Briny Muck flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Briny Muck flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Briny Muck flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="-571.0925" Y="3856.313" Z="0.88752" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to Soggy's Gamble ************************************************************** -->				
+							
+							
+							
+			<!-- Profile message - Moving to Soggy's Gamble flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Soggy's Gamble flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Soggy's Gamble flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="-1083.84" Y="3143.966" Z="0.363998" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+			
+			
+			<!-- ************************************************** Moving to Serpent's Spine ************************************************************** -->				
+							
+							
+							
+			<!-- Profile message - Moving to Serpent's Spine flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Serpent's Spine flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Serpent's Spine flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="612.2744" Y="2125.752" Z="367.7318" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+			
+
 			
 			<!-- **************************************************  Move to the Stormwind flight path and Stop the Bot ************************************************************** -->
 
