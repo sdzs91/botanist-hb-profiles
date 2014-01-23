@@ -1175,7 +1175,7 @@
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
 			
-			<!-- Profile message - his portion of the profile has completed -->
+			<!-- Profile message - This portion of the profile has completed -->
 			<CustomBehavior File="Message" 
 							Text="This portion of the profile has completed."  
 							LogColor="Orange" />

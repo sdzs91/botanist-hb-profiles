@@ -59,6 +59,7 @@
 						MountName=""
 						NinjaSkin="False"
 						ProfileDebuggingMode="False"
+						PullDistance="25"
 						RessAtSpiritHealers="False"
 						SkinMobs="False"
 						UseMount="True" 
@@ -93,46 +94,10 @@
 			<!-- Wait timer - wait 3 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="3000" />
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			<!-- Profile message - This portion has not been added yet -->
-			<CustomBehavior File="Message" 
-							Text="This portion has not been added yet."  
-							LogColor="Orange" />
-		
-			<!-- Wait timer - wait 3 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="3000" />
-							
-			<!-- Profile message - Stopping the bot -->
-			<CustomBehavior File="Message" 
-							Text="Stopping the bot."  
-							LogColor="Red" />				
-							
-			<!-- Custom behavior - Usersettings - StopBot -->				
-			<CustomBehavior File="UserSettings" 
-							StopBot="true" />
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			<!-- Load profile - Components\eastern-kingdoms\[QO-H-M][90][Flying]_orgrimmar -->
+
+			<!-- Load profile - Components\kalimdor\[QO-H-M][60+][Flying]_orgrimmar -->
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="Components\eastern-kingdoms\[QO-H-M][90][Flying]_orgrimmar" />
+							ProfileName="Components\kalimdor\[QO-H-M][60+][Flying]_orgrimmar" />
 			
 		</If>	<!-- If we are Horde -->
 	
