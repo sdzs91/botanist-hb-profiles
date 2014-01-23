@@ -168,6 +168,10 @@
 							Text="Moving to the Plaguewood Tower flight master."  
 							LogColor="Cyan" />				
 			
+			<!-- Fly to - Plaguewood Tower -->			
+			<CustomBehavior File="FlyTo" 
+							X="1935.97" Y="-2694.48" Z="199.2031" />
+			
 			<!-- Fly to - Plaguewood Tower flight master -->			
 			<CustomBehavior File="FlyTo" 
 							X="2965.55" Y="-3033.61" Z="126.929" />
