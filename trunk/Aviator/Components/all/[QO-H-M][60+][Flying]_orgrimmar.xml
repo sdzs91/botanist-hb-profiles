@@ -429,7 +429,7 @@
 		
 			<!-- Load profile - Staging Locations\[QO-H-M][60+][Flying]_eastern-kingdoms -->
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="Staging Locations\[QO-H-M][60+][Flying]_eastern-kingdoms" />
+							ProfileName="Staging Locations\[QO-H-M][60+][Flying]_kalimdor" />
 		
 		</If>	<!-- If we are at the Orgrimmar flight master -->
 
