@@ -1066,13 +1066,30 @@
 		</If>	<!-- If we are in Eastern Kingdoms -->
 		
 		<!-- If we are at the Orgrimmar flight master -->
-			<If Condition="Me.X &gt; 1734.58 &amp;&amp; Me.X &lt; 1878.138 &amp;&amp; Me.Y &gt; -4469.707 &amp;&amp; Me.Y &lt; -4238.392" >
+		<If Condition="Me.X &gt; 1734.58 &amp;&amp; Me.X &lt; 1878.138 &amp;&amp; Me.Y &gt; -4469.707 &amp;&amp; Me.Y &lt; -4238.392" >
+		
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
 			
-				<!-- Load profile - [QO-H-M][60+][Flying]_eastern-kingdoms -->
-				<CustomBehavior File="LoadProfile" 
-								ProfileName="[QO-H-M][60+][Flying]_eastern-kingdoms" />
-			
-			</If>	<!-- If we are at the Orgrimmar flight master -->
+			<!-- Profile message - This portion of the profile has completed -->
+			<CustomBehavior File="Message" 
+							Text="This portion of the profile has completed."  
+							LogColor="Orange" />
+		
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+							
+			<!-- Profile message - Stopping the bot -->
+			<CustomBehavior File="Message" 
+							Text="Stopping the bot."  
+							LogColor="Red" />				
+							
+			<!-- Custom behavior - Usersettings - StopBot -->				
+			<CustomBehavior File="UserSettings" 
+							StopBot="true" />
+		
+		</If>	<!-- If we are at the Orgrimmar flight master -->
 				
 	</QuestOrder>
 	
