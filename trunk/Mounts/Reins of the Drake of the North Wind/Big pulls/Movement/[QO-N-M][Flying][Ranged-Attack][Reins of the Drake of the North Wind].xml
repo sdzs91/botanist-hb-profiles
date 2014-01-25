@@ -47,28 +47,23 @@
 
 		<If Condition="Me.Level &gt;= 90">
 		
-		 	<!-- Booster UserSettings -->
+		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
-							FindVendorsAutomatically="False"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
 							KillBetweenHotspots="True"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
-							LootChests="False"
 							LootMobs="True"
-							LootRadius="1"
-							MountDistance="75"
+							LootRadius="25"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="25"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
-							UseFlightPaths="True"
 							UseMount="True" 
 							UseRandomMount="False" />
 
@@ -88,7 +83,7 @@
 					<If Condition="HasItem(6948)">
 						<CustomBehavior File="Message" 
 										Text="Using Hearthstone." 
-										LogColor="Lime" />
+										LogColor="Plum" />
 										
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(6948)" 
@@ -102,7 +97,7 @@
 					<If Condition="HasItem(64488)">
 						<CustomBehavior File="Message" 
 										Text="Using Innkeeper's Daughter." 
-										LogColor="Lime" />
+										LogColor="Plum" />
 											
 						<CustomBehavior File="Misc\RunLua" 
 										Lua="UseItemByName(64488)" 
@@ -116,12 +111,12 @@
 					<Else>
 						<CustomBehavior File="Message" 
 										Text="Our Hearthstone isn't set in the proper location. Moving to set it." 
-										LogColor="Lime" />
+										LogColor="Plum" />
 		
 						<!-- Profile message - Flying to Booty Bay -->
 						<CustomBehavior File="Message" 
 											Text="Flying to Booty Bay." 
-											LogColor="Lime" />
+											LogColor="Plum" />
 											
 						<!-- Fly to Booty Bay -->
 						<CustomBehavior File="FlyTo" 
@@ -134,7 +129,7 @@
 						<!-- Profile message - Waiting on the boat to Ratchet -->
 						<CustomBehavior File="Message" 
 											Text="Waiting on the boat to Ratchet." 
-											LogColor="Lime" />
+											LogColor="Plum" />
 										
 						<!-- Take boat from Booty Bay to ratchet -->
 						<CustomBehavior File="UseTransport" 
@@ -168,14 +163,14 @@
 						<!-- Profile message - Flying to the sphinx in south eastern Uldum -->
 								<CustomBehavior File="Message" 
 												Text="Flying to the sphinx in south eastern Uldum." 
-												LogColor="Lime" />
+												LogColor="Plum" />
 												
 						<!-- Fly to the hover point at the last ridge near the sphinx-->
 						<CustomBehavior File="FlyTo" X="-10703.96" Y="-1767.715" Z="353.466" />
 												
 						<CustomBehavior File="Message" 
 										Text="CTM to The Vortex Pinnacle hover point." 
-										LogColor="Lime" />
+										LogColor="Plum" />
 						
 						<!-- CTM to hover point above The Vortex Pinnacle -->
 						<CustomBehavior File="MyCTM" X="-11446.21" Y="-2263.146" Z="651.7057" />
@@ -191,7 +186,7 @@
 					<Else>
 						<CustomBehavior File="Message" 
 										Text="Our Hearthstone isn't set in the proper location. Moving to set it." 
-										LogColor="Lime" />
+										LogColor="Plum" />
 						
 						<!-- Fly to the hover point above the innkeep in Ramkahen -->
 						<CustomBehavior File="FlyTo" 
@@ -207,7 +202,7 @@
 						<!-- Set hearthstone -->										
 						<CustomBehavior File="Message" 
 										Text="Setting my Hearthstone." 
-										LogColor="Lime" />
+										LogColor="Plum" />
 										
 						<CustomBehavior File="SetHearthstone" 
 										MobId="48886" 
@@ -220,7 +215,7 @@
 						<If Condition="Me.LowestDurabilityPercent &lt; 0.8" >
 							<CustomBehavior File="Message" 
 											Text="Our durability is less than 80%, we need to repair." 
-											LogColor="Lime" />
+											LogColor="Plum" />
 											
 							<RunTo X="-9409.512" Y="-911.5088" Z="112.5401" />
 
@@ -252,19 +247,19 @@
 							<If Condition="Me.DurabilityPercent &gt;= 0.8" >
 								<CustomBehavior File="Message" 
 												Text="Repairing complete." 
-												LogColor="Lime" />
+												LogColor="Plum" />
 							</If> <!-- repaired -->
 						</If> <!-- Repairing -->			
 											
 						<!-- Profile message - Our hearth has been set, we have more than 25 empty slots in our bags and our gear is above 80 percent durability -->
 								<CustomBehavior File="Message" 
 												Text="Our hearth has been set, we have more than 25 empty slots in our bags and our gear is above 80 percent durability." 
-												LogColor="Lime" />
+												LogColor="Plum" />
 												
 						<!-- Profile message - Flying to the sphinx in south eastern Uldum -->
 								<CustomBehavior File="Message" 
 												Text="Flying to the sphinx in south eastern Uldum." 
-												LogColor="Lime" />					
+												LogColor="Plum" />					
 											
 						<!-- Fly to the hover point at the last ridge near the sphinx-->
 						<CustomBehavior File="FlyTo" X="-10703.96" Y="-1767.715" Z="353.466" />
@@ -272,7 +267,7 @@
 						<!-- Profile message - CTM to The Vortex Pinnacle hover point -->						
 						<CustomBehavior File="Message" 
 										Text="CTM to The Vortex Pinnacle hover point." 
-										LogColor="Lime" />
+										LogColor="Plum" />
 						
 						<!-- CTM to The Vortex Pinnacle hover point -->
 						<CustomBehavior File="MyCTM" X="-11446.21" Y="-2263.146" Z="651.7057" />

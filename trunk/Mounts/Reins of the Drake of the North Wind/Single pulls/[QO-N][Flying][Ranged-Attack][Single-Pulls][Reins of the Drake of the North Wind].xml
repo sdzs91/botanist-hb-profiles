@@ -61,7 +61,6 @@
 							LogoutInactivityUseForceQuit="False"
 							LootMobs="True"
 							LootRadius="25"
-							MountDistance="75"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
@@ -339,11 +338,18 @@
 					</CustomBehavior>
 					<RunTo X="-1171.694" Y="47.29779" Z="707.6915" />	
 
-					<!-- Run to Altairus -->
-					<RunTo X="-1244.977" Y="76.2642" Z="731.8144" />
+					<!-- Move to - Altairus -->
+					<MoveTo X="-1236.973" Y="72.48884" Z="734.1793" />
 									
 					<!-- Kill Altairus -->
-					<MoveTo X="-1192.2" Y="54.16493" Z="744.2992" />
+					<MoveTo X="-1194.486" Y="54.48828" Z="734.1755" />
+
+					<!-- Custom behavior -  Wait timer- 10 second loot delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="10000" />
+									
+					<!-- Move to - top of the platform -->
+					<MoveTo X="-1082.505" Y="28.14781" Z="705.6274" />
 
 					<!-- Custom behavior -  Wait timer- 10 second loot delay -->
 					<CustomBehavior File="WaitTimer" 

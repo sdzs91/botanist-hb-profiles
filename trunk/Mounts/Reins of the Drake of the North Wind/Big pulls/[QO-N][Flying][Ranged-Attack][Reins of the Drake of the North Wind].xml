@@ -61,7 +61,6 @@
 							LogoutInactivityUseForceQuit="False"
 							LootMobs="True"
 							LootRadius="25"
-							MountDistance="75"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
@@ -71,12 +70,12 @@
 							UseRandomMount="False" />
 						
 			<!-- Infinite loop -->
-			<While Condition="true" >	
+			<While Condition="true" >
 				<!--The Vortex Pinnacle -->
 				<If Condition="Me.ZoneId == 5035">
 					<CustomBehavior File="Message" 
 									Text="The Vortex Pinnacle detected. Running out."
-									LogColor="Fuchsia" />
+									LogColor="Plum" />
 						
 					<!-- Make our way to the exit -->
 					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
@@ -104,7 +103,7 @@
 				<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
 					<CustomBehavior File="Message" 
 									Text="Portal detected nearby."
-									LogColor="Fuchsia" />	
+									LogColor="Plum" />	
 						
 					<!-- If we are in the box -->
 					<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
@@ -112,7 +111,7 @@
 						<!-- Profile message - Resetting the instance -->
 						<CustomBehavior File="Message" 
 										Text="Resetting the instance, we didn't need to repair." 
-										LogColor="Fuchsia" />
+										LogColor="Plum" />
 						
 						<!-- Reset the instance -->
 						<CustomBehavior File="RunMacro" 
@@ -124,7 +123,7 @@
 						
 						<CustomBehavior File="Message" 
 										Text="Instance reset." 
-										LogColor="Fuchsia" />
+										LogColor="Plum" />
 					
 					</If> <!-- If we are in the box -->		
 						
@@ -139,7 +138,7 @@
 										
 						<CustomBehavior File="Message" 
 										Text="Waiting for the dungeon to load." 
-										LogColor="Fuchsia" />
+										LogColor="Plum" />
 									
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="20000"
@@ -147,9 +146,9 @@
 										
 						<!-- If we still aren't in, we're locked out -->
 						<If Condition="Me.ZoneId != 5035">
-							<CustomBehavior File="Message" 
-											Text="We are locked out. Waiting and trying again." 
-											LogColor="Fuchsia" />
+						<CustomBehavior File="Message" 
+										Text="We are locked out. Waiting and trying again." 
+										LogColor="Plum" />
 						</If> <!-- Locked -->
 					</While> <!-- While we aren't in the instance -->
 				</If> <!-- In box -->
@@ -172,7 +171,7 @@
 					<!-- Profile message - Vortex Pinnacle initialized -->
 					<CustomBehavior File="Message" 
 									Text="Vortex Pinnacle initialized."
-									LogColor="Fuchsia" />
+									LogColor="Plum" />
 	
 					<!-- Kill the first Armored Mistral -->				
 					<CustomBehavior File="RunLikeHell" 
@@ -190,7 +189,7 @@
 					<!-- Profile message - First pull complete -->
 					<CustomBehavior File="Message" 
 										Text="First pull complete." 
-										LogColor="Fuchsia" />
+										LogColor="Plum" />
 									
 					<!-- Kill the second Armored Mistral -->				
 					<CustomBehavior File="RunLikeHell" 
@@ -204,7 +203,7 @@
 					<!-- Profile message - Second pull complete -->
 					<CustomBehavior File="Message" 
 										Text="Second pull complete." 
-										LogColor="Fuchsia" />				
+										LogColor="Plum" />				
 									
 					<!-- Kill the three groups on the circular ramp -->					
 					<CustomBehavior File="RunLikeHell" 
@@ -224,7 +223,7 @@
 					<!-- Profile message - Third pull complete -->
 					<CustomBehavior File="Message" 
 										Text="Third pull complete." 
-										LogColor="Fuchsia" />				
+										LogColor="Plum" />				
 										
 					<!-- Pull everything past the Lurking Tempest -->				
 					<CustomBehavior File="RunLikeHell" 
@@ -246,12 +245,12 @@
 					<!-- Profile message - Fifth pull complete -->
 					<CustomBehavior File="Message" 
 										Text="Fourth pull complete." 
-										LogColor="Fuchsia" />				
+										LogColor="Plum" />				
 									
 					<!-- Profile message - Third pull complete -->
 					<CustomBehavior File="Message" 
 										Text="Killing Grand Vizier Ertan." 
-										LogColor="Fuchsia" />				
+										LogColor="Plum" />				
 									
 					<!-- Kill Grand Vizier Ertan -->
 					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
@@ -269,7 +268,7 @@
 					<!-- Profile message - Fifth pull complete -->
 					<CustomBehavior File="Message" 
 										Text="Grand Vizier Ertan is dead, next !." 
-										LogColor="Fuchsia" />
+										LogColor="Plum" />
 					
 					<!-- Run to the slipstream -->
 					<RunTo X="-752.7068" Y="-29.53746" Z="639.926" />
@@ -303,7 +302,7 @@
 					<!-- Profile message - Fifth pull complete -->
 					<CustomBehavior File="Message" 
 										Text="Sixth pull complete." 
-										LogColor="Fuchsia" />				
+										LogColor="Plum" />				
 									
 					<!-- Pull Young Storm Dragon -->				
 					<CustomBehavior File="RunLikeHell" 
@@ -322,7 +321,7 @@
 					<!-- Profile message - Seventh pull complete -->
 					<CustomBehavior File="Message" 
 										Text="Seventh pull complete." 
-										LogColor="Fuchsia" />
+										LogColor="Plum" />
 										
 					<!-- Run to the first Howling Gale -->				
 					<RunTo X="-1007.842" Y="-101.291" Z="694.9153" />
@@ -330,7 +329,7 @@
 					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Disabling combat." 
-										LogColor="Fuchsia" />
+										LogColor="Plum" />
 
 					<!-- Disable combat -->
 					<DisableBehavior Name="Combat" />
@@ -383,7 +382,7 @@
 					<!-- Profile message - Enabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Enabling combat." 
-										LogColor="Fuchsia" />
+										LogColor="Plum" />
 
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />			
@@ -404,28 +403,28 @@
 					</CustomBehavior>
 					<RunTo X="-1171.694" Y="47.29779" Z="707.6915" />	
 
-					<!-- Run to Altairus -->
-					<RunTo X="-1165.007" Y="63.58732" Z="708.7789" />
-					<RunTo X="-1176.675" Y="96.28326" Z="720.9597" />
-					<RunTo X="-1206.814" Y="113.6306" Z="728.0722" />
-					<RunTo X="-1240.527" Y="109.3951" Z="728.0722" />
-					<RunTo X="-1249.716" Y="97.09432" Z="728.0722" />
-					<RunTo X="-1244.977" Y="76.2642" Z="731.8144" />
+					<!-- Move to - Altairus -->
+					<MoveTo X="-1236.973" Y="72.48884" Z="734.1793" />
 									
 					<!-- Kill Altairus -->
-					<MoveTo X="-1192.2" Y="54.16493" Z="744.2992" />
+					<MoveTo X="-1194.486" Y="54.48828" Z="734.1755" />
 
 					<!-- Custom behavior -  Wait timer- 10 second loot delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="10000" />
 									
-					<!-- Run to the top of the platform -->
-					<RunTo X="-1082.505" Y="28.14781" Z="705.6274" />					
+					<!-- Move to - top of the platform -->
+					<MoveTo X="-1082.505" Y="28.14781" Z="705.6274" />					
 									
+					<!-- Move to - jumps off the platform -->				
 					<CustomBehavior File="MyCTM" 
 									X="-361.0677" Y="-5.696181" Z="632.7807" />				
 									
-					<!-- Run to the exit -->
+					<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="5000" />				
+
+					<!-- Move to - exit -->
 					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
 		
 					<!-- Instance timer to ensure run takes a minimum of 12 minutes and 30 seconds to avoid instance locks -->
@@ -439,7 +438,7 @@
 				
 					<CustomBehavior File="Message" 
 									Text="The Vortex Pinnacle detected. Running out."
-									LogColor="Fuchsia" />
+									LogColor="Plum" />
 						
 					<!-- Make our way to the exit -->
 					<RunTo X="-337.627" Y="15.3073" Z="626.979" />

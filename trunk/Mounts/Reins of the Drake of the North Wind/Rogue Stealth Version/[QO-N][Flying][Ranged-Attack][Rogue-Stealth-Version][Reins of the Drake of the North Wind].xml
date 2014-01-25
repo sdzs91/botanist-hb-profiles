@@ -51,9 +51,10 @@
 
 		<If Condition="Me.Level &gt;= 85">
 		
-		 	<!-- User UserSettings -->
+		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
@@ -61,11 +62,10 @@
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
 							LootMobs="True"
-							LootRadius="1"
+							LootRadius="25"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
-							PullDistance="25"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseMount="True" 
@@ -1030,7 +1030,14 @@
 					<EnableBehavior Name="Pull" />
 		
 					<!-- Kill Altairus -->
-					<MoveTo X="-1192.2" Y="54.16493" Z="744.2992" />
+					<MoveTo X="-1194.486" Y="54.48828" Z="734.1755" />
+
+					<!-- Custom behavior -  Wait timer- 10 second loot delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="10000" />
+									
+					<!-- Move to - top of the platform -->
+					<MoveTo X="-1082.505" Y="28.14781" Z="705.6274" />
 
 					<!-- Custom behavior -  Wait timer- 10 second loot delay -->
 					<CustomBehavior File="WaitTimer" 
