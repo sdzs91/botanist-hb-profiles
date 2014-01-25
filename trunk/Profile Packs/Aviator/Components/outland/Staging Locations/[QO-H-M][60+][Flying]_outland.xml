@@ -88,30 +88,26 @@
 							
 			<!-- Move to - Cleft of Shadow - hover point -->				
 			<CustomBehavior File="FlyTo" 
-							X="-8924.287" Y="832.0236" Z="191.1413" />				
+							X="1889.579" Y="-4540.884" Z="90.5732" />				
 							
-			<!-- CTM to - grounding at the Mage Tower -->
+			<!-- CTM to - grounding at the Cleft of Shadow -->
 			<CustomBehavior File="MyCTM" 
-							X="-8999.207" Y="862.276" Z="129.296" />	
+							X="1893.12" Y="-4474.171" Z="23.24943" />	
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
 
-			<!-- Usersettings- disable mount use in Stormwind -->
+			<!-- Usersettings- disable mount use in Cleft of Shadow -->
 			<CustomBehavior File="UserSettings"
 							UseMount="False"  />				
 			
-			<!-- Move to - Stormwind portal to Blasted Lands -->
-			<MoveTo X="-9005.403" Y="869.1169" Z="129.6929" />
+			<!-- Move to - Orgrimmar portal to Blasted Lands -->
+			<MoveTo X="1771.722" Y="-4327.896" Z="-8.247296" />
 
-			<!-- Custom behavior - Interactwith the Blasted Lands portal -->
+			<!-- Interact with the teleporter -->
 			<CustomBehavior File="InteractWith" 
-							MobId="195141" 
-							ObjectType="Gameobject"
-							Range="4.75" 
-							NumOfTimes="1"  
-							X="-9007.58" Y="871.8698" Z="129.6922" />			
-							
+							MobId="195142" />
+			
 			<!-- Usersettings- enable mount use in Blasted Lands -->
 			<CustomBehavior File="UserSettings"
 							UseMount="True"  />		
@@ -133,6 +129,7 @@
 			
 		</If>	<!-- If we are in Stormwind -->				
 		
+
 		<!-- If we are in Outlands -->
 		<If Condition="Me.MapId == 530">
 		
@@ -147,7 +144,7 @@
 							
 			<!-- Fly to - Hellfire Peninsula, Dark Portal flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="-327.35" Y="1020.49" Z="54.24791" />
+							X="-179.934" Y="1029.342" Z="54.16945" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -156,19 +153,20 @@
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="5000" />
 			
+
 			
-			
-			<!-- ************************************************** Moving to Honor Hold ************************************************************** -->				
+			<!-- ************************************************** Moving to Thrallmar ************************************************************** -->				
 							
 							
-			<!-- Profile message - Moving to Honor Hold flight master -->
+							
+			<!-- Profile message - Moving to Thrallmar flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Honor Hold flight master."  
+							Text="Moving to Thrallmar flight master."  
 							LogColor="Cyan" />				
 							
-			<!-- Fly to - Honor Hold flight master -->				
+			<!-- Fly to - Thrallmar flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="-673.42" Y="2717.27" Z="94.18" />
+							X="228.5" Y="2633.57" Z="87.66643" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -179,17 +177,18 @@
 			
 			
 			
-			<!-- ************************************************** Moving to Temple of Telhamat ************************************************************** -->				
+			<!-- ************************************************** Moving to Spinebreaker Ridge ************************************************************** -->				
 							
 							
-			<!-- Profile message - Moving to Temple of Telhamat flight master -->
+							
+			<!-- Profile message - Moving to Spinebreaker Ridge flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Temple of Telhamat flight master."  
+							Text="Moving to Spinebreaker Ridge flight master."  
 							LogColor="Cyan" />				
 							
-			<!-- Fly to - Temple of Telhamat flight master -->				
+			<!-- Fly to - Spinebreaker Ridge flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="199.6402" Y="4242.381" Z="121.7128" />
+							X="-1316.84" Y="2358.62" Z="88.95528" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -197,9 +196,28 @@
 			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="5000" />
-			
-			
-			
+							
+							
+			<!-- ************************************************** Moving to Falcon Watch ************************************************************** -->				
+							
+							
+			<!-- Profile message - Moving to Falcon Watch flight master -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Falcon Watch Ridge flight master."  
+							LogColor="Cyan" />				
+							
+			<!-- Fly to - Spinebreaker Ridge flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="-587.41" Y="4101.01" Z="91.37" />
+
+			<!-- Forced dismount -->	
+			<CustomBehavior File="ForcedDismount" />
+
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />				
+							
+
 			<!-- ************************************************** Moving to Cosmowrench ************************************************************** -->				
 							
 							
@@ -315,17 +333,17 @@
 							WaitTime="5000" />
 			
 			
-			<!-- ************************************************** Moving to Sylvanaar ************************************************************** -->				
+			<!-- ************************************************** Moving to Thunderlook Stronghold ************************************************************** -->				
 							
 							
-			<!-- Profile message - Moving to Sylvanaar flight master -->
+			<!-- Profile message - Moving to  Thunderlord Stronghold flight master -->
 			<CustomBehavior File="Message" 
 							Text="Moving to Sylvanaar flight master."  
 							LogColor="Cyan" />				
 
-			<!-- Fly to - Sylvanaar flight master -->				
+			<!-- Fly to - Thunderlord Stronghold flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="2178.522" Y="6795.104" Z="183.2446" />
+							X="2446.37" Y="6020.93" Z="154.3395" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -336,17 +354,17 @@
 			
 
 			
-			<!-- ************************************************** Moving to Toshley's Station ************************************************************** -->				
+			<!-- ************************************************** Moving to Mok'Nathal Village ************************************************************** -->				
 							
 							
-			<!-- Profile message - Moving to Toshley's Station flight master -->
+			<!-- Profile message - Moving to Mok'Nathal Village flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Toshley's Station flight master."  
+							Text="Moving to Mok'Nathal Village flight master."  
 							LogColor="Cyan" />				
 
-			<!-- Fly to - Toshley's Station flight master -->				
+			<!-- Fly to - Mok'Nathal Village flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="1860.651" Y="5534.32" Z="276.5898" />
+							X="2028.79" Y="4705.27" Z="150.5098" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -357,17 +375,17 @@
 			
 			
 			
-			<!-- ************************************************** Moving to Orebor Harborage ************************************************************** -->				
+			<!-- ************************************************** Moving to Zabra'jin ************************************************************** -->				
 							
 							
-			<!-- Profile message - Moving to Toshley's Station flight master -->
+			<!-- Profile message - Moving to Zabra'jin flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Orebor Harborage flight master."  
+							Text="Moving to Zabra'jin flight master."  
 							LogColor="Cyan" />				
 
-			<!-- Fly to - Orebor Harborage flight master -->				
+			<!-- Fly to - Zabra'jin flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="971.9225" Y="7400.826" Z="29.44868" />
+							X="219.45" Y="7816" Z="22.71822" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -377,57 +395,38 @@
 							WaitTime="5000" />
 			
 			
-			<!-- ************************************************** Moving to Telredor ************************************************************** -->				
+			<!-- ************************************************** Moving to Swamprat Post ************************************************************** -->				
 							
 							
-			<!-- Profile message - Moving to Telredor flight master -->
+			<!-- Profile message - Moving to Swamprat Post flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Telredor flight master."  
+							Text="Moving to Swamprat Post flight master."  
 							LogColor="Cyan" />				
 
-			<!-- Fly to - Telredor flight master -->				
+			<!-- Fly to - Swamprat Post flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="510.5252" Y="6072.934" Z="57.9116" />				
-									
-			<!-- CTM to - Telredor flight master -->				
-			<CustomBehavior File="MyCTM" 
-							X="384.3324" Y="6094.453" Z="166.4558" />				
-
-			<!-- CTM to - Telredor flight master -->				
-			<CustomBehavior File="MyCTM" 
-							X="217.6488" Y="6041.06" Z="173.5681" />
-
-			<!-- CTM to - Telredor flight master -->				
-			<CustomBehavior File="MyCTM" 
-							X="212.8272" Y="6064.362" Z="148.3173" />				
-							
+							X="91.67" Y="5214.92" Z="23.09985" />				
+													
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
 
-			<!-- Custom behavior - InteractWith Telredor flight master -->
-			<CustomBehavior File="InteractWith"
-							ObjectType="Npc"
-							MobId="18788"
-							NumOfTimes="1"
-							X="210.4924" Y="6065.088" Z="148.3181" />
-							   
 			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="5000" />
 							
 							
 							
-			<!-- ************************************************** Moving to Telaar ************************************************************** -->				
+			<!-- ************************************************** Moving to Garadar ************************************************************** -->				
 							
 							
-			<!-- Profile message - Moving to Telaar flight master -->
+			<!-- Profile message - Moving to Garadar flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Telaar flight master."  
+							Text="Moving to Garadar flight master."  
 							LogColor="Cyan" />				
 
-			<!-- Fly to - Telaar flight master -->				
+			<!-- Fly to - Garadar flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="-2716.865" Y="7299.215" Z="88.6204" />
+							X="-1261.09" Y="7133.39" Z="57.34165" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -438,18 +437,18 @@
 							
 
 			
-			<!-- ************************************************** Moving to Allerian Stronghold ************************************************************** -->				
+			<!-- ************************************************** Moving to Stonebreaker Hold ************************************************************** -->				
 							
 							
 							
-			<!-- Profile message - Moving to Allerian Stronghold flight master -->
+			<!-- Profile message - Moving to Stonebreaker Hold flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Allerian Stronghold flight master."  
+							Text="Moving to Stonebreaker Hold flight master."  
 							LogColor="Cyan" />				
 
-			<!-- Fly to - Allerian Stronghold flight master -->				
+			<!-- Fly to - Stonebreaker Hold flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="-2987.24" Y="3872.78" Z="9.13" />
+							X="-2567.33" Y="4423.83" Z="39.32523" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -460,18 +459,18 @@
 			
 			
 			
-			<!-- ************************************************** Moving to Wildhammer Stronghold ************************************************************** -->				
+			<!-- ************************************************** Moving to Shadowmoon Village ************************************************************** -->				
 							
 							
 							
-			<!-- Profile message - Moving to Wildhammer Stronghold flight master -->
+			<!-- Profile message - Moving to Shadowmoon Village flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Wildhammer Stronghold flight master."  
+							Text="Moving to Shadowmoon Village flight master."  
 							LogColor="Cyan" />				
 
-			<!-- Fly to - Wildhammer Stronghold flight master -->				
+			<!-- Fly to - Shadowmoon Village flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="-3987.92" Y="2153.324" Z="104.2453" />
+							X="-3018.62" Y="2557.09" Z="79.08991" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -486,60 +485,88 @@
 							
 							
 							
-			<!-- Profile message - Moving to Shattrath flight master -->
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />				
+							
+			<!-- Profile message - Moving to the Shattrath City to use the portal to Orgrimmar -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Shattrath flight master."  
+							Text="Moving to the Shattrath City to use the portal to Orgrimmar."  
 							LogColor="Cyan" />				
 
-			<!-- Fly to - Shattrath flight master -->				
-			<CustomBehavior File="FlyTo" 
-							X="-1837.23" Y="5301.9" Z="-12.43" />
+			<!-- Fly to - Shattrath City - hover point -->
+			<CustomBehavior File="FlyTo" X="-1977.775" Y="5373.526" Z="54.82305" />
 
+			<!-- CTM to - grounding at Shattrath City -->
+			<CustomBehavior File="MyCTM"
+							X="-1920.137" Y="5400.772" Z="-12.42688" />
+			
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
-
-			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="5000" />
 			
-			
-			
-			<!-- ************************************************** Moving to Shattrath portals ************************************************************** -->
-			
-			
-			
-			<!-- Portal to Stormwind -->
+			<!-- Profile message - Moving to the Orgrimmar portal -->				
+			<CustomBehavior File="Message" 
+							Text="Moving to the Orgrimmar portal." 
+							LogColor="Cyan" />		
+						
+			<!-- Move to - Orgrimmar portal -->
 			<MoveTo X="-1892.733" Y="5390.708" Z="-12.42776" />
-					
-			<!-- Interact with Stormwind portal -->
+			
+			<!-- Interact with the teleporter -->
 			<CustomBehavior File="InteractWith" 
-							MobId="183325" 
-							ObjectType="Gameobject" 
-							Range="55.1" 
-							NumOfTimes="1"
-							WaitTime="10000" 
-							X="-1894.18921" Y="5387.93945" Z="-12.4282484" />
-			
-			<!-- Custom behavior - WaitTimer - wait 10 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="10000" />
-			
-			<!-- Profile message - Moving to the Stormwind flight master -->
-			<CustomBehavior File="Message" 
-							Text="Moving to the Stormwind flight master."  
-							LogColor="Cyan" />				
-							
-			<!-- Move to - Stormwind flight master - hover point -->				
-			<CustomBehavior File="FlyTo" 
-							X="-8933.752" Y="451.1799" Z="134.7807" />				
-							
-			<!-- CTM to - grounding at the Stormwind flight master -->
-			<CustomBehavior File="MyCTM" 
-							X="-8845.87" Y="495.948" Z="109.6085" />	
+							MobId="183323" />				
 
-			<!-- Forced dismount -->	
+			<!-- Wait timer - wait 15 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="15000" />				
+							
+			<!-- If we are in the Cleft of Shadow -->
+			<If Condition="Me.X &lt; 1895.627 &amp;&amp; Me.X &gt; 1713.31 &amp;&amp; Me.Y &gt; -4440.429 &amp;&amp; Me.Y &lt; -4283.688 &amp;&amp; Me.Z &lt; 35" >
+			
+				<!-- Profile message - we are in the Cleft of Shadow -->
+				<CustomBehavior File="Message" 
+								Text="We are in the Cleft of Shadow"  
+								LogColor="Orange" />
+			
+				<!-- UserSettings -->
+				<CustomBehavior File="UserSettings" 
+									UseMount="False" />
+			
+				<!-- Move to - mount location outside the Cleft of Shadow -->
+				<MoveTo X="1892.877" Y="-4546.347" Z="29.89322" />
+			
+				<!-- UserSettings -->
+				<CustomBehavior File="UserSettings" 
+									UseMount="True" />
+				
+			</If>	<!-- If we are in the Cleft of Shadow -->
+
+			<!-- Profile message - We are in Kalimdor -->
+			<CustomBehavior File="Message" 
+							Text="We are in Kalimdor"  
+							LogColor="Orange" />
+							
+			<!-- Profile message - Flying to Orgrimmar flight master -->
+			<CustomBehavior File="Message" 
+							Text="Flying to Orgrimmar flight master." 
+							LogColor="Cyan" />
+			
+			<!-- Fly to - Orgrimmar flight master - hover point -->
+			<CustomBehavior File="FlyTo" 
+							X="1784.987" Y="-4324.083" Z="165.4276" />	
+			
+			<!-- CTM to - Orgrimmar flight master -->
+			<CustomBehavior File="MyCTM"
+							X="1798.712" Y="-4362.202" Z="102.4993" />
+
+			<!-- Custom behavior - ForcedDismount -->
 			<CustomBehavior File="ForcedDismount" />
 			
+			<!-- Profile message - We are in Kalimdor -->
+			<CustomBehavior File="Message" 
+							Text="We have arrived at the Orgrimmar flight master"  
+							LogColor="Orange" />
+
 			<!-- Profile message - his portion of the profile has completed -->
 			<CustomBehavior File="Message" 
 							Text="This portion of the profile has completed."  
