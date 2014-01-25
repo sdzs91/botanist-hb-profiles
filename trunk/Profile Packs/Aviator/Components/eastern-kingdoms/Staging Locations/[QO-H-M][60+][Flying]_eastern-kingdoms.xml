@@ -1032,11 +1032,11 @@
 		
 			<!-- Fly to the Booty Bay - boat hover point -->
 			<CustomBehavior File="FlyTo"
-							X="-10353.59" Y="-7.647873" Z="284.1171" />
+							X="-14300.4" Y="518.0767" Z="38.75513" />
 						
 			<!-- Land on the deck -->
 			<CustomBehavior File="MyCTM"
-							X="-14281.86" Y="564.9252" Z="7.45587" />				
+							X="-14290.02" Y="545.6638" Z="8.691406" />				
 				
 			<!-- Forced dismount -->		
 			<CustomBehavior File="ForcedDismount" />
