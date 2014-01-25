@@ -336,9 +336,9 @@
 			<!-- ************************************************** Moving to Thunderlook Stronghold ************************************************************** -->				
 							
 							
-			<!-- Profile message - Moving to  Thunderlord Stronghold flight master -->
+			<!-- Profile message - Moving to Thunderlord Stronghold flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Sylvanaar flight master."  
+							Text="Moving to Thunderlook Stronghold flight master."  
 							LogColor="Cyan" />				
 
 			<!-- Fly to - Thunderlord Stronghold flight master -->				
