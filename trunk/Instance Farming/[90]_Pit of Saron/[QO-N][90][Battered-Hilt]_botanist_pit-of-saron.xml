@@ -344,16 +344,14 @@
 								LogColor="Plum" />
 				
 				<!-- Fly to - XXXXXXXX -->					
-				<CustomBehavior File="FlyTo" 
-								X="8586.275" Y="939.3901" Z="616.4142" />
+				<MoveTo Nav="Fly" X="8586.275" Y="939.3901" Z="616.4142" />
 								
 				<!-- Move to - last peak before ICC -->				
 				<CustomBehavior File="MyCTM" 
 								X="6050.875" Y="1752.029" Z="855.2743" />
 				
 				<!-- Fly to - Ice Crown Citadel hover point -->
-				<CustomBehavior File="FlyTo" 
-								X="5961.686" Y="2153.792" Z="716.7491" />
+				<MoveTo Nav="Fly" X="5961.686" Y="2153.792" Z="716.7491" />
 				
 				<!-- Move to - Frozen Halls point above the entrance to the Frozen Throne -->
 				<CustomBehavior File="MyCTM" 
