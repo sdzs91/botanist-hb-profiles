@@ -25,7 +25,6 @@
 	
 	<AvoidMobs>		 
 		<Mob Name="Summon Enabler Stalker" Entry="53488" />
-		<Mob Name="General Husam" Entry="44577" />
 	</AvoidMobs>
 	
 	<Blackspots>
@@ -46,7 +45,6 @@
 	<QuestOrder>
 		<ClearVendor />
 		<ClearMailbox />
-
 
 		<If Condition="Me.Level &gt;= 84">
 		
@@ -220,54 +218,19 @@
 									Text="Deleting unwanted items from our bags." 
 									LogColor="Plum" />
 
-					<!-- Morning Glory Dew -->
+					<!-- Toughened Flesh -->
 					<CustomBehavior File="DeleteItems" 
-									Ids="8766" />
+									Ids="62778" />
 									
-					<!-- Major Mana Potion -->				
-					<CustomBehavior File="DeleteItems" 
-									Ids="13444" />	
-									
-					<!-- Libram of Voracity -->										
-					<CustomBehavior File="DeleteItems" 
-									Ids="11737" />
-									
-					<!-- Libram of Resilience -->
-					<CustomBehavior File="DeleteItems" 
-									Ids="11736" />	
-									
-					<!-- Roasted Quail -->
-					<CustomBehavior File="DeleteItems" 
-									Ids="8952" />	
-									
-					<!-- Superior Mana Potion -->
-					<CustomBehavior File="DeleteItems" 
-									Ids="22256" />	
-									
-					<!-- Mana Potion -->
-					<CustomBehavior File="DeleteItems" 
-									Ids="26480" />
-									
-					<!-- Light Feather -->
-					<CustomBehavior File="DeleteItems" 
-									Ids="17056" />
-									
-					<!-- Dark Iron Bullet -->
-					<CustomBehavior File="DeleteItems" 
-									Ids="62916" />	
-									
-					<!-- Mag'har Grainbread -->
-					<CustomBehavior File="DeleteItems" 
-									Ids="27855" />
-									
-					<!-- Homemade Cherry Pie -->
-					<CustomBehavior File="DeleteItems" 
-									Ids="8950" />
-									
-					<!-- Smoked Talbuk Venison -->
-					<CustomBehavior File="DeleteItems" 
-									Ids="27854" />		
-							
+					<!--Profile message	- Toughened Flesh -->				
+					<CustomBehavior File="Message" 
+									Text="Toughened Flesh." 
+									LogColor="Plum" />			
+								
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />			
+								
 					<!-- Instance timer -->
 					<CustomBehavior File="Misc\InstanceTimer" 
 									Timer="Start" />							
