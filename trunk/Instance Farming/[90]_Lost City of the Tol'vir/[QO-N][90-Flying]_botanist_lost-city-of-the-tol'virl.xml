@@ -484,6 +484,9 @@
 					<!-- Move to - 13th group - 2nd pygmies -->
 					<MoveTo X="-10978.33" Y="-1605.373" Z="7.676232" />
 					
+					<!-- Move to - 13th group - stairs -->
+					<MoveTo X="-10993.52" Y="-1598.77" Z="6.330247" />
+					
 					<!-- Move to - 13th group - Lockmaw -->
 					<MoveTo X="-11058.1" Y="-1656.58" Z="0.7449389" />
 					
@@ -500,32 +503,24 @@
 									WaitTime="3000" />
 	
 	
-					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
-													   
+					<!-- @@@@@@@@@@@@@@@@@@@@ Exiting @@@@@@@@@@@@@@@@@@@@ -->
 					
-					<!-- Profile message - Disabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Disabling combat." 
-										LogColor="Gold" />				
-									
-					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />
 					
 					<!-- Move to - 13th group - General Husam -->
 					<MoveTo X="-10812.18" Y="-1351.613" Z="17.60344" />
 					
-					<!-- Profile message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />				
-									
-					<!-- EnableBehavior - Combat -->				
-					<EnableBehavior Name="Combat" />
-					
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
+									
+					<!-- Move to - 13th group - General Husam -->
+					<MoveTo X="-10844.99" Y="-1398.624" Z="15.35405" />				
 
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+									
+									
 					<!-- @@@@@@@@@@@@@@@@@@@@ Exiting @@@@@@@@@@@@@@@@@@@@ -->
 													   
 					
