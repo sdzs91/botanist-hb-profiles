@@ -70,6 +70,124 @@
 						UseMount="True" 
 						UseRandomMount="False" />		
 				
+		<!-- If we are in Eatern Kingsoms -->
+		<If Condition="Me.MapId == 0" >
+		
+			<!-- Profile message - We are in Eastern Kingdoms -->
+			<CustomBehavior File="Message" 
+							Text="We are in Eastern Kingdoms"  
+							LogColor="Orange" />
+							
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />				
+							
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance">				
+							
+				<!-- Profile message - Moving to Stormwind docks -->
+				<CustomBehavior File="Message" 
+								Text="Moving to Stormwind docks."  
+								LogColor="Cyan" />				
+								
+				<!-- Move to - Stormwind docks - hover point -->				
+				<CustomBehavior File="FlyTo" 
+								X="-8293.106" Y="1345.912" Z="67.3783" />				
+								
+				<!-- CTM to - grounding at the Stormwind docks -->
+				<CustomBehavior File="MyCTM" 
+								X="-8294.888" Y="1405.77" Z="4.406102" />	
+
+				<!-- Forced dismount -->	
+				<CustomBehavior File="ForcedDismount" />
+				
+				<!-- Profile message - Waiting for the boat to Borean Tundra -->				
+				<CustomBehavior File="Message" 
+								Text="Waiting for the boat to Borean Tundra." 
+								LogColor="Lime" />
+												
+				<!-- STormwindW dock - Valiance Keep - Borean Tundra -->
+				<CustomBehavior File="UseTransport" 
+								TransportId="190536" 
+								WaitAtX="-8300.08" 
+								WaitAtY="1405.158" 
+								WaitAtZ="4.422395"
+								TransportStartX="-8288.816" 
+								TransportStartY="1424.703" 
+								TransportStartZ="0.04"
+								StandOnX="-8294.842" 
+								StandOnY="1421.358" 
+								StandOnZ="9.488697"
+								TransportEndX="2218.391" 
+								TransportEndY="5119.589" 
+								TransportEndZ="0.04"	
+								GetOffX="2234.375" 
+								GetOffY="5132.568" 
+								GetOffZ="5.343217" />
+								
+			</If>	<!-- If we are Alliance -->
+			
+		</If>	<!-- If we are in Eatern Kingsoms -->		
+
+		<!-- If we are in Kalimdor -->
+		<If Condition="Me.MapId == 1" >
+		
+			<!-- Profile message - We are in Kalimdor -->
+			<CustomBehavior File="Message" 
+							Text="We are in Kalimdor"  
+							LogColor="Orange" />
+							
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />				
+							
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde">				
+							
+				<!-- Profile message - Moving to Stormwind docks -->
+				<CustomBehavior File="Message" 
+								Text="Moving to Stormwind docks."  
+								LogColor="Cyan" />				
+								
+				<!-- Move to - Stormwind docks - hover point -->				
+				<CustomBehavior File="FlyTo" 
+								X="-8293.106" Y="1345.912" Z="67.3783" />				
+								
+				<!-- CTM to - grounding at the Stormwind docks -->
+				<CustomBehavior File="MyCTM" 
+								X="-8294.888" Y="1405.77" Z="4.406102" />	
+
+				<!-- Forced dismount -->	
+				<CustomBehavior File="ForcedDismount" />
+				
+				<!-- Profile message - Waiting for the boat to Borean Tundra -->				
+				<CustomBehavior File="Message" 
+								Text="Waiting for the boat to Borean Tundra." 
+								LogColor="Lime" />
+												
+				<!-- STormwindW dock - Valiance Keep - Borean Tundra -->
+				<CustomBehavior File="UseTransport" 
+								TransportId="190536" 
+								WaitAtX="-8300.08" 
+								WaitAtY="1405.158" 
+								WaitAtZ="4.422395"
+								TransportStartX="-8288.816" 
+								TransportStartY="1424.703" 
+								TransportStartZ="0.04"
+								StandOnX="-8294.842" 
+								StandOnY="1421.358" 
+								StandOnZ="9.488697"
+								TransportEndX="2218.391" 
+								TransportEndY="5119.589" 
+								TransportEndZ="0.04"	
+								GetOffX="2234.375" 
+								GetOffY="5132.568" 
+								GetOffZ="5.343217" />
+			
+			</If>	<!-- If we are IsHorde -->
+			
+		</If>	<!-- If we are in Kalimdor -->
+		
 		<!-- If we are in the Pit of Saron -->
 		<If Condition="Me.ZoneId == 4813" >
 		
