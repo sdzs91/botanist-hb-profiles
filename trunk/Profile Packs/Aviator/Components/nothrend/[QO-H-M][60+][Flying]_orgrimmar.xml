@@ -427,9 +427,9 @@
 		<!-- If we are at the Orgrimmar flight master -->
 		<If Condition="Me.X &gt; 1734.58 &amp;&amp; Me.X &lt; 1878.138 &amp;&amp; Me.Y &gt; -4469.707 &amp;&amp; Me.Y &lt; -4238.392" >
 		
-			<!-- Load profile - Staging Locations\[QO-H-M][60+][Flying]_eastern-kingdoms -->
+			<!-- Load profile - Staging Locations\[QO-H-M][68+][Flying]_northrend -->
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="Staging Locations\[QO-H-M][60+][Flying]_eastern-kingdoms" />
+							ProfileName="Staging Locations\[QO-H-M][68+][Flying]_northrend" />
 		
 		</If>	<!-- If we are at the Orgrimmar flight master -->
 
