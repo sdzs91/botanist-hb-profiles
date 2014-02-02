@@ -680,7 +680,7 @@
 			
 			<!-- Fly to - the Fuselight flight master -->			
 			<CustomBehavior File="FlyTo" 
-							X="-6574.94" Y="-3875.13" Z="390.94" />
+							X="-6588.14" Y="-3981.469" Z="368.3979" />
 			
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -688,7 +688,9 @@
 			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="5000" />
-		
+							
+			<!-- Move to - away from the tent to avoid getting stuck -->				
+			<MoveTo X="-6588.14" Y="-3981.469" Z="368.3979" />
 		
 		
 			<!-- ************************************************** Moving to the Bloodwatcher Point ************************************************************** -->
@@ -1030,11 +1032,6 @@
 							Text="Returning to Kalimdor."  
 							LogColor="Cyan" />
 		
-			<!-- Profile message - Returning to Kalimdor -->
-			<CustomBehavior File="Message" 
-							Text="Returning to Kalimdor."  
-							LogColor="Cyan" />
-		
 			<!-- Fly to the Booty Bay - boat hover point -->
 			<CustomBehavior File="FlyTo"
 							X="-14300.4" Y="518.0767" Z="38.75513" />
@@ -1071,13 +1068,13 @@
 		</If>	<!-- If we are in Eastern Kingdoms -->
 		
 		<!-- If we are at the Orgrimmar flight master -->
-			<If Condition="Me.X &gt; 1734.58 &amp;&amp; Me.X &lt; 1878.138 &amp;&amp; Me.Y &gt; -4469.707 &amp;&amp; Me.Y &lt; -4238.392" >
-			
-				<!-- Load profile - [QO-H-M][60+][Flying]_outland -->
-				<CustomBehavior File="LoadProfile" 
-								ProfileName="[QO-H-M][60+][Flying]_outland" />
-			
-			</If>	<!-- If we are at the Orgrimmar flight master -->
+		<If Condition="Me.X &gt; 1734.58 &amp;&amp; Me.X &lt; 1878.138 &amp;&amp; Me.Y &gt; -4469.707 &amp;&amp; Me.Y &lt; -4238.392" >
+		
+			<!-- Load profile - [QO-H-M][60+][Flying]_outland -->
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="[QO-H-M][60+][Flying]_outland" />
+		
+		</If>	<!-- If we are at the Orgrimmar flight master -->
 				
 	</QuestOrder>
 	

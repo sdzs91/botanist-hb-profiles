@@ -97,7 +97,7 @@
 			
 			<!-- Load profile - Components\nothrend\[QO-H-M][90][Flying]_orgrimmar -->
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="Components\nothrend\[QO-H-M][90][Flying]_orgrimmar" />
+							ProfileName="Components\pandaria\[QO-H-M][60+][Flying]_orgrimmar" />
 			
 		</If>	<!-- If we are Horde -->
 			

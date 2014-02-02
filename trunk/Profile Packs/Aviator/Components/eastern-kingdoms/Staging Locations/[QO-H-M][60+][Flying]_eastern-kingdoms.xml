@@ -669,7 +669,11 @@
 		
 		
 		
-			<!-- ************************************************** Moving to the Fuselight ************************************************************** -->
+			
+		
+		
+			<!-- ************************************************** Moving to the Bloodwatcher Point ************************************************************** -->
+<!-- ************************************************** Moving to the Fuselight ************************************************************** -->
 
 							
 							
@@ -680,7 +684,7 @@
 			
 			<!-- Fly to - the Fuselight flight master -->			
 			<CustomBehavior File="FlyTo" 
-							X="-6574.94" Y="-3875.13" Z="390.94" />
+							X="-6588.14" Y="-3981.469" Z="368.3979" />
 			
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -688,11 +692,9 @@
 			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="5000" />
-		
-		
-		
-			<!-- ************************************************** Moving to the Bloodwatcher Point ************************************************************** -->
-
+							
+			<!-- Move to - away from the tent to avoid getting stuck -->				
+			<MoveTo X="-6588.14" Y="-3981.469" Z="368.3979" />
 							
 							
 			<!-- Profile message - Moving to the Bloodwatcher Point flight master -->

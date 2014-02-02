@@ -472,12 +472,12 @@
 							
 							
 							
-			<!-- Profile message - Moving to Vengeance flight master -->
+			<!-- Profile message - Moving to Vengeance Landing flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Vengeance flight master."  
+							Text="Moving to Vengeance Landing flight master."  
 							LogColor="Cyan" />				
 							
-			<!-- Fly to - Vengeance flight master -->				
+			<!-- Fly to - Vengeance Landing flight master -->				
 			<CustomBehavior File="FlyTo" 
 							X="1918.6" Y="-6175.89" Z="24.41" />
 
