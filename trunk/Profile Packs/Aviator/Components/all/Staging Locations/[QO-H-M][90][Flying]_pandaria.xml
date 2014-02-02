@@ -937,6 +937,28 @@
 							Text="Moving to the Orgrimmar flight master."  
 							LogColor="Cyan" />				
 							
+			<!-- If we are in the Cleft of Shadow -->
+			<If Condition="Me.X &lt; 1895.627 &amp;&amp; Me.X &gt; 1713.31 &amp;&amp; Me.Y &gt; -4440.429 &amp;&amp; Me.Y &lt; -4283.688 &amp;&amp; Me.Z &lt; 35" >
+			
+				<!-- Profile message - we are in the Cleft of Shadow -->
+				<CustomBehavior File="Message" 
+								Text="We are in the Cleft of Shadow"  
+								LogColor="Orange" />
+			
+				<!-- UserSettings -->
+				<CustomBehavior File="UserSettings" 
+									UseMount="False" />
+			
+				<!-- Move to - mount location outside the Cleft of Shadow -->
+				<MoveTo X="1892.877" Y="-4546.347" Z="29.89322" />
+			
+				<!-- UserSettings -->
+				<CustomBehavior File="UserSettings" 
+									UseMount="True" />
+				
+			</If>	<!-- If we are in the Cleft of Shadow -->				
+							
+							
 			<!-- Move to - Orgrimmar flight master - hover point -->				
 			<CustomBehavior File="FlyTo" 
 							X="1741.506" Y="-4351.96" Z="175.3221" />				
