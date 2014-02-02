@@ -406,7 +406,7 @@
 				<!-- @@@@@@@@@@@@@@@@@@@@ 5th pull @@@@@@@@@@@@@@@@@@@@ -->
 				
 				
-				<!-- Move to - Slabhide -->
+				<!-- Move to - pre-Slabhide -->
 				<MoveTo X="1244.63" Y="1199.083" Z="247.5745" />
 				
 				<!-- Wait timer - wait 15 seconds - delay -->
@@ -417,19 +417,9 @@
 				<!-- @@@@@@@@@@@@@@@@@@@@ 5th pull @@@@@@@@@@@@@@@@@@@@ -->
 				
 				
-				
-				<!-- Forces kill of Slabhide -->
-				<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-								EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="43214"
-								EventX="1292.352" EventY="1226.478" EventZ="247.6368"
-								MoveOutOfGroundEffectAuraId1="111111"
-								MoveAwayFromMobCastingSpellId1="111111"
-								MoveAwayFromMobWithAuraId1="111111">
-					<Safespots>
-						<Hotspot X="1292.352" Y="1226.478" Z="247.6368" />
-					</Safespots>
-				</CustomBehavior>
-				
+				<!-- Move to - Slabhide -->
+				<MoveTo X="1292.352" Y="1226.478" Z="247.6368" />
+
 				<!-- Wait timer - wait 15 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="15000" />
