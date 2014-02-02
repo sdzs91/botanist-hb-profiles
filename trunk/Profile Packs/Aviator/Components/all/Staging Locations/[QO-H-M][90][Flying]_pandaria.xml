@@ -553,9 +553,9 @@
 							
 							
 							
-			<!-- Profile message - Moving to Binan Village flight master -->
+			<!-- Profile message - Moving to Eastwind Rest flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Binan Village flight master."  
+							Text="Moving to the Eastwind Rest flight master."  
 							LogColor="Cyan" />				
 							
 			<!-- Fly to - Binan Village flight master -->				
@@ -778,12 +778,12 @@
 							
 							
 							
-			<!-- Profile message - Moving to Gao-Ran Battlefront flight master -->
+			<!-- Profile message - Moving to Sunset Brewgarden flight master -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Gao-Ran Battlefront flight master."  
+							Text="Moving to the Sunset Brewgarden flight master."  
 							LogColor="Cyan" />				
 							
-			<!-- Fly to - Gao-Ran Battlefront flight master -->				
+			<!-- Fly to - Sunset Brewgarden flight master -->				
 			<CustomBehavior File="FlyTo" 
 							X="983.9922" Y="3445.885" Z="257.0704" />
 
@@ -931,7 +931,7 @@
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							UseMount="True" />
-			
+
 			<!-- Profile message - Moving to the Orgrimmar flight master -->
 			<CustomBehavior File="Message" 
 							Text="Moving to the Orgrimmar flight master."  
@@ -939,11 +939,11 @@
 							
 			<!-- Move to - Orgrimmar flight master - hover point -->				
 			<CustomBehavior File="FlyTo" 
-							X="-8933.752" Y="451.1799" Z="134.7807" />				
+							X="1741.506" Y="-4351.96" Z="175.3221" />				
 							
 			<!-- CTM to - grounding at the Orgrimmar flight master -->
 			<CustomBehavior File="MyCTM" 
-							X="-8845.87" Y="495.948" Z="109.6085" />	
+							X="1798.27" Y="-4363.27" Z="102.5218" />	
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
