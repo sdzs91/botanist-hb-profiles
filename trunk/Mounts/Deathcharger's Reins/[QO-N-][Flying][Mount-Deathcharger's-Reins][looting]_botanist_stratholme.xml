@@ -880,6 +880,11 @@
 									
 					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.HealthPercent > 20) &amp;&amp; (Me.CurrentTarget.Entry == 10416)" >				
 									
+						<!-- Profile message - Engaging a Bile Spewer. -->
+						<CustomBehavior File="Message" 
+										Text="Engaging a Bile Spewer." 
+										LogColor="Plum" />
+								
 						<!-- Custom behavior - TargetAndMoveToMob - Bile Spewer -->
 						<CustomBehavior File="TargetAndMoveToMob"
 										MoveWithinMaxRangeOfMob="1"
@@ -939,6 +944,11 @@
 									
 					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.HealthPercent > 20) &amp;&amp; (Me.CurrentTarget.Entry == 10417)" >				
 									
+						<!-- Profile message - Engaging a Venom Belcher -->
+						<CustomBehavior File="Message" 
+										Text="Engaging a Venom Belcher." 
+										LogColor="Plum" />			
+									
 						<!-- Custom behavior - TargetAndMoveToMob - Venom Belcher -->
 						<CustomBehavior File="TargetAndMoveToMob"
 										MoveWithinMaxRangeOfMob="1"
@@ -994,7 +1004,11 @@
 				
 				<!-- Move to - door entering the Slaughter House  -->	
 				<MoveTo X="4032.902" Y="-3371.6" Z="115.0624" />
-
+				
+				<!-- Usersettings -->
+				<CustomBehavior File="UserSettings" 
+								LootMobs="True" />
+				
 				<!-- Move to - Lord Aurius Rivendare  -->	
 				<MoveTo X="4035.828" Y="-3336.308" Z="115.06" /> 
 				
