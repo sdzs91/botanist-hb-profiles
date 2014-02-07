@@ -63,7 +63,7 @@
 					HarvestMinerals="False" 
 					KillBetweenHotspots="True" 
 					RessAtSpiritHealers="False" 
-					LootRadius="10" 
+					LootRadius="45" 
 					LogoutForInactivity="True" />
 				
         <While Condition="true" >
@@ -392,151 +392,8 @@
 			<!-- If we are inside Stratholme -->
 			<If Condition="Me.MapId == 329">
 			
-				<!-- If we are inside the 1st gate -->
-				<If Condition="Me.X &lt; 3627.395" >
-				
-					<!-- Profile message - Stratholme detected, exiting the instance-->
-					<CustomBehavior File="Message" 
-									Text="Stratholme detected, exiting the instance." 
-									LogColor="Orange" />
-					
-					<!-- Move to - right-hand turn  -->
-					<RunTo X="3597.31" Y="-3654.986" Z="138.511" />
-					
-					<!-- Move to - zone in location -->
-					<RunTo X="3590.87" Y="-3643.22" Z="138.4909" />
-					
-					<!-- Move to - attempt to enter the instance -->
-					<CustomBehavior File="Misc\InInstance" 
-									X="3588.449" Y="-3639.78" Z="138.4822" />
-					
-					<!-- Wait timer - wait 15 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="15000" />
-					
-					<!-- Profile message - I have exited the dungeon -->
-					<CustomBehavior File="Message" 
-									Text="I have exited the dungeon." 
-									LogColor="Fuchsia" />
-					
-				</If>	<!-- If we are inside the 1st gate -->
-
-				<!-- If we are outside the first gate -->
-				<If Condition="Me.X &gt; 3627.395" >
-				
-					<!-- Profile message - Stratholme detected, exiting the instance-->
-					<CustomBehavior File="Message" 
-									Text="Stratholme detected, exiting the instance." 
-									LogColor="Orange" />
-					
-					<!-- Move to - 1st gate -->
-					<RunTo X="3627.206" Y="-3640.699" Z="138.4589" />
-						
-					<!-- Custom behavior - InteractWith - open the gate -->	
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="1000" />
-					
-					<!-- Profile message - Opening the gate -->
-					<CustomBehavior File="Message" 
-									Text="Opening the gate." 
-									LogColor="Fuchsia" />
-					
-					<!-- Custom behavior - InteractWith - open the gate -->	
-					<CustomBehavior File="InteractWith" 
-									MobId="175368" 
-									ObjectType="Gameobject" 
-									Range="4.75" 
-									NumOfTimes="1"  
-									WaitTime="1" 
-									X="3624.90845" Y="-3642.1626" Z="138.445114" />
-					
-					<!-- Move to - right-hand turn  -->
-					<RunTo X="3597.31" Y="-3654.986" Z="138.511" />
-					
-					<!-- Move to - zone in location -->
-					<RunTo X="3590.87" Y="-3643.22" Z="138.4909" />
-					
-					<!-- Move to - attempt to enter the instance -->
-					<CustomBehavior File="Misc\InInstance" 
-									X="3588.449" Y="-3639.78" Z="138.4822" />
-					
-					<!-- Wait timer - wait 15 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="15000" />
-					
-					<!-- Profile message - I have exited the dungeon -->
-					<CustomBehavior File="Message" 
-									Text="I have exited the dungeon." 
-									LogColor="Fuchsia" />
-					
-				</If>	<!-- If we are outside the first gate -->
-				
-			</If>	<!-- If we are inside Stratholme -->						
-				
-			<!-- If we are in the instance box-->
-			<If Condition="Me.X &lt; 3239.871 &amp;&amp; Me.X &gt; 3184.693 &amp;&amp; Me.Y &lt; -4033.876 &amp;&amp; Me.Y &gt; -4050.978" > 
-						
-				<!-- Profile message - Portal detected nearby -->
-				<CustomBehavior File="Message" 
-								Text="Portal detected nearby."
-								LogColor="Fuchsia" />	
-
-				<!-- Profile message - Resetting the instance -->
-				<CustomBehavior File="Message" 
-								Text="Resetting the instance." 
-								LogColor="Fuchsia" />
-				
-				<!-- Custom behavior - macro - reset the instance -->
-				<CustomBehavior File="RunMacro" 
-								Macro="/script ResetInstances()" />	
-								
-				<!-- Custom behavior - macro - set dungeon difficulty to normal -->					
-				<CustomBehavior File="RunMacro" 
-								Macro="/script SetDungeonDifficultyID(1)" />
-				
-				<!-- Profile message - The instance has been reset -->
-				<CustomBehavior File="Message" 
-								Text="The instance has been reset." 
-								LogColor="Fuchsia" />
-					
-				<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
-				<While Condition="Me.MapId != 329">
-				
-					<!-- Move to - zone out location -->
-					<RunTo X="3233.06" Y="-4048.3" Z="108.442" />
-
-					<!-- Move to - attempt to enter the instance -->
-					<CustomBehavior File="Misc\InInstance" 
-									X="3238.079" Y="-4057.018" Z="108.4619" />
-									
-					<!-- Profile message - Waiting for the dungeon to load -->				
-					<CustomBehavior File="Message" 
-									Text="Waiting for the dungeon to load." 
-									LogColor="Fuchsia" />
-					
-					<!-- Wait timer - wait 20 seconds for the instance to load -->						
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="20000" />
-									
-					<!-- If we still aren't in, we're locked out -->
-					<If Condition="Me.MapId != 329">
-					
-						<!-- Profile message - We are locked out. Waiting 20 seconds, then attempting to enter again -->
-						<CustomBehavior File="Message" 
-										Text="We are locked out. Waiting 20 seconds, then attempting to enter again ." 
-										LogColor="Fuchsia" />
-										
-					</If>	<!-- If we still aren't in, we're locked out -->
-					
-				</While>	<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
-				
-			</If>	<!-- If we are in the instance box -->						
-			
-			<!-- If we are in Stratholme -->				
-			<If Condition="Me.MapId == 329">
-			
 				<!-- Zone in location -->
-				<RunTo X="3590.87" Y="-3643.22" Z="138.491" />
+				<MoveTo X="3590.87" Y="-3643.22" Z="138.491" />
 				
 				<!--Profile message	- Deleting unwanted items from our bags -->				
 				<CustomBehavior File="Message" 
@@ -574,18 +431,18 @@
 				<!-- Profile message - Hellfire Ramparts initialized -->
 				<CustomBehavior File="Message" 
 								Text="Stratholme initialized."  
-								LogColor="Fuchsia" />				
+								LogColor="Plum" />				
 								
 				<!-- Move to - left-hand turn -->			
-				<RunTo X="3598.325" Y="-3654.991" Z="138.5105" />
+				<MoveTo X="3598.325" Y="-3654.991" Z="138.5105" />
 				
 				<!-- Move to - 1st gate -->
-				<RunTo X="3621.646" Y="-3643.887" Z="138.5105" />
+				<MoveTo X="3621.646" Y="-3643.887" Z="138.5105" />
 
 				<!-- Profile message - Opening the gate -->	
 				<CustomBehavior File="Message" 
 								Text="Opening the gate." 
-								LogColor="Fuchsia" />
+								LogColor="Plum" />
 				
 				<!-- Custom behavior - InteractWith - 1st gate  -->				
 				<CustomBehavior File="InteractWith" 
@@ -596,36 +453,46 @@
 								WaitTime="1" 
 								X="3624.90845" Y="-3642.1626" Z="138.445114" />
 								
+				<!-- Profile message - Disabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Disabling combat." 
+									LogColor="Fuchsia" />
+
+				<!-- Disable combat -->
+				<DisableBehavior Name="Combat" />				
+								
 				<!-- RLH to - pull all mobs in the court yard inside the church -->				
-				<CustomBehavior File="RunLikeHell" 
-								UseCTM="true" 
-								NumOfTimes="1" 
-								AllowCombat="false">
-					<Hotspot X="3628.536" Y="-3640.215" Z="138.5518" />
-					<Hotspot X="3641.778" Y="-3639.01" Z="138.5127" />
-					<Hotspot X="3659.161" Y="-3603.504" Z="136.9696" />
-					<Hotspot X="3671.745" Y="-3592.973" Z="137.1315" />
-					<Hotspot X="3711.208" Y="-3607.594" Z="141.2447" />
-					<Hotspot X="3684.45" Y="-3607.668" Z="137.989" />
-					<Hotspot X="3661.411" Y="-3613.698" Z="137.2019" />
-					<Hotspot X="3667.093" Y="-3624.899" Z="139.9525" />
-					<Hotspot X="3673.547" Y="-3632.984" Z="139.9443" />
-					<Hotspot X="3678.544" Y="-3630.957" Z="139.9443" />
-					<Hotspot X="3685.982" Y="-3640.979" Z="139.9442" />
-					<Hotspot X="3676.79" Y="-3646.862" Z="139.9442" />
-					<Hotspot X="3668.196" Y="-3638.921" Z="139.9441" />
-					<Hotspot X="3678.544" Y="-3630.957" Z="139.9443" />
-				</CustomBehavior>
-				<RunTo X="3678.544" Y="-3630.957" Z="139.9443" />
+				<MoveTo X="3628.536" Y="-3640.215" Z="138.5518" />
+				<MoveTo X="3641.778" Y="-3639.01" Z="138.5127" />
+				<MoveTo X="3659.161" Y="-3603.504" Z="136.9696" />
+				<MoveTo X="3671.745" Y="-3592.973" Z="137.1315" />
+				<MoveTo X="3711.208" Y="-3607.594" Z="141.2447" />
+				<MoveTo X="3684.45" Y="-3607.668" Z="137.989" />
+				<MoveTo X="3661.411" Y="-3613.698" Z="137.2019" />
+				<MoveTo X="3667.093" Y="-3624.899" Z="139.9525" />
+				<MoveTo X="3673.547" Y="-3632.984" Z="139.9443" />
+				<MoveTo X="3678.544" Y="-3630.957" Z="139.9443" />
+				<MoveTo X="3685.982" Y="-3640.979" Z="139.9442" />
+				<MoveTo X="3676.79" Y="-3646.862" Z="139.9442" />
+				<MoveTo X="3668.196" Y="-3638.921" Z="139.9441" />
+				<MoveTo X="3678.544" Y="-3630.957" Z="139.9443" />
+
+				<!-- Profile message - Enabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Enabling combat." 
+									LogColor="Gold" />
+				
+				<!-- EnableBehavior - Combat -->	
+				<EnableBehavior Name="Combat" />
 				
 				<!-- Move to - exit the church -->
-				<RunTo X="3661.368" Y="-3617.587" Z="137.5836" />
+				<MoveTo X="3661.368" Y="-3617.587" Z="137.5836" />
 				
 				<!-- Move to - avoid the lamp post -->
-				<RunTo X="3684.298" Y="-3607.257" Z="137.9445" />
+				<MoveTo X="3684.298" Y="-3607.257" Z="137.9445" />
 				
 				<!-- Move to - 2nd gate -->
-				<RunTo X="3722.172" Y="-3600.637" Z="142.3367" />
+				<MoveTo X="3722.172" Y="-3600.637" Z="142.3367" />
 
 				<!-- Custom behavior - InteractWith - 1st gate  -->	
 				<CustomBehavior File="InteractWith" 
@@ -637,7 +504,7 @@
 								X="3727.29126" Y="-3599.08252" Z="142.219528" />	
 				
 				<!-- Move to - the gauntlet -->
-				<RunTo X="3784.173" Y="-3593.188" Z="144.6194" />
+				<MoveTo X="3784.173" Y="-3593.188" Z="144.6194" />
 
 				<!-- Wait timer - wait 5 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
@@ -646,11 +513,10 @@
 				<!-- Profile message - Moving to Nerub'enkan -->
 				<CustomBehavior File="Message" 
 								Text="Moving to Nerub'enkan." 
-								LogColor="Fuchsia" />
+								LogColor="Plum" />
 				
 				<!-- Move to - Nerub'enkan  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3854.165" Y="-3528.519" Z="144.2104" />
+				<MoveTo X="3854.165" Y="-3528.519" Z="144.2104" />
 				
 				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
@@ -659,41 +525,78 @@
 				<!-- Profile message - Disabling combat -->
 				<CustomBehavior File="Message" 
 									Text="Disabling combat." 
-									LogColor="Fuchsia" />
+									LogColor="Plum" />
 
 				<!-- Disable combat -->
 				<DisableBehavior Name="Combat" />	
 
 				<!-- Move to - 1st ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3844.769" Y="-3510.155" Z="144.2098" />
+				<MoveTo X="3844.769" Y="-3510.155" Z="144.2098" />
 
 				<!-- Move to - 1st ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3847.577" Y="-3491.228" Z="141.2107" />
+				<MoveTo X="3847.577" Y="-3491.228" Z="141.2107" />
 								
 				<!-- Move to - 1st ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3835.397" Y="-3490.049" Z="141.2107" />
+				<MoveTo X="3835.397" Y="-3490.049" Z="141.2107" />
 								
 				<!-- Move to - 1st ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3829.033" Y="-3502.767" Z="141.2107" />
+				<MoveTo X="3829.033" Y="-3502.767" Z="141.2107" />
 								
 				<!-- Move to - 1st ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3845.252" Y="-3510.9" Z="144.21" />
+				<MoveTo X="3845.252" Y="-3510.9" Z="144.21" />
 								
 				<!-- Move to - 1st ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3855.84" Y="-3530.776" Z="144.21" />
+				<MoveTo X="3855.84" Y="-3530.776" Z="144.21" />
 
-				<!-- enable combat -->
+				<!-- Profile message - Enabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Enabling combat." 
+									LogColor="Gold" />
+				
+				<!-- EnableBehavior - Combat -->	
 				<EnableBehavior Name="Combat" />
 							
 				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />
+								
+				<!-- Profile message - Disabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Disabling combat." 
+									LogColor="Plum" />
+
+				<!-- Disable combat -->
+				<DisableBehavior Name="Combat" />	
+
+				<!-- Move to - 1st ziggurat - kite  -->	
+				<MoveTo X="3844.769" Y="-3510.155" Z="144.2098" />
+
+				<!-- Move to - 1st ziggurat - kite  -->	
+				<MoveTo X="3847.577" Y="-3491.228" Z="141.2107" />
+								
+				<!-- Move to - 1st ziggurat - kite  -->	
+				<MoveTo X="3835.397" Y="-3490.049" Z="141.2107" />
+								
+				<!-- Move to - 1st ziggurat - kite  -->	
+				<MoveTo X="3829.033" Y="-3502.767" Z="141.2107" />
+								
+				<!-- Move to - 1st ziggurat - kite  -->	
+				<MoveTo X="3845.252" Y="-3510.9" Z="144.21" />
+								
+				<!-- Move to - 1st ziggurat - kite  -->	
+				<MoveTo X="3855.84" Y="-3530.776" Z="144.21" />
+
+				<!-- Profile message - Enabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Enabling combat." 
+									LogColor="Gold" />
+				
+				<!-- EnableBehavior - Combat -->	
+				<EnableBehavior Name="Combat" />
+							
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />				
 
 								
 				<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -702,11 +605,10 @@
 				<!-- Profile message - Moving to Baroness Anastari -->
 				<CustomBehavior File="Message" 
 								Text="Moving to Baroness Anastari." 
-								LogColor="Fuchsia" />
+								LogColor="Plum" />
 				
 				<!-- Move to - Baroness Anastari  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3855.374" Y="-3714.728" Z="148.0922" />
+				<MoveTo X="3855.374" Y="-3714.728" Z="148.0922" />
 				
 				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
@@ -715,41 +617,78 @@
 				<!-- Profile message - Disabling combat -->
 				<CustomBehavior File="Message" 
 									Text="Disabling combat." 
-									LogColor="Fuchsia" />
+									LogColor="Plum" />
 
 				<!-- Disable combat -->
 				<DisableBehavior Name="Combat" />	
 
 				<!-- Move to - 2nd ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3850.447" Y="-3736.665" Z="148.0916" />
+				<MoveTo X="3850.447" Y="-3736.665" Z="148.0916" />
 
 				<!-- Move to - 2nd ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3837.173" Y="-3747.164" Z="145.0919" />
+				<MoveTo X="3837.173" Y="-3747.164" Z="145.0919" />
 								
 				<!-- Move to - 2nd ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3845.205" Y="-3759.438" Z="145.0919" />
+				<MoveTo X="3845.205" Y="-3759.438" Z="145.0919" />
 								
 				<!-- Move to - 2nd ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3858.33" Y="-3750.337" Z="145.0919" />
+				<MoveTo X="3858.33" Y="-3750.337" Z="145.0919" />
 								
 				<!-- Move to - 2nd ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3850.71" Y="-3735.741" Z="148.0918" />
+				<MoveTo X="3850.71" Y="-3735.741" Z="148.0918" />
 								
 				<!-- Move to - 2nd ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="3855.511" Y="-3715.12" Z="148.0918" />
+				<MoveTo X="3855.511" Y="-3715.12" Z="148.0918" />
 
-				<!-- enable combat -->
+				<!-- Profile message - Enabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Enabling combat." 
+									LogColor="Gold" />
+				
+				<!-- EnableBehavior - Combat -->	
 				<EnableBehavior Name="Combat" />
 							
 				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />
+								
+				<!-- Profile message - Disabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Disabling combat." 
+									LogColor="Plum" />
+
+				<!-- Disable combat -->
+				<DisableBehavior Name="Combat" />	
+
+				<!-- Move to - 2nd ziggurat - kite  -->	
+				<MoveTo X="3850.447" Y="-3736.665" Z="148.0916" />
+
+				<!-- Move to - 2nd ziggurat - kite  -->	
+				<MoveTo X="3837.173" Y="-3747.164" Z="145.0919" />
+								
+				<!-- Move to - 2nd ziggurat - kite  -->	
+				<MoveTo X="3845.205" Y="-3759.438" Z="145.0919" />
+								
+				<!-- Move to - 2nd ziggurat - kite  -->	
+				<MoveTo X="3858.33" Y="-3750.337" Z="145.0919" />
+								
+				<!-- Move to - 2nd ziggurat - kite  -->	
+				<MoveTo X="3850.71" Y="-3735.741" Z="148.0918" />
+								
+				<!-- Move to - 2nd ziggurat - kite  -->	
+				<MoveTo X="3855.511" Y="-3715.12" Z="148.0918" />
+
+				<!-- Profile message - Enabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Enabling combat." 
+									LogColor="Gold" />
+				
+				<!-- EnableBehavior - Combat -->	
+				<EnableBehavior Name="Combat" />
+							
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />				
 
 								
 				<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -758,11 +697,10 @@
 				<!-- Profile message - Moving to Maleki -->
 				<CustomBehavior File="Message" 
 								Text="Moving to Maleki." 
-								LogColor="Fuchsia" />
+								LogColor="Plum" />
 								
 				<!-- Move to - Maleki the Pallid  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="4034.621" Y="-3647.001" Z="135.6551" />
+				<MoveTo X="4034.621" Y="-3647.001" Z="135.6551" />
 				
 				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
@@ -771,78 +709,183 @@
 				<!-- Profile message - Disabling combat -->
 				<CustomBehavior File="Message" 
 									Text="Disabling combat." 
-									LogColor="Fuchsia" />
+									LogColor="Plum" />
 
 				<!-- Disable combat -->
 				<DisableBehavior Name="Combat" />	
 
 				<!-- Move to - 3rd ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="4048.956" Y="-3659.22" Z="135.6549" />
+				<MoveTo X="4048.956" Y="-3659.22" Z="135.6549" />
 
 				<!-- Move to - 3rd ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="4051.054" Y="-3675.281" Z="132.6552" />
+				<MoveTo X="4051.054" Y="-3675.281" Z="132.6552" />
 								
 				<!-- Move to - 3rd ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="4066.247" Y="-3674.111" Z="132.6552" />
+				<MoveTo X="4066.247" Y="-3674.111" Z="132.6552" />
 								
 				<!-- Move to - 3rd ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="4065.782" Y="-3659.761" Z="132.6552" />
+				<MoveTo X="4065.782" Y="-3659.761" Z="132.6552" />
 								
 				<!-- Move to - 3rd ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="4048.268" Y="-3658.728" Z="135.6551" />
+				<MoveTo X="4048.268" Y="-3658.728" Z="135.6551" />
 								
 				<!-- Move to - 3rd ziggurat - kite  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="4030.922" Y="-3643.495" Z="135.6551" />
+				<MoveTo X="4030.922" Y="-3643.495" Z="135.6551" />
 
-				<!-- enable combat -->
+				<!-- Profile message - Enabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Enabling combat." 
+									LogColor="Gold" />
+				
+				<!-- EnableBehavior - Combat -->	
 				<EnableBehavior Name="Combat" />
 							
 				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
-								WaitTime="30000" />
+								WaitTime="3000" />
+								
+				<!-- Profile message - Disabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Disabling combat." 
+									LogColor="Plum" />
+
+				<!-- Disable combat -->
+				<DisableBehavior Name="Combat" />	
+
+				<!-- Move to - 3rd ziggurat - kite  -->	
+				<MoveTo X="4048.956" Y="-3659.22" Z="135.6549" />
+
+				<!-- Move to - 3rd ziggurat - kite  -->	
+				<MoveTo X="4051.054" Y="-3675.281" Z="132.6552" />
+								
+				<!-- Move to - 3rd ziggurat - kite  -->	
+				<MoveTo X="4066.247" Y="-3674.111" Z="132.6552" />
+								
+				<!-- Move to - 3rd ziggurat - kite  -->	
+				<MoveTo X="4065.782" Y="-3659.761" Z="132.6552" />
+								
+				<!-- Move to - 3rd ziggurat - kite  -->	
+				<MoveTo X="4048.268" Y="-3658.728" Z="135.6551" />
+								
+				<!-- Move to - 3rd ziggurat - kite  -->	
+				<MoveTo X="4030.922" Y="-3643.495" Z="135.6551" />
+
+				<!-- Profile message - Enabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Enabling combat." 
+									LogColor="Gold" />
+				
+				<!-- EnableBehavior - Combat -->	
+				<EnableBehavior Name="Combat" />
+							
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />				
 
 								
 				<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
 
 				
-				<!-- Profile message - Disabling combat -->
-				<CustomBehavior File="Message" 
-									Text="Disabling combat." 
-									LogColor="Fuchsia" />
-
-				<!-- Disable combat -->
-				<DisableBehavior Name="Combat" />
 
 				<!-- Profile message - Moving to Slaughter Square -->
 				<CustomBehavior File="Message" 
 								Text="Moving to Slaughter Square." 
-								LogColor="Fuchsia" />
+								LogColor="Plum" />
 				
 				<!-- Move to - slaughter square  -->	
-				<RunTo X="4021.273" Y="-3619.991" Z="130.6951" />
-				<RunTo X="3994.734" Y="-3602.738" Z="128.9983" />
-				<RunTo X="4006.343" Y="-3586.316" Z="129.5652" />
-				<RunTo X="4020.009" Y="-3554.422" Z="125.1221" />
-				<RunTo X="4016.737" Y="-3519.567" Z="122.0374" />
-				<RunTo X="4037.554" Y="-3469.255" Z="121.7296" />
-				<RunTo X="4034.585" Y="-3407.102" Z="115.503" />
-				<RunTo X="3992.557" Y="-3393.039" Z="117.9832" />
-				<RunTo X="3979.992" Y="-3411.771" Z="119.8067" />
-				<RunTo X="4035.855" Y="-3452.637" Z="120.6029" />
-				<RunTo X="4062.73" Y="-3441.871" Z="119.9798" />
-				<RunTo X="4090.304" Y="-3418.337" Z="116.3641" />
-				<RunTo X="4076.396" Y="-3382.393" Z="115.9421" />
-				<RunTo X="4034.273" Y="-3408.007" Z="115.5648" />
+				<MoveTo X="4032.698" Y="-3402.134" Z="115.2236" />
+		
+				<!-- While Me.X &lt; 4029.67 || Me.X &gt; 4036.001 || Me.Y &lt; -3394.394 || Me.Y &gt; -3390.152 -->
+				<While Condition="Me.X &lt; 4029.67 || Me.X &gt; 4036.001 || Me.Y &lt; -3394.394 || Me.Y &gt; -3390.152" >
 					
-				<!-- enable combat -->
-				<EnableBehavior Name="Combat" />
-							
+					<!-- Macro - Clear target -->					
+					<CustomBehavior File="RunMacro" 
+									Macro="/cleartarget" 
+									NumOfTimes="1" 
+									WaitTime="0"/>
+
+					<!-- Custom behavior - Runmacro - target Bile Spewer -->	
+					<CustomBehavior File="RunMacro" 
+									Macro="/target Bile Spewer" />				
+									
+					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 10416)" >				
+									
+						<!-- Custom behavior - TargetAndMoveToMob - Bile Spewer -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="1"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="10416" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+				
+					</If>
+					
+					<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 10416)" >
+					
+						<!-- Profile message - There are no Bile Spewer's available, moving to the door to break the while loop -->
+						<CustomBehavior File="Message" 
+										Text="There are no Bile Spewer's available, moving to the door to break the while loop." 
+										LogColor="Plum" />
+					
+						<!-- Move to - top of the stairs to break the while loop  -->	
+						<MoveTo X="4032.944" Y="-3391.041" Z="119.7397" />
+					
+						<!-- Custom behavior waitTimer - 5 second delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+					</If>
+
+				</While>	<!-- While Me.X &lt; 4029.67 || Me.X &gt; 4036.001 || Me.Y &lt; -3394.394 || Me.Y &gt; -3390.152 -->		
+
+				<!-- Move to - bottom of the stairs to start the while loop  -->	
+				<MoveTo X="4032.698" Y="-3402.134" Z="115.2236" />
+	
+				<!-- Custom behavior waitTimer - 5 second delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="5000" />
+	
+				<!-- While Me.X &lt; 4029.67 || Me.X &gt; 4036.001 || Me.Y &lt; -3394.394 || Me.Y &gt; -3390.152 -->
+				<While Condition="Me.X &lt; 4029.67 || Me.X &gt; 4036.001 || Me.Y &lt; -3394.394 || Me.Y &gt; -3390.152" >
+				
+					<!-- Macro - Clear target -->					
+					<CustomBehavior File="RunMacro" 
+									Macro="/cleartarget" 
+									NumOfTimes="1" 
+									WaitTime="0"/>
+
+					<!-- Custom behavior - Runmacro - target Venom Belcher -->	
+					<CustomBehavior File="RunMacro" 
+									Macro="/target Venom Belcher" />				
+									
+					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 10417)" >				
+									
+						<!-- Custom behavior - TargetAndMoveToMob - Venom Belcher -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="1"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="10417" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+				
+					</If>
+					
+					<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 10417)" >
+					
+						<!-- Profile message - There are no Venom Belcherr's available, moving to the door to break the while loop -->
+						<CustomBehavior File="Message" 
+										Text="There are no Venom Belcher's available, moving to the door to break the while loop." 
+										LogColor="Plum" />
+					
+						<!-- Move to - top of the stairs to break the while loop  -->	
+						<MoveTo X="4032.944" Y="-3391.041" Z="119.7397" />
+					
+						<!-- Custom behavior waitTimer - 5 second delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+					</If>
+
+				</While>	<!-- While Me.X &lt; 4029.67 || Me.X &gt; 4036.001 || Me.Y &lt; -3394.394 || Me.Y &gt; -3390.152 -->
+
 				<!-- Wait timer - wait 2 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="2000" />	
@@ -864,37 +907,18 @@
 								WaitTime="3000" />
 				
 				<!-- Move to - door entering the Slaughter House  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="4032.902" Y="-3371.6" Z="115.0624" />
+				<MoveTo X="4032.902" Y="-3371.6" Z="115.0624" />
 				
-				<!-- Usersettings -->
-				<CustomBehavior File="UserSettings" 
-								LootMobs="True" />
-				
-				<!-- Forces kill of Lord Aurius Rivendare -->
-				<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-								EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="45412"
-								EventX="4035.828" EventY="-3336.308" EventZ="115.06"
-								MoveOutOfGroundEffectAuraId1="111111"
-								MoveAwayFromMobCastingSpellId1="111111"
-								MoveAwayFromMobWithAuraId1="111111">
-					<Safespots>
-						<Hotspot X="4035.828" Y="-3336.308" Z="115.06" />
-					</Safespots>
-				</CustomBehavior>
+				<!-- Move to - Lord Aurius Rivendare  -->	
+				<MoveTo X="4035.828" Y="-3336.308" Z="115.06" /> 
 				
 				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />
 
 				<!-- Move to - door exiting the Slaughter House  -->	
-				<CustomBehavior File="NoCombatMoveTo" 
-								X="4032.902" Y="-3371.6" Z="115.0624" />
+				<MoveTo X="4032.902" Y="-3371.6" Z="115.0624" />
 
-				<!-- Usersettings -->
-				<CustomBehavior File="UserSettings" 
-								LootMobs="False" />				
-								
 				<!-- If we looted Deathcharger's Reins -->
 				<If Condition="HasItem(13335)" >
 				
