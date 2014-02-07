@@ -804,6 +804,10 @@
 									NumOfTimes="1" 
 									WaitTime="0"/>
 
+					<!-- Custom behavior waitTimer - 3 second delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
 					<!-- Custom behavior - Runmacro - target Bile Spewer -->	
 					<CustomBehavior File="RunMacro" 
 									Macro="/target Bile Spewer" />				
@@ -818,23 +822,27 @@
 										MobId="10416" >
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 				
+						<Else>
+						
+							<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 10416)" >
+					
+								<!-- Profile message - There are no Bile Spewer's available, moving to the door to break the while loop -->
+								<CustomBehavior File="Message" 
+												Text="There are no Bile Spewer's available, moving to the door to break the while loop." 
+												LogColor="Plum" />
+							
+								<!-- Move to - top of the stairs to break the while loop  -->	
+								<MoveTo X="4032.944" Y="-3391.041" Z="119.7397" />
+							
+								<!-- Custom behavior waitTimer - 5 second delay -->
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="5000" />
+							</If>
+					
+						</Else>
+				
 					</If>
 					
-					<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 10416)" >
-					
-						<!-- Profile message - There are no Bile Spewer's available, moving to the door to break the while loop -->
-						<CustomBehavior File="Message" 
-										Text="There are no Bile Spewer's available, moving to the door to break the while loop." 
-										LogColor="Plum" />
-					
-						<!-- Move to - top of the stairs to break the while loop  -->	
-						<MoveTo X="4032.944" Y="-3391.041" Z="119.7397" />
-					
-						<!-- Custom behavior waitTimer - 5 second delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="5000" />
-					</If>
-
 				</While>	<!-- While Me.X &lt; 4029.67 || Me.X &gt; 4036.001 || Me.Y &lt; -3394.394 || Me.Y &gt; -3390.152 -->		
 
 				<!-- Move to - bottom of the stairs to start the while loop  -->	
@@ -852,7 +860,11 @@
 									Macro="/cleartarget" 
 									NumOfTimes="1" 
 									WaitTime="0"/>
-
+					
+					<!-- Custom behavior waitTimer - 3 second delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
 					<!-- Custom behavior - Runmacro - target Venom Belcher -->	
 					<CustomBehavior File="RunMacro" 
 									Macro="/target Venom Belcher" />				
@@ -867,23 +879,28 @@
 										MobId="10417" >
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 				
-					</If>
+						<Else>
+						
+							<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 10417)" >
 					
-					<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 10417)" >
-					
-						<!-- Profile message - There are no Venom Belcherr's available, moving to the door to break the while loop -->
-						<CustomBehavior File="Message" 
-										Text="There are no Venom Belcher's available, moving to the door to break the while loop." 
-										LogColor="Plum" />
-					
-						<!-- Move to - top of the stairs to break the while loop  -->	
-						<MoveTo X="4032.944" Y="-3391.041" Z="119.7397" />
-					
-						<!-- Custom behavior waitTimer - 5 second delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="5000" />
-					</If>
+								<!-- Profile message - There are no Venom Belcherr's available, moving to the door to break the while loop -->
+								<CustomBehavior File="Message" 
+												Text="There are no Venom Belcher's available, moving to the door to break the while loop." 
+												LogColor="Plum" />
+							
+								<!-- Move to - top of the stairs to break the while loop  -->	
+								<MoveTo X="4032.944" Y="-3391.041" Z="119.7397" />
+							
+								<!-- Custom behavior waitTimer - 5 second delay -->
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="5000" />
 
+							</If>
+					
+						</Else>
+				
+					</If>
+					
 				</While>	<!-- While Me.X &lt; 4029.67 || Me.X &gt; 4036.001 || Me.Y &lt; -3394.394 || Me.Y &gt; -3390.152 -->
 
 				<!-- Wait timer - wait 2 seconds - delay -->
