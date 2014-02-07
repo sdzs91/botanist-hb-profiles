@@ -648,7 +648,7 @@
 								X="3727.29126" Y="-3599.08252" Z="142.219528" />	
 				
 				<!-- Move to - the gauntlet -->
-				<MoveTo X="3784.173" Y="-3593.188" Z="144.6194" />
+				<MoveTo X="3781.684" Y="-3587.039" Z="143.5968" />
 
 				<!-- Wait timer - wait 5 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
