@@ -515,8 +515,37 @@
 								Text="Moving to Nerub'enkan." 
 								LogColor="Plum" />
 				
+				<!-- Move to - Nerub'enkan  - bottom step-->	
+				<MoveTo X="3858.502" Y="-3546.269" Z="137.8303" />
+
+				<!-- Macro - Clear target -->					
+				<CustomBehavior File="RunMacro" 
+								Macro="/cleartarget" 
+								NumOfTimes="1" 
+								WaitTime="0"/>
+
+				<!-- Custom behavior waitTimer - 3 second delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />				
+								
+				<!-- Custom behavior - Runmacro - target Nerub'enkan -->	
+				<CustomBehavior File="RunMacro" 
+								Macro="/target Nerub'enkan" />				
+								
+				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.HealthPercent > 20) &amp;&amp; (Me.CurrentTarget.Entry == 10437)" >				
+								
+					<!-- Custom behavior - TargetAndMoveToMob - Nerub'enkan -->
+					<CustomBehavior File="TargetAndMoveToMob"
+									MoveWithinMaxRangeOfMob="1"
+									TargetOnlyIfHealthPercentAbove="5"
+									WaitForNpcs="False"
+									MobId="10437" >
+					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+			
+				</If>
+				
 				<!-- Move to - Nerub'enkan  -->	
-				<MoveTo X="3854.165" Y="-3528.519" Z="144.2104" />
+				<MoveTo X="3855.564" Y="-3529.974" Z="144.2102" />
 				
 				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
