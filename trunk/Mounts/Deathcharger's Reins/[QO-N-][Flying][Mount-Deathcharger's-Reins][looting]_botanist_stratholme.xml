@@ -607,47 +607,38 @@
 								Text="Moving to Baroness Anastari." 
 								LogColor="Plum" />
 				
-				<!-- Move to - Baroness Anastari  -->	
-				<MoveTo X="3855.374" Y="-3714.728" Z="148.0922" />
-				
-				<!-- Wait timer - wait 3 seconds - delay -->
+				<!-- Move to - Baroness Anastari  - bottom step-->	
+				<MoveTo X="3863.933" Y="-3701.562" Z="141.6275" />
+
+				<!-- Macro - Clear target -->					
+				<CustomBehavior File="RunMacro" 
+								Macro="/cleartarget" 
+								NumOfTimes="1" 
+								WaitTime="0"/>
+
+				<!-- Custom behavior waitTimer - 3 second delay -->
 				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />
-					
-				<!-- Profile message - Disabling combat -->
-				<CustomBehavior File="Message" 
-									Text="Disabling combat." 
-									LogColor="Plum" />
-
-				<!-- Disable combat -->
-				<DisableBehavior Name="Combat" />	
-
-				<!-- Move to - 2nd ziggurat - kite  -->	
-				<MoveTo X="3850.447" Y="-3736.665" Z="148.0916" />
-
-				<!-- Move to - 2nd ziggurat - kite  -->	
-				<MoveTo X="3837.173" Y="-3747.164" Z="145.0919" />
+								WaitTime="3000" />				
 								
-				<!-- Move to - 2nd ziggurat - kite  -->	
-				<MoveTo X="3845.205" Y="-3759.438" Z="145.0919" />
+				<!-- Custom behavior - Runmacro - target Baroness Anastari -->	
+				<CustomBehavior File="RunMacro" 
+								Macro="/target Baroness Anastari" />				
 								
-				<!-- Move to - 2nd ziggurat - kite  -->	
-				<MoveTo X="3858.33" Y="-3750.337" Z="145.0919" />
+				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.HealthPercent > 20) &amp;&amp; (Me.CurrentTarget.Entry == 10436)" >				
 								
-				<!-- Move to - 2nd ziggurat - kite  -->	
-				<MoveTo X="3850.71" Y="-3735.741" Z="148.0918" />
-								
-				<!-- Move to - 2nd ziggurat - kite  -->	
-				<MoveTo X="3855.511" Y="-3715.12" Z="148.0918" />
-
-				<!-- Profile message - Enabling combat -->
-				<CustomBehavior File="Message" 
-									Text="Enabling combat." 
-									LogColor="Gold" />
+					<!-- Custom behavior - TargetAndMoveToMob - Baroness Anastari -->
+					<CustomBehavior File="TargetAndMoveToMob"
+									MoveWithinMaxRangeOfMob="1"
+									TargetOnlyIfHealthPercentAbove="5"
+									WaitForNpcs="False"
+									MobId="10436" >
+					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+			
+				</If>
 				
-				<!-- EnableBehavior - Combat -->	
-				<EnableBehavior Name="Combat" />
-							
+				<!-- Move to - Baroness Anastari  -->	
+				<MoveTo X="3855.145" Y="-3716.093" Z="148.0915" />
+				
 				<!-- Wait timer - wait 3 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />

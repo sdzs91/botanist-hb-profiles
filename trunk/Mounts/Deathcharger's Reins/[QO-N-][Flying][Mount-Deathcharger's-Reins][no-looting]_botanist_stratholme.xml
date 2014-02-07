@@ -751,8 +751,37 @@
 								Text="Moving to Baroness Anastari." 
 								LogColor="Plum" />
 				
+				<!-- Move to - Baroness Anastari  - bottom step-->	
+				<MoveTo X="3863.933" Y="-3701.562" Z="141.6275" />
+
+				<!-- Macro - Clear target -->					
+				<CustomBehavior File="RunMacro" 
+								Macro="/cleartarget" 
+								NumOfTimes="1" 
+								WaitTime="0"/>
+
+				<!-- Custom behavior waitTimer - 3 second delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />				
+								
+				<!-- Custom behavior - Runmacro - target Baroness Anastari -->	
+				<CustomBehavior File="RunMacro" 
+								Macro="/target Baroness Anastari" />				
+								
+				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.HealthPercent > 20) &amp;&amp; (Me.CurrentTarget.Entry == 10436)" >				
+								
+					<!-- Custom behavior - TargetAndMoveToMob - Baroness Anastari -->
+					<CustomBehavior File="TargetAndMoveToMob"
+									MoveWithinMaxRangeOfMob="1"
+									TargetOnlyIfHealthPercentAbove="5"
+									WaitForNpcs="False"
+									MobId="10436" >
+					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+			
+				</If>
+				
 				<!-- Move to - Baroness Anastari  -->	
-				<MoveTo X="3855.374" Y="-3714.728" Z="148.0922" />
+				<MoveTo X="3855.145" Y="-3716.093" Z="148.0915" />
 				
 				<!-- Wait timer - wait 5 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
