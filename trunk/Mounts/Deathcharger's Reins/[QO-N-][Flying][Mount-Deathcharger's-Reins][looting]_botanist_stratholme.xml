@@ -542,6 +542,10 @@
 									MobId="10437" >
 					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 			
+					<!-- Custom behavior waitTimer - 3 second delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+			
 				</If>
 				
 				<!-- Move to - Nerub'enkan  -->	
@@ -663,14 +667,56 @@
 									MobId="10436" >
 					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 			
+					<!-- Custom behavior waitTimer - 3 second delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+			
 				</If>
 				
 				<!-- Move to - Baroness Anastari  -->	
 				<MoveTo X="3855.145" Y="-3716.093" Z="148.0915" />
 				
-				<!-- Wait timer - wait 3 seconds - delay -->
+				<!-- Wait timer - wait 5 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />
+								WaitTime="5000" />
+					
+				<!-- Profile message - Disabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Disabling combat." 
+									LogColor="Plum" />
+
+				<!-- Disable combat -->
+				<DisableBehavior Name="Combat" />	
+
+				<!-- Move to - 2nd ziggurat - kite  -->	
+				<MoveTo X="3850.447" Y="-3736.665" Z="148.0916" />
+
+				<!-- Move to - 2nd ziggurat - kite  -->	
+				<MoveTo X="3837.173" Y="-3747.164" Z="145.0919" />
+								
+				<!-- Move to - 2nd ziggurat - kite  -->	
+				<MoveTo X="3845.205" Y="-3759.438" Z="145.0919" />
+								
+				<!-- Move to - 2nd ziggurat - kite  -->	
+				<MoveTo X="3858.33" Y="-3750.337" Z="145.0919" />
+								
+				<!-- Move to - 2nd ziggurat - kite  -->	
+				<MoveTo X="3850.71" Y="-3735.741" Z="148.0918" />
+								
+				<!-- Move to - 2nd ziggurat - kite  -->	
+				<MoveTo X="3855.511" Y="-3715.12" Z="148.0918" />
+
+				<!-- Profile message - Enabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Enabling combat." 
+									LogColor="Gold" />
+				
+				<!-- EnableBehavior - Combat -->	
+				<EnableBehavior Name="Combat" />
+							
+				<!-- Wait timer - wait 5 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="5000" />
 								
 				<!-- Profile message - Disabling combat -->
 				<CustomBehavior File="Message" 
@@ -706,9 +752,9 @@
 				<!-- EnableBehavior - Combat -->	
 				<EnableBehavior Name="Combat" />
 							
-				<!-- Wait timer - wait 3 seconds - delay -->
+				<!-- Wait timer - wait 5 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />				
+								WaitTime="5000" />				
 
 								
 				<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -722,9 +768,9 @@
 				<!-- Move to - Maleki the Pallid  -->	
 				<MoveTo X="4034.621" Y="-3647.001" Z="135.6551" />
 				
-				<!-- Wait timer - wait 3 seconds - delay -->
+				<!-- Wait timer - wait 5 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />
+								WaitTime="5000" />
 					
 				<!-- Profile message - Disabling combat -->
 				<CustomBehavior File="Message" 
@@ -760,9 +806,9 @@
 				<!-- EnableBehavior - Combat -->	
 				<EnableBehavior Name="Combat" />
 							
-				<!-- Wait timer - wait 3 seconds - delay -->
+				<!-- Wait timer - wait 5 seconds - delay -->
 				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />
+								WaitTime="5000" />
 								
 				<!-- Profile message - Disabling combat -->
 				<CustomBehavior File="Message" 
@@ -842,6 +888,10 @@
 										MobId="10416" >
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 				
+						<!-- Custom behavior waitTimer - 3 second delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+				
 						<Else>
 					
 							<!-- Profile message - There are no Bile Spewer's available, moving to the door to break the while loop -->
@@ -897,6 +947,10 @@
 										MobId="10417" >
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 				
+						<!-- Custom behavior waitTimer - 3 second delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+				
 						<Else>
 					
 							<!-- Profile message - There are no Venom Belcherr's available, moving to the door to break the while loop -->
@@ -940,11 +994,7 @@
 				
 				<!-- Move to - door entering the Slaughter House  -->	
 				<MoveTo X="4032.902" Y="-3371.6" Z="115.0624" />
-				
-				<!-- Usersettings -->
-				<CustomBehavior File="UserSettings" 
-								LootMobs="True" />
-				
+
 				<!-- Move to - Lord Aurius Rivendare  -->	
 				<MoveTo X="4035.828" Y="-3336.308" Z="115.06" /> 
 				

@@ -686,6 +686,10 @@
 									MobId="10437" >
 					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 			
+					<!-- Custom behavior waitTimer - 3 second delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+			
 				</If>
 				
 				<!-- Move to - Nerub'enkan  -->	
@@ -806,6 +810,10 @@
 									WaitForNpcs="False"
 									MobId="10436" >
 					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+			
+					<!-- Custom behavior waitTimer - 3 second delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
 			
 				</If>
 				
@@ -1024,6 +1032,10 @@
 										MobId="10416" >
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 				
+						<!-- Custom behavior waitTimer - 3 second delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+				
 						<Else>
 					
 							<!-- Profile message - There are no Bile Spewer's available, moving to the door to break the while loop -->
@@ -1078,6 +1090,10 @@
 										WaitForNpcs="False"
 										MobId="10417" >
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+				
+						<!-- Custom behavior waitTimer - 3 second delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
 				
 						<Else>
 					
