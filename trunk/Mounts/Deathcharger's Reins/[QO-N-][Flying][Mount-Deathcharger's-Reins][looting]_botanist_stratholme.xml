@@ -6,7 +6,7 @@
    
 	<MinDurability>0.2</MinDurability>
 	<MinFreeBagSlots>0</MinFreeBagSlots>
-	<TargetingDistance>1</TargetingDistance>
+	<TargetingDistance>5</TargetingDistance>
 	
 	<MailGrey>False</MailGrey>
 	<MailWhite>True</MailWhite>
@@ -812,7 +812,7 @@
 					<CustomBehavior File="RunMacro" 
 									Macro="/target Bile Spewer" />				
 									
-					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 10416)" >				
+					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.HealthPercent > 20) &amp;&amp; (Me.CurrentTarget.Entry == 10416)" >				
 									
 						<!-- Custom behavior - TargetAndMoveToMob - Bile Spewer -->
 						<CustomBehavior File="TargetAndMoveToMob"
@@ -823,21 +823,19 @@
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 				
 						<Else>
-						
-							<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 10416)" >
 					
-								<!-- Profile message - There are no Bile Spewer's available, moving to the door to break the while loop -->
-								<CustomBehavior File="Message" 
-												Text="There are no Bile Spewer's available, moving to the door to break the while loop." 
-												LogColor="Plum" />
-							
-								<!-- Move to - top of the stairs to break the while loop  -->	
-								<MoveTo X="4032.944" Y="-3391.041" Z="119.7397" />
-							
-								<!-- Custom behavior waitTimer - 5 second delay -->
-								<CustomBehavior File="WaitTimer" 
-												WaitTime="5000" />
-							</If>
+							<!-- Profile message - There are no Bile Spewer's available, moving to the door to break the while loop -->
+							<CustomBehavior File="Message" 
+											Text="There are no Bile Spewer's available, moving to the door to break the while loop." 
+											LogColor="Plum" />
+						
+							<!-- Move to - top of the stairs to break the while loop  -->	
+							<MoveTo X="4032.944" Y="-3391.041" Z="119.7397" />
+						
+							<!-- Custom behavior waitTimer - 5 second delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="5000" />
+
 					
 						</Else>
 				
@@ -869,7 +867,7 @@
 					<CustomBehavior File="RunMacro" 
 									Macro="/target Venom Belcher" />				
 									
-					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 10417)" >				
+					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.HealthPercent > 20) &amp;&amp; (Me.CurrentTarget.Entry == 10417)" >				
 									
 						<!-- Custom behavior - TargetAndMoveToMob - Venom Belcher -->
 						<CustomBehavior File="TargetAndMoveToMob"
@@ -880,22 +878,19 @@
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 				
 						<Else>
-						
-							<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 10417)" >
 					
-								<!-- Profile message - There are no Venom Belcherr's available, moving to the door to break the while loop -->
-								<CustomBehavior File="Message" 
-												Text="There are no Venom Belcher's available, moving to the door to break the while loop." 
-												LogColor="Plum" />
-							
-								<!-- Move to - top of the stairs to break the while loop  -->	
-								<MoveTo X="4032.944" Y="-3391.041" Z="119.7397" />
-							
-								<!-- Custom behavior waitTimer - 5 second delay -->
-								<CustomBehavior File="WaitTimer" 
-												WaitTime="5000" />
+							<!-- Profile message - There are no Venom Belcherr's available, moving to the door to break the while loop -->
+							<CustomBehavior File="Message" 
+											Text="There are no Venom Belcher's available, moving to the door to break the while loop." 
+											LogColor="Plum" />
+						
+							<!-- Move to - top of the stairs to break the while loop  -->	
+							<MoveTo X="4032.944" Y="-3391.041" Z="119.7397" />
+						
+							<!-- Custom behavior waitTimer - 5 second delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="5000" />
 
-							</If>
 					
 						</Else>
 				
@@ -925,6 +920,10 @@
 				
 				<!-- Move to - door entering the Slaughter House  -->	
 				<MoveTo X="4032.902" Y="-3371.6" Z="115.0624" />
+				
+				<!-- Usersettings -->
+				<CustomBehavior File="UserSettings" 
+								LootMobs="True" />
 				
 				<!-- Move to - Lord Aurius Rivendare  -->	
 				<MoveTo X="4035.828" Y="-3336.308" Z="115.06" /> 
