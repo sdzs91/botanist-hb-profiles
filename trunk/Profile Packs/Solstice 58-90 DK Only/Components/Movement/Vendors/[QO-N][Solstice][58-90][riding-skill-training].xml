@@ -71,6 +71,27 @@
 				<!-- If we are Horde -->
 				<If Condition="Me.IsHorde">
 
+					<!-- If we are in the Cleft of Shadow -->
+					<If Condition="Me.X &lt; 1895.627 &amp;&amp; Me.X &gt; 1713.31 &amp;&amp; Me.Y &gt; -4440.429 &amp;&amp; Me.Y &lt; -4283.688 &amp;&amp; Me.Z &lt; 35" >
+					
+						<!-- Profile message - we are in the Cleft of Shadow -->
+						<CustomBehavior File="Message" 
+										Text="We are in the Cleft of Shadow"  
+										LogColor="Orange" />
+					
+						<!-- UserSettings -->
+						<CustomBehavior File="UserSettings" 
+											UseMount="False" />
+					
+						<!-- Move to - mount location outside the Cleft of Shadow -->
+						<MoveTo X="1892.877" Y="-4546.347" Z="29.89322" />
+					
+						<!-- UserSettings -->
+						<CustomBehavior File="UserSettings" 
+											UseMount="True" />
+						
+					</If>	<!-- If we are in the Cleft of Shadow -->
+				
 					<!-- If we are in Kalimdor -->
 					<If Condition="Me.MapId == 0">
 				
@@ -83,7 +104,7 @@
 						<MoveTo X="1802.374" Y="-4368.528" Z="102.6684" />
 						
 						<!-- Turn in flight quest -->
-						<If Condition="((HasQuest(32674)) &amp;&amp; (IsQuestCompleted(32674)))" >
+						<If Condition="((HasQuest(32674)) &amp;&amp; (!IsQuestCompleted(32674)))" >
 							<TurnIn QuestName="I Believe You Can Fly" 
 									QuestId="32674" 
 									TurnInName="Maztha" 
@@ -143,7 +164,7 @@
 						<MoveTo X="5814.821" Y="471.5184" Z="658.7763" />
 						
 						<!-- Turn in flight quest -->
-						<If Condition="((HasQuest(32674)) &amp;&amp; (IsQuestCompleted(32674)))" >
+						<If Condition="((HasQuest(32674)) &amp;&amp; (!IsQuestCompleted(32674)))" >
 							<TurnIn QuestName="I Believe You Can Fly" 
 									QuestId="32674" 
 									TurnInName="Maztha" 
@@ -250,7 +271,7 @@
 						<MoveTo X="5814.821" Y="471.5184" Z="658.7763" />
 						
 						<!-- Turn in flight quest -->
-						<If Condition="((HasQuest(32674)) &amp;&amp; (IsQuestCompleted(32674)))" >
+						<If Condition="((HasQuest(32674)) &amp;&amp; (!IsQuestCompleted(32674)))" >
 							<TurnIn QuestName="I Believe You Can Fly" 
 									QuestId="32674" 
 									TurnInName="Maztha" 
@@ -318,7 +339,7 @@
 						<MoveTo X="1802.374" Y="-4368.528" Z="102.6684" />
 						
 						<!-- Turn in flight quest -->
-						<If Condition="((HasQuest(32674)) &amp;&amp; (IsQuestCompleted(32674)))" >
+						<If Condition="((HasQuest(32674)) &amp;&amp; (!IsQuestCompleted(32674)))" >
 							<TurnIn QuestName="I Believe You Can Fly" 
 									QuestId="32674" 
 									TurnInName="Maztha" 
@@ -378,7 +399,7 @@
 						<MoveTo X="5814.821" Y="471.5184" Z="658.7763" />
 						
 						<!-- Turn in flight quest -->
-						<If Condition="((HasQuest(32674)) &amp;&amp; (IsQuestCompleted(32674)))" >
+						<If Condition="((HasQuest(32674)) &amp;&amp; (!IsQuestCompleted(32674)))" >
 							<TurnIn QuestName="I Believe You Can Fly" 
 									QuestId="32674" 
 									TurnInName="Maztha" 
@@ -481,7 +502,7 @@
 						<MoveTo X="5814.821" Y="471.5184" Z="658.7763" />
 						
 						<!-- Turn in flight quest -->
-						<If Condition="((HasQuest(32674)) &amp;&amp; (IsQuestCompleted(32674)))" >
+						<If Condition="((HasQuest(32674)) &amp;&amp; (!IsQuestCompleted(32674)))" >
 							<TurnIn QuestName="I Believe You Can Fly" 
 									QuestId="32674" 
 									TurnInName="Maztha" 
@@ -538,7 +559,7 @@
 						<MoveTo X="1802.374" Y="-4368.528" Z="102.6684" />
 						
 						<!-- Turn in flight quest -->
-						<If Condition="((HasQuest(32674)) &amp;&amp; (IsQuestCompleted(32674)))" >
+						<If Condition="((HasQuest(32674)) &amp;&amp; (!IsQuestCompleted(32674)))" >
 							<TurnIn QuestName="I Believe You Can Fly" 
 									QuestId="32674" 
 									TurnInName="Maztha" 
@@ -598,7 +619,7 @@
 						<MoveTo X="5814.821" Y="471.5184" Z="658.7763" />
 						
 						<!-- Turn in flight quest -->
-						<If Condition="((HasQuest(32674)) &amp;&amp; (IsQuestCompleted(32674)))" >
+						<If Condition="((HasQuest(32674)) &amp;&amp; (!IsQuestCompleted(32674)))" >
 							<TurnIn QuestName="I Believe You Can Fly" 
 									QuestId="32674" 
 									TurnInName="Maztha" 
@@ -701,7 +722,7 @@
 						<MoveTo X="5814.821" Y="471.5184" Z="658.7763" />
 						
 						<!-- Turn in flight quest -->
-						<If Condition="((HasQuest(32674)) &amp;&amp; (IsQuestCompleted(32674)))" >
+						<If Condition="((HasQuest(32674)) &amp;&amp; (!IsQuestCompleted(32674)))" >
 							<TurnIn QuestName="I Believe You Can Fly" 
 									QuestId="32674" 
 									TurnInName="Maztha" 

@@ -178,9 +178,9 @@
 												Text="We are Horde." 
 												LogColor="Cyan" />
 											
-								<!-- Profile message - Taking Orgrimmar portal -->			
+								<!-- Profile message - Moving to the Orgrimmar portal -->			
 								<CustomBehavior File="Message" 
-												Text="Taking Orgrimmar portal." 
+												Text="Moving to the Orgrimmar portal." 
 												LogColor="Cyan" />	
 							
 								<!-- Portal to Orgrimmar -->
@@ -251,9 +251,9 @@
 												Text="We are Horde." 
 												LogColor="Cyan" />
 											
-								<!-- Profile message - Taking Orgrimmar portal -->			
+								<!-- Profile message - Moving to the Orgrimmar portal -->			
 								<CustomBehavior File="Message" 
-												Text="Taking Orgrimmar portal." 
+												Text="Moving to the Orgrimmar portal." 
 												LogColor="Cyan" />	
 							
 								<!-- Portal to Orgrimmar -->
@@ -425,9 +425,9 @@
 											Text="We are Horde." 
 											LogColor="Cyan" />
 										
-							<!-- Profile message - Taking Orgrimmar portal -->			
+							<!-- Profile message - Moving to the Orgrimmar portal -->			
 							<CustomBehavior File="Message" 
-											Text="Taking Orgrimmar portal." 
+											Text="Moving to the Orgrimmar portal." 
 											LogColor="Cyan" />	
 						
 							<!-- Portal to Orgrimmar -->
