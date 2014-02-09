@@ -115,14 +115,14 @@
 									LogColor="Fuchsia" />
 
 					<!-- Move to the zone in location -->
-					<RunTo X="40.5531" Y="-28.7947" Z="-1.11728" />
+					<MoveTo X="40.5531" Y="-28.7947" Z="-1.11728" />
 					
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" 
 									X="50.22644" Y="-38.28931" Z="-1.098699" />
 					
 					<!-- Move to - zone out location -->
-					<RunTo X="3409.85" Y="1486.26" Z="182.837" />
+					<MoveTo X="3409.85" Y="1486.26" Z="182.837" />
 					
 				</If>	<!-- If we are in Botanica -->
 				
@@ -142,8 +142,8 @@
 										Text="Moving to Shattrath portals." 
 										LogColor="Cyan" />				
 										
-						<!-- Fly to Shattrath -->
-						<RunTo X="-1920.137" Y="5400.772" Z="-12.42688" />
+						<!-- Move to Shattrath -->
+						<MoveTo X="-1837.23" Y="5301.9" Z="-12.43" />
 						
 						<!-- Alliance -->
 						<If Condition="Me.IsAlliance">
@@ -159,7 +159,7 @@
 											LogColor="Cyan" />		
 										
 							<!-- Portal to Stormwind -->
-							<RunTo X="-1892.733" Y="5390.708" Z="-12.42776" />
+							<MoveTo X="-1892.733" Y="5390.708" Z="-12.42776" />
 							
 							<!-- Interact with Stormwind portal -->
 							<CustomBehavior File="InteractWith" 
@@ -184,7 +184,7 @@
 												LogColor="Cyan" />	
 							
 								<!-- Portal to Orgrimmar -->
-								<RunTo X="-1897.926" Y="5395.339" Z="-12.42868" />
+								<MoveTo X="-1897.926" Y="5395.339" Z="-12.42868" />
 								
 								<!-- Interact with Orgrimmar portal -->
 								<CustomBehavior File="InteractWith" 
@@ -214,12 +214,9 @@
 										Text="Moving to Shattrath portals." 
 										LogColor="Cyan" />				
 										
-						<!-- Fly to Shattrath -->
-						<CustomBehavior File="FlyTo" X="-1977.775" Y="5373.526" Z="54.82305" />
+						<!-- Move to Shattrath -->
+						<MoveTo X="-1837.23" Y="5301.9" Z="-12.43" />
 
-						<!-- Go to the ground -->
-						<CustomBehavior File="FlyTo" X="-1920.137" Y="5400.772" Z="-12.42688" />
-						
 						<!-- If we are Alliance -->
 						<If Condition="Me.IsAlliance">
 						
@@ -312,7 +309,7 @@
 									LogColor="Orange" />
 					
 					<!-- Move to - Stormwind riding trainer -->
-					<RunTo X="-8841.06" Y="489.656" Z="109.607" />					
+					<MoveTo X="-8841.06" Y="489.656" Z="109.607" />					
 	
 				</If>	<!-- If we are in Eastern Kingdoms, but not in Stormwind -->
 
@@ -367,14 +364,14 @@
 									LogColor="Fuchsia" />
 
 					<!-- Move to the zone in location -->
-					<RunTo X="40.5531" Y="-28.7947" Z="-1.11728" />
+					<MoveTo X="40.5531" Y="-28.7947" Z="-1.11728" />
 					
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" 
 									X="50.22644" Y="-38.28931" Z="-1.098699" />
 					
 					<!-- Move to - zone out location -->
-					<RunTo X="3409.85" Y="1486.26" Z="182.837" />
+					<MoveTo X="3409.85" Y="1486.26" Z="182.837" />
 					
 				</If>	<!-- If we are in Botanica -->
 				
@@ -391,12 +388,9 @@
 									Text="Moving to Shattrath portals." 
 									LogColor="Cyan" />				
 									
-					<!-- Fly to Shattrath -->
-					<CustomBehavior File="FlyTo" X="-1977.775" Y="5373.526" Z="54.82305" />
+					<!-- Move to Shattrath -->
+					<MoveTo X="-1837.23" Y="5301.9" Z="-12.43" />
 
-					<!-- Go to the ground -->
-					<CustomBehavior File="FlyTo" X="-1920.137" Y="5400.772" Z="-12.42688" />
-					
 					<!-- Alliance -->
 					<If Condition="Me.IsAlliance">
 					
@@ -467,7 +461,7 @@
 									LogColor="Cyan" />
 									
 					<!-- Move to - Undercity zeppelin -->				
-					<RunTo X="2066.09" Y="288.9603" Z="97.03149" />				
+					<MoveTo X="2066.09" Y="288.9603" Z="97.03149" />				
 	
 					<!-- Forced dismount -->		
 					<CustomBehavior File="ForcedDismount" />
@@ -492,10 +486,10 @@
 									GetOffZ="135.2055" />	
 								
 					<!-- Run to the center of the deck -->
-					<RunTo X="1847.108" Y="-4397.473" Z="135.2055" />				
+					<MoveTo X="1847.108" Y="-4397.473" Z="135.2055" />				
 
 					<!-- Move to riding trainer -->
-					<RunTo X="1802.374" Y="-4368.528" Z="102.6684" />	
+					<MoveTo X="1802.374" Y="-4368.528" Z="102.6684" />	
 						
 				</If>	<!-- If we are in Eastern Kingdoms -->
 				

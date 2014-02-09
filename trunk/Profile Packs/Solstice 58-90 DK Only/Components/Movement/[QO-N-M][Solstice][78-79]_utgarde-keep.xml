@@ -192,7 +192,6 @@
 			<!-- Kalimdor -->
 			<If Condition="Me.MapId == 1">
 			
-			
 				<CustomBehavior File="Message" 
 								Text="We are in Kalimdor." 
 								LogColor="Cyan" />
