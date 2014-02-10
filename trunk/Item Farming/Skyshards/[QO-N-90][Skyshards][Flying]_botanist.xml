@@ -156,7 +156,7 @@
 				
 					<!-- Custom behavior - TargetAndMoveToMob -->
 					<CustomBehavior File="TargetAndMoveToMob"
-									MoveWithinMaxRangeOfMob="1"
+									MoveWithinMaxRangeOfMob="5"
 									TargetOnlyIfHealthPercentAbove="5"
 									WaitForNpcs="False"
 									MobId="58671" >
@@ -176,9 +176,10 @@
 										Text="Engaging a Ancient Mogu Spirit." 
 										LogColor="Cyan" />
 						
-						<!-- Custom behavior - Misc\RangeAttack -->
-						<CustomBehavior File="Misc\RangeAttack" />
-						
+						<!-- Reset the instance -->
+						<CustomBehavior File="RunMacro" 
+										Macro="/startattack" />
+
 					</If>	<!-- If our target is a Ancient Mogu Spirit --> 
 
 				</While>	<!-- While our empty bag slots is > 4 and our lowest durability is > 30% -->
