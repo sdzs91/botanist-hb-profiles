@@ -128,15 +128,15 @@
 							<Else>
 							
 								<!-- Move to - Shrine of the Two Moons hover point -->
-							<CustomBehavior File="FlyTo"
-											X="1605.152" Y="852.9587" Z="520.5529" />
+								<CustomBehavior File="FlyTo"
+												X="1605.152" Y="852.9587" Z="520.5529" />
 								
-							<!-- Move to -  Shrine of the Two Moons - door -->
-							<CustomBehavior File="MyCTM"
-											X="1657.736" Y="872.8345" Z="470.626" />	
-								
-							<!-- Custom behavior - ForcedDismount -->	
-							<CustomBehavior File="ForcedDismount" />
+								<!-- Move to -  Shrine of the Two Moons - door -->
+								<CustomBehavior File="MyCTM"
+												X="1657.736" Y="872.8345" Z="470.626" />	
+									
+								<!-- Custom behavior - ForcedDismount -->	
+								<CustomBehavior File="ForcedDismount" />
 							
 							</Else>	<!-- Else we are Horde -->
 							
@@ -175,7 +175,7 @@
 				</If>	<!-- If we are in Shrine of the Seven Stars -->
 
 				<!-- If we are in Shrine of Two Moons -->
-				<If Condition="Me.X &gt; 1614.274 &amp;&amp; Me.X &lt; 1688.65 &amp;&amp; Me.Y &gt; 840.3156 &amp;&amp; Me.Y &gt; 1001.765" >
+				<If Condition="Me.X &gt; 1614.274 &amp;&amp; Me.X &lt; 1688.65 &amp;&amp; Me.Y &gt; 840.3156 &amp;&amp; Me.Y &lt; 1001.765" >
 					
 					<!-- Repair vendor -->				
 					<SetVendor>
