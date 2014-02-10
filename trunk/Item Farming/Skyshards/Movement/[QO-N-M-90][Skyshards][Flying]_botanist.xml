@@ -75,17 +75,17 @@
 									
 						<!-- Move to - Shrine of the Seven Stars hover point -->
 						<CustomBehavior File="FlyTo"
-										X="2377.782" Y="2991.646" Z="442.6944" />
+										X="848.1744" Y="359.405" Z="542.0466" />
 							
 						<!-- Move to -  Shrine of the Seven Stars - mailbox -->
 						<CustomBehavior File="MyCTM"
-										X="2347.79" Y="2999.946" Z="421.3914" />	
+										X="813.1781" Y="315.9352" Z="503.1204" />	
 							
 						<!-- Custom behavior - ForcedDismount -->	
 						<CustomBehavior File="ForcedDismount" />	
 							
-						<!--  Move to - Saito the Sleeping Shadow - innkeep -->	
-						<MoveTo X="2340.821" Y="2996.887" Z="421.4511" />
+						<!--  Move to - Matron Vi Vinh - innkeep -->	
+						<MoveTo X="782.6702" Y="283.2522" Z="503.4185" />
 
 						<!-- Profile message - Setting our Hearthstone with the innkeep -->
 						<CustomBehavior File="Message" 
@@ -94,16 +94,16 @@
 
 						<!-- Custom behavior - SetHearthstone -->				
 						<CustomBehavior File="SetHearthstone" 
-										MobId="62873" 
-										X="2340.821" Y="2996.887" Z="421.4503" />
+										MobId="64149" 
+										X="784.0816" Y="280.3924" Z="503.4188" />
 
 						<!-- Profile message - We have set our Hearthstone -->				
 						<CustomBehavior File="Message" 
 										Text="We have set our Hearthstone." 
 										LogColor="Plum" />
 						
-						<!-- Move to - Longying Outpost - flight master -->
-						<MoveTo X="2363.514" Y="2996.531" Z="420.7993" />
+						<!-- Move to - Shrine of the Seven Stars - flight master -->
+						<MoveTo X="894.5328" Y="333.4745" Z="506.0945" />
 
 						<!-- Else we are Horde -->
 						<Else>
