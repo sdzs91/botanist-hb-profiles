@@ -175,7 +175,7 @@
 				</If>	<!-- If we are in Shrine of the Seven Stars -->
 
 				<!-- If we are in Shrine of Two Moons -->
-				<If Condition="Me.X &gt; 1614.274 &amp;&amp; Me.X &lt; 1688.65 &amp;&amp; Me.Y &gt; 840.3156 &amp;&amp; Me.Y &lt; 1001.765" >
+				<If Condition="Me.X &gt; 1614.274 &amp;&amp; Me.X &lt; 1725 &amp;&amp; Me.Y &gt; 840.3156 &amp;&amp; Me.Y &lt; 1001.765" >
 					
 					<!-- Repair vendor -->				
 					<SetVendor>
