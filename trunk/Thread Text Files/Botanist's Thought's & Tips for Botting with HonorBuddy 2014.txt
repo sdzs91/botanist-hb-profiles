@@ -1,0 +1,102 @@
+[LIST]
+[/LIST]
+[B][CENTER][SIZE=4][COLOR="#696969"]Botanist's Thought's & Tips for Botting with HonorBuddy 2014[/COLOR][/SIZE][/CENTER][/B]
+
+
+[CENTER][COLOR="#696969"][SIZE=4]An "[COLOR="#0000FF"]open[/COLOR]" discussion of the "DON'Ts" of BOTTING WoW[/SIZE][/COLOR]
+
+[CODE]
+[LIST]
+[*] Tip #1 Don't bot on any account you aren't willing to get banned on !
+[/LIST]
+
+[LIST]
+[*] Tip #2 HonorBuddy uses mesh files to navigate. A mesh file is an 8 X 8 geometric map tile which tells HB if there are obstacles in its path. 
+[INDENT]
+The bot should automatically contact the mesh server and download the necessary meshes it needs for a particular zone. 
+[/INDENT]
+[INDENT]
+It will not download all the game meshes at once. Those meshes will then be stored on your pc for future use.
+[/INDENT]
+[INDENT]
+Your mesh collection will grow upwards of 2 gigs over time.
+[/INDENT]
+[INDENT]
+New users of HonorBuddy will start out with no mesh files. 
+
+This means the bot will act erratically until it acquires the necessary files it needs to navigate to its objective.
+
+This includes standing still doing nothing while the bot attempts to download the necessary mesh files.
+
+[/INDENT]
+[/LIST]
+
+[LIST]
+
+You should never afk your bot(s) unless you have extensively tested a particular profile/botbase on your computer.
+[INDENT]
+Even if you are confident the profile/botbase will work correctly, there are still potential risk involved any time you afk the bot.
+[/INDENT]
+[/LIST]
+
+[LIST]
+
+Place holder for now
+
+Place holder for now
+
+Place holder for now
+
+Place holder for now
+
+Place holder for now
+
+[/LIST]
+[/CODE]
+
+
+[SIZE=3][COLOR="#0000CD"]This is why HB can not navigate to it's corpse if you die in an instance.[/COLOR][/SIZE]
+
+[CENTER][IMG]http://imageshack.com/a/img716/8848/3oz2.png[/IMG]
+
+
+[CODE]
+[LIST]
+[*] 
+[INDENT]
+Place holder for now
+[/INDENT]
+[/LIST]
+[/CODE]
+
+[CODE]
+[LIST]
+[*] 
+[INDENT]
+Place holder for now
+[/INDENT]
+[/LIST]
+[/CODE]
+All post must abide by the forum rules of HonorBuddy and their "Moderators".  Deliberate/unintentional violations of those rules will result in administrative action and possibly result with being banned from the forum.
+
+For those that know me, I personally ask each of you to keep it clean. Comments posted in this thread could be useful to the less experienced users of the bot.
+
+[COLOR="#FF0000"]Personal attacks for ones opinion will not be tolerated[/COLOR]. Acting "the fool" will [COLOR="#FF0000"]not be tolerated[/COLOR]. Excessive cursing or pretty much [B][U][COLOR="#0000CD"]any ridiculous behavior[/COLOR][/U][/B] will [COLOR="#FF0000"]not be tolerated[/COLOR].
+
+[SIZE=3][COLOR="#FF0000"]I will delete the thread if this doesn't work out the way I intend !!![/COLOR][/SIZE][/CENTER]
+
+[CODE]
+[LIST]
+[*] Should you need to contact me:
+[INDENT]
+[SIZE=4][COLOR="#696969"]Contact[/COLOR][/SIZE] me via [SIZE=4][COLOR="#696969"][U]Skype[/U][/COLOR][/SIZE] by clicking my link ----> : [SIZE=4][URL="skype:Botanist68?add"][COLOR="#696969"]Botanist[/COLOR][/URL][/SIZE]
+[/INDENT]
+[/LIST]
+[/CODE]
+[/CENTER]
+
+[B][CENTER][COLOR="#696969"][SIZE=2] Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
+
+[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
+
+[URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL][/CENTER]

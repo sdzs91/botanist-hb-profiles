@@ -1,0 +1,151 @@
+[List]
+[/List]
+[List]
+[/List]
+
+[B][CENTER][SIZE=4][COLOR="#4B0082"]Botanist's Isle of Quel'Danas [URL="http://www.wowhead.com/item=16885/heavy-junkbox#contains"]Heavy Junkbox[/URL] Farm[/COLOR][/SIZE][/CENTER][/B]
+[CENTER]
+
+[B][CENTER][SIZE=4][COLOR="#4B0082"]For All those Level 85 Rogues -  Get Your Groove On[/COLOR][/SIZE][/CENTER][/B]
+
+[B][CENTER][U][SIZE=4][COLOR="#4B0082"]Available for BETA testing !!![/COLOR][/SIZE][/U][/CENTER][/B]
+
+[IMG]http://i.imgur.com/ehAsv0z.png[/IMG]
+
+[CENTER][video=youtube;GcM9eN2oL_Y]http://www.youtube.com/watch?v=GcM9eN2oL_Y[/video]
+
+[URL="http://www.wowhead.com/item=1728/teebus-blazing-longsword"][SIZE=4][COLOR="#800080"]Teebu's Blazing Longsword[/COLOR][/SIZE][/URL]
+
+[B][SIZE=3][COLOR="#4B0082"]This is one of the rarest items in the game.
+
+ It is highly sought after for Xmorg purposes.
+
+On most servers, it can still sell upwards of 100K[/COLOR][/SIZE][/B][/CENTER]
+
+
+
+[B][COLOR="#800080"][SIZE=4]***** Information *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*]There are several uses for [URL="http://www.wowhead.com/item=16885/heavy-junkbox#contains"]Heavy Junkboxes[/URL] .
+[/LIST]
+[LIST]
+[*]These [URL="http://www.wowhead.com/item=16885/heavy-junkbox#contains"]Heavy Junkbox[/URL] can be farmed and sold to persons wishing to obtain the [URL="http://www.wowhead.com/achievement=2336/insane-in-the-membrane"]Insane title[/URL]. Those persons will need approximately 1400 of these each.
+[/LIST]
+[LIST]
+[*]There are also several notable RNG drops from [URL="http://www.wowhead.com/item=16885/heavy-junkbox#contains"]Heavy Junkbox[/URL] such as:
+
+[INDENT]
+[url=http://www.wowhead.com/item=2163]Shadowblade - Item - World of Warcraft[/url]
+
+[url=http://www.wowhead.com/item=14555]Alcor's Sunrazor - Item - World of Warcraft[/url]
+
+[url=http://www.wowhead.com/item=1728/teebus-blazing-longsword]Teebu's Blazing Longsword - Item - World of Warcraft[/url]
+[/INDENT]
+[/LIST]
+[LIST]
+[*]There are plugins available that will allow you to unlock and view the contents of the lock boxes without destroying them. [URL="http://www.thebuddyforum.com/honorbuddy-forum/plugins/uncataloged/73623-plugin-epicjunkbox-unlock-junkboxes-loot-specific-quality-items.html"]Epicjunkbox[/URL] was one such plugin, I am not sure if it is kept up-to-date.
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+
+[/CODE]
+
+
+[B][COLOR="#4B0082"][SIZE=4]***** Instructions *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*]Will be added.
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+
+[/CODE]
+
+
+[B][COLOR="#4B0082"][SIZE=4]***** Prerequisites *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*]Requires a level 85+ Rogue ! It may be possible on a level 80
+[/LIST]
+[LIST]
+[*] You [B]must[/B] set a mail recipient
+[/LIST]
+[LIST]
+[*]You [B]mus[/B]t disable pick lockbox in Singular or any other routine you are using
+[/LIST]
+[LIST]
+[*]Do not run any lockbox opening plugins while you are running this profile
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+
+[LIST]
+[*]-
+[/LIST]
+
+[/CODE]
+
+[CODE]
+[LIST]
+[*] Should you have questions that [SIZE=3][U][COLOR="#4B0082"]are not[/COLOR][/U][/SIZE] answered on this page or bug reports :
+[INDENT]
+[SIZE=4][COLOR="#4B0082"]Contact[/COLOR][/SIZE] me via [SIZE=4][COLOR="#800080"][U]Skype[/U][/COLOR][/SIZE] by clicking my link ----> : [SIZE=4][URL="skype:Botanist68?add"][COLOR="#800080"]Botanist[/COLOR][/URL][/SIZE]
+[/INDENT]
+[/LIST]
+[/CODE]
+[/CENTER]
+
+[B][CENTER][COLOR="#4B0082"][SIZE=2] Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
+
+[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
+
+[URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL]
+
+
+[SIZE=3][COLOR="#4B0082"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
+[CODE]
+
+[LIST]
+[*]Available via the Public SVN [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#4B0082"]HERE[/COLOR][/URL]
+[/LIST]
+[LIST]
+Or attached zip file below.
+[/LIST]
+[/CODE]
+
+[B][U][COLOR="#4B0082"][SIZE=3]NOTE:[/SIZE][/COLOR][/U][/B] The zip files below will not be up-to-date with the SVN
+[/CENTER]

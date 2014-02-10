@@ -1,26 +1,49 @@
 [B][CENTER][SIZE=5][COLOR="#800080"]Botanist's Aviator[/COLOR][/SIZE][/CENTER][/B][CENTER]
 
-[B][I][CENTER][COLOR="#800080"][SIZE=2]This profile was requested by BotOperator. Sorry it took so long.[/SIZE][/COLOR][/CENTER][/I][/B]
+[B][I][CENTER][COLOR="#800080"][SIZE=2]This profile is designed to learn all the available flight paths on [B][U]every[/U][/B] continent!!!.[/SIZE][/COLOR][/CENTER][/I][/B]
+
+[IMG]http://img20.imageshack.us/img20/7601/t1xg.jpg[/IMG][/CENTER]
 
 
-[B][I][CENTER][COLOR="#800080"][SIZE=3]Alliance - Eastern Kingdoms [B][U][SIZE=3]only[/SIZE][/U][/B] available for testing.[/SIZE][/COLOR][/CENTER][/I][/B]
+[B][I][CENTER][COLOR="#800080"][SIZE=3]Includes a selection of available paths for your convenience !!.[/SIZE][/COLOR][/CENTER][/I][/B]
 
 
-[CENTER][IMG]http://img20.imageshack.us/img20/7601/t1xg.jpg[/IMG][/CENTER]
+[CENTER][IMG]http://i.imgur.com/8RSQFNR.png[/IMG]
+
+
+[B][I][CENTER][COLOR="#800080"][SIZE=3]This allows you to choose a [B][U][SIZE=4]specific[/SIZE][/U][/B] continent or learn [B][U][SIZE=4]all[/SIZE][/U][/B] available flight paths.[/SIZE][/COLOR][/CENTER][/I][/B]
 
 
 [B][COLOR="#800080"][SIZE=4]***** Information *****[/SIZE][/COLOR][/B]
 
 [CODE]
-[LIST]
-[*]Aviator [B][U]will fly[/U][/B] to every [B][U]available[/U][/B] flight path in WoW and learn the flight paths based on your characters current level.
+
+
+[CENTER][LIST]
+[B][COLOR="#008000"][SIZE=4]Completed[/SIZE]:[/COLOR][/B]
+
+[COLOR="#0000CD"]Alliance:[/COLOR]
+
+Eastern Kingdoms
+Kalimdor
+Outland
+Northrend
+Pandaria
+
+
+
+[COLOR="#FF0000"]Horde:[/COLOR]
+
+Kalimdor
+Eastern Kingdoms
+Outland
+Northrend
+Pandaria
 [/LIST]
-[LIST]
-[*]At the moment, Alliance flight paths in Eastern Kingdoms are all that is complete.
-[/LIST]
-[LIST]
-[*]For now, start the profile anywhere except Pandaria. I have not added the Pandaria check yet, but I will be adding one.
-[/LIST]
+
+
+[/CENTER]
+
 [LIST]
 [*]-
 [/LIST]
@@ -72,17 +95,19 @@
 [*]Your character [U]must[/U] be a minimum of level 60 to begin the profile.
 [/LIST]
 [LIST]
-[*]Your character [U]must[/U] have 500+ gold in their bags if you have not already trained [URL="http://www.wowhead.com/spell=34090"][COLOR="#800080"][SIZE=3][B]Expert Riding[/B][/SIZE][/COLOR][/URL] [SIZE=5]&[/SIZE] purchased a [URL="http://www.wowhead.com/spell=90267"][COLOR="#800080"][SIZE=3][B]Flight Master's License[/B][/SIZE][/COLOR][/URL].
+[*]Your character [U]must[/U] have 500+ gold in their bags if you have not already trained [URL="http://www.wowhead.com/spell=34090"][COLOR="#800080"][SIZE=3][B]Expert Riding[/B][/SIZE][/COLOR][/URL] [SIZE=5]&[/SIZE] purchased a [URL="http://www.wowhead.com/spell=90267"][COLOR="#800080"][SIZE=3][B]Flight Master's License[/B][/SIZE][/COLOR][/URL] to complete the Eastern Kingdoms and Kalimdor portions of the profile.
 [/LIST]
 
 [LIST]
-[*]-
+[*]Your character [U]must[/U] have 500+ gold in their bags if you have not already trained [URL="http://www.wowhead.com/spell=54197/cold-weather-flying"][COLOR="#800080"][B]Cold Weather Flying[/B][/COLOR][/URL] and a minimum level of 68 to complete the Northrend portion of the profile.
 [/LIST]
+
 [LIST]
-[*]-
+[*]Your character [U]must[/U] a minimum level of 80 to complete the Twilight Highlands and Uldum portions of the profile.
 [/LIST]
+
 [LIST]
-[*]-
+[*]Your character [U]must[/U] a minimum level of 90 to complete the Pandaria portion of the profile.
 [/LIST]
 [LIST]
 [*]-
@@ -120,7 +145,7 @@
 [SIZE=3][COLOR="#800080"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
 [CODE]
 [LIST]
-[*]Aviator is available via the Public SVN [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#800080"]HERE[/COLOR][/URL]
+[*]Aviator is available via the Public SVN [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#800080"][SIZE=4]HERE[/SIZE][/COLOR][/URL]
 [/LIST]
 [LIST]
 Or attached zip file below.
