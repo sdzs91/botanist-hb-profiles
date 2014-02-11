@@ -8,14 +8,14 @@
 
 <SellGrey>True</SellGrey>
 <SellWhite>False</SellWhite>
-<SellGreen>True</SellGreen>
-<SellBlue>True</SellBlue>
+<SellGreen>False</SellGreen>
+<SellBlue>False</SellBlue>
 <SellPurple>False</SellPurple>
 
 <MailGrey>False</MailGrey>
 <MailWhite>True</MailWhite>
-<MailGreen>False</MailGreen>
-<MailBlue>False</MailBlue>
+<MailGreen>True</MailGreen>
+<MailBlue>True</MailBlue>
 <MailPurple>True</MailPurple>
 <Vendors>
 </Vendors>
