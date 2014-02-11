@@ -1,5 +1,5 @@
 <HBProfile>
-<Name>[QO-N-M-90][Ancient Guo-Lai Cache Key][Flying]_repair-mail</Name> 
+<Name>[QO-N-90][Ancient Guo-Lai Cache Key][Flying]_repair-mail</Name> 
 
 <MinLevel>90</MinLevel> 
 <MaxLevel>101</MaxLevel>
@@ -207,9 +207,9 @@
 			<!-- If our free bag slots are > 4 and our durability > 30% -->		
 			<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
 			
-				<!-- Load profile - [QO-N-90][Skyshards][Flying]_botanist -->
+				<!-- Load profile - [QO-N-90][Ancient Guo-Lai Cache Key][Flying]_botanist -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\..\[QO-N-90][Skyshards][Flying]_botanist" />
+								ProfileName="..\..\[QO-N-90][Ancient Guo-Lai Cache Key][Flying]_botanist" />
 			
 			</If>	<!-- If our free bag slots are > 4 and our durability > 30% -->
 			

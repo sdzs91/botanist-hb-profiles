@@ -88,7 +88,7 @@
 			</If>	<!-- If our hearthstone is set to Shrine of the Seven Stars or Shrine of Two Moons -->
 
 			<!-- If we are not in the farming area -->
-			<If Condition="Me.X &lt;988.8118 || Me.X &gt; 1484.53 || Me.Y &lt; 1703.099 || Me.Y &gt; 2229.795" >
+			<If Condition="Me.X &lt; 988.8118 || Me.X &gt; 1484.53 || Me.Y &lt; 1703.099 || Me.Y &gt; 2229.795" >
 			
 				<!-- Load profile - [QO-N-M-90][Skyshards][Flying]_botanist -->
 				<CustomBehavior File="LoadProfile" 
@@ -97,7 +97,7 @@
 			</If>	<!-- If we are not in the farming area -->
 
 			<!-- If we are in the farming area -->
-			<If Condition="Me.X &gt;988.8118 &amp;&amp; Me.X &lt; 1484.53 &amp;&amp; Me.Y &gt; 1703.099 &amp;&amp; Me.Y &lt; 2229.795" >	
+			<If Condition="Me.X &gt; 988.8118 &amp;&amp; Me.X &lt; 1484.53 &amp;&amp; Me.Y &gt; 1703.099 &amp;&amp; Me.Y &lt; 2229.795" >	
 			
 				<!-- Profile message - We are in the farming area -->
 				<CustomBehavior File="Message" 
@@ -115,7 +115,7 @@
 			
 				<!-- Move to - beginning of the route hover point -->
 				<CustomBehavior File="FlyTo"
-								X="949.0851" Y="1720.079" Z="396.1222" />
+								X="1036.593" Y="1756.34" Z="385.2216" />
 								
 				<!-- CTM to -  safe location - beginning of the route -->
 				<CustomBehavior File="MyCTM"
