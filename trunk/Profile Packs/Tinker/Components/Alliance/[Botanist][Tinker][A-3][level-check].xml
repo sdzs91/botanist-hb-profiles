@@ -48,7 +48,7 @@
 		
 		<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
 		<CustomBehavior File="WaitTimer" 
-						WaitTime="5000" />
+						WaitTime="1000" />
 			
 		<!-- If our level >=1 and <3-->
 		<If Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt; 3" >

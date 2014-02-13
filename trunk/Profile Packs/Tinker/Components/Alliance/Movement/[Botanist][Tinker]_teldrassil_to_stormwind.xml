@@ -99,9 +99,9 @@
 			<!-- If we are in Rut'theran Village -->
 			<If Condition="Me.X &gt; 8145 &amp;&amp; Me.X &lt; 8600 &amp;&amp; Me.Y &lt; 1225 &amp;&amp; Me.Y &gt; 735" >				
 	
-				<!-- Profile message - We are in Darnassus. Navigating to Rut'theran Village -->
+				<!-- Profile message - We are in Rut'theran Village. Navigating to Stormwind -->
 				<CustomBehavior File="Message" 
-								Text="We are in Teldrassil. Navigating to Rut'theran Village." 
+								Text="We are in Rut'theran Village. Navigating to Stormwind." 
 								LogColor="Plum" />				
 		
 				<!-- Move to - rut'theran village dock, to stormwind  -->				
