@@ -99,9 +99,9 @@
 			<!-- If we are in Rut'theran Village -->
 			<If Condition="Me.X &gt; 8145 &amp;&amp; Me.X &lt; 8600 &amp;&amp; Me.Y &lt; 1225 &amp;&amp; Me.Y &gt; 735" >				
 	
-				<!-- Profile message - We are in Darnassus. Navigating to Rut'theran Village -->
+				<!-- Profile message - We are in Rut'theran Village. Navigating to Stormwind -->
 				<CustomBehavior File="Message" 
-								Text="We are in Teldrassil. Navigating to Rut'theran Village." 
+								Text="We are in Rut'theran Village. Navigating to Stormwind." 
 								LogColor="Plum" />				
 		
 				<!-- Move to - rut'theran village dock, to stormwind  -->				
@@ -154,39 +154,21 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />
 				
+				<!-- Profile message - We are in Goldhire. Navigating to Northshire -->
+				<CustomBehavior File="Message" 
+								Text="We are in Goldhire. Navigating to Northshire." 
+								LogColor="Plum" />
+				
 				<!-- Move to - Northshire  -->	
 				<MoveTo X="-8927.191" Y="-119.1697" Z="82.0771" />
 					
 			</If>	<!-- If we are in Stormwind City -->
 
-			<!-- If we are in Eastern Kingdoms -->
-			<If Condition="Me.MapId == 0">				
-	
-				<!-- Profile message - We are in Eastern Kingdoms. Navigating to Northshire -->
-				<CustomBehavior File="Message" 
-								Text="We are inEastern Kingdoms. Navigating to Northshire." 
-								LogColor="Plum" />	
-								
-				<!-- Move to - stormwind flight master -->	
-				<MoveTo X="-8837.493" Y="487.0235" Z="109.609" />
-		
-				<!-- Move to - Goldshire flight master -->	
-				<MoveTo X="-9433.99" Y="85.1493" Z="56.734" />
-				
-				<!-- CustomBehavior - WaitTimer - 3 second delay  -->				
-				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />
-				
-				<!-- Move to - Northshire  -->	
-				<MoveTo X="-8927.191" Y="-119.1697" Z="82.0771" />
-					
-			</If>	<!-- If we are in Eastern Kingdoms -->
-
 		</If>	<!-- If our level >= 1 and < 3 -->
 	
 		<!--  CustomBehavior - LoadProfile -->				
 		<CustomBehavior File="LoadProfile" 
-						ProfileName="..\[Botanist][Tinker][A-4][classic]" />
+						ProfileName="..\[Botanist][Tinker][A-5][classic]" />
 		
 
 	</QuestOrder>
