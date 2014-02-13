@@ -48,7 +48,7 @@
 						GroundMountFarmingMode="False"
 						HarvestHerbs="False"
 						HarvestMinerals="False"
-						KillBetweenMoveTos="False"
+						KillBetweenHotspots="False"
 						LogoutForInactivity="True"
 						LogoutInactivityUseForceQuit="True"
 						LootMobs="False"
@@ -58,8 +58,7 @@
 						ProfileDebuggingMode="False"
 						RessAtSpiritHealers="False"
 						SkinMobs="False"
-						UseMount="True"
-						UseFlightPaths="True"
+						UseMount="True" 
 						UseRandomMount="False" />
 		
 		<!-- Profile message - Movement procedures initiated -->
