@@ -1,11 +1,13 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-<Name>[Botanist][Tinker][auto-loader]</Name>
+<Name>[Botanist][Tinker][template]</Name>
 
 <MinLevel>1</MinLevel>
 <MaxLevel>151</MaxLevel>
 
 <MinDurability>-1</MinDurability>
 <MinFreeBagSlots>-1</MinFreeBagSlots>
+<TargetingDistance>45</TargetingDistance>
+<TargetElites>False</TargetElites>
 
 <MailGrey>False</MailGrey>
 <MailWhite>False</MailWhite>
@@ -18,8 +20,6 @@
 <SellGreen>False</SellGreen>
 <SellBlue>False</SellBlue>
 <SellPurple>False</SellPurple>
-
-<TargetElites>False</TargetElites>
 
 <AvoidMobs>		 
 </AvoidMobs>
@@ -41,18 +41,7 @@
 	
 	<QuestOrder>
 			
-
-
-
-
-
-
-
-
-
-
-			
-				
+		
 	</QuestOrder>
 
 </HBProfile>
