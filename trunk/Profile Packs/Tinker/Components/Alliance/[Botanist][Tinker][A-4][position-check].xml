@@ -41,6 +41,26 @@
 	
 	<QuestOrder>
 			
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						AdvancedSettingsMode="True"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="False"
+						LogoutForInactivity="True"
+						LogoutInactivityUseForceQuit="True"
+						LootMobs="False"
+						LootRadius="1"
+						MountName=""
+						NinjaSkin="False"
+						ProfileDebuggingMode="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />
+						
 		<!-- Profile message - Checking our current characters position -->
 		<CustomBehavior File="Message" 
 						Text="Checking our current characters position." 
@@ -77,6 +97,34 @@
 							ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
 	
 		</If>	<!-- If we are in Teldrassil -->
+		
+		<!-- If we are in Ammen Vale -->
+		<If Condition="Me.ZoneId == 6456">				
+
+			<!-- Profile message - We are currently in Ammen Vale. We need to be in Eastern Kingdoms. Initiating movement procedures -->
+			<CustomBehavior File="Message" 
+							Text="We are currently in Ammen Vale. We need to be in Eastern Kingdoms. Initiating movement procedures." 
+							LogColor="Gold" />
+	
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Movement\[Botanist][Tinker]_azuremyst-bloodmyst-isle_to_rut'theran-village" />
+			
+		</If>	<!-- If we are in Darnassus -->
+		
+		<!-- If we are in Azuremyst Isle-Bloodmyst Isle -->
+		<If Condition="Me.X &lt; -825.2612 &amp;&amp; Me.X &gt; -5052.591 &amp;&amp; Me.Y &gt; -13282.24 &amp;&amp; Me.Y &lt; -10545.25" >				
+
+			<!-- Profile message - We are in Azuremyst Isle-Bloodmyst Isle. We need to be in Eastern Kingdoms. Initiating movement procedures -->
+			<CustomBehavior File="Message" 
+							Text="We are in Azuremyst-Bloodmyst Isle. We need to be in Eastern Kingdoms. Initiating movement procedures." 
+							LogColor="Plum" />				
+
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Movement\[Botanist][Tinker]_azuremyst-bloodmyst-isle_to_rut'theran-village" />
+							
+		</If>	<!-- If we are in Azuremyst Isle-Bloodmyst Isle -->
 		
 		<!-- If we are in Darnassus -->
 		<If Condition="Me.ZoneId == 1657">				

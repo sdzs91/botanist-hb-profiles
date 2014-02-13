@@ -41,6 +41,26 @@
 	
 	<QuestOrder>
 			
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						AdvancedSettingsMode="True"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="False"
+						LogoutForInactivity="True"
+						LogoutInactivityUseForceQuit="True"
+						LootMobs="False"
+						LootRadius="1"
+						MountName=""
+						NinjaSkin="False"
+						ProfileDebuggingMode="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />	
+			
 		<!-- Profile message - Checking our current characters level -->
 		<CustomBehavior File="Message" 
 						Text="Checking our current characters level." 
@@ -50,7 +70,7 @@
 		<CustomBehavior File="WaitTimer" 
 						WaitTime="1000" />
 			
-		<!-- If our level >=1 and <3-->
+		<!-- If our level >= 1 and < 3-->
 		<If Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt; 3" >
 		
 			<!-- Profile message - We are currently leveling in the 1-3 bracket -->
@@ -66,8 +86,27 @@
 			<CustomBehavior File="LoadProfile" 
 							ProfileName="[Botanist][Tinker][A-4][position-check]" />				
 							
-		</If>	<!-- If our level >=1 and <3-->
+		</If>	<!-- If our level >= 1 and < 3 -->
 
+		
+		<!-- If our level >= 1 and < 101 -->
+		<If Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt; 101" >
+		
+			<!-- Profile message - We are currently leveling in the 1-101 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are currently leveling in the 1-101 bracket." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />	
+
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="[Botanist][Tinker][A-4][position-check]" />				
+							
+		</If>	<!-- If our level >= 1 and < 101 -->
+		
 	</QuestOrder>
 
 </HBProfile>
