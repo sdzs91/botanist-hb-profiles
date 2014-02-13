@@ -86,8 +86,8 @@
 				<!-- Move to - Rut'theran Village -->
 				<MoveTo X="9959.419" Y="2619.949" Z="1316.002" />
 				
-				<!-- CTM to - Move into the Rut'theran Village portal-->
-				<CustomBehavior File="MyCTM" 
+				<!-- Go through the portal -->
+				<CustomBehavior File="Misc\InInstance" 
 								X="9954.132" Y="2625.944" Z="1317.423" />
 				
 				<!-- CustomBehavior - WaitTimer - loading screen  -->				
