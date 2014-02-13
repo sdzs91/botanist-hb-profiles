@@ -50,34 +50,62 @@
 		<CustomBehavior File="WaitTimer" 
 						WaitTime="5000" />
 			
-		<!-- If our level >= 1 and < 3 -->
-		<If Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt; 3" >
-		
-			<!-- Profile message - We are currently leveling in the 1-3 bracket -->
+		<!-- If we are in Shadowglen -->
+		<If Condition="Me.ZoneId == 6450">				
+	
+			<!-- Profile message - We are currently in Shadowglen. We need to be in Eastern Kingdoms. Initiating movement procedures -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling in the 1-3 bracket." 
-							LogColor="Plum" />
-							
-			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="1000" />	
+							Text="We are currently in Shadowglen. We need to be in Eastern Kingdoms. Initiating movement procedures." 
+							LogColor="Gold" />
+	
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />				
+						
+		</If>	<!-- If we are in Shadowglen -->				
 
-			<!-- If we are in Shadowglen -->
-			<If Condition="Me.ZoneId == 6450">				
+		<!-- If we are in Teldrassil -->
+		<If Condition="Me.ZoneId == 141">				
+
+			<!-- Profile message - We are currently in Teldrassil. We need to be in Eastern Kingdoms. Initiating movement procedures -->
+			<CustomBehavior File="Message" 
+							Text="We are currently in Teldrassil. We need to be in Eastern Kingdoms. Initiating movement procedures." 
+							LogColor="Gold" />
+	
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
+	
+		</If>	<!-- If we are in Teldrassil -->
 		
-				<!-- Profile message - We are currently in Teldrassil. We need to be in Eastern Kingdoms. Initiating movement procedures -->
-				<CustomBehavior File="Message" 
-								Text="We are currently in Shadowglen. We need to be in Eastern Kingdoms. Initiating movement procedures." 
-								LogColor="Gold" />
+		<!-- If we are in Darnassus -->
+		<If Condition="Me.ZoneId == 1657">				
+
+			<!-- Profile message - We are currently in Darnassus. We need to be in Eastern Kingdoms. Initiating movement procedures -->
+			<CustomBehavior File="Message" 
+							Text="We are currently in Darnassus. We need to be in Eastern Kingdoms. Initiating movement procedures." 
+							LogColor="Gold" />
+	
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
+			
+		</If>	<!-- If we are in Darnassus -->
 		
-				<!--  CustomBehavior - LoadProfile -->				
-				<CustomBehavior File="LoadProfile" 
-								ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />				
+		<!-- If we are in Rut'theran Village -->
+		<If Condition="Me.X &gt; 8145 &amp;&amp; Me.X &lt; 8600 &amp;&amp; Me.Y &lt; 1225 &amp;&amp; Me.Y &gt; 735" >				
+
+			<!-- Profile message - We are currently in Rut'theran Village. We need to be in Eastern Kingdoms. Initiating movement procedures -->
+			<CustomBehavior File="Message" 
+							Text="We are currently in Rut'theran Village. We need to be in Eastern Kingdoms. Initiating movement procedures." 
+							LogColor="Gold" />
+	
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
 							
-			</If>	<!-- If we are in Teldrassil -->				
-
-		</If>	<!-- If our level >=1 and <3 -->
-
+		</If>	<!-- If we are in Rut'theran Village -->
+		
 	</QuestOrder>
 
 </HBProfile>

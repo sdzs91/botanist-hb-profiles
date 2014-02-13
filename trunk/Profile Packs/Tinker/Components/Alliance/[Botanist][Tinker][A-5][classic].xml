@@ -41,10 +41,6 @@
 	
 	<QuestOrder>
 			
-		<!-- CustomBehavior - RunMacro - /Dance -->
-		<CustomBehavior File="RunMacro" 
-						Macro="/Dance" />
-		
 		
 	</QuestOrder>
 
