@@ -40,18 +40,43 @@
 <ClearMailbox />
 	
 	<QuestOrder>
+	
+		<!-- Profile message - Checking our current characters faction -->
+		<CustomBehavior File="Message" 
+						Text="Checking our current characters faction." 
+						LogColor="Gold" />
+		
+		<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+		<CustomBehavior File="WaitTimer" 
+						WaitTime="5000" />
+	
+		<!-- Faction check - Alliance -->
+		<If Condition="Me.IsAlliance" >		
+
+			<!-- Profile message - We are currently leveling a Alliance character -->
+			<CustomBehavior File="Message" 
+							Text="We are currently leveling a Alliance character." 
+							LogColor="Plum" />
+		
+			<!--  CustomBehavior - LoadProfile -->
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Components\Alliance\[Botanist][Tinker][A-1]race-check]" />
 			
-
-
-
-
-
-
-
-
-
-
+			<!-- Else we are Horde -->
+			<Else>
 			
+				<!-- Profile message - We are currently leveling a Horde character -->
+				<CustomBehavior File="Message" 
+								Text="We are currently leveling a Horde character." 
+								LogColor="Plum" />
+								
+				<!--  CustomBehavior - LoadProfile -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Components\Horde\[Botanist][Tinker][A-1]race-check]" />
+
+			</Else>		<!-- Else we are Horde -->
+			
+		</If>	<!-- Faction check - Alliance -->
 				
 	</QuestOrder>
 
