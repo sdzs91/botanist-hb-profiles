@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-<Name>[Botanist][Tinker][template]</Name>
+<Name>[Botanist][Tinker][H-7][lich-king]</Name>
 
 <MinLevel>1</MinLevel>
 <MaxLevel>151</MaxLevel>
@@ -41,8 +41,19 @@
 	
 	<QuestOrder>
 			
+		<!-- Profile message - All checks complete: Lich King -->
+		<CustomBehavior File="Message" 
+						Text="All checks complete: Lich King."  
+						LogColor="Orange" />
+						
+		<!-- CustomBehavior - RunMacro - dance -->				
+		<CustomBehavior File="RunMacro" 
+						Macro="/Dance" />				
 		
+		<!-- CustomBehavior - WaitTimer - wait 5 minutes - delay -->
+		<CustomBehavior File="WaitTimer" 
+						WaitTime="300000"  />
+						
 	</QuestOrder>
 
 </HBProfile>
-

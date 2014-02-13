@@ -41,7 +41,19 @@
 	
 	<QuestOrder>
 			
+		<!-- Profile message - All checks complete -->
+		<CustomBehavior File="Message" 
+						Text="All checks complete: Classic."  
+						LogColor="Orange" />
+						
+		<!-- CustomBehavior - RunMacro - dance -->				
+		<CustomBehavior File="RunMacro" 
+						Macro="/Dance" />				
 		
+		<!-- CustomBehavior - WaitTimer - wait 5 minutes - delay -->
+		<CustomBehavior File="WaitTimer" 
+						WaitTime="300000"  />
+						
 	</QuestOrder>
 
 </HBProfile>
