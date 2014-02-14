@@ -1,0 +1,119 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+<Name>[Botanist][Tinker]_dun-morogh_to_stormwind</Name>
+
+<MinLevel>1</MinLevel>
+<MaxLevel>151</MaxLevel>
+
+<MinDurability>-1</MinDurability>
+<MinFreeBagSlots>-1</MinFreeBagSlots>
+<TargetingDistance>45</TargetingDistance>
+<TargetElites>False</TargetElites>
+
+<MailGrey>False</MailGrey>
+<MailWhite>False</MailWhite>
+<MailGreen>False</MailGreen>
+<MailBlue>False</MailBlue>
+<MailPurple>False</MailPurple>
+
+<SellGrey>False</SellGrey>
+<SellWhite>False</SellWhite>
+<SellGreen>False</SellGreen>
+<SellBlue>False</SellBlue>
+<SellPurple>False</SellPurple>
+
+<AvoidMobs>		 
+</AvoidMobs>
+
+<Blackspots>
+</Blackspots>
+
+<Mailboxes>
+</Mailboxes>
+
+<Vendors>
+</Vendors>
+
+<ProtectedItems>	
+</ProtectedItems>
+
+<ClearVendor />
+<ClearMailbox />
+	
+	<QuestOrder>
+	
+		<!-- If we are in Dun Morogh -->
+		<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId == 1">				
+
+			<!-- Profile message - We are in Dun Morogh. Navigating to Stormwind -->
+			<CustomBehavior File="Message" 
+								Text="We are in Dun Morogh. Navigating to Stormwind." 
+								LogColor="Plum" />				
+	
+			<!-- Move to - Iron Forge flight master -->
+			<MoveTo X="-4821.78" Y="-1155.44" Z="502.21" />
+	
+			<!-- Move to - the Tram entrance Iron Forge -->
+			<MoveTo X="-4838.849" Y="-1318.539" Z="501.8685" />
+				
+			<!-- Go through the portal -->									
+			<CustomBehavior File="Misc\InInstance" 
+							X="-4841.061" Y="-1326.37" Z="501.8685" />	
+				
+			<!-- Move to - the Tram track in Iron Forge -->
+			<MoveTo X="4.504895" Y="39.665" Z="-13.86343" />	
+				
+			<!-- Move to - the Tram track in Stormwind -->
+			<MoveTo X="4.82688" Y="2459.661" Z="-13.863" />	
+			
+			<!-- Move to - the Tram exit Stormwind -->
+			<MoveTo X="-4838.849" Y="-1318.539" Z="501.8685" />
+				
+			<!-- Go through the portal -->									
+			<CustomBehavior File="Misc\InInstance" 
+							X="71.85335" Y="2490.947" Z="-4.29649" />
+
+			<!-- Move to - Stormwind flight master -->
+			<MoveTo X="9968.8" Y="2622.09" Z="1316.08" />	
+				
+		</If>	<!-- If we are in Dun Morogh -->
+		
+		<!-- If we are in Eastern Kingdoms -->
+		<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId != 1">				
+
+			<!-- Profile message - We are in Eastern Kingdoms. Navigating to Stormwind -->
+			<CustomBehavior File="Message" 
+								Text="We are in Eastern Kingdoms. Navigating to Stormwind." 
+								LogColor="Plum" />				
+	
+			<!-- Move to - Iron Forge flight master -->
+			<MoveTo X="-4821.78" Y="-1155.44" Z="502.21" />
+	
+			<!-- Move to - the Tram entrance Iron Forge -->
+			<MoveTo X="-4838.849" Y="-1318.539" Z="501.8685" />
+				
+			<!-- Go through the portal -->									
+			<CustomBehavior File="Misc\InInstance" 
+							X="-4841.061" Y="-1326.37" Z="501.8685" />	
+				
+			<!-- Move to - the Tram track in Iron Forge -->
+			<MoveTo X="4.504895" Y="39.665" Z="-13.86343" />	
+				
+			<!-- Move to - the Tram track in Stormwind -->
+			<MoveTo X="4.82688" Y="2459.661" Z="-13.863" />	
+			
+			<!-- Move to - the Tram exit Stormwind -->
+			<MoveTo X="-4838.849" Y="-1318.539" Z="501.8685" />
+				
+			<!-- Go through the portal -->									
+			<CustomBehavior File="Misc\InInstance" 
+							X="71.85335" Y="2490.947" Z="-4.29649" />
+
+			<!-- Move to - Stormwind flight master -->
+			<MoveTo X="9968.8" Y="2622.09" Z="1316.08" />
+		
+		</If>	<!-- If we are in Eastern Kingdoms -->
+
+	</QuestOrder>
+
+</HBProfile>
+

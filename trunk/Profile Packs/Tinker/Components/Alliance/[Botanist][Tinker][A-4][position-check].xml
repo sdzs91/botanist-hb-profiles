@@ -155,7 +155,7 @@
 		</If>	<!-- If we are in Rut'theran Village -->
 		
 		<!-- If we are in Eastern Kingdoms -->
-		<If Condition="Me.MapId == 0">				
+		<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId != 1">				
 
 			<!-- Profile message - We are in Eastern Kingdoms. Initiating movement procedures -->
 			<CustomBehavior File="Message" 
@@ -164,9 +164,23 @@
 							
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
+							ProfileName="Movement\[Botanist][Tinker]_dun-morogh_to_stormwind" />
 				
 		</If>	<!-- If we are in Eastern Kingdoms -->
+		
+		<!-- If we are in Dun Morogh -->
+		<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId == 1">				
+
+			<!-- Profile message - We are in Dun Morogh. Initiating movement procedures -->
+			<CustomBehavior File="Message" 
+							Text="We are in Dun Morogh. Initiating movement procedures." 
+							LogColor="Plum" />	
+							
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Movement\[Botanist][Tinker]_dun-morogh_to_stormwind" />
+				
+		</If>	<!-- If we are in Dun Morogh -->
 
 	</QuestOrder>
 
