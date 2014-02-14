@@ -96,6 +96,15 @@
 							Text="We are currently leveling a Worgen." 
 							LogColor="Plum" />
 							
+			<!-- CustomBehavior - Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />				
+							
+			<!-- Profile message - Your character must have exited the starting zone to use this profile -->
+			<CustomBehavior File="Message" 
+							Text="Your character must have exited the starting zone to use this profile." 
+							LogColor="Red" />				
+							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="1000" />	
@@ -113,6 +122,15 @@
 			<CustomBehavior File="Message" 
 							Text="We are currently leveling a Pandaren." 
 							LogColor="Plum" />
+							
+			<!-- CustomBehavior - Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />				
+							
+			<!-- Profile message - Your character must have exited the starting zone to use this profile -->
+			<CustomBehavior File="Message" 
+							Text="Your character must have exited the starting zone to use this profile." 
+							LogColor="Red" />				
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 

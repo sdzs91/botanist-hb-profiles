@@ -6,7 +6,7 @@
 
 <MinDurability>-1</MinDurability>
 <MinFreeBagSlots>-1</MinFreeBagSlots>
-<TargetingDistance>45</TargetingDistance>
+<TargetingDistance>1</TargetingDistance>
 <TargetElites>False</TargetElites>
 
 <MailGrey>False</MailGrey>
@@ -66,14 +66,21 @@
 			<MoveTo X="4.82688" Y="2459.661" Z="-13.863" />	
 			
 			<!-- Move to - the Tram exit Stormwind -->
-			<MoveTo X="-4838.849" Y="-1318.539" Z="501.8685" />
+			<MoveTo X="65.82558" Y="2490.777" Z="-4.296983" />
 				
 			<!-- Go through the portal -->									
 			<CustomBehavior File="Misc\InInstance" 
 							X="71.85335" Y="2490.947" Z="-4.29649" />
 
+			<!-- Move to - exit the tram tunnle -->
+			<MoveTo X="-8402.378" Y="570.6393" Z="92.16895" />				
+
 			<!-- Move to - Stormwind flight master -->
-			<MoveTo X="9968.8" Y="2622.09" Z="1316.08" />	
+			<MoveTo X="-8836.922" Y="488.0515" Z="109.6097" />	
+				
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="[Botanist][Tinker]_teldrassil_to_stormwind" />	
 				
 		</If>	<!-- If we are in Dun Morogh -->
 		
@@ -102,14 +109,21 @@
 			<MoveTo X="4.82688" Y="2459.661" Z="-13.863" />	
 			
 			<!-- Move to - the Tram exit Stormwind -->
-			<MoveTo X="-4838.849" Y="-1318.539" Z="501.8685" />
+			<MoveTo X="65.82558" Y="2490.777" Z="-4.296983" />
 				
 			<!-- Go through the portal -->									
 			<CustomBehavior File="Misc\InInstance" 
 							X="71.85335" Y="2490.947" Z="-4.29649" />
 
+			<!-- Move to - exit the tram tunnle -->
+			<MoveTo X="-8402.378" Y="570.6393" Z="92.16895" />				
+
 			<!-- Move to - Stormwind flight master -->
-			<MoveTo X="9968.8" Y="2622.09" Z="1316.08" />
+			<MoveTo X="-8836.922" Y="488.0515" Z="109.6097" />	
+				
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="[Botanist][Tinker]_teldrassil_to_stormwind" />	
 		
 		</If>	<!-- If we are in Eastern Kingdoms -->
 
