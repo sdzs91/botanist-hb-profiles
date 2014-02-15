@@ -176,9 +176,8 @@
 										Text="Engaging a Ancient Mogu Spirit." 
 										LogColor="Cyan" />
 						
-						<!-- Reset the instance -->
-						<CustomBehavior File="RunMacro" 
-										Macro="/startattack" />
+						<!-- Cast one of the following spells -->
+						<CustomBehavior File="Misc\RangeAttack" />
 
 					</If>	<!-- If our target is a Ancient Mogu Spirit --> 
 
