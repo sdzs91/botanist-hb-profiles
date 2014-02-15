@@ -84,8 +84,8 @@
 				
 		</If>	<!-- If we are in Dun Morogh -->
 		
-		<!-- If we are in Eastern Kingdoms -->
-		<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId != 1">				
+		<!-- If we are in Eastern Kingdoms and we aren't in Dun Morogh or Elwynn Forest -->
+		<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId != 1 &amp;&amp; Me.ZoneId != 12 ">				
 
 			<!-- Profile message - We are in Eastern Kingdoms. Navigating to Stormwind -->
 			<CustomBehavior File="Message" 
@@ -125,8 +125,37 @@
 			<CustomBehavior File="LoadProfile" 
 							ProfileName="[Botanist][Tinker]_teldrassil_to_stormwind" />	
 		
-		</If>	<!-- If we are in Eastern Kingdoms -->
+		</If>	<!-- If we are in Eastern Kingdoms and we aren't in Dun Morogh or Elwynn Forest -->
 
+		<!-- If we are in Elwynn Forest -->
+		<If Condition="Me.ZoneId == 12 ">				
+
+			<!-- Profile message -  Navigating to Goldshire -->
+			<CustomBehavior File="Message" 
+								Text="Navigating to Goldshire." 
+								LogColor="Plum" />				
+	
+			<!-- Move to - Goldshire flight master -->	
+			<MoveTo X="-9433.99" Y="85.1493" Z="56.734" />
+			
+			<!-- CustomBehavior - WaitTimer - 3 second delay  -->				
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+	
+			<!-- Profile message - We are in Goldshire. Navigating to Northshire -->
+			<CustomBehavior File="Message" 
+							Text="We are in Goldshire. Navigating to Northshire." 
+							LogColor="Plum" />
+			
+			<!-- Move to - Northshire  -->	
+			<MoveTo X="-8927.191" Y="-119.1697" Z="82.0771" />	
+				
+			<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="..\[Botanist][Tinker][A-5][classic]" />	
+		
+		</If>	<!-- If we are in Eastern Kingdoms and we aren't in Dun Morogh or Elwynn Forest -->
+		
 	</QuestOrder>
 
 </HBProfile>
