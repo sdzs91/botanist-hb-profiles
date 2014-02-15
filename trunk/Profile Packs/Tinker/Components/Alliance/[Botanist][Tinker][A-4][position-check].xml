@@ -157,6 +157,20 @@
 								
 			</If>	<!-- If we are in Rut'theran Village -->
 			
+			<!-- If we are in Northshire Valley -->
+			<If Condition="Me.X &gt; -9053.869 &amp;&amp; Me.X &lt; -8602.287 &amp;&amp; Me.Y &gt; -497.3038 &amp;&amp; Me.Y &lt; 91.08976" > 
+			
+				<!-- CustomBehavior - Message - We are in Northshire Valley -->
+				<CustomBehavior File="Message" 
+								Text="We are in Northshire Valley." 
+								LogColor="Plum" />		
+								
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="[Botanist][Tinker][A-5][classic]" />
+					
+			</If>	<!-- If we are in Northshire Valley -->
+			
 			<!-- If we are in Eastern Kingdoms -->
 			<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId != 1">				
 

@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-<Name>[Botanist][Tinker][template]</Name>
+<Name>[Botanist][Tinker][1-58][repair-mail]</Name>
 
 <MinLevel>1</MinLevel>
 <MaxLevel>151</MaxLevel>
@@ -41,6 +41,23 @@
 	
 	<QuestOrder>
 			
+		
+		
+		
+		
+		
+		
+		
+		
+
+		<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
+		<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+									
+			<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="..\..\[Botanist][Tinker][A-5][classic]" />
+
+		</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 		
 	</QuestOrder>
 

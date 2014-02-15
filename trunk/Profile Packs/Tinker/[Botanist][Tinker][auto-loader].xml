@@ -147,7 +147,7 @@
 							Text="We are currently leveling a Alliance character." 
 							LogColor="Plum" />
 		
-			<!--  CustomBehavior - LoadProfile -->
+			<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-1]race-check] -->
 			<CustomBehavior File="LoadProfile" 
 							ProfileName="Components\Alliance\[Botanist][Tinker][A-1]race-check]" />
 			
@@ -161,7 +161,7 @@
 								
 				<!--  CustomBehavior - LoadProfile -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="Components\Horde\[Botanist][Tinker][A-1]race-check]" />
+								ProfileName="Components\Alliance\[Botanist][Tinker][A-1]race-check]" />
 
 			</Else>		<!-- Else we are Horde -->
 			
