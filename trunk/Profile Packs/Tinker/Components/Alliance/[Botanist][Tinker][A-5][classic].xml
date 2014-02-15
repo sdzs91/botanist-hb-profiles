@@ -124,7 +124,7 @@
 				
 				<!-- Custom behavior - TargetAndMoveToMob - Blackrock Battle Worg -->
 				<CustomBehavior File="TargetAndMoveToMob"
-								MoveWithinMaxRangeOfMob="25"
+								MoveWithinMaxRangeOfMob="4"
 								TargetOnlyIfHealthPercentAbove="5"
 								WaitForNpcs="False"
 								MobId="49871" >
