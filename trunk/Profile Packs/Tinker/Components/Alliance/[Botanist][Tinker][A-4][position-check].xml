@@ -198,8 +198,140 @@
 								ProfileName="Movement\[Botanist][Tinker]_dun-morogh_to_stormwind" />
 					
 			</If>	<!-- If we are in Dun Morogh -->
-			
+		
 		</If>	<!-- If our level >= 1 and <= 5 -->	
+		
+		<!-- If our level >= 6 and <= 57 -->
+		<If Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt;= 57" >
+
+			<!-- If we are in Shadowglen -->
+			<If Condition="Me.ZoneId == 6450">				
+		
+				<!-- Profile message - We are currently in Shadowglen. We need to be in Eastern Kingdoms. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are currently in Shadowglen. We need to be in Eastern Kingdoms. Initiating movement procedures." 
+								LogColor="Gold" />
+		
+				<!--  CustomBehavior - LoadProfile -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />				
+							
+			</If>	<!-- If we are in Shadowglen -->				
+
+			<!-- If we are in Teldrassil -->
+			<If Condition="Me.ZoneId == 141">				
+
+				<!-- Profile message - We are currently in Teldrassil. We need to be in Eastern Kingdoms. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are currently in Teldrassil. We need to be in Eastern Kingdoms. Initiating movement procedures." 
+								LogColor="Gold" />
+		
+				<!--  CustomBehavior - LoadProfile -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
+		
+			</If>	<!-- If we are in Teldrassil -->
+			
+			<!-- If we are in Ammen Vale -->
+			<If Condition="Me.ZoneId == 6456">				
+
+				<!-- Profile message - We are currently in Ammen Vale. We need to be in Eastern Kingdoms. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are currently in Ammen Vale. We need to be in Eastern Kingdoms. Initiating movement procedures." 
+								LogColor="Gold" />
+		
+				<!--  CustomBehavior - LoadProfile -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_azuremyst-bloodmyst-isle_to_rut'theran-village" />
+				
+			</If>	<!-- If we are in Darnassus -->
+			
+			<!-- If we are in Azuremyst Isle-Bloodmyst Isle -->
+			<If Condition="Me.X &lt; -825.2612 &amp;&amp; Me.X &gt; -5052.591 &amp;&amp; Me.Y &gt; -13282.24 &amp;&amp; Me.Y &lt; -10545.25" >				
+
+				<!-- Profile message - We are in Azuremyst Isle-Bloodmyst Isle. We need to be in Eastern Kingdoms. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are in Azuremyst-Bloodmyst Isle. We need to be in Eastern Kingdoms. Initiating movement procedures." 
+								LogColor="Plum" />				
+
+				<!--  CustomBehavior - LoadProfile -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_azuremyst-bloodmyst-isle_to_rut'theran-village" />
+								
+			</If>	<!-- If we are in Azuremyst Isle-Bloodmyst Isle -->
+			
+			<!-- If we are in Darnassus -->
+			<If Condition="Me.ZoneId == 1657">				
+
+				<!-- Profile message - We are currently in Darnassus. We need to be in Eastern Kingdoms. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are currently in Darnassus. We need to be in Eastern Kingdoms. Initiating movement procedures." 
+								LogColor="Gold" />
+		
+				<!--  CustomBehavior - LoadProfile -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
+				
+			</If>	<!-- If we are in Darnassus -->
+			
+			<!-- If we are in Rut'theran Village -->
+			<If Condition="Me.X &gt; 8145 &amp;&amp; Me.X &lt; 8600 &amp;&amp; Me.Y &lt; 1225 &amp;&amp; Me.Y &gt; 735" >				
+
+				<!-- Profile message - We are currently in Rut'theran Village. We need to be in Eastern Kingdoms. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are currently in Rut'theran Village. We need to be in Eastern Kingdoms. Initiating movement procedures." 
+								LogColor="Gold" />
+		
+				<!--  CustomBehavior - LoadProfile -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
+								
+			</If>	<!-- If we are in Rut'theran Village -->
+			
+			<!-- If we are in Northshire Valley -->
+			<If Condition="Me.X &gt; -9053.869 &amp;&amp; Me.X &lt; -8602.287 &amp;&amp; Me.Y &gt; -497.3038 &amp;&amp; Me.Y &lt; 91.08976" > 
+			
+				<!-- CustomBehavior - Message - We are in Northshire Valley -->
+				<CustomBehavior File="Message" 
+								Text="We are in Northshire Valley." 
+								LogColor="Plum" />		
+								
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="[Botanist][Tinker][A-5][classic]" />
+					
+			</If>	<!-- If we are in Northshire Valley -->
+			
+			<!-- If we are in Eastern Kingdoms -->
+			<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId != 1">				
+
+				<!-- Profile message - We are in Eastern Kingdoms. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are in Eastern Kingdoms. Initiating movement procedures." 
+								LogColor="Plum" />	
+								
+				<!--  CustomBehavior - LoadProfile -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_dun-morogh_to_stormwind" />
+					
+			</If>	<!-- If we are in Eastern Kingdoms -->
+			
+			<!-- If we are in Dun Morogh -->
+			<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId == 1">				
+
+				<!-- Profile message - We are in Dun Morogh. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are in Dun Morogh. Initiating movement procedures." 
+								LogColor="Plum" />	
+								
+				<!--  CustomBehavior - LoadProfile -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_dun-morogh_to_stormwind" />
+					
+			</If>	<!-- If we are in Dun Morogh -->
+		
+		</If>	<!-- If our level >= 6 and <= 57 -->
+		
 
 	</QuestOrder>
 

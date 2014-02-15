@@ -88,13 +88,65 @@
 							
 		</If>	<!-- If our level >= 1 and < 3 -->
 
+		<!-- If our level >= 3 and < 5 -->
+		<If Condition="Me.Level &gt;= 3 &amp;&amp; Me.Level &lt; 5" >
 		
-		<!-- If our level >= 1 and < 101 -->
-		<If Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt; 101" >
+			<!-- Profile message - We are currently leveling in the 3 to 5 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are currently leveling in the 3 to 5 bracket." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />	
+
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="[Botanist][Tinker][A-4][position-check]" />				
+							
+		</If>	<!-- If our level >= 3 and < 5 -->
+		
+		<!-- If our level >= 5 and < 6 -->
+		<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 6" >
+		
+			<!-- Profile message - We are currently leveling in the 3 to 5 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are currently leveling in the 3 to 5 bracket." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />	
+
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="[Botanist][Tinker][A-4][position-check]" />				
+							
+		</If>	<!-- If our level >= 5 and < 6 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level >= 6 and < 101 -->
+		<If Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt; 101" >
 		
 			<!-- Profile message - We are currently leveling in the 1-101 bracket -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling in the 1-101 bracket." 
+							Text="We are currently leveling in the 6-101 bracket." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->

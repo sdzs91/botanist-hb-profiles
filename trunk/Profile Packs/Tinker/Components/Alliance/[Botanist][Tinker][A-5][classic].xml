@@ -162,9 +162,9 @@
 			<!-- If our level >= 3 -->				
 			<If Condition="Me.Level &gt;= 3" >
 			
-				<!-- Profile message  - Engaging a Blackrock Battle Worg -->	
+				<!-- Profile message  - EWe have reached level 3. Changing locations -->	
 				<CustomBehavior File="Message" 
-								Text="We have reached level 3. Changing locations" 
+								Text="We have reached level 3. Changing locations." 
 								LogColor="Cyan" />
 								
 				<!-- CustomBehavior - WaitTimer - 3 second delay -->
@@ -207,9 +207,9 @@
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="1000" />
 			
-			<!-- CustomBehavior - Message - We are in the 1 to 3 bracket -->
+			<!-- CustomBehavior - Message - We are in the 3 to 5 bracket -->
 			<CustomBehavior File="Message" 
-							Text="We are in the 1 to 3 bracket." 
+							Text="We are in the 3 to 5 bracket." 
 							LogColor="Plum" />
 	
 			<!-- CustomBehavior - Message - Position check, Northshire Valley -->
@@ -239,7 +239,7 @@
 								LogColor="Plum" />		
 								
 				<!-- Move to - 3-5 Tinker zone -->				
-				<MoveTo X="-8831.491" Y="-55.48083" Z="88.007" />
+				<MoveTo X="-8759.709" Y="-226.1349" Z="86.24731" />
 					
 				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 5 -->
 				<CustomBehavior File="Message" 
@@ -251,31 +251,31 @@
 			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent -->				
 			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
 				
-				<!-- Custom behavior - TargetAndMoveToMob - Blackrock Battle Worg -->
+				<!-- Custom behavior - TargetAndMoveToMob - Goblin Assassin -->
 				<CustomBehavior File="TargetAndMoveToMob"
 								MoveWithinMaxRangeOfMob="4"
 								TargetOnlyIfHealthPercentAbove="5"
 								WaitForNpcs="False"
-								MobId="49871" >
+								MobId="50039" >
 					<HuntingGrounds>
-						<Hotspot X="-8784.337" Y="-65.70675" Z="91.02738" />
-						<Hotspot X="-8966.096" Y="-48.53926" Z="91.48355" />
+						<Hotspot X="-8754.845" Y="-71.75768" Z="92.7973" />
+						<Hotspot X="-8774.831" Y="-252.4493" Z="82.17862" />
 					</HuntingGrounds>			
 				</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 			
-				<!-- If our target is a Blackrock Battle Worg -->
-				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 49871)">
+				<!-- If our target is a Goblin Assassin -->
+				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 50039)">
 				
-					<!-- Profile message  - Engaging a Blackrock Battle Worg -->	
+					<!-- Profile message  - Engaging a Goblin Assassin -->	
 					<CustomBehavior File="Message" 
-									Text="Engaging a Blackrock Battle Worg" 
+									Text="Engaging a Goblin Assassin" 
 									LogColor="Cyan" />
 					
 					<!-- Reset the instance -->
 					<CustomBehavior File="RunMacro" 
 									Macro="/startattack" />
 
-				</If>	<!-- If our target is a Blackrock Battle Worg --> 
+				</If>	<!-- If our target is a Goblin Assassin --> 
 
 			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent --> 
 		
@@ -288,30 +288,169 @@
 
 			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 
-			<!-- If our level >= 3 -->				
+			<!-- If our level >= 5 -->				
 			<If Condition="Me.Level &gt;= 3" >
 			
-				<!-- Profile message  - Engaging a Blackrock Battle Worg -->	
+				<!-- Profile message  - We have reached level 5. Changing locations -->	
 				<CustomBehavior File="Message" 
-								Text="We have reached level 3. Changing locations" 
+								Text="We have reached level 5. Changing locations." 
 								LogColor="Cyan" />
 								
 				<!-- CustomBehavior - WaitTimer - 3 second delay -->
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />				
 								
-			</If>
+			</If>	<!-- If our level >= 5 -->
 
 		</While>	<!-- While loop - level >= 3 and < 5 -->
 
+		<!-- While loop - level >= 5 and < 6 -->				
+		<While Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 6" >
 
-
-
-
-
-
-
+			<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="False"
+							LogoutForInactivity="True"
+							LogoutInactivityUseForceQuit="True"
+							LootMobs="False"
+							LootRadius="1"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseMount="True" 
+							UseRandomMount="False" />
 			
+			<!-- CustomBehavior - Message - Checking our current level -->
+			<CustomBehavior File="Message" 
+							Text="Checking our current level......." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->				
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+			
+			<!-- CustomBehavior - Message - We are in the 5 to 6 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are in the 5 to 6 bracket." 
+							LogColor="Plum" />
+	
+			<!-- CustomBehavior - Message - Position check, Northshire Valley -->
+			<CustomBehavior File="Message" 
+							Text="Position check, Northshire Valley" 
+							LogColor="Plum" />
+			
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+			
+			<!-- If we are not in Northshire Valley -->
+			<If Condition="Me.X &lt; -9053.869 || Me.X &gt; -8602.287 || Me.Y &lt; -497.3038 || Me.Y &gt; 91.08976" >
+			
+				<!--  CustomBehavior - LoadProfile -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />		
+								
+			</If>	<!-- UserSettings -->
+			
+			<!-- If we are in Northshire Valley -->
+			<If Condition="Me.X &gt; -9053.869 &amp;&amp; Me.X &lt; -8602.287 &amp;&amp; Me.Y &gt; -497.3038 &amp;&amp; Me.Y &lt; 91.08976" > 
+			
+				<!-- CustomBehavior - Message - We are in Northshire Valley. Moving to the Tinker zone -->
+				<CustomBehavior File="Message" 
+								Text="We are in Northshire Valley. Moving to the Tinker zone." 
+								LogColor="Plum" />		
+								
+				<!-- Move to - 5-6 Tinker zone -->				
+				<MoveTo X="-9029.665" Y="-362.9276" Z="75.50504" />
+					
+				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 6 -->
+				<CustomBehavior File="Message" 
+								Text="We have reached the Tinker zone. We will farm this area until we reach level 6." 
+								LogColor="Plum" />	
+					
+			</If>	<!-- If we are in Northshire Valley -->
+
+			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent -->				
+			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+				
+				<!-- Custom behavior - TargetAndMoveToMob - Blackrock Invader -->
+				<CustomBehavior File="TargetAndMoveToMob"
+								MoveWithinMaxRangeOfMob="4"
+								TargetOnlyIfHealthPercentAbove="5"
+								WaitForNpcs="False"
+								MobId="42937" >
+					<HuntingGrounds>
+						<Hotspot X="-8888.27" Y="-412.9247" Z="68.54729" />
+						<Hotspot X="-9113.46" Y="-272.5708" Z="73.61474" />
+					</HuntingGrounds>			
+				</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+			
+				<!-- If our target is a Blackrock Invader -->
+				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 42937)">
+				
+					<!-- Profile message  - Engaging a Blackrock Invader -->	
+					<CustomBehavior File="Message" 
+									Text="Engaging a Blackrock Invader" 
+									LogColor="Cyan" />
+					
+					<!-- Reset the instance -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/startattack" />
+
+				</If>	<!-- If our target is a Blackrock Invader --> 
+
+			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent --> 
+		
+			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+			<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+										
+				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+
+			<!-- If our level >= 5 -->				
+			<If Condition="Me.Level &gt;= 6" >
+			
+				<!-- Profile message  - We have reached level 6. Changing locations -->	
+				<CustomBehavior File="Message" 
+								Text="We have reached level 6. Changing locations." 
+								LogColor="Cyan" />
+								
+				<!-- CustomBehavior - WaitTimer - 3 second delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />				
+								
+			</If>	<!-- If our level >= 5 -->
+
+		</While>	<!-- While loop - level >= 3 and < 5 -->
+
+		
+
+
+
+
+		<!-- If our level >= 6 -->				
+		<If Condition="Me.Level &gt;= 6" >
+		
+			<!-- Profile message  - This portion has not been completed yet. Stopping the bot -->	
+			<CustomBehavior File="Message" 
+							Text="This portion has not been completed yet. Stopping the bot." 
+							LogColor="Orange" />
+		
+			<CustomBehavior File="UserSettings" 
+							StopBot="true" />
+		
+		</If>
+		
 	</QuestOrder>
 
 </HBProfile>
