@@ -25,6 +25,7 @@
 </AvoidMobs>
 
 <Blackspots>
+	<Blackspot X="-8858.412" Y="-248.52" Z="80.12221" Radius="54.69961" />
 </Blackspots>
 
 <Mailboxes>
@@ -119,8 +120,8 @@
 					
 			</If>	<!-- If we are in Northshire Valley -->
 
-			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent -->				
-			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 3 -->				
+			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3) &amp;&amp; (Me.Level &lt; 3)" >
 				
 				<!-- Custom behavior - TargetAndMoveToMob - Blackrock Battle Worg -->
 				<CustomBehavior File="TargetAndMoveToMob"
@@ -148,7 +149,7 @@
 
 				</If>	<!-- If our target is a Blackrock Battle Worg --> 
 
-			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent --> 
+			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 3 --> 
 		
 			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 			<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
@@ -171,10 +172,10 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />				
 								
-			</If>					
+			</If>	<!-- If our level >= 3 -->					
 		
 		</While>	<!-- While loop - level <= 1 < 3 -->
-			
+
 		<!-- While loop - level >= 3 and < 5 -->				
 		<While Condition="Me.Level &gt;= 3 &amp;&amp; Me.Level &lt; 5" >
 
@@ -248,8 +249,8 @@
 					
 			</If>	<!-- If we are in Northshire Valley -->
 
-			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent -->				
-			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 5 -->				
+			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)  &amp;&amp; (Me.Level &lt; 5)" >
 				
 				<!-- Custom behavior - TargetAndMoveToMob - Goblin Assassin -->
 				<CustomBehavior File="TargetAndMoveToMob"
@@ -277,7 +278,7 @@
 
 				</If>	<!-- If our target is a Goblin Assassin --> 
 
-			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent --> 
+			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 5 --> 
 		
 			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 			<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
@@ -289,7 +290,7 @@
 			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 
 			<!-- If our level >= 5 -->				
-			<If Condition="Me.Level &gt;= 3" >
+			<If Condition="Me.Level &gt;= 5" >
 			
 				<!-- Profile message  - We have reached level 5. Changing locations -->	
 				<CustomBehavior File="Message" 
@@ -377,8 +378,8 @@
 					
 			</If>	<!-- If we are in Northshire Valley -->
 
-			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent -->				
-			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 6 -->				
+			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3) &amp;&amp; (Me.Level &lt; 6)" >
 				
 				<!-- Custom behavior - TargetAndMoveToMob - Blackrock Invader -->
 				<CustomBehavior File="TargetAndMoveToMob"
@@ -406,7 +407,7 @@
 
 				</If>	<!-- If our target is a Blackrock Invader --> 
 
-			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent --> 
+			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 6 -->
 		
 			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 			<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
@@ -417,7 +418,7 @@
 
 			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 
-			<!-- If our level >= 5 -->				
+			<!-- If our level >= 6 -->				
 			<If Condition="Me.Level &gt;= 6" >
 			
 				<!-- Profile message  - We have reached level 6. Changing locations -->	
