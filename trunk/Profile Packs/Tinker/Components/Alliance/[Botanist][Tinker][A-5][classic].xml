@@ -477,9 +477,9 @@
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="1000" />
 			
-			<!-- CustomBehavior - Message - We are in the 6 to 7 bracket -->
+			<!-- CustomBehavior - Message - We are in the 6 to 8 bracket -->
 			<CustomBehavior File="Message" 
-							Text="We are in the 6 to 7 bracket." 
+							Text="We are in the 6 to 8 bracket." 
 							LogColor="Plum" />
 	
 			<!-- CustomBehavior - Message - Position check, we need to be in Elwynn Forest -->
@@ -509,6 +509,10 @@
 			<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
 			<If Condition="Me.ZoneId == 12 &amp;&amp; Me.HearthstoneAreaId != 5637">
 			
+				<!-- CustomBehavior - WaitTimer - 1 second delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+							
 				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A][hearthstone] -->
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Hearthstone\[Botanist][Tinker][A][hearthstone]" />
@@ -523,8 +527,8 @@
 								Text="We are in Elwynn Forest. Moving to the Tinker zone." 
 								LogColor="Plum" />		
 								
-				<!-- Move to - 6 - 7 Tinker zone -->				
-				<MoveTo X="-9521.241" Y="-526.3424" Z="62.97178" />
+				<!-- Move to - 6 - 8 Tinker zone -->				
+				<MoveTo X="-9427.734" Y="208.3536" Z="59.87153" />
 					
 				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 8 -->
 				<CustomBehavior File="Message" 
@@ -597,40 +601,7 @@
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 
 		<!-- While loop - level >= 8 and < 10 -->				
 		<While Condition="Me.Level &gt;= 8 &amp;&amp; Me.Level &lt; 10" >

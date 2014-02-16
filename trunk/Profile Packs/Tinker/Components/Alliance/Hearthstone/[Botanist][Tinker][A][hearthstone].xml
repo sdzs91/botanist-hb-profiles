@@ -61,8 +61,8 @@
 						UseMount="True" 
 						UseRandomMount="False" />
 			
-		<!-- If our level => 6 and < 8-->				
-		<If Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt; 8" >
+		<!-- If our level => 6 and < 13 -->				
+		<If Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt; 13" >
 	
 			<!-- If our hearthstone is set at Golshire-->
 			<If Condition="(Me.HearthstoneAreaId == 5637)" >
@@ -71,7 +71,11 @@
 				<CustomBehavior File="Message" 
 								Text="Our Hearthstone has already been set at Goldshire." 
 								LogColor="Plum" />
-	
+								
+				<!-- CustomBehavior - WaitTimer - 1 second delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+
 				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="..\[Botanist][Tinker][A-5][classic]" />
