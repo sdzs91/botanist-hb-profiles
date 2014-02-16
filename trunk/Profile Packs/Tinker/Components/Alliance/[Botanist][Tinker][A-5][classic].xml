@@ -25,6 +25,7 @@
 </AvoidMobs>
 
 <Blackspots>
+	<Blackspot X="-8905.608" Y="-136.0411" Z="80.65701" Radius="5" />
 	<Blackspot X="-8858.412" Y="-248.52" Z="80.12221" Radius="54.69961" />
 </Blackspots>
 
@@ -174,7 +175,7 @@
 								
 			</If>	<!-- If our level >= 3 -->					
 		
-		</While>	<!-- While loop - level <= 1 < 3 -->
+		</While>	<!-- While loop - level => 1 and < 3 -->
 
 		<!-- While loop - level >= 3 and < 5 -->				
 		<While Condition="Me.Level &gt;= 3 &amp;&amp; Me.Level &lt; 5" >
@@ -305,6 +306,10 @@
 
 		</While>	<!-- While loop - level >= 3 and < 5 -->
 
+		
+		
+		
+		
 		<!-- While loop - level >= 5 and < 6 -->				
 		<While Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 6" >
 
@@ -369,7 +374,7 @@
 								LogColor="Plum" />		
 								
 				<!-- Move to - 5-6 Tinker zone -->				
-				<MoveTo X="-9029.665" Y="-362.9276" Z="75.50504" />
+				<MoveTo X="-8809.696" Y="-365.7493" Z="70.98738" />
 					
 				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 6 -->
 				<CustomBehavior File="Message" 
@@ -379,7 +384,7 @@
 			</If>	<!-- If we are in Northshire Valley -->
 
 			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 6 -->				
-			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3) &amp;&amp; (Me.Level &lt; 6)" >
+			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3) &amp;&amp; (Me.Level &lt; 6)" >
 				
 				<!-- Custom behavior - TargetAndMoveToMob - Blackrock Invader -->
 				<CustomBehavior File="TargetAndMoveToMob"
@@ -432,11 +437,349 @@
 								
 			</If>	<!-- If our level >= 5 -->
 
-		</While>	<!-- While loop - level >= 3 and < 5 -->
+		</While>	<!-- While loop - level >= 5 and < 6 -->
 
 		
+		
+		
+		
+		
+		
+		<!-- While loop - level >= 6 and < 7 -->				
+		<While Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt; 7" >
 
+			<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="False"
+							LogoutForInactivity="True"
+							LogoutInactivityUseForceQuit="True"
+							LootMobs="False"
+							LootRadius="1"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseMount="True" 
+							UseRandomMount="False" />
+			
+			<!-- CustomBehavior - Message - Checking our current level -->
+			<CustomBehavior File="Message" 
+							Text="Checking our current level......." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->				
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+			
+			<!-- CustomBehavior - Message - We are in the 6 to 7 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are in the 6 to 7 bracket." 
+							LogColor="Plum" />
+	
+			<!-- CustomBehavior - Message - Position check, we need to be in Elwynn Forest -->
+			<CustomBehavior File="Message" 
+							Text="Position check, we need to be in Elwynn Forest" 
+							LogColor="Plum" />
+			
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+			
+			
+			
+			
+			
+			
+			
+			<!-- If we are not in Elwynn Forest -->
+			<If Condition="Me.ZoneId != 12">
+			
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A][hearthstone] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_unknown-to-elwynn-forest" />		
+								
+			</If>	<!-- If we are not in Elwynn Forest --> 
+			
+			<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
+			<If Condition="Me.ZoneId == 12 &amp;&amp; Me.HearthstoneAreaId != 5637">
+			
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A][hearthstone] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Hearthstone\[Botanist][Tinker][A][hearthstone]" />
+									
+			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
+			
+			<!-- If we are in Elwynn Forest and our hearthstone is set to Goldshire -->
+			<If Condition="Me.ZoneId == 12 &amp;&amp; Me.HearthstoneAreaId == 5637">
+			
+				<!-- CustomBehavior - Message - We are in Elwynn Forest. Moving to the Tinker zone -->
+				<CustomBehavior File="Message" 
+								Text="We are in Elwynn Forest. Moving to the Tinker zone." 
+								LogColor="Plum" />		
+								
+				<!-- Move to - 6 - 7 Tinker zone -->				
+				<MoveTo X="-9521.241" Y="-526.3424" Z="62.97178" />
+					
+				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 8 -->
+				<CustomBehavior File="Message" 
+								Text="We have reached the Tinker zone. We will farm this area until we reach level 7." 
+								LogColor="Plum" />
+									
+			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
+			
+			
+			
+			
+			
+			
+			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 7 -->				
+			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3) &amp;&amp; (Me.Level &lt; 7)" >
+				
+				<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
+				<CustomBehavior File="TargetAndMoveToMob"
+								MoveWithinMaxRangeOfMob="4"
+								TargetOnlyIfHealthPercentAbove="5"
+								WaitForNpcs="False"
+								MobId="525" >
+					<HuntingGrounds>
+						<Hotspot X="-9449.349" Y="226.1531" Z="59.63327" />
+						<Hotspot X="-9718.177" Y="432.4979" Z="38.48559" />
+					</HuntingGrounds>			
+				</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+			
+				<!-- If our target is a Gray Forest Wolf -->
+				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
+				
+					<!-- Profile message  - Engaging a Mangy Wolf -->	
+					<CustomBehavior File="Message" 
+									Text="Engaging a Mangy Wolf" 
+									LogColor="Cyan" />
+					
+					<!-- Reset the instance -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/startattack" />
 
+				</If>	<!-- If our target is a Mangy Wolf --> 
+
+			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 7 -->
+		
+			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+			<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+										
+				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+
+			<!-- If our level >= 6 -->				
+			<If Condition="Me.Level &gt;= 7" >
+			
+				<!-- Profile message  - We have reached level 7. Changing locations -->	
+				<CustomBehavior File="Message" 
+								Text="We have reached level 7. Changing locations." 
+								LogColor="Cyan" />
+								
+				<!-- CustomBehavior - WaitTimer - 3 second delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />				
+								
+			</If>	<!-- If our level >= 5 -->
+
+		</While>	<!-- While loop - level >= 6 and < 7 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		<!-- While loop - level >= 7 and < 8 -->				
+		<While Condition="Me.Level &gt;= 7 &amp;&amp; Me.Level &lt; 8" >
+
+			<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="False"
+							LogoutForInactivity="True"
+							LogoutInactivityUseForceQuit="True"
+							LootMobs="False"
+							LootRadius="1"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseMount="True" 
+							UseRandomMount="False" />
+			
+			<!-- CustomBehavior - Message - Checking our current level -->
+			<CustomBehavior File="Message" 
+							Text="Checking our current level......." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->				
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+			
+			<!-- CustomBehavior - Message - We are in the 7 to 8 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are in the 7 to 8 bracket." 
+							LogColor="Plum" />
+	
+			<!-- CustomBehavior - Message - Position check, we need to be in Elwynn Forest -->
+			<CustomBehavior File="Message" 
+							Text="Position check, we need to be in Elwynn Forest" 
+							LogColor="Plum" />
+			
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+			
+			
+			
+			
+			
+			
+			
+			<!-- If we are not in Elwynn Forest -->
+			<If Condition="Me.ZoneId != 12">
+			
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A][hearthstone] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_unknown-to-elwynn-forest" />		
+								
+			</If>	<!-- If we are not in Elwynn Forest --> 
+			
+			<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
+			<If Condition="Me.ZoneId == 12 &amp;&amp; Me.HearthstoneAreaId != 5637">
+			
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A][hearthstone] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Hearthstone\[Botanist][Tinker][A][hearthstone]" />
+									
+			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
+			
+			<!-- If we are in Elwynn Forest and our hearthstone is set to Goldshire -->
+			<If Condition="Me.ZoneId == 12 &amp;&amp; Me.HearthstoneAreaId == 5637">
+			
+				<!-- CustomBehavior - Message - Moving to the Tinker zone -->
+				<CustomBehavior File="Message" 
+								Text="Moving to the Tinker zone." 
+								LogColor="Plum" />		
+								
+				<!-- Move to - 6 - 8 Tinker zone -->				
+				<MoveTo X="-9521.241" Y="-526.3424" Z="62.97178" />
+					
+				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 8 -->
+				<CustomBehavior File="Message" 
+								Text="We have reached the Tinker zone. We will farm this area until we reach level 8." 
+								LogColor="Plum" />
+									
+			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
+			
+			
+			
+			
+			
+			
+			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 8 -->				
+			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3) &amp;&amp; (Me.Level &lt; 8)" >
+				
+				<!-- Custom behavior - TargetAndMoveToMob - Gray Forest Wolf -->
+				<CustomBehavior File="TargetAndMoveToMob"
+								MoveWithinMaxRangeOfMob="4"
+								TargetOnlyIfHealthPercentAbove="5"
+								WaitForNpcs="False"
+								MobId="1922" >
+					<HuntingGrounds>
+						<Hotspot X="-9568.524" Y="-483.976" Z="61.87521" />
+						<Hotspot X="-9280.763" Y="-639.2274" Z="64.82249" />
+					</HuntingGrounds>			
+				</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+			
+				<!-- If our target is a Gray Forest Wolf -->
+				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 1922)">
+				
+					<!-- Profile message  - Engaging a Gray Forest Wolf -->	
+					<CustomBehavior File="Message" 
+									Text="Engaging a Gray Forest Wolf" 
+									LogColor="Cyan" />
+					
+					<!-- Reset the instance -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/startattack" />
+
+				</If>	<!-- If our target is a Gray Forest Wolf --> 
+
+			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 6 -->
+		
+			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+			<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+										
+				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+
+			<!-- If our level >= 6 -->				
+			<If Condition="Me.Level &gt;= 8" >
+			
+				<!-- Profile message  - We have reached level 8. Changing locations -->	
+				<CustomBehavior File="Message" 
+								Text="We have reached level 8. Changing locations." 
+								LogColor="Cyan" />
+								
+				<!-- CustomBehavior - WaitTimer - 3 second delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />				
+								
+			</If>	<!-- If our level >= 8 -->
+
+		</While>	<!-- While loop - level >= 5 and < 6 -->
 
 
 		<!-- If our level >= 6 -->				

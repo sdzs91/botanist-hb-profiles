@@ -201,8 +201,27 @@
 		
 		</If>	<!-- If our level >= 1 and <= 5 -->	
 		
-		<!-- If our level >= 6 and <= 57 -->
-		<If Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt;= 57" >
+		<!-- If our level >= 6 and < 12 -->
+		<If Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt;= 12" >
+
+			<!-- If we are in Eastern Kingdoms -->
+			<If Condition="Me.MapId == 0">
+			
+				<!-- Profile message - We are in Eastern Kingdoms. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are in Eastern Kingdoms. Initiating movement procedures." 
+								LogColor="Plum" />	
+								
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_unknown-to-elwynn-forest -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_unknown-to-elwynn-forest" />
+								
+			</If>	<!-- If we are in Eastern Kingdoms -->
+		
+		</If>	<!-- If our level >= 6 and <= 57 -->
+
+		<!-- If our level >= 12 and <= 57 -->
+		<If Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 57" >
 
 			<!-- If we are in Shadowglen -->
 			<If Condition="Me.ZoneId == 6450">				
