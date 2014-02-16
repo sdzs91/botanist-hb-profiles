@@ -41,6 +41,15 @@
 	
 	<QuestOrder>
 	
+		<!-- CustomBehavior - Message - Initializing the profile -->
+		<CustomBehavior File="Message" 
+						Text="Initializing the profile." 
+						LogColor="Plum" />
+						
+		<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+		<CustomBehavior File="WaitTimer" 
+						WaitTime="3000" />
+	
 		<!-- UserSettings -->
 		<CustomBehavior File="UserSettings"
 						AdvancedSettingsMode="True"
@@ -60,7 +69,56 @@
 						SkinMobs="False"
 						UseMount="True" 
 						UseRandomMount="False" />
+
+		<!-- CustomBehavior - Message - Enabling the Anti Drown plugin -->
+		<CustomBehavior File="Message" 
+						Text="Enabling the Anti Drown plugin." 
+						LogColor="Plum" />
+							
+		<!-- CustomBehavior - EnablePlugin - Enabling the Anti Drown plugin -->					
+		<CustomBehavior File="EnablePlugin" 
+						Names="Anti Drown" />
 	
+		<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+		<CustomBehavior File="WaitTimer" 
+						WaitTime="1000" />
+						
+		<!-- CustomBehavior - Message - Enabling the AutoEquip2 plugin -->
+		<CustomBehavior File="Message" 
+						Text="Enabling the AutoEquip2 plugin." 
+						LogColor="Plum" />
+		
+		<!-- CustomBehavior - EnablePlugin - Enabling the AutoEquip2 plugin -->		
+		<CustomBehavior File="EnablePlugin" 
+						Names="AutoEquip2" />
+	
+		<!-- Profile message - Be sure to configure AutoEquip for this character -->
+		<CustomBehavior File="Message" 
+						Text="Be sure to configure AutoEquip for this character." 
+						LogColor="Red" />				
+	
+		<!-- CustomBehavior - Wait timer - wait 5 seconds - delay -->
+		<CustomBehavior File="WaitTimer" 
+						WaitTime="5000" />
+						
+		<!-- CustomBehavior - Message - Enabling the Talented2 plugin -->
+		<CustomBehavior File="Message" 
+						Text="Enabling the Talented2 plugin." 
+						LogColor="Plum" />
+		
+		<!-- CustomBehavior - EnablePlugin - Enabling the Talented plugin -->
+		<CustomBehavior File="EnablePlugin" 
+						Names="Talented2" />
+						
+		<!-- Profile message - Be sure to select a talent build for this character -->
+		<CustomBehavior File="Message" 
+						Text="Be sure to select a talent build for this character." 
+						LogColor="Red" />				
+	
+		<!-- CustomBehavior - Wait timer - wait 5 seconds - delay -->
+		<CustomBehavior File="WaitTimer" 
+						WaitTime="5000" />
+
 		<!-- Profile message - Checking our current characters faction -->
 		<CustomBehavior File="Message" 
 						Text="Checking our current characters faction." 
