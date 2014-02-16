@@ -79,9 +79,9 @@
 		<CustomBehavior File="EnablePlugin" 
 						Names="Anti Drown" />
 	
-		<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+		<!-- CustomBehavior - Wait timer - wait 3 seconds - delay -->
 		<CustomBehavior File="WaitTimer" 
-						WaitTime="1000" />
+						WaitTime="3000" />
 						
 		<!-- CustomBehavior - Message - Enabling the AutoEquip2 plugin -->
 		<CustomBehavior File="Message" 
@@ -91,6 +91,10 @@
 		<!-- CustomBehavior - EnablePlugin - Enabling the AutoEquip2 plugin -->		
 		<CustomBehavior File="EnablePlugin" 
 						Names="AutoEquip2" />
+	
+		<!-- CustomBehavior - Wait timer - wait 3 seconds - delay -->
+		<CustomBehavior File="WaitTimer" 
+						WaitTime="3000" />
 	
 		<!-- Profile message - Be sure to configure AutoEquip for this character -->
 		<CustomBehavior File="Message" 
@@ -109,6 +113,10 @@
 		<!-- CustomBehavior - EnablePlugin - Enabling the Talented plugin -->
 		<CustomBehavior File="EnablePlugin" 
 						Names="Talented2" />
+						
+		<!-- CustomBehavior - Wait timer - wait 3 seconds - delay -->
+		<CustomBehavior File="WaitTimer" 
+						WaitTime="3000" />				
 						
 		<!-- Profile message - Be sure to select a talent build for this character -->
 		<CustomBehavior File="Message" 

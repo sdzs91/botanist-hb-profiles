@@ -635,9 +635,9 @@
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="1000" />
 			
-			<!-- CustomBehavior - Message - We are in the 7 to 8 bracket -->
+			<!-- CustomBehavior - Message - We are in the 8 to 10 bracket -->
 			<CustomBehavior File="Message" 
-							Text="We are in the 7 to 8 bracket." 
+							Text="We are in the 8 to 10 bracket." 
 							LogColor="Plum" />
 	
 			<!-- CustomBehavior - Message - Position check, we need to be in Elwynn Forest -->
@@ -681,12 +681,12 @@
 								Text="Moving to the Tinker zone." 
 								LogColor="Plum" />		
 								
-				<!-- Move to - 6 - 8 Tinker zone -->				
+				<!-- Move to - 8 - 10 Tinker zone -->				
 				<MoveTo X="-9521.241" Y="-526.3424" Z="62.97178" />
 					
-				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 8 -->
+				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 10 -->
 				<CustomBehavior File="Message" 
-								Text="We have reached the Tinker zone. We will farm this area until we reach level 8." 
+								Text="We have reached the Tinker zone. We will farm this area until we reach level 10." 
 								LogColor="Plum" />
 									
 			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
@@ -697,7 +697,7 @@
 			
 			
 			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 8 -->				
-			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3) &amp;&amp; (Me.Level &lt; 8)" >
+			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3) &amp;&amp; (Me.Level &lt; 10)" >
 				
 				<!-- Custom behavior - TargetAndMoveToMob - Gray Forest Wolf -->
 				<CustomBehavior File="TargetAndMoveToMob"
@@ -714,9 +714,9 @@
 				<!-- If our target is a Gray Forest Wolf -->
 				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 1922)">
 				
-					<!-- Profile message  - Engaging a Gray Forest Wolf -->	
+					<!-- CustomBehavior - Message - Engaging a Gray Forest Wolf -->
 					<CustomBehavior File="Message" 
-									Text="Engaging a Gray Forest Wolf" 
+									Text="Engaging a Gray Forest Wolf." 
 									LogColor="Cyan" />
 					
 					<!-- Reset the instance -->
@@ -736,30 +736,45 @@
 
 			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 
-			<!-- If our level >= 6 -->				
-			<If Condition="Me.Level &gt;= 8" >
+			<!-- If our level >= 10 -->				
+			<If Condition="Me.Level &gt;= 10" >
 			
-				<!-- Profile message  - We have reached level 8. Changing locations -->	
+				<!-- CustomBehavior - Message - We have reached level 10. Changing locations -->	
 				<CustomBehavior File="Message" 
-								Text="We have reached level 8. Changing locations." 
+								Text="We have reached level 10. Changing locations." 
 								LogColor="Cyan" />
 								
 				<!-- CustomBehavior - WaitTimer - 3 second delay -->
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />				
 								
-			</If>	<!-- If our level >= 8 -->
+			</If>	<!-- If our level >= 10 -->
 
-		</While>	<!-- While loop - level >= 5 and < 6 -->
+		</While>	<!-- While loop - level >= 8 and < 10 -->
 
 
-		<!-- If our level >= 6 -->				
-		<If Condition="Me.Level &gt;= 6" >
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level >= 10 -->				
+		<If Condition="Me.Level &gt;= 10" >
 		
 			<!-- Profile message  - This portion has not been completed yet. Stopping the bot -->	
 			<CustomBehavior File="Message" 
 							Text="This portion has not been completed yet. Stopping the bot." 
 							LogColor="Orange" />
+		
+		
 		
 			<CustomBehavior File="UserSettings" 
 							StopBot="true" />
