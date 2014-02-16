@@ -445,8 +445,8 @@
 		
 		
 		
-		<!-- While loop - level >= 6 and < 7 -->				
-		<While Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt; 7" >
+		<!-- While loop - level >= 6 and < 8 -->				
+		<While Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt; 8" >
 
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
@@ -528,7 +528,7 @@
 					
 				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 8 -->
 				<CustomBehavior File="Message" 
-								Text="We have reached the Tinker zone. We will farm this area until we reach level 7." 
+								Text="We have reached the Tinker zone. We will farm this area until we reach level 8." 
 								LogColor="Plum" />
 									
 			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
@@ -539,7 +539,7 @@
 			
 			
 			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 7 -->				
-			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3) &amp;&amp; (Me.Level &lt; 7)" >
+			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3) &amp;&amp; (Me.Level &lt; 8)" >
 				
 				<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
 				<CustomBehavior File="TargetAndMoveToMob"
@@ -567,7 +567,7 @@
 
 				</If>	<!-- If our target is a Mangy Wolf --> 
 
-			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 7 -->
+			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 8 -->
 		
 			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 			<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
@@ -578,8 +578,8 @@
 
 			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 
-			<!-- If our level >= 6 -->				
-			<If Condition="Me.Level &gt;= 7" >
+			<!-- If our level >= 8 -->				
+			<If Condition="Me.Level &gt;= 8" >
 			
 				<!-- Profile message  - We have reached level 7. Changing locations -->	
 				<CustomBehavior File="Message" 
@@ -590,9 +590,9 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />				
 								
-			</If>	<!-- If our level >= 5 -->
+			</If>	<!-- If our level >= 8 -->
 
-		</While>	<!-- While loop - level >= 6 and < 7 -->
+		</While>	<!-- While loop - level >= 6 and < 8 -->
 		
 		
 		
@@ -632,8 +632,8 @@
 		
 		
 
-		<!-- While loop - level >= 7 and < 8 -->				
-		<While Condition="Me.Level &gt;= 7 &amp;&amp; Me.Level &lt; 8" >
+		<!-- While loop - level >= 8 and < 10 -->				
+		<While Condition="Me.Level &gt;= 8 &amp;&amp; Me.Level &lt; 10" >
 
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
