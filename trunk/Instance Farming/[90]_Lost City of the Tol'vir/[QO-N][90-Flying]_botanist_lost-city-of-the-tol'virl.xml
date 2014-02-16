@@ -59,7 +59,7 @@
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
 							LootMobs="True"
-							LootRadius="35"
+							LootRadius="65"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
@@ -433,6 +433,13 @@
 					<!-- @@@@@@@@@@@@@@@@@@@@ 12th pull @@@@@@@@@@@@@@@@@@@@ -->
 													   
 					
+
+					<!-- Move to - 13th group - Trappers Enclave -->
+					<MoveTo X="-11002.79" Y="-1500.905" Z="6.660747" />
+
+					<!-- Move to - bridge - Trappers Enclave -->
+					<MoveTo X="-10962.75" Y="-1539.406" Z="11.28439" />
+					
 					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Disabling combat." 
@@ -440,9 +447,6 @@
 									
 					<!-- DisableBehavior - Combat -->
 					<DisableBehavior Name="Combat" />
-					
-					<!-- Move to - 13th group - Trappers Enclave -->
-					<MoveTo X="-11002.79" Y="-1500.905" Z="6.660747" />
 
 					<!-- Move to - 13th group - 2nd pygmies -->
 					<MoveTo X="-10978.33" Y="-1605.373" Z="7.676232" />
