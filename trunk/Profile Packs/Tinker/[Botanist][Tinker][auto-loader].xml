@@ -213,6 +213,10 @@
 							Text="We are currently leveling a Alliance character." 
 							LogColor="Plum" />
 		
+			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+		
 			<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-1]race-check] -->
 			<CustomBehavior File="LoadProfile" 
 							ProfileName="Components\Alliance\[Botanist][Tinker][A-1]race-check]" />
@@ -224,6 +228,10 @@
 				<CustomBehavior File="Message" 
 								Text="We are currently leveling a Horde character." 
 								LogColor="Plum" />
+								
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />		
 								
 				<!--  CustomBehavior - LoadProfile -->
 				<CustomBehavior File="LoadProfile" 

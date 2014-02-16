@@ -188,9 +188,9 @@
 		<!-- If our level >= 10 and < 101 -->
 		<If Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt; 101" >
 		
-			<!-- Profile message - We are currently leveling in the 8-101 bracket -->
+			<!-- Profile message - We are currently leveling in the 10+ bracket -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling in the 6-101 bracket." 
+							Text="We are currently leveling in the 10+ bracket." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
