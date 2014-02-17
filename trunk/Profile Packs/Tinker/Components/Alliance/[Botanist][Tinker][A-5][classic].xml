@@ -6,7 +6,7 @@
 
 <MinDurability>-1</MinDurability>
 <MinFreeBagSlots>-1</MinFreeBagSlots>
-<TargetingDistance>45</TargetingDistance>
+<TargetingDistance>10</TargetingDistance>
 <TargetElites>False</TargetElites>
 
 <MailGrey>False</MailGrey>
@@ -48,8 +48,25 @@
 						Text="All checks complete: Classic 1-58 loaded."  
 						LogColor="Orange" />
 						
-		<!-- While loop - level <= 1 < 3 -->				
-		<While Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt;= 2" >
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+		<!-- If our level <= 1 < 3 -->				
+		<If Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt;= 2" >
 
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
@@ -121,60 +138,65 @@
 					
 			</If>	<!-- If we are in Northshire Valley -->
 
-			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 3 -->				
-			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3) &amp;&amp; (Me.Level &lt; 3)" >
-				
-				<!-- Custom behavior - TargetAndMoveToMob - Blackrock Battle Worg -->
-				<CustomBehavior File="TargetAndMoveToMob"
-								MoveWithinMaxRangeOfMob="4"
-								TargetOnlyIfHealthPercentAbove="5"
-								WaitForNpcs="False"
-								MobId="49871" >
-					<HuntingGrounds>
-						<Hotspot X="-8784.337" Y="-65.70675" Z="91.02738" />
-						<Hotspot X="-8966.096" Y="-48.53926" Z="91.48355" />
-					</HuntingGrounds>			
-				</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+				<!-- While loop -  our level < 3 -->				
+				<While Condition="Me.Level &lt; 3" >
 			
-				<!-- If our target is a Blackrock Battle Worg -->
-				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 49871)">
-				
-					<!-- Profile message  - Engaging a Blackrock Battle Worg -->	
-					<CustomBehavior File="Message" 
-									Text="Engaging a Blackrock Battle Worg" 
-									LogColor="Cyan" />
+					<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
+					<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+			
+						<!-- Custom behavior - TargetAndMoveToMob - Blackrock Battle Worg -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="4"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="49871" >
+							<HuntingGrounds>
+								<Hotspot X="-8784.337" Y="-65.70675" Z="91.02738" />
+								<Hotspot X="-8966.096" Y="-48.53926" Z="91.48355" />
+							</HuntingGrounds>			
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 					
-					<!-- Reset the instance -->
-					<CustomBehavior File="RunMacro" 
-									Macro="/startattack" />
+						<!-- If our target is a Blackrock Battle Worg -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 49871)">
+						
+							<!-- Profile message  - Engaging a Blackrock Battle Worg -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Blackrock Battle Worg" 
+											LogColor="Cyan" />
+							
+							<!-- Reset the instance -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
 
-				</If>	<!-- If our target is a Blackrock Battle Worg --> 
+						</If>	<!-- If our target is a Blackrock Battle Worg --> 
+						
+						<!-- If we reached the move trigger level -->
+						<If Condition="Me.Level &gt;= 3" >
+						
+							<!-- Profile message - WWe have leveled up. Resetting the profile -->
+							<CustomBehavior File="Message" 
+											Text="We have leveled up. Resetting the profile." 
+											LogColor="Plum" />
+						
+							<!-- Load profile - [Botanist][Tinker][A][reset] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+						
+						</If>	<!-- If we reached the move trigger level -->
+						
+					</If>
 				
-				<!-- If we reached the move trigger level -->
-				<If Condition="Me.Level &gt;= 3" >
+					<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+												
+						<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+					</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 				
-					<!-- Profile message - WWe have leveled up. Resetting the profile -->
-					<CustomBehavior File="Message" 
-									Text="We have leveled up. Resetting the profile." 
-									LogColor="Plum" />
-				
-					<!-- Load profile - [Botanist][Tinker][A][reset] -->
-					<CustomBehavior File="LoadProfile" 
-									ProfileName="Reset\[Botanist][Tinker][A][reset]" />
-				
-				</If>	<!-- If we reached the move trigger level -->
-				
-			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 3 --> 
+				</While>	<!-- While loop -  our level < 3 --> 
 		
-			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-			<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
-										
-				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
-				<CustomBehavior File="LoadProfile" 
-								ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
-
-			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-
 			<!-- If we reached the move trigger level -->
 			<If Condition="Me.Level &gt;= 3" >
 			
@@ -189,14 +211,14 @@
 			
 			</If>	<!-- If we reached the move trigger level -->
 			
-		</While>	<!-- While loop - level => 1 and < 3 -->
+		</If>	<!-- If our level <= 1 < 3 -->
 
 		
 		
 		
 	
-		<!-- While loop - level >= 3 and < 5 -->				
-		<While Condition="Me.Level &gt;= 3 &amp;&amp; Me.Level &lt; 5" >
+		<!-- If our level >= 3 and < 5 -->				
+		<If Condition="Me.Level &gt;= 3 &amp;&amp; Me.Level &lt; 5" >
 
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
@@ -268,60 +290,65 @@
 					
 			</If>	<!-- If we are in Northshire Valley -->
 
-			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 5 -->				
-			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)  &amp;&amp; (Me.Level &lt; 5)" >
-				
-				<!-- Custom behavior - TargetAndMoveToMob - Goblin Assassin -->
-				<CustomBehavior File="TargetAndMoveToMob"
-								MoveWithinMaxRangeOfMob="4"
-								TargetOnlyIfHealthPercentAbove="5"
-								WaitForNpcs="False"
-								MobId="50039" >
-					<HuntingGrounds>
-						<Hotspot X="-8754.845" Y="-71.75768" Z="92.7973" />
-						<Hotspot X="-8774.831" Y="-252.4493" Z="82.17862" />
-					</HuntingGrounds>			
-				</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+				<!-- While loop -  our level < 5 -->				
+				<While Condition="Me.Level &lt; 5" >
 			
-				<!-- If our target is a Goblin Assassin -->
-				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 50039)">
-				
-					<!-- Profile message  - Engaging a Goblin Assassin -->	
-					<CustomBehavior File="Message" 
-									Text="Engaging a Goblin Assassin" 
-									LogColor="Cyan" />
+					<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
+					<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+
+						<!-- Custom behavior - TargetAndMoveToMob - Goblin Assassin -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="4"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="50039" >
+							<HuntingGrounds>
+								<Hotspot X="-8754.845" Y="-71.75768" Z="92.7973" />
+								<Hotspot X="-8774.831" Y="-252.4493" Z="82.17862" />
+							</HuntingGrounds>			
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 					
-					<!-- Reset the instance -->
-					<CustomBehavior File="RunMacro" 
-									Macro="/startattack" />
+						<!-- If our target is a Goblin Assassin -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 50039)">
+						
+							<!-- Profile message  - Engaging a Goblin Assassin -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Goblin Assassin" 
+											LogColor="Cyan" />
+							
+							<!-- Reset the instance -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
 
-				</If>	<!-- If our target is a Goblin Assassin --> 
+						</If>	<!-- If our target is a Goblin Assassin --> 
 
-				<!-- If we reached the move trigger level -->
-				<If Condition="Me.Level &gt;= 5" >
-				
-					<!-- Profile message - WWe have leveled up. Resetting the profile -->
-					<CustomBehavior File="Message" 
-									Text="We have leveled up. Resetting the profile." 
-									LogColor="Plum" />
-				
-					<!-- Load profile - [Botanist][Tinker][A][reset] -->
-					<CustomBehavior File="LoadProfile" 
-									ProfileName="Reset\[Botanist][Tinker][A][reset]" />
-				
-				</If>	<!-- If we reached the move trigger level -->
-				
-			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 5 --> 
-		
-			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-			<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
-										
-				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
-				<CustomBehavior File="LoadProfile" 
-								ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+						<!-- If we reached the move trigger level -->
+						<If Condition="Me.Level &gt;= 5" >
+						
+							<!-- Profile message - WWe have leveled up. Resetting the profile -->
+							<CustomBehavior File="Message" 
+											Text="We have leveled up. Resetting the profile." 
+											LogColor="Plum" />
+						
+							<!-- Load profile - [Botanist][Tinker][A][reset] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+						
+						</If>	<!-- If we reached the move trigger level -->
+						
+					</If>	<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
+					
+					<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+												
+						<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
 
-			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 
+				</While>	<!-- While loop -  our level < 5 -->	
+				
 			<!-- If we reached the move trigger level -->
 			<If Condition="Me.Level &gt;= 5" >
 			
@@ -336,14 +363,14 @@
 			
 			</If>	<!-- If we reached the move trigger level -->
 			
-		</While>	<!-- While loop - level >= 3 and < 5 -->
+		</If>	<!-- If our level >= 3 and < 5 -->
 
 		
 		
 		
 		
-		<!-- While loop - level >= 5 and < 6 -->				
-		<While Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 6" >
+		<!-- If our level >= 5 and < 6 -->				
+		<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 6" >
 
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
@@ -415,59 +442,64 @@
 					
 			</If>	<!-- If we are in Northshire Valley -->
 
-			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 6 -->				
-			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3) &amp;&amp; (Me.Level &lt; 6)" >
+				<!-- While loop -  our level < 6 -->				
+				<While Condition="Me.Level &lt; 6" >
 				
-				<!-- Custom behavior - TargetAndMoveToMob - Blackrock Invader -->
-				<CustomBehavior File="TargetAndMoveToMob"
-								MoveWithinMaxRangeOfMob="4"
-								TargetOnlyIfHealthPercentAbove="5"
-								WaitForNpcs="False"
-								MobId="42937" >
-					<HuntingGrounds>
-						<Hotspot X="-8888.27" Y="-412.9247" Z="68.54729" />
-						<Hotspot X="-9113.46" Y="-272.5708" Z="73.61474" />
-					</HuntingGrounds>			
-				</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
-			
-				<!-- If our target is a Blackrock Invader -->
-				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 42937)">
+					<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
+					<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
 				
-					<!-- Profile message  - Engaging a Blackrock Invader -->	
-					<CustomBehavior File="Message" 
-									Text="Engaging a Blackrock Invader" 
-									LogColor="Cyan" />
+						<!-- Custom behavior - TargetAndMoveToMob - Blackrock Invader -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="4"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="42937" >
+							<HuntingGrounds>
+								<Hotspot X="-8888.27" Y="-412.9247" Z="68.54729" />
+								<Hotspot X="-9113.46" Y="-272.5708" Z="73.61474" />
+							</HuntingGrounds>			
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 					
-					<!-- Reset the instance -->
-					<CustomBehavior File="RunMacro" 
-									Macro="/startattack" />
+						<!-- If our target is a Blackrock Invader -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 42937)">
+						
+							<!-- Profile message  - Engaging a Blackrock Invader -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Blackrock Invader" 
+											LogColor="Cyan" />
+							
+							<!-- Reset the instance -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
 
-				</If>	<!-- If our target is a Blackrock Invader --> 
-				
-				<!-- If we reached the move trigger level -->
-				<If Condition="Me.Level &gt;= 6" >
-				
-					<!-- Profile message - WWe have leveled up. Resetting the profile -->
-					<CustomBehavior File="Message" 
-									Text="We have leveled up. Resetting the profile." 
-									LogColor="Plum" />
-				
-					<!-- Load profile - [Botanist][Tinker][A][reset] -->
-					<CustomBehavior File="LoadProfile" 
-									ProfileName="Reset\[Botanist][Tinker][A][reset]" />
-				
-				</If>	<!-- If we reached the move trigger level -->
-				
-			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 6 -->
-		
-			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-			<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
-										
-				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
-				<CustomBehavior File="LoadProfile" 
-								ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+						</If>	<!-- If our target is a Blackrock Invader --> 
+						
+						<!-- If we reached the move trigger level -->
+						<If Condition="Me.Level &gt;= 6" >
+					
+							<!-- Profile message - WWe have leveled up. Resetting the profile -->
+							<CustomBehavior File="Message" 
+												Text="We have leveled up. Resetting the profile." 
+												LogColor="Plum" />
+						
+							<!-- Load profile - [Botanist][Tinker][A][reset] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+						
+						</If>	<!-- If we reached the move trigger level -->
+						
+					</If>	<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->	
 
-			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+												
+						<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+					</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+
+				</While>	<!-- While loop -  our level < 6 -->
 
 			<!-- If we reached the move trigger level -->
 			<If Condition="Me.Level &gt;= 6" >
@@ -483,7 +515,7 @@
 			
 			</If>	<!-- If we reached the move trigger level -->
 			
-		</While>	<!-- While loop - level >= 5 and < 6 -->
+		</If>	<!-- If our level >= 5 and < 6 -->
 
 		
 		
@@ -491,8 +523,8 @@
 		
 		
 		
-		<!-- While loop - level >= 6 and < 8 -->				
-		<While Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt; 8" >
+		<!-- If our level >= 6 and < 8 -->				
+		<If Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt; 8" >
 
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
@@ -577,60 +609,65 @@
 									
 			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
 
-			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 7 -->				
-			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3) &amp;&amp; (Me.Level &lt; 8)" >
-				
-				<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
-				<CustomBehavior File="TargetAndMoveToMob"
-								MoveWithinMaxRangeOfMob="4"
-								TargetOnlyIfHealthPercentAbove="5"
-								WaitForNpcs="False"
-								MobId="525" >
-					<HuntingGrounds>
-						<Hotspot X="-9449.349" Y="226.1531" Z="59.63327" />
-						<Hotspot X="-9718.177" Y="432.4979" Z="38.48559" />
-					</HuntingGrounds>			
-				</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
-			
-				<!-- If our target is a Gray Forest Wolf -->
-				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
-				
-					<!-- Profile message  - Engaging a Mangy Wolf -->	
-					<CustomBehavior File="Message" 
-									Text="Engaging a Mangy Wolf" 
-									LogColor="Cyan" />
+				<!-- While loop -  our level < 8 -->				
+				<While Condition="Me.Level &lt; 8" >
 					
-					<!-- Reset the instance -->
-					<CustomBehavior File="RunMacro" 
-									Macro="/startattack" />
+					<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
+					<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
 
-				</If>	<!-- If our target is a Mangy Wolf --> 
+						<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="4"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="525" >
+							<HuntingGrounds>
+								<Hotspot X="-9449.349" Y="226.1531" Z="59.63327" />
+								<Hotspot X="-9718.177" Y="432.4979" Z="38.48559" />
+							</HuntingGrounds>			
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+					
+						<!-- If our target is a Gray Forest Wolf -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
+						
+							<!-- Profile message  - Engaging a Mangy Wolf -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Mangy Wolf" 
+											LogColor="Cyan" />
+							
+							<!-- Reset the instance -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
 
-				<!-- If we reached the move trigger level -->
-				<If Condition="Me.Level &gt;= 8" >
-				
-					<!-- Profile message - WWe have leveled up. Resetting the profile -->
-					<CustomBehavior File="Message" 
-									Text="We have leveled up. Resetting the profile." 
-									LogColor="Plum" />
-				
-					<!-- Load profile - [Botanist][Tinker][A][reset] -->
-					<CustomBehavior File="LoadProfile" 
-									ProfileName="Reset\[Botanist][Tinker][A][reset]" />
-				
-				</If>	<!-- If we reached the move trigger level -->
-				
-			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 8 -->
-		
-			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-			<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
-										
-				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
-				<CustomBehavior File="LoadProfile" 
-								ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+						</If>	<!-- If our target is a Mangy Wolf --> 
 
-			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<!-- If we reached the move trigger level -->
+						<If Condition="Me.Level &gt;= 8" >
+						
+							<!-- Profile message - WWe have leveled up. Resetting the profile -->
+							<CustomBehavior File="Message" 
+											Text="We have leveled up. Resetting the profile." 
+											LogColor="Plum" />
+						
+							<!-- Load profile - [Botanist][Tinker][A][reset] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+						
+						</If>	<!-- If we reached the move trigger level -->
+						
+					</If>	<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
+			
+					<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+												
+						<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
 
+					</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+
+				</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 8 -->
+			
 			<!-- If we reached the move trigger level -->
 			<If Condition="Me.Level &gt;= 8" >
 			
@@ -645,15 +682,15 @@
 			
 			</If>	<!-- If we reached the move trigger level -->
 			
-		</While>	<!-- While loop - level >= 6 and < 8 -->
+		</If>	<!-- If our level >= 6 and < 8 -->
 		
 		
 		
 		
 	
 
-		<!-- While loop - level >= 8 and < 10 -->				
-		<While Condition="Me.Level &gt;= 8 &amp;&amp; Me.Level &lt; 10" >
+		<!-- If our level >= 8 and < 10 -->				
+		<If Condition="Me.Level &gt;= 8 &amp;&amp; Me.Level &lt; 10" >
 
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
@@ -734,75 +771,81 @@
 									
 			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
 
-			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 8 -->				
-			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3) &amp;&amp; (Me.Level &lt; 10)" >
-				
-				<!-- Custom behavior - TargetAndMoveToMob - Gray Forest Wolf -->
-				<CustomBehavior File="TargetAndMoveToMob"
-								MoveWithinMaxRangeOfMob="4"
-								TargetOnlyIfHealthPercentAbove="5"
-								WaitForNpcs="False"
-								MobId="1922" >
-					<HuntingGrounds>
-						<Hotspot X="-9568.524" Y="-483.976" Z="61.87521" />
-						<Hotspot X="-9280.763" Y="-639.2274" Z="64.82249" />
-					</HuntingGrounds>			
-				</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 			
-				<!-- If our target is a Gray Forest Wolf -->
-				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 1922)">
-				
-					<!-- CustomBehavior - Message - Engaging a Gray Forest Wolf -->
-					<CustomBehavior File="Message" 
-									Text="Engaging a Gray Forest Wolf." 
-									LogColor="Cyan" />
+				<!-- While loop -  our level < 10 -->				
+				<While Condition="Me.Level &lt; 10" >
 					
-					<!-- Reset the instance -->
-					<CustomBehavior File="RunMacro" 
-									Macro="/startattack" />
+					<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
+					<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
 
-				</If>	<!-- If our target is a Gray Forest Wolf --> 
+						<!-- Custom behavior - TargetAndMoveToMob - Gray Forest Wolf -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="4"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="1922" >
+							<HuntingGrounds>
+								<Hotspot X="-9568.524" Y="-483.976" Z="61.87521" />
+								<Hotspot X="-9280.763" Y="-639.2274" Z="64.82249" />
+							</HuntingGrounds>			
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+					
+						<!-- If our target is a Gray Forest Wolf -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 1922)">
+						
+							<!-- CustomBehavior - Message - Engaging a Gray Forest Wolf -->
+							<CustomBehavior File="Message" 
+											Text="Engaging a Gray Forest Wolf." 
+											LogColor="Cyan" />
+							
+							<!-- Reset the instance -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
 
-				<!-- If we reached the move trigger level -->
-				<If Condition="Me.Level &gt;= 10" >
-				
-					<!-- Profile message - WWe have leveled up. Resetting the profile -->
-					<CustomBehavior File="Message" 
-									Text="We have leveled up. Resetting the profile." 
-									LogColor="Plum" />
-				
-					<!-- Load profile - [Botanist][Tinker][A][reset] -->
-					<CustomBehavior File="LoadProfile" 
-									ProfileName="Reset\[Botanist][Tinker][A][reset]" />
-				
-				</If>	<!-- If we reached the move trigger level -->
-				
-			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 6 -->
-		
-			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-			<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
-										
-				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
-				<CustomBehavior File="LoadProfile" 
-								ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+						</If>	<!-- If our target is a Gray Forest Wolf --> 
 
-			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<!-- If we reached the move trigger level -->
+						<If Condition="Me.Level &gt;= 10" >
+						
+							<!-- Profile message - WWe have leveled up. Resetting the profile -->
+							<CustomBehavior File="Message" 
+											Text="We have leveled up. Resetting the profile." 
+											LogColor="Plum" />
+						
+							<!-- Load profile - [Botanist][Tinker][A][reset] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+						
+						</If>	<!-- If we reached the move trigger level -->
+
+						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+													
+							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+
+					</If>	<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
+					
+				</While>	<!-- While loop -  our level < 10 -->
 
 			<!-- If we reached the move trigger level -->
-				<If Condition="Me.Level &gt;= 10" >
+			<If Condition="Me.Level &gt;= 10" >
+			
+				<!-- Profile message - WWe have leveled up. Resetting the profile -->
+				<CustomBehavior File="Message" 
+								Text="We have leveled up. Resetting the profile." 
+								LogColor="Plum" />
+			
+				<!-- Load profile - [Botanist][Tinker][A][reset] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+			
+			</If>	<!-- If we reached the move trigger level -->
 				
-					<!-- Profile message - WWe have leveled up. Resetting the profile -->
-					<CustomBehavior File="Message" 
-									Text="We have leveled up. Resetting the profile." 
-									LogColor="Plum" />
-				
-					<!-- Load profile - [Botanist][Tinker][A][reset] -->
-					<CustomBehavior File="LoadProfile" 
-									ProfileName="Reset\[Botanist][Tinker][A][reset]" />
-				
-				</If>	<!-- If we reached the move trigger level -->
-				
-		</While>	<!-- While loop - level >= 8 and < 10 -->
+		</If>	<!-- If our level >= 8 and < 10 -->
 
 
 		

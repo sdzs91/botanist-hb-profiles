@@ -99,7 +99,7 @@
 		<!-- Profile message - Be sure to configure AutoEquip for this character -->
 		<CustomBehavior File="Message" 
 						Text="Be sure to configure AutoEquip for this character." 
-						LogColor="Red" />				
+						LogColor="Orange" />				
 	
 		<!-- CustomBehavior - Wait timer - wait 5 seconds - delay -->
 		<CustomBehavior File="WaitTimer" 
@@ -121,7 +121,7 @@
 		<!-- Profile message - Be sure to select a talent build for this character -->
 		<CustomBehavior File="Message" 
 						Text="Be sure to select a talent build for this character." 
-						LogColor="Red" />				
+						LogColor="Orange" />				
 	
 		<!-- CustomBehavior - Wait timer - wait 5 seconds - delay -->
 		<CustomBehavior File="WaitTimer" 
@@ -148,7 +148,7 @@
 					<!-- Profile message - Your character must exit the starting zone. Then restart the profile in Stormwind -->
 					<CustomBehavior File="Message" 
 									Text="Your character must exit the starting zone. Then restart the profile in Stormwind." 
-									LogColor="Red" />
+									LogColor="Orange" />
 									
 					<!-- CustomBehavior - Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
@@ -166,7 +166,7 @@
 					<!-- Profile message - Your character must exit the starting zone. Then restart the profile in Stormwind -->
 					<CustomBehavior File="Message" 
 									Text="Your character must exit the starting zone. Then restart the profile in Stormwind." 
-									LogColor="Red" />
+									LogColor="Orange" />
 									
 					<!-- CustomBehavior - Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
@@ -189,7 +189,7 @@
 					<!-- Profile message - Your character must exit the starting zone. Then restart the profile in Stormwind -->
 					<CustomBehavior File="Message" 
 									Text="Your character must exit the starting zone. Then restart the profile in Stormwind." 
-									LogColor="Red" />
+									LogColor="Orange" />
 									
 					<!-- CustomBehavior - Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
