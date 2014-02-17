@@ -80,6 +80,10 @@
 				<CustomBehavior File="Message" 
 								Text="We are currently in Shadowglen. We need to be in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Gold" />
+				
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
 		
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
@@ -95,6 +99,10 @@
 								Text="We are currently in Teldrassil. We need to be in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Gold" />
 		
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+		
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
@@ -109,6 +117,10 @@
 								Text="We are currently in Ammen Vale. We need to be in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Gold" />
 		
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+								
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_azuremyst-bloodmyst-isle_to_rut'theran-village" />
@@ -123,6 +135,10 @@
 								Text="We are in Azuremyst-Bloodmyst Isle. We need to be in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Plum" />				
 
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+								
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_azuremyst-bloodmyst-isle_to_rut'theran-village" />
@@ -137,6 +153,10 @@
 								Text="We are currently in Darnassus. We need to be in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Gold" />
 		
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+								
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
@@ -151,6 +171,10 @@
 								Text="We are currently in Rut'theran Village. We need to be in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Gold" />
 		
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+								
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
@@ -164,6 +188,11 @@
 				<CustomBehavior File="Message" 
 								Text="We are in Northshire Valley." 
 								LogColor="Plum" />		
+								
+								
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
 								
 				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
 				<CustomBehavior File="LoadProfile" 
@@ -179,6 +208,10 @@
 								Text="We are in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Plum" />	
 								
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />				
+								
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_dun-morogh_to_stormwind" />
@@ -192,6 +225,10 @@
 				<CustomBehavior File="Message" 
 								Text="We are in Dun Morogh. Initiating movement procedures." 
 								LogColor="Plum" />	
+								
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />				
 								
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
@@ -212,6 +249,10 @@
 								Text="We are in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Plum" />	
 								
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />				
+								
 				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_unknown-to-elwynn-forest -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_unknown-to-elwynn-forest" />
@@ -230,6 +271,10 @@
 				<CustomBehavior File="Message" 
 								Text="We are currently in Shadowglen. We need to be in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Gold" />
+				
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
 		
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
@@ -245,6 +290,10 @@
 								Text="We are currently in Teldrassil. We need to be in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Gold" />
 		
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+		
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
@@ -259,6 +308,10 @@
 								Text="We are currently in Ammen Vale. We need to be in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Gold" />
 		
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+		
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_azuremyst-bloodmyst-isle_to_rut'theran-village" />
@@ -272,7 +325,11 @@
 				<CustomBehavior File="Message" 
 								Text="We are in Azuremyst-Bloodmyst Isle. We need to be in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Plum" />				
-
+				
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />								
+								
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_azuremyst-bloodmyst-isle_to_rut'theran-village" />
@@ -287,6 +344,10 @@
 								Text="We are currently in Darnassus. We need to be in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Gold" />
 		
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+		
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_teldrassil_to_stormwind" />
@@ -300,6 +361,10 @@
 				<CustomBehavior File="Message" 
 								Text="We are currently in Rut'theran Village. We need to be in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Gold" />
+				
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
 		
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
@@ -315,6 +380,10 @@
 								Text="We are in Northshire Valley." 
 								LogColor="Plum" />		
 								
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />				
+								
 				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="[Botanist][Tinker][A-5][classic]" />
@@ -329,6 +398,10 @@
 								Text="We are in Eastern Kingdoms. Initiating movement procedures." 
 								LogColor="Plum" />	
 								
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />				
+								
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_dun-morogh_to_stormwind" />
@@ -342,6 +415,10 @@
 				<CustomBehavior File="Message" 
 								Text="We are in Dun Morogh. Initiating movement procedures." 
 								LogColor="Plum" />	
+								
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />				
 								
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 

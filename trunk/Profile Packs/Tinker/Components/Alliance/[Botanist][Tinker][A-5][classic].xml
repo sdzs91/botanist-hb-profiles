@@ -149,7 +149,21 @@
 									Macro="/startattack" />
 
 				</If>	<!-- If our target is a Blackrock Battle Worg --> 
-
+				
+				<!-- If we reached the move trigger level -->
+				<If Condition="Me.Level &gt;= 3" >
+				
+					<!-- Profile message - WWe have leveled up. Resetting the profile -->
+					<CustomBehavior File="Message" 
+									Text="We have leveled up. Resetting the profile." 
+									LogColor="Plum" />
+				
+					<!-- Load profile - [Botanist][Tinker][A][reset] -->
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+				
+				</If>	<!-- If we reached the move trigger level -->
+				
 			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 3 --> 
 		
 			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
@@ -161,22 +175,26 @@
 
 			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 
-			<!-- If our level >= 3 -->				
+			<!-- If we reached the move trigger level -->
 			<If Condition="Me.Level &gt;= 3" >
 			
-				<!-- Profile message  - EWe have reached level 3. Changing locations -->	
+				<!-- Profile message - WWe have leveled up. Resetting the profile -->
 				<CustomBehavior File="Message" 
-								Text="We have reached level 3. Changing locations." 
-								LogColor="Cyan" />
-								
-				<!-- CustomBehavior - WaitTimer - 3 second delay -->
-				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />				
-								
-			</If>	<!-- If our level >= 3 -->					
-		
+								Text="We have leveled up. Resetting the profile." 
+								LogColor="Plum" />
+			
+				<!-- Load profile - [Botanist][Tinker][A][reset] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+			
+			</If>	<!-- If we reached the move trigger level -->
+			
 		</While>	<!-- While loop - level => 1 and < 3 -->
 
+		
+		
+		
+	
 		<!-- While loop - level >= 3 and < 5 -->				
 		<While Condition="Me.Level &gt;= 3 &amp;&amp; Me.Level &lt; 5" >
 
@@ -279,6 +297,20 @@
 
 				</If>	<!-- If our target is a Goblin Assassin --> 
 
+				<!-- If we reached the move trigger level -->
+				<If Condition="Me.Level &gt;= 5" >
+				
+					<!-- Profile message - WWe have leveled up. Resetting the profile -->
+					<CustomBehavior File="Message" 
+									Text="We have leveled up. Resetting the profile." 
+									LogColor="Plum" />
+				
+					<!-- Load profile - [Botanist][Tinker][A][reset] -->
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+				
+				</If>	<!-- If we reached the move trigger level -->
+				
 			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 5 --> 
 		
 			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
@@ -290,20 +322,20 @@
 
 			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 
-			<!-- If our level >= 5 -->				
+			<!-- If we reached the move trigger level -->
 			<If Condition="Me.Level &gt;= 5" >
 			
-				<!-- Profile message  - We have reached level 5. Changing locations -->	
+				<!-- Profile message - WWe have leveled up. Resetting the profile -->
 				<CustomBehavior File="Message" 
-								Text="We have reached level 5. Changing locations." 
-								LogColor="Cyan" />
-								
-				<!-- CustomBehavior - WaitTimer - 3 second delay -->
-				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />				
-								
-			</If>	<!-- If our level >= 5 -->
-
+								Text="We have leveled up. Resetting the profile." 
+								LogColor="Plum" />
+			
+				<!-- Load profile - [Botanist][Tinker][A][reset] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+			
+			</If>	<!-- If we reached the move trigger level -->
+			
 		</While>	<!-- While loop - level >= 3 and < 5 -->
 
 		
@@ -411,7 +443,21 @@
 									Macro="/startattack" />
 
 				</If>	<!-- If our target is a Blackrock Invader --> 
-
+				
+				<!-- If we reached the move trigger level -->
+				<If Condition="Me.Level &gt;= 6" >
+				
+					<!-- Profile message - WWe have leveled up. Resetting the profile -->
+					<CustomBehavior File="Message" 
+									Text="We have leveled up. Resetting the profile." 
+									LogColor="Plum" />
+				
+					<!-- Load profile - [Botanist][Tinker][A][reset] -->
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+				
+				</If>	<!-- If we reached the move trigger level -->
+				
 			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 6 -->
 		
 			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
@@ -423,20 +469,20 @@
 
 			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 
-			<!-- If our level >= 6 -->				
+			<!-- If we reached the move trigger level -->
 			<If Condition="Me.Level &gt;= 6" >
 			
-				<!-- Profile message  - We have reached level 6. Changing locations -->	
+				<!-- Profile message - WWe have leveled up. Resetting the profile -->
 				<CustomBehavior File="Message" 
-								Text="We have reached level 6. Changing locations." 
-								LogColor="Cyan" />
-								
-				<!-- CustomBehavior - WaitTimer - 3 second delay -->
-				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />				
-								
-			</If>	<!-- If our level >= 5 -->
-
+								Text="We have leveled up. Resetting the profile." 
+								LogColor="Plum" />
+			
+				<!-- Load profile - [Botanist][Tinker][A][reset] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+			
+			</If>	<!-- If we reached the move trigger level -->
+			
 		</While>	<!-- While loop - level >= 5 and < 6 -->
 
 		
@@ -490,13 +536,7 @@
 			<!-- CustomBehavior - WaitTimer - 1 second delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="1000" />
-			
-			
-			
-			
-			
-			
-			
+
 			<!-- If we are not in Elwynn Forest -->
 			<If Condition="Me.ZoneId != 12">
 			
@@ -536,12 +576,7 @@
 								LogColor="Plum" />
 									
 			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
-			
-			
-			
-			
-			
-			
+
 			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 7 -->				
 			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3) &amp;&amp; (Me.Level &lt; 8)" >
 				
@@ -571,6 +606,20 @@
 
 				</If>	<!-- If our target is a Mangy Wolf --> 
 
+				<!-- If we reached the move trigger level -->
+				<If Condition="Me.Level &gt;= 8" >
+				
+					<!-- Profile message - WWe have leveled up. Resetting the profile -->
+					<CustomBehavior File="Message" 
+									Text="We have leveled up. Resetting the profile." 
+									LogColor="Plum" />
+				
+					<!-- Load profile - [Botanist][Tinker][A][reset] -->
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+				
+				</If>	<!-- If we reached the move trigger level -->
+				
 			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 8 -->
 		
 			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
@@ -582,20 +631,20 @@
 
 			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 
-			<!-- If our level >= 8 -->				
+			<!-- If we reached the move trigger level -->
 			<If Condition="Me.Level &gt;= 8" >
 			
-				<!-- Profile message  - We have reached level 7. Changing locations -->	
+				<!-- Profile message - WWe have leveled up. Resetting the profile -->
 				<CustomBehavior File="Message" 
-								Text="We have reached level 7. Changing locations." 
-								LogColor="Cyan" />
-								
-				<!-- CustomBehavior - WaitTimer - 3 second delay -->
-				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />				
-								
-			</If>	<!-- If our level >= 8 -->
-
+								Text="We have leveled up. Resetting the profile." 
+								LogColor="Plum" />
+			
+				<!-- Load profile - [Botanist][Tinker][A][reset] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+			
+			</If>	<!-- If we reached the move trigger level -->
+			
 		</While>	<!-- While loop - level >= 6 and < 8 -->
 		
 		
@@ -648,13 +697,7 @@
 			<!-- CustomBehavior - WaitTimer - 1 second delay -->
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="1000" />
-			
-			
-			
-			
-			
-			
-			
+
 			<!-- If we are not in Elwynn Forest -->
 			<If Condition="Me.ZoneId != 12">
 			
@@ -690,12 +733,7 @@
 								LogColor="Plum" />
 									
 			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
-			
-			
-			
-			
-			
-			
+
 			<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 8 -->				
 			<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3) &amp;&amp; (Me.Level &lt; 10)" >
 				
@@ -725,6 +763,20 @@
 
 				</If>	<!-- If our target is a Gray Forest Wolf --> 
 
+				<!-- If we reached the move trigger level -->
+				<If Condition="Me.Level &gt;= 10" >
+				
+					<!-- Profile message - WWe have leveled up. Resetting the profile -->
+					<CustomBehavior File="Message" 
+									Text="We have leveled up. Resetting the profile." 
+									LogColor="Plum" />
+				
+					<!-- Load profile - [Botanist][Tinker][A][reset] -->
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+				
+				</If>	<!-- If we reached the move trigger level -->
+				
 			</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 6 -->
 		
 			<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
@@ -736,20 +788,20 @@
 
 			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 
-			<!-- If our level >= 10 -->				
-			<If Condition="Me.Level &gt;= 10" >
-			
-				<!-- CustomBehavior - Message - We have reached level 10. Changing locations -->	
-				<CustomBehavior File="Message" 
-								Text="We have reached level 10. Changing locations." 
-								LogColor="Cyan" />
-								
-				<!-- CustomBehavior - WaitTimer - 3 second delay -->
-				<CustomBehavior File="WaitTimer" 
-								WaitTime="3000" />				
-								
-			</If>	<!-- If our level >= 10 -->
-
+			<!-- If we reached the move trigger level -->
+				<If Condition="Me.Level &gt;= 10" >
+				
+					<!-- Profile message - WWe have leveled up. Resetting the profile -->
+					<CustomBehavior File="Message" 
+									Text="We have leveled up. Resetting the profile." 
+									LogColor="Plum" />
+				
+					<!-- Load profile - [Botanist][Tinker][A][reset] -->
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+				
+				</If>	<!-- If we reached the move trigger level -->
+				
 		</While>	<!-- While loop - level >= 8 and < 10 -->
 
 
@@ -774,12 +826,11 @@
 							Text="This portion has not been completed yet. Stopping the bot." 
 							LogColor="Orange" />
 		
-		
-		
+			<!-- CustomBehavior - UserSettings - StopBot -->
 			<CustomBehavior File="UserSettings" 
 							StopBot="true" />
 		
-		</If>
+		</If>	<!-- If our level >= 10 -->
 		
 	</QuestOrder>
 
