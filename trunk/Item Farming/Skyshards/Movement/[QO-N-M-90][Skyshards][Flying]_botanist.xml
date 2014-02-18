@@ -54,6 +54,130 @@
 							UseMount="True" 
 							UseRandomMount="False" />
 			
+			<!-- If we are in Eastern Kingdoms -->
+		<If Condition="Me.ZMapId == 0" >
+		
+			<!-- If we are Alliance -->
+			<If Condition="Me.IsAlliance">
+			
+				<!-- Profile message - We are in Eastern Kingdoms -->
+				<CustomBehavior File="Message" 
+								Text="We are in Eastern Kingdoms"  
+								LogColor="Orange" />
+								
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />				
+								
+				<!-- Profile message - Moving to the Pandaria portal -->
+				<CustomBehavior File="Message" 
+								Text="Moving to the Pandaria portal."  
+								LogColor="Cyan" />				
+								
+				<!-- Move to - Pandaria portal - hover point -->				
+				<CustomBehavior File="FlyTo" 
+								X="-8240.943" Y="528.4667" Z="154.3051" />				
+								
+				<!-- CTM to - grounding at the Pandaria portal -->
+				<CustomBehavior File="MyCTM" 
+								X="-8198.1" Y="527.0742" Z="116.9559" />	
+
+				<!-- Forced dismount -->	
+				<CustomBehavior File="ForcedDismount" />
+				
+				<!-- Interact with the teleporter -->
+				<CustomBehavior File="InteractWith" 
+								MobId="215457" />
+												
+				<!-- Custom behavior - WaitTimer - wait 15 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="15000" />
+								
+				<!-- Else we are Horde -->
+				<Else>
+				
+					<!-- Profile message - Horde must start the profile in Kalimdor or Pandaria -->
+					<CustomBehavior File="Message" 
+									Text="Horde must start the profile in Kalimdor or Pandaria"  
+									LogColor="Orange" />
+							
+					<!-- Profile message  - Stopping the bot -->	
+					<CustomBehavior File="Message" 
+									Text="Stopping the bot." 
+									LogColor="Orange" />
+				
+					<!-- CustomBehavior - UserSettings - StopBot -->
+					<CustomBehavior File="UserSettings" 
+									StopBot="true" />		
+							
+				</Else>	<!-- Else we are Horde -->
+			
+			</If>	<!-- Else we are Horde -->
+			
+		</If>	<!-- If we are Alliance -->
+
+		<!-- If we are in Kalimdor -->
+		<If Condition="Me.MapId == 1" >
+		
+			<!-- If we are Horde -->
+			<If Condition="Me.IsHorde">
+		
+				<!-- Profile message - We are in Kalimdor -->
+				<CustomBehavior File="Message" 
+								Text="We are in Kalimdor"  
+								LogColor="Orange" />
+								
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />				
+
+				<!-- Profile message - Moving to the Pandaria portal -->
+				<CustomBehavior File="Message" 
+								Text="Moving to the Pandaria portal."  
+								LogColor="Cyan" />				
+								
+				<!-- Move to - Pandaria portal - hover point -->				
+				<CustomBehavior File="FlyTo" 
+								X="1984.583" Y="-4668.362" Z="138.3537" />				
+								
+				<!-- CTM to - grounding at the Pandaria portal -->
+				<CustomBehavior File="MyCTM" 
+								X="2016.164" Y="-4697.142" Z="28.54681" />	
+
+				<!-- Forced dismount -->	
+				<CustomBehavior File="ForcedDismount" />
+				
+				<!-- Interact with the teleporter -->
+				<CustomBehavior File="InteractWith" 
+								MobId="215424" />
+												
+				<!-- Custom behavior - WaitTimer - wait 15 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="15000" />
+			
+				<!-- Else we are Alliance -->
+				<Else>
+				
+					<!-- Profile message - Alliance must start the profile in Kalimdor or Pandaria -->
+					<CustomBehavior File="Message" 
+									Text="Alliance must start the profile in Eastern Kingdoms or Pandaria or Pandaria"  
+									LogColor="Orange" />
+							
+					<!-- Profile message  - Stopping the bot -->	
+					<CustomBehavior File="Message" 
+									Text="Stopping the bot." 
+									LogColor="Orange" />
+				
+					<!-- CustomBehavior - UserSettings - StopBot -->
+					<CustomBehavior File="UserSettings" 
+									StopBot="true" />		
+							
+				</Else>	<!-- Else we are Alliance -->
+			
+			</If>	<!-- Else we are Horde -->
+			
+		</If>	<!-- If we are in Kalimdor -->
+			
 			<!-- If we are in Pandaria -->
 			<If Condition="Me.MapId == 870" >
 			
