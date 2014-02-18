@@ -61,8 +61,8 @@
 						UseMount="True" 
 						UseRandomMount="False" />
 			
-		<!-- If our level => 6 and < 13 -->				
-		<If Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt; 13" >
+		<!-- If our level => 5 and < 13 -->				
+		<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 13" >
 	
 			<!-- If our hearthstone is set at Golshire-->
 			<If Condition="(Me.HearthstoneAreaId == 5637)" >

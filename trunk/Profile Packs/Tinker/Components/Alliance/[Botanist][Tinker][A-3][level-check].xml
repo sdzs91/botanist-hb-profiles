@@ -91,9 +91,9 @@
 		<!-- If our level >= 3 and < 5 -->
 		<If Condition="Me.Level &gt;= 3 &amp;&amp; Me.Level &lt; 5" >
 		
-			<!-- Profile message - We are currently leveling in the 3 to 5 bracket -->
+			<!-- Profile message - We are currently leveling in the 3 to 4 bracket -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling in the 3 to 5 bracket." 
+							Text="We are currently leveling in the 3 to 4 bracket." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
@@ -109,9 +109,9 @@
 		<!-- If our level >= 5 and < 6 -->
 		<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 6" >
 		
-			<!-- Profile message - We are currently leveling in the 3 to 5 bracket -->
+			<!-- Profile message - We are currently leveling in the 5 to 6 bracket -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling in the 3 to 5 bracket." 
+							Text="We are currently leveling in the 5 to 6 bracket." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
@@ -127,9 +127,9 @@
 		<!-- If our level >= 6 and < 8 -->
 		<If Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt; 8" >
 		
-			<!-- Profile message - We are currently leveling in the 6 - 8 bracket -->
+			<!-- Profile message - We are currently leveling in the 6 to 8 bracket -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling in the 6 - 8 bracket." 
+							Text="We are currently leveling in the 6 to 8 bracket." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
@@ -145,9 +145,9 @@
 		<!-- If our level >= 8 and < 10 -->
 		<If Condition="Me.Level &gt;= 8 &amp;&amp; Me.Level &lt; 10" >
 		
-			<!-- Profile message - We are currently leveling in the 8 - 10 bracket -->
+			<!-- Profile message - We are currently leveling in the 8 to 10 bracket -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling in the 8 - 10 bracket." 
+							Text="We are currently leveling in the 8 to 10 bracket." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->

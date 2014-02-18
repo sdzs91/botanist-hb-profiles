@@ -172,7 +172,7 @@
 		<If Condition="Me.ZoneId == 12 ">
 		
 			<!-- If our level < 6 -->				
-			<If Condition="Me.Level &lt; 6" >
+			<If Condition="Me.Level &lt; 5" >
 		
 				<!-- Profile message -  Navigating to Goldshire -->
 				<CustomBehavior File="Message" 
@@ -198,7 +198,20 @@
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="..\[Botanist][Tinker][A-5][classic]" />
 			
-			</If>	<!-- If our level < 6 -->
+			</If>	<!-- If our level < 5 -->
+			
+			<!-- If our level >= 5 -->				
+			<If Condition="Me.Level &gt;= 5" >
+		
+				<!-- CustomBehavior - WaitTimer - 3 second delay  -->				
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />	
+					
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="..\[Botanist][Tinker][A-5][classic]" />
+			
+			</If>	<!-- If our level >= 5 -->
 			
 		</If>	<!-- If we are in Elwynn Forest -->
 		

@@ -157,9 +157,9 @@
 						<!-- Else we haven't reached the move trigger level -->
 						<Else>
 						
-							<!-- CustomBehavior - Message - We have not leveled up. We are not changing locations yet -->
+							<!-- CustomBehavior - Message - We are not changing locations until level 3 -->
 							<CustomBehavior File="Message" 
-											Text="We have not leveled up. We are not changing locations yet." 
+											Text="We are not changing locations until level 3." 
 											LogColor="Plum" />
 											
 						</Else>	<!-- Else we haven't reached the move trigger level -->
@@ -319,9 +319,9 @@
 						<!-- Else we haven't reached the move trigger level -->
 						<Else>
 						
-							<!-- CustomBehavior - Message - We have not leveled up. We are not changing locations until level 5 -->
+							<!-- CustomBehavior - Message - We are not changing locations until level 5 -->
 							<CustomBehavior File="Message" 
-											Text="We have not leveled up. We are not changing locations until level 5." 
+											Text="We are not changing locations until level 5." 
 											LogColor="Plum" />
 											
 						</Else>	<!-- Else we haven't reached the move trigger level -->
@@ -439,12 +439,26 @@
 			<!-- If we are not in Elwynn Forest -->
 			<If Condition="Me.ZoneId != 12">
 			
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A][hearthstone] -->
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_unknown-to-elwynn-forest -->
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Movement\[Botanist][Tinker]_unknown-to-elwynn-forest" />		
 								
 			</If>	<!-- If we are not in Elwynn Forest -->
 			
+			<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
+			<If Condition="Me.ZoneId == 12 &amp;&amp; Me.HearthstoneAreaId != 5637">
+			
+				<!-- CustomBehavior - Message - We are in Elwynn Forest. Moving to the Tinker zone -->
+				<CustomBehavior File="Message" 
+								Text="We are in Elwynn Forest. Moving to the Tinker zone." 
+								LogColor="Plum" />		
+								
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A][hearthstone] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Hearthstone\[Botanist][Tinker][A][hearthstone]" />				
+									
+			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
+
 			<!-- If we are in Elwynn Forest and our hearthstone is set to Goldshire -->
 			<If Condition="Me.ZoneId == 12 &amp;&amp; Me.HearthstoneAreaId == 5637">
 			
@@ -467,7 +481,7 @@
 				<While Condition="Me.Level &lt; 6" >
 					
 					<!-- If we reached the move trigger level -->
-					<If Condition="Me.Level &gt;= 3" >
+					<If Condition="Me.Level &gt;= 6" >
 					
 						<!-- Profile message - We have leveled up. Resetting the profile -->
 						<CustomBehavior File="Message" 
@@ -481,9 +495,9 @@
 						<!-- Else we haven't reached the move trigger level -->
 						<Else>
 						
-							<!-- CustomBehavior - Message - We have not leveled up. We are not changing locations until level 6 -->
+							<!-- CustomBehavior - Message - We are not changing locations until level 6 -->
 							<CustomBehavior File="Message" 
-											Text="We have not leveled up. We are not changing locations until level 6." 
+											Text="We are not changing locations until level 6." 
 											LogColor="Plum" />
 											
 						</Else>	<!-- Else we haven't reached the move trigger level -->
@@ -497,21 +511,24 @@
 						<CustomBehavior File="TargetAndMoveToMob"
 										MoveWithinMaxRangeOfMob="4"
 										TargetOnlyIfHealthPercentAbove="5"
+										WaypointVisitStrategy="InOrder"
 										WaitForNpcs="False"
+										Radius="45"
 										MobId="525" >
-			
+										<HuntingGrounds>
+											<Hotspot X="-9675.694" Y="413.4748" Z="38.76685" />
+										</HuntingGrounds>
+										
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 
-						
-						
-						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<!-- Else we have less then 4 empty bag slots or our durability is less than 30% -->
 						<Else Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 													
 							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
 							<CustomBehavior File="LoadProfile" 
 											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
 
-						</Else>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						</Else>	<!-- Else we have less then 4 empty bag slots or our durability is less than 30% -->
 					
 					</If>	<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
 					
@@ -661,9 +678,9 @@
 						<!-- Else we haven't reached the move trigger level -->
 						<Else>
 						
-							<!-- CustomBehavior - Message - We have not leveled up. We are not changing locations until level 8 -->
+							<!-- CustomBehavior - Message - We are not changing locations until level 8 -->
 							<CustomBehavior File="Message" 
-											Text="We have not leveled up. We are not changing locations until level 8." 
+											Text="We are not changing locations until level 8." 
 											LogColor="Plum" />
 											
 						</Else>	<!-- Else we haven't reached the move trigger level -->
@@ -837,9 +854,9 @@
 						<!-- Else we haven't reached the move trigger level -->
 						<Else>
 						
-							<!-- CustomBehavior - Message - We have not leveled up. We are not changing locations until level 10 -->
+							<!-- CustomBehavior - Message - We are not changing locations until level 10 -->
 							<CustomBehavior File="Message" 
-											Text="We have not leveled up. We are not changing locations until level 10." 
+											Text="We are not changing locations until level 10." 
 											LogColor="Plum" />
 											
 						</Else>	<!-- Else we haven't reached the move trigger level -->
