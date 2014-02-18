@@ -116,8 +116,17 @@
 				
 		</If>	<!-- If we are in Dun Morogh -->
 		
-		<!-- If we are in Eastern Kingdoms and we aren't in Dun Morogh or Elwynn Forest -->
-		<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId != 1 &amp;&amp; Me.ZoneId != 12 ">				
+		<!-- If we are in Stormwind -->
+		<If Condition="Me.ZoneId == 1519">
+		
+			<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_unknown-to-elwynn-forest -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="[Botanist][Tinker]_unknown-to-elwynn-forest" />
+
+		</If>	<!-- If we are in Stormwind -->
+		
+		<!-- If we are in Eastern Kingdoms and we aren't in Elwynn Forest or Stormwind -->
+		<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId != 12 &amp;&amp; Me.ZoneId != 1519">				
 
 			<!-- Profile message - We are in Eastern Kingdoms. Navigating to Stormwind -->
 			<CustomBehavior File="Message" 

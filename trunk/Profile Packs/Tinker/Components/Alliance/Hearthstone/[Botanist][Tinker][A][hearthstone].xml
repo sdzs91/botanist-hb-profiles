@@ -89,19 +89,20 @@
 										LogColor="Plum" />				
 			
 					<!-- Move to - Goldshire - innkeep -->	
-					<MoveTo X="-9433.99" Y="85.1493" Z="56.734" />
+					<MoveTo X="-9464.979" Y="15.39141" Z="56.96179" />
 					
 					<!-- CustomBehavior - Message - We have arrived at the Goldshire inkeep -->
 					<CustomBehavior File="Message" 
 									Text="We have arrived at the Goldshire inkeep." 
 									LogColor="Plum" />
 
+					<!-- CustomBehavior - SetHearthstone - Goldshire -->				
 					<CustomBehavior File="SetHearthstone" 
-									MobId="6727"  
-									X="-9226.454" Y="-2155.743" Z="63.73067" />
+									MobId="295"  
+									X="-9462.663" Y="16.19151" Z="56.96266" />
 					
-					<!-- Move to - Goldshire - innkeep -->	
-					<MoveTo X="-9433.99" Y="85.1493" Z="56.734" />
+					<!-- Move to - Goldshire - inn exit -->	
+					<MoveTo X="-9459.325" Y="60.87368" Z="55.844" />
 					
 					<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
 					<CustomBehavior File="LoadProfile" 

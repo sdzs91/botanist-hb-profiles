@@ -42,22 +42,130 @@
 	<QuestOrder>
 			
 		
+		<!-- If our level >= 5 and < 12 -->				
+		<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 12" >
 		
-		
-		
-		
-		
-		
-		
-
-		<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
-		<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+			<!-- If our hearthstone/innkeepers daughter is set to Goldshire -->
+			<If Condition="Me.HearthstoneAreaId == 5637" >
+			
+				<!-- If we have a Hearthstone -->
+				<If Condition="HasItem(6948)">
+				
+					<!-- Profile message - Using our Hearthstone -->
+					<CustomBehavior File="Message" 
+									Text="Using our Hearthstone." 
+									LogColor="Fuchsia" />
 									
-			<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
-			<CustomBehavior File="LoadProfile" 
-							ProfileName="..\..\[Botanist][Tinker][A-5][classic]" />
+					<!-- Custom behavior - Misc\RunLua -->				
+					<CustomBehavior File="Misc\RunLua" 
+									Lua="UseItemByName(6948)" 
+									WaitTime="1000" />
+									
+					<!-- Wait timer - wait 20 seconds - delay -->				
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="20000" />
+									
+				</If>	<!-- If we have a Hearthstone -->
+			
+				<!-- If we have a Innkeeper's Daughter -->
+				<If Condition="HasItem(64488)">
+				
+					<!-- Profile message - Using our Innkeeper's Daughter -->
+					<CustomBehavior File="Message" 
+									Text="Using our Innkeeper's Daughter." 
+									LogColor="Fuchsia" />
+										
+					<!-- Custom behavior - Misc\RunLua -->					
+					<CustomBehavior File="Misc\RunLua" 
+									Lua="UseItemByName(64488)" 
+									WaitTime="1000" />
+						
+					<!-- Wait timer - wait 20 seconds - delay -->	
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="20000" />
+									
+				</If>	<!-- If we have a Innkeeper's Daughter -->
+			
+			</If>	<!-- If our hearthstone is set here, use it -->
+			
+			<!-- Repair vendor -->
+			<SetVendor>
+				<Vendors>
+					<!-- Goldshire  -->
+					<Vendor Name="Andrew Krighton" 
+							Entry="2046" 
+							Type="Repair" 
+							X="-9464.16" Y="87.8281" Z="58.34372" />
+				</Vendors>
+			</SetVendor>
+			<SetMailbox>
+				<Mailboxes>
+					<Mailbox X="-9458.393" Y="49.33706" Z="56.60635" />
+				</Mailboxes>
+			</SetMailbox>
+						
+			<!-- Vendor conditions -->
+			<CustomBehavior File="ForceSetVendor" 
+							DoMail="True" 
+							DoRepair="True" 
+							DoSell="True" 
+							DoTrain="False" />
+			
+			<!-- Move to - Goldshire flight master -->
+			<MoveTo X="-9433.387" Y="85.53067" Z="56.75977" />
 
-		</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+
+			<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
+			<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+										
+				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="..\..\[Botanist][Tinker][A-5][classic]" />
+
+			</If>	<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
+		
+		</If>	<!-- If our level >= 5 and < 12 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	</QuestOrder>
 
