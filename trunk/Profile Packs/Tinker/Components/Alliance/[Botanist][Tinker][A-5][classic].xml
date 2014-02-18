@@ -511,9 +511,7 @@
 						<CustomBehavior File="TargetAndMoveToMob"
 										MoveWithinMaxRangeOfMob="4"
 										TargetOnlyIfHealthPercentAbove="5"
-										WaypointVisitStrategy="InOrder"
 										WaitForNpcs="False"
-										Radius="45"
 										MobId="525" >
 										<HuntingGrounds>
 											<Hotspot X="-9675.694" Y="413.4748" Z="38.76685" />
