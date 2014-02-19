@@ -199,13 +199,10 @@
 					<DisableBehavior Name="Combat" />
 					
 					<!-- Clear entrance to the first boss -->
-					<MoveTo X="200.7049" Y="996.3988" Z="194.627" />
 					<MoveTo X="203.0913" Y="979.0555" Z="191.9614" />
 					<MoveTo X="219.8102" Y="978.5244" Z="190.9932" />
 					<MoveTo X="254.1688" Y="996.5801" Z="191.1321" />
-					<MoveTo X="180.2927" Y="955.6257" Z="190.7555" />
-					<MoveTo X="202.7873" Y="999.7837" Z="195.4422" />
-						
+					
 					<!-- Profile message - Enabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Enabling combat." 
@@ -494,17 +491,6 @@
 					<!-- ************************** 1st Mobs after Karsh ********************************************* -->
 					
 					
-					<!-- Profile message - Disabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Disabling combat." 
-										LogColor="Gold" />
-					
-					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />
-					
-					<!-- Move to - left-hand group after Karsh -->
-					<MoveTo X="224.8825" Y="708.1334" Z="109.0304" />
-					
 					<!-- Profile message - Enabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Enabling combat." 
@@ -513,18 +499,9 @@
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />
 					
-					<!-- Wait timer - wait 3 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
-									
-					<!-- Profile message - Disabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Disabling combat." 
-										LogColor="Gold" />
-					
-					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />
-					
+					<!-- Move to - left-hand group after Karsh -->
+					<MoveTo X="224.8825" Y="708.1334" Z="109.0304" />
+
 					<!-- Move to - right-hand group after Karsh -->
 					<MoveTo X="194.7648" Y="708.052" Z="109.6713" />
 					
@@ -533,54 +510,18 @@
 					
 					<!-- Move to - middle of the patrols path -->
 					<MoveTo X="212.9294" Y="655.6936" Z="90.0681" />
-					
-					<!-- Profile message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />
 
-					<!-- enable combat -->
-					<EnableBehavior Name="Combat" />
-					
-					<!-- Wait timer - wait 3 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
-									
-					<!-- Profile message - Disabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Disabling combat." 
-										LogColor="Gold" />
-					
-					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />
-					
 					<!-- Move to - bottom of the patrols path -->
 					<MoveTo X="207.5424" Y="604.1732" Z="75.4519" />
 					
 					<!-- Move to - right-hand group at the bottom of the incline -->
 					<MoveTo X="195.5416" Y="618.7083" Z="78.83279" />
 
-					<!-- Profile message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />
-
-					<!-- enable combat -->
-					<EnableBehavior Name="Combat" />
-					
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
 									
-					<!-- Profile message - Disabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Disabling combat." 
-										LogColor="Gold" />
-					
-					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />
-					
-					
+									
 					<!-- ************************** 2nd mobs after Karsh ********************************************* -->
 					
 					
@@ -589,14 +530,6 @@
 					
 					<!-- Move to - kite to RAF XP range  -->
 					<MoveTo X="212.2745" Y="643.5215" Z="86.12631" />
-					
-					<!-- Profile message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />
-
-					<!-- enable combat -->
-					<EnableBehavior Name="Combat" />
 
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
@@ -606,31 +539,13 @@
 					<!-- ************************** 3rd mobs after Karsh ********************************************* -->
 					
 
-					<!-- Profile message - Disabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Disabling combat." 
-										LogColor="Gold" />
 					
-					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />
-
 					<!-- Move to - right-hand group - end of the path -->
 					<MoveTo X="269.6845" Y="545.0919" Z="69.91064" />
 
 					<!-- Move to - kite to the middle of the path -->
 					<MoveTo X="212.9883" Y="593.7704" Z="75.40996" />
 					
-					<!-- Move to - kite to RAF XP range  -->
-					<MoveTo X="212.2745" Y="643.5215" Z="86.12631" />
-					
-					<!-- Profile message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />
-
-					<!-- enable combat -->
-					<EnableBehavior Name="Combat" />
-
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
