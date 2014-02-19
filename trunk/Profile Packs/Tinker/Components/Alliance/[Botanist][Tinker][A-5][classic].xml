@@ -697,7 +697,7 @@
 										MoveWithinMaxRangeOfMob="15"
 										TargetOnlyIfHealthPercentAbove="5"
 										WaitForNpcs="False"
-										FactionId="38" >
+										MobId="525" >
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 
 						<!-- Else we have less then 4 empty bag slots or our durability is less than 30% -->
@@ -740,7 +740,7 @@
 										MoveWithinMaxRangeOfMob="15"
 										TargetOnlyIfHealthPercentAbove="5"
 										WaitForNpcs="False"
-										FactionId="17 " >
+										MobId="116 " >
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 
 						<!-- Else we have less then 4 empty bag slots or our durability is less than 30% -->
