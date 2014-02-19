@@ -513,10 +513,6 @@
 										TargetOnlyIfHealthPercentAbove="5"
 										WaitForNpcs="False"
 										MobId="525" >
-										<HuntingGrounds>
-											<Hotspot X="-9675.694" Y="413.4748" Z="38.76685" />
-										</HuntingGrounds>
-										
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 
 						<!-- Else we have less then 4 empty bag slots or our durability is less than 30% -->
@@ -530,7 +526,7 @@
 					
 					</If>	<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
 					
-					<!-- If our target is a Gray Forest Wolf -->
+					<!-- If our target is a Mangy Wolf -->
 					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
 					
 						<!-- Profile message  - Engaging a Mangy Wolf -->	
@@ -544,9 +540,17 @@
 										
 						<!-- CustomBehavior - WaitTimer - 3 second - delay -->
 						<CustomBehavior File="WaitTimer" 
-										WaitTime="5000" />				
+										WaitTime="7000" />				
 
 					</If>	<!-- If our target is a Mangy Wolf --> 
+						
+					<!-- If our target is not a Mangy Wolf -->
+					<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 525)">
+					
+						<!--  Move to - new target zone -->	
+						<MoveTo X="-9675.694" Y="413.4748" Z="38.76685" />
+
+					</If>	<!-- If our target is not a Mangy Wolf -->	
 						
 				</While>	<!-- While loop - our empty bag slots > 4 and our lowest durability > 30 percent and our level < 6 -->
 
@@ -688,32 +692,29 @@
 					<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
 					<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
 
-						<!-- DisableBehavior - Pull -->
-						<DisableBehavior Name="Pull" />
-					
-						<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
+						<!-- Custom behavior - TargetAndMoveToMob - Beast - Wolf -->
 						<CustomBehavior File="TargetAndMoveToMob"
-										MoveWithinMaxRangeOfMob="4"
+										MoveWithinMaxRangeOfMob="15"
 										TargetOnlyIfHealthPercentAbove="5"
 										WaitForNpcs="False"
-										MobId="525" >		
+										FactionId="38" >
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
-						
-						<!-- Else we have less than 4 empty bag slots or our durability is less than 30% -->
-						<Else>
 
+						<!-- Else we have less then 4 empty bag slots or our durability is less than 30% -->
+						<Else Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+													
 							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
 							<CustomBehavior File="LoadProfile" 
 											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
-						
-						</Else>		<!-- Else we have less than 4 empty bag slots or our durability is less than 30% -->
-						
+
+						</Else>	<!-- Else we have less then 4 empty bag slots or our durability is less than 30% -->
+					
 					</If>	<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
 					
-					<!-- If our target is a Gray Forest Wolf -->
+					<!-- If our target is a Mangy Wolf -->
 					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
 					
-						<!-- Profile message  - Engaging a Mangy Wolf -->	
+						<!-- Profile message - Engaging a Mangy Wolf -->	
 						<CustomBehavior File="Message" 
 										Text="Engaging a Mangy Wolf" 
 										LogColor="Cyan" />
@@ -722,11 +723,54 @@
 						<CustomBehavior File="RunMacro" 
 										Macro="/startattack" />
 										
-						<!-- CustomBehavior - WaitTimer - 5 second - delay -->
+						<!-- CustomBehavior - WaitTimer - 7 second - delay -->
 						<CustomBehavior File="WaitTimer" 
-										WaitTime="5000" />				
+										WaitTime="7000" />				
 
 					</If>	<!-- If our target is a Mangy Wolf --> 
+						
+					<!-- If our target is not a Beast - Wolf -->
+					<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 525)">
+					
+						<!--  Move to - new target zone -->	
+						<MoveTo X="-9320.981" Y="551.7943" Z="77.10604" />
+
+						<!-- Custom behavior - TargetAndMoveToMob - Beast - Wolf -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="15"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										FactionId="17 " >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+
+						<!-- Else we have less then 4 empty bag slots or our durability is less than 30% -->
+						<Else Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+													
+							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+						</Else>	<!-- Else we have less then 4 empty bag slots or our durability is less than 30% -->
+					
+					</If>	<!-- If our target is not a Beast - Wolf --> 
+					
+					<!-- If our target is a Defias Brotherhood -->
+					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
+					
+						<!-- Profile message - Engaging a Defias Brotherhood -->	
+						<CustomBehavior File="Message" 
+										Text="Engaging a Defias Brotherhood" 
+										LogColor="Cyan" />
+						
+						<!-- CustomBehavior - RunMacro - startattack -->
+						<CustomBehavior File="RunMacro" 
+										Macro="/startattack" />
+										
+						<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="7000" />				
+
+					</If>	<!-- If our target is a Defias Brotherhood -->
 					
 				</While>	<!-- While loop -  our level < 8 -->
 			
