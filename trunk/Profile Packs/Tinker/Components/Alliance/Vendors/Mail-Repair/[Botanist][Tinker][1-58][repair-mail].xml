@@ -54,7 +54,7 @@
 					<!-- Profile message - Using our Hearthstone -->
 					<CustomBehavior File="Message" 
 									Text="Using our Hearthstone." 
-									LogColor="Fuchsia" />
+									LogColor="Plum" />
 									
 					<!-- Custom behavior - Misc\RunLua -->				
 					<CustomBehavior File="Misc\RunLua" 
@@ -73,7 +73,7 @@
 					<!-- Profile message - Using our Innkeeper's Daughter -->
 					<CustomBehavior File="Message" 
 									Text="Using our Innkeeper's Daughter." 
-									LogColor="Fuchsia" />
+									LogColor="Plum" />
 										
 					<!-- Custom behavior - Misc\RunLua -->					
 					<CustomBehavior File="Misc\RunLua" 
