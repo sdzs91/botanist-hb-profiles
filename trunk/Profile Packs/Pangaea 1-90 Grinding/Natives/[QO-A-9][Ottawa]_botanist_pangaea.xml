@@ -42,7 +42,16 @@
 		
 		<QuestOrder>
 		
-	    <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" HarvestMinerals="False" HarvestHerbs="False" PullDistance="1"  KillBetweenHotspots="False"  FindVendorsAutomatically="True" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />						
+	   <!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />						
 		<While Condition="true" >
 						
 				<If Condition="Me.MapId == 870" >				 

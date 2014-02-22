@@ -22,7 +22,16 @@
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-5][Choctaw]_botanist_pangaea" />
 				</If>
 	
-		<CustomBehavior File="UserSettings" UseFlightPaths="False" />
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="False" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />
 		
 		
 				

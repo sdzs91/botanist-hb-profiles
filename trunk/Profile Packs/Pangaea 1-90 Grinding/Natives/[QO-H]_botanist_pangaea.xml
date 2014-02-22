@@ -62,7 +62,16 @@
 					
 		<While Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt;= 2" >
 	
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />
 				<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="I am in the  1 to 3 bracket." LogColor="Lime" />
@@ -113,7 +122,16 @@
 				</If>	
 				
 		<While Condition="Me.Level &gt;= 3 &amp;&amp; Me.Level &lt;= 5" >
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Valley of Trials in Durotar." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<If Condition="Me.X &gt; -790.7588 &amp;&amp; Me.X &lt; -151.7464 &amp;&amp; Me.Y &gt; -4595.388 &amp;&amp; Me.Y &lt; -4090.012" > 
@@ -163,7 +181,16 @@
 				</If>
 			
 		<While Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt;= 7" >		
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Razor Hill in Durotar" LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Razor Hill." LogColor="Lime" />														
@@ -223,7 +250,16 @@
 				</If>
 
 		<While Condition="Me.Level &gt;= 8 &amp;&amp; Me.Level &lt;= 9" >		
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Razor Hill in Durotar" LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Razor Hill." LogColor="Lime" />														
@@ -294,7 +330,16 @@
 				</If>
 
 		<While Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt;= 11" >		
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, The Crossroads in Northern Barrens." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at The Crossroads." LogColor="Lime" />

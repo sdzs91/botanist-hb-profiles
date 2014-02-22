@@ -51,7 +51,16 @@
 					<CustomBehavior File="LoadProfile" ProfileName="[QO-H-4][Shawnee]_botanist_pangaea" />
 				</If>
 	
-				<CustomBehavior File="UserSettings" MountDistance="10" UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />
 								
 				<If Condition="Me.Level &gt;= 58 &amp;&amp; Me.Level &lt;= 59" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
@@ -96,7 +105,16 @@
 								
 		<While Condition="Me.MapId == 530 &amp;&amp; Me.ZoneId == 3483 &amp;&amp; Me.Level &gt;= 58 &amp;&amp; Me.Level &lt;= 59 &amp;&amp; Me.Y &gt;= 1073.369" >
 			
-				<CustomBehavior File="UserSettings" MountDistance="30" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Thrallmar in Hellfire Peninsula." LogColor="Lime" />
 				<If Condition="Me.HearthstoneAreaId != 3536" > 
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -174,9 +192,15 @@
 				</If>
 				
 		<While Condition="Me.MapId == 530 &amp;&amp; Me.Level &gt;= 60 &amp;&amp; Me.Level &lt;= 61" >		
-				<CustomBehavior File="UserSettings" FindMountAutomatically="True" UseRandomMount="True" UseMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />								
 				<CustomBehavior File="Message" Text="Position check, Thrallmar in Hellfire Peninsula." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -247,9 +271,15 @@
 				</If>
 				
 		<While Condition="Me.MapId == 530 &amp;&amp; Me.Level &gt;= 62 &amp;&amp; Me.Level &lt;= 63" >		
-				<CustomBehavior File="UserSettings" FindMountAutomatically="True" UseRandomMount="True" UseMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Falcon Watch in Hellfire Peninsula." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -312,10 +342,16 @@
 				</If>
 				
 		<While Condition="Me.MapId == 530 &amp;&amp; Me.Level &gt;= 64 &amp;&amp; Me.Level &lt;= 65" >		
-				<CustomBehavior File="UserSettings" FindMountAutomatically="True" UseRandomMount="True" UseMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
-								LogoutForInactivity="True" />				
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />			
 				<CustomBehavior File="Message" Text="Position check, Cenarian Refuge in Zangarmarsh." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Cenarian Refuge." LogColor="Lime" />
@@ -385,9 +421,15 @@
 				</If>
 				
 		<While Condition="Me.MapId == 530 &amp;&amp; Me.Level &gt;= 66 &amp;&amp; Me.Level &lt; 67" >		
-				<CustomBehavior File="UserSettings" FindMountAutomatically="True" UseRandomMount="True" UseMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Thunderlord Stronghold in Blade's Edge Mountains." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -455,9 +497,15 @@
 				</If>
 				
 		<While Condition="Me.MapId == 530 &amp;&amp; Me.Level &gt;= 67 &amp;&amp; Me.Level &lt; 68" >		
-				<CustomBehavior File="UserSettings" FindMountAutomatically="True" UseRandomMount="True" UseMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Ruuan Weald in Blade's Edge Mountains." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />

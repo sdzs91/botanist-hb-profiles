@@ -67,7 +67,16 @@
 			
 		<While Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >
 					
-					<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="60" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+					<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />
 		
 				<If Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 13" >				
 					<CustomBehavior File="Message" Text="Checking my current level.." LogColor="Lime" />						
@@ -139,7 +148,16 @@
 			
 		<While Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt;= 15" >	
 	
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, The Crossroads in Northern Barrens." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at The Crossroads." LogColor="Lime" />
@@ -206,7 +224,16 @@
 			
 	<While Condition="Me.Level &gt;= 16 &amp;&amp; Me.Level &lt;= 17" >	
 	
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, The Crossroads in Northern Barrens." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at The Crossroads." LogColor="Lime" />
@@ -267,7 +294,16 @@
 					
 		<While Condition="Me.Level &gt;= 18 &amp;&amp; Me.Level &lt;= 19" >	
 	
-				<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />				
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, innkeep @ Valley of Honor." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep in Valley of Honor." LogColor="Lime" />
@@ -383,9 +419,15 @@
 			</If>
 			
 		<While Condition="Me.Level &gt;= 20 &amp;&amp; Me.Level &lt;= 21" >		
-				<CustomBehavior File="UserSettings" FindMountAutomatically="True" UseRandomMount="True" UseMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="35" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />				
 				<CustomBehavior File="Message" Text="Position check, Splintertree Post in Ashenvale." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -447,9 +489,15 @@
 				</If>
 				
 		<While Condition="Me.Level &gt;= 22 &amp;&amp; Me.Level &lt;= 24" >		
-				<CustomBehavior File="UserSettings" FindMountAutomatically="True" UseRandomMount="True" UseMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Splintertree Post in Ashenvale." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -524,23 +572,15 @@
 		<!-- level 25-27 loop -->		
 		<While Condition="Me.Level &gt;= 25 &amp;&amp; Me.Level &lt;= 26" >
 
-				<!-- User Settings -->
+				<!-- User settings -->
 				<CustomBehavior File="UserSettings" 
-								FindMountAutomatically="True" 
-								UseRandomMount="False" 
-								UseMount="True" 
-								MountDistance="100"
 								UseFlightPaths="True" 
 								LootMobs="True" 
-								SkinMobs="False" 
-								NinjaSkin="False" 
 								HarvestHerbs="False" 
-								HarvestMinerals="False"
-								PullDistance="45" 
+								HarvestMinerals="False" 
 								KillBetweenHotspots="True" 
 								RessAtSpiritHealers="False" 
-								FindVendorsAutomatically="True" 
-								LootRadius="50"
+								LootRadius="50" 
 								LogoutForInactivity="True" />
 								
 				<!-- User notification of hearth/farming location -->				
@@ -694,23 +734,15 @@
 		<!-- level 27-29 loop -->		
 		<While Condition="Me.Level &gt;= 27 &amp;&amp; Me.Level &lt;= 28" >
 		
-				<!-- User Settings -->
+				<!-- User settings -->
 				<CustomBehavior File="UserSettings" 
-								FindMountAutomatically="True" 
-								UseRandomMount="False" 
-								UseMount="True" 
-								MountDistance="100"
 								UseFlightPaths="True" 
 								LootMobs="True" 
-								SkinMobs="False" 
-								NinjaSkin="False" 
 								HarvestHerbs="False" 
-								HarvestMinerals="False"
-								PullDistance="45" 
+								HarvestMinerals="False" 
 								KillBetweenHotspots="True" 
 								RessAtSpiritHealers="False" 
-								FindVendorsAutomatically="True" 
-								LootRadius="50"
+								LootRadius="50" 
 								LogoutForInactivity="True" />
 								
 				<!-- User notification of hearth/farming location -->				
@@ -822,9 +854,15 @@
 				</If>
 				
 		<While Condition="Me.Level &gt;= 29 &amp;&amp; Me.Level &lt;= 30" >		
-				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Krom' Gar in Stonetalon Mountains." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -884,9 +922,15 @@
 				</If>
 		
 		<While Condition="Me.Level &gt;= 31 &amp;&amp; Me.Level &lt;= 32" >		
-				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Karnum's Glade in Desolace." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -945,9 +989,15 @@
 				</If>
 
 		<While Condition="Me.Level &gt;= 33 &amp;&amp; Me.Level &lt;= 34" >		
-				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Karnum's Glade in Desolace." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1016,9 +1066,15 @@
 				</If>
 				
 		<While Condition="Me.Level &gt;= 35 &amp;&amp; Me.Level &lt;= 36" >		
-				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Camp Mojache in Ferales." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1087,9 +1143,15 @@
 				</If>
 				
 		<While Condition="Me.Level &gt;= 37 &amp;&amp; Me.Level &lt;= 38" >		
-				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Camp Mojache in Ferales." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1158,9 +1220,15 @@
 				</If>
 				
 		<While Condition="Me.Level &gt;= 39 &amp;&amp; Me.Level &lt; 40" >		
-				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Camp Mojache in Ferales." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1246,10 +1314,16 @@
 				
 		<While Condition="Me.Level &gt;= 40 &amp;&amp; Me.Level &lt;= 42" >
 				<If Condition="Me.X &lt; -4837.533 || Me.X &gt; -4309.889 || Me.Y &lt; -2406.864 || Me.Y &gt; -1965.833" >
-					<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-						UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
-						PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
-						LogoutForInactivity="True" />					
+					<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />					
 					<CustomBehavior File="Message" Text="Position check, Desolation Hold." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at Desolation Hold." LogColor="Lime" />						
@@ -1313,10 +1387,16 @@
 				</If>		
 						
 				<If Condition="Me.X &gt; -4837.533 &amp;&amp; Me.X &lt; -4309.889 &amp;&amp; Me.Y &gt; -2406.864 &amp;&amp; Me.Y &lt; -1965.833" >
-					<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-						UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
-						PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
-						LogoutForInactivity="True" />					
+					<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />					
 					<CustomBehavior File="Message" Text="Position check, I am already near the farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />					
 						<RunTo X="-4460.859" Y="-2019.829" Z="83.67904" />
@@ -1374,10 +1454,16 @@
 		<While Condition="Me.Level &gt;= 43 &amp;&amp; Me.Level &lt;= 44" >
 				
 				<If Condition="Me.X &lt; -5820.353 || Me.X &gt; -4309.889 || Me.Y &lt; -2162.638 || Me.Y &gt; -1588.992" >
-					<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-						UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
-						PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
-						LogoutForInactivity="True" />					
+					<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />					
 					<CustomBehavior File="Message" Text="Position check, Desolation Hold." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at Desolation Hold." LogColor="Lime" />						
@@ -1436,7 +1522,7 @@
 				<If Condition="Me.X &gt; -5820.353 &amp;&amp; Me.X &lt; -4309.889 &amp;&amp; Me.Y &gt; -2162.638 &amp;&amp; Me.Y &lt; -1588.992" >
 					<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
 						UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
-						PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+						PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False"  LootRadius="50"
 						LogoutForInactivity="True" />					
 					<CustomBehavior File="Message" Text="Position check, I am already near the farming location." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1492,10 +1578,16 @@
 				</If>
 				
 		<While Condition="Me.Level &gt;= 45 &amp;&amp; Me.Level &lt;= 46" >					
-					<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-							UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
-							PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
-							LogoutForInactivity="True" />					
+					<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />					
 					<CustomBehavior File="Message" Text="Position check, Gadgetzan in Tanaris." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at Gadgetzan." LogColor="Lime" />						
@@ -1554,9 +1646,15 @@
 				</If>
 				
 		<While Condition="Me.Level &gt;= 47 &amp;&amp; Me.Level &lt;= 48" >
-			<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+			<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Gadgetzan in Tanaris." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1615,9 +1713,15 @@
 				</If>
 				
 		<While Condition="Me.Level &gt;= 49 &amp;&amp; Me.Level &lt; 50" >		
-				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Gadgetzan in Tanaris." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1675,9 +1779,15 @@
 				</If>
 				
 		<While Condition="Me.Level &gt;= 50 &amp;&amp; Me.Level &lt;= 51" >		
-				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Gadgetzan in Tanaris." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1739,7 +1849,7 @@
 		<While Condition="Me.Level &gt;= 52 &amp;&amp; Me.Level &lt;= 53" >		
 				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
 								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False"  LootRadius="50"
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Gadgetzan in Tanaris." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1802,9 +1912,15 @@
 				</If>
 
 		<While Condition="Me.Level &gt;= 54 &amp;&amp; Me.Level &lt;= 55" >		
-				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
-								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Gadgetzan in Tanaris." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1866,7 +1982,7 @@
 		<While Condition="Me.Level &gt;= 56 &amp;&amp; Me.Level &lt;= 57" >		
 				<CustomBehavior File="UserSettings" UseMount="True" FindMountAutomatically="True" UseRandomMount="True" MountDistance="30"
 								UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False"
-								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50"
+								PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False"  LootRadius="50"
 								LogoutForInactivity="True" />					
 				<CustomBehavior File="Message" Text="Position check, Cenarion Hold in Silithus." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />

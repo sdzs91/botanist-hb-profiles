@@ -89,7 +89,16 @@
 		
 
 		
-	    <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+	    <!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />
 						
 		<While Condition="Me.Level &gt;= 85 &amp;&amp; Me.Level &lt;= 86" >
 			
@@ -263,7 +272,16 @@
 				</If>
 		
 		<While Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt; 88" >		
-				<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="20" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />
 					
                                              <!-- one keg  -->			  
 			    <If Condition="Me.ZoneId == 5841" >
@@ -339,7 +357,16 @@
 				
 
 		<While Condition="Me.Level &gt;= 88 &amp;&amp; Me.Level &lt; 89" >		
-				<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="20" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />
 					
                                              <!-- one keg  -->			  
 			    <If Condition="Me.ZoneId == 5841" >
@@ -455,7 +482,16 @@
 					</If>
 				</If>
 				
-				<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />
 					
 				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />			  
 			    <If Condition="Me.ZoneId == 5842" >
@@ -468,14 +504,14 @@
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="SetHearthstone" MobId="62874" X="1846.069" Y="4274.018" Z="148.8683" />
 						<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the newest farming area." LogColor="Lime" />
-						<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+						<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="1" KillBetweenHotspots="False" y="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 						<CustomBehavior File="ForcedMount" MountType="Ground" />
 							<RunTo X="1247.622" Y="3034.192" Z="228.9766" />						
 						<CustomBehavior File="ForcedDismount" />
 					</If>
 				</If>
 						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until I'm level 90." LogColor="Lime" />
-						<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+						<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" y="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
 						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
 						<CustomBehavior File="RunMacro" Macro="/sort bags" />
                                                         										

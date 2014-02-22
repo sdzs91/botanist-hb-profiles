@@ -47,7 +47,16 @@
 
 			
 				<If Condition="Me.MapId == 870" >
-					<CustomBehavior File="UserSettings" MountDistance="60" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="75" LogoutForInactivity="True" />
+					<!-- User settings -->
+				<CustomBehavior File="UserSettings" 
+								UseFlightPaths="True" 
+								LootMobs="True" 
+								HarvestHerbs="False" 
+								HarvestMinerals="False" 
+								KillBetweenHotspots="True" 
+								RessAtSpiritHealers="False" 
+								LootRadius="50" 
+								LogoutForInactivity="True" />
 						
 					
 					<If Condition="((!HasQuest(31394)) &amp;&amp; (!IsQuestCompleted(31394)))" >
