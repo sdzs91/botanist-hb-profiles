@@ -1079,6 +1079,20 @@
 				<!-- While loop -  our level > 10 and < 12 -->				
 				<While Condition="Me.Level &lt; 12" >	
 					
+					<!-- If we reached the move trigger level -->
+					<If Condition="Me.Level &gt;= 12" >
+					
+						<!-- Profile message - WWe have leveled up. Resetting the profile -->
+						<CustomBehavior File="Message" 
+										Text="We have leveled up. Resetting the profile." 
+										LogColor="Plum" />
+					
+						<!-- Load profile - [Botanist][Tinker][A][reset] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+					
+					</If>	<!-- If we reached the move trigger level -->
+			
 					<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 												
@@ -1096,8 +1110,6 @@
 									MobId="1236" >
 					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
 
-					
-					
 					<!-- If our target is a Kobold Digger -->
 					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 1236)">
 					
@@ -1124,7 +1136,7 @@
 				</While>	<!-- While loop -  our level < 10 -->
 				
 			<!-- If we reached the move trigger level -->
-			<If Condition="Me.Level &gt;= 10" >
+			<If Condition="Me.Level &gt;= 12" >
 			
 				<!-- Profile message - WWe have leveled up. Resetting the profile -->
 				<CustomBehavior File="Message" 

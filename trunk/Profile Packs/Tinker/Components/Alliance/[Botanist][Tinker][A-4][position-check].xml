@@ -390,7 +390,7 @@
 					
 			</If>	<!-- If we are in Northshire Valley -->
 			
-			<!-- If we are in Eastern Kingdoms -->
+			<!-- If we are in Eastern Kingdoms - not in Westfall -->
 			<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId != 40">				
 
 				<!-- Profile message - We are in Eastern Kingdoms. Initiating movement procedures -->
@@ -408,6 +408,23 @@
 					
 			</If>	<!-- If we are in Eastern Kingdoms -->
 			
+			<!-- If we are in Eastern Kingdoms - are in Westfall -->
+			<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId == 40">				
+
+				<!-- Profile message - We are in Eastern Kingdoms. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are in Eastern Kingdoms. Initiating movement procedures." 
+								LogColor="Plum" />	
+								
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />				
+								
+				<!--  CustomBehavior - LoadProfile -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_unknown-to-westfall" />
+					
+			</If>	<!-- If we are in Eastern Kingdoms -->
 			<!-- If we are in Dun Morogh -->
 			<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId == 1">				
 
