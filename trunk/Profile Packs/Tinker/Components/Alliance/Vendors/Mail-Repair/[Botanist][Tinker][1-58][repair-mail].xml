@@ -10,21 +10,26 @@
 <TargetElites>False</TargetElites>
 
 <MailGrey>False</MailGrey>
-<MailWhite>False</MailWhite>
+<MailWhite>True</MailWhite>
 <MailGreen>False</MailGreen>
 <MailBlue>False</MailBlue>
-<MailPurple>False</MailPurple>
+<MailPurple>True</MailPurple>
 
-<SellGrey>False</SellGrey>
+<SellGrey>True</SellGrey>
 <SellWhite>False</SellWhite>
-<SellGreen>False</SellGreen>
-<SellBlue>False</SellBlue>
+<SellGreen>True</SellGreen>
+<SellBlue>True</SellBlue>
 <SellPurple>False</SellPurple>
 
 <AvoidMobs>		 
 </AvoidMobs>
 
 <Blackspots>
+	<Blackspot X="-10397.92" Y="1128.52" Z="39.14137" Radius="71.4333" />
+	<Blackspot X="-10637.94" Y="1285.877" Z="36.47423" Radius="68.41534" />
+	<Blackspot X="-8919.391" Y="-140.2941" Z="80.73921" Radius="1" />
+	<Blackspot X="-8905.608" Y="-136.0411" Z="80.65701" Radius="1" />
+	<Blackspot X="-8858.412" Y="-248.52" Z="80.12221" Radius="54.69961" />
 </Blackspots>
 
 <Mailboxes>
