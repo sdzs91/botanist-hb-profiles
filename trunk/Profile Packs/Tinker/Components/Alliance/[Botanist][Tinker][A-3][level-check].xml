@@ -160,11 +160,59 @@
 							
 		</If>	<!-- If our level >= 8 and < 10 -->
 		
+		<!-- If our level >= 10 and < 12 -->
+		<If Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt; 12" >
 		
+			<!-- Profile message - We are currently leveling in the 10 - 12 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are currently leveling in the 10 - 12 bracket." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />	
+
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="[Botanist][Tinker][A-4][position-check]" />				
+							
+		</If>	<!-- If our level >= 10 and < 58 -->
 		
+		<!-- If our level >= 12 and < 14 -->
+		<If Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt; 14" >
 		
+			<!-- Profile message - We are currently leveling in the 12 - 14 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are currently leveling in the 12 - 14 bracket." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />	
+
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="[Botanist][Tinker][A-4][position-check]" />				
+							
+		</If>	<!-- If our level >= 10 and < 58 -->
 		
+		<!-- If our level >= 14 and < 15 -->
+		<If Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt; 15" >
 		
+			<!-- Profile message - We are currently leveling in the 14 - 15 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are currently leveling in the 14 - 15 bracket." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />	
+
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="[Botanist][Tinker][A-4][position-check]" />				
+							
+		</If>	<!-- If our level >= 10 and < 58 -->
 		
 		
 		
@@ -186,11 +234,11 @@
 		
 		
 		<!-- If our level >= 10 and < 58 -->
-		<If Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt; 58" >
+		<If Condition="Me.Level &gt;= 15 &amp;&amp; Me.Level &lt; 58" >
 		
 			<!-- Profile message - We are currently leveling in the 10 - 58 bracket -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling in the 10 - 58 bracket." 
+							Text="We are currently leveling in the 15 - 58 bracket." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->

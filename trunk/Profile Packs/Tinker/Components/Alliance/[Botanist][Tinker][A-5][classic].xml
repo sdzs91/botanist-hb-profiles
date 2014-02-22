@@ -25,6 +25,8 @@
 </AvoidMobs>
 
 <Blackspots>
+	<Blackspot X="-10397.92" Y="1128.52" Z="39.14137" Radius="71.4333" />
+	<Blackspot X="-10637.94" Y="1285.877" Z="36.47423" Radius="68.41534" />
 	<Blackspot X="-8919.391" Y="-140.2941" Z="80.73921" Radius="1" />
 	<Blackspot X="-8905.608" Y="-136.0411" Z="80.65701" Radius="1" />
 	<Blackspot X="-8858.412" Y="-248.52" Z="80.12221" Radius="54.69961" />
@@ -632,8 +634,8 @@
 							KillBetweenHotspots="False"
 							LogoutForInactivity="True"
 							LogoutInactivityUseForceQuit="True"
-							LootMobs="False"
-							LootRadius="1"
+							LootMobs="True"
+							LootRadius="25"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
@@ -824,8 +826,8 @@
 							KillBetweenHotspots="False"
 							LogoutForInactivity="True"
 							LogoutInactivityUseForceQuit="True"
-							LootMobs="False"
-							LootRadius="1"
+							LootMobs="True"
+							LootRadius="25"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
@@ -1007,8 +1009,8 @@
 							KillBetweenHotspots="False"
 							LogoutForInactivity="True"
 							LogoutInactivityUseForceQuit="True"
-							LootMobs="False"
-							LootRadius="1"
+							LootMobs="True"
+							LootRadius="25"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
@@ -1156,13 +1158,353 @@
 		
 		
 		
+		<!-- If our level >= 12 and < 14 -->			
+		<If Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt; 14" >
+
+			<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="False"
+							LogoutForInactivity="True"
+							LogoutInactivityUseForceQuit="True"
+							LootMobs="True"
+							LootRadius="25"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseMount="True" 
+							UseRandomMount="False" />
+			
+			<!-- CustomBehavior - Message - Checking our current level -->
+			<CustomBehavior File="Message" 
+							Text="Checking our current level......." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->				
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+			
+			<!-- CustomBehavior - Message - We are in the 12 to 14 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are in the 12 to 14 bracket." 
+							LogColor="Plum" />
+	
+			<!-- CustomBehavior - Message - Position check, we need to be in Westfall -->
+			<CustomBehavior File="Message" 
+							Text="Position check, we need to be in Westfall." 
+							LogColor="Plum" />
+			
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+
+			<!-- If we are not in Westfall -->
+			<If Condition="Me.ZoneId != 40">
+			
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_unknown-to-westfall -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_unknown-to-westfall" />		
+								
+			</If>	<!-- If we are not in Westfall --> 
+			
+			<!-- If we are in Westfall and our hearthstone is not set to Sentinel Hill -->
+			<If Condition="Me.ZoneId == 40 &amp;&amp; Me.HearthstoneAreaId != 108">
+			
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A][hearthstone] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Hearthstone\[Botanist][Tinker][A][hearthstone]" />
+									
+			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Sentinel Hill -->
+			
+			<!-- If we are in Westfall and our hearthstone is set to Sentinel Hill -->
+			<If Condition="Me.ZoneId == 40 &amp;&amp; Me.HearthstoneAreaId == 108">
+			
+				<!-- CustomBehavior - Message - Moving to the Tinker zone -->
+				<CustomBehavior File="Message" 
+								Text="Moving to the Tinker zone." 
+								LogColor="Plum" />		
+								
+				<!-- Move to - 12 - 14 Tinker zone -->				
+				<MoveTo X="-10471.02" Y="1644.628" Z="-6.06965" />
+					
+				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 12 -->
+				<CustomBehavior File="Message" 
+								Text="We have reached the Tinker zone. We will farm this area until we reach level 14." 
+								LogColor="Plum" />
+									
+			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
+
+				<!-- While loop -  our level > 12 and < 14 -->				
+				<While Condition="Me.Level &lt; 14" >	
+					
+					<!-- If we reached the move trigger level -->
+					<If Condition="Me.Level &gt;= 14" >
+					
+						<!-- Profile message - WWe have leveled up. Resetting the profile -->
+						<CustomBehavior File="Message" 
+										Text="We have leveled up. Resetting the profile." 
+										LogColor="Plum" />
+					
+						<!-- Load profile - [Botanist][Tinker][A][reset] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+					
+					</If>	<!-- If we reached the move trigger level -->
+			
+					<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+												
+						<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+					</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					
+					<!-- Custom behavior - TargetAndMoveToMob - Chasm Slime -->
+					<CustomBehavior File="TargetAndMoveToMob"
+									MoveWithinMaxRangeOfMob="5"
+									TargetOnlyIfHealthPercentAbove="5"
+									WaitForNpcs="False"
+									MobId="42669" >
+					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+					<!-- If our target is a Chasm Slime -->
+					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 42669)">
+					
+						<!-- Profile message - Engaging a Chasm Slime -->	
+						<CustomBehavior File="Message" 
+										Text="Engaging a Chasm Slime" 
+										LogColor="Cyan" />
+						
+						<!-- CustomBehavior - RunMacro - startattack -->
+						<CustomBehavior File="RunMacro" 
+										Macro="/startattack" />
+										
+						<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="7000" />				
+
+					</If>	<!-- If our target is a Chasm Slime --> 
+					
+					<!-- CustomBehavior - Misc\SwitchTarget - X="-9366.728" Y="-50.78474" Z="66.6088" -->
+					<CustomBehavior File="Misc\SwitchTarget" 
+									MobId="42669" 
+									X="-10471.02" Y="1644.628" Z="-6.06965" />
+
+				</While>	<!-- While loop -  our level < 10 -->
+				
+			<!-- If we reached the move trigger level -->
+			<If Condition="Me.Level &gt;= 14" >
+			
+				<!-- Profile message - WWe have leveled up. Resetting the profile -->
+				<CustomBehavior File="Message" 
+								Text="We have leveled up. Resetting the profile." 
+								LogColor="Plum" />
+			
+				<!-- Load profile - [Botanist][Tinker][A][reset] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+			
+			</If>	<!-- If we reached the move trigger level -->
+			
+		</If>	<!-- If our level >= 12 and < 14 -->
 		
 		
 		
 		
 		
-		<!-- If our level >= 12 -->				
-		<If Condition="Me.Level &gt;= 12" >
+		
+		
+		<!-- If our level >= 14 and < 15 -->			
+		<If Condition="Me.Level &gt;= 14 &amp;&amp; Me.Level &lt; 15" >
+
+			<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="False"
+							LogoutForInactivity="True"
+							LogoutInactivityUseForceQuit="True"
+							LootMobs="True"
+							LootRadius="25"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseMount="True" 
+							UseRandomMount="False" />
+			
+			<!-- CustomBehavior - Message - Checking our current level -->
+			<CustomBehavior File="Message" 
+							Text="Checking our current level......." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->				
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+			
+			<!-- CustomBehavior - Message - We are in the 14 to 15 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are in the 14 to 15 bracket." 
+							LogColor="Plum" />
+	
+			<!-- CustomBehavior - Message - Position check, we need to be in Westfall -->
+			<CustomBehavior File="Message" 
+							Text="Position check, we need to be in Westfall." 
+							LogColor="Plum" />
+			
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+
+			<!-- If we are not in Westfall -->
+			<If Condition="Me.ZoneId != 40">
+			
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_unknown-to-westfall -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_unknown-to-westfall" />		
+								
+			</If>	<!-- If we are not in Westfall --> 
+			
+			<!-- If we are in Westfall and our hearthstone is not set to Sentinel Hill -->
+			<If Condition="Me.ZoneId == 40 &amp;&amp; Me.HearthstoneAreaId != 108">
+			
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A][hearthstone] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Hearthstone\[Botanist][Tinker][A][hearthstone]" />
+									
+			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Sentinel Hill -->
+			
+			<!-- If we are in Westfall and our hearthstone is set to Sentinel Hill -->
+			<If Condition="Me.ZoneId == 40 &amp;&amp; Me.HearthstoneAreaId == 108">
+			
+				<!-- CustomBehavior - Message - Moving to the Tinker zone -->
+				<CustomBehavior File="Message" 
+								Text="Moving to the Tinker zone." 
+								LogColor="Plum" />		
+								
+				<!-- Move to - 14 - 15 Tinker zone -->				
+				<MoveTo X="-11064.27" Y="1030.339" Z="35.23093" />
+					
+				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 12 -->
+				<CustomBehavior File="Message" 
+								Text="We have reached the Tinker zone. We will farm this area until we reach level 14." 
+								LogColor="Plum" />
+									
+			</If>	<!-- If we are in Elwynn Forest and our hearthstone is not set to Goldshire -->
+
+				<!-- While loop -  our level > 14 and < 15 -->				
+				<While Condition="Me.Level &lt; 15" >	
+					
+					<!-- If we reached the move trigger level -->
+					<If Condition="Me.Level &gt;= 15" >
+					
+						<!-- Profile message - WWe have leveled up. Resetting the profile -->
+						<CustomBehavior File="Message" 
+										Text="We have leveled up. Resetting the profile." 
+										LogColor="Plum" />
+					
+						<!-- Load profile - [Botanist][Tinker][A][reset] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+					
+					</If>	<!-- If we reached the move trigger level -->
+			
+					<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+												
+						<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+					</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					
+					<!-- Custom behavior - TargetAndMoveToMob - Riverpaw Bandit -->
+					<CustomBehavior File="TargetAndMoveToMob"
+									MoveWithinMaxRangeOfMob="5"
+									TargetOnlyIfHealthPercentAbove="5"
+									WaitForNpcs="False"
+									MobId="452" >
+					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+					<!-- If our target is a Riverpaw Bandit -->
+					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 452)">
+					
+						<!-- Profile message - Engaging a Riverpaw Bandit -->	
+						<CustomBehavior File="Message" 
+										Text="Engaging a Riverpaw Bandit" 
+										LogColor="Cyan" />
+						
+						<!-- CustomBehavior - RunMacro - startattack -->
+						<CustomBehavior File="RunMacro" 
+										Macro="/startattack" />
+										
+						<!-- CustomBehavior - WaitTimer - 10 second - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="10000" />				
+
+					</If>	<!-- If our target is a Riverpaw Bandit --> 
+					
+				</While>	<!-- While loop -  our level < 15 -->
+				
+			<!-- If we reached the move trigger level -->
+			<If Condition="Me.Level &gt;= 15" >
+			
+				<!-- Profile message - WWe have leveled up. Resetting the profile -->
+				<CustomBehavior File="Message" 
+								Text="We have leveled up. Resetting the profile." 
+								LogColor="Plum" />
+			
+				<!-- Load profile - [Botanist][Tinker][A][reset] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Reset\[Botanist][Tinker][A][reset]" />
+			
+			</If>	<!-- If we reached the move trigger level -->
+			
+		</If>	<!-- If our level >= 14 and < 15 -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- If our level >= 15 -->				
+		<If Condition="Me.Level &gt;= 15" >
 		
 			<!-- Profile message  - This portion has not been completed yet. Stopping the bot -->	
 			<CustomBehavior File="Message" 
