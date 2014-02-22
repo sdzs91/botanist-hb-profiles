@@ -61,10 +61,10 @@
 						UseMount="True" 
 						UseRandomMount="False" />
 			
-		<!-- If our level => 5 and < 13 -->				
-		<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 13" >
+		<!-- If our level => 5 and < 10 -->				
+		<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 10" >
 	
-			<!-- If our hearthstone is set at Golshire-->
+			<!-- If our hearthstone is set at Golshire -->
 			<If Condition="(Me.HearthstoneAreaId == 5637)" >
 	
 				<!-- CustomBehavior - Message - Our Hearthstone has already been set at Goldshire -->
@@ -112,14 +112,65 @@
 
 			</If>	<!-- If our hearthstone is set at Golshire-->
 
-		</If>	<!-- If our level => 6 and < 8-->
+		</If>	<!-- If our level => 5 and < 10 -->
 			
 
 
 
 
 
+		<!-- If our level => 10 and < 15 -->				
+		<If Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt; 15" >
+	
+			<!-- If our hearthstone is set at Sentinel Hill -->
+			<If Condition="(Me.HearthstoneAreaId == 108)" >
+	
+				<!-- CustomBehavior - Message - Our Hearthstone has already been set at Sentinel Hill -->
+				<CustomBehavior File="Message" 
+								Text="Our Hearthstone has already been set at Sentinel Hill." 
+								LogColor="Plum" />
+								
+				<!-- CustomBehavior - WaitTimer - 1 second delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
 
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="..\[Botanist][Tinker][A-5][classic]" />
+	
+				<!-- Else our hearthstone is not set at Sentinel Hill-->
+				<Else>
+				
+					<!-- CustomBehavior - Message -  We have not set out Hearthstone in Sentinel Hill. Navigating to the innkeep -->
+					<CustomBehavior File="Message" 
+										Text="We have not set out Hearthstone in Sentinel Hill. Navigating to the innkeep." 
+										LogColor="Plum" />				
+			
+					<!-- Move to - Sentinel Hill - innkeep -->	
+					<MoveTo X="-10652.18" Y="1168.035" Z="34.52104" />
+					
+					<!-- CustomBehavior - Message - We have arrived at the Sentinel Hill inkeep -->
+					<CustomBehavior File="Message" 
+									Text="We have arrived at the Sentinel Hill inkeep." 
+									LogColor="Plum" />
+
+					<!-- CustomBehavior - SetHearthstone - Sentinel Hill -->				
+					<CustomBehavior File="SetHearthstone" 
+									MobId="8931"  
+									X="-10653.28" Y="1166.431" Z="34.50465" />
+					
+					<!-- Move to - Sentinel Hill - inn exit -->	
+					<MoveTo X="-10631.07" Y="1150.092" Z="33.80303" />
+					
+					<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="..\[Botanist][Tinker][A-5][classic]" />
+
+				</Else>	<!-- Else our hearthstone is not set at Golshire-->
+
+			</If>	<!-- If our hearthstone is set at Golshire-->
+
+		</If>	<!-- If our level => 10 and < 15 -->
 
 
 

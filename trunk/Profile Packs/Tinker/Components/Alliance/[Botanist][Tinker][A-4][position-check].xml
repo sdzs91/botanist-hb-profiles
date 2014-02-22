@@ -238,8 +238,8 @@
 		
 		</If>	<!-- If our level >= 1 and <= 5 -->	
 		
-		<!-- If our level >= 6 and < 12 -->
-		<If Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt;= 12" >
+		<!-- If our level >= 6 and < 10 -->
+		<If Condition="Me.Level &gt;= 6 &amp;&amp; Me.Level &lt; 10" >
 
 			<!-- If we are in Eastern Kingdoms -->
 			<If Condition="Me.MapId == 0">
@@ -261,8 +261,8 @@
 		
 		</If>	<!-- If our level >= 6 and <= 57 -->
 
-		<!-- If our level >= 12 and <= 57 -->
-		<If Condition="Me.Level &gt;= 12 &amp;&amp; Me.Level &lt;= 57" >
+		<!-- If our level >= 5 and < 15 -->
+		<If Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt; 15" >
 
 			<!-- If we are in Shadowglen -->
 			<If Condition="Me.ZoneId == 6450">				
@@ -391,7 +391,7 @@
 			</If>	<!-- If we are in Northshire Valley -->
 			
 			<!-- If we are in Eastern Kingdoms -->
-			<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId != 1">				
+			<If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId != 40">				
 
 				<!-- Profile message - We are in Eastern Kingdoms. Initiating movement procedures -->
 				<CustomBehavior File="Message" 
@@ -404,7 +404,7 @@
 								
 				<!--  CustomBehavior - LoadProfile -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="Movement\[Botanist][Tinker]_dun-morogh_to_stormwind" />
+								ProfileName="Movement\[Botanist][Tinker]_unknown-to-westfall" />
 					
 			</If>	<!-- If we are in Eastern Kingdoms -->
 			
@@ -426,7 +426,7 @@
 					
 			</If>	<!-- If we are in Dun Morogh -->
 		
-		</If>	<!-- If our level >= 6 and <= 57 -->
+		</If>	<!-- If our level >= 5 and < 15 -->
 		
 
 	</QuestOrder>

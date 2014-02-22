@@ -185,12 +185,12 @@
 		
 		
 		
-		<!-- If our level >= 10 and < 101 -->
-		<If Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt; 101" >
+		<!-- If our level >= 10 and < 58 -->
+		<If Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt; 58" >
 		
-			<!-- Profile message - We are currently leveling in the 10+ bracket -->
+			<!-- Profile message - We are currently leveling in the 10 - 58 bracket -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling in the 10+ bracket." 
+							Text="We are currently leveling in the 10 - 58 bracket." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
@@ -201,7 +201,7 @@
 			<CustomBehavior File="LoadProfile" 
 							ProfileName="[Botanist][Tinker][A-4][position-check]" />				
 							
-		</If>	<!-- If our level >= 1 and < 101 -->
+		</If>	<!-- If our level >= 10 and < 58 -->
 		
 	</QuestOrder>
 
