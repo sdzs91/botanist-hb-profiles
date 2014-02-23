@@ -666,7 +666,7 @@
 					<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
 					<If Condition="((Me.Class == WoWClass.DeathKnight) || (Me.Class == WoWClass.Druid) || (Me.Class == WoWClass.Paladin) || (Me.Class == WoWClass.Rogue) || (Me.Class == WoWClass.Shaman) || (Me.Class == WoWClass.Warrior) || (Me.Class == WoWClass.Monk))">
 
-						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
+						<!-- CustomBehavior - Message - We will use a melee attack distance -->
 						<CustomBehavior File="Message" 
 										Text="We will use a melee attack distance." 
 										LogColor="Yellow" />
@@ -911,7 +911,7 @@
 						<!-- CustomBehavior - Misc\SwitchTarget - X="-9706.443" Y="400.9618" Z="40.93681" -->
 						<CustomBehavior File="Misc\SwitchTarget" 
 										MobId="525" 
-										X="-9706.443" Y="400.9618" Z="40.93681" />
+										X="-9634.849" Y="629.6187" Z="38.79826" />
 
 						<!-- Custom behavior - TargetAndMoveToMob - Beast - Wolf -->
 						<CustomBehavior File="TargetAndMoveToMob"
@@ -992,7 +992,7 @@
 						<!-- CustomBehavior - Misc\SwitchTarget - X="-9706.443" Y="400.9618" Z="40.93681" -->
 						<CustomBehavior File="Misc\SwitchTarget" 
 										MobId="525" 
-										X="-9706.443" Y="400.9618" Z="40.93681" />
+										X="-9634.849" Y="629.6187" Z="38.79826" />
 
 						<!-- Custom behavior - TargetAndMoveToMob - Beast - Wolf -->
 						<CustomBehavior File="TargetAndMoveToMob"
