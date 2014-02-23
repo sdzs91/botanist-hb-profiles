@@ -190,23 +190,77 @@
 						
 					</If>	<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
 
-					<!-- If our target is a Blackrock Battle Worg -->
-					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 49871)">
+					<!-- If we are Hunter or Mage or Priest or Warlock -->
+					<If Condition="((Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Warlock))">
 					
-						<!-- Profile message  - Engaging a Blackrock Battle Worg -->	
+						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
 						<CustomBehavior File="Message" 
-										Text="Engaging a Blackrock Battle Worg" 
-										LogColor="Cyan" />
-						
-						<!-- CustomBehavior - RunMacro - startattack -->
-						<CustomBehavior File="RunMacro" 
-										Macro="/startattack" />
+										Text="We will use a ranged attack distance." 
+										LogColor="Yellow" />
 										
-						<!-- CustomBehavior - WaitTimer - 5 second - delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="5000" />				
+						<!-- Custom behavior - TargetAndMoveToMob - Blackrock Battle Worg -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="25"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="49871" >			
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
 
-					</If>	<!-- If our target is a Blackrock Battle Worg --> 
+						<!-- If our target is a Blackrock Battle Worg -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 49871)">
+						
+							<!-- Profile message - Engaging a Blackrock Battle Worg -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Kobold Digger" 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+
+						</If>	<!-- If our target is a Blackrock Battle Worg --> 
+						
+					</If>	<!-- If we are Hunter or Mage or Priest or Warlock -->
+					
+					<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
+					<If Condition="((Me.Class == WoWClass.DeathKnight) || (Me.Class == WoWClass.Druid) || (Me.Class == WoWClass.Paladin) || (Me.Class == WoWClass.Rogue) || (Me.Class == WoWClass.Shaman) || (Me.Class == WoWClass.Warrior) || (Me.Class == WoWClass.Monk))">
+
+						<!-- CustomBehavior - Message - We will use a melee attack distance -->
+						<CustomBehavior File="Message" 
+										Text="We will use a melee attack distance." 
+										LogColor="Yellow" />
+										
+						<!-- Custom behavior - TargetAndMoveToMob - Blackrock Battle Worg -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="5"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="1236" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If our target is a Blackrock Battle Worg -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 49871)">
+						
+							<!-- Profile message - Engaging a Blackrock Battle Worg -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Blackrock Battle Worg" 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+
+						</If>	<!-- If our target is a Blackrock Battle Worg --> 
+
+					</If>	<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
 				
 				</While>	<!-- While loop -  our level < 3 --> 
 		
@@ -330,45 +384,77 @@
 					
 					</If>	<!-- If we reached the move trigger level -->
 			
-					<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
-					<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
-
+					<!-- If we are Hunter or Mage or Priest or Warlock -->
+					<If Condition="((Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Warlock))">
+					
+						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
+						<CustomBehavior File="Message" 
+										Text="We will use a ranged attack distance." 
+										LogColor="Yellow" />
+										
 						<!-- Custom behavior - TargetAndMoveToMob - Goblin Assassin -->
 						<CustomBehavior File="TargetAndMoveToMob"
-										MoveWithinMaxRangeOfMob="4"
+										MoveWithinMaxRangeOfMob="25"
 										TargetOnlyIfHealthPercentAbove="5"
 										WaitForNpcs="False"
-										MobId="50039" >			
+										MobId="50039" >									
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
-					
-						<!-- Else we have less then 4 empty bag slots or our durability is less than 30% -->
-						<Else>
-													
-							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
-							<CustomBehavior File="LoadProfile" 
-											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
-
-						</Else>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-					
-					</If>	<!-- If our empty bag slots > 4 and our lowest durability > 30 percent -->
-					
-					<!-- If our target is a Goblin Assassin -->
-					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 50039)">
-					
-						<!-- Profile message  - Engaging a Goblin Assassin -->	
-						<CustomBehavior File="Message" 
-										Text="Engaging a Goblin Assassin" 
-										LogColor="Cyan" />
-						
-						<!-- CustomBehavior - RunMacro - startattack -->
-						<CustomBehavior File="RunMacro" 
-										Macro="/startattack" />
 										
-						<!-- CustomBehavior - WaitTimer - 5 second - delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="5000" />				
+						<!-- If our target is a Blackrock Battle Worg -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 50039)">
+						
+							<!-- Profile message - Engaging a Blackrock Battle Worg -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Kobold Digger" 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
 
-					</If>	<!-- If our target is a Goblin Assassin --> 
+						</If>	<!-- If our target is a Blackrock Battle Worg --> 
+						
+					</If>	<!-- If we are Hunter or Mage or Priest or Warlock -->
+					
+					<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
+					<If Condition="((Me.Class == WoWClass.DeathKnight) || (Me.Class == WoWClass.Druid) || (Me.Class == WoWClass.Paladin) || (Me.Class == WoWClass.Rogue) || (Me.Class == WoWClass.Shaman) || (Me.Class == WoWClass.Warrior) || (Me.Class == WoWClass.Monk))">
+
+						<!-- CustomBehavior - Message - We will use a melee attack distance -->
+						<CustomBehavior File="Message" 
+										Text="We will use a melee attack distance." 
+										LogColor="Yellow" />
+										
+						<!-- Custom behavior - TargetAndMoveToMob - Blackrock Battle Worg -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="5"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="50039" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If our target is a Blackrock Battle Worg -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 50039)">
+						
+							<!-- Profile message - Engaging a Blackrock Battle Worg -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Blackrock Battle Worg" 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+
+						</If>	<!-- If our target is a Blackrock Battle Worg --> 
+
+					</If>	<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
 
 				</While>	<!-- While loop -  our level < 5 -->	
 				
@@ -491,76 +577,167 @@
 
 					</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 					
-					<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
-					<CustomBehavior File="TargetAndMoveToMob"
-									MoveWithinMaxRangeOfMob="5"
-									TargetOnlyIfHealthPercentAbove="5"
-									WaitForNpcs="False"
-									MobId="525" >
-					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
-
-					<!-- If our target is a Mangy Wolf -->
-					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
+					<!-- If we are Hunter or Mage or Priest or Warlock -->
+					<If Condition="((Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Warlock))">
 					
-						<!-- Profile message - Engaging a Mangy Wolf -->	
+						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
 						<CustomBehavior File="Message" 
-										Text="Engaging a Mangy Wolf" 
-										LogColor="Cyan" />
-						
-						<!-- CustomBehavior - RunMacro - startattack -->
-						<CustomBehavior File="RunMacro" 
-										Macro="/startattack" />
+										Text="We will use a ranged attack distance." 
+										LogColor="Yellow" />
 										
-						<!-- CustomBehavior - WaitTimer - 7 second - delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="7000" />				
+						<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="25"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="525" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
 
-					</If>	<!-- If our target is a Mangy Wolf --> 
-					
-					<!-- CustomBehavior - Misc\SwitchTarget - X="-9706.443" Y="400.9618" Z="40.93681" -->
-					<CustomBehavior File="Misc\SwitchTarget" 
-									MobId="525" 
-									X="-9706.443" Y="400.9618" Z="40.93681" />
+						<!-- If our target is a Mangy Wolf -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
+						
+							<!-- Profile message - Engaging a Mangy Wolf -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Mangy Wolf." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
 
-					<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
-					<CustomBehavior File="TargetAndMoveToMob"
-									MoveWithinMaxRangeOfMob="5"
-									TargetOnlyIfHealthPercentAbove="5"
-									WaitForNpcs="False"
-									MobId="525" >
-					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+							<!-- CustomBehavior - Misc\SwitchTarget - X="-9706.443" Y="400.9618" Z="40.93681" -->
+							<CustomBehavior File="Misc\SwitchTarget" 
+											MobId="525" 
+											X="-9706.443" Y="400.9618" Z="40.93681" />
 
-					<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+							<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
+							<CustomBehavior File="TargetAndMoveToMob"
+											MoveWithinMaxRangeOfMob="25"
+											TargetOnlyIfHealthPercentAbove="5"
+											WaitForNpcs="False"
+											MobId="525" >
+							</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+							<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+														
+								<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+								<CustomBehavior File="LoadProfile" 
+												ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+							</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							
+							<!-- If our target is a Mangy Wolf -->
+							<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
+							
+								<!-- Profile message - Engaging a Mangy Wolf -->	
+								<CustomBehavior File="Message" 
+												Text="Engaging a Mangy Wolf." 
+												LogColor="Cyan" />
+								
+								<!-- CustomBehavior - RunMacro - startattack -->
+								<CustomBehavior File="RunMacro" 
+												Macro="/startattack" />
 												
-						<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
-						<CustomBehavior File="LoadProfile" 
-										ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+								<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="7000" />				
 
-					</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-					
-					<!-- If our target is a Mangy Wolf -->
-					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
-					
-						<!-- Profile message - Engaging a Mangy Wolf -->	
-						<CustomBehavior File="Message" 
-										Text="Engaging a Mangy Wolf." 
-										LogColor="Cyan" />
+							</If>	<!-- If our target is a Mangy Wolf --> 
+											
+							<!-- CustomBehavior - Misc\SwitchTarget - X="-9414.366" Y="228.6" Z="61.05862" -->
+							<CustomBehavior File="Misc\SwitchTarget" 
+											MobId="525" 
+											X="-9414.366" Y="228.6" Z="61.05862" />					
+											
+						</If>	<!-- If our target is a Mangy Wolf --> 
 						
-						<!-- CustomBehavior - RunMacro - startattack -->
-						<CustomBehavior File="RunMacro" 
-										Macro="/startattack" />
-										
-						<!-- CustomBehavior - WaitTimer - 7 second - delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="7000" />				
+					</If>	<!-- If we are Hunter or Mage or Priest or Warlock -->
+					
+					<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
+					<If Condition="((Me.Class == WoWClass.DeathKnight) || (Me.Class == WoWClass.Druid) || (Me.Class == WoWClass.Paladin) || (Me.Class == WoWClass.Rogue) || (Me.Class == WoWClass.Shaman) || (Me.Class == WoWClass.Warrior) || (Me.Class == WoWClass.Monk))">
 
-					</If>	<!-- If our target is a Mangy Wolf --> 
-									
-					<!-- CustomBehavior - Misc\SwitchTarget - X="-9414.366" Y="228.6" Z="61.05862" -->
-					<CustomBehavior File="Misc\SwitchTarget" 
-									MobId="525" 
-									X="-9414.366" Y="228.6" Z="61.05862" />				
+						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
+						<CustomBehavior File="Message" 
+										Text="We will use a Melee attack distance." 
+										LogColor="Yellow" />
+										
+						<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="5"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="525" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If our target is a Mangy Wolf -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
+						
+							<!-- Profile message - Engaging a Mangy Wolf -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Mangy Wolf." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+
+							<!-- CustomBehavior - Misc\SwitchTarget - X="-9706.443" Y="400.9618" Z="40.93681" -->
+							<CustomBehavior File="Misc\SwitchTarget" 
+											MobId="525" 
+											X="-9706.443" Y="400.9618" Z="40.93681" />
+
+							<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
+							<CustomBehavior File="TargetAndMoveToMob"
+											MoveWithinMaxRangeOfMob="5"
+											TargetOnlyIfHealthPercentAbove="5"
+											WaitForNpcs="False"
+											MobId="525" >
+							</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+							<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+														
+								<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+								<CustomBehavior File="LoadProfile" 
+												ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+							</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							
+							<!-- If our target is a Mangy Wolf -->
+							<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
+							
+								<!-- Profile message - Engaging a Mangy Wolf -->	
+								<CustomBehavior File="Message" 
+												Text="Engaging a Mangy Wolf." 
+												LogColor="Cyan" />
+								
+								<!-- CustomBehavior - RunMacro - startattack -->
+								<CustomBehavior File="RunMacro" 
+												Macro="/startattack" />
+												
+								<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+								<CustomBehavior File="WaitTimer" 
+												WaitTime="7000" />				
+
+							</If>	<!-- If our target is a Mangy Wolf --> 
+											
+							<!-- CustomBehavior - Misc\SwitchTarget - X="-9414.366" Y="228.6" Z="61.05862" -->
+							<CustomBehavior File="Misc\SwitchTarget" 
+											MobId="525" 
+											X="-9414.366" Y="228.6" Z="61.05862" />					
+											
+						</If>	<!-- If our target is a Mangy Wolf --> 
+
+					</If>	<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
 									
 				</While>	<!-- While loop -  our level < 6 -->
 

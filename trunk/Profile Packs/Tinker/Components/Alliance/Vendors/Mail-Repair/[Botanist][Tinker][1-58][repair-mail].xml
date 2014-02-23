@@ -6,17 +6,17 @@
 
 <MinDurability>-1</MinDurability>
 <MinFreeBagSlots>-1</MinFreeBagSlots>
-<TargetingDistance>45</TargetingDistance>
+<TargetingDistance>1</TargetingDistance>
 <TargetElites>False</TargetElites>
 
 <MailGrey>False</MailGrey>
-<MailWhite>True</MailWhite>
+<MailWhite>False</MailWhite>
 <MailGreen>False</MailGreen>
 <MailBlue>False</MailBlue>
 <MailPurple>True</MailPurple>
 
 <SellGrey>True</SellGrey>
-<SellWhite>False</SellWhite>
+<SellWhite>True</SellWhite>
 <SellGreen>True</SellGreen>
 <SellBlue>True</SellBlue>
 <SellPurple>False</SellPurple>
@@ -46,9 +46,50 @@
 	
 	<QuestOrder>
 			
+		<!-- If our level >= 1 and < 5 -->				
+		<If Condition="((Me.Level &gt;= 1) &amp;&amp; (Me.Level &lt; 5))" >
+		
+			<!-- Move to - William MacGregor -->
+			<MoveTo X="-10653.31" Y="996.5868" Z="32.8742" />
+			
+			<!-- Repair vendor -->
+			<SetVendor>
+				<Vendors>
+					<Vendor Name="Janos Hammerknuckle" 
+							Entry="78" 
+							Type="Repair" X="-8909.458" Y="-104.1632" Z="81.84888" />
+				</Vendors>
+			</SetVendor>
+			<SetMailbox>
+				<Mailboxes>
+					<Mailbox X="-8910.793" Y="-129.0973" Z="81.02631" />
+				</Mailboxes>
+			</SetMailbox>
+						
+			<!-- Vendor conditions -->
+			<CustomBehavior File="ForceSetVendor" 
+							DoMail="True" 
+							DoRepair="True" 
+							DoSell="True" 
+							DoTrain="False" />
+			
+			<!-- Move to - Sentinel Hill flight master -->
+			<MoveTo X="-10546.67" Y="1033.351" Z="56.68776" />
+
+
+			<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
+			<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+										
+				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="..\..\[Botanist][Tinker][A-5][classic]" />
+
+			</If>	<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
+		
+		</If>	<!-- If our level >= 1 and < 5 -->
 		
 		<!-- If our level >= 5 and < 10 -->				
-		<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 10" >
+		<If Condition="((Me.Level &gt;= 5) &amp;&amp; (Me.Level &lt; 10))" >
 		
 			<!-- If our hearthstone/innkeepers daughter is set to Goldshire -->
 			<If Condition="Me.HearthstoneAreaId == 5637" >
@@ -96,7 +137,6 @@
 			<!-- Repair vendor -->
 			<SetVendor>
 				<Vendors>
-					<!-- Goldshire  -->
 					<Vendor Name="Andrew Krighton" 
 							Entry="2046" 
 							Type="Repair" 
@@ -132,7 +172,7 @@
 		</If>	<!-- If our level >= 5 and < 10 -->
 		
 		<!-- If our level >= 10 and < 15 -->				
-		<If Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt; 15" >
+		<If Condition="((Me.Level &gt;= 10) &amp;&amp; (Me.Level &lt; 15))" >
 		
 			<!-- If our hearthstone/innkeepers daughter is set to Sentinel Hill -->
 			<If Condition="Me.HearthstoneAreaId == 108" >
@@ -183,10 +223,10 @@
 			<!-- Repair vendor -->
 			<SetVendor>
 				<Vendors>
-					<!-- Goldshire  -->
 					<Vendor Name="William MacGregor" 
 							Entry="1668" 
-							Type="Repair" X="-10653.31" Y="996.5868" Z="32.8742" />
+							Type="Repair" 
+							X="-10653.31" Y="996.5868" Z="32.87471" />
 				</Vendors>
 			</SetVendor>
 			<SetMailbox>
@@ -218,8 +258,16 @@
 		</If>	<!-- If our level >= 10 and < 15 -->
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
 		<!-- If our level >= 15 and < 20 -->				
-		<If Condition="Me.Level &gt;= 15 &amp;&amp; Me.Level &lt; 20" >
+		<If Condition="((Me.Level &gt;= 15) &amp;&amp; (Me.Level &lt; 20))" >
 		
 			<!-- If our hearthstone/innkeepers daughter is set to Sentinel Hill -->
 			<If Condition="Me.HearthstoneAreaId == 108" >
@@ -299,43 +347,7 @@
 
 			</If>	<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
 		
-		</If>	<!-- If our level >= 10 and < 15 -->
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		</If>	<!-- If our level >= 15 and < 20 -->
 		
 	</QuestOrder>
 
