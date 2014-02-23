@@ -89,12 +89,15 @@
 							Text="We are in Stormwind City." 
 							LogColor="Plum" />		
 							
-			<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+			<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][profession-check] -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="..\[Botanist][Tinker][A-5][classic]" />
+							ProfileName="..\[Botanist][Tinker][A-5][profession-check]" />
 				
 		</If>	<!-- If we are in Northshire Valley -->
 
+		
+		[Botanist][Tinker][A11][profession-check]
+		
 	</QuestOrder>
 
 </HBProfile>

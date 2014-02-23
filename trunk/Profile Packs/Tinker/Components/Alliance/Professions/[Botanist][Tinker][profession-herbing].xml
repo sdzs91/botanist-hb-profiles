@@ -194,9 +194,9 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="1000" />
 								
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-6][classic] -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="[Botanist][Tinker][A-5][classic]" />
+								ProfileName="[Botanist][Tinker][A-6][classic]" />
 					
 			</If>	<!-- If we are in Northshire Valley -->
 			
@@ -384,9 +384,9 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="1000" />				
 								
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-6][classic] -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="[Botanist][Tinker][A-5][classic]" />
+								ProfileName="[Botanist][Tinker][A-6][classic]" />
 					
 			</If>	<!-- If we are in Northshire Valley -->
 			

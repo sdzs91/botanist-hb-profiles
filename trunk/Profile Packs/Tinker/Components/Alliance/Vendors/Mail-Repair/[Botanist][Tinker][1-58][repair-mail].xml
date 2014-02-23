@@ -82,7 +82,7 @@
 										
 				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\..\[Botanist][Tinker][A-5][classic]" />
+								ProfileName="..\..\[Botanist][Tinker][A-6][classic]" />
 
 			</If>	<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
 		
@@ -165,7 +165,7 @@
 										
 				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\..\[Botanist][Tinker][A-5][classic]" />
+								ProfileName="..\..\[Botanist][Tinker][A-6][classic]" />
 
 			</If>	<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
 		
@@ -251,7 +251,7 @@
 										
 				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\..\[Botanist][Tinker][A-5][classic]" />
+								ProfileName="..\..\[Botanist][Tinker][A-6][classic]" />
 
 			</If>	<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
 		
@@ -343,7 +343,7 @@
 										
 				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\..\[Botanist][Tinker][A-5][classic]" />
+								ProfileName="..\..\[Botanist][Tinker][A-6][classic]" />
 
 			</If>	<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
 		

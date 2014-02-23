@@ -490,17 +490,57 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="1000" />
 		
-				<!--  CustomBehavior - LoadProfile -->				
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A11][profession-check] -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="Movement\[Botanist][Tinker]_eastern-kingdoms_to_stormwind" />				
+								ProfileName="[Botanist][Tinker][A11][profession-check]" />				
+				
+				<!-- Else we are not in Eastern Kingdom -->					
+				<Else>
+
+					<!-- Profile message - We are not in Eastern Kingdoms. We need movement code here -->
+					<CustomBehavior File="Message" 
+									Text="We are not in Eastern Kingdoms. We need movement code here." 
+									LogColor="Gold" />
+				
+				</Else>		<!-- Else we are not in Eastern Kingdom -->				
 							
 			</If>	<!-- If we are in Eastern Kingdoms -->				
 
+		</If>	<!-- If our level >= 15 and < 58 -->	
+			
+		<!-- If our level >= 58 and < 68 -->
+		<If Condition="Me.Level &gt;= 58 &amp;&amp; Me.Level &lt; 68" >
 
+			<!-- If we are in Eastern Kingdoms -->
+			<If Condition="Me.MapId == 530">				
 		
-		</If>	<!-- If our level >= 15 and < 58 -->
+				<!-- Profile message - We are in Outland -->
+				<CustomBehavior File="Message" 
+								Text="We are in Outland." 
+								LogColor="Gold" />
+				
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
 		
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A11][profession-check] -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="[Botanist][Tinker][A11][profession-check]" />				
+				
+				<!-- Else we are not in Outland -->				
+				<Else>
 
+					<!-- Profile message - We are not in Outland. We need movement code here -->
+					<CustomBehavior File="Message" 
+									Text="We are not in Outland. We need movement code here." 
+									LogColor="Gold" />
+				
+				</Else>		<!-- Else we are not in Outland -->					
+							
+			</If>	<!-- If we are in Eastern Kingdoms -->
+
+		</If>	<!-- If our level >= 58 and < 68 -->
+		
 	</QuestOrder>
 
 </HBProfile>

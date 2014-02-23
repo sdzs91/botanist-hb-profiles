@@ -229,9 +229,9 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />
 
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][profession-check] -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="[Botanist][Tinker][A-5][classic]" />				
+								ProfileName="[Botanist][Tinker][A-5][profession-check]" />				
 								
 			</If>	<!-- If we are in Eastern Kingdoms -->
 		
@@ -243,9 +243,9 @@
 			<!-- If we are in Eastern Kingdoms -->
 			<If Condition="Me.MapId == 0">				
 
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][profession-check] -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="[Botanist][Tinker][A-5][classic]" />				
+								ProfileName="[Botanist][Tinker][A-5][profession-check]" />				
 								
 			</If>	<!-- If we are in Eastern Kingdoms -->
 		
@@ -259,9 +259,9 @@
 							Text="We are in Northshire Valley." 
 							LogColor="Plum" />		
 							
-			<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+			<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][profession-check] -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="..\[Botanist][Tinker][A-5][classic]" />
+							ProfileName="..\[Botanist][Tinker][A-5][profession-check]" />
 				
 		</If>	<!-- If we are in Northshire Valley -->
 
