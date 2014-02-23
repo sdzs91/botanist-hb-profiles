@@ -13,13 +13,13 @@
 <MailWhite>False</MailWhite>
 <MailGreen>False</MailGreen>
 <MailBlue>False</MailBlue>
-<MailPurple>False</MailPurple>
+<MailYellow>False</MailYellow>
 
 <SellGrey>False</SellGrey>
 <SellWhite>False</SellWhite>
 <SellGreen>False</SellGreen>
 <SellBlue>False</SellBlue>
-<SellPurple>False</SellPurple>
+<SellYellow>False</SellYellow>
 
 <AvoidMobs>		 
 </AvoidMobs>
@@ -693,7 +693,7 @@
 						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
 						<CustomBehavior File="Message" 
 										Text="We will use a ranged attack distance." 
-										LogColor="Purple" />
+										LogColor="Yellow" />
 					
 						<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
 						<CustomBehavior File="TargetAndMoveToMob"
@@ -972,7 +972,7 @@
 						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
 						<CustomBehavior File="Message" 
 										Text="We will use a ranged attack distance." 
-										LogColor="Purple" />
+										LogColor="Yellow" />
 					
 						<!-- Custom behavior - TargetAndMoveToMob - Gray Forest Wolf -->
 						<CustomBehavior File="TargetAndMoveToMob"
@@ -1251,7 +1251,7 @@
 						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
 						<CustomBehavior File="Message" 
 										Text="We will use a ranged attack distance." 
-										LogColor="Purple" />
+										LogColor="Yellow" />
 										
 						<!-- Custom behavior - TargetAndMoveToMob - Kobold Digger -->
 						<CustomBehavior File="TargetAndMoveToMob"
@@ -1464,7 +1464,7 @@
 						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
 						<CustomBehavior File="Message" 
 										Text="We will use a ranged attack distance." 
-										LogColor="Purple" />
+										LogColor="Yellow" />
 					
 						<!-- Custom behavior - TargetAndMoveToMob - Chasm Slime -->
 						<CustomBehavior File="TargetAndMoveToMob"
@@ -1678,7 +1678,7 @@
 						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
 						<CustomBehavior File="Message" 
 										Text="We will use a ranged attack distance." 
-										LogColor="Purple" />
+										LogColor="Yellow" />
 										
 						<!-- Custom behavior - TargetAndMoveToMob - Riverpaw Bandit -->
 						<CustomBehavior File="TargetAndMoveToMob"
