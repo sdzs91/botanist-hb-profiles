@@ -194,9 +194,9 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="1000" />
 								
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][profession-check] -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="[Botanist][Tinker][A-5][classic]" />
+								ProfileName="[Botanist][Tinker][A-5][profession-check]" />
 					
 			</If>	<!-- If we are in Northshire Valley -->
 			
@@ -384,9 +384,9 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="1000" />				
 								
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][profession-check] -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="[Botanist][Tinker][A-5][classic]" />
+								ProfileName="[Botanist][Tinker][A-5][profession-check]" />
 					
 			</If>	<!-- If we are in Northshire Valley -->
 			
@@ -490,9 +490,9 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="1000" />
 		
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A11][profession-check] -->				
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][profession-check] -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="[Botanist][Tinker][A11][profession-check]" />				
+								ProfileName="[Botanist][Tinker][A-5][profession-check]" />				
 				
 				<!-- Else we are not in Eastern Kingdom -->					
 				<Else>
