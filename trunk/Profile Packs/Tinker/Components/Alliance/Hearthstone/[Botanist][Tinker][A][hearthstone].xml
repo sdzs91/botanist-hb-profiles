@@ -76,9 +76,9 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="1000" />
 
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-6][classic] -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[Botanist][Tinker][A-5][classic]" />
+								ProfileName="..\[Botanist][Tinker][A-6][classic]" />
 	
 				<!-- Else our hearthstone is not set at Golshire-->
 				<Else>
@@ -104,9 +104,9 @@
 					<!-- Move to - Goldshire - inn exit -->	
 					<MoveTo X="-9459.325" Y="60.87368" Z="55.844" />
 					
-					<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+					<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-6][classic] -->				
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="..\[Botanist][Tinker][A-5][classic]" />
+									ProfileName="..\[Botanist][Tinker][A-6][classic]" />
 
 				</Else>	<!-- Else our hearthstone is not set at Golshire-->
 
@@ -134,9 +134,9 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="1000" />
 
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-6][classic] -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[Botanist][Tinker][A-5][classic]" />
+								ProfileName="..\[Botanist][Tinker][A-6][classic]" />
 	
 				<!-- Else our hearthstone is not set at Sentinel Hill-->
 				<Else>
@@ -162,9 +162,9 @@
 					<!-- Move to - Sentinel Hill - inn exit -->	
 					<MoveTo X="-10631.07" Y="1150.092" Z="33.80303" />
 					
-					<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][classic] -->				
+					<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-6][classic] -->				
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="..\[Botanist][Tinker][A-5][classic]" />
+									ProfileName="..\[Botanist][Tinker][A-6][classic]" />
 
 				</Else>	<!-- Else our hearthstone is not set at Golshire-->
 

@@ -555,8 +555,8 @@
 								Text="We are in Elwynn Forest. Moving to the Tinker zone." 
 								LogColor="Plum" />		
 								
-				<!-- Move to - 6 - 8 Tinker zone -->				
-				<MoveTo X="-9427.734" Y="208.3536" Z="59.87153" />
+				<!-- Move to - 5 - 6 Tinker zone -->				
+				<MoveTo X="-9401.229" Y="223.8399" Z="61.16025" />
 					
 				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 6 -->
 				<CustomBehavior File="Message" 
@@ -608,11 +608,16 @@
 							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="7000" />				
-
+						
+						</If>	<!-- If our target is a Mangy Wolf -->					
+											
+						<!-- If our target is not a Mangy Wolf -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
+						
 							<!-- CustomBehavior - Misc\SwitchTarget - X="-9706.443" Y="400.9618" Z="40.93681" -->
 							<CustomBehavior File="Misc\SwitchTarget" 
 											MobId="525" 
-											X="-9706.443" Y="400.9618" Z="40.93681" />
+											X="-9520.334" Y="673.2034" Z="45.37799" />
 
 							<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
 							<CustomBehavior File="TargetAndMoveToMob"
@@ -621,40 +626,40 @@
 											WaitForNpcs="False"
 											MobId="525" >
 							</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
-
-							<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-							<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
-														
-								<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
-								<CustomBehavior File="LoadProfile" 
-												ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
-
-							</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						
+						</If>	<!-- If our target is not a Mangy Wolf -->
 							
-							<!-- If our target is a Mangy Wolf -->
-							<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
-							
-								<!-- Profile message - Engaging a Mangy Wolf -->	
-								<CustomBehavior File="Message" 
-												Text="Engaging a Mangy Wolf." 
-												LogColor="Cyan" />
-								
-								<!-- CustomBehavior - RunMacro - startattack -->
-								<CustomBehavior File="RunMacro" 
-												Macro="/startattack" />
-												
-								<!-- CustomBehavior - WaitTimer - 7 second - delay -->
-								<CustomBehavior File="WaitTimer" 
-												WaitTime="7000" />				
+						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+													
+							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
 
-							</If>	<!-- If our target is a Mangy Wolf --> 
+						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							
+						<!-- If our target is a Mangy Wolf -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
+						
+							<!-- Profile message - Engaging a Mangy Wolf -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Mangy Wolf." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
 											
-							<!-- CustomBehavior - Misc\SwitchTarget - X="-9414.366" Y="228.6" Z="61.05862" -->
-							<CustomBehavior File="Misc\SwitchTarget" 
-											MobId="525" 
-											X="-9414.366" Y="228.6" Z="61.05862" />					
-											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+
 						</If>	<!-- If our target is a Mangy Wolf --> 
+										
+						<!-- CustomBehavior - Misc\SwitchTarget - X="-9414.366" Y="228.6" Z="61.05862" -->
+						<CustomBehavior File="Misc\SwitchTarget" 
+										MobId="525" 
+										X="-9401.229" Y="223.8399" Z="61.16025" />					
 						
 					</If>	<!-- If we are Hunter or Mage or Priest or Warlock -->
 					
@@ -663,7 +668,7 @@
 
 						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
 						<CustomBehavior File="Message" 
-										Text="We will use a Melee attack distance." 
+										Text="We will use a melee attack distance." 
 										LogColor="Yellow" />
 										
 						<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
@@ -689,11 +694,16 @@
 							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="7000" />				
-
+						
+						</If>	<!-- If our target is a Mangy Wolf -->					
+											
+						<!-- If our target is not a Mangy Wolf -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
+						
 							<!-- CustomBehavior - Misc\SwitchTarget - X="-9706.443" Y="400.9618" Z="40.93681" -->
 							<CustomBehavior File="Misc\SwitchTarget" 
 											MobId="525" 
-											X="-9706.443" Y="400.9618" Z="40.93681" />
+											X="-9520.334" Y="673.2034" Z="45.37799" />
 
 							<!-- Custom behavior - TargetAndMoveToMob - Mangy Wolf -->
 							<CustomBehavior File="TargetAndMoveToMob"
@@ -702,40 +712,40 @@
 											WaitForNpcs="False"
 											MobId="525" >
 							</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
-
-							<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-							<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
-														
-								<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
-								<CustomBehavior File="LoadProfile" 
-												ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
-
-							</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						
+						</If>	<!-- If our target is not a Mangy Wolf -->
 							
-							<!-- If our target is a Mangy Wolf -->
-							<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
-							
-								<!-- Profile message - Engaging a Mangy Wolf -->	
-								<CustomBehavior File="Message" 
-												Text="Engaging a Mangy Wolf." 
-												LogColor="Cyan" />
-								
-								<!-- CustomBehavior - RunMacro - startattack -->
-								<CustomBehavior File="RunMacro" 
-												Macro="/startattack" />
-												
-								<!-- CustomBehavior - WaitTimer - 7 second - delay -->
-								<CustomBehavior File="WaitTimer" 
-												WaitTime="7000" />				
+						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+													
+							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
 
-							</If>	<!-- If our target is a Mangy Wolf --> 
+						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							
+						<!-- If our target is a Mangy Wolf -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 525)">
+						
+							<!-- Profile message - Engaging a Mangy Wolf -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Mangy Wolf." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
 											
-							<!-- CustomBehavior - Misc\SwitchTarget - X="-9414.366" Y="228.6" Z="61.05862" -->
-							<CustomBehavior File="Misc\SwitchTarget" 
-											MobId="525" 
-											X="-9414.366" Y="228.6" Z="61.05862" />					
-											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+
 						</If>	<!-- If our target is a Mangy Wolf --> 
+										
+						<!-- CustomBehavior - Misc\SwitchTarget - X="-9414.366" Y="228.6" Z="61.05862" -->
+						<CustomBehavior File="Misc\SwitchTarget" 
+										MobId="525" 
+										X="-9401.229" Y="223.8399" Z="61.16025" /> 
 
 					</If>	<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
 									
