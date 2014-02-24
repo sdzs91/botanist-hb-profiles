@@ -108,7 +108,7 @@
 						<CustomBehavior File="LoadProfile" 
 										ProfileName="Movement\Vendors\[QO-N][85+Flying]_botanist_botanica_[repair-mail]" />
 
-					</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+					</If>	<!-- If we have less then 15 empty bag slots or our durability is less than 30% -->
 					
 					<!-- CustomBehavior - message - All checks complete -->
 					<CustomBehavior File="Message" 
@@ -509,8 +509,17 @@
 					
 					<!-- If we have less then 15 empty bag slots or our durability is less than 30% -->
 					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
-												
-						<!-- Load profile - [QO-N][85+Flying]_botanist_botanica_[repair-mail] -->
+											
+						<!-- CustomBehavior - message - - Our bags are full or our gear is near breaking. Loading the vendor profile -->
+						<CustomBehavior File="Message" 
+										Text="Our bags are full or our gear is near breaking. Loading the vendor profile."  
+										LogColor="Plum" />
+
+						<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+
+						<!-- CustomBehavior - LoadProfile - [QO-N][85+Flying]_botanist_botanica_[repair-mail] -->
 						<CustomBehavior File="LoadProfile" 
 										ProfileName="Movement\Vendors\[QO-N][85+Flying]_botanist_botanica_[repair-mail]" />
 
@@ -521,7 +530,7 @@
 									Text="All checks complete."  
 									LogColor="Plum" />
 								
-				</If>	<!-- Botanica -->	
+				</If>	<!-- If we are inside Botanica -->	
 					
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.MapId == 553">	

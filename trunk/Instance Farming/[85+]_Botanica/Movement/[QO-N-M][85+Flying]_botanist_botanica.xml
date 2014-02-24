@@ -191,72 +191,100 @@
 						<CustomBehavior File="UserSettings" 
 										StopBot="true" />				
 										
-										
 					</Else>		<!-- Else we are Alliance -->				
 									
 				</If>	<!-- Faction check - Horde -->
 				
 			</If>	<!-- If we are in Kalimdor -->			
 
+			<!-- If we are in Eastern Kingdoms -->
+			<If Condition="Me.MapId == 0">
 			
+				<!-- Faction check - Alliance -->
+				<If Condition="Me.IsAlliance" >
+				
+					<!-- Profile message - We are Alliance in Eastern Kingdoms  -->
+					<CustomBehavior File="Message" 
+									Text="We are Alliance in Eastern Kingdoms." 
+									LogColor="Cyan" />
+									
+					<!-- Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+					<!-- Profile message - Moving to the Blasted Lands portal -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Blasted Lands portal."  
+									LogColor="Cyan" />				
+									
+					<!-- Move to - Mage Tower - hover point -->				
+					<CustomBehavior File="FlyTo" 
+									X="-8924.287" Y="832.0236" Z="191.1413" />				
+									
+					<!-- CTM to - grounding at the Mage Tower -->
+					<CustomBehavior File="MyCTM" 
+									X="-8999.207" Y="862.276" Z="129.296" />	
+
+					<!-- Forced dismount -->	
+					<CustomBehavior File="ForcedDismount" />
+
+					<!-- Usersettings- disable mount use in Stormwind -->
+					<CustomBehavior File="UserSettings"
+									UseMount="False"  />				
+					
+					<!-- Move to - Stormwind portal to Blasted Lands -->
+					<MoveTo X="-9005.403" Y="869.1169" Z="129.6929" />
+
+					<!-- Custom behavior - Interactwith the Blasted Lands portal -->
+					<CustomBehavior File="InteractWith" 
+									MobId="195141" 
+									ObjectType="Gameobject"
+									Range="4.75" 
+									NumOfTimes="1"  
+									X="-9007.58" Y="871.8698" Z="129.6922" />		
 			
+					<!-- CustomBehavior - Message - Moving to the Dark Portal -->
+					<CustomBehavior File="Message" 
+									Text="Moving to the Dark Portal."  
+									LogColor="Cyan" />
 			
+					<!-- Move to - Dark portal -->
+					<CustomBehavior File="FlyTo"
+									X="-11896.8" Y="-3206.77" Z="-14.6724" />
+									
+					<!-- Forced dismount -->	
+					<CustomBehavior File="ForcedDismount" />				
+									
+					<!-- CustomBehavior - Message - Going through the portal -->
+					<CustomBehavior File="Message" 
+									Text="Going through the portal."  
+									LogColor="Cyan" />				
+									
+					<!-- Run through Dark Portal -->
+					<CustomBehavior File="Misc\InInstance" 
+									X="-11908.3" Y="-3207.804" Z="-14.82459" />
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+					<!-- Wait timer - wait 10 seconds - game to load -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="10000" />
+						
+					<!-- Else we are Horde -->	
+					<Else>
+
+						<!-- CustomBehavior - message - We are Horde in Eastern Kingdoms. Move your character to Kalimdor or Outland. Stopping the bot -->
+						<CustomBehavior File="Message" 
+										Text="We are Horde in Eastern Kingdoms. Move your character to Kalimdor or Outland. Stopping the bot."  
+										LogColor="Orange" />
+
+						<!-- CustomBehavior - UserSettings - StopBot -->
+						<CustomBehavior File="UserSettings" 
+										StopBot="true" />				
+										
+					</Else>		<!-- Else we are Horde -->				
+									
+				</If>	<!-- Faction check - Horde -->
+				
+			</If>	<!-- If we are in Kalimdor -->
 			
 			<!-- If we are in Outland and not in Netherstorm-->
 			<If Condition="Me.MapId == 530 &amp;&amp; Me.ZoneId != 3523">
