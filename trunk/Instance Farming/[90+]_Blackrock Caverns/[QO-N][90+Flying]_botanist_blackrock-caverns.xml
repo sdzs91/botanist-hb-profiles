@@ -1,0 +1,516 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][90+Flying]_botanist_blackrock-caverns</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	<TargetingDistance>25</TargetingDistance>
+	
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>		 
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="3064.36" Y="3607.146" Z="144.0166" Radius="1" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+
+	<Factions></Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+		<If Condition="Me.Level &gt;= 85">
+		
+		 	<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootMobs="True"
+							LootRadius="65"
+							MountName=""
+							NinjaSkin="False"
+							ProfileDebuggingMode="False"
+							PullDistance="25"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseMount="True" 
+							UseRandomMount="False" />
+						
+			<!-- Infinite loop -->
+			<While Condition="true" >	
+			
+				<!-- If we are inside Blackrock Caverns -->
+				<If Condition="Me.MapId == 645">
+				
+					<!-- CustomBehavior - Message - Blackrock Caverns detected. Running out -->
+					<CustomBehavior File="Message" 
+									Text="Blackrock Caverns detected. Running out."
+									LogColor="Cyan" />
+						
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+									
+					<!-- Move to - zone in location - entering -->
+					<MoveTo X="209.903" Y="1133.02" Z="205.569" />
+					
+					<!-- CustomBehavior - message - Waiting 3 seconds - Bag and durability check -->
+					<CustomBehavior File="Message" 
+									Text="Waiting 3 seconds - Bag and durability check."  
+									LogColor="Plum" />
+					
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					<!-- If we have less then 15 empty bag slots or our durability is less than 30% -->
+					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+											
+						<!-- CustomBehavior - message - - Our bags are full or our gear is near breaking. Loading the vendor profile -->
+						<CustomBehavior File="Message" 
+										Text="Our bags are full or our gear is near breaking. Loading the vendor profile."  
+										LogColor="Plum" />
+
+						<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+
+						<!-- CustomBehavior - LoadProfile - [QO-N][90+Flying]_botanist_blackrock-caverns_[repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Movement\Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[repair-mail]" />
+
+					</If>	<!-- If we have less then 15 empty bag slots or our durability is less than 30% -->
+					
+					<!-- CustomBehavior - message - All checks complete -->
+					<CustomBehavior File="Message" 
+									Text="All checks complete."  
+									LogColor="Plum" />
+
+					<!-- Custom behavior - Misc/InInstance - exit the instance-->
+					<CustomBehavior File="Misc\InInstance" 
+									X="212.502" Y="1143.77" Z="207.0453" />
+					
+					<!-- CustomBehavior - WaitTime - wait 15 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />
+					
+					<!-- Move to - zone out location -->
+					<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
+					
+				</If>	<!-- If we are inside Blackrock Caverns -->
+				
+				<!-- If we are not in the Blackrock Caverns instance box, load the movement profile -->
+				<If Condition="Me.X &lt; -7581.14 || Me.X &gt; -7561.14 || Me.Y &lt; -1334.96 || Me.Y &gt; -1314.96" >
+					
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+									
+					<!-- CustomBehavior - message - Loading the movement profile so we can navigate to Blackrock Caverns -->
+					<CustomBehavior File="Message" 
+									Text="Loading the movement profile so we can navigate to Blackrock Caverns."  
+									LogColor="Plum" />
+					
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+									
+					<!-- Custom behavior - LoadProfile - [QO-N-M][90+Flying]_botanist_blackrock-caverns -->
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\[QO-N-M][90+Flying]_botanist_blackrock-caverns" />
+					
+				</If>	<!-- If we are not in the Blackrock Caverns instance box, load the movement profile -->
+				
+				<!-- If we are in the Blackrock Caverns instance box -->
+				<If Condition="Me.X &gt; -7581.14 &amp;&amp; Me.X &lt; -7561.14 &amp;&amp; Me.Y &gt; -1334.96 &amp;&amp; Me.Y &lt; -1314.96" >
+				
+					<!-- CustomBehavior - Message - Portal detected nearby -->
+					<CustomBehavior File="Message" 
+									Text="Portal detected nearby."
+									LogColor="Cyan" />	
+			
+					<!-- CustomBehavior - Message - Resetting the instance -->
+					<CustomBehavior File="Message" 
+									Text="Resetting the instance." 
+									LogColor="Plum" />
+					
+					<!-- Reset the instance 
+					<CustomBehavior File="RunMacro" 
+									Macro="/script ResetInstances()" />	-->
+									
+					<!-- Set the dungeon difficulty to normal -->				
+					<CustomBehavior File="RunMacro" 
+									Macro="/script SetDungeonDifficultyID(1);" />
+					
+					<!-- CustomBehavior - Message - The instance has been reset -->
+					<CustomBehavior File="Message" 
+									Text="The instance has been reset." 
+									LogColor="Cyan" />
+							
+					<!-- While we are not in Blackrock Caverns -->
+					<While Condition="Me.MapId != 645">
+					
+						<!-- Move to - zone out location -->
+						<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
+
+						<!-- Attempt to re-enter the portal -->
+						<CustomBehavior File="Misc\InInstance" 
+										X="-7569.188" Y="-1332.284" Z="245.5395" /> 
+										
+						<!-- CustomBehavior - Message - Waiting for the dungeon to load -->				
+						<CustomBehavior File="Message" 
+										Text="Waiting for the dungeon to load." 
+										LogColor="Cyan" />
+									
+						<!-- WaitTime - wait 10 seconds -->		
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="10000"/>			
+									
+						<!-- If we are not in Blackrock Caverns, we're locked out -->
+						<If Condition="Me.MapId != 645">
+						
+							<!-- CustomBehavior - Message - We are locked out. Waiting and trying again -->
+							<CustomBehavior File="Message" 
+											Text="We are locked out. Waiting and trying again." 
+											LogColor="Cyan" />
+											
+							<!-- CustomBehavior - WaitTime - wait 40-80 seconds -->		
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="40000"
+											VariantTime="40000" />				
+											
+						</If>	<!-- If we are not in Blackrock Caverns, we're locked out -->
+						
+					</While>	<!-- While we are not in Blackrock Caverns -->
+					
+				</If>	<!-- If we are in the Blackrock Caverns instance box -->
+				
+				<!-- If we are inside Blackrock Caverns -->
+				<If Condition="Me.MapId == 645">
+											
+					<!-- CustomBehavior - Message - Deleting unwanted items from our bags -->				
+					<CustomBehavior File="Message" 
+									Text="Deleting unwanted items from our bags." 
+									LogColor="Plum" />
+
+					<!-- CustomBehavior - DeleteItems - 32902,32905 -->
+					<CustomBehavior File="DeleteItems" 
+									Ids="32902,32905" />
+									
+					<!-- CustomBehavior - Message - Bottled Nethergon Energy, Bottled Nethergon Vapor -->				
+					<CustomBehavior File="Message" 
+									Text="Bottled Nethergon Energy, Bottled Nethergon Vapor." 
+									LogColor="Plum" />			
+								
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />			
+								
+					<!-- CustomBehavior - Misc\InstanceTimer -->
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Start" />							
+								
+					<!-- CustomBehavior - RunMacro - enable autolooting -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/script SetCVar('AutoLootDefault', 1)" 
+									NumOfTimes="1" 
+									WaitTime="1000" />
+
+					<!-- CustomBehavior - Message - Blackrock Caverns initialized -->			
+					<CustomBehavior File="Message" 
+									Text="Blackrock Caverns initialized."  
+									LogColor="Cyan" />
+									
+									
+					<!-- ****************************************************** Blackrock Caverns ********************************************************************** -->
+									
+				
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+													  
+													  
+					<!-- CustomBehavior - Message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<!-- Move to - gathering mobs -->
+					<MoveTo X="247.5191" Y="1081.444" Z="206.3374" />
+					
+					<!-- Move to - gathering mobs -->
+					<MoveTo X="172.7622" Y="1086.165" Z="206.1144" />
+					
+					<!-- Move to - gathering mobs -->
+					<MoveTo X="202.039" Y="980.2451" Z="192.2645" />
+
+					<!-- Move to - 1st bridge -->
+					<MoveTo X="250.559" Y="991.1893" Z="190.9208" />
+
+					<!-- CustomBehavior - Message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- EnableBehavior - Combat -->				
+					<EnableBehavior Name="Combat" />
+					
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />								   
+											
+											
+													   
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+													  
+													  
+					<!-- CustomBehavior - Message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<!-- Move to - gathering mobs -->
+					<MoveTo X="185.2656" Y="960.4393" Z="190.7842" />
+					
+					<!-- Move to - gathering mobs -->
+					<MoveTo X="199.2656" Y="907.125" Z="190.8083" />
+					
+					<!-- Move to - gathering mobs -->
+					<MoveTo X="212.2726" Y="938.0886" Z="191.1141" />
+
+					<!-- Move to - Rom'ogg Bonecrusher -->
+					<MoveTo X="225.3969" Y="949.7082" Z="192.1257" />
+
+					<!-- CustomBehavior - Message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- EnableBehavior - Combat -->				
+					<EnableBehavior Name="Combat" />
+					
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+			   
+					<!-- Move to - safe location while Raz kills the Evolved Twilight -->
+					<MoveTo X="232.9697" Y="908.8386" Z="190.9884" />
+			   
+					<!-- CustomBehavior - WaitTime - wait 30 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="30000" />
+			   
+			   
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+													  
+													  
+					<!-- CustomBehavior - Message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<!-- Move to - 1st bridge -->
+					<MoveTo X="329.4503" Y="949.4291" Z="190.2912" />
+					
+					<!-- Move to - patrols -->
+					<MoveTo X="465.2556" Y="950.7513" Z="191.1961" />
+					
+					<!-- Move to - patrols -->
+					<MoveTo X="500.5351" Y="909.1643" Z="181.4789" />
+					
+					<!-- Move to - patrols -->
+					<MoveTo X="549.4795" Y="909.9797" Z="169.5619" />
+					
+					<!-- Move to - second Evolved Twilight Zealot - before Corla, Herald of Twilight -->
+					<MoveTo X="597.3739" Y="860.8865" Z="175.5454" />
+
+					<!-- CustomBehavior - Message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- EnableBehavior - Combat -->				
+					<EnableBehavior Name="Combat" />
+					
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+			   
+					
+					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+													  
+													  
+					<!-- CustomBehavior - Message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<!-- Move to - Corla, Herald of Twilight -->
+					<MoveTo X="573.4445" Y="987.6875" Z="155.3537" />
+
+					<!-- CustomBehavior - Message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- EnableBehavior - Combat -->				
+					<EnableBehavior Name="Combat" />
+					
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+	
+									
+									
+									
+									
+					<!-- @@@@@@@@@@@@@@@@@@@@ Exit @@@@@@@@@@@@@@@@@@@@ -->				
+
+					<!-- Move to - zone in location - entering -->
+					<MoveTo X="209.903" Y="1133.02" Z="205.569" />				
+									
+					<!-- CustomBehavior - Message - Waiting 3 seconds - Bag and durability check -->
+					<CustomBehavior File="Message" 
+									Text="Waiting 3 seconds - Bag and durability check."  
+									LogColor="Plum" />
+					
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+					
+					<!-- If we have less then 15 empty bag slots or our durability is less than 30% -->
+					<If Condition="(Me.FreeBagSlots &lt;= 15) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+											
+						<!-- CustomBehavior - message - - Our bags are full or our gear is near breaking. Loading the vendor profile -->
+						<CustomBehavior File="Message" 
+										Text="Our bags are full or our gear is near breaking. Loading the vendor profile."  
+										LogColor="Plum" />
+
+						<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+
+						<!-- CustomBehavior - LoadProfile - [QO-N][90+Flying]_botanist_blackrock-caverns_[repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Movement\Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[repair-mail]" />
+
+					</If>	<!-- If we have less then 15 empty bag slots or our durability is less than 30% -->
+
+					<!-- CustomBehavior - Message - All checks complete -->
+					<CustomBehavior File="Message" 
+									Text="All checks complete."  
+									LogColor="Plum" />
+								
+				</If>	<!-- If we are inside Blackrock Caverns -->	
+					
+				<!-- If we don't need to vendor -->
+				<If Condition="Me.MapId == 645">	
+
+					<!-- CustomBehavior - Message - We have more than 15 empty bag slots and our gear is above 30% durability -->
+					<CustomBehavior File="Message" 
+									Text="We have more than 15 empty bag slots and our gear is above 30% durability."
+									LogColor="Plum" />
+				
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+				
+					<!-- CustomBehavior - Message - Checking our dungeon run time. We will exit if the run time is greater than 13 minutes -->
+					<CustomBehavior File="Message" 
+									Text="Checking our dungeon run time. We will exit if the run time is greater than 13 minutes."
+									LogColor="Cyan" />
+				
+					<!-- Instance timer check if we didn't repair -->
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Check" 
+									WaitTime="780000" />
+
+					<!-- The Blackrock Caverns detected. Running out -->
+					<CustomBehavior File="Message" 
+									Text="The Blackrock Caverns detected. Running out."
+									LogColor="Cyan" />
+						
+					<!-- Move to - zone in location - entering -->
+					<MoveTo X="209.903" Y="1133.02" Z="205.569" />
+					
+					<!-- CustomBehavior - Message - All checks complete -->
+					<CustomBehavior File="Message" 
+									Text="All checks complete."  
+									LogColor="Plum" />
+
+					<!-- Custom behavior - Misc/InInstance - exit the instance-->
+					<CustomBehavior File="Misc\InInstance" 
+									X="212.502" Y="1143.77" Z="207.0453" />
+					
+					<!-- CustomBehavior - WaitTime - wait 15 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />
+					
+					<!-- Move to - zone out location -->
+					<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
+					
+				</If>	<!-- If we don't need to vendor -->	
+						
+			</While> <!-- Infinite loop -->
+			
+		</If> <!-- I am level 85 -->	
+		
+	</QuestOrder>
+	
+</HBProfile>
