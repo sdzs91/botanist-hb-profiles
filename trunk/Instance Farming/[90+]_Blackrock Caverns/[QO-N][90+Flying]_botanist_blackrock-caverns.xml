@@ -167,9 +167,9 @@
 									Text="Resetting the instance." 
 									LogColor="Plum" />
 					
-					<!-- Reset the instance 
+					<!-- Reset the instance -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/script ResetInstances()" />	-->
+									Macro="/script ResetInstances()" />	
 									
 					<!-- Set the dungeon difficulty to normal -->				
 					<CustomBehavior File="RunMacro" 
