@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][90+Flying]_botanist_blackrock-caverns</Name>
+	<Name>[QO-N][85+Flying]_botanist_blackrock-caverns</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -122,9 +122,9 @@
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
 
-						<!-- CustomBehavior - LoadProfile - [QO-N][90+Flying]_botanist_blackrock-caverns_[repair-mail] -->
+						<!-- CustomBehavior - LoadProfile - [QO-N][85+Flying]_botanist_blackrock-caverns_[repair-mail] -->
 						<CustomBehavior File="LoadProfile" 
-										ProfileName="Movement\Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[repair-mail]" />
+										ProfileName="Movement\Vendors\[QO-N][85+Flying]_botanist_blackrock-caverns_[repair-mail]" />
 
 					</If>	<!-- If we have less then 15 empty bag slots or our durability is less than 30% -->
 					
@@ -140,9 +140,9 @@
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
 				
-						<!-- Load profile - [QO-N][90+Flying]_botanist_blackrock-caverns_[food] -->
+						<!-- Load profile - [QO-N][85+Flying]_botanist_blackrock-caverns_[food] -->
 						<CustomBehavior File="LoadProfile" 
-										ProfileName="Movement\Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[food]" />
+										ProfileName="Movement\Vendors\[QO-N][85+Flying]_botanist_blackrock-caverns_[food]" />
 
 					</If>	<!-- If we don't have Pine Nut Bread -->
 
@@ -180,9 +180,9 @@
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
 									
-					<!-- Custom behavior - LoadProfile - [QO-N-M][90+Flying]_botanist_blackrock-caverns -->
+					<!-- Custom behavior - LoadProfile - [QO-N-M][85+Flying]_botanist_blackrock-caverns -->
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][90+Flying]_botanist_blackrock-caverns" />
+									ProfileName="Movement\[QO-N-M][85+Flying]_botanist_blackrock-caverns" />
 					
 				</If>	<!-- If we are not in the Blackrock Caverns instance box, load the movement profile -->
 				
@@ -729,7 +729,7 @@
 									
 					<!-- CustomBehavior - WaitTime - wait 10 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="10000" />
+									WaitTime="10000" />				
 
 									
 					<!-- @@@@@@@@@@@@@@@@@@@@ Exit @@@@@@@@@@@@@@@@@@@@ -->				
@@ -759,37 +759,37 @@
 						<CustomBehavior File="WaitTimer" 
 										WaitTime="3000" />
 
-						<!-- CustomBehavior - LoadProfile - [QO-N][90+Flying]_botanist_blackrock-caverns_[repair-mail] -->
+						<!-- CustomBehavior - LoadProfile - [QO-N][85+Flying]_botanist_blackrock-caverns_[repair-mail] -->
 						<CustomBehavior File="LoadProfile" 
-										ProfileName="Movement\Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[repair-mail]" />
+										ProfileName="Movement\Vendors\[QO-N][85+Flying]_botanist_blackrock-caverns_[repair-mail]" />
 
 					</If>	<!-- If we have less then 15 empty bag slots or our durability is less than 30% -->
 
+					<!-- If we don't have Pine Nut Bread -->
+					<If Condition="!HasItem(58260)">
+				
+						<!-- CustomBehavior - message - - I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures -->
+						<CustomBehavior File="Message" 
+										Text="I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures."  
+										LogColor="Plum" />
+
+						<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+				
+						<!-- Load profile - [QO-N][85+Flying]_botanist_blackrock-caverns_[food] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Movement\Vendors\[QO-N][85+Flying]_botanist_blackrock-caverns_[food]" />
+
+					</If>	<!-- If we don't have Pine Nut Bread -->	
+					
 					<!-- CustomBehavior - Message - All checks complete -->
 					<CustomBehavior File="Message" 
 									Text="All checks complete."  
 									LogColor="Plum" />
 								
 				</If>	<!-- If we are inside Blackrock Caverns -->	
-					
-				<!-- If we don't have Pine Nut Bread -->
-				<If Condition="!HasItem(58260)">
-			
-					<!-- CustomBehavior - message - - I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures -->
-					<CustomBehavior File="Message" 
-									Text="I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures."  
-									LogColor="Plum" />
 
-					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
-			
-					<!-- Load profile - [QO-N][90+Flying]_botanist_blackrock-caverns_[food] -->
-					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[food]" />
-
-				</If>	<!-- If we don't have Pine Nut Bread -->	
-					
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.MapId == 645">	
 
