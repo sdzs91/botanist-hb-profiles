@@ -69,6 +69,20 @@
 							UseMount="True" 
 							UseRandomMount="False" />
 						
+			<!-- If we don't have Pine Nut Bread -->
+			<If Condition="!HasItem(58260)">
+		
+				<!-- CustomBehavior - message - -I have detected that we don't have any Pine Nut Bread. You must keep a minimum of 1 Pine Nut Bread on your character. Statistical data suggest you buy several stacks before starting the profile -->
+				<CustomBehavior File="Message" 
+								Text="I have detected that we don't have any Pine Nut Bread. You must keep a minimum of 1 Pine Nut Bread on your character. Statistical data suggest you buy several stacks before starting the profile."  
+								LogColor="Coral" />
+
+				<!-- CustomBehavior - WaitTime - wait 5 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="5000" />
+
+			</If>	<!-- If we don't have Pine Nut Bread -->			
+						
 			<!-- Infinite loop -->
 			<While Condition="true" >	
 			
@@ -114,6 +128,24 @@
 
 					</If>	<!-- If we have less then 15 empty bag slots or our durability is less than 30% -->
 					
+					<!-- If we don't have Pine Nut Bread -->
+					<If Condition="!HasItem(58260)">
+				
+						<!-- CustomBehavior - message - - I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures -->
+						<CustomBehavior File="Message" 
+										Text="I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures."  
+										LogColor="Plum" />
+
+						<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+				
+						<!-- Load profile - [QO-N][90+Flying]_botanist_blackrock-caverns_[food] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Movement\Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[food]" />
+
+					</If>	<!-- If we don't have Pine Nut Bread -->
+
 					<!-- CustomBehavior - message - All checks complete -->
 					<CustomBehavior File="Message" 
 									Text="All checks complete."  
@@ -408,6 +440,9 @@
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="15000" />
 			   
+					<!-- Move to - trash in front of Corla, Herald of Twilight -->
+					<MoveTo X="572.1587" Y="930.8098" Z="155.356" />
+					
 					
 					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 													  
@@ -442,9 +477,6 @@
 					<!-- Move to - gathering mobs -->
 					<MoveTo X="584.9997" Y="860.3846" Z="155.502" />
 
-					<!-- Move to - Evolved Twilight Zealot -->
-					<MoveTo X="530.7181" Y="873.7584" Z="136.6667" />
-					
 					<!-- CustomBehavior - Message - Enabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Enabling combat." 
@@ -453,34 +485,21 @@
 					<!-- EnableBehavior - Combat -->				
 					<EnableBehavior Name="Combat" />
 					
-					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<!-- CustomBehavior - WaitTime - wait 15 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="15000" />
+					
+					<!-- Move to - Evolved Twilight Zealot -->
+					<MoveTo X="530.7181" Y="873.7584" Z="136.6667" />
 			   
 			   
 			   
 					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 													  
-												  
-													  
-					<!-- CustomBehavior - Message - Disabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Disabling combat." 
-										LogColor="Gold" />				
-									
-					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />
+												  			  
 					
 					<!-- Move to - Evolved Twilight Zealot -->
 					<MoveTo X="420.0605" Y="817.0063" Z="104.6999" />
-					
-					<!-- CustomBehavior - Message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />				
-									
-					<!-- EnableBehavior - Combat -->				
-					<EnableBehavior Name="Combat" />
 									
 					<!-- CustomBehavior - Message - Waiting 30 seconds for Raz to kill the Evolved Twilight Zealots -->
 					<CustomBehavior File="Message" 
@@ -744,6 +763,24 @@
 									LogColor="Plum" />
 								
 				</If>	<!-- If we are inside Blackrock Caverns -->	
+					
+				<!-- If we don't have Pine Nut Bread -->
+				<If Condition="!HasItem(58260)">
+			
+					<!-- CustomBehavior - message - - I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures -->
+					<CustomBehavior File="Message" 
+									Text="I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures."  
+									LogColor="Plum" />
+
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+			
+					<!-- Load profile - [QO-N][90+Flying]_botanist_blackrock-caverns_[food] -->
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[food]" />
+
+				</If>	<!-- If we don't have Pine Nut Bread -->	
 					
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.MapId == 645">	

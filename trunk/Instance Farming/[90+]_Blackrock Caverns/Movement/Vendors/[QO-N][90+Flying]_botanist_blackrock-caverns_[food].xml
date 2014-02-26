@@ -64,7 +64,7 @@
 						UseRandomMount="False" />
 
 		<!-- If our level is => 85-->
-		<If Condition="Me.Level &gt;= 84">
+		<If Condition="Me.Level &gt;= 85">
 			
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
@@ -77,44 +77,124 @@
 									Text="We don't have any Pine Nut Bread."
 									LogColor="Orange" />
 									
-					<!-- Profile message - Moving to Kazemde to purchase some -->
+					<!-- Profile message - Moving to Stormwind to purchase some -->
 					<CustomBehavior File="Message" 
-									Text="Moving to Kazemde to purchase some."
-									LogColor="Orange" />				
+									Text="Moving to Stormwind to purchase some."
+									LogColor="Cyan" />				
 
-					<!-- Fly to the Ramkahen hover point -->
+					<!-- If our hearthstone is set to Iron Summit -->
+					<If Condition="Me.HearthstoneAreaId == 5628">
+					
+						<!-- Profile message - We are in Blackrock Caverns, using our Hearthstone/Innkeeper's Daughter -->
+						<CustomBehavior File="Message" 
+										Text="We are in Blackrock Caverns using our Hearthstone/Innkeeper's Daughter." 
+										LogColor="Cyan" />
+									
+						<!-- If we have a Hearthstone -->
+						<If Condition="HasItem(6948)">
+						
+							<!-- Profile message - Using our Hearthstone -->
+							<CustomBehavior File="Message" 
+											Text="Using our Hearthstone." 
+											LogColor="Fuchsia" />
+											
+							<!-- Custom behavior - Misc\RunLua -->				
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(6948)" 
+											WaitTime="1000" />
+											
+							<!-- Wait timer - wait 20 seconds - delay -->				
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+											
+						</If>	<!-- If we have a Hearthstone -->
+					
+						<!-- If we have a Innkeeper's Daughter -->
+						<If Condition="HasItem(64488)">
+						
+							<!-- Profile message - Using our Innkeeper's Daughter -->
+							<CustomBehavior File="Message" 
+											Text="Using our Innkeeper's Daughter." 
+											LogColor="Fuchsia" />
+												
+							<!-- Custom behavior - Misc\RunLua -->					
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(64488)" 
+											WaitTime="1000" />
+								
+							<!-- Wait timer - wait 20 seconds - delay -->	
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+											
+						</If>	<!-- If we have a Innkeeper's Daughter -->
+					
+					</If>	<!-- If our hearthstone is set to Iron Summit -->
+
+					<!-- If we are still in Blackrock Caverns, exit the instance -->
+					<If Condition="Me.MapId == 645">
+					
+						<!-- Profile message - Blackrock Caverns detected. Running out -->
+						<CustomBehavior File="Message" 
+										Text="Blackrock Caverns detected. Running out."
+										LogColor="Fuchsia" />
+							
+							<!-- Move to - zone in location - entering -->
+							<MoveTo X="209.903" Y="1133.02" Z="205.569" />
+							
+							<!-- Custom behavior - Misc/InInstance - exit the instance-->
+							<CustomBehavior File="Misc\InInstance" 
+											X="212.502" Y="1143.77" Z="207.0453" />
+							
+							<!-- CustomBehavior - WaitTime - wait 15 seconds - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="15000" />
+							
+							<!-- Move to - Nav=Fly - Blackrock Caverns - porticullis gate -->
+							<MoveTo Nav="Fly" X="-7482.628" Y="-1072.034" Z="266.0211" />
+						
+							<!-- Move to - Nav=Fly - Blackrock Caverns - gate -->
+							<MoveTo Nav="Fly" X="-7316.727" Y="-1077.39" Z="277.0694" />
+						
+							<!-- Move to - Nav=Fly - Blackrock Caverns - gate - hover point -->
+							<CustomBehavior File="FlyTo"
+											X="-7319.519" Y="-1099.172" Z="314.6976" />
+						
+					</If>	<!-- If we are still in Blackrock Caverns, exit the instance -->				
+									
+					<!-- Fly to - Stormwind - Trade District - hover point -->
 					<CustomBehavior File="FlyTo" 
-									X="-9519.121" Y="-961.4222" Z="164.6567" />
+									X="-8853.779" Y="641.4063" Z="143.5614" />
 
 					<!-- CTM to - doorway of the inn -->
 					<CustomBehavior File="MyCTM"  
-									X="-9425.368" Y="-959.3373" Z="111.7376" />
+									X="-8858.054" Y="658.5239" Z="96.61928" />
 					
 					<!-- Custom behavior - ForcedDismount -->
 					<CustomBehavior File="ForcedDismount" />
 
 					<!-- Move to - inside the inn -->
-					<MoveTo X="-9387.839" Y="-951.1343" Z="113.8286" />
+					<MoveTo X="-8866.462" Y="671.6678" Z="97.90359" />
 				
-					<!-- Move to - Kazemde -->
-					<Move X="-9389.101" Y="-944.342" Z="113.7647" />
+					<!-- Move to - Innkeeper Allison -->
+					<Move X="-8867.786" Y="673.6729" Z="97.90343" />
 					
-					<!-- Interact with Kazemde and buy 60 Pine Nut Bread -->
+					<!-- Interact with Innkeeper Allison and buy 100 Pine Nut Bread -->
 					<CustomBehavior File="InteractWith"
 									ObjectType="Npc"
 									GossipOptions="2"
 									Range="75"
-									MobId="48886" 
+									MobId="6740" 
 									BuyItemId="58260" 
 									BuyItemCount="100"
-									X="-9389.101" Y="-944.342" Z="113.7647" />
+									X="-8867.786" Y="673.6729" Z="97.90343" />
 
 					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="45000" />
 
-					<!-- Move to the Ramkahen flight master -->
-					<MoveTo X="-9415.822" Y="-1049.807" Z="114.0229" />
+					<!-- Fly to - Stormwind - Trade District - hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="-8853.779" Y="641.4063" Z="143.5614" />
 					
 				</If>	<!-- If we don't have Pine Nut Bread -->
 					
@@ -131,59 +211,191 @@
 									Text="We don't have any Pine Nut Bread."
 									LogColor="Orange" />
 									
-					<!-- Profile message - Moving to Kazemde to purchase some -->
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+					<!-- Profile message - Moving to Orgrimmar to purchase some -->
 					<CustomBehavior File="Message" 
-									Text="Moving to Kazemde to purchase some."
-									LogColor="Orange" />				
+									Text="Moving to Orgrimmar to purchase some."
+									LogColor="Cyan" />				
 
-					<!-- Fly to the Ramkahen hover point -->
+					<!-- If our hearthstone is set to Iron Summit -->
+					<If Condition="Me.HearthstoneAreaId == 5628">
+					
+						<!-- Profile message - Using our Hearthstone/Innkeeper's Daughter to port to Iron Summit -->
+						<CustomBehavior File="Message" 
+										Text="Using our Hearthstone/Innkeeper's Daughter to port to Iron Summit." 
+										LogColor="Cyan" />
+									
+						<!-- If we have a Hearthstone -->
+						<If Condition="HasItem(6948)">
+						
+							<!-- Profile message - Using our Hearthstone -->
+							<CustomBehavior File="Message" 
+											Text="Using our Hearthstone." 
+											LogColor="Fuchsia" />
+											
+							<!-- Custom behavior - Misc\RunLua -->				
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(6948)" 
+											WaitTime="1000" />
+											
+							<!-- Wait timer - wait 20 seconds - delay -->				
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+											
+						</If>	<!-- If we have a Hearthstone -->
+					
+						<!-- If we have a Innkeeper's Daughter -->
+						<If Condition="HasItem(64488)">
+						
+							<!-- Profile message - Using our Innkeeper's Daughter -->
+							<CustomBehavior File="Message" 
+											Text="Using our Innkeeper's Daughter." 
+											LogColor="Fuchsia" />
+												
+							<!-- Custom behavior - Misc\RunLua -->					
+							<CustomBehavior File="Misc\RunLua" 
+											Lua="UseItemByName(64488)" 
+											WaitTime="1000" />
+								
+							<!-- Wait timer - wait 20 seconds - delay -->	
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="20000" />
+											
+						</If>	<!-- If we have a Innkeeper's Daughter -->
+					
+					</If>	<!-- If our hearthstone is set to Iron Summit -->
+
+					<!-- If we are still in Blackrock Caverns, exit the instance -->
+					<If Condition="Me.MapId == 645">
+					
+						<!-- Profile message - Blackrock Caverns detected. Running out -->
+						<CustomBehavior File="Message" 
+										Text="Blackrock Caverns detected. Running out."
+										LogColor="Fuchsia" />
+							
+							<!-- Move to - zone in location - entering -->
+							<MoveTo X="209.903" Y="1133.02" Z="205.569" />
+							
+							<!-- Custom behavior - Misc/InInstance - exit the instance-->
+							<CustomBehavior File="Misc\InInstance" 
+											X="212.502" Y="1143.77" Z="207.0453" />
+							
+							<!-- CustomBehavior - WaitTime - wait 15 seconds - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="15000" />
+							
+							<!-- Move to - Nav=Fly - Blackrock Caverns - porticullis gate -->
+							<MoveTo Nav="Fly" X="-7482.628" Y="-1072.034" Z="266.0211" />
+						
+							<!-- Move to - Nav=Fly - Blackrock Caverns - gate -->
+							<MoveTo Nav="Fly" X="-7316.727" Y="-1077.39" Z="277.0694" />
+						
+							<!-- Move to - Nav=Fly - Blackrock Caverns - gate - hover point -->
+							<CustomBehavior File="FlyTo"
+											X="-7319.519" Y="-1099.172" Z="314.6976" />
+						
+					</If>	<!-- If we are still in Blackrock Caverns, exit the instance -->				
+									
+					<!-- If we are in Eastern Kingdoms -->		
+					<If Condition="Me.MapId == 0">
+					
+						<!-- Profile message - We are in Eastern Kingdoms. Flying to Brill and using the zeppelin to Orgrimmar -->
+						<CustomBehavior File="Message" 
+										Text="We are in Eastern Kingdoms. Flying to Brill and using the zeppelin to Orgrimmar."  
+										LogColor="Plum" />
+					
+						<!-- Fly to the zeppelin hover point -->
+						<CustomBehavior File="FlyTo"
+										X="2031.435" Y="272.2105" Z="137.2492" />
+									
+						<!-- Land on the deck -->
+						<CustomBehavior File="MyCTM"
+										X="2065.45" Y="289.2531" Z="97.03259" />				
+							
+						<!-- Forced dismount -->		
+						<CustomBehavior File="ForcedDismount" />
+
+						<!-- Profile message - Waiting for the zeppelin to Orgrimmar -->
+						<CustomBehavior File="Message" 
+										Text="Waiting for the zeppelin to Orgrimmar."  
+										LogColor="Plum" />
+						
+						<!-- Custom behavior - UseTransport - move to Orgrimmar -->
+						<CustomBehavior File="UseTransport" 
+										TransportId="164871" 
+										WaitAtX="2066.09" 
+										WaitAtY="288.9603" 
+										WaitAtZ="97.03149"								
+										TransportStartX="2062.376" 
+										TransportStartY="292.998" 
+										TransportStartZ="114.973"								
+										StandOnX="2068.133" 
+										StandOnY="295.2583" 
+										StandOnZ="97.24683"
+										TransportEndX="1833.509" 
+										TransportEndY="-4391.543" 
+										TransportEndZ="152.7679"	
+										GetOffX="1847.108" 
+										GetOffY="-4397.473" 
+										GetOffZ="135.2055" />	
+									
+						<!-- Move to - Orgrimmar flight master -->
+						<RunTo X="1802.869" Y="-4368.173" Z="102.689" />	
+
+						<!-- Forced dismount -->	
+						<CustomBehavior File="ForcedDismount" />
+					
+					</If>	<!-- If we are in Eastern Kingdoms -->				
+			
+					<!-- Fly to - Orgrimmar - Valley of Strength hover point -->
 					<CustomBehavior File="FlyTo" 
-									X="-9519.121" Y="-961.4222" Z="164.6567" />
+									X="1559.675" Y="-4392.823" Z="63.27058" />
 
 					<!-- CTM to - doorway of the inn -->
 					<CustomBehavior File="MyCTM"  
-									X="-9425.368" Y="-959.3373" Z="111.7376" />
+									X="1569.857" Y="-4426.648" Z="14.41042" />
 					
 					<!-- Custom behavior - ForcedDismount -->
 					<CustomBehavior File="ForcedDismount" />
 
-					<!-- Move to - inside the inn -->
-					<MoveTo X="-9387.839" Y="-951.1343" Z="113.8286" />
-				
-					<!-- Move to - Kazemde -->
-					<Move X="-9389.101" Y="-944.342" Z="113.7647" />
+					<!-- Move to - Innkeeper Gryshka -->
+					<Move X="1573.01" Y="-4438.015" Z="16.05532" />
 					
-					<!-- Interact with Kazemde and buy 60 Pine Nut Bread -->
+					<!-- Interact with Innkeeper Gryshka and buy 100 Pine Nut Bread -->
 					<CustomBehavior File="InteractWith"
 									ObjectType="Npc"
 									GossipOptions="2"
 									Range="75"
-									MobId="48886" 
+									MobId="6929" 
 									BuyItemId="58260" 
 									BuyItemCount="100"
-									X="-9389.101" Y="-944.342" Z="113.7647" />
+									X="1573.266" Y="-4439.158" Z="16.05745" />
 
 					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="45000" />
 
-					<!-- Move to the Ramkahen flight master -->
-					<MoveTo X="-9415.822" Y="-1049.807" Z="114.0229" />
+					<!-- Fly to - Orgrimmar - Valley of Strength hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="1559.675" Y="-4392.823" Z="63.27058" />
 					
 				</If>	<!-- If we don't have Pine Nut Bread -->
-	
+					
 			</If>	<!-- If we are Horde -->
-			
-			<!-- If we have Pine Nut Bread -->
+
+			<!-- If we do have Pine Nut Bread -->
 			<If Condition="HasItem(58260)">
-			
-				<!-- Load profile - [QO-N][90-Flying]_botanist_lost-city-of-the-tol'virl -->
+		
+				<!-- Load profile - [QO-N][90+Flying]_botanist_blackrock-caverns -->
 				<CustomBehavior File="LoadProfile" 
-										ProfileName="..\..\[QO-N][90-Flying]_botanist_lost-city-of-the-tol'virl" />
-										
-			</If>	<!-- If we do have Pine Nut Bread -->	
-			
-		</If>	<!-- If our level is => 90 -->
+								ProfileName="..\..\[QO-N][90+Flying]_botanist_blackrock-caverns" />
+
+			</If>	<!-- If we do have Pine Nut Bread -->
+		
+		</If>	<!-- If our level is => 85-->
 		
 	</QuestOrder>
 	

@@ -66,7 +66,7 @@
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseMount="True" 
-							UseRandomMount="False" />			
+							UseRandomMount="False" />							
 							
 			<!-- If we are in Kalimdor -->
 			<If Condition="Me.MapId == 1">
@@ -82,6 +82,24 @@
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
+									
+					<!-- If we don't have Pine Nut Bread -->
+					<If Condition="!HasItem(58260)">
+				
+						<!-- CustomBehavior - message - - I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures -->
+						<CustomBehavior File="Message" 
+										Text="I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures."  
+										LogColor="Plum" />
+
+						<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+				
+						<!-- Load profile - [QO-N][90+Flying]_botanist_blackrock-caverns_[food] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[food]" />
+
+					</If>	<!-- If we don't have Pine Nut Bread -->				
 									
 					<!-- If we are in the Cleft of Shadow -->
 					<If Condition="Me.X &lt; 1895.627 &amp;&amp; Me.X &gt; 1713.31 &amp;&amp; Me.Y &gt; -4440.429 &amp;&amp; Me.Y &lt; -4283.688 &amp;&amp; Me.Z &lt; 35" >
@@ -208,6 +226,24 @@
 						<!-- Move to - Booty Bay docks -->	
 						<MoveTo X="-14280.22" Y="567.6113" Z="6.696649" />
 										
+						<!-- If we don't have Pine Nut Bread -->
+						<If Condition="!HasItem(58260)">
+					
+							<!-- CustomBehavior - message - - I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures -->
+							<CustomBehavior File="Message" 
+											Text="I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures."  
+											LogColor="Plum" />
+
+							<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="3000" />
+					
+							<!-- Load profile - [QO-N][90+Flying]_botanist_blackrock-caverns_[food] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[food]" />
+
+						</If>	<!-- If we don't have Pine Nut Bread -->				
+										
 					</Else>		<!-- Else we are Alliance -->				
 									
 				</If>	<!-- Faction check - Horde -->
@@ -221,6 +257,24 @@
 				<CustomBehavior File="Message" 
 								Text="We are in Eastern Kingdoms. Flying to Searing Gorge."  
 								LogColor="Plum" />
+			
+				<!-- If we don't have Pine Nut Bread -->
+				<If Condition="!HasItem(58260)">
+			
+					<!-- CustomBehavior - message - - I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures -->
+					<CustomBehavior File="Message" 
+									Text="I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures."  
+									LogColor="Plum" />
+
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+			
+					<!-- Load profile - [QO-N][90+Flying]_botanist_blackrock-caverns_[food] -->
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[food]" />
+
+				</If>	<!-- If we don't have Pine Nut Bread -->
 			
 				<!-- Fly to the Iron Summit - hover point -->
 				<CustomBehavior File="FlyTo" 
@@ -253,10 +307,46 @@
 					<!-- Move to - Nav=Fly - Blackrock Caverns - gate - hover point -->
 					<CustomBehavior File="FlyTo"
 									X="-7319.519" Y="-1099.172" Z="314.6976" />
+					
+					<!-- If we don't have Pine Nut Bread -->
+					<If Condition="!HasItem(58260)">
+				
+						<!-- CustomBehavior - message - - I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures -->
+						<CustomBehavior File="Message" 
+										Text="I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures."  
+										LogColor="Plum" />
+
+						<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+				
+						<!-- Load profile - [QO-N][90+Flying]_botanist_blackrock-caverns_[food] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[food]" />
+
+					</If>	<!-- If we don't have Pine Nut Bread -->
 			
 				</If>	<!-- If we are not in the Blackrock Caverns instance box -->
 			
 			</If>	<!-- If we are in Blackrock Mountain -->
+			
+			<!-- If we don't have Pine Nut Bread -->
+			<If Condition="!HasItem(58260)">
+		
+				<!-- CustomBehavior - message - - I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures -->
+				<CustomBehavior File="Message" 
+								Text="I have detected that we don't have any Pine Nut Bread. Initializing vendor procedures."  
+								LogColor="Plum" />
+
+				<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />
+		
+				<!-- Load profile - [QO-N][90+Flying]_botanist_blackrock-caverns_[food] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Vendors\[QO-N][90+Flying]_botanist_blackrock-caverns_[food]" />
+
+			</If>	<!-- If we don't have Pine Nut Bread -->
 			
 			<!-- CustomBehavior -  message - Waiting 3 seconds - Hearthstone check -->
 			<CustomBehavior File="Message" 
