@@ -417,7 +417,7 @@
 										
 				<!-- CustomBehavior - LoadProfile - [QO-N][85+Flying]_botanist_blackrock-caverns_[repair-mail] -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="Vendors\[QO-N][85+Flying]_botanist_blackrock-caverns_[repair-mail]]" />
+								ProfileName="Vendors\[QO-N][85+Flying]_botanist_blackrock-caverns_[repair-mail]" />
 
 			</If>	<!-- If we have less then 15 empty bag slots or our durability is less than 30% -->
 
