@@ -289,7 +289,7 @@
 			
 				<!-- Load profile - [QO-N][85+Flying]_botanist_blackrock-caverns -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\..\[QO-N][90+Flying]_botanist_blackrock-caverns" />
+								ProfileName="..\..\[QO-N][85+Flying]_botanist_blackrock-caverns" />
 										
 			</If>	<!-- If we have more than 15 empty bag slots and our durability is greater than 30% -->	
 			

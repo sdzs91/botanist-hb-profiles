@@ -56,15 +56,15 @@
 							HarvestHerbs="False"
 							HarvestMinerals="False"
 							KillBetweenHotspots="True"
-							LogoutForInactivity="False"
-							LogoutInactivityUseForceQuit="False"
+							LogoutForInactivity="True"
+							LogoutInactivityUseForceQuit="True"
 							LootMobs="True"
 							LootRadius="65"
 							MountName=""
 							NinjaSkin="False"
 							ProfileDebuggingMode="False"
 							PullDistance="25"
-							RessAtSpiritHealers="False"
+							RessAtSpiritHealers="True"
 							SkinMobs="False"
 							UseMount="True" 
 							UseRandomMount="False" />
@@ -88,6 +88,66 @@
 			
 				<!-- If we are inside Blackrock Caverns -->
 				<If Condition="Me.MapId == 645">
+				
+					<!-- If we are in the Blackrock Caverns instance box -->
+					<If Condition="Me.X &lt; 300 &amp;&amp; Me.Y &lt; 740" >
+					
+						<!-- CustomBehavior - Message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />				
+										
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />
+						
+						<!-- CustomBehavior - Message - Avoiding Karsh Steelbender -->
+						<CustomBehavior File="Message" 
+											Text="Avoiding Karsh Steelbender." 
+											LogColor="Gold" />
+						
+						<MoveTo X="213.5308" Y="737.2442" Z="99.27363" />
+						<!-- Move to - avoiding Karsh -->
+						
+						<MoveTo X="187.5205" Y="787.395" Z="95.94901" />
+						<!-- Move to - avoiding Karsh -->
+						
+						<MoveTo X="198.883" Y="820.0267" Z="95.94901" />
+						<!-- Move to - avoiding Karsh -->
+						
+						<MoveTo X="216.2192" Y="835.4178" Z="95.87588" />
+						<!-- Move to - avoiding Karsh -->
+					
+						<MoveTo X="269.8266" Y="837.4147" Z="95.90926" />
+						<!-- Move to - avoiding Karsh -->				
+										
+						<!-- CustomBehavior - Message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />				
+										
+						<!-- EnableBehavior - Combat -->				
+						<EnableBehavior Name="Combat" />
+						
+						<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />				
+				
+						<!-- Move to - the teleporter -->
+						<MoveTo X="282.9545" Y="841.6299" Z="95.90872" />
+						
+						<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+										
+						<!-- Interact with the teleporter -->
+						<CustomBehavior File="InteractWith" 
+										MobId="51340" />
+										
+						<!-- CustomBehavior - WaitTime - wait 10 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="10000" />
+					
+					</If>	<!-- If we are in the Blackrock Caverns instance box -->
 				
 					<!-- CustomBehavior - Message - Blackrock Caverns detected. Exiting the instance so we can reset the mobs -->
 					<CustomBehavior File="Message" 
@@ -527,44 +587,83 @@
 					<!-- DisableBehavior - Combat -->
 					<DisableBehavior Name="Combat" />
 					
-					<!-- CustomBehavior - RunMacro - cleartarget -->					
-					<CustomBehavior File="RunMacro" 
-									Macro="/cleartarget" 
-									NumOfTimes="1" 
-									WaitTime="0"/>
+					<!-- Level check - 101 -->
+					<If Condition="Me.Level &gt;= 101">
 					
-					<!-- CustomBehavior - RunMacro - Target Karsh Steelbender -->
-					<CustomBehavior File="RunMacro"
-									NumOfTimes="1"
-									Macro="/Target Karsh Steelbender" />
-					
-					<!-- Move to - center of the forge -->
-					<MoveTo X="236.6016" Y="785.8173" Z="95.67573" />
+						<!-- CustomBehavior - RunMacro - cleartarget -->					
+						<CustomBehavior File="RunMacro" 
+										Macro="/cleartarget" 
+										NumOfTimes="1" 
+										WaitTime="0"/>
+						
+						<!-- CustomBehavior - RunMacro - Target Karsh Steelbender -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="1"
+										Macro="/Target Karsh Steelbender" />
+						
+						<!-- Move to - center of the forge -->
+						<MoveTo X="234.0165" Y="781.9382" Z="95.68806" />
 
-					<!-- CustomBehavior - Message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />				
-									
-					<!-- EnableBehavior - Combat -->				
-					<EnableBehavior Name="Combat" />
+						<!-- CustomBehavior - Message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />				
+										
+						<!-- EnableBehavior - Combat -->				
+						<EnableBehavior Name="Combat" />
 
-					<!-- Forces kill of Karsh Steelbender -->
-					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
-									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="39698"
-									EventX="236.6016" EventY="785.8173" EventZ="95.67573"
-									MoveOutOfGroundEffectAuraId1="75842"
-									MoveAwayFromMobCastingSpellId1="75842"
-									MoveAwayFromMobWithAuraId1="75842">
-						<Safespots>
-							<Hotspot X="236.6016" Y="785.8173" Z="95.67573" />
-						</Safespots>
-					</CustomBehavior>
-					
-					<!-- CustomBehavior - WaitTime - wait 15 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="15000" />
+						<!-- Forces kill of Karsh Steelbender -->
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+										EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="39698"
+										EventX="236.6016" EventY="785.8173" EventZ="95.67573"
+										MoveOutOfGroundEffectAuraId1="75842"
+										MoveAwayFromMobCastingSpellId1="75842"
+										MoveAwayFromMobWithAuraId1="75842">
+							<Safespots>
+								<Hotspot X="236.6016" Y="785.8173" Z="95.67573" />
+							</Safespots>
+						</CustomBehavior>
+						
+						<!-- CustomBehavior - WaitTime - wait 15 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="15000" />
 		
+						<!-- Forces avoid of Karsh Steelbender -->
+						<Else>
+							
+							<!-- CustomBehavior - Message - Avoiding Karsh Steelbender -->
+							<CustomBehavior File="Message" 
+												Text="Avoiding Karsh Steelbender." 
+												LogColor="Gold" />
+												
+							<!-- Move to - avoiding Karsh -->
+							<MoveTo X="269.8266" Y="837.4147" Z="95.90926" />
+						
+							<!-- Move to - avoiding Karsh -->
+							<MoveTo X="216.2192" Y="835.4178" Z="95.87588" />
+							
+							<!-- Move to - avoiding Karsh -->
+							<MoveTo X="198.883" Y="820.0267" Z="95.94901" />
+							
+							<!-- Move to - avoiding Karsh -->
+							<MoveTo X="187.5205" Y="787.395" Z="95.94901" />
+							
+							<!-- Move to - avoiding Karsh -->
+							<MoveTo X="213.5308" Y="737.2442" Z="99.27363" />
+						
+							<!-- CustomBehavior - Message - Enabling combat -->
+							<CustomBehavior File="Message" 
+												Text="Enabling combat." 
+												LogColor="Gold" />				
+											
+							<!-- EnableBehavior - Combat -->				
+							<EnableBehavior Name="Combat" />
+						
+						</Else>		<!-- Forces avoid of Karsh Steelbender -->
+						
+					</If>	<!-- Level check - 101 -->
+					
+					
 					
 					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 					
@@ -715,7 +814,50 @@
 					<!-- CustomBehavior - WaitTime - wait 15 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="15000" />
+
+					<MoveTo X="213.5308" Y="737.2442" Z="99.27363" />
+					<!-- Move to - avoiding Karsh -->
+					
+					<!-- CustomBehavior - Message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />				
 									
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<!-- CustomBehavior - Message - Avoiding Karsh Steelbender -->
+					<CustomBehavior File="Message" 
+										Text="Avoiding Karsh Steelbender." 
+										LogColor="Gold" />
+					
+					<MoveTo X="213.5308" Y="737.2442" Z="99.27363" />
+					<!-- Move to - avoiding Karsh -->
+					
+					<MoveTo X="187.5205" Y="787.395" Z="95.94901" />
+					<!-- Move to - avoiding Karsh -->
+					
+					<MoveTo X="198.883" Y="820.0267" Z="95.94901" />
+					<!-- Move to - avoiding Karsh -->
+					
+					<MoveTo X="216.2192" Y="835.4178" Z="95.87588" />
+					<!-- Move to - avoiding Karsh -->
+				
+					<MoveTo X="269.8266" Y="837.4147" Z="95.90926" />
+					<!-- Move to - avoiding Karsh -->				
+									
+					<!-- CustomBehavior - Message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- EnableBehavior - Combat -->				
+					<EnableBehavior Name="Combat" />
+					
+					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+			
 					<!-- Move to - the teleporter -->
 					<MoveTo X="282.9545" Y="841.6299" Z="95.90872" />
 					
