@@ -35,7 +35,6 @@
 			
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
@@ -43,11 +42,11 @@
 							KillBetweenHotspots="False"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
-							LootMobs="False"
-							LootRadius="1"
+							LootMobs="True"
+							LootRadius="5"
 							MountName=""
 							NinjaSkin="False"
-							ProfileDebuggingMode="False"
+							PullDistance="1"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseMount="True" 
