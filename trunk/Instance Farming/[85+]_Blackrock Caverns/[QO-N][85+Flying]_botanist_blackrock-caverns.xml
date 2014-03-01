@@ -50,7 +50,6 @@
 		
 		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
@@ -62,7 +61,6 @@
 							LootRadius="65"
 							MountName=""
 							NinjaSkin="False"
-							ProfileDebuggingMode="False"
 							PullDistance="25"
 							RessAtSpiritHealers="True"
 							SkinMobs="False"
@@ -429,6 +427,9 @@
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
 			   
+					<!-- Move to - routing -->
+					<MoveTo X="197.6796" Y="923.4114" Z="190.8049" />
+			   
 					<!-- Move to - safe location while Raz kills the Evolved Twilight -->
 					<MoveTo X="232.9697" Y="908.8386" Z="190.9884" />
 			   
@@ -467,9 +468,9 @@
 					<!-- EnableBehavior - Combat -->				
 					<EnableBehavior Name="Combat" />
 					
-					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<!-- CustomBehavior - WaitTime - wait 10 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="10000" />
 									
 					<!-- CustomBehavior - Message - Disabling combat -->
 					<CustomBehavior File="Message" 
@@ -479,15 +480,38 @@
 					<!-- DisableBehavior - Combat -->
 					<DisableBehavior Name="Combat" />				
 									
-					<!-- Move to - patrols -->
+					<!-- Move to - 1st ETZ -->
 					<MoveTo X="500.5351" Y="909.1643" Z="181.4789" />
 					
-					<!-- Move to - patrols -->
-					<MoveTo X="549.4795" Y="909.9797" Z="169.5619" />
+					<!-- Move to - right-hand group -->
+					<MoveTo X="566.9787" Y="858.1316" Z="175.5456" />
 					
-					<!-- Move to - second Evolved Twilight Zealot - before Corla, Herald of Twilight -->
-					<MoveTo X="597.3739" Y="860.8865" Z="175.5454" />
+					<!-- CustomBehavior - Message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- EnableBehavior - Combat -->				
+					<EnableBehavior Name="Combat" />
+					
+					<!-- CustomBehavior - WaitTime - wait 15 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />
+					
+					<!-- CustomBehavior - Message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
 
+					<!-- Move to -  routing -->
+					<MoveTo X="598.9691" Y="860.9452" Z="175.5455" />
+
+					<!-- Move to -  2nd ETZ - before Corla, Herald of Twilight -->
+					<MoveTo X="598.8289" Y="957.6778" Z="155.3391" />
+					
 					<!-- CustomBehavior - Message - Enabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Enabling combat." 
@@ -501,7 +525,11 @@
 									WaitTime="15000" />
 			   
 					<!-- Move to - trash in front of Corla, Herald of Twilight -->
-					<MoveTo X="572.1587" Y="930.8098" Z="155.356" />
+					<MoveTo X="573.3167" Y="925.8831" Z="155.3659" />
+					
+					<!-- CustomBehavior - WaitTime - wait 15 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />
 					
 					
 					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -693,22 +721,15 @@
 					<!-- EnableBehavior - Combat -->				
 					<EnableBehavior Name="Combat" />
 					
-					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
+					<!-- CustomBehavior - WaitTime - wait 30 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="30000" />
 					
 	
 					
 					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 					
 					
-					<!-- CustomBehavior - Message - Disabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Disabling combat." 
-										LogColor="Gold" />				
-									
-					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />
 					
 					<!-- Move to - gathering mobs -->
 					<MoveTo X="203.8236" Y="631.496" Z="82.1833" />
@@ -716,52 +737,14 @@
 					<!-- Move to - gathering mobs -->
 					<MoveTo X="231.3858" Y="589.8639" Z="74.94473" />
 					
-					<!-- CustomBehavior - Message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />				
-									
-					<!-- EnableBehavior - Combat -->				
-					<EnableBehavior Name="Combat" />
-					
-					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
-					
-	
-					
-					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
-					
-					
-					
-					<!-- CustomBehavior - Message - Disabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Disabling combat." 
-										LogColor="Gold" />				
-									
-					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />
-					
 					<!-- Move to - gathering mobs -->
 					<MoveTo X="223.1494" Y="556.3195" Z="75.36253" />
 					
 					<!-- Move to - gathering mobs -->
 					<MoveTo X="259.19" Y="546.7748" Z="71.95646" />
-					
-					<!-- CustomBehavior - Message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />				
-									
-					<!-- EnableBehavior - Combat -->				
-					<EnableBehavior Name="Combat" />
-					
-					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+												
 					
 	
-					
 					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 					
 					
@@ -830,9 +813,6 @@
 					<CustomBehavior File="Message" 
 										Text="Avoiding Karsh Steelbender." 
 										LogColor="Gold" />
-					
-					<MoveTo X="213.5308" Y="737.2442" Z="99.27363" />
-					<!-- Move to - avoiding Karsh -->
 					
 					<MoveTo X="187.5205" Y="787.395" Z="95.94901" />
 					<!-- Move to - avoiding Karsh -->
