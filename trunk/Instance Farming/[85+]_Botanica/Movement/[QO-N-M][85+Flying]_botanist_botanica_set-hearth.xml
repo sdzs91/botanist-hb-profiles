@@ -47,26 +47,23 @@
 		<!-- Level check -->
 		<If Condition="Me.Level &gt;= 85">
 		
-		 	<!-- UserSettings -->
-			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
-							FindMountAutomatically="True"
-							GroundMountFarmingMode="False"
-							HarvestHerbs="False"
-							HarvestMinerals="False"
-							KillBetweenHotspots="True"
-							LogoutForInactivity="False"
-							LogoutInactivityUseForceQuit="False"
-							LootMobs="True"
-							LootRadius="25"
-							MountName=""
-							NinjaSkin="False"
-							ProfileDebuggingMode="False"
-							PullDistance="25"
-							RessAtSpiritHealers="False"
-							SkinMobs="False"
-							UseMount="True" 
-							UseRandomMount="False" />			
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="True"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootMobs="True"
+						LootRadius="25"
+						MountName=""
+						NinjaSkin="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />			
 							
 			<!-- If our hearthstone is not set to Area 52 -->
 			<If Condition="Me.HearthstoneAreaId != 5142">

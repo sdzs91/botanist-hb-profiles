@@ -48,26 +48,23 @@
 
 		<If Condition="Me.Level &gt;= 85">
 		
-		 	<!-- UserSettings -->
-			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
-							FindMountAutomatically="True"
-							GroundMountFarmingMode="False"
-							HarvestHerbs="False"
-							HarvestMinerals="False"
-							KillBetweenHotspots="True"
-							LogoutForInactivity="False"
-							LogoutInactivityUseForceQuit="False"
-							LootMobs="True"
-							LootRadius="65"
-							MountName=""
-							NinjaSkin="False"
-							ProfileDebuggingMode="False"
-							PullDistance="25"
-							RessAtSpiritHealers="False"
-							SkinMobs="False"
-							UseMount="True" 
-							UseRandomMount="False" />
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="True"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootMobs="True"
+						LootRadius="25"
+						MountName=""
+						NinjaSkin="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />	
 						
 			<!-- Infinite loop -->
 			<While Condition="true" >	
@@ -440,6 +437,26 @@
 					<!-- Move to - gathering mobs -->
 					<MoveTo X="-11.59121" Y="392.2809" Z="-27.92147" />
 
+					<!-- CustomBehavior - Message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- EnableBehavior - Combat -->				
+					<EnableBehavior Name="Combat" />
+					
+					<!-- CustomBehavior - WaitTime - wait 10 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="10000" />	
+									
+					<!-- CustomBehavior - Message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />				
+									
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
+
 					<!-- Move to - gathering mobs -->
 					<MoveTo X="11.13739" Y="372.5763" Z="-26.70484" />
 					
@@ -535,9 +552,9 @@
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.MapId == 553">	
 
-					<!-- CustomBehavior - Message - We have more than 15 empty bag slots. Our gear is above 30% durability and we have Clefthoof Ribs -->
+					<!-- CustomBehavior - Message - We have more than 15 empty bag slots and our gear is above 30% durability -->
 					<CustomBehavior File="Message" 
-									Text="We have more than 15 empty bag slots. Our gear is above 30% durability and we have Clefthoof Ribs."
+									Text="We have more than 15 empty bag slots and our gear is above 30% durability."
 									LogColor="Plum" />
 				
 					<!-- CustomBehavior - WaitTime - wait 3 seconds - delay -->

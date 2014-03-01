@@ -49,17 +49,16 @@
 						HarvestHerbs="False"
 						HarvestMinerals="False"
 						KillBetweenHotspots="True"
-						LogoutForInactivity="True"
-						LogoutInactivityUseForceQuit="True"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
 						LootMobs="True"
-						LootRadius="65"
+						LootRadius="25"
 						MountName=""
 						NinjaSkin="False"
-						PullDistance="25"
-						RessAtSpiritHealers="True"
+						RessAtSpiritHealers="False"
 						SkinMobs="False"
 						UseMount="True" 
-						UseRandomMount="False" />
+						UseRandomMount="False" />	
 
 		<!-- Level check 85+ -->
 		<If Condition="Me.Level &gt;= 85">

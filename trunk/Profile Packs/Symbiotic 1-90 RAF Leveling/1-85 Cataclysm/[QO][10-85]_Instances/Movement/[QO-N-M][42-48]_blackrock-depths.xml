@@ -55,7 +55,7 @@
 							
 			<!-- Booster UserSettings -->
 			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
+							FindMountAutomatically="True"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
@@ -63,10 +63,9 @@
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
 							LootMobs="True"
-							LootRadius="15"
+							LootRadius="35"
 							MountName=""
 							NinjaSkin="False"
-							ProfileDebuggingMode="False"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseMount="True" 
@@ -561,7 +560,6 @@
 			
 			<!-- RAF UserSettings -->
 			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
@@ -572,11 +570,9 @@
 							LootRadius="15"
 							MountName=""
 							NinjaSkin="False"
-							ProfileDebuggingMode="False"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseMount="True" 
-							UseRandomMount="False" />
 							UseRandomMount="False" />
 					
 			<!-- Kalimdor -->

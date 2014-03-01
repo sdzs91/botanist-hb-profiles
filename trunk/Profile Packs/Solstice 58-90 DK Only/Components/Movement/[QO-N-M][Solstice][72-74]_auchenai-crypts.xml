@@ -56,7 +56,6 @@
 						
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
@@ -68,8 +67,6 @@
 							LootRadius="35"
 							MountName=""
 							NinjaSkin="False"
-							ProfileDebuggingMode="False"
-							PullDistance="25"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseMount="True" 

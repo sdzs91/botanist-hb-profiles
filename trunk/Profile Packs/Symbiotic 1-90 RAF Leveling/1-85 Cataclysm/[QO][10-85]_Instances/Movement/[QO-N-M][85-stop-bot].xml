@@ -46,22 +46,21 @@
 		<!-- *******************************************************  Booster ************************************************************** -->
 		
 		<!-- Booster UserSettings -->
-		<CustomBehavior File="UserSettings"
-						AdvancedSettingsMode="True"
-						GroundMountFarmingMode="False"
-						HarvestHerbs="False"
-						HarvestMinerals="False"
-						KillBetweenHotspots="True"
-						LogoutForInactivity="False"
-						LogoutInactivityUseForceQuit="False"
-						LootMobs="True"
-						LootRadius="15"
-						MountName=""
-						NinjaSkin="False"
-						ProfileDebuggingMode="False"
-						RessAtSpiritHealers="False"
-						SkinMobs="False"
-						UseMount="True" 
+			<CustomBehavior File="UserSettings"
+							FindMountAutomatically="True"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootMobs="True"
+							LootRadius="35"
+							MountName=""
+							NinjaSkin="False"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseMount="True" 
 							UseRandomMount="False" />
 							
 		<!-- Profile message - We are a Booster -->
@@ -116,7 +115,6 @@
 		
 			<!-- RAF UserSettings -->
 			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
@@ -127,7 +125,6 @@
 							LootRadius="15"
 							MountName=""
 							NinjaSkin="False"
-							ProfileDebuggingMode="False"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseMount="True" 

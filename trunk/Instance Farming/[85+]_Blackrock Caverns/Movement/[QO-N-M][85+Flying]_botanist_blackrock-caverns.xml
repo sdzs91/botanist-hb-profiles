@@ -47,24 +47,23 @@
 		<!-- Level check -->
 		<If Condition="Me.Level &gt;= 85">
 		
-		 	<!-- UserSettings -->
-			<CustomBehavior File="UserSettings"
-							FindMountAutomatically="True"
-							GroundMountFarmingMode="False"
-							HarvestHerbs="False"
-							HarvestMinerals="False"
-							KillBetweenHotspots="True"
-							LogoutForInactivity="True"
-							LogoutInactivityUseForceQuit="True"
-							LootMobs="True"
-							LootRadius="65"
-							MountName=""
-							NinjaSkin="False"
-							PullDistance="25"
-							RessAtSpiritHealers="True"
-							SkinMobs="False"
-							UseMount="True" 
-							UseRandomMount="False" />							
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="True"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootMobs="True"
+						LootRadius="25"
+						MountName=""
+						NinjaSkin="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />							
 							
 			<!-- If we are in Kalimdor -->
 			<If Condition="Me.MapId == 1">
