@@ -980,25 +980,6 @@
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="5000" />
 		
-		
-			<!-- ************************************************** Moving to Darnassus ************************************************************** -->	
-		
-		
-			<!-- Profile message - Moving to Darnassus flight master -->
-			<CustomBehavior File="Message" 
-							Text="Moving to the Darnassus flight master."  
-							LogColor="Cyan" />				
-							
-			<!-- Fly to - Darnassus flight master -->				
-			<CustomBehavior File="FlyTo" 
-							X="9969.841" Y="2619.142" Z="1316.105" />
-
-			<!-- Forced dismount -->	
-			<CustomBehavior File="ForcedDismount" />
-
-			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="5000" />
 							
 							
 			<!-- ************************************************** Moving to Exodar ************************************************************** -->	
@@ -1009,24 +990,17 @@
 							Text="Moving to Exodar."  
 							LogColor="Cyan" />				
 							
+			<!-- Fly to - Rut'theran Village flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="7459.9" Y="-326.56" Z="8.089913" />				
+							
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />				
 							
 			<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
 							UseMount="False" />				
-							
-			<!-- Move to - Rut'theran Village portal -->
-			<MoveTo X="9946.279" Y="2611.43" Z="1316.255" />				
-							
-			<!-- Go through the portal -->
-			<CustomBehavior File="Misc\InInstance" 
-							X="9946.376" Y="2622.37" Z="1317.054" />				
-							
-			<!-- UserSettings -->
-			<CustomBehavior File="UserSettings"
-							UseMount="True" />				
-							
+
 			<!-- Move to - Exodar boat dock -->
 			<MoveTo X="8344.454" Y="1161.767" Z="4.52366" />				
 							
@@ -1099,9 +1073,48 @@
 
 			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
+							WaitTime="5000" />
+
+			<!-- Profile message - Moving to the Exodar boat docks -->
+			<CustomBehavior File="Message" 
+							Text="Moving to the Exodar boat docks."  
+							LogColor="Cyan" />				
+							
+			<!-- Move to - Exodar boat dock -->
+			<MoveTo X="-4254.151" Y="-11445.36" Z="10.65882" />				
+							
+			<!-- Move to - Exodar boat dock -->
+			<MoveTo X="-4260.03" Y="-11331.06" Z="5.455931" />				
+							
+			<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
 							WaitTime="5000" />				
+
+			<!-- Custom behavior - UseTransport	- Exodar to Rut'theran Village -->	
+			<CustomBehavior File="UseTransport" 
+							TransportId="181646" 
+							WaitAtX="-4260.03" 
+							WaitAtY="-11331.06" 
+							WaitAtZ="5.455931"
+							TransportStartX="-4264.996" 
+							TransportStartY="-11317.2012" 
+							TransportStartZ="-0.004048776"
+							StandOnX="-4261.301" 
+							StandOnY="-11317.21" 
+							StandOnZ="5.102967"
+							TransportEndX="8346.647" 
+							TransportEndY="1177.085008" 
+							TransportEndZ="-0.021793887"	
+							GetOffX="8342.843" 
+							GetOffY="1160.544" 
+							GetOffZ="4.629201" />				
 							
-							
+			<!-- Fly to - Rut'theran Village flight master -->				
+			<CustomBehavior File="FlyTo" 
+							X="7459.9" Y="-326.56" Z="8.089913" />
+
+	
+	
 			<!-- ************************************************** Moving to Ratchet ************************************************************** -->				
 							
 										
