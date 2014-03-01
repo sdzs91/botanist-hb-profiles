@@ -46,25 +46,23 @@
 		<ClearVendor />
 		<ClearMailbox />
 		
-		<!-- UserSettings -->
-		<CustomBehavior File="UserSettings"
-						AdvancedSettingsMode="True"
-						FindMountAutomatically="True"
-						GroundMountFarmingMode="False"
-						HarvestHerbs="False"
-						HarvestMinerals="False"
-						KillBetweenHotspots="False"
-						LogoutForInactivity="False"
-						LogoutInactivityUseForceQuit="False"
-						LootMobs="True"
-						LootRadius="5"
-						MountName=""
-						NinjaSkin="False"
-						ProfileDebuggingMode="False"
-						RessAtSpiritHealers="False"
-						SkinMobs="False"
-						UseMount="True" 
-						UseRandomMount="False" />
+		 	<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							FindMountAutomatically="True"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootMobs="True"
+							LootRadius="25"
+							MountName=""
+							NinjaSkin="False"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseMount="True" 
+							UseRandomMount="False" />
 						
 		<If Condition="Me.MapId == 0" > 
 			<CustomBehavior File="Message" Text="I'm am somewhere in Eastern Kingdoms. I am flying to the Deepholm portal in Stormwind" LogColor="Lime" />

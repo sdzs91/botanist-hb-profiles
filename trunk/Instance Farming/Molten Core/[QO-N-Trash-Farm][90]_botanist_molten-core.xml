@@ -64,7 +64,7 @@
 		<ClearVendor />
 		<ClearMailbox />
 
-		<CustomBehavior File="UserSettings" UseMount="True" LootMobs="True" PullDistance="1" KillBetweenHotspots="True" HarvestHerbs="False" HarvestMinerals="False" LogoutForInactivity="True" />
+		<CustomBehavior File="UserSettings" UseMount="True" LootMobs="True" KillBetweenHotspots="True" HarvestHerbs="False" HarvestMinerals="False" LogoutForInactivity="True" />
 		
 				<If Condition="((!HasQuest(7848)) &amp;&amp; (!IsQuestCompleted(7848)))" >
 					<CustomBehavior File="Message" Text="You must be attuned to Molten Core to run this profile!." LogColor="Lime" />

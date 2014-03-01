@@ -34,22 +34,19 @@
 							Text="We meet the level requirements to run this profile." 
 							LogColor="Gold" />
 			
-			<!-- UserSettings -->
+		 	<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"
-							AdvancedSettingsMode="True"
 							FindMountAutomatically="True"
 							GroundMountFarmingMode="False"
 							HarvestHerbs="False"
 							HarvestMinerals="False"
-							KillBetweenHotspots="False"
+							KillBetweenHotspots="True"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
-							LootMobs="False"
-							LootRadius="5"
+							LootMobs="True"
+							LootRadius="25"
 							MountName=""
 							NinjaSkin="False"
-							ProfileDebuggingMode="False"
-							PullDistance="1"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseMount="True" 
