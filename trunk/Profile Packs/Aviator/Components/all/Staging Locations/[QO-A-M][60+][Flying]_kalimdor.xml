@@ -931,7 +931,7 @@
 							
 			<!-- Fly to - Rut'theran Village flight master -->				
 			<CustomBehavior File="FlyTo" 
-							X="7459.9" Y="-326.56" Z="8.089913" />
+							X="8380.307" Y="981.0184" Z="30.64032" />
 
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -985,9 +985,9 @@
 			<!-- ************************************************** Moving to Exodar ************************************************************** -->	
 		
 		
-			<!-- Profile message - Moving to Exodar -->
+			<!-- Profile message - Moving to Exodar by way of the boat in Rut'theran Village -->
 			<CustomBehavior File="Message" 
-							Text="Moving to Exodar."  
+							Text="Moving to Exodar by way of the boat in Rut'theran Village."  
 							LogColor="Cyan" />				
 							
 			<!-- Fly to - Rut'theran Village flight master -->				
@@ -1124,7 +1124,8 @@
 							LogColor="Cyan" />				
 							
 			<!-- Move to - Ratchet flight master -->
-			<MoveTo X="-1933.27" Y="-11954.6" Z="57.19" />				
+			<CustomBehavior File="FlyTo" 
+							X="-1933.27" Y="-11954.6" Z="57.19" />				
 							
 			<!-- Forced dismount -->	
 			<CustomBehavior File="ForcedDismount" />
@@ -1140,7 +1141,6 @@
 			<CustomBehavior File="Message" 
 							Text="Waiting for the boat."  
 							LogColor="Cyan" />	
-				
 				
 			<!-- Custom behavior - UseTransport	- Ratchet to Booty Bay -->
 			<CustomBehavior File="UseTransport"
