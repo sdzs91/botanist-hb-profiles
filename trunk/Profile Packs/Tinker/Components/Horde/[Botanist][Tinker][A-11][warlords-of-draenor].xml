@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-<Name>[Botanist][Tinker][H-9][mist-of-pandaria]</Name>
+<Name>[Botanist][Tinker][A-11][warlords-of-draenor]</Name>
 
 <MinLevel>1</MinLevel>
 <MaxLevel>151</MaxLevel>
@@ -40,10 +40,30 @@
 <ClearMailbox />
 	
 	<QuestOrder>
+	
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						AdvancedSettingsMode="True"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="False"
+						LogoutForInactivity="True"
+						LogoutInactivityUseForceQuit="True"
+						LootMobs="False"
+						LootRadius="1"
+						MountName=""
+						NinjaSkin="False"
+						ProfileDebuggingMode="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />
 			
-		<!-- Profile message - All checks complete: Mist of Pandaria -->
+		<!-- Profile message - All checks complete -->
 		<CustomBehavior File="Message" 
-						Text="All checks complete: Mist of Pandaria."  
+						Text="All checks complete: Classic."  
 						LogColor="Orange" />
 						
 		<!-- CustomBehavior - RunMacro - dance -->				

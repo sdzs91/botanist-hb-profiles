@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-<Name>[Botanist][Tinker][H-5][classic]</Name>
+<Name>[Botanist][Tinker][A][reset]</Name>
 
 <MinLevel>1</MinLevel>
 <MaxLevel>151</MaxLevel>
@@ -40,21 +40,33 @@
 <ClearMailbox />
 	
 	<QuestOrder>
+	
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="False"
+						LogoutForInactivity="True"
+						LogoutInactivityUseForceQuit="True"
+						LootMobs="False"
+						LootRadius="1"
+						MountName=""
+						NinjaSkin="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />
 			
-		<!-- Profile message - All checks complete -->
-		<CustomBehavior File="Message" 
-						Text="All checks complete: Classic."  
-						LogColor="Orange" />
-						
-		<!-- CustomBehavior - RunMacro - dance -->				
-		<CustomBehavior File="RunMacro" 
-						Macro="/Dance" />				
-		
-		<!-- CustomBehavior - WaitTimer - wait 5 minutes - delay -->
+		<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
 		<CustomBehavior File="WaitTimer" 
-						WaitTime="300000"  />
+						WaitTime="1000" />	
+
+		<!--  CustomBehavior - LoadProfile -->				
+		<CustomBehavior File="LoadProfile" 
+						ProfileName="..\[Botanist][Tinker][A-6][classic]" />
 						
 	</QuestOrder>
 
 </HBProfile>
-

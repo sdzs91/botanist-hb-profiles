@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-<Name>[Botanist][Tinker][H-1]race-check]</Name>
+<Name>[Botanist][Tinker][A-1]race-check]</Name>
 
 <MinLevel>1</MinLevel>
 <MaxLevel>151</MaxLevel>
@@ -40,6 +40,24 @@
 <ClearMailbox />
 	
 	<QuestOrder>
+	
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="False"
+						LogoutForInactivity="True"
+						LogoutInactivityUseForceQuit="True"
+						LootMobs="False"
+						LootRadius="1"
+						MountName=""
+						NinjaSkin="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />
 		
 		<!-- Profile message - Checking the curent characters race -->
 		<CustomBehavior File="Message" 
@@ -50,12 +68,12 @@
 		<CustomBehavior File="WaitTimer" 
 						WaitTime="1000" />
 		
-		<!-- If we are a NightElf -->
-		<If Condition="(Me.Race == WoWRace.NightElf)">
+		<!-- If we are a BloodElf -->
+		<If Condition="(Me.Race == WoWRace.BloodElf)">
 		
-			<!-- Profile message - We are currently leveling a NightElf -->
+			<!-- Profile message - We are currently leveling a BloodElf -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling a NightElf." 
+							Text="We are currently leveling a BloodElf." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
@@ -64,16 +82,16 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-2][class-check]" />				
+							ProfileName="[Botanist][Tinker][H-2][class-check]" />				
 							
-		</If>	<!-- If we are a NightElf -->
+		</If>	<!-- If we are a BloodElf -->
 		
-		<!-- If we are a Worgen -->
-		<If Condition="(Me.Race == WoWRace.Worgen)">
+		<!-- If we are a Goblin -->
+		<If Condition="(Me.Race == WoWRace.Goblin)">
 		
-			<!-- Profile message - We are currently leveling a Worgen -->
+			<!-- Profile message - We are currently leveling a Goblin -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling a Worgen." 
+							Text="We are currently leveling a Goblin." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
@@ -82,9 +100,27 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-2][class-check]" />				
+							ProfileName="[Botanist][Tinker][H-2][class-check]" />				
 							
-		</If>	<!-- If we are a NightElf -->
+		</If>	<!-- If we are a Goblin -->
+		
+		<!-- If we are a Undead -->
+		<If Condition="(Me.Race == WoWRace.Undead)">
+		
+			<!-- Profile message - We are currently leveling a Undead -->
+			<CustomBehavior File="Message" 
+							Text="We are currently leveling a Undead." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />				
+
+			<!--  CustomBehavior - LoadProfile -->				
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="[Botanist][Tinker][H-2][class-check]" />				
+							
+		</If>	<!-- If we are a Undead -->
 		
 		<!-- If we are a Pandaren -->
 		<If Condition="(Me.Race == WoWRace.Pandaren)">
@@ -94,22 +130,22 @@
 							Text="We are currently leveling a Pandaren." 
 							LogColor="Plum" />
 							
-			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+			<!-- CustomBehavior - Wait timer - wait 3 seconds - delay -->
 			<CustomBehavior File="WaitTimer" 
-							WaitTime="1000" />	
+							WaitTime="3000" />				
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-2][class-check]" />				
+							ProfileName="[Botanist][Tinker][H-2][class-check]" />				
 							
-		</If>	<!-- If we are a NightElf -->
+		</If>	<!-- If we are a Pandaren -->
 		
-		<!-- If we are a Human -->
-		<If Condition="(Me.Race == WoWRace.Human)">
+		<!-- If we are a Troll -->
+		<If Condition="(Me.Race == WoWRace.Troll)">
 		
-			<!-- Profile message - We are currently leveling a Human -->
+			<!-- Profile message - We are currently leveling a Troll -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling a Human." 
+							Text="We are currently leveling a Troll." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
@@ -118,16 +154,16 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-2][class-check]" />				
+							ProfileName="[Botanist][Tinker][H-2][class-check]" />				
 							
-		</If>	<!-- If we are a NightElf -->
+		</If>	<!-- If we are a Troll -->
 		
-		<!-- If we are a Gnome -->
-		<If Condition="(Me.Race == WoWRace.Gnome)">
+		<!-- If we are a Orc -->
+		<If Condition="(Me.Race == WoWRace.Orc)">
 		
-			<!-- Profile message - We are currently leveling a Gnome -->
+			<!-- Profile message - We are currently leveling a Orc -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling a Gnome." 
+							Text="We are currently leveling a Orc." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
@@ -136,16 +172,16 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-2][class-check]" />				
+							ProfileName="[Botanist][Tinker][H-2][class-check]" />				
 							
-		</If>	<!-- If we are a NightElf -->
+		</If>	<!-- If we are a Orc -->
 		
-		<!-- If we are a Dwarf -->
-		<If Condition="(Me.Race == WoWRace.Dwarf)">
+		<!-- If we are a Tauren -->
+		<If Condition="(Me.Race == WoWRace.Tauren)">
 		
-			<!-- Profile message - We are currently leveling a Dwarf -->
+			<!-- Profile message - We are currently leveling a Tauren -->
 			<CustomBehavior File="Message" 
-							Text="We are currently leveling a Dwarf." 
+							Text="We are currently leveling a Tauren." 
 							LogColor="Plum" />
 							
 			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
@@ -154,27 +190,9 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-2][class-check]" />				
+							ProfileName="[Botanist][Tinker][H-2][class-check]" />				
 							
-		</If>	<!-- If we are a NightElf -->
-
-		<!-- If we are a Draenei -->
-		<If Condition="(Me.Race == WoWRace.Draenei)">
-		
-			<!-- Profile message - We are currently leveling a Draenei -->
-			<CustomBehavior File="Message" 
-							Text="We are currently leveling a Draenei." 
-							LogColor="Plum" />
-							
-			<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
-			<CustomBehavior File="WaitTimer" 
-							WaitTime="1000" />	
-
-			<!--  CustomBehavior - LoadProfile -->				
-			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-2][class-check]" />				
-							
-		</If>	<!-- If we are a NightElf -->
+		</If>	<!-- If we are a Tauren -->
 		
 	</QuestOrder>
 

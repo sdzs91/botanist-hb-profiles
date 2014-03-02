@@ -206,7 +206,7 @@
 					<CustomBehavior File="UserSettings" 
 									StopBot="true" />				
 									
-				</If>
+				</If>	<!-- If we are in Plaguelands: The Scarlet Enclave -->
 				
 			</If>	<!-- If we are a Worgen -->
 		
@@ -232,9 +232,32 @@
 				</If>	<!-- If we are in The Wandering Isle -->
 				 
 			</If>	<!-- If we are a Pandaren -->
-		
-		</If>	<!-- If our level >= 1 and <= 15 -->
-	
+
+			<!-- If we are a Goblin -->
+			<If Condition="(Me.Race == WoWRace.Goblin)">
+			
+				<!-- If we are in Kezan or The Lost Isles -->
+				<If Condition="(Me.ZoneId == 4737) || (Me.ZoneId == 4720)">
+				
+					<!-- Profile message - Your character must exit the starting zone. Then restart the profile in Stormwind -->
+					<CustomBehavior File="Message" 
+									Text="Your character must exit the starting zone. Then restart the profile in Stormwind." 
+									LogColor="Orange" />
+									
+					<!-- CustomBehavior - Wait timer - wait 3 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+									
+					<!-- CustomBehavior - UserSettings - StopBot -->				
+					<CustomBehavior File="UserSettings" 
+									StopBot="true" />				
+				
+				</If>	<!-- If we are in Kezan or The Lost Isles -->
+				
+			</If>	<!-- If we are a Goblin -->	
+				
+		</If>	<!-- If our level >= 1 and <= 101 -->
+
 		<!-- Faction check - Alliance -->
 		<If Condition="Me.IsAlliance" >		
 
@@ -265,7 +288,7 @@
 								
 				<!--  CustomBehavior - LoadProfile -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="Components\Alliance\[Botanist][Tinker][A-1]race-check]" />
+								ProfileName="Components\Horde\[Botanist][Tinker][H-1]race-check]" />
 
 			</Else>		<!-- Else we are Horde -->
 			

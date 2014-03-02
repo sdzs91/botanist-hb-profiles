@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-<Name>[Botanist][Tinker][H-2][class-check]</Name>
+<Name>[Botanist][Tinker][A-2][class-check]</Name>
 
 <MinLevel>1</MinLevel>
 <MaxLevel>151</MaxLevel>
@@ -40,6 +40,24 @@
 <ClearMailbox />
 	
 	<QuestOrder>
+	
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="False"
+						LogoutForInactivity="True"
+						LogoutInactivityUseForceQuit="True"
+						LootMobs="False"
+						LootRadius="1"
+						MountName=""
+						NinjaSkin="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />
 		
 		<!-- Profile message - Checking the curent characters class -->
 		<CustomBehavior File="Message" 
@@ -64,7 +82,7 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-3][level-check]" />				
+							ProfileName="[Botanist][Tinker][H-3][level-check]" />				
 							
 		</If>	<!-- If we are Hunter-->
 		
@@ -82,7 +100,7 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-3][level-check]" />				
+							ProfileName="[Botanist][Tinker][H-3][level-check]" />				
 							
 		</If>	<!-- If we are DeathKnight-->
 		
@@ -100,7 +118,7 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-3][level-check]" />				
+							ProfileName="[Botanist][Tinker][H-3][level-check]" />				
 							
 		</If>	<!-- If we are Druid-->
 		
@@ -118,7 +136,7 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-3][level-check]" />				
+							ProfileName="[Botanist][Tinker][H-3][level-check]" />				
 							
 		</If>	<!-- If we are Mage-->
 		
@@ -136,7 +154,7 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-3][level-check]" />				
+							ProfileName="[Botanist][Tinker][H-3][level-check]" />				
 							
 		</If>	<!-- If we are Paladin-->
 		
@@ -154,7 +172,7 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-3][level-check]" />				
+							ProfileName="[Botanist][Tinker][H-3][level-check]" />				
 							
 		</If>	<!-- If we are Priest-->
 		
@@ -172,7 +190,7 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-3][level-check]" />				
+							ProfileName="[Botanist][Tinker][H-3][level-check]" />				
 							
 		</If>	<!-- If we are Rogue-->
 		
@@ -190,7 +208,7 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-3][level-check]" />				
+							ProfileName="[Botanist][Tinker][H-3][level-check]" />				
 							
 		</If>	<!-- If we are Shaman-->
 		
@@ -208,7 +226,7 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-3][level-check]" />				
+							ProfileName="[Botanist][Tinker][H-3][level-check]" />				
 							
 		</If>	<!-- If we are Warlock-->
 		
@@ -226,7 +244,7 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-3][level-check]" />				
+							ProfileName="[Botanist][Tinker][H-3][level-check]" />				
 							
 		</If>	<!-- If we are Warrior-->
 		
@@ -244,7 +262,7 @@
 
 			<!--  CustomBehavior - LoadProfile -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="[Botanist][Tinker][A-3][level-check]" />				
+							ProfileName="[Botanist][Tinker][H-3][level-check]" />				
 							
 		</If>	<!-- If we are Warrior-->
 		
