@@ -41,12 +41,12 @@
 	
 	<QuestOrder>
 			
-		<!-- If we are in Orgrimmar -->
-		<If Condition="Me.ZoneId == 1637">
+		<!-- If we are in Kalidor -->
+		<If Condition="Me.MapId == 1">
 		
-			<!-- CustomBehavior - Message - We are in Orgrimmar. Navigating to Valley of Trials -->
+			<!-- CustomBehavior - Message - We are in Kalidor. Navigating to Valley of Trials -->
 			<CustomBehavior File="Message" 
-							Text="We are in Orgrimmar. Navigating to Valley of Trials." 
+							Text="We are in Kalidor. Navigating to Valley of Trials." 
 							LogColor="Plum" /> 
 							
 			<!-- Move to - Valley of Trials -->	
@@ -70,11 +70,11 @@
 							Text="We are in Valley of Trials." 
 							LogColor="Plum" />
 		
-			<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A-5][profession-check] -->				
+			<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][H-5][profession-check] -->				
 			<CustomBehavior File="LoadProfile" 
 							ProfileName="..\[Botanist][Tinker][H-5][profession-check]" />
 		
-		</If>	<!-- If we are in Eastern Kingdoms -->
+		</If>	<!-- If we are in Valley of Trials -->
 
 	</QuestOrder>
 

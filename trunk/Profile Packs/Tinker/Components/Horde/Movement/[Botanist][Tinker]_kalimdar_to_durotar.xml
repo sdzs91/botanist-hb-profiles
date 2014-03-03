@@ -72,7 +72,7 @@
 		
 			<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][H-6][classic] -->				
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="..\[Botanist][Tinker][H-6][classic]" />
+							ProfileName="..\[Botanist][Tinker][H-5][profession-check]" />
 		
 		</If>	<!-- If we are in Durotar -->
 
