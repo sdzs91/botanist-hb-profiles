@@ -69,7 +69,7 @@
 						WaitTime="1000" />
 		
 		<!-- If our level >= 1 and <= 5 -->
-		<If Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt;= 5" >	
+		<If Condition="Me.Level &gt;= 1 &amp;&amp; Me.Level &lt;= 4" >	
 			
 			<!-- If we are in Sunstrider Isle -->
 			<If Condition="Me.ZoneId == 6455">				
@@ -142,6 +142,83 @@
 								ProfileName="Movement\[Botanist][Tinker]_undercity_to_orgrimmar" />				
 							
 			</If>	<!-- If we are in Eastern Kingdoms -->
+
+		</If>	<!-- If our level >= 1 and <= 4 -->	
+			
+		<!-- If our level >= 5 and < 10 -->
+		<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 58" >
+
+			<!-- If we are in Sunstrider Isle -->
+			<If Condition="Me.ZoneId == 6455">				
+		
+				<!-- Profile message - We are currently in Sunstrider Isle. We need to be in Kalimdor. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are currently in Sunstrider Isle. We need to be in Kalimdor. Initiating movement procedures." 
+								LogColor="Gold" />
+				
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+		
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_sunstrider_isle_to_eversong_woods -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_sunstrider_isle_to_eversong_woods" />				
+							
+			</If>	<!-- If we are in Sunstrider Isle -->				
+
+			<!-- If we are in Eversong Woods -->
+			<If Condition="Me.ZoneId == 3430">				
+		
+				<!-- Profile message - We are currently in Eversong Woods. We need to be in Kalimdor. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are currently in Eversong Woods. We need to be in Kalimdor. Initiating movement procedures." 
+								LogColor="Gold" />
+				
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+		
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_eversong_woods_to_undercity -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_eversong_woods_to_undercity" />				
+							
+			</If>	<!-- If we are in Eversong Woods -->
+			
+			<!-- If we are in Eastern Kingdoms -->
+			<If Condition="Me.MapId == 0">				
+		
+				<!-- Profile message - We are currently in Eastern Kingdoms. We need to be in Kalimdor. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are currently in Eastern Kingdoms. We need to be in Kalimdor. Initiating movement procedures." 
+								LogColor="Gold" />
+				
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+		
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_undercity_to_orgrimmar -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_undercity_to_orgrimmar" />				
+							
+			</If>	<!-- If we are in Eastern Kingdoms -->
+		
+			<!-- If we are in Kalimdor -->
+			<If Condition="Me.MapId == 1">				
+		
+				<!-- Profile message - We are currently in Kalimdor. We need to be in Durator. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are currently in Kalimdor. We need to be in Durator. Initiating movement procedures." 
+								LogColor="Gold" />
+				
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+		
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_kalimdar_to_durotar -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_kalimdar_to_durotar" />				
+							
+			</If>	<!-- If we are in Kalimdor -->
 			
 			
 			
@@ -152,7 +229,16 @@
 			
 			
 
-		</If>	<!-- If our level >= 1 and <= 5 -->	
+		</If>	<!-- If our level >= 58 and < 68 -->	
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 		<!-- If our level >= 58 and < 68 -->
 		<If Condition="Me.Level &gt;= 58 &amp;&amp; Me.Level &lt; 68" >

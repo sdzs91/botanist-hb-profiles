@@ -65,7 +65,7 @@
 
 		<!--  CustomBehavior - LoadProfile -->				
 		<CustomBehavior File="LoadProfile" 
-						ProfileName="..\[Botanist][Tinker][A-6][classic]" />
+						ProfileName="..\[Botanist][Tinker][H-6][classic]" />
 						
 	</QuestOrder>
 
