@@ -532,7 +532,7 @@
 			
 				<!-- CustomBehavior - Message - We are in Elwynn Forest. Moving to the Tinker zone -->
 				<CustomBehavior File="Message" 
-								Text="We are in Elwynn Forest. Moving to the Tinker zone." 
+								Text="We are in Elwynn Forest. Checking our hearthstone location" 
 								LogColor="Plum" />		
 								
 				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A][hearthstone] -->

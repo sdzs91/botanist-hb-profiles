@@ -202,6 +202,24 @@
 							
 			</If>	<!-- If we are in Eastern Kingdoms -->
 		
+			<!-- If we are in Durotar -->
+			<If Condition="Me.ZoneId == 14">				
+		
+				<!-- Profile message - We are currently in Durotar -->
+				<CustomBehavior File="Message" 
+								Text="We are currently in Durotar." 
+								LogColor="Gold" />
+				
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+		
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][H-6][classic] -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="[Botanist][Tinker][H-6][classic]" />				
+							
+			</If>	<!-- If we are in Kalimdor -->
+		
 			<!-- If we are in Kalimdor -->
 			<If Condition="Me.MapId == 1">				
 		
@@ -219,17 +237,8 @@
 								ProfileName="Movement\[Botanist][Tinker]_kalimdar_to_durotar" />				
 							
 			</If>	<!-- If we are in Kalimdor -->
-			
-			
-			
-			
-			
-			
-			
-			
-			
 
-		</If>	<!-- If our level >= 58 and < 68 -->	
+		</If>	<!-- If our level >= 5 and < 10 -->	
 			
 			
 			
@@ -240,12 +249,12 @@
 			
 			
 			
-		<!-- If our level >= 58 and < 68 -->
-		<If Condition="Me.Level &gt;= 58 &amp;&amp; Me.Level &lt; 68" >
+		<!-- If our level >= 10 and < 58 -->
+		<If Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt; 58" >
 
 			
 
-		</If>	<!-- If our level >= 58 and < 68 -->
+		</If>	<!-- If our level >= 10 and < 58 -->
 		
 	</QuestOrder>
 
