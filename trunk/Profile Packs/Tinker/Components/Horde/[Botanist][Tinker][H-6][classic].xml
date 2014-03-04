@@ -2352,7 +2352,7 @@
 									<!-- CustomBehavior - Misc\SwitchTarget - X="-244.2569" Y="-2981.756" Z="94.98036" -->
 									<CustomBehavior File="Misc\SwitchTarget" 
 													MobId="3632" 
-													X="-813.1057" Y="-2028.707" Z="80.50744" />
+													X="-1149.485" Y="-2220.32" Z="87.16176" />
 								
 								</If>	<!-- If our target is not a Deviate Creeper -->
 						
@@ -2453,7 +2453,7 @@
 									<!-- CustomBehavior - Misc\SwitchTarget - X="-244.2569" Y="-2981.756" Z="94.98036" -->
 									<CustomBehavior File="Misc\SwitchTarget" 
 													MobId="3632" 
-													X="-813.1057" Y="-2028.707" Z="80.50744" />
+													X="-1149.485" Y="-2220.32" Z="87.16176" />
 								
 								</If>	<!-- If our target is not a Deviate Creeper -->
 						
