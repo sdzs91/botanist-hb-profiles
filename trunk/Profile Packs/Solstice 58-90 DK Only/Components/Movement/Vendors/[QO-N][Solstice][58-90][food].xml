@@ -880,12 +880,12 @@
 			<!-- If we are Alliance -->
 			<If Condition="Me.IsAlliance" >
 				
-				<!-- If we don't have Briny Hardcheese -->
-				<If Condition="!HasItem(35952)">
+				<!-- If we don't have Sweet Potato Bread -->
+				<If Condition="!HasItem(35950)">
 				
-					<!-- Profile message - We don't have any Briny Hardcheese -->
+					<!-- Profile message - We don't have any Sweet Potato Bread -->
 					<CustomBehavior File="Message" 
-									Text="We don't have any Briny Hardcheese."
+									Text="We don't have any Sweet Potato Bread."
 									LogColor="Orange" />
 									
 					<!-- Profile message - Moving to the innkeep to purchase some -->
@@ -893,32 +893,35 @@
 									Text="Moving to the innkeep to purchase some."
 									LogColor="Orange" />				
 				
-					<!-- Fly to - XXXXXXXXXXXXXX-->
-					<CustomBehavior File="FlyTo"
-									X="177.9547" Y="2629.776" Z="87.03335" />
+					<!-- Fly to Amber Lodge hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="3609.191" Y="5955.861" Z="167.1246" />
 					
-					<!-- Forced dismount -->				
+					<!-- Fly to - doorway of the inn -->
+					<CustomBehavior File="FlyTo" 
+									X="3617.159" Y="5923.033" Z="136.5184" />
+					
+					<!-- Custom behavior - ForcedDismount -->
 					<CustomBehavior File="ForcedDismount" />
 				
-					<!-- Move to - XXXXXXXXXXXXXXXX -->
-					<MoveTo X="189.3407" Y="2613.765" Z="87.28365" />
+					<!-- Move to - Apprentice Fraser -->
+					<MoveTo X="3639.235" Y="5883.9" Z="140.1039" />
 					
-					<!-- Interact with XXXXXXXXXXXXXXXXXXX and buy 100 Briny Hardcheese -->
+					<!-- Interact with Apprentice Fraser and buy 100 Sweet Potato Bread -->
 					<CustomBehavior File="InteractWith"
 												ObjectType="Npc"
-												GossipOptions="2"
 												Range="75"
-												MobId="16602" 
-												BuyItemId="35952" 
+												MobId="27137" 
+												BuyItemId="35950" 
 												BuyItemCount="100"
-												X="190.8758" Y="2610.927" Z="87.28384" />
+												X="3639.235" Y="5883.9" Z="140.1039" />
 
 					<!-- Wait timer - wait 45 seconds for for server lag and to give HB time to think -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="60000" />
 
-					<!-- Move to - Thrallmar flight master -->				
-					<MoveTo X="229.219" Y="2634.052" Z="87.74729" />
+					<!-- Move to - Amber Ledge flight master -->				
+					<MoveTo X="3590.851" Y="5956.689" Z="136.2039" />
 					
 				</If>	<!-- If we don't have Briny Hardcheese -->
 					
@@ -975,14 +978,14 @@
 	
 			</If>	<!-- If we are Horde -->
 			
-			<!-- If we do have Briny Hardcheese -->
-			<If Condition="HasItem(35952)">
-			
+			<!-- If we have Sweet Potato Bread or Briny Hardcheese -->
+			<If Condition="(!HasItem(35950)) || (!HasItem(35952))">
+		
 				<!-- Load profile - ..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS -->
 				<CustomBehavior File="LoadProfile" 
 										ProfileName="..\..\..\[QO-N][58-90][Solstice][Auto-Loader]_LOAD-THIS-AND-ONLY-THIS" />
 										
-			</If>	<!-- If we do have Briny Hardcheese -->
+			</If>	<!-- If we have Sweet Potato Bread or Briny Hardcheese -->
 			
 		</If>	<!-- If our level is 79-80 -->
 		
