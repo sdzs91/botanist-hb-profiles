@@ -255,7 +255,7 @@
 			   
 			   
 		<!-- If our level >= 5 and < 10 -->
-		<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 58" >
+		<If Condition="Me.Level &gt;= 5 &amp;&amp; Me.Level &lt; 10" >
 
 			<!-- If we are in Sunstrider Isle -->
 			<If Condition="Me.ZoneId == 6455">				
@@ -323,9 +323,9 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="1000" />
 		
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][H-6][classic] -->				
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][H-5][profession-check] -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="[Botanist][Tinker][H-6][classic]" />				
+								ProfileName="[Botanist][Tinker][H-5][profession-check]" />				
 							
 			</If>	<!-- If we are in Kalimdor -->
 		
@@ -352,7 +352,46 @@
 			
 			
 			
-			
+		<!-- If our level >= 10 and < 15 -->
+		<If Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt; 15" >
+		
+			<!-- If we are in Northern Barrens -->
+			<If Condition="Me.ZoneId == 17">				
+		
+				<!-- Profile message - We are currently in Northern Barrens -->
+				<CustomBehavior File="Message" 
+								Text="We are currently in Northern Barrens." 
+								LogColor="Gold" />
+				
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+		
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][H-5][profession-check] -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="[Botanist][Tinker][H-5][profession-check]" />				
+							
+			</If>	<!-- If we are in Northern Barrens -->
+		
+			<!-- If we are in Kalimdor -->
+			<If Condition="Me.MapId == 1 &amp;&amp; Me.ZoneId != 17">				
+		
+				<!-- Profile message - We are currently in Kalimdor. We need to be in Northern Barrens. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are currently in Kalimdor. We need to be in Northern Barrens. Initiating movement procedures." 
+								LogColor="Gold" />
+				
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+		
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_kalimdar_to_durotar -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_kalimdar_to_durotar" />				
+							
+			</If>	<!-- If we are in Kalimdor -->
+
+		</If>	<!-- If our level >= 5 and < 10 -->		
 			
 			
 			

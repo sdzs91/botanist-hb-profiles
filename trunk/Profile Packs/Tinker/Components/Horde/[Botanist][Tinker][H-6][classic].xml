@@ -128,7 +128,7 @@
 										Text="We have leveled up. Resetting the profile." 
 										LogColor="Plum" />
 					
-						<!-- Load profile - [Botanist][Tinker][A][reset] -->
+						<!-- Load profile - [Botanist][Tinker][H][reset] -->
 						<CustomBehavior File="LoadProfile" 
 										ProfileName="Reset\[Botanist][Tinker][H][reset]" />
 					
@@ -226,7 +226,7 @@
 			<!-- If we reached the move trigger level -->
 			<If Condition="Me.Level &gt;= 3" >
 			
-				<!-- Profile message - WWe have leveled up. Resetting the profile -->
+				<!-- Profile message - We have leveled up. Resetting the profile -->
 				<CustomBehavior File="Message" 
 								Text="We have leveled up. Resetting the profile." 
 								LogColor="Plum" />
@@ -325,7 +325,7 @@
 										Text="We have leveled up. Resetting the profile." 
 										LogColor="Plum" />
 					
-						<!-- Load profile - [Botanist][Tinker][A][reset] -->
+						<!-- Load profile - [Botanist][Tinker][H][reset] -->
 						<CustomBehavior File="LoadProfile" 
 										ProfileName="Reset\[Botanist][Tinker][H][reset]" />
 					
@@ -418,12 +418,12 @@
 			<!-- If we reached the move trigger level -->
 			<If Condition="Me.Level &gt;= 5" >
 			
-				<!-- Profile message - WWe have leveled up. Resetting the profile -->
+				<!-- Profile message - We have leveled up. Resetting the profile -->
 				<CustomBehavior File="Message" 
 								Text="We have leveled up. Resetting the profile." 
 								LogColor="Plum" />
 			
-				<!-- Load profile - [Botanist][Tinker][A][reset] -->
+				<!-- Load profile - [Botanist][Tinker][H][reset] -->
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Reset\[Botanist][Tinker][H][reset]" />
 			
@@ -512,17 +512,27 @@
 					<!-- If we reached the move trigger level -->
 					<If Condition="Me.Level &gt;= 6" >
 					
-						<!-- Profile message - WWe have leveled up. Resetting the profile -->
+						<!-- Profile message - We have leveled up. Resetting the profile -->
 						<CustomBehavior File="Message" 
 										Text="We have leveled up. Resetting the profile." 
 										LogColor="Plum" />
 					
-						<!-- Load profile - [Botanist][Tinker][A][reset] -->
+						<!-- Load profile - [Botanist][Tinker][H][reset] -->
 						<CustomBehavior File="LoadProfile" 
 										ProfileName="Reset\[Botanist][Tinker][H][reset]" />
 					
+						<!-- Else we haven't reached the move trigger level -->
+						<Else>
+						
+							<!-- CustomBehavior - Message - We are not changing locations until level 6 -->
+							<CustomBehavior File="Message" 
+											Text="We are not changing locations until level 6." 
+											LogColor="Plum" />
+											
+						</Else>	<!-- Else we haven't reached the move trigger level -->
+					
 					</If>	<!-- If we reached the move trigger level -->
-			
+
 					<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 												
@@ -719,12 +729,12 @@
 			<!-- If we reached the move trigger level -->
 			<If Condition="Me.Level &gt;= 6" >
 			
-				<!-- Profile message - WWe have leveled up. Resetting the profile -->
+				<!-- Profile message - We have leveled up. Resetting the profile -->
 				<CustomBehavior File="Message" 
 								Text="We have leveled up. Resetting the profile." 
 								LogColor="Plum" />
 			
-				<!-- Load profile - [Botanist][Tinker][A][reset] -->
+				<!-- Load profile - [Botanist][Tinker][H][reset] -->
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Reset\[Botanist][Tinker][H][reset]" />
 			
@@ -802,7 +812,7 @@
 								Text="We are in Durotar. Checking our hearthstone location." 
 								LogColor="Plum" />		
 								
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][A][hearthstone] -->
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][H][hearthstone] -->
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Hearthstone\[Botanist][Tinker][H][hearthstone]" />
 
@@ -832,14 +842,24 @@
 					<!-- If we reached the move trigger level -->
 					<If Condition="Me.Level &gt;= 8" >
 					
-						<!-- Profile message - WWe have leveled up. Resetting the profile -->
+						<!-- Profile message - We have leveled up. Resetting the profile -->
 						<CustomBehavior File="Message" 
 										Text="We have leveled up. Resetting the profile." 
 										LogColor="Plum" />
 					
-						<!-- Load profile - [Botanist][Tinker][A][reset] -->
+						<!-- Load profile - [Botanist][Tinker][H][reset] -->
 						<CustomBehavior File="LoadProfile" 
 										ProfileName="Reset\[Botanist][Tinker][H][reset]" />
+					
+						<!-- Else we haven't reached the move trigger level -->
+						<Else>
+						
+							<!-- CustomBehavior - Message - We are not changing locations until level 8 -->
+							<CustomBehavior File="Message" 
+											Text="We are not changing locations until level 8." 
+											LogColor="Plum" />
+											
+						</Else>	<!-- Else we haven't reached the move trigger level -->
 					
 					</If>	<!-- If we reached the move trigger level -->
 			
@@ -1061,12 +1081,12 @@
 			<!-- If we reached the move trigger level -->
 			<If Condition="Me.Level &gt;= 8" >
 			
-				<!-- Profile message - WWe have leveled up. Resetting the profile -->
+				<!-- Profile message - We have leveled up. Resetting the profile -->
 				<CustomBehavior File="Message" 
 								Text="We have leveled up. Resetting the profile." 
 								LogColor="Plum" />
 			
-				<!-- Load profile - [Botanist][Tinker][A][reset] -->
+				<!-- Load profile - [Botanist][Tinker][H][reset] -->
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Reset\[Botanist][Tinker][H][reset]" />
 			
@@ -1079,12 +1099,690 @@
 		
 		
 		
+		<!-- If our level >= 8 and < 10 -->								
+		<If Condition="Me.Level &gt;= 8 &amp;&amp; Me.Level &lt; 10" >
+
+			<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							FindMountAutomatically="True"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="False"
+							LogoutForInactivity="True"
+							LogoutInactivityUseForceQuit="True"
+							LootMobs="True"
+							LootRadius="25"
+							MountName=""
+							NinjaSkin="False"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseMount="True" 
+							UseRandomMount="False" />
+			
+			<!-- CustomBehavior - Message - Checking our current level -->
+			<CustomBehavior File="Message" 
+							Text="Checking our current level......." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->				
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+			
+			<!-- CustomBehavior - Message - We are in the 8 to 10 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are in the 8 to 10 bracket." 
+							LogColor="Plum" />
+	
+			<!-- CustomBehavior - Message - Position check, Razor Hill -->
+			<CustomBehavior File="Message" 
+							Text="Position check, Southfury Watershed." 
+							LogColor="Plum" />
+			
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+			
+			<!-- If we are not in Durotar -->
+			<If Condition="Me.ZoneId != 14">
+			
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_kalimdar_to_durotar -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_kalimdar_to_durotar" />		
+								
+			</If>	<!-- If we are not in Durotar -->
+
+			<!-- If we are in Durotar and our hearthstone is not set to Razor Hill -->
+			<If Condition="Me.ZoneId == 14 &amp;&amp; Me.HearthstoneAreaId != 362">
+			
+				<!-- CustomBehavior - Message - We are in Durotar. Checking our hearthstone location -->
+				<CustomBehavior File="Message" 
+								Text="We are in Durotar. Checking our hearthstone location." 
+								LogColor="Plum" />		
+								
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][H][hearthstone] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Hearthstone\[Botanist][Tinker][H][hearthstone]" />
+
+			</If>	<!-- If we are in Durotar and our hearthstone is not set to Razor Hill -->
+			
+			<!-- If we are in Durotar and our hearthstone is set to Razor Hill -->
+			<If Condition="Me.ZoneId == 14 &amp;&amp; Me.HearthstoneAreaId == 362">
+			
+				<!-- CustomBehavior - Message - We are in Durotar. Moving to the Tinker zone -->
+				<CustomBehavior File="Message" 
+								Text="We are in Durotar. Moving to the Tinker zone." 
+								LogColor="Plum" />		
+				
+				<!-- Move to - 8 - 10 Tinker zone -->				
+				<MoveTo X="363.4191" Y="-4322.522" Z="20.40592" />
+					
+				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 10 -->
+				<CustomBehavior File="Message" 
+								Text="We have reached the Tinker zone. We will farm this area until we reach level 10." 
+								LogColor="Plum" />
+									
+			</If>	<!-- If we are in Durotar -->
+
+				<!-- While loop -  our level > 6 and < 8 -->				
+				<While Condition="Me.Level &lt; 10" >	
+					
+					<!-- If we reached the move trigger level -->
+					<If Condition="Me.Level &gt;= 10" >
+					
+						<!-- Profile message - We have leveled up. Resetting the profile -->
+						<CustomBehavior File="Message" 
+										Text="We have leveled up. Resetting the profile." 
+										LogColor="Plum" />
+					
+						<!-- Load profile - [Botanist][Tinker][H][reset] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Reset\[Botanist][Tinker][H][reset]" />
+					
+						<!-- Else we haven't reached the move trigger level -->
+						<Else>
+						
+							<!-- CustomBehavior - Message - We are not changing locations until level 10 -->
+							<CustomBehavior File="Message" 
+											Text="We are not changing locations until level 10." 
+											LogColor="Plum" />
+											
+						</Else>	<!-- Else we haven't reached the move trigger level -->
+					
+					</If>	<!-- If we reached the move trigger level -->
+			
+					<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+												
+						<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+					</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					
+					<!-- If we are Hunter or Mage or Priest or Warlock -->
+					<If Condition="((Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Warlock))">
+					
+						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
+						<CustomBehavior File="Message" 
+										Text="We will use a ranged attack distance." 
+										LogColor="Yellow" />
+										
+						<!-- Custom behavior - TargetAndMoveToMob - Razormane Battleguardd -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="25"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="3114" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If our target is a Razormane Battleguard -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3114)">
+						
+							<!-- Profile message - Engaging a Razormane Battleguard -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Razormane Battleguard." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+						
+							<!-- Else our target is not a Razormane Battleguard -->
+							<Else>
+							
+								<!-- If our target is not a Razormane Battleguard -->
+								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3114)">
+								
+									<!-- CustomBehavior - Misc\SwitchTarget - X="-1007.695" Y="-4418.425" Z="26.35039" -->
+									<CustomBehavior File="Misc\SwitchTarget" 
+													MobId="3114" 
+													X="513.9325" Y="-3812.71" Z="18.93599" />
+								
+								</If>	<!-- If our target is not a Razormane Battleguard -->
+						
+							</Else>	<!-- Else our target is not a Razormane Battleguard -->
+						
+						</If>	<!-- If our target is a Razormane Battleguard -->					
+																
+						<!-- Custom behavior - TargetAndMoveToMob - Razormane Battleguard -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="25"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="3114" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+													
+							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							
+						<!-- If our target is a Razormane Battleguard -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3114)">
+						
+							<!-- Profile message - Engaging a Razormane Battleguard -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Razormane Battleguard." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+						
+							<!-- Else our target is not a Razormane Battleguard -->
+							<Else>
+							
+								<!-- If our target is not a Razormane Battleguard -->
+								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3114)">
+								
+									<!-- CustomBehavior - Misc\SwitchTarget - X="-1007.695" Y="-4418.425" Z="26.35039" -->
+									<CustomBehavior File="Misc\SwitchTarget" 
+													MobId="3114" 
+													X="363.4191" Y="-4322.522" Z="20.40592" />
+								
+								</If>	<!-- If our target is not a Razormane Battleguard -->
+						
+							</Else>	<!-- Else our target is not a Razormane Battleguard -->
+						
+						</If>	<!-- If our target is a Razormane Battleguard -->				
+															
+					</If>	<!-- If we are Hunter or Mage or Priest or Warlock -->
+					
+					<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
+					<If Condition="((Me.Class == WoWClass.DeathKnight) || (Me.Class == WoWClass.Druid) || (Me.Class == WoWClass.Paladin) || (Me.Class == WoWClass.Rogue) || (Me.Class == WoWClass.Shaman) || (Me.Class == WoWClass.Warrior) || (Me.Class == WoWClass.Monk))">
+
+						<!-- CustomBehavior - Message - We will use a melee attack distance -->
+						<CustomBehavior File="Message" 
+										Text="We will use a melee attack distance." 
+										LogColor="Yellow" />
+										
+						<!-- Custom behavior - TargetAndMoveToMob - Razormane Battleguardd -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="5"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="3114" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If our target is a Razormane Battleguard -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3114)">
+						
+							<!-- Profile message - Engaging a Razormane Battleguard -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Razormane Battleguard." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+						
+							<!-- Else our target is not a Razormane Battleguard -->
+							<Else>
+							
+								<!-- If our target is not a Razormane Battleguard -->
+								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3114)">
+								
+									<!-- CustomBehavior - Misc\SwitchTarget - X="-1007.695" Y="-4418.425" Z="26.35039" -->
+									<CustomBehavior File="Misc\SwitchTarget" 
+													MobId="3114" 
+													X="513.9325" Y="-3812.71" Z="18.93599" />
+								
+								</If>	<!-- If our target is not a Razormane Battleguard -->
+						
+							</Else>	<!-- Else our target is not a Razormane Battleguard -->
+						
+						</If>	<!-- If our target is a Razormane Battleguard -->					
+																
+						<!-- Custom behavior - TargetAndMoveToMob - Razormane Battleguard -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="5"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="3114" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+													
+							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							
+						<!-- If our target is a Razormane Battleguard -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3114)">
+						
+							<!-- Profile message - Engaging a Razormane Battleguard -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Razormane Battleguard." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+						
+							<!-- Else our target is not a Razormane Battleguard -->
+							<Else>
+							
+								<!-- If our target is not a Razormane Battleguard -->
+								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3114)">
+								
+									<!-- CustomBehavior - Misc\SwitchTarget - X="-1007.695" Y="-4418.425" Z="26.35039" -->
+									<CustomBehavior File="Misc\SwitchTarget" 
+													MobId="3114" 
+													X="363.4191" Y="-4322.522" Z="20.40592" />
+								
+								</If>	<!-- If our target is not a Razormane Battleguard -->
+						
+							</Else>	<!-- Else our target is not a Razormane Battleguard -->
+						
+						</If>	<!-- If our target is a Razormane Battleguard -->
+										
+					</If>	<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
+									
+				</While>	<!-- While loop -  our level < 6 -->
+
+			<!-- If we reached the move trigger level -->
+			<If Condition="Me.Level &gt;= 10" >
+			
+				<!-- Profile message - We have leveled up. Resetting the profile -->
+				<CustomBehavior File="Message" 
+								Text="We have leveled up. Resetting the profile." 
+								LogColor="Plum" />
+			
+				<!-- Load profile - [Botanist][Tinker][H][reset] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Reset\[Botanist][Tinker][H][reset]" />
+			
+			</If>	<!-- If we reached the move trigger level -->
+			
+		</If>	<!-- If our level >= 8 and < 10 -->
 		
 		
 		
 		
-		
-		
+		<!-- If our level >= 10 and < 12 -->								
+		<If Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt; 12" >
+
+			<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							FindMountAutomatically="True"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="False"
+							LogoutForInactivity="True"
+							LogoutInactivityUseForceQuit="True"
+							LootMobs="True"
+							LootRadius="25"
+							MountName=""
+							NinjaSkin="False"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseMount="True" 
+							UseRandomMount="False" />
+			
+			<!-- CustomBehavior - Message - Checking our current level -->
+			<CustomBehavior File="Message" 
+							Text="Checking our current level......." 
+							LogColor="Plum" />
+							
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->				
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+			
+			<!-- CustomBehavior - Message - We are in the 10 to 10 bracket -->
+			<CustomBehavior File="Message" 
+							Text="We are in the 10 to 12 bracket." 
+							LogColor="Plum" />
+	
+			<!-- CustomBehavior - Message - Position check, Thorn Hill -->
+			<CustomBehavior File="Message" 
+							Text="Position check, Thorn Hill." 
+							LogColor="Plum" />
+			
+			<!-- CustomBehavior - WaitTimer - 1 second delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+			
+			<!-- If we are not in Northen Barrens -->
+			<If Condition="Me.ZoneId != 17">
+			
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_kalimdar_to_durotar -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_kalimdor_to_northern-barrens" />		
+								
+			</If>	<!-- If we are not in Northen Barrens -->
+
+			<!-- If we are in Northen Barrens and our hearthstone is not set to Crossroads -->
+			<If Condition="Me.ZoneId == 17 &amp;&amp; Me.HearthstoneAreaId != 380">
+			
+				<!-- CustomBehavior - Message - We are in Northen Barrens. Checking our hearthstone location -->
+				<CustomBehavior File="Message" 
+								Text="We are in Northen Barrens. Checking our hearthstone location." 
+								LogColor="Plum" />		
+								
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker][H][hearthstone] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Hearthstone\[Botanist][Tinker][H][hearthstone]" />
+
+			</If>	<!-- If we are in Durotar and our hearthstone is not set to Razor Hill -->
+			
+			<!-- If we are in Northen Barrens and our hearthstone is set to Crossroads -->
+			<If Condition="Me.ZoneId == 17 &amp;&amp; Me.HearthstoneAreaId == 380">
+			
+				<!-- CustomBehavior - Message - We are in Northen Barrens. Moving to the Tinker zone -->
+				<CustomBehavior File="Message" 
+								Text="We are in Northen Barrens. Moving to the Tinker zone." 
+								LogColor="Plum" />		
+				
+				<!-- Move to - 10 - 12 Tinker zone -->				
+				<MoveTo X="-244.2569" Y="-2981.756" Z="94.98036" />
+					
+				<!-- CustomBehavior - Message - We have reached the Tinker zone. We will farm this area until we reach level 10 -->
+				<CustomBehavior File="Message" 
+								Text="We have reached the Tinker zone. We will farm this area until we reach level 12." 
+								LogColor="Plum" />
+									
+			</If>	<!-- If we are in Northen Barrens and our hearthstone is set to Crossroads -->
+
+				<!-- While loop -  our level > 10 and < 12 -->				
+				<While Condition="Me.Level &lt; 12" >	
+					
+					<!-- If we reached the move trigger level -->
+					<If Condition="Me.Level &gt;= 12" >
+					
+						<!-- Profile message - We have leveled up. Resetting the profile -->
+						<CustomBehavior File="Message" 
+										Text="We have leveled up. Resetting the profile." 
+										LogColor="Plum" />
+					
+						<!-- Load profile - [Botanist][Tinker][H][reset] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Reset\[Botanist][Tinker][H][reset]" />
+					
+						<!-- Else we haven't reached the move trigger level -->
+						<Else>
+						
+							<!-- CustomBehavior - Message - We are not changing locations until level 12 -->
+							<CustomBehavior File="Message" 
+											Text="We are not changing locations until level 12." 
+											LogColor="Plum" />
+											
+						</Else>	<!-- Else we haven't reached the move trigger level -->
+					
+					</If>	<!-- If we reached the move trigger level -->
+			
+					<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+												
+						<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+						<CustomBehavior File="LoadProfile" 
+										ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+					</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+					
+					<!-- If we are Hunter or Mage or Priest or Warlock -->
+					<If Condition="((Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Warlock))">
+					
+						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
+						<CustomBehavior File="Message" 
+										Text="We will use a ranged attack distance." 
+										LogColor="Yellow" />
+										
+						<!-- Custom behavior - TargetAndMoveToMob - Razormane Geomancer -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="25"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="3269" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If our target is a Razormane Geomancer -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3269)">
+						
+							<!-- Profile message - Engaging a Razormane Geomancer -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Razormane Geomancer." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+						
+							<!-- Else our target is not a Razormane Battleguard -->
+							<Else>
+							
+								<!-- If our target is not a Razormane Geomancer -->
+								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3269)">
+								
+									<!-- CustomBehavior - Misc\SwitchTarget - X="-176.2987" Y="-3466.635" Z="100.93" -->
+									<CustomBehavior File="Misc\SwitchTarget" 
+													MobId="3269" 
+													X="-176.2987" Y="-3466.635" Z="100.93" />
+								
+								</If>	<!-- If our target is not a Razormane Geomancer -->
+						
+							</Else>	<!-- Else our target is not a Razormane Geomancer -->
+						
+						</If>	<!-- If our target is a Razormane Geomancer -->					
+																
+						<!-- Custom behavior - TargetAndMoveToMob - Razormane Geomancer -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="25"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="3269" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+													
+							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							
+						<!-- If our target is a Razormane Geomancer -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3269)">
+						
+							<!-- Profile message - Engaging a Razormane Geomancer -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Razormane Geomancer." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+						
+							<!-- Else our target is not a Razormane Geomancer -->
+							<Else>
+							
+								<!-- If our target is not a Razormane Geomancer -->
+								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3269)">
+								
+									<!-- CustomBehavior - Misc\SwitchTarget - X="-244.2569" Y="-2981.756" Z="94.98036" -->
+									<CustomBehavior File="Misc\SwitchTarget" 
+													MobId="3269" 
+													X="-244.2569" Y="-2981.756" Z="94.98036" />
+								
+								</If>	<!-- If our target is not a Razormane Geomancer -->
+						
+							</Else>	<!-- Else our target is not a Razormane Geomancer -->
+						
+						</If>	<!-- If our target is a Razormane Geomancer -->				
+															
+					</If>	<!-- If we are Hunter or Mage or Priest or Warlock -->
+					
+					<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
+					<If Condition="((Me.Class == WoWClass.DeathKnight) || (Me.Class == WoWClass.Druid) || (Me.Class == WoWClass.Paladin) || (Me.Class == WoWClass.Rogue) || (Me.Class == WoWClass.Shaman) || (Me.Class == WoWClass.Warrior) || (Me.Class == WoWClass.Monk))">
+
+						<!-- CustomBehavior - Message - We will use a melle attack distance -->
+						<CustomBehavior File="Message" 
+										Text="We will use a melee attack distance." 
+										LogColor="Yellow" />
+										
+						<!-- Custom behavior - TargetAndMoveToMob - Razormane Geomancer -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="5"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="3269" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If our target is a Razormane Geomancer -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3269)">
+						
+							<!-- Profile message - Engaging a Razormane Geomancer -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Razormane Geomancer." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+						
+							<!-- Else our target is not a Razormane Battleguard -->
+							<Else>
+							
+								<!-- If our target is not a Razormane Geomancer -->
+								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3269)">
+								
+									<!-- CustomBehavior - Misc\SwitchTarget - X="-110.3551" Y="-3213.959" Z="94.7086" -->
+									<CustomBehavior File="Misc\SwitchTarget" 
+													MobId="3269" 
+													X="-110.3551" Y="-3213.959" Z="94.7086" />
+								
+								</If>	<!-- If our target is not a Razormane Geomancer -->
+						
+							</Else>	<!-- Else our target is not a Razormane Geomancer -->
+						
+						</If>	<!-- If our target is a Razormane Geomancer -->					
+																
+						<!-- Custom behavior - TargetAndMoveToMob - Razormane Geomancer -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="5"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="3269" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+													
+							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							
+						<!-- If our target is a Razormane Geomancer -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3269)">
+						
+							<!-- Profile message - Engaging a Razormane Geomancer -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Razormane Geomancer." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+						
+							<!-- Else our target is not a Razormane Geomancer -->
+							<Else>
+							
+								<!-- If our target is not a Razormane Geomancer -->
+								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3269)">
+								
+									<!-- CustomBehavior - Misc\SwitchTarget - X="-244.2569" Y="-2981.756" Z="94.98036" -->
+									<CustomBehavior File="Misc\SwitchTarget" 
+													MobId="3269" 
+													X="-244.2569" Y="-2981.756" Z="94.98036" />
+								
+								</If>	<!-- If our target is not a Razormane Geomancer -->
+						
+							</Else>	<!-- Else our target is not a Razormane Geomancer -->
+						
+						</If>	<!-- If our target is a Razormane Geomancer -->
+										
+					</If>	<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
+									
+				</While>	<!-- While loop -  our level < 6 -->
+
+			<!-- If we reached the move trigger level -->
+			<If Condition="Me.Level &gt;= 12" >
+			
+				<!-- Profile message - We have leveled up. Resetting the profile -->
+				<CustomBehavior File="Message" 
+								Text="We have leveled up. Resetting the profile." 
+								LogColor="Plum" />
+			
+				<!-- Load profile - [Botanist][Tinker][H][reset] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Reset\[Botanist][Tinker][H][reset]" />
+			
+			</If>	<!-- If we reached the move trigger level -->
+			
+		</If>	<!-- If our level >= 8 and < 10 -->
 		
 		
 		
@@ -1105,7 +1803,7 @@
 		
 		
 		<!-- If our level >= 15 -->				
-		<If Condition="Me.Level &gt;= 8" >
+		<If Condition="Me.Level &gt;= 12" >
 		
 			<!-- Profile message  - This portion has not been completed yet. Stopping the bot -->	
 			<CustomBehavior File="Message" 

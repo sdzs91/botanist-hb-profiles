@@ -217,13 +217,93 @@
 		</If>	<!-- If our level >= 5 and < 10 -->
 		
 		
-		<!-- ************************************************** 6-10 **************************************************************** -->
+		<!-- ************************************************** 10-15 **************************************************************** -->
 		
 		
+		<!-- If our level >= 10 and < 15 -->				
+		<If Condition="((Me.Level &gt;= 10) &amp;&amp; (Me.Level &lt; 15))" >
+		
+			<!-- If our hearthstone/innkeepers daughter is set to Crossroads -->
+			<If Condition="Me.HearthstoneAreaId == 380" >
+			
+				<!-- If we have a Hearthstone -->
+				<If Condition="HasItem(6948)">
+				
+					<!-- Profile message - Using our Hearthstone -->
+					<CustomBehavior File="Message" 
+									Text="Using our Hearthstone." 
+									LogColor="Plum" />
+									
+					<!-- Custom behavior - Misc\RunLua -->				
+					<CustomBehavior File="Misc\RunLua" 
+									Lua="UseItemByName(6948)" 
+									WaitTime="1000" />
+									
+					<!-- Wait timer - wait 20 seconds - delay -->				
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="20000" />
+									
+				</If>	<!-- If we have a Hearthstone -->
+			
+				<!-- If we have a Innkeeper's Daughter -->
+				<If Condition="HasItem(64488)">
+				
+					<!-- Profile message - Using our Innkeeper's Daughter -->
+					<CustomBehavior File="Message" 
+									Text="Using our Innkeeper's Daughter." 
+									LogColor="Plum" />
+										
+					<!-- Custom behavior - Misc\RunLua -->					
+					<CustomBehavior File="Misc\RunLua" 
+									Lua="UseItemByName(64488)" 
+									WaitTime="1000" />
+						
+					<!-- Wait timer - wait 20 seconds - delay -->	
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="20000" />
+									
+				</If>	<!-- If we have a Innkeeper's Daughter -->
+			
+			</If>	<!-- If our hearthstone is set here, use it -->
+			
+			<!-- Repair vendor -->
+			<SetVendor>
+				<Vendors>
+					<Vendor Name="Halija Whitestrider" 
+							Entry="3486" 
+							Type="Repair" 
+							X="-539.8406" Y="-2672.23" Z="95.78745" />
+				</Vendors>
+			</SetVendor>
+			<SetMailbox>
+				<Mailboxes>
+					<Mailbox X="-445.3229" Y="-2651.819" Z="95.69612" />
+				</Mailboxes>
+			</SetMailbox>
+						
+			<!-- Vendor conditions -->
+			<CustomBehavior File="ForceSetVendor" 
+							DoMail="True" 
+							DoRepair="True" 
+							DoSell="True" 
+							DoTrain="False" />
+			
+			<!-- Move to - Crossroads flight master -->
+			<MoveTo X="-440.4801" Y="-2598.103" Z="95.90998" />
+
+			<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
+			<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+										
+				<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="..\..\[Botanist][Tinker][H-6][classic]" />
+
+			</If>	<!-- If we have more then 4 empty bag slots and our durability is greater than 30% -->
+		
+		</If>	<!-- If our level >= 10 and < 15 -->
 		
 		
-		
-		
+		<!-- ************************************************** 15-20 **************************************************************** -->
 		
 		
 		
