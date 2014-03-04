@@ -2225,7 +2225,7 @@
 									
 			</If>	<!-- If we are in Northen Barrens and our hearthstone is set to Crossroads -->
 
-				<!-- While loop -  our level > 12 and < 15 -->				
+				<!-- While loop -  our level > 14 and < 15 -->				
 				<While Condition="Me.Level &lt; 15" >	
 					
 					<!-- If we reached the move trigger level -->
@@ -2264,6 +2264,107 @@
 					<!-- If we are Hunter or Mage or Priest or Warlock -->
 					<If Condition="((Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Warlock))">
 					
+						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
+						<CustomBehavior File="Message" 
+										Text="We will use a Ranged attack distance." 
+										LogColor="Yellow" />
+										
+						<!-- Custom behavior - TargetAndMoveToMob - Deviate Creeper -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="25"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="3632" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If our target is a Deviate Creeper -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3632)">
+						
+							<!-- Profile message - Engaging a Deviate Creeper -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Deviate Creeper." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+						
+							<!-- Else our target is not a Razormane Battleguard -->
+							<Else>
+							
+								<!-- If our target is not a Deviate Creeper -->
+								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3632)">
+								
+									<!-- CustomBehavior - Misc\SwitchTarget - X="-176.2987" Y="-3466.635" Z="100.93" -->
+									<CustomBehavior File="Misc\SwitchTarget" 
+													MobId="3632" 
+													X="-572.225" Y="-2087.552" Z="51.54131" />
+								
+								</If>	<!-- If our target is not a Deviate Creeper -->
+						
+							</Else>	<!-- Else our target is not a Deviate Creeper -->
+						
+						</If>	<!-- If our target is a Deviate Creeper -->					
+																
+						<!-- Custom behavior - TargetAndMoveToMob - Oasis Snapjaw -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="25"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="3461" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+													
+							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							
+						<!-- If our target is a Oasis Snapjaw -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3461)">
+						
+							<!-- Profile message - Engaging a Oasis Snapjaw -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Oasis Snapjaw." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+						
+							<!-- Else our target is not a Oasis Snapjaw -->
+							<Else>
+							
+								<!-- If our target is not a Oasis Snapjaw -->
+								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3461)">
+								
+									<!-- CustomBehavior - Misc\SwitchTarget - X="-244.2569" Y="-2981.756" Z="94.98036" -->
+									<CustomBehavior File="Misc\SwitchTarget" 
+													MobId="3461" 
+													X="-1149.485" Y="-2220.32" Z="87.16176" />
+								
+								</If>	<!-- If our target is not a Oasis Snapjaw -->
+						
+							</Else>	<!-- Else our target is not a Oasis Snapjaw -->
+						
+						</If>	<!-- If our target is a Oasis Snapjaw
+															
+					</If>	<!-- If we are Hunter or Mage or Priest or Warlock -->
+					
+					<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
+					<If Condition="((Me.Class == WoWClass.DeathKnight) || (Me.Class == WoWClass.Druid) || (Me.Class == WoWClass.Paladin) || (Me.Class == WoWClass.Rogue) || (Me.Class == WoWClass.Shaman) || (Me.Class == WoWClass.Warrior) || (Me.Class == WoWClass.Monk))">
+
 						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
 						<CustomBehavior File="Message" 
 										Text="We will use a melee attack distance." 
@@ -2310,12 +2411,12 @@
 						
 						</If>	<!-- If our target is a Deviate Creeper -->					
 																
-						<!-- Custom behavior - TargetAndMoveToMob - Deviate Creeper -->
+						<!-- Custom behavior - TargetAndMoveToMob - Oasis Snapjaw -->
 						<CustomBehavior File="TargetAndMoveToMob"
 										MoveWithinMaxRangeOfMob="5"
 										TargetOnlyIfHealthPercentAbove="5"
 										WaitForNpcs="False"
-										MobId="3632" >
+										MobId="3461" >
 						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
 
 						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
@@ -2327,12 +2428,12 @@
 
 						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 							
-						<!-- If our target is a Deviate Creeper -->
-						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3632)">
+						<!-- If our target is a Oasis Snapjaw -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3461)">
 						
-							<!-- Profile message - Engaging a Deviate Creeper -->	
+							<!-- Profile message - Engaging a Oasis Snapjaw -->	
 							<CustomBehavior File="Message" 
-											Text="Engaging a Deviate Creeper." 
+											Text="Engaging a Oasis Snapjaw." 
 											LogColor="Cyan" />
 							
 							<!-- CustomBehavior - RunMacro - startattack -->
@@ -2343,130 +2444,29 @@
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="7000" />				
 						
-							<!-- Else our target is not a Deviate Creeper -->
+							<!-- Else our target is not a Oasis Snapjaw -->
 							<Else>
 							
-								<!-- If our target is not a Deviate Creeper -->
-								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3632)">
+								<!-- If our target is not a Oasis Snapjaw -->
+								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3461)">
 								
 									<!-- CustomBehavior - Misc\SwitchTarget - X="-244.2569" Y="-2981.756" Z="94.98036" -->
 									<CustomBehavior File="Misc\SwitchTarget" 
-													MobId="3632" 
+													MobId="3461" 
 													X="-1149.485" Y="-2220.32" Z="87.16176" />
 								
-								</If>	<!-- If our target is not a Deviate Creeper -->
+								</If>	<!-- If our target is not a Oasis Snapjaw -->
 						
-							</Else>	<!-- Else our target is not a Deviate Creeper -->
+							</Else>	<!-- Else our target is not a Oasis Snapjaw -->
 						
-						</If>	<!-- If our target is a Deviate Creeper -->
-															
-					</If>	<!-- If we are Hunter or Mage or Priest or Warlock -->
-					
-					<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
-					<If Condition="((Me.Class == WoWClass.DeathKnight) || (Me.Class == WoWClass.Druid) || (Me.Class == WoWClass.Paladin) || (Me.Class == WoWClass.Rogue) || (Me.Class == WoWClass.Shaman) || (Me.Class == WoWClass.Warrior) || (Me.Class == WoWClass.Monk))">
-
-						<!-- CustomBehavior - Message - We will use a ranged attack distance -->
-						<CustomBehavior File="Message" 
-										Text="We will use a ranged attack distance." 
-										LogColor="Yellow" />
-										
-						<!-- Custom behavior - TargetAndMoveToMob - Deviate Creeper -->
-						<CustomBehavior File="TargetAndMoveToMob"
-										MoveWithinMaxRangeOfMob="25"
-										TargetOnlyIfHealthPercentAbove="5"
-										WaitForNpcs="False"
-										MobId="3632" >
-						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
-
-						<!-- If our target is a Deviate Creeper -->
-						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3632)">
-						
-							<!-- Profile message - Engaging a Deviate Creeper -->	
-							<CustomBehavior File="Message" 
-											Text="Engaging a Deviate Creeper." 
-											LogColor="Cyan" />
-							
-							<!-- CustomBehavior - RunMacro - startattack -->
-							<CustomBehavior File="RunMacro" 
-											Macro="/startattack" />
-											
-							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="7000" />				
-						
-							<!-- Else our target is not a Razormane Battleguard -->
-							<Else>
-							
-								<!-- If our target is not a Deviate Creeper -->
-								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3632)">
-								
-									<!-- CustomBehavior - Misc\SwitchTarget - X="-176.2987" Y="-3466.635" Z="100.93" -->
-									<CustomBehavior File="Misc\SwitchTarget" 
-													MobId="3632" 
-													X="-572.225" Y="-2087.552" Z="51.54131" />
-								
-								</If>	<!-- If our target is not a Deviate Creeper -->
-						
-							</Else>	<!-- Else our target is not a Deviate Creeper -->
-						
-						</If>	<!-- If our target is a Deviate Creeper -->					
-																
-						<!-- Custom behavior - TargetAndMoveToMob - Deviate Creeper -->
-						<CustomBehavior File="TargetAndMoveToMob"
-										MoveWithinMaxRangeOfMob="25"
-										TargetOnlyIfHealthPercentAbove="5"
-										WaitForNpcs="False"
-										MobId="3632" >
-						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
-
-						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
-													
-							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
-							<CustomBehavior File="LoadProfile" 
-											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
-
-						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
-							
-						<!-- If our target is a Deviate Creeper -->
-						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3632)">
-						
-							<!-- Profile message - Engaging a Deviate Creeper -->	
-							<CustomBehavior File="Message" 
-											Text="Engaging a Deviate Creeper." 
-											LogColor="Cyan" />
-							
-							<!-- CustomBehavior - RunMacro - startattack -->
-							<CustomBehavior File="RunMacro" 
-											Macro="/startattack" />
-											
-							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="7000" />				
-						
-							<!-- Else our target is not a Deviate Creeper -->
-							<Else>
-							
-								<!-- If our target is not a Deviate Creeper -->
-								<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3632)">
-								
-									<!-- CustomBehavior - Misc\SwitchTarget - X="-244.2569" Y="-2981.756" Z="94.98036" -->
-									<CustomBehavior File="Misc\SwitchTarget" 
-													MobId="3632" 
-													X="-1149.485" Y="-2220.32" Z="87.16176" />
-								
-								</If>	<!-- If our target is not a Deviate Creeper -->
-						
-							</Else>	<!-- Else our target is not a Deviate Creeper -->
-						
-						</If>	<!-- If our target is a Deviate Creeper -->
+						</If>	<!-- If our target is a Oasis Snapjaw
 										
 					</If>	<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
 									
 				</While>	<!-- While loop -  our level < 6 -->
 
 			<!-- If we reached the move trigger level -->
-			<If Condition="Me.Level &gt;= 14" >
+			<If Condition="Me.Level &gt;= 15" >
 			
 				<!-- Profile message - We have leveled up. Resetting the profile -->
 				<CustomBehavior File="Message" 
