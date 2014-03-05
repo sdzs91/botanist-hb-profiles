@@ -2,34 +2,42 @@
 [CENTER]
 [IMG]http://i.imgur.com/79Dq8D9.jpg[/IMG]
 
-[B][I][U][CENTER][COLOR="#B22222"][SIZE=4]1-15 Available for Testing[/SIZE][/COLOR][/CENTER][/U][/I][/B]
+[B][I][U][CENTER][COLOR="#FF8C00"][SIZE=4]1-15 Available for Testing[/SIZE][/COLOR][/CENTER][/U][/I][/B]
 
 
 [B][COLOR="#FF8C00"][SIZE=4]***** Information *****[/SIZE][/COLOR][/B]
 
 [CODE]
 [LIST]
-[*]Will be added !
+[*]Tinker will be a 1-100 all in one character leveling suite. (it is a fancy grinding profile)
+[/LIST]
+[LIST]
+[*]It will support repairs/mailing/mount purchasing/Riding Skill Training\Skinning 1-600/Herbing 1-600
+[/LIST]
+[LIST]
+[*]It will support some questing in the future
+[/LIST]
+[LIST]
+[*]It may support some dungeon leveling in the future.
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
 [/LIST]
 [LIST]
 [*]
 [/LIST]
 [LIST]
-[*]
+[*]-
+[/LIST]
+[LIST]
+[*]-
 [/LIST]
 [LIST]
 [*]
 [/LIST]
-[LIST]
-[*]
-[/LIST]
-[LIST]
-[*]
-[/LIST]
-[LIST]
-[*]
-[/LIST]
-
 [/CODE]
 
 
@@ -37,7 +45,37 @@
 
 [CODE]
 [LIST]
-[*]Will be added !
+[*]Log into Wow
+[/LIST]
+[LIST]
+[*]Initialize HonorBuddy
+[/LIST]
+[LIST]
+[*]Select Questing as your botbase
+[/LIST]
+[LIST]
+[*]Browse to where you have this profile stored and double click the auto_loader
+[/LIST]
+[LIST]
+[*]Click start on your HonorBuddy
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
 [/LIST]
 [LIST]
 [*]
@@ -48,16 +86,6 @@
 [LIST]
 [*]
 [/LIST]
-[LIST]
-[*]
-[/LIST]
-[LIST]
-[*]
-[/LIST]
-[LIST]
-[*]
-[/LIST]
-
 [/CODE]
 
 
