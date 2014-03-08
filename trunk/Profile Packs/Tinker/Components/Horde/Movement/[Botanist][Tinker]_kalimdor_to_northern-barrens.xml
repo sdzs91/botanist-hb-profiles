@@ -42,7 +42,7 @@
 	<QuestOrder>
 			
 		<!-- If we are in Kalidor -->
-		<If Condition="Me.MapId == 1">
+		<If Condition="Me.MapId == 1 &amp;&amp; Me.ZoneId != 14">
 		
 			<!-- CustomBehavior - Message - We are in Kalidor. Navigating to Northern Barrens -->
 			<CustomBehavior File="Message" 
@@ -50,13 +50,33 @@
 							LogColor="Plum" /> 
 							
 			<!-- Move to - Crossroads -->	
-			<MoveTo X="-439.9032" Y="-2598.34" Z="95.84113" />
+			<MoveTo X="-440.934" Y="-2600.629" Z="95.9892" />
 			
 			<!-- CustomBehavior - WaitTimer - 3 second delay  -->				
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="1000" />
 		
 		</If>	<!-- If we are in Kalidor -->
+		
+		<!-- If we are in Durotar -->
+		<If Condition="Me.ZoneId == 14">
+		
+			<!-- CustomBehavior - Message - We are in Durotar. Navigating to Crossroads -->
+			<CustomBehavior File="Message" 
+							Text="We are in Durotar. Navigating to Crossroads." 
+							LogColor="Plum" /> 
+							
+			<!-- Move to - bridge exiting Durotar -->	
+			<MoveTo X="313.2569" Y="-3724.402" Z="26.38171" />
+							
+			<!-- Move to - Crossroads -->	
+			<MoveTo X="-440.934" Y="-2600.629" Z="95.9892" />
+			
+			<!-- CustomBehavior - WaitTimer - 3 second delay  -->				
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="1000" />
+		
+		</If>	<!-- If we are in Durotar -->
 		
 		<!-- If we are in Northen Barrens -->
 		<If Condition="Me.ZoneId == 17">

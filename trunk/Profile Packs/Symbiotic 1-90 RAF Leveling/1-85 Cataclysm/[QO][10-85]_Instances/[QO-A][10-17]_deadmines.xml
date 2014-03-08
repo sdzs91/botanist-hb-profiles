@@ -685,7 +685,9 @@
 				
 					<!-- Begin the instance once all party members are within range  -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
-									CheckRange="2" />
+									CheckRange="5" />
+									
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				
 									
 					<CustomBehavior File="Misc\InstanceTimer" 
 									Timer="Start" />

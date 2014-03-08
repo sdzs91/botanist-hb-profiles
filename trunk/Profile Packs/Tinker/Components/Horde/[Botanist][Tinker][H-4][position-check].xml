@@ -373,6 +373,24 @@
 							
 			</If>	<!-- If we are in Northern Barrens -->
 		
+			<!-- If we are in Durotar -->
+			<If Condition="Me.ZoneId == 14">
+			
+				<!-- CustomBehavior - Message - We are in Durotar. Initiating movement procedures -->
+				<CustomBehavior File="Message" 
+								Text="We are in Durotar. Initiating movement procedures." 
+								LogColor="Plum" /> 
+								
+				<!-- CustomBehavior - Wait timer - wait 1 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+		
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_kalimdor_to_northern-barrens -->				
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\[Botanist][Tinker]_kalimdor_to_northern-barrens" />
+			
+			</If>	<!-- If we are in Durotar -->
+		
 			<!-- If we are in Kalimdor -->
 			<If Condition="Me.MapId == 1 &amp;&amp; Me.ZoneId != 17">				
 		
@@ -385,20 +403,20 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="1000" />
 		
-				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_kalimdar_to_durotar -->				
+				<!--  CustomBehavior - LoadProfile - [Botanist][Tinker]_kalimdor_to_northern-barrens -->				
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="Movement\[Botanist][Tinker]_kalimdar_to_durotar" />				
+								ProfileName="Movement\[Botanist][Tinker]_kalimdor_to_northern-barrens" />				
 							
 			</If>	<!-- If we are in Kalimdor -->
 
-		</If>	<!-- If our level >= 5 and < 10 -->		
+		</If>	<!-- If our level >= 10 and < 15 -->	
 			
 			
 			
 			
 			
 		<!-- If our level >= 10 and < 58 -->
-		<If Condition="Me.Level &gt;= 10 &amp;&amp; Me.Level &lt; 58" >
+		<If Condition="Me.Level &gt;= 15 &amp;&amp; Me.Level &lt; 58" >
 
 			
 

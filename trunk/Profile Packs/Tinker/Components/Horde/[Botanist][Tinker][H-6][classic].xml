@@ -619,7 +619,7 @@
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="7000" />				
 
-						</If>	<!-- If our target is a Mangy Wolf --> 
+						</If>	<!-- If our target is a Northwatch Infantryman --> 
 										
 						<!-- If our target is not a Northwatch Infantryman -->
 						<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 39260)">
@@ -627,10 +627,55 @@
 							<!-- CustomBehavior - Misc\SwitchTarget - X="-981.4324" Y="-4647.936" Z="30.37423" /> -->
 							<CustomBehavior File="Misc\SwitchTarget" 
 											MobId="39260" 
-											X="-981.4324" Y="-4647.936" Z="30.37423" />
+											X="-651.6182" Y="-5178.013" Z="0.3210803" />
 						
 						</If>	<!-- If our target is not a Northwatch Infantryman -->				
 															
+						<!-- Custom behavior - TargetAndMoveToMob - Surf Crawler -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="25"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="3106" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+													
+							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							
+						<!-- If our target is a Surf Crawler -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3106)">
+						
+							<!-- Profile message - Engaging a Surf Crawler -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Surf Crawler." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+
+						</If>	<!-- If our target is a Surf Crawler --> 
+										
+						<!-- If our target is not a Surf Crawler -->
+						<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3106)">
+						
+							<!-- CustomBehavior - Misc\SwitchTarget - X="-981.4324" Y="-4647.936" Z="30.37423" /> -->
+							<CustomBehavior File="Misc\SwitchTarget" 
+											MobId="3106" 
+											X="-981.4324" Y="-4647.936" Z="30.37423" />
+						
+						</If>	<!-- If our target is not a Surf Crawler -->									
+									
 					</If>	<!-- If we are Hunter or Mage or Priest or Warlock -->
 					
 					<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
@@ -710,7 +755,7 @@
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="7000" />				
 
-						</If>	<!-- If our target is a Mangy Wolf --> 
+						</If>	<!-- If our target is a Northwatch Infantryman --> 
 										
 						<!-- If our target is not a Northwatch Infantryman -->
 						<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 39260)">
@@ -718,9 +763,54 @@
 							<!-- CustomBehavior - Misc\SwitchTarget - X="-981.4324" Y="-4647.936" Z="30.37423" /> -->
 							<CustomBehavior File="Misc\SwitchTarget" 
 											MobId="39260" 
+											X="-651.6182" Y="-5178.013" Z="0.3210803" />
+						
+						</If>	<!-- If our target is not a Northwatch Infantryman -->				
+															
+						<!-- Custom behavior - TargetAndMoveToMob - Surf Crawler -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="25"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="3106" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->									
+
+						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+													
+							<!-- Load profile - [Botanist][Tinker][1-58][repair-mail] -->
+							<CustomBehavior File="LoadProfile" 
+											ProfileName="Vendors\Mail-Repair\[Botanist][Tinker][1-58][repair-mail]" />
+
+						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
+							
+						<!-- If our target is a Surf Crawler -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 3106)">
+						
+							<!-- Profile message - Engaging a Surf Crawler -->	
+							<CustomBehavior File="Message" 
+											Text="Engaging a Surf Crawler." 
+											LogColor="Cyan" />
+							
+							<!-- CustomBehavior - RunMacro - startattack -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/startattack" />
+											
+							<!-- CustomBehavior - WaitTimer - 7 second - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="7000" />				
+
+						</If>	<!-- If our target is a Surf Crawler --> 
+										
+						<!-- If our target is not a Surf Crawler -->
+						<If Condition="(Me.CurrentTarget == null) || (Me.CurrentTarget.Entry != 3106)">
+						
+							<!-- CustomBehavior - Misc\SwitchTarget - X="-981.4324" Y="-4647.936" Z="30.37423" /> -->
+							<CustomBehavior File="Misc\SwitchTarget" 
+											MobId="3106" 
 											X="-981.4324" Y="-4647.936" Z="30.37423" />
 						
-						</If>	<!-- If our target is not a Northwatch Infantryman -->	
+						</If>	<!-- If our target is not a Surf Crawler -->	
 										
 					</If>	<!-- If we are DeathKnight or Druid or Paladin or Rogue or Shaman or Warrior or Monk -->
 									
