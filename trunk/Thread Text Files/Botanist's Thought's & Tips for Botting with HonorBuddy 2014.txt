@@ -11,7 +11,11 @@
 [/LIST]
 
 [LIST]
-[*] Tip #2 HonorBuddy uses mesh files to navigate. A mesh file is an 8 X 8 geometric map tile which tells HB if there are obstacles in its path. 
+[*]Tip #2 HonorBuddy uses mesh files to navigate. Take the entire wow map, divide it into 8 X 8 tiles. 
+
+Each tile is a geometric mesh. HB uses the individual mesh files to plot courses and navigate around obstacles. 
+
+The greater the distance between point A and point B, the more mesh files required for HB to plot a course. 
 [INDENT]
 The bot should automatically contact the mesh server and download the necessary meshes it needs for a particular zone. 
 [/INDENT]
@@ -33,7 +37,7 @@ This includes standing still doing nothing while the bot attempts to download th
 
 [LIST]
 
-You should never afk your bot(s) unless you have extensively tested a particular profile/botbase on your computer.
+Tip #3 You should never afk your bot(s) unless you have extensively tested a particular profile/botbase on your computer.
 [INDENT]
 Even if you are confident the profile/botbase will work correctly, there are still potential risk involved any time you afk the bot.
 [/INDENT]
@@ -41,15 +45,36 @@ Even if you are confident the profile/botbase will work correctly, there are sti
 
 [LIST]
 
-Place holder for now
+Tip #4 Any time WoW patches, HonorBuddy will be down.
+[INDENT]
+The down time will vary from a few hours to a few weeks depending on the patch/Expansion.
 
-Place holder for now
+Minor changes in the game can lead to major changes in the bot. 
 
-Place holder for now
+Don't assume you know what you are talking about until you can supply you own bot that is comparable to HB.
 
-Place holder for now
+Bitching and complaining [B][U]will not[/U][/B] speed up the process, if anything it [B][U]henders[/U][/B] it.
 
-Place holder for now
+Constantly nagging 3rd party Developers about errors while there is not a stable release of HB is a complete waste of everyone's time, 
+
+and will likely result in you being ignored.
+
+[B][U][SIZE=3]If it won't run for you, wait for a stable release ![/SIZE][/U][/B]
+[/INDENT]
+[/LIST]
+[LIST]
+
+[/LIST]
+[LIST]
+
+[/LIST]
+[LIST]
+
+[/LIST]
+[LIST]
+
+[/LIST]
+[LIST]
 
 [/LIST]
 [/CODE]
@@ -57,26 +82,54 @@ Place holder for now
 
 [SIZE=3][COLOR="#0000CD"]This is why HB can not navigate to it's corpse if you die in an instance.[/COLOR][/SIZE]
 
+
+
 [CENTER][IMG]http://imageshack.com/a/img716/8848/3oz2.png[/IMG]
 
 
+
+[SIZE=3][COLOR="#0000CD"]Anyone that is getting instance locked.[/COLOR][/SIZE]
+
+
+
 [CODE]
 [LIST]
-[*] 
+Those having instance locks: 
+
+You can open the Quest Behaviors\Misc\]InstanceTimer.cs file and modify the timer to your liking or replace the line of code in the profile with the line of code below.
+
+Use Notepad ++ to easily open and modify .xml and .cs files
+
+Example [B]13 minutes[/B] =  WaitTime="780000" 
+
 [INDENT]
-Place holder for now
+<CustomBehavior File="Misc\InstanceTimer" Timer="Check" WaitTime="780000" />
 [/INDENT]
 [/LIST]
 [/CODE]
 
+
+
+
+
+
+[SIZE=3][COLOR="#0000CD"][UserSettings-v1294(error)] PROFILE ERROR:     UserSettings does not allow access to the 'AdvancedSettingsMode' attribute.
+      Please modify the profile to refrain from accessing the 'AdvancedSettingsMode' attribute.[/COLOR][/SIZE]
+
+
+
 [CODE]
-[LIST]
-[*] 
-[INDENT]
-Place holder for now
-[/INDENT]
-[/LIST]
+
+With the latest "test" releases of HB, it's not reading the Usersettings correctly !
+
+You have to open the profile using notepad ++ and remove the following two lines from the UserSettings: AdvancedSettingsMode and ProfileDebuggingMode 
+
+If the profile has multiple files, you will need to do it in each file
+
 [/CODE]
+
+
+
 All post must abide by the forum rules of HonorBuddy and their "Moderators".  Deliberate/unintentional violations of those rules will result in administrative action and possibly result with being banned from the forum.
 
 For those that know me, I personally ask each of you to keep it clean. Comments posted in this thread could be useful to the less experienced users of the bot.
