@@ -51,8 +51,7 @@
 							SkinMobs="False"
 							UseMount="True" 
 							UseRandomMount="False" />
-		
-
+	
 			<!-- If our hearthstone is set to Sun's Reach -->
 			<If Condition="Me.HearthstoneAreaId == 4087" >
 			
