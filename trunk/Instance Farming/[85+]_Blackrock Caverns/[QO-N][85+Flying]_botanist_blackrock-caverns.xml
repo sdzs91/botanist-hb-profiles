@@ -533,8 +533,21 @@
 					
 					<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
 													  
-													  
+											
+					<!-- Profile message - Casting Army of the Dead -->
+					<CustomBehavior File="Message" 
+									Text="Casting Army of the Dead."  
+									LogColor="Orange" />
+								
+					<!-- Macro - Cast Army of the Dead -->
+					<CustomBehavior File="RunMacro"
+									NumOfTimes="1"
+									Macro="/cast Army of the Dead" />
 
+					<!-- Wait timer - wait 6 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="6000" />				
+									
 					<!-- Move to - Corla, Herald of Twilight -->
 					<MoveTo X="573.4445" Y="987.6875" Z="155.3537" />
 					
