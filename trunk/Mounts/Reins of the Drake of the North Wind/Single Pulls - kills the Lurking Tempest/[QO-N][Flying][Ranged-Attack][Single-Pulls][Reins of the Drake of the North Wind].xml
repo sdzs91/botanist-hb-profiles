@@ -231,14 +231,24 @@
 					<RunTo X="-986.8172" Y="-62.31145" Z="694.9169" />
 					<RunTo X="-974.8712" Y="-64.82938" Z="694.9169" />
 		
-
-					<MoveTo X="-980.473" Y="-75.58814" Z="694.9169" />
-					<MoveTo X="-985.1056" Y="-95.801" Z="694.9169" />
-					<MoveTo X="-991.5434" Y="-122.3373" Z="694.9169" />
-					<MoveTo X="-1029.242" Y="-128.8814" Z="694.9169" />
-					<MoveTo X="-1044.783" Y="-132.8248" Z="694.9169" />
-					<MoveTo X="-1021.897" Y="-126.2177" Z="694.9169" />
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
 		
+					<MoveTo X="-989.747" Y="-119.878" Z="694.9169" />
+					<MoveTo X="-1045.612" Y="-133.3074" Z="694.9153" />
+		
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
 					
 					<!-- Profile message - Seventh pull complete -->
 					<CustomBehavior File="Message" 
