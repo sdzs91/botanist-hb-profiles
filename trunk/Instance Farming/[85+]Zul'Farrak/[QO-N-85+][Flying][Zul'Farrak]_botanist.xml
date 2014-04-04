@@ -58,10 +58,10 @@
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
 							LootMobs="True"
-							LootRadius="45"
+							LootRadius="65"
 							MountName=""
 							NinjaSkin="False"
-							RessAtSpiritHealers="False"
+							RessAtSpiritHealers="True"
 							SkinMobs="False"
 							UseMount="True" 
 							UseRandomMount="False" />
@@ -205,9 +205,20 @@
 					<CustomBehavior File="DeleteItems" 
 									Ids="6149" />
 									
-					<!-- Instance timer to ensure run take a minimum of 12 minutes and 30 seconds to avoid instance locks -->
+					<!-- Desertwalker Cane -->				
+					<CustomBehavior File="DeleteItems" 
+									Ids="12471" />
+									
+					<!-- CustomBehavior - Misc\InstanceTimer - 12 minutes and 30 seconds -->
 					<CustomBehavior File="Misc\InstanceTimer" 
 									Timer="Start" /> 
+	
+					<!-- CustomBehavior - ForcedDismount -->
+					<CustomBehavior File="ForcedDismount" />
+					
+					<!-- UserSettings -->
+					<CustomBehavior File="UserSettings"
+									UseMount="False"  />
 	
 					<!-- Profile message - Zul'Farrak initialized -->
 					<CustomBehavior File="Message" 
@@ -243,11 +254,7 @@
 					<MoveTo X="1682.897" Y="865.5497" Z="8.877296" />
 					<MoveTo X="1641.613" Y="804.2529" Z="8.887267" />
 					<MoveTo X="1628.986" Y="796.0302" Z="8.982753" /> 
-					
-					<!-- Wait timer - wait 5 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="5000" />
-					
+
 					<!-- Profile message - Enabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Enabling combat." 
@@ -256,9 +263,9 @@
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />
 					
-					<!-- Wait timer - wait 5 seconds - delay -->
+					<!-- Wait timer - wait 30 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="5000" />
+									WaitTime="30000" />
 									
 					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
@@ -291,9 +298,9 @@
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />
 					
-					<!-- Wait timer - wait 5 seconds - delay -->
+					<!-- Wait timer - wait 30 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="5000" />
+									WaitTime="30000" />
 
 					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
@@ -356,6 +363,10 @@
 
 					<!-- Move to - zone in location -->
 					<MoveTo X="1212.67" Y="842.04" Z="8.93346" />
+		
+					<!-- UserSettings -->
+					<CustomBehavior File="UserSettings"
+									UseMount="True"  />
 		
 					<!-- CustomBehavior - Misc\InstanceTimer - 12 minutes and 30 seconds per run -->
 					<CustomBehavior File="Misc\InstanceTimer" 
