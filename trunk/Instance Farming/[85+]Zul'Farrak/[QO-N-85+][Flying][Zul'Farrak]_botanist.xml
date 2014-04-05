@@ -208,6 +208,14 @@
 					<!-- Desertwalker Cane -->				
 					<CustomBehavior File="DeleteItems" 
 									Ids="12471" />
+					
+					<!-- Gahz'rilla Fang -->				
+					<CustomBehavior File="DeleteItems" 
+									Ids="9467" />
+
+					<!-- Gahz'rilla Scale Armor -->				
+					<CustomBehavior File="DeleteItems" 
+									Ids="9469" />
 									
 					<!-- CustomBehavior - Misc\InstanceTimer - 12 minutes and 30 seconds -->
 					<CustomBehavior File="Misc\InstanceTimer" 
@@ -267,15 +275,17 @@
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="30000" />
 									
+					<!-- Solo trroll on he right  -->				
+					<MoveTo X="1714.089" Y="791.2223" Z="15.54651" />
+					
 					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
 										Text="Disabling combat." 
 										LogColor="Gold" />
 					
 					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />				
-									
-					<MoveTo X="1714.089" Y="791.2223" Z="15.54651" />
+					<DisableBehavior Name="Combat" />
+					
 					<MoveTo X="1902.033" Y="1137.849" Z="8.904837" />
 					<MoveTo X="1915.433" Y="1196.829" Z="9.050422" />
 					<MoveTo X="1636.942" Y="1102.159" Z="8.951746" />
