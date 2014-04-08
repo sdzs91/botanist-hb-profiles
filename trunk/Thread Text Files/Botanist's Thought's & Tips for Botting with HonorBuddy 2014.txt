@@ -3,15 +3,55 @@
 [B][CENTER][SIZE=4][COLOR="#696969"]Botanist's Thought's & Tips for Botting with HonorBuddy 2014[/COLOR][/SIZE][/CENTER][/B]
 
 
-[CENTER][COLOR="#696969"][SIZE=4]An "[COLOR="#0000FF"]open[/COLOR]" discussion of the "DON'Ts" of BOTTING WoW[/SIZE][/COLOR]
+[CENTER][COLOR="#696969"][SIZE=4]An "[COLOR="#0000FF"]open[/COLOR]" discussion of the "Do's & DON'Ts" of BOTTING WoW[/SIZE][/COLOR]
+
+
+[COLOR="#0000CD"][SIZE=4]How To Use Tortoise SVN[/SIZE][/COLOR][/CENTER]
 
 [CODE]
-[LIST]
-[*] Tip #1 Don't bot on any account you aren't willing to get banned on !
-[/LIST]
+[CENTER]
+Install [URL="http://tortoisesvn.net/downloads.html"]Tortoise SVN[/URL]
 
-[LIST]
-[*]Tip #2 HonorBuddy uses mesh files to navigate. Take the entire wow map, divide it into 8 X 8 tiles. 
+Copy this link [url]https://botanist-hb-profiles.googlecode.com/svn/trunk[/url]
+
+Right click your desktop
+
+Select SVN checkout
+
+Click ok
+
+[COLOR="#0000FF"]The SVN files should have downloaded to the desktop[/COLOR]
+
+Click ok a last time and tortoise will close
+
+
+
+
+[CENTER][COLOR="#0000CD"][SIZE=4]How To Update A SVN [/SIZE][/COLOR][/CENTER]
+
+Right click the folder and choose SVN Update to update to the current version of the files on the SVN
+[/CENTER]
+[/CODE]
+[CENTER][COLOR="#0000CD"][SIZE=4]Instance Runs per/hr increased from 5 to 10 [/SIZE][/COLOR]
+
+[CODE]
+[CENTER][url=http://us.battle.net/wow/en/blog/13021019/547-hotfixes-april-7-4-7-2014]5.4.7 Hotfixes: April 7 - World of Warcraft[/url]
+
+
+Raids, Dungeons, and Scenarios
+Each World of Warcraft account can now create a maximum of 10 instances per hour (up from 5).[/CENTER]
+[/CODE]
+
+
+[COLOR="#0000CD"][SIZE=4]Tips[/SIZE][/COLOR]
+
+[CODE]
+[CENTER]
+Tip #1 Don't bot on any account you aren't willing to get banned on !
+
+
+
+Tip #2 HonorBuddy uses mesh files to navigate. Take the entire wow map, divide it into 8 X 8 tiles. 
 
 Each tile is a geometric mesh. HB uses the individual mesh files to plot courses and navigate around obstacles. 
 
@@ -33,17 +73,17 @@ This means the bot will act erratically until it acquires the necessary files it
 This includes standing still doing nothing while the bot attempts to download the necessary mesh files.
 
 [/INDENT]
-[/LIST]
 
-[LIST]
+
+
 
 Tip #3 You should never afk your bot(s) unless you have extensively tested a particular profile/botbase on your computer.
 [INDENT]
 Even if you are confident the profile/botbase will work correctly, there are still potential risk involved any time you afk the bot.
 [/INDENT]
-[/LIST]
 
-[LIST]
+
+
 
 Tip #4 Any time WoW patches, HonorBuddy will be down.
 [INDENT]
@@ -61,7 +101,7 @@ and will likely result in you being ignored.
 
 [B][U][SIZE=3]If it won't run for you, wait for a stable release ![/SIZE][/U][/B]
 [/INDENT]
-[/LIST]
+
 [LIST]
 
 [/LIST]
@@ -76,8 +116,8 @@ and will likely result in you being ignored.
 [/LIST]
 [LIST]
 
-[/LIST]
-[/CODE]
+[/LIST][/CENTER]
+[/CODE][/CENTER]
 
 
 [SIZE=3][COLOR="#0000CD"]This is why HB can not navigate to it's corpse if you die in an instance.[/COLOR][/SIZE]
@@ -148,8 +188,8 @@ For those that know me, I personally ask each of you to keep it clean. Comments 
 [/CODE]
 [/CENTER]
 
-[B][CENTER][COLOR="#696969"][SIZE=2] Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
+[B][CENTER][COLOR="#FFA07A"][SIZE=2]Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
 
-[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
+[B][CENTER][COLOR="#FF0000"][SIZE=2]Many, many hours have went into this profile as well as many others. Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN.[/SIZE][/COLOR][/CENTER][/B]
 
-[URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL][/CENTER]
+[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL][/CENTER]
