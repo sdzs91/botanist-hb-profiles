@@ -1122,6 +1122,10 @@
 					<!-- Move to - zone in location -->
 					<RunTo X="40.5531" Y="-28.7947" Z="-1.11728" />
 
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" 
+									X="50.22644" Y="-38.28931" Z="-1.098699" />
+					
 					<!-- Move to - zone out location -->
 					<RunTo X="3409.85" Y="1486.26" Z="182.837" />
 					
