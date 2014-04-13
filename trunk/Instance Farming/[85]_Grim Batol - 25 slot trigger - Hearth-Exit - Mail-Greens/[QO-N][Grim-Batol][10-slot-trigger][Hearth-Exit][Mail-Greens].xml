@@ -631,8 +631,8 @@
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
 					
-					<!-- If we have less then 35 empty bag slots or our durability is less than 30% -->
-					<If Condition="(Me.FreeBagSlots &lt;= 35) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+					<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 												
 						<!-- Load profile - [QO-N][85-Flying]_botanist_grim-batol_[repair-mail] -->
 						<CustomBehavior File="LoadProfile" 
