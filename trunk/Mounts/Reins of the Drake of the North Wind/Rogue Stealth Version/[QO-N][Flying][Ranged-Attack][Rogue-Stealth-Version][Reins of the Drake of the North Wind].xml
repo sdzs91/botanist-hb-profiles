@@ -1041,8 +1041,11 @@
 									NumOfTimes="1"
 									Macro="/tar Altairus" />
 					
-					<!-- Cast one of the following spells -->
-					<CustomBehavior File="Misc\RangeAttack" />
+					<!-- Macro -cast Ambush -->					
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Ambush" 
+									NumOfTimes="1" 
+									WaitTime="0"/>
 
 					<!-- Custom behavior -  Wait timer- 10 second loot delay -->
 					<CustomBehavior File="WaitTimer" 
