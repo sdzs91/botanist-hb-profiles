@@ -1030,6 +1030,20 @@
 					<!-- Kill Altairus -->
 					<MoveTo X="-1194.486" Y="54.48828" Z="734.1755" />
 
+					<!-- Macro - Clear target -->					
+					<CustomBehavior File="RunMacro" 
+									Macro="/cleartarget" 
+									NumOfTimes="1" 
+									WaitTime="0"/>			
+								
+					<!-- Macro - targetenemy -->						
+					<CustomBehavior File="RunMacro"
+									NumOfTimes="1"
+									Macro="/tar Altairus" />
+					
+					<!-- Cast one of the following spells -->
+					<CustomBehavior File="Misc\RangeAttack" />
+
 					<!-- Custom behavior -  Wait timer- 10 second loot delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="10000" />
