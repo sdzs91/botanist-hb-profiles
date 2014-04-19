@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][Reins of the Vitreous Stone Drake]_botanist_stonecore </Name>
+	<Name>[QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>91</MaxLevel>
@@ -46,142 +46,84 @@
 		<ClearVendor />
 		<ClearMailbox />
 		
-		 	<!-- UserSettings -->
-			<CustomBehavior File="UserSettings"
-							FindMountAutomatically="True"
-							GroundMountFarmingMode="False"
-							HarvestHerbs="False"
-							HarvestMinerals="False"
-							KillBetweenHotspots="True"
-							LogoutForInactivity="False"
-							LogoutInactivityUseForceQuit="False"
-							LootMobs="True"
-							LootRadius="25"
-							MountName=""
-							NinjaSkin="False"
-							RessAtSpiritHealers="False"
-							SkinMobs="False"
-							UseMount="True" 
-							UseRandomMount="False" />
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="False"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootMobs="True"
+						LootRadius="5"
+						MountName=""
+						NinjaSkin="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />
 						
-		<If Condition="Me.MapId == 0" > 
-			<CustomBehavior File="Message" Text="I'm am somewhere in Eastern Kingdoms. I am flying to the Deepholm portal in Stormwind" LogColor="Lime" />
-			<CustomBehavior File="FlyTo" X="-8219.944" Y="448.447" Z="117.6114" DestName="Portal to Deepholme" />							
-			<CustomBehavior File="ForcedDismount" />
-			<CustomBehavior File="Message" Text="Taking the portal to Deepholme." LogColor="Lime" />
-			<CustomBehavior File="InteractWith" MobId="207693" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8223.319" Y="451.182281" Z="117.4883" />
-			<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
-				<If Condition="Me.ZoneId == 5042" >
-					<CustomBehavior File="Message" Text="I have ported to Deepholm." LogColor="Lime" />
-				</If>	
-			<CustomBehavior File="ForcedMount" MountType="Ground" />
+		
+		<!-- If we are in Stonecore -->
+		<If Condition="Me.MapId == 725">
+		
+			<!-- Profile message - You started the bot with me inside Stonecore. Exiting the dungeon to reset -->
+			<CustomBehavior File="Message" Text="You started the bot with me inside Stonecore. Exiting the dungeon to reset." LogColor="Cyan" />	
 				
-		</If>				
+			<!-- Move to - zone in location -->
+			<MoveTo X="851.052" Y="986.474" Z="317.2723" />
+
+			<!-- Go through the portal -->
+			<CustomBehavior File="Misc\InInstance" 
+							X="815.4514" Y="986.9715" Z="318.9995" />
+			
+			<!-- Move to - zone out location-->
+			<MoveTo X="1023.72" Y="644.747" Z="156.672" />
 						
+		</If>	<!-- If we are in Stonecore -->				
 						
+		<!-- If we are not in the Stonecore instance box -->
+		<If Condition="Me.Y &lt; 620.9702 || Me.Y &gt; 678.2952 || Me.X &lt; 987.7558 || Me.X &gt; 1062.086 || Me.Z &lt; 150 || Me.Z &gt; 160" >				
+				
+			<!-- Load profile - [QO-N-M][Reins of the Vitreous Stone Drake]_botanist_stonecore -->
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Movement\[QO-N-M][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore" />	
 						
-						
-						
-						
-						
-						
+		</If>	<!-- If we are not in the Stonecore instance box -->				
+
+		<!-- While Loop -->			
 		<While Condition="true" >
 
-			<!-- If we are in Stonecore -->
-			<If Condition="Me.MapId == 725">
+			<!-- Repair if necessary -->
+			<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
 			
-				<!-- Profile message - You started the bot with me inside Stonecore. Exiting the dungeon to reset -->
-				<CustomBehavior File="Message" Text="You started the bot with me inside Stonecore. Exiting the dungeon to reset." LogColor="Cyan" />	
-					
-				<!-- Move to - zone in location -->
-				<MoveTo X="851.052" Y="986.474" Z="317.2723" />
-
-				<!-- Go through the portal -->
-				<CustomBehavior File="Misc\InInstance" 
-								X="815.4514" Y="986.9715" Z="318.9995" />
+				<!-- CustomBehavior - LoadProfile - [QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore[repair-mail] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\Vendors\[QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore[repair-mail]" />
 				
-				<!-- Move to - zone out location-->
-				<MoveTo X="1023.72" Y="644.747" Z="156.672" />
-							
-			</If>	<!-- If we are in Stonecore -->
+			</If> <!-- Repair if necessary -->
 		
-			<!-- If we are in Deepholm -->
-			<If Condition="Me.MapId == 646">
-		
-				<!-- Profile message - We are in Deepholm --> 
-				<CustomBehavior File="Message" 
-								Text="We are in Deepholm."
-								LogColor="Plum" />
-		
-				<!-- If are inside Temple of the Earth -->
-				<If Condition="Me.Y &gt; 408.4768 &amp;&amp; Me.Y &lt; 649.2817 &amp;&amp; Me.X &gt; 964.1465 &amp;&amp; Me.X &lt; 1112.985 &amp;&amp; Me.Z &lt; 0" >
-				
-					<!-- Profile message - We are inside Temple of the Earth --> 
-					<CustomBehavior File="Message" 
-									Text="We are inside Temple of the Earth."
-									LogColor="Plum" />
-		
-					<!-- Move to - outside Temple of the Earth -->
-					<MoveTo X="847.6309" Y="497.956" Z="-63.26773" />
-					
-				</If>	<!-- If are inside Temple of the Eart -->
-				
-				<!-- If we are not in the Stonecore instance box -->
-				<If Condition="Me.Y &lt; 620.9702 || Me.Y &gt; 678.2952 || Me.X &lt; 987.7558 || Me.X &gt; 1062.086 || (Me.Z &lt; 150 &amp;&amp; Me.Z &gt; 160)" >	
-		
-					<!-- Profile message - Moving to Stonecore --> 
-					<CustomBehavior File="Message" 
-									Text="Moving to Stonecore."
-									LogColor="Plum" />
-					
-					<CustomBehavior File="FlyTo" X="773.7523" Y="596.1415" Z="43.54036" />
-
-					<CustomBehavior File="FlyTo" X="1027.767" Y="739.9456" Z="199.1932" />
-					
-					<CustomBehavior File="MyCTM" X="1026.425" Y="667.5716" Z="164.4908" /> 
-					
-					<CustomBehavior File="MyCTM" X="1029.969" Y="608.4313" Z="166.7135" />
-					
-					<!-- Wait timer - wait 10 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="10000" />
-
-					<!-- Move to - zone in location -->
-					<MoveTo X="851.052" Y="986.474" Z="317.2723" />
-
-					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" 
-									X="815.4514" Y="986.9715" Z="318.9995" />
-					
-					<!-- Move to - zone out location-->
-					<MoveTo X="1023.72" Y="644.747" Z="156.672" />				
-
-					<!-- Profile message - We have reached our destination --> 
-					<CustomBehavior File="Message" 
-									Text="We have reached our destination."
-									LogColor="Plum" />
-		
-				</If>	<!-- If we are not in the Stonecore instance box -->
-		
-			</If>	<!-- If we are in Deepholm -->
-
 			<!-- If we are in the Stonecore instance box -->
-			<If Condition="Me.Y &gt; 620.9702 &amp;&amp; Me.Y &lt; 678.2952 &amp;&amp; Me.X &gt; 987.7558 &amp;&amp; Me.X &lt; 1062.086 &amp;&amp; (Me.Z &gt; 150 &amp;&amp; Me.Z &lt; 160)" >	
+			<If Condition="Me.Y &gt; 620.9702 &amp;&amp; Me.Y &lt; 678.2952 &amp;&amp; Me.X &gt; 987.7558 &amp;&amp; Me.X &lt; 1062.086 &amp;&amp; Me.Z &gt; 150 &amp;&amp; Me.Z &lt; 160" >	
 			
 				<!-- If our Hearthstone/Innkeepers Daughter is not set at Temple of the Earth -->				
 				<If Condition="Me.HearthstoneAreaId != 5303 ">
 			
-					<!-- Profile message - We have reached our destination --> 
+					<!-- Profile message - Our Hearthstone/Innkeeper's Daughter isn't set to Temple of the Earth. Moving to Temple of the Earth --> 
 					<CustomBehavior File="Message" 
 									Text="Our Hearthstone/Innkeeper's Daughter isn't set to Temple of the Earth. Moving to Temple of the Earth."
 									LogColor="Plum" />
 			
+					<!-- Flt to - Temple of the Earth entrance -->			
 					<CustomBehavior File="FlyTo" 
 									X="840.5391" Y="492.2466" Z="-63.31997" />
-			
-					<CustomBehavior File="ForcedDismount" />
 					
-					<MoveTo X="1018.878" Y="545.7827" Z="-49.33431" />
+					<!-- Move to -  Temple of the Earth Innkeep -->
+					<MoveTo X="1018.878" Y="545.7827" Z="-49.33431" />			
+								
+					<!-- CustomBehavior - ForcedDismount -->
+					<CustomBehavior File="ForcedDismount" />
 		
 					<CustomBehavior File="SetHearthstone" 
 									MobId="45300"  
@@ -201,21 +143,9 @@
 					
 					<CustomBehavior File="MyCTM" X="1026.425" Y="667.5716" Z="164.4908" /> 
 					
-					<CustomBehavior File="MyCTM" X="1029.969" Y="608.4313" Z="166.7135" />
-					
-					<!-- Wait timer - wait 10 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="10000" />
+					<CustomBehavior File="MyCTM" X="1023.72" Y="644.747" Z="156.672" />
 
-					<!-- Move to - zone in location -->
-					<MoveTo X="851.052" Y="986.474" Z="317.2723" />
-
-					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" 
-									X="815.4514" Y="986.9715" Z="318.9995" />
-					
-					<!-- Move to - zone out location-->
-					<MoveTo X="1023.72" Y="644.747" Z="156.672" />				
+					<CustomBehavior File="ForcedDismount" />
 
 					<!-- Profile message - We have reached our destination --> 
 					<CustomBehavior File="Message" 
@@ -422,127 +352,64 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="15000" />
 
-				<!-- Move to - zone in location -->
-				<MoveTo X="851.052" Y="986.474" Z="317.2723" />
+				<!-- Move to - Rock Borer kill zone -->
+				<MoveTo X="1030.217" Y="871.4951" Z="297.1246" />				
+
+				<!-- While our X > 900 -->
+				<While Condition="Me.X &gt; 900">
+					
+						<!-- Custom behavior - TargetAndMoveToMob - Rock Borer -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="1"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										TerminateWhen="Me.GotTarget &amp;&amp; Me.CurrentTarget.IsDead"
+										MobId="42845" >			
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+
+					<!-- If our target is a Rock Borer -->
+					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 42845)">
+					
+						<!-- Profile message  - Engaging a Rock Borer -->	
+						<CustomBehavior File="Message" 
+										Text="Engaging a Rock Borer." 
+										LogColor="Cyan" />
+						
+						<!-- CustomBehavior - RunMacro - cast Auto Attack -->
+						<CustomBehavior File="RunMacro" 
+										Macro="/cast Auto Attack" />
+						
+						<!-- Wait timer - wait 1 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="1000" />
+
+						<Else>
+
+							<!-- Move to - zone in location -->
+							<MoveTo X="851.052" Y="986.474" Z="317.2723" />
+						
+						</Else>
+										
+					</If>	<!-- If our target is a Schnottz Elite Trooper --> 
+					
+				</While> 	<!-- While our X > 900 -->				
+
+				<!-- CustomBehavior - Misc\InstanceTimer -  6 minutes and 40 seconds -->				
+				<CustomBehavior File="Misc\InstanceTimer" 
+								Timer="Check" 
+								WaitTime="400000" />
 
 				<!-- Repair if necessary -->
-				<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" >
+				<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
 				
-					<!-- Profile message - Our durability is less than 30%, or we need to vendor -->
-					<CustomBehavior File="Message" 
-									Text="Our durability is less than 30%, or we need to vendor." 
-									LogColor="Lime" />
-									
-					<!-- If our earthstone/Innkeepers Daughter is set at Temple of the Earth -->				
-					<If Condition="Me.HearthstoneAreaId == 5303 ">
+					<!-- CustomBehavior - LoadProfile - [QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore[repair-mail] -->
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\Vendors\[QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore[repair-mail]" />
 					
-						<!-- Profile message - Our Hearthstone/Innkeepers Daughter is set at Temple of the Earth -->
-						<CustomBehavior File="Message" 
-										Text="Our Hearthstone/Innkeepers Daughter is set at Temple of the Earth ." 
-										LogColor="Cyan" />
-											
-						<!-- Have hearthstone -->
-						<If Condition="HasItem(6948)">
-							<CustomBehavior File="Message" 
-											Text="Using Hearthstone." 
-											LogColor="Lime" />
-											
-							<CustomBehavior File="Misc\RunLua" 
-											Lua="UseItemByName(6948)" 
-											WaitTime="1000" />
-											
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="20000" />
-						</If> <!-- Have hearthstone -->
-					
-						<!-- Have Innkeeper's Daughter -->
-						<If Condition="HasItem(64488)">
-							<CustomBehavior File="Message" 
-											Text="Using Innkeeper's Daughter." 
-											LogColor="Lime" />
-												
-							<CustomBehavior File="Misc\RunLua" 
-											Lua="UseItemByName(64488)" 
-											WaitTime="1000" />
-								
-							<!-- Wait 20 seconds for the game to load -->	
-							<CustomBehavior File="WaitTimer" 
-											WaitTime="20000" />
-											
-						</If> <!-- Have Innkeeper's Daughter -->
-						
-					</If>	<!-- If our earthstone/Innkeepers Daughter is set at Temple of the Earth -->
-						
-					<!-- If we have hearthed to Temple of the Earth -->						
-					<If Condition="Me.MapId != 725">	
-					
-						<!-- If we are Alliance -->
-						<If Condition="Me.IsAlliance">
-
-							<SetVendor>
-								<Vendors>
-									<!-- Temple of the Earth Repair -->
-									<Vendor Name="Dugsley Deepdelver" 
-											Entry="45294" 
-											Type="Repair" 
-											X="1052.99" Y="636.936" Z="-45.8709" />
-								</Vendors>
-							</SetVendor>
-							
-							<SetMailbox>
-								<Mailboxes>
-									<Mailbox X="1049.912" Y="632.4952" Z="-45.55866" />
-								</Mailboxes>
-							</SetMailbox>
-							
-							<!-- Force set the vendor -->
-							<CustomBehavior File="ForceSetVendor" 
-											DoMail="True" 
-											DoRepair="True" 
-											DoSell="True" 
-											DoTrain="False" />
-					
-						</If>	<!-- If we are Alliance -->
-					
-						<!-- If we are Horde -->
-						<If Condition="Me.IsHorde">
-
-							<SetVendor>
-								<Vendors>
-									<!-- Temple of the Earth Repair -->
-									<Vendor Name="Rixi 'The Driller' 
-											Bombdigger" 
-											Entry="45293" 
-											Type="Repair" 
-											X="1091.19" Y="436.332" Z="-45.96812" />
-								</Vendors>
-							</SetVendor>
-							
-							<SetMailbox>
-								<Mailboxes>
-									<Mailbox X="1089.173" Y="435.719" Z="-45.85225" />
-								</Mailboxes>
-							</SetMailbox>
-							
-							<!-- Force set the vendor -->
-							<CustomBehavior File="ForceSetVendor" 
-											DoMail="True" 
-											DoRepair="True" 
-											DoSell="True" 
-											DoTrain="False" />
-					
-						</If>	<!-- If we are Horde -->
-					
-					</If>	<!-- If we have hearthed to Temple of the Earth -->	
-					
-				</If> <!-- Repair if necessary -->
+				</If> <!-- Repair if necessary -->				
 
 				<!-- If we don't need to vendor -->
-				<If Condition="Me.MapId == 725">	
-
-					<!-- Instance timer check if we didn't repair -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
+				<If Condition="Me.MapId == 725">
 				
 					<!-- Profile message - We have more than 25 empty bag slots. Our gear is above 30% durability and we have Clefthoof Ribs -->
 					<CustomBehavior File="Message" 
@@ -568,7 +435,7 @@
 				
 			</If>	 <!-- If we are inside Stonecore -->
 
-		</While>
+		</While>	<!-- While Loop -->	
 	
 	</QuestOrder>
 
