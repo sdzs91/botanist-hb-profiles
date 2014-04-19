@@ -56,7 +56,7 @@
 						LogoutForInactivity="False"
 						LogoutInactivityUseForceQuit="False"
 						LootMobs="True"
-						LootRadius="5"
+						LootRadius="45"
 						MountName=""
 						NinjaSkin="False"
 						RessAtSpiritHealers="False"
@@ -64,7 +64,6 @@
 						UseMount="True" 
 						UseRandomMount="False" />
 						
-		
 		<!-- If we are in Stonecore -->
 		<If Condition="Me.MapId == 725">
 		

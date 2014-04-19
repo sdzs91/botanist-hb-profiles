@@ -286,7 +286,7 @@
 		
 			<!-- Load profile - [QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore -->
 			<CustomBehavior File="LoadProfile" 
-							ProfileName="..\,,\[QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore" />
+							ProfileName="..\..\[QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore" />
 									
 		</If>	<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->	
 

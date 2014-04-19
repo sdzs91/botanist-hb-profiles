@@ -1,0 +1,444 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-M][Flying][Stratholme]_botanist</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	<TargetingDistance>5</TargetingDistance>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Argent Crusader" 
+			 Entry="45456" />
+		<Mob Name="Summon Enabler Stalker" 
+			 Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="3682.632" Y="-3619.021" Z="139.3497" 
+				   Radius="10" />
+				   
+	   <Blackspot X="3916.617" Y="-3546.865" Z="134.6607"
+				  Radius="15" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Deathcharger's Reins" 
+			  Entry="13335" />
+		<Item Name="Runeblade of Baron Rivendare" 
+			  Entry="13505" />
+	</ProtectedItems>
+	
+	<QuestOrder>
+		
+		<CustomBehavior File="UserSettings" 
+						LootMobs="True" 
+						SkinMobs="False" 
+						NinjaSkin="False" 
+						HarvestHerbs="False" 
+						HarvestMinerals="False" 
+						KillBetweenHotspots="True" 
+						RessAtSpiritHealers="False" 
+						LootRadius="45" 
+						LogoutForInactivity="True" />
+				
+			<!-- If we are in Kalimdor -->
+			<If Condition="Me.MapId == 1">
+			
+				<!-- Profile message - We are in Kalimdor -->
+				<CustomBehavior File="Message" 
+								Text="We are in Kalimdor."  
+								LogColor="Orange" />
+			
+				<!-- Faction check - Alliance -->
+				<If Condition="Me.IsAlliance" >
+			
+					<!-- Profile message - We are Alliance -->
+					<CustomBehavior File="Message" 
+									Text="We are Alliance"  
+									LogColor="Orange" />
+									
+					<!-- Profile message - Flying to Ratchet -->
+					<CustomBehavior File="Message" 
+									Text="Flying to Ratchet." 
+									LogColor="Cyan" />
+					
+					<!-- Fly to - Ratchet docks - hover point -->
+					<CustomBehavior File="FlyTo" 
+									X="-966.5041" Y="-3769.535" Z="46.41536" />	
+					
+					<!-- CTM to - grounding at Ratchet docks -->
+					<CustomBehavior File="MyCTM"
+									X="-994.0352" Y="-3814.759" Z="5.329047" />
+
+					<!-- Custom behavior - ForcedDismount -->
+					<CustomBehavior File="ForcedDismount" />
+					
+					<!-- Move to - transport wait location -->
+					<MoveTo X="-994.0004" Y="-3827.987" Z="5.634368" />
+						
+					<!-- Profile message - Waiting for the boat to Booty Bay -->	
+					<CustomBehavior File="Message" 
+									Text="Waiting for the boat to Booty Bay." 
+									LogColor="Cyan" />	
+					
+					<!-- Profile message - We are in Kalimdor -->
+					<CustomBehavior File="UseTransport"
+									TransportId="20808"
+									WaitAtX="-994.0004" 
+									WaitAtY="-3827.987" 
+									WaitAtZ="5.634368" 
+									TransportStartX="-1005.61346" 
+									TransportStartY="-3841.648" 
+									TransportStartZ="-0.0262415316"
+									TransportEndX="-14277.7451" 
+									TransportEndY="582.86615" 
+									TransportEndZ="-0.048539947"
+									StandOnX="-998.279" 
+									StandOnY="-3840.65" 
+									StandOnZ="6.02161" 
+									GetOffX="-14280.22" 
+									GetOffY="567.6113" 
+									GetOffZ="6.696649" />
+						
+					<!-- Move to - Booty Bay docks -->	
+					<MoveTo X="-14280.22" Y="567.6113" Z="6.696649" />
+
+					<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="5000" />
+										
+					<!-- Else we are Horde -->
+					<Else>
+					
+						<!-- Profile message - We are Horde -->
+						<CustomBehavior File="Message" 
+										Text="We are Horde."  
+										LogColor="Orange" />
+					
+						<!-- Profile message - Moving to the Undercity zeppelin -->
+						<CustomBehavior File="Message" 
+										Text="Moving to the Undercity zeppelin."  
+										LogColor="Plum" />
+					
+						<!-- Fly to - Orgrimmar to Undercity hover point -->
+						<CustomBehavior File="FlyTo"
+										X="1854.599" Y="-4404.583" Z="169.8815" />
+										
+						<!-- Land on the deck -->
+						<CustomBehavior File="MyCTM"
+										X="1844.287" Y="-4395.305" Z="135.2319" />				
+								
+						<!-- Forced dismount -->		
+						<CustomBehavior File="ForcedDismount" />						
+												
+						<CustomBehavior File="UseTransport" 
+							TransportId="164871" 
+							WaitAtX="1840.016" 
+							WaitAtY="-4391.266" 
+							WaitAtZ="135.2319"								
+							TransportStartX="1833.50867" 
+							TransportStartY="-4391.54346" 
+							TransportStartZ="152.767868"								
+							StandOnX="1834.315" 
+							StandOnY="-4385.276" 
+							StandOnZ="135.0402"
+							TransportEndX="2062.376" 
+							TransportEndY="292.998047" 
+							TransportEndZ="114.972954"	
+							GetOffX="2066.645" 
+							GetOffY="285.7304" 
+							GetOffZ="97.03136" />
+					
+						<!-- Custom behavior - WaitTimer - wait 5 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
+					</Else>	<!-- Else we are Horde -->
+			
+				</If>	<!-- Faction check - Alliance -->
+				
+			</If>	<!-- If we are in Kalimdor -->	
+				
+		<!-- If our hearthstone is not set to Light's Hope Chapel -->
+		<If Condition="Me.HearthstoneAreaId != 2268 " >
+		
+			<!-- Profile message - Our Hearthstone is not set at Light's Hope Chapel -->
+			<CustomBehavior File="Message" 
+							Text="Our Hearthstone is not set at Light's Hope Chapel." 
+							LogColor="Cyan" />
+							
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+
+			<!-- Profile message - Moving to Light's Hope Chapel -->
+			<CustomBehavior File="Message" 
+							Text="Moving to Light's Hope Chapel." 
+							LogColor="Cyan" />				
+		
+			<!-- If we are in the instance box-->
+			<If Condition="Me.X &lt; 3239.871 &amp;&amp; Me.X &gt; 3184.693 &amp;&amp; Me.Y &lt; -4033.876 &amp;&amp; Me.Y &gt; -4050.978" >
+		
+				<!-- Move to - East Gate Service Entrance gate -->
+				<MoveTo X="3189.636" Y="-4039.492" Z="107.9911" />
+					
+				<!-- Custom behavior- InteractWith - East Gate Service Entrance gate -->	
+				<CustomBehavior File="InteractWith" 
+								MobId="175369" 
+								ObjectType="Gameobject" 
+								Range="4.75" 
+								NumOfTimes="1"  
+								WaitTime="1" 
+								X="3185.4812" Y="-4039.09937" Z="107.791389" />
+				
+				<!-- Move to - outside the East Gate Service Entrance -->
+				<MoveTo X="3174.903" Y="-4040.003" Z="105.5004" />
+		
+			</If>
+		
+			<!-- Fly to - Light's Hope Chapel -->
+			<CustomBehavior File="FlyTo" 
+							X="2280.737" Y="-5319.798" Z="88.75224" />
+		
+			<!-- Custom behavior - ForcedDismount -->
+			<CustomBehavior File="ForcedDismount" />
+			
+			<!-- Usersettings -->
+			<CustomBehavior File="UserSettings" 
+							UseMount="False" />
+			
+			<!-- Move to - Jessica Chambers -->
+			<MoveTo X="2297.197" Y="-5335.058" Z="90.75238" />	
+					
+			<!-- Profile message - Setting our Hearthstone with the innkeep-->
+			<CustomBehavior File="Message" 
+							Text="Setting our Hearthstone with the innkeep." 
+							LogColor="Gold" />
+
+			<!-- Custom behavior - SetHearthstone -->				
+			<CustomBehavior File="SetHearthstone" 
+							MobId="16256"  
+							X="2295.74" Y="-5336.82" Z="90.75285" />
+
+			<!-- Profile message - I have set our Hearthstone -->				
+			<CustomBehavior File="Message" 
+							Text="I have set our Hearthstone." 
+							LogColor="Gold" />
+
+			<!-- Move to - exit the inn -->
+			<MoveTo X="2280.737" Y="-5319.798" Z="88.75224" />
+
+			<!-- If our bags have less than 25 empty slots or our durability < 30 % -->
+			<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
+			
+				<!-- Load profile - [QO-N-85+][Flying][Zul'Farrak]_botanist -->
+				<CustomBehavior File="LoadProfile" 
+										ProfileName="Movement\Vendors\[[QO-N][Flying][Stratholme]_[repair-mail]" />
+										
+			</If>	<!-- If our bags have less than 25 empty slots or our durability < 30 % -->
+
+			<!-- If we have > 20 empty bag slots and our durability > 30% -->
+			<If Condition="(Me.FreeBagSlots &gt; 20) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >	
+			
+				<!-- Usersettings -->
+				<CustomBehavior File="UserSettings" 
+								UseMount="False" />
+			
+				<!-- Profile message - We have more than 20 empty slots and our gear is above 30 percent durability -->
+				<CustomBehavior File="Message" 
+								Text="We have more than 20 empty slots and our gear is above 30 percent durability." 
+								LogColor="Gold" />
+				
+				<!-- Wait timer - wait 1 second - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="1000" />
+				
+				<!-- Custom behavior - ForcedMount - flying -->
+				<CustomBehavior File="ForcedMount" 
+								MountType="Flying" />
+						
+				<!-- Profile message - Flying to the East Gate Service Entrance -->		
+				<CustomBehavior File="Message" 
+								Text="Flying to the East Gate Service Entrance." 
+								LogColor="Gold" />
+				
+				<!-- Fly to - East Gate Service Entrance -->
+				<CustomBehavior File="FlyTo" 
+								X="3175.539" Y="-4039.376" Z="105.4958" />
+				
+				<!-- Profile message - We have reached the East Gate Service Entrance -->	
+				<CustomBehavior File="Message" 
+								Text="We have reached the East Gate Service Entrance." 
+								LogColor="Gold" />
+				
+				<!-- Custom behavior - ForcedDismount -->
+				<CustomBehavior File="ForcedDismount" />
+				
+				<!-- Profile message - Opening the gate -->
+				<CustomBehavior File="Message" 
+								Text="Opening the gate." 
+								LogColor="Gold" />
+				
+				<!-- Move to - East Gate Service Entrance gate -->
+				<MoveTo X="3182.442" Y="-4039.105" Z="107.3712" />
+					
+				<!-- Custom behavior- InteractWith - East Gate Service Entrance gate -->	
+				<CustomBehavior File="InteractWith" 
+								MobId="175369" 
+								ObjectType="Gameobject" 
+								Range="4.75" 
+								NumOfTimes="1"  
+								WaitTime="1" 
+								X="3185.4812" Y="-4039.09937" Z="107.791389" />
+				
+				<!-- Move to - right-hand turn -->
+				<MoveTo X="3185.573" Y="-4038.596" Z="107.9911" />
+				
+				<!-- Move to - zone out location -->
+				<MoveTo X="3233.06" Y="-4048.3" Z="108.442" />
+				
+			</If>
+		
+		</If>	<!-- If our hearthstone is not set to Lights Hope Chapel -->
+
+		<!-- If our hearthstone is set to Light's Hope Chapel -->
+		<If Condition="Me.HearthstoneAreaId == 2268 " >
+	
+			<!-- Profile message - Our Hearthstone is set to Light's Hope Chapel -->
+			<CustomBehavior File="Message" 
+							Text="Our Hearthstone is set to Light's Hope Chapel." 
+							LogColor="Orange" />
+	
+			<!-- If we aren't in Stratholme -->
+			<If Condition="Me.MapId != 329">
+	
+				<!-- Profile message - We aren't in Stratholme -->
+				<CustomBehavior File="Message" 
+								Text="We aren't in Stratholme." 
+								LogColor="Orange" />
+	
+				<!-- If we aren't in the East Gate Service Entrance -->
+				<If Condition="Me.X &gt; 3239.871 || Me.X &lt; 3184.693 || Me.Y &gt; -4033.876 || Me.Y &lt; -4050.978" >
+
+					<!-- Profile message - We aren't in the East Gate Service Entrance -->
+					<CustomBehavior File="Message" 
+									Text="We aren't in the East Gate Service Entrance." 
+									LogColor="Orange" />
+				
+					<!-- If our bags have less than 25 empty slots or our durability < 30 % -->
+					<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
+					
+						<!-- Load profile - [QO-N-85+][Flying][Zul'Farrak]_botanist -->
+						<CustomBehavior File="LoadProfile" 
+												ProfileName="Movement\Vendors\[[QO-N][Flying][Stratholme]_[repair-mail]" />
+												
+					</If>	<!-- If our bags have less than 25 empty slots or our durability < 30 % -->
+		
+					<!-- If we have > 20 empty bag slots and our durability > 30% -->
+					<If Condition="(Me.FreeBagSlots &gt; 20) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >	
+					
+						<!-- Profile message - We have more than 20 empty slots and our gear is above 30 percent durability -->
+						<CustomBehavior File="Message" 
+										Text="We have more than 20 empty slots and our gear is above 30 percent durability." 
+										LogColor="Gold" />
+						
+						<!-- Wait timer - wait 1 second - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="1000" />
+								
+						<!-- Profile message - Flying to the East Gate Service Entrance -->		
+						<CustomBehavior File="Message" 
+										Text="Flying to the East Gate Service Entrance." 
+										LogColor="Gold" />
+						
+						<!-- Fly to - East Gate Service Entrance -->
+						<CustomBehavior File="FlyTo" 
+										X="3175.539" Y="-4039.376" Z="105.4958" />
+						
+						<!-- Profile message - We have reached the East Gate Service Entrance -->	
+						<CustomBehavior File="Message" 
+										Text="We have reached the East Gate Service Entrance." 
+										LogColor="Gold" />
+						
+						<!-- Custom behavior - ForcedDismount -->
+						<CustomBehavior File="ForcedDismount" />
+						
+						<!-- Profile message - Opening the gate -->
+						<CustomBehavior File="Message" 
+										Text="Opening the gate." 
+										LogColor="Gold" />
+						
+						<!-- While we aren't in the East Gate Service Entrance -->
+						<While Condition="Me.X &lt; 3187">
+						
+							<!-- Move to - East Gate Service Entrance gate -->
+							<MoveTo X="3181.358" Y="-4038.975" Z="106.8102" />
+
+							<!-- Custom behavior- InteractWith - East Gate Service Entrance gate -->	
+							<CustomBehavior File="InteractWith" 
+											MobId="175369" 
+											ObjectType="Gameobject" 
+											Range="4.75" 
+											NumOfTimes="1"  
+											WaitTime="1" 
+											X="3185.4812" Y="-4039.09937" Z="107.791389" /> 
+											
+							<!-- Custom behavior - Jumpforward -->
+							<CustomBehavior File="Misc\JumpForward" />				
+
+							<!-- Wait timer - wait 5 seconds - delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="5000" />
+							
+						</While>	<!-- While we aren't in the East Gate Service Entrance -->
+						
+						<!-- Move to - right-hand turn -->
+						<MoveTo X="3229.305" Y="-4036.7" Z="108.423" />
+						
+						<!-- Move to - zone out location -->
+						<MoveTo X="3233.06" Y="-4048.3" Z="108.442" />
+
+					</If>	<!-- If we have > 20 empty bag slots and our durability > 30% -->
+
+				</If>	<!-- If we aren't in the East Gate Service Entrance -->
+
+			</If>	<!-- If we aren't in Stratholme -->
+
+		</If>	<!-- If our hearthstone is set to Light's Hope Chapel -->
+
+		<!-- If we are in the instance box-->
+		<If Condition="Me.X &lt; 3239.871 &amp;&amp; Me.X &gt; 3184.693 &amp;&amp; Me.Y &lt; -4033.876 &amp;&amp; Me.Y &gt; -4050.978" >
+		
+			<!-- Load profile - [QO-N][Flying][Stratholme]_botanist -->
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="..\[QO-N][Flying][Stratholme]_botanist" />
+									
+		</If>	<!-- If we are in the instance box-->
+		
+	</QuestOrder>
+
+</HBProfile>
