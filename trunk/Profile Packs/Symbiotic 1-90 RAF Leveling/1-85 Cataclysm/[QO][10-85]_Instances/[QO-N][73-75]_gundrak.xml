@@ -555,8 +555,7 @@
 					<CustomBehavior File="Misc\LoadProfileOn" 
 									MinLevel="75" 
 									ProfileName="[QO-N][75-77]_halls-of-lightning.xml"  />
-								
-					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />  
+		  
 				</If> <!-- GD -->
 				
 				<!-- Gundrak -->

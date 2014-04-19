@@ -707,9 +707,7 @@
 									
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="120000" />
-								
-					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
-					
+
 					<!-- enableable combat -->
 					<EnableBehavior Name="Combat" />
 				</If> <!-- Wailing Caverns -->

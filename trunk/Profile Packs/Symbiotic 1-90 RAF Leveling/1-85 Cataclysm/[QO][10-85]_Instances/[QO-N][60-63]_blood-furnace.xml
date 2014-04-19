@@ -625,8 +625,7 @@
 					<!-- Wait so the main can get away from us -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="45000" />
-									
-					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />  
+									  
 				</If> <!-- HR -->
 				
 				<!-- If we are inside -->

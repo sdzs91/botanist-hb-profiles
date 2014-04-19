@@ -954,8 +954,6 @@
 												
 					<CustomBehavior File="WaitTimer"
 									WaitTime="60000" />			
-									
-					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
 
 					<!-- enableable combat -->
 					<EnableBehavior Name="Combat" />

@@ -797,8 +797,6 @@
 										
 					<!-- moving past the big cannon so we don't get stuck -->
 					<MoveTo X="-99.6212" Y="-657.9174" Z="7.423793" />
-
-					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
 					
 					<!-- enableable combat -->
 					<EnableBehavior Name="Combat" />

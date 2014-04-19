@@ -575,8 +575,6 @@
 					<!-- Wait 30 seconds so the main can get away from us -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="30000" />
-									
-					<CustomBehavior File="Misc\InstanceTimer" Timer="Check" />
 
 					<!-- enableable combat -->
 					<EnableBehavior Name="Combat" />
