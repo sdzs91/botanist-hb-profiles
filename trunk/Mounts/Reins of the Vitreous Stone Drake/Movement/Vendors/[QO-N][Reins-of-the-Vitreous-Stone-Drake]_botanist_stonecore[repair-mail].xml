@@ -8,14 +8,14 @@
 	<MinFreeBagSlots>-1</MinFreeBagSlots>
 	
 	<MailGrey>False</MailGrey>
-	<MailWhite>False</MailWhite>
-	<MailGreen>True</MailGreen>
+	<MailWhite>True</MailWhite>
+	<MailGreen>False</MailGreen>
 	<MailBlue>False</MailBlue>
 	<MailPurple>False</MailPurple>
    
 	<SellGrey>True</SellGrey>
-	<SellWhite>True</SellWhite>
-	<SellGreen>False</SellGreen>
+	<SellWhite>False</SellWhite>
+	<SellGreen>True</SellGreen>
 	<SellBlue>True</SellBlue>
 	<SellPurple>False</SellPurple>
    

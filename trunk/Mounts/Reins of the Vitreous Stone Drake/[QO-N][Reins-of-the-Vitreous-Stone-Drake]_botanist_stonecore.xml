@@ -9,13 +9,13 @@
 	<TargetingDistance>15</TargetingDistance>
 	
 	<MailGrey>False</MailGrey>
-	<MailWhite>False</MailWhite>
+	<MailWhite>True</MailWhite>
 	<MailGreen>False</MailGreen>
-	<MailBlue>True</MailBlue>
-	<MailPurple>True</MailPurple>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
    
 	<SellGrey>True</SellGrey>
-	<SellWhite>True</SellWhite>
+	<SellWhite>False</SellWhite>
 	<SellGreen>True</SellGreen>
 	<SellBlue>True</SellBlue>
 	<SellPurple>False</SellPurple>
