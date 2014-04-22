@@ -159,9 +159,9 @@
 			<!-- If we have Pine Nut Bread -->
 			<If Condition="HasItem(58260)">
 			
-				<!-- Load profile - [QO-N][Grim-Batol][10-slot-trigger][Hearth-Exit][Mail-Greens] -->
+				<!-- Load profile - [QO-N][10X][Grim-Batol][10-slot-trigger][Mail-Greens] -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\..\[QO-N][Grim-Batol][10-slot-trigger][Hearth-Exit][Mail-Greens]" />
+								ProfileName="..\..\[QO-N][10X][Grim-Batol][10-slot-trigger][Mail-Greens]" />
 										
 			</If>	<!-- If we do have Pine Nut Bread -->	
 			

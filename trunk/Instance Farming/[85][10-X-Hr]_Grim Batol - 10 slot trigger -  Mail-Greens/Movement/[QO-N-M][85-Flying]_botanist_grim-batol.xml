@@ -301,9 +301,9 @@
 			<!-- If we are in the Grim Batol instance box -->
 			<If Condition="Me.X &lt; -4051.118 &amp;&amp; Me.X &gt; -4088.162 &amp;&amp; Me.Y &lt; -3439.181 &amp;&amp; Me.Y &gt; -3462.127 " >
 				
-				<!-- Load profile - [QO-N][Grim-Batol][10-slot-trigger][Hearth-Exit][Mail-Greens] -->
+				<!-- Load profile - [QO-N [10X][Grim-Batol][10-slot-trigger][Mail-Greens] -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][Grim-Batol][10-slot-trigger][Hearth-Exit][Mail-Greens]" />
+								ProfileName="..\[QO-N][10X][Grim-Batol][10-slot-trigger][Mail-Greens]" />
 								
 			</If> 	<!-- If we are in the Grim Batol instance box -->	
 			
