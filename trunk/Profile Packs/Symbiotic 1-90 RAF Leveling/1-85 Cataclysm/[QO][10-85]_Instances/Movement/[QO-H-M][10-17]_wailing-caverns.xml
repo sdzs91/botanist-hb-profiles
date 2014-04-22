@@ -433,7 +433,19 @@
 				<CustomBehavior File="Message" 
 									Text="We are not in the box." 
 									LogColor="Cyan" />
+									
+				<!-- If we are in Orgrimmar -->
+				<If Condition="Me.ZoneId == 1637">			
 							
+					<CustomBehavior File="Message" 
+									Text="We are in Orgrimmar, Moving to Crossroads." 
+									LogColor="Cyan" />
+					
+					<!-- Move to - Crossroads flight master -->
+					<MoveTo X="-440.2361" Y="-2599.099" Z="95.91981" />
+					
+				</If>	<!-- If we are in Orgrimmar -->
+									
 				<!-- If we are in Durotar -->
 				<If Condition="Me.ZoneId == 14">
 					<CustomBehavior File="Message" 
