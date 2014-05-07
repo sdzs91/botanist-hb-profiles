@@ -23,7 +23,6 @@
 	
 	<AvoidMobs>		 
 		<Mob Name="Summon Enabler Stalker" Entry="53488" />
-		<Mob Name="Lurking Tempest" Entry="45704" />
 	</AvoidMobs>
 	
 	<Blackspots>
