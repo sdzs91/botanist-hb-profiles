@@ -455,21 +455,34 @@
 							Text="I have reset Pit of Saron." 
 							LogColor="Cyan" />
 							
+			<!-- Profile message - I am resetting Pit of Saron -->
+			<CustomBehavior File="Message" 
+							Text="I'm resetting Pit of Saron." 
+							LogColor="Plum" />
+							
+			<!-- Custom behavior - RunMacro - Reset the instance -->				
+			<CustomBehavior File="RunMacro" 
+							Macro="/script ResetInstances()" />	
+							
+			<!-- Custom behavior - macro - set dungeon difficulty to normal -->					
+			<CustomBehavior File="RunMacro" 
+							Macro="/script SetDungeonDifficultyID(1)" /> 
+							
+			<!-- Profile message - I have reset Pit of Saron -->			
+			<CustomBehavior File="Message" 
+							Text="I have reset Pit of Saron." 
+							LogColor="Cyan" />
+							
 			<!-- Move to - the gate -->				
-			<MoveTo X="5593.713" Y="2011.442" Z="798.041" />
+			<MoveTo X="5593.413" Y="2011.333" Z="798.0423" />
 			
 			<!-- Profile message - Opening the gate so we may enter the Pit of Saron-->
 			<CustomBehavior File="Message" 
 							Text="Opening the gate so we may enter the Pit of Saron." 
 							LogColor="Plum" />
-							
-			<!-- Custom behavior - InteractWith - open the gate -->				
-			<CustomBehavior File="InteractWith" 
-							MobId="201761" 
-							ObjectType="Gameobject" 
-							Range="4.75" 
-							NumOfTimes="1"  
-							X="5590.884" Y="2009.19" Z="797.3859" />
+
+			<!-- Move to - inside the gate gate -->				
+			<MoveTo X="5588.782" Y="2007.465" Z="798.1819" />				
 							
 			<!-- Move to - attempt to enter the instance -->
 			<CustomBehavior File="Misc\InInstance"  
