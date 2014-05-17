@@ -41,10 +41,7 @@
 
 	<Factions>
 	</Factions>
-	
-	<ClearVendor />
-	<ClearMailbox />
-	
+
 	<QuestOrder>
 		
 		<!-- Level check -->

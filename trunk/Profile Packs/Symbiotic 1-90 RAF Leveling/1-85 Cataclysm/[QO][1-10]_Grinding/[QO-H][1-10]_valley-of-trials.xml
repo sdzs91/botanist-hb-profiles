@@ -47,10 +47,7 @@
 	
 	<ProtectedItems>
 	</ProtectedItems>
-	
-	<ClearVendor />
-	<ClearMailbox />
-		
+
 	<QuestOrder>
 		
 		<!-- *******************************************************  RAF Toons ************************************************************** -->

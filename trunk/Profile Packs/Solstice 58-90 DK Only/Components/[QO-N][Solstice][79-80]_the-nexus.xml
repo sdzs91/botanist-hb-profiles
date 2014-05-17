@@ -44,8 +44,7 @@
 	</ProtectedItems>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
+
 		
 		<!-- If our level is =>78 and <80 -->
 		<If Condition="Me.Level &gt;= 78 &amp;&amp; Me.Level &gt;= 78">
@@ -1241,10 +1240,6 @@
 					<CustomBehavior File="Message" 
 									Text="We have more than 25 empty bag slots. Our gear is above 30% durability and we have Clefthoof Ribs."
 									LogColor="Orange" />
-				
-					<!-- Instance timer check if we didn't repair -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
 									
 					<!-- Profile message - Exiting the instance so we can reset it -->
 					<CustomBehavior File="Message" 

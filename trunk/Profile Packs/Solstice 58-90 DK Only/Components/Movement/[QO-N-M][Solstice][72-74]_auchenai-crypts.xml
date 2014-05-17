@@ -43,9 +43,7 @@
 	</ProtectedItems>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
-		
+
 		<!-- Level check -->
 		<If Condition="Me.Level &gt;= 72">
 						

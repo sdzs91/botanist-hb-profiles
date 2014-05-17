@@ -25,6 +25,7 @@
 </AvoidMobs>
 
 <Blackspots>
+	<Blackspot X="-10497.18" Y="1768.865" Z="31.5154" Radius="40" />
 	<Blackspot X="-10397.92" Y="1128.52" Z="39.14137" Radius="71.4333" />
 	<Blackspot X="-10637.94" Y="1285.877" Z="36.47423" Radius="68.41534" />
 	<Blackspot X="-8919.391" Y="-140.2941" Z="80.73921" Radius="1" />
@@ -41,9 +42,6 @@
 <ProtectedItems>	
 </ProtectedItems>
 
-<ClearVendor />
-<ClearMailbox />
-	
 	<QuestOrder>
 			
 		<!-- Profile message - All checks complete: Classic 1-58 loaded -->

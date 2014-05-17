@@ -39,10 +39,7 @@
 	<ProtectedItems>
 		<Item Name="Elementium Lockbox" Entry="68729" />	
 	</ProtectedItems>
-	
-	<ClearVendor />
-	<ClearMailbox />
-				
+
 	<QuestOrder>
 						
 		<While Condition="true" >

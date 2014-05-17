@@ -36,9 +36,6 @@
 <ProtectedItems>	
 </ProtectedItems>
 
-<ClearVendor />
-<ClearMailbox />
-	
 	<QuestOrder>
 			
 		<!-- Profile message - All checks complete: Classic 1-58 loaded -->

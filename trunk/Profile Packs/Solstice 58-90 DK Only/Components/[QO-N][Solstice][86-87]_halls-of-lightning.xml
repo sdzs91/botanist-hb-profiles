@@ -41,8 +41,6 @@
 	<Factions>16</Factions>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
 
 		<!-- Level check -->
 		<If Condition="Me.Level &gt;= 86">
@@ -757,10 +755,6 @@
 				
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.ZoneId == 4272">
-				
-					<!-- Instance timer check if we didn't repair -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
 				
 					<!-- Profile message - Halls of Lightning detected. Running out -->
 					<CustomBehavior File="Message" 

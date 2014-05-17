@@ -43,9 +43,7 @@
 	<Factions>16</Factions>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
-		
+
 		<!-- Level check -->
 		<If Condition="Me.Level &gt;= 80">
 		
@@ -1374,10 +1372,6 @@
 				
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.ZoneId == 4494">
-				
-					<!-- Instance timer check if we didn't repair -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
 				
 					<!-- Profile message - Ahn'kahet: The Old Kingdom detected. Running out to reset -->
 					<CustomBehavior File="Message" 

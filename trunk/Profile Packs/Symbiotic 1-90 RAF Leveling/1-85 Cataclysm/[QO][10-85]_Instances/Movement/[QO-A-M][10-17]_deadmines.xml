@@ -39,9 +39,7 @@
 	
 	<ProtectedItems>	
 	</ProtectedItems>
-	
-	<ClearVendor />
-	<ClearMailbox />
+
 	
 	<QuestOrder>
 		

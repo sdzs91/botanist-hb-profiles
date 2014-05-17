@@ -40,8 +40,7 @@
 	<Factions>16</Factions>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
+
 
 		<!-- *******************************************************  Booster ************************************************************** -->
 		<If Condition="Me.Level &gt;= 90">

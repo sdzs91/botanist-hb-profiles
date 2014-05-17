@@ -41,8 +41,6 @@
 	<Factions></Factions>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
 
 		<!-- UserSettings -->
 			<CustomBehavior File="UserSettings"

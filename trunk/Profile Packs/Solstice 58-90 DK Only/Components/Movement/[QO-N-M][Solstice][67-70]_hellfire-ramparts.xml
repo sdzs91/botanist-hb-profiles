@@ -41,8 +41,6 @@
 	</Factions>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
 
 		<!-- Level check - minimum level 67 -->
 		<If Condition="Me.Level &gt;= 67">

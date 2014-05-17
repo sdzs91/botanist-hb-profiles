@@ -44,8 +44,7 @@
 	</ProtectedItems>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
+
 		
 		<!-- *******************************************************  Booster ************************************************************** -->
 		<If Condition="Me.Level &gt;= 85">

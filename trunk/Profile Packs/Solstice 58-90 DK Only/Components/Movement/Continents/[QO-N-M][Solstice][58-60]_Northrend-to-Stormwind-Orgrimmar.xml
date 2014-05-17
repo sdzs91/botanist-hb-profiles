@@ -36,9 +36,6 @@
 <ProtectedItems>	
 </ProtectedItems>
 
-<ClearVendor />
-<ClearMailbox />
-	
 	<QuestOrder>
 			
 		<!-- If we are Alliance -->

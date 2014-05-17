@@ -39,10 +39,7 @@
 	
 	<ProtectedItems>
 	</ProtectedItems>
-	
-	<ClearVendor />
-	<ClearMailbox />
-		
+
 	<QuestOrder>
 		<!-- *******************************************************  RAF Toons ************************************************************** -->
 		<If Condition="Me.Level &lt;= 85">

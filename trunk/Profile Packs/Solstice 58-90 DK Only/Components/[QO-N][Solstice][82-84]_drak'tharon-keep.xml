@@ -44,9 +44,7 @@
 	<Factions>16</Factions>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
-		
+
 		<!-- Level check -->
 		<If Condition="Me.Level &gt;= 79">
 		
@@ -1447,10 +1445,6 @@
 				
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.ZoneId == 4196">
-				
-					<!-- Instance timer check if we didn't repair -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
 				
 					<!-- Profile message - Drak'Tharon Keep detected. Running out to reset -->
 					<CustomBehavior File="Message" 

@@ -44,9 +44,7 @@
 	</ProtectedItems>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
-		
+
 		<!-- Level check -->
 		<If Condition="Me.Level &gt;= 70">
 			<CustomBehavior File="Message" 
@@ -1375,10 +1373,6 @@
 
 				<!-- If we don't need to vendor -->
 				<If Condition="Me.ZoneId == 3792">
-				
-					<!-- Instance timer check if we didn't repair -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
 				
 					<!-- Profile message - We have more than 25 empty bag slots. Our gear is above 30% durability and we have Clefthoof Ribs -->
 					<CustomBehavior File="Message" 

@@ -198,14 +198,14 @@
 				<CustomBehavior File="Message" Text="Position check, Sentinel Hill in Westfall." LogColor="Lime" />  
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Sentinel Hill in Westfall." LogColor="Lime" />														
-					<RunTo X="-10650.82" Y="1165.563" Z="34.51858" />
+					<MoveTo X="-10650.82" Y="1165.563" Z="34.51858" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="8931"  X="-10653.28" Y="1166.431" Z="34.50514" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-10778.48" Y="957.4733" Z="41.96339" />
+					<MoveTo X="-10778.48" Y="957.4733" Z="41.96339" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 14." LogColor="Lime" />				
@@ -258,14 +258,14 @@
 				<CustomBehavior File="Message" Text="Position check, Lakeshire in Redridge Mountains." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Lakeshire in Redridge Mountains." LogColor="Lime" />														
-					<RunTo X="-9226.454" Y="-2155.743" Z="63.73067" />
+					<MoveTo X="-9226.454" Y="-2155.743" Z="63.73067" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="6727"  X="-9226.454" Y="-2155.743" Z="63.73067" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-9455.706" Y="-2319.699" Z="66.94684" />
+					<MoveTo X="-9455.706" Y="-2319.699" Z="66.94684" />
 								 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 16." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
@@ -317,14 +317,14 @@
 				<CustomBehavior File="Message" Text="Position check, Lakeshire in Redridge Mountains." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Lakeshire in Redridge Mountains." LogColor="Lime" />														
-					<RunTo X="-9226.454" Y="-2155.743" Z="63.73067" />
+					<MoveTo X="-9226.454" Y="-2155.743" Z="63.73067" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="6727"  X="-9226.454" Y="-2155.743" Z="63.73067" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-9622.59" Y="-2611.198" Z="58.6996" />
+					<MoveTo X="-9622.59" Y="-2611.198" Z="58.6996" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 18." LogColor="Lime" />				
@@ -376,20 +376,20 @@
 				<CustomBehavior File="Message" Text="Position check, Lakeshire in Redridge Mountains." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Lakeshire in Redridge Mountains." LogColor="Lime" />														
-					<RunTo X="-9226.454" Y="-2155.743" Z="63.73067" />
+					<MoveTo X="-9226.454" Y="-2155.743" Z="63.73067" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="6727"  X="-9226.454" Y="-2155.743" Z="63.73067" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-9257.211" Y="-2148.589" Z="64.04065" />
+					<MoveTo X="-9257.211" Y="-2148.589" Z="64.04065" />
 				<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="true">
 					<Hotspot X="-9272.411" Y="-2241.704" Z="63.97412" />
 					<Hotspot X="-9186.249" Y="-2362.023" Z="90.25811" />
 					<Hotspot X="-9122.395" Y="-2633.208" Z="112.9846" />
 				</CustomBehavior>
-					<RunTo X="-9128.106" Y="-2638.893" Z="113.3918" />
+					<MoveTo X="-9128.106" Y="-2638.893" Z="113.3918" />
 				<CustomBehavior File="UserSettings" PullDistance="10" />
 				<CustomBehavior File="MyCTM" X="-9107.6" Y="-2684.273" Z="90.75308" />
 				<CustomBehavior File="MyCTM" X="-9092.731" Y="-2728.944" Z="94.20008" />
@@ -398,18 +398,18 @@
 				<CustomBehavior File="MyCTM" X="-9135.444" Y="-2788.326" Z="98.96947" />
 				<CustomBehavior File="MyCTM" X="-9174.078" Y="-2815.295" Z="93.4206" />
 				<CustomBehavior File="UserSettings" PullDistance="25" />
-					<RunTo X="-9152.684" Y="-2878.456" Z="93.48038" />
-					<RunTo X="-9154.836" Y="-2949.333" Z="93.42805" />
-					<RunTo X="-9197.306" Y="-3012.43" Z="94.39108" />
-					<RunTo X="-9176.914" Y="-3105.777" Z="97.1796" />
-					<RunTo X="-9183.092" Y="-3175.147" Z="100.3469" />
-					<RunTo X="-9209.907" Y="-3234.264" Z="100.3673" />
-					<RunTo X="-9196.784" Y="-3292.728" Z="99.25132" />
-					<RunTo X="-9241.135" Y="-3347.225" Z="99.99529" />
-					<RunTo X="-9255.855" Y="-3369.908" Z="100.3778" />
-					<RunTo X="-9398.461" Y="-3406.911" Z="87.44594" />
-					<RunTo X="-9445.697" Y="-3423.668" Z="80.15531" />
-					<RunTo X="-9548.928" Y="-3323.59" Z="37.5894" />
+					<MoveTo X="-9152.684" Y="-2878.456" Z="93.48038" />
+					<MoveTo X="-9154.836" Y="-2949.333" Z="93.42805" />
+					<MoveTo X="-9197.306" Y="-3012.43" Z="94.39108" />
+					<MoveTo X="-9176.914" Y="-3105.777" Z="97.1796" />
+					<MoveTo X="-9183.092" Y="-3175.147" Z="100.3469" />
+					<MoveTo X="-9209.907" Y="-3234.264" Z="100.3673" />
+					<MoveTo X="-9196.784" Y="-3292.728" Z="99.25132" />
+					<MoveTo X="-9241.135" Y="-3347.225" Z="99.99529" />
+					<MoveTo X="-9255.855" Y="-3369.908" Z="100.3778" />
+					<MoveTo X="-9398.461" Y="-3406.911" Z="87.44594" />
+					<MoveTo X="-9445.697" Y="-3423.668" Z="80.15531" />
+					<MoveTo X="-9548.928" Y="-3323.59" Z="37.5894" />
 					
 				<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 20." LogColor="Lime" />				
 					<SetGrindArea><GrindArea>
@@ -459,7 +459,7 @@
 						  	
 				<If Condition="Me.Level == 20 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 &amp;&amp; Me.Gold &gt;= 5" >
 					<CustomBehavior File="Message" Text="Moving to the riding trainer Stormwind." LogColor="Orange" />
-						<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
+						<MoveTo X="-8848.081" Y="500.7348" Z="109.6099" />
 					<CustomBehavior File="Message" Text="I have reached the riding trainer. Training Apprentice Riding." LogColor="Orange" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="InteractWith" MobId="43769" WaitTime="1000" CollectionDistance="50" X="-8845.4" Y="502.653" Z="109.617" />
@@ -484,14 +484,14 @@
 				<CustomBehavior File="Message" Text="Position check, Darkshire in Duskwood." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Darkshire." LogColor="Lime" />														
-					<RunTo X="-10515.79" Y="-1163.191" Z="28.1008" />
+					<MoveTo X="-10515.79" Y="-1163.191" Z="28.1008" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="6790"  X="-10516" Y="-1161.213" Z="28.09951" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-10382.77" Y="-1011.285" Z="48.13555" />
+					<MoveTo X="-10382.77" Y="-1011.285" Z="48.13555" />
 								 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 22." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
@@ -546,14 +546,14 @@
 				<CustomBehavior File="Message" Text="Position check, Darkshire in Duskwood." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Darkshire." LogColor="Lime" />														
-					<RunTo X="-10515.98" Y="-1163.506" Z="28.10034" />
+					<MoveTo X="-10515.98" Y="-1163.506" Z="28.10034" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="6790"  X="-10516" Y="-1161.213" Z="28.09951" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-10780.99" Y="-795.6741" Z="43.93134" />
+					<MoveTo X="-10780.99" Y="-795.6741" Z="43.93134" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 24." LogColor="Lime" />				
@@ -609,15 +609,15 @@
 				<CustomBehavior File="Message" Text="Position check, Darkshire in Duskwood." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Darkshire." LogColor="Lime" />														
-					<RunTo X="-10515.98" Y="-1163.506" Z="28.10034" />
+					<MoveTo X="-10515.98" Y="-1163.506" Z="28.10034" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="6790"  X="-10516" Y="-1161.213" Z="28.09951" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-10719.01" Y="282.3415" Z="41.6612" />
-					<RunTo X="-10587.68" Y="293.8669" Z="31.04575" />			 
+					<MoveTo X="-10719.01" Y="282.3415" Z="41.6612" />
+					<MoveTo X="-10587.68" Y="293.8669" Z="31.04575" />			 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 26." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
@@ -674,20 +674,20 @@
 				<CustomBehavior File="Message" Text="Since there is no mail box in Northern Stranglethorn, I'll set my hearthstone in Darkshire for now." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Darkshire." LogColor="Lime" />														
-					<RunTo X="-10515.98" Y="-1163.506" Z="28.10034" />
+					<MoveTo X="-10515.98" Y="-1163.506" Z="28.10034" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="6790"  X="-10516" Y="-1161.213" Z="28.09951" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-11349.77" Y="-383.3355" Z="65.57225" />
-					<RunTo X="-11390.9" Y="-289.6451" Z="59.50486" />
-					<RunTo X="-11718.65" Y="-201.9179" Z="39.55672" />
-					<RunTo X="-11653.41" Y="-155.0678" Z="16.79436" />
-					<RunTo X="-11712.41" Y="-39.37226" Z="16.18284" />
-					<RunTo X="-11602.61" Y="119.7622" Z="16.89157" />
-					<RunTo X="-11493.85" Y="245.8579" Z="17.93318" />
+					<MoveTo X="-11349.77" Y="-383.3355" Z="65.57225" />
+					<MoveTo X="-11390.9" Y="-289.6451" Z="59.50486" />
+					<MoveTo X="-11718.65" Y="-201.9179" Z="39.55672" />
+					<MoveTo X="-11653.41" Y="-155.0678" Z="16.79436" />
+					<MoveTo X="-11712.41" Y="-39.37226" Z="16.18284" />
+					<MoveTo X="-11602.61" Y="119.7622" Z="16.89157" />
+					<MoveTo X="-11493.85" Y="245.8579" Z="17.93318" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 28." LogColor="Lime" />				
@@ -750,14 +750,14 @@
 				<CustomBehavior File="Message" Text="Since there is no mail box in Northern Stranglethorn, I'll set my hearthstone in Darkshire for now." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="3000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Darkshire." LogColor="Lime" />														
-					<RunTo X="-10515.98" Y="-1163.506" Z="28.10034" />
+					<MoveTo X="-10515.98" Y="-1163.506" Z="28.10034" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="6790"  X="-10516" Y="-1161.213" Z="28.09951" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="-12494.61" Y="-514.6472" Z="15.5158" />
+					<MoveTo X="-12494.61" Y="-514.6472" Z="15.5158" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 30." LogColor="Lime" />				
@@ -812,14 +812,14 @@
 				<CustomBehavior File="Message" Text="Position check, Booty Bay in The Cape of Stranglethorn." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Booty Bay." LogColor="Lime" />														
-					<RunTo X="-14458.77" Y="492.9921" Z="15.12531" />
+					<MoveTo X="-14458.77" Y="492.9921" Z="15.12531" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="6807"  X="-14457.73" Y="495.3478" Z="15.12675" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="-14580.4" Y="-110.6395" Z="2.615263" />
+					<MoveTo X="-14580.4" Y="-110.6395" Z="2.615263" />
 								 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 32." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
@@ -875,18 +875,18 @@
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<If Condition="Me.ZoneId != 47" >
 						<CustomBehavior File="Message" Text="Moving to Ironforge, then running to The Hinterlands." LogColor="Lime" />
-							<RunTo X="-4821.78" Y="-1155.44" Z="502.21" /> <!-- ironforge flight master -->
+							<MoveTo X="-4821.78" Y="-1155.44" Z="502.21" /> <!-- ironforge flight master -->
 					</If>	
 				
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Aerie Peak in the Hinterlands." LogColor="Lime" />														
-					<RunTo X="316.7757" Y="-2119.679" Z="121.8378" />
+					<MoveTo X="316.7757" Y="-2119.679" Z="121.8378" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="7744"  X="320.059" Y="-2119.22" Z="121.8395" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="-298.978" Y="-4129.71" Z="136.4704" />
+					<MoveTo X="-298.978" Y="-4129.71" Z="136.4704" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 34." LogColor="Lime" />				
@@ -954,14 +954,14 @@
 				<CustomBehavior File="Message" Text="Position check, Chillwind Camp in Western Plaguelands." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Chillwind Camp." LogColor="Lime" />														
-					<RunTo X="943.2197" Y="-1447.792" Z="63.40036" />
+					<MoveTo X="943.2197" Y="-1447.792" Z="63.40036" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="46269"  X="942.109" Y="-1446.09" Z="63.39738" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="1098.51" Y="-1387.309" Z="71.39101" />
+					<MoveTo X="1098.51" Y="-1387.309" Z="71.39101" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 36." LogColor="Lime" />				
@@ -1023,14 +1023,14 @@
 				<CustomBehavior File="Message" Text="Position check, Chillwind Camp in Western Plaguelands." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Chillwind Camp." LogColor="Lime" />														
-					<RunTo X="943.2197" Y="-1447.792" Z="63.40036" />
+					<MoveTo X="943.2197" Y="-1447.792" Z="63.40036" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="46269"  X="942.109" Y="-1446.09" Z="63.39738" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="1691.805" Y="-2209.461" Z="60.25575" />
+					<MoveTo X="1691.805" Y="-2209.461" Z="60.25575" />
 								 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 38." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
@@ -1081,14 +1081,14 @@
 				<CustomBehavior File="Message" Text="Position check, Chillwind Camp in Western Plaguelands." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Chillwind Camp." LogColor="Lime" />														
-					<RunTo X="943.2197" Y="-1447.792" Z="63.40036" />
+					<MoveTo X="943.2197" Y="-1447.792" Z="63.40036" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="46269"  X="942.109" Y="-1446.09" Z="63.39738" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="2259.292" Y="-2362.139" Z="59.73252" />
+					<MoveTo X="2259.292" Y="-2362.139" Z="59.73252" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 41." LogColor="Lime" />				
@@ -1136,7 +1136,7 @@
 						<CustomBehavior File="Message" Text="I am level 41. I need mount training." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="Moving to the riding trainer Stormwind." LogColor="Orange" />
-							<RunTo X="-8848.081" Y="500.7348" Z="109.6099" />
+							<MoveTo X="-8848.081" Y="500.7348" Z="109.6099" />
 						<CustomBehavior File="Message" Text="I have reached the riding trainer. Training Journeyman Riding." LogColor="Orange" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="InteractWith" MobId="43769" WaitTime="1000" CollectionDistance="50" X="-8845.4" Y="502.653" Z="109.6171" />
@@ -1160,14 +1160,14 @@
 				<CustomBehavior File="Message" Text="Position check, Light's Hope Chapel in Eastern Plaguelands." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Light's Hope Chapel." LogColor="Lime" />														
-					<RunTo X="2295.49" Y="-5334.323" Z="90.75345" />
+					<MoveTo X="2295.49" Y="-5334.323" Z="90.75345" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="SetHearthstone" MobId="16256"  X="2295.74" Y="-5336.82" Z="90.75279" />
 				<CustomBehavior File="WaitTimer" WaitTime="2000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="2432.435" Y="-5176.547" Z="74.16473" />
+					<MoveTo X="2432.435" Y="-5176.547" Z="74.16473" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 43." LogColor="Lime" />				
@@ -1206,9 +1206,9 @@
 					</If>
 					
 				<If Condition="Me.Level == 43" >
-					<RunTo X="2515.967" Y="-4746.156" Z="96.78388" />
-					<RunTo X="3143.536" Y="-4322.297" Z="129.3299" />
-					<RunTo X="2284.47" Y="-5323.674" Z="89.51148" />
+					<MoveTo X="2515.967" Y="-4746.156" Z="96.78388" />
+					<MoveTo X="3143.536" Y="-4322.297" Z="129.3299" />
+					<MoveTo X="2284.47" Y="-5323.674" Z="89.51148" />
 				</If>
 		</While>
 
@@ -1227,14 +1227,14 @@
 				<CustomBehavior File="Message" Text="Position check, Light's Hope Chapel in Eastern Plaguelands." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Light's Hope Chapel." LogColor="Lime" />														
-					<RunTo X="2295.49" Y="-5334.323" Z="90.75345" />
+					<MoveTo X="2295.49" Y="-5334.323" Z="90.75345" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="16256"  X="2295.74" Y="-5336.82" Z="90.75279" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="3033.438" Y="-4331.768" Z="98.91806" />
+					<MoveTo X="3033.438" Y="-4331.768" Z="98.91806" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 45." LogColor="Lime" />				
@@ -1290,14 +1290,14 @@
 				<CustomBehavior File="Message" Text="Position check, Fuselight in Badlands." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Fuselight." LogColor="Lime" />														
-					<RunTo X="-6587.466" Y="-3924.855" Z="379.6115" />
+					<MoveTo X="-6587.466" Y="-3924.855" Z="379.6115" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="48054"  X="-6584.51" Y="-3923.13" Z="379.5427" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="-6633.793" Y="-4097.109" Z="264.3159" />
+					<MoveTo X="-6633.793" Y="-4097.109" Z="264.3159" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 47." LogColor="Lime" />				
@@ -1335,7 +1335,7 @@
 					
 					<If Condition="Me.Level == 47" >				
 						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-							<RunTo X="-6572.361" Y="-3874.878" Z="390.9399" />						
+							<MoveTo X="-6572.361" Y="-3874.878" Z="390.9399" />						
 					</If>
 					
 		</While>
@@ -1355,14 +1355,14 @@
 				<CustomBehavior File="Message" Text="Position check, Dragon's Mouth in Badlands." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Dragon's Mouth." LogColor="Lime" />														
-					<RunTo X="-7001.756" Y="-2538.377" Z="241.715" />
+					<MoveTo X="-7001.756" Y="-2538.377" Z="241.715" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="48093"  X="-7006.62" Y="-2537.2" Z="241.714" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="-7086.846" Y="-2350.157" Z="242.5318" />
+					<MoveTo X="-7086.846" Y="-2350.157" Z="242.5318" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 49." LogColor="Lime" />				
@@ -1416,14 +1416,14 @@
 				<CustomBehavior File="Message" Text="Position check, Iron Summit in Searing Gorge." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Iron Summit." LogColor="Lime" />														
-					<RunTo X="-7088.678" Y="-1202.11" Z="322.7377" />
+					<MoveTo X="-7088.678" Y="-1202.11" Z="322.7377" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="47942"  X="-7085.53" Y="-1202.19" Z="323.9868" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="-7175.429" Y="-1116.764" Z="241.9803" />
+					<MoveTo X="-7175.429" Y="-1116.764" Z="241.9803" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 50." LogColor="Lime" />				
@@ -1474,14 +1474,14 @@
 				<CustomBehavior File="Message" Text="Position check, Iron Summit in Searing Gorge." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Iron Summit." LogColor="Lime" />														
-					<RunTo X="-7088.678" Y="-1202.11" Z="322.7377" />
+					<MoveTo X="-7088.678" Y="-1202.11" Z="322.7377" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="47942"  X="-7085.53" Y="-1202.19" Z="323.9868" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />					
-					<RunTo X="-8119.266" Y="-1133.919" Z="132.5681" />
+					<MoveTo X="-8119.266" Y="-1133.919" Z="132.5681" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 51." LogColor="Lime" />				
@@ -1534,8 +1534,8 @@
 				<CustomBehavior File="Message" Text="Position check, Bogpaddle in Swamp of sorrows." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Bogpaddle." LogColor="Lime" />
-					<RunTo X="-9782.077" Y="-3879.951" Z="21.66557" />
-					<RunTo X="-9782.077" Y="-3879.951" Z="21.66557" />
+					<MoveTo X="-9782.077" Y="-3879.951" Z="21.66557" />
+					<MoveTo X="-9782.077" Y="-3879.951" Z="21.66557" />
 					<CustomBehavior File="MyCTM" X="-9766.964" Y="-3880.65" Z="21.97169" />
 					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
@@ -1543,9 +1543,9 @@
 				<CustomBehavior File="SetHearthstone" MobId="47334" X="-9766.99" Y="-3879.23" Z="21.97333" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-9766.964" Y="-3880.65" Z="21.97169" />
+					<MoveTo X="-9766.964" Y="-3880.65" Z="21.97169" />
 				<CustomBehavior File="MyCTM" X="-9782.077" Y="-3879.951" Z="21.66557" />
-					<RunTo X="-9802.662" Y="-4026.277" Z="22.93485" />
+					<MoveTo X="-9802.662" Y="-4026.277" Z="22.93485" />
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 53." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
 							<Factions>16,14,129</Factions>
@@ -1566,10 +1566,10 @@
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />
-						<RunTo X="-9771.112" Y="-3880.178" Z="21.8905" />
-						<RunTo X="-9775.861" Y="-3880.29" Z="22.81776" />
-						<RunTo X="-9781.449" Y="-3880.615" Z="21.66606" />
-						<RunTo X="-9788.142" Y="-3880.92" Z="21.65564" />
+						<MoveTo X="-9771.112" Y="-3880.178" Z="21.8905" />
+						<MoveTo X="-9775.861" Y="-3880.29" Z="22.81776" />
+						<MoveTo X="-9781.449" Y="-3880.615" Z="21.66606" />
+						<MoveTo X="-9788.142" Y="-3880.92" Z="21.65564" />
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Dronk Drophammer" Entry="47059" Type="Repair" X="-9766.76" Y="-3901.64" Z="21.81341" />
@@ -1600,8 +1600,8 @@
 				<CustomBehavior File="Message" Text="Position check, Bogpaddle in Swamp of sorrows." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Bogpaddle." LogColor="Lime" />
-					<RunTo X="-9782.077" Y="-3879.951" Z="21.66557" />
-					<RunTo X="-9782.077" Y="-3879.951" Z="21.66557" />
+					<MoveTo X="-9782.077" Y="-3879.951" Z="21.66557" />
+					<MoveTo X="-9782.077" Y="-3879.951" Z="21.66557" />
 					<CustomBehavior File="MyCTM" X="-9766.964" Y="-3880.65" Z="21.97169" />
 					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
@@ -1609,11 +1609,11 @@
 				<CustomBehavior File="SetHearthstone" MobId="47334" X="-9766.99" Y="-3879.23" Z="21.97333" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-9766.964" Y="-3880.65" Z="21.97169" />
+					<MoveTo X="-9766.964" Y="-3880.65" Z="21.97169" />
 				<CustomBehavior File="MyCTM" X="-9782.077" Y="-3879.951" Z="21.66557" />
-					<RunTo X="-10320.12" Y="-4189.236" Z="1.767975" />
-					<RunTo X="-10485.64" Y="-4202.511" Z="2.468132" />
-					<RunTo X="-10554.01" Y="-4180.518" Z="22.49916" />
+					<MoveTo X="-10320.12" Y="-4189.236" Z="1.767975" />
+					<MoveTo X="-10485.64" Y="-4202.511" Z="2.468132" />
+					<MoveTo X="-10554.01" Y="-4180.518" Z="22.49916" />
 								 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 54." LogColor="Lime" />				
 						<SetGrindArea><GrindArea>
@@ -1641,10 +1641,10 @@
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />
-						<RunTo X="-9771.112" Y="-3880.178" Z="21.8905" />
-						<RunTo X="-9775.861" Y="-3880.29" Z="22.81776" />
-						<RunTo X="-9781.449" Y="-3880.615" Z="21.66606" />
-						<RunTo X="-9788.142" Y="-3880.92" Z="21.65564" />
+						<MoveTo X="-9771.112" Y="-3880.178" Z="21.8905" />
+						<MoveTo X="-9775.861" Y="-3880.29" Z="22.81776" />
+						<MoveTo X="-9781.449" Y="-3880.615" Z="21.66606" />
+						<MoveTo X="-9788.142" Y="-3880.92" Z="21.65564" />
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Dronk Drophammer" Entry="47059" Type="Repair" X="-9766.76" Y="-3901.64" Z="21.81341" />
@@ -1675,8 +1675,8 @@
 				<CustomBehavior File="Message" Text="Position check, Bogpaddle in Swamp of sorrows." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Bogpaddle." LogColor="Lime" />
-					<RunTo X="-9782.077" Y="-3879.951" Z="21.66557" />
-					<RunTo X="-9782.077" Y="-3879.951" Z="21.66557" />
+					<MoveTo X="-9782.077" Y="-3879.951" Z="21.66557" />
+					<MoveTo X="-9782.077" Y="-3879.951" Z="21.66557" />
 					<CustomBehavior File="MyCTM" X="-9766.964" Y="-3880.65" Z="21.97169" />
 					<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
@@ -1684,48 +1684,13 @@
 				<CustomBehavior File="SetHearthstone" MobId="47334" X="-9766.99" Y="-3879.23" Z="21.97333" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-9766.964" Y="-3880.65" Z="21.97169" />
+					<MoveTo X="-9766.964" Y="-3880.65" Z="21.97169" />
 				<CustomBehavior File="MyCTM" X="-9782.077" Y="-3879.951" Z="21.66557" />
 				<CustomBehavior File="Message" Text="Moving to the Harborage." LogColor="Lime" />
-					<RunTo X="-9775.988" Y="-3880.37" Z="22.81907" />
-					<RunTo X="-9782.883" Y="-3880.05" Z="21.66575" />
-					<RunTo X="-9863.722" Y="-3887.078" Z="20.5931" />
-					<RunTo X="-9894.382" Y="-3860.84" Z="20.59447" />
-					<RunTo X="-9883.174" Y="-3820.91" Z="20.59557" />
-					<RunTo X="-9890.76" Y="-3780.284" Z="19.91348" />
-					<RunTo X="-9902.479" Y="-3741.907" Z="20.70471" />
-					<RunTo X="-9914.096" Y="-3703.365" Z="21.87714" />
-					<RunTo X="-9940.542" Y="-3671.707" Z="21.67832" />
-					<RunTo X="-9958.077" Y="-3634.001" Z="21.67832" />
-					<RunTo X="-9980.592" Y="-3600.796" Z="21.69528" />
-					<RunTo X="-10007.15" Y="-3568.952" Z="21.67835" />
-					<RunTo X="-10016.94" Y="-3529.989" Z="21.67835" />
-					<RunTo X="-10045.56" Y="-3500.183" Z="21.67856" />
-					<RunTo X="-10060.84" Y="-3463.033" Z="21.67683" />
-					<RunTo X="-10075.59" Y="-3425.089" Z="20.53927" />
-					<RunTo X="-10080.57" Y="-3384.242" Z="20.43815" />
-					<RunTo X="-10077.77" Y="-3343.249" Z="20.43827" />
-					<RunTo X="-10080.96" Y="-3303.139" Z="20.43792" />
-					<RunTo X="-10097.96" Y="-3266.57" Z="20.43786" />
-					<RunTo X="-10134.37" Y="-3246.967" Z="20.43755" />
-					<RunTo X="-10171.82" Y="-3232.473" Z="20.43705" />
-					<RunTo X="-10208.21" Y="-3215.569" Z="20.11413" />
-					<RunTo X="-10242.82" Y="-3192.825" Z="20.76585" />
-					<RunTo X="-10264.76" Y="-3159.27" Z="21.82547" />
-					<RunTo X="-10274.38" Y="-3119.333" Z="21.82644" />
-					<RunTo X="-10268.9" Y="-3079.376" Z="21.10089" />
-					<RunTo X="-10262.73" Y="-3039.662" Z="20.09162" />
-					<RunTo X="-10253.98" Y="-3000.388" Z="20.24879" />
-					<RunTo X="-10253.6" Y="-2960.132" Z="21.03513" />
-					<RunTo X="-10253.5" Y="-2920.044" Z="20.37223" />
-					<RunTo X="-10248.84" Y="-2880.161" Z="22.01782" />
-					<RunTo X="-10244.87" Y="-2839.967" Z="21.95811" />
-					<RunTo X="-10204.85" Y="-2844.233" Z="21.36603" />
-					<RunTo X="-10164.86" Y="-2842.466" Z="19.79426" />
-					<RunTo X="-10140.6" Y="-2842.511" Z="21.92302" />
-					<RunTo X="-10117.82" Y="-2848.738" Z="23.386" /> <!-- the harborage fp -->
+
+					<MoveTo X="-10117.82" Y="-2848.738" Z="23.386" /> <!-- the harborage fp -->
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />	
-					<RunTo X="-10179.35" Y="-2822.591" Z="17.37464" />
+					<MoveTo X="-10179.35" Y="-2822.591" Z="17.37464" />
 				<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 54." LogColor="Lime" />				
 					<SetGrindArea><GrindArea>
 						<Factions>22,14</Factions>
@@ -1753,10 +1718,10 @@
 						<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />
-						<RunTo X="-9771.112" Y="-3880.178" Z="21.8905" />
-						<RunTo X="-9775.861" Y="-3880.29" Z="22.81776" />
-						<RunTo X="-9781.449" Y="-3880.615" Z="21.66606" />
-						<RunTo X="-9788.142" Y="-3880.92" Z="21.65564" />
+						<MoveTo X="-9771.112" Y="-3880.178" Z="21.8905" />
+						<MoveTo X="-9775.861" Y="-3880.29" Z="22.81776" />
+						<MoveTo X="-9781.449" Y="-3880.615" Z="21.66606" />
+						<MoveTo X="-9788.142" Y="-3880.92" Z="21.65564" />
 						<SetVendor>
 							<Vendors>
 								<Vendor Name="Dronk Drophammer" Entry="47059" Type="Repair" X="-9766.76" Y="-3901.64" Z="21.81341" />
@@ -1787,14 +1752,14 @@
 				<CustomBehavior File="Message" Text="Position check, Nethergarde Keep in Blasted Lands." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Nethergarde Keep." LogColor="Lime" />
-					<RunTo X="-10926.57" Y="-3419.461" Z="66.49895" />
+					<MoveTo X="-10926.57" Y="-3419.461" Z="66.49895" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="44325" X="-10925.3" Y="-3417.68" Z="66.49936" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-11244.5" Y="-3655.817" Z="8.230039" />
+					<MoveTo X="-11244.5" Y="-3655.817" Z="8.230039" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 57." LogColor="Lime" />				
@@ -1849,14 +1814,14 @@
 				<CustomBehavior File="Message" Text="Position check, Nethergarde Keep in Blasted Lands." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the innkeep at Nethergarde Keep." LogColor="Lime" />
-					<RunTo X="-10926.57" Y="-3419.461" Z="66.49895" />
+					<MoveTo X="-10926.57" Y="-3419.461" Z="66.49895" />
 				<CustomBehavior File="Message" Text="I have reached the innkeeper. " LogColor="Lime" />
 				<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="SetHearthstone" MobId="44325" X="-10925.3" Y="-3417.68" Z="66.49936" />
 				<CustomBehavior File="WaitTimer" WaitTime="1000" />
 				<CustomBehavior File="Message" Text="Moving to the new farming location." LogColor="Lime" />
-					<RunTo X="-12084.71" Y="-3439.67" Z="29.66369" />
+					<MoveTo X="-12084.71" Y="-3439.67" Z="29.66369" />
 								 
 
 					<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until I reach level 57." LogColor="Lime" />				

@@ -41,9 +41,6 @@
 <ProtectedItems>	
 </ProtectedItems>
 
-<ClearVendor />
-<ClearMailbox />
-	
 	<QuestOrder>
 			
 		<!-- If our level >= 1 and < 5 -->				

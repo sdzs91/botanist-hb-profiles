@@ -51,8 +51,6 @@
 	<Factions></Factions>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
 
 		<!-- Level check -->
 		<If Condition="Me.Level &gt;= 62">
@@ -2413,11 +2411,7 @@
 					
 				<!-- If we didn't need to repair -->
 				<If Condition="Me.ZoneId == 1583">
-				
-					<!-- Instance timer check if we didn't repair -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
-				
+
 					<!-- Profile message - We have more than 25 empty bag slots. Our gear is above 30% durability and we have Homemade Cherry Pie -->
 					<CustomBehavior File="Message" 
 									Text="We have more than 25 empty bag slots. Our gear is above 30% durability and we have Homemade Cherry Pie."

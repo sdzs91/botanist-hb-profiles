@@ -34,11 +34,7 @@
 </Vendors>
 
 <ProtectedItems>	
-</ProtectedItems>
 
-<ClearVendor />
-<ClearMailbox />
-	
 	<QuestOrder>
 	
 		<!-- UserSettings -->

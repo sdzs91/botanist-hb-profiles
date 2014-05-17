@@ -43,10 +43,7 @@
 
 	<Factions>
 	</Factions>
-	
-	<ClearVendor />
-	<ClearMailbox />
-	
+
 	<QuestOrder>
 	
 		<!-- Level check -->
@@ -1643,10 +1640,6 @@
 										
 						<!-- Move to - zone in location -->				
 						<MoveTo X="-1355.28" Y="1641.57" Z="68.274" />
-						
-						<!-- Instance timer check if we didn't repair -->
-						<CustomBehavior File="Misc\InstanceTimer" 
-										Timer="Check" />
 						
 						<!-- Go through the portal -->
 						<CustomBehavior File="Misc\InInstance" 
