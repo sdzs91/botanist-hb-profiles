@@ -1,0 +1,518 @@
+[CENTER]
+
+[B][SIZE=4][COLOR="#FF0000"]Botanist/Wigglez Presents[/COLOR][/SIZE][/B]
+
+
+
+[B][SIZE=4][U][COLOR="#0000CD"]Symbiotic - The Ultimate RAF Power Leveling Solution[/COLOR][/U][/SIZE][/B]
+
+[video=youtube;v3ClQctgoj4]http://www.youtube.com/watch?v=v3ClQctgoj4[/video]
+
+[SIZE=3][COLOR="#800000"][B]Symbiotic - Blackfathom Deeps Trailer[/B][/COLOR][/SIZE]
+
+[B][SIZE=2][COLOR="#0000CD"]*** Watch the video in 1080 HD for better quality (If you have the bandwidth) ***[/COLOR][/SIZE][/B]
+
+
+
+
+
+
+[SIZE=3][COLOR="#FF0000"]*** Disclaimer ***[/COLOR][/SIZE]
+[SIZE=3][COLOR="#FF0000"]*** [U]READ THIS OR YOUR COMPUTER WILL BLOW UP[/U] ***[/COLOR][/SIZE]
+[CODE]
+
+[LIST]
+[*]When complete, these profiles will level your character from level 1 through 85, [COLOR="#0000CD"]fully automated[/COLOR] 
+[/LIST]
+
+[LIST]
+[*]We have not yet determined the total runtime. Present [B][U]guess-timate[/U][/B] would be 10-85 in less than 32 hours (including automated movement between instances)
+[/LIST]
+
+[LIST]
+[*][U]Under NO circumstances[/U] do we advise or suggest that you run these profiles [U]unattended[/U] or for [U]excessive amounts of time[/U].
+[/LIST]
+
+[LIST]
+[*][B][U][SIZE=2]If you, [U]as the user[/U], decide to go against this warning, you do so after being informed that we as the profile writers advise against it.[/SIZE][/U][/B]
+[/LISt]
+[/CODE]
+
+[SIZE=3][COLOR="#FF0000"]*** Prerequisites ***[/COLOR][/SIZE]
+[CODE]
+[SIZE=3]
+[LIST]
+[*]Due to an extensive use of the [URL="http://king-hb-svn.googlecode.com/svn/trunk/Leveling%20Profiles/Questing%20Behaviors/RunLikeHell.cs"]RunLikeHell[/URL] Custom Behavior:
+[INDENT]
+If at any time you stop the bot inside the instance, you [U]must[/U] close and restart HonorBuddy to clear the memory ! 
+[/INDENT]
+[INDENT]
+You [U]must[/U] also exit the instance. Manually reset it if any bosses were killed !!!
+[/INDENT]
+[/LIST]
+[LIST]
+To ensure that none of you charaters accidently go AFK while waiting to be tagged, it is [U]required[/U] that you download and enable Giwin's [URL="http://www.thebuddyforum.com/honorbuddy-forum/plugins/uncataloged/76383-plugin-alwayshere-because-im-afk.html"]AlwaysHere - Because I'm AFK[/URL]
+[/LIST]
+[LIST]
+[*]Included on the SVN is a "[B][U]modified[/U][/B]" version of CodenameG's [B][U][COLOR="#FF0000"]Archived[/COLOR][/U][/B] [URL="http://www.thebuddyforum.com/archives/73772-plugin-mr-itemremover2-deletes-opens-sells-items-your-bags.html"]MrItemRemover 2[/URL]
+[INDENT]
+Not to worry HB users, we will maintain the [U]modified[/U] version we are using for Symbiotic !
+[/INDENT]
+[INDENT]
+Copy it to the \Plugins folder of the RAF's Honorbuddy folder(s) and enable it on the RAF toons [U][B]ONLY[/B][/U] !
+[/INDENT]
+[INDENT]
+The plugin will automatically delete all the items in your RAF's bags every 5 minutes.
+[/INDENT]
+[INDENT]
+This allows Autoequip time to equip any loot [U][B]prior[/B][/U] to it being [B][U]deleted[/U][/B] from their bags.
+[/INDENT]
+[INDENT]
+This is posted per Honorbuddy rules : [URL="http://www.thebuddyforum.com/honorbuddy-forum/developer-forum/12433-rules-bots-cc-plugin-profiles-development-rules.html"][Rules] Bots/CC/Plugin/Profiles Development Rules[/URL]
+[/INDENT]
+[/LIST]
+[LIST]
+[*]You [U]must[/U] have 1 HonorBuddy session per character you intend to run the profiles on.
+[/LIST]
+
+[LIST]
+[*]The Booster [U]must[/U] be the leader of the party.
+[/LIST]
+
+[LIST]
+[*]All characters [U]must[/U] abide by the levels of the profiles.
+[INDENT]
+Booster - [U]Must[/U] be level 90
+RAF - [U]Must[/U] be level 1-85
+[/INDENT]
+[/LIST]
+
+[LIST]
+[*] The profiles [U]do not[/U] require your characters to be RAFed together, but you [U]will not[/U] receive the triple XP bonus unless they are.
+[/LIST]
+[LIST]
+[*] If the characters are RAFed, the "raf" toons [U]must not[/U] be RAFed directly to the Booster.
+[/LIST]
+[LIST]
+[*] In order to receive the triple XP bonus, your RAF toons [U]can't be[/U] more than four levels apart.
+[/LIST]
+[LIST]
+The 1-10 profiles will [U]require[/U] a minimum of 5g on you character, or they [U]will not[/U] run.
+[/LIST]
+[LIST]
+The 1-10 profiles will [U]require[/U] the user to enable the [U]Autoequip[/U] plugin.
+[INDENT]
+Autoequip  comes preinstalled with HonorBuddy, but [COLOR="#0000CD"][U]will need to be enabled[/U][/COLOR] to equip looted and purchased gear.
+[/INDENT]
+[/LIST]
+[LIST]
+Each RAF character [U]must[/U] have gold to train their riding skill to [COLOR="#0000CD"]Expert Riding[/COLOR].
+[INDENT] 
+Plus the training listed below [B][U]and[/U][/B] at least two mounts (one for ground movement, one for flying movement).
+[/INDENT]
+[/LIST]
+[LIST]
+The profiles [U]will not[/U] buy mounts for you. If you have pre-exhisting account wide mounts, you [U]will not[/U] need to purchase new ones.
+[/LIST]
+[INDENT]
+Available @ Level 20 - Apprentice Riding (4g)
+Available @ Level 40 - Journeyman Riding (50g)
+Available @ Level 60 - Expert Riding (250g)  - [U]mandatory[/U] trained  @ level 60
+Available @ Level 60 - Flight Master's License (250g) - [U]mandatory[/U] trained  @ level 80
+Available @ Level 60 - Cold Weather Flying (500g) - [U]mandatory[/U] trained @ level 68
+Total riding cost: 1054g
+
+[U]Any[/U] blue ground mount (1g)
+[U]Any[/U] blue flying mount (50g)
+Total mount cost: 51g
+
+Grand total: 1105g
+[/INDENT]
+
+[LIST]
+[*] The Booster [U]must[/U] have a Hearthstone - [B][I][U]OR[/U][/I][/B] - Innkeeper's Daughter present in their bags.
+[/LIST]
+
+[LIST]
+[*] At all times, the RAF's hearthstone [U]must[/U] be set in the proper location in order to have full functionality. 
+[INDENT]
+[COLOR="#0000CD"]Alliance RAF's [U]must[/U] have a hearthstone in their bags and that hearthstone [U]must[/U] be set to [URL="http://www.wowhead.com/npc=6740/innkeeper-allison"]Innkeeper Allison[/URL] in Stormwind. [/COLOR]
+[/INDENT]
+[INDENT]
+[COLOR="#FF0000"]Horde RAF's [U]must[/U] have a hearthstone in their bags and that hearthstone [U]must[/U] be set to [URL="http://www.wowhead.com/npc=6929/innkeeper-gryshka#."]Innkeeper Gryshka[/URL] in Orgrimmar.[/COLOR]
+[/INDENT]
+[/LIST]
+[/SIZE]
+[/CODE]
+
+[B][SIZE=4][COLOR="#0000CD"]*** Instructions ***[/COLOR][/SIZE][/B]
+
+
+[CODE]
+
+[CENTER][B][SIZE=4][COLOR="#0000CD"]*** 1-80 Semi Automation ***[/COLOR][/SIZE][/B][/CENTER]
+[LIST]
+[INDENT]
+[/INDENT]
+[INDENT]
+[/INDENT]
+[/LIST]
+[LIST]
+If you are starting the profiles between levels 1 and 10, you [U]must[/U] start all your characters from the [COLOR="#FF0000"](race starting)[/COLOR] zone, Stormwind (Alliance) or Orgrimmar (Horde).
+[/LIST]
+
+[LIST]
+If you are starting the profiles between levels 10 and 17, you [U]must[/U] start all your characters from Stormwind (Alliance) or Orgrimmar (Horde).
+[/LIST]
+
+[LIST]
+If you are starting the profiles > level 17, determine which profile you need to run ([COLOR="#0000CD"]Chart Below[/COLOR]) based on the lowest level character in the party.
+[/LIST]
+
+[Indent]
+[17-25] Blackfathom Deeps 
+
+[25-37] Razorfen Kraul 
+
+[37-42] Razorfen Downs
+
+[42-48] Blackrock Depths
+
+[48-60] Blackrock Spire
+
+[58-60][DK] Hellfire Ramparts
+
+[60-63] Blood Furnace
+
+[63-68] Sethekk Halls
+
+[68-71] Utgarde Keep
+
+[71-73] Drak'tharon Keep
+
+[73-75] Gundrak
+
+[75-80] Halls of Lightning
+
+[80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
+
+[83-85] Lost City of Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP
+[/INDENT]
+
+
+[LIST]
+User [U]must[/U] set the hearthstone's of all RAF characters with [URL="http://www.wowhead.com/npc=6740/innkeeper-allison"]Innkeeper Allison[/URL] in Stormwind (Alliance) or [URL="http://www.wowhead.com/npc=6929/innkeeper-gryshka#."]Innkeeper Gryshka[/URL] in Orgrimmar (Horde).
+[/LIST]
+[LIST]
+Users [U]must[/U] invite all party members into the party. The Booster [U]must[/U] be the party leader.
+[/LIST]
+
+[LIST]
+This method also [U]requires[/U] that you preset the Booster's hearthstone (list below) before proceeding to the initial instance portal. Automation will set it thereafter.
+[/LIST]
+[Indent]
+
+[B][U]List to come ![/U][/B]
+
+[17-25] Blackfathom Deeps -
+
+[25-37] Razorfen Kraul -
+
+[37-42] Razorfen Downs -
+
+[42-48] Blackrock Depths -
+
+[48-60] Blackrock Spire -
+
+[58-60][DK] Hellfire Ramparts -
+
+[60-63] Blood Furnace -
+
+[63-68] Sethekk Halls -
+
+[68-71] Utgarde Keep -
+
+[71-73] Drak'tharon Keep -
+
+[73-75] Gundrak -
+
+[75-80] Halls of Lightning -
+
+[80-83] Blackrock Caverns  [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP -
+
+[83-85] Lost City of Tolvir [COLOR="#FF0000"][SIZE=4]*[/SIZE][/COLOR]non RAF XP -
+
+
+[/INDENT]
+[LIST]
+[/LIST]
+[LIST]
+You [U]must[/U] then move all your charcters 5 meters/yards away from the instance (entrance portal) you wish to begin.
+[/LIST]
+[LIST]
+Click load profile in the HonorBuddy UI. Browse to where you have the profiles stored. [COLOR="#0000CD"]Double[/COLOR] click the appropriate profile.
+[/LIST]
+[INDENT]
+Users may [U]opt[/U] to use the [QO][1-80]_raf-auto-loader [COLOR="#FF0000"](RAF Toons ONLY)[/COLOR] or manually select the first profile for the RAF characters.
+[/INDENT]
+[INDENT]
+Users must [U]manually[/U] select the first profile on the Booster.
+[/INDENT]
+[INDENT]
+Automation will begin from there.
+[/INDENT]
+
+
+[LIST]
+Once you have selected the appropriate profile on all your characters, start HonorBuddy on all of the party members. 
+
+[INDENT][COLOR="#0000CD"][U]Complete[/U][/COLOR] automation will begin from that point.
+[/INDENT]
+[/LIST]
+[LIST]
+[/LIST]
+[LIST]
+[/LIST]
+[CENTER][B][SIZE=4][COLOR="#0000CD"]*** 1-80 Full Automation ***[/COLOR][/SIZE][/B][/CENTER][LIST]
+[/LIST]
+[LIST]
+[/LIST]
+[LIST]
+[*]Roll your level 1 characters.
+[/LIST]
+[LIST]
+[*]Put 1105g on each of the characters. The RAF characters must have a minimum of 5g to begin the profile.
+[/LIST]
+[LIST]
+[*]From the Booster's account, invite all the characters into a party. The Booster [U]must[/U] be the party leader.
+[/LIST]
+[LIST]
+[*]Select the "questing" bot base on all your bots.
+[/LIST]
+[LIST]
+[*]Load the Deadmines (Alliance) or Wailing Caverns (Horde) profile on the Booster.
+[/LIST]
+[LIST]
+[*]Load the [QO][1-80]_raf-auto-loader on all the RAF characters.
+[/LIST]
+[LIST]
+[*]Start all your characters from that point.
+[/LIST]
+
+[INDENT]
+The Booster will fly to the rendezvous location and wait for the RAF toons to arrive.
+[/INDENT]
+[INDENT]
+The RAF characters will make their way to Stormwind or Orgrimmar and grind until level 5.
+[/INDENT]
+[INDENT]
+At level 5 the RAF characters will purchase gear and then continue grinding until level 10.
+[/INDENT]
+[INDENT]
+At level 10, the RAF characters will rendezvous with the Booster and automatically begin farming instances.
+[/INDENT]
+[LIST]
+[/LIST]
+[/CODE]
+
+
+
+[B][SIZE=4][COLOR="#0000CD"]*** Information ***[/COLOR][/SIZE][/B]
+[CODE]
+
+[LIST]
+[*][URL="https://www.youtube.com/watch?feature=player_embedded&v=pvXMpfPb6Ok"][SIZE=3][COLOR="#0000CD"][B]How to RAF Accounts[/B][/COLOR][/SIZE][/URL]
+[/LIST]
+[LIST]
+[*] Should you have questions that [SIZE=3][U][COLOR="#FF0000"]are not[/COLOR][/U][/SIZE] answered on this page or bug reports :
+[INDENT]
+[SIZE=4][COLOR="#0000CD"]Contact[/COLOR][/SIZE] me via [SIZE=4][COLOR="#0000CD"][U]Skype[/U][/COLOR][/SIZE] by clicking my link ----> : [SIZE=4][URL="skype:Botanist68?add"][COLOR="#0000CD"]Botanist[/COLOR][/URL][/SIZE]
+[/INDENT]
+[/LIST]
+
+[LIST]
+Looting has been added for all levels 10-85. It will [U]require[/U] the Autoequip plugin to be enabled on all the RAF characters at all times.
+[INDENT]
+It is [U]not required[/U], but it is suggested that you equip your RAF characters with some bags of your choice to help facilitate looting.
+[/INDENT]
+[/LIST]
+[LIST]
+[*]This will allow your characters to acquire some gear before heading into some of the higher level instances inwhich some bosses have instance wide aoe attacks.
+[/LIST]
+[LIST]
+[*] It will also allow them to start earning some of the gold they require for riding skill training.
+[/LIST]
+
+[LIST]
+[*] There will be two modes of operation:
+
+[INDENT]
+[B][U]Full Automation[/U][/B] - User starts the bots (where told) or approximately 5 yrds away from the correct portal entrance, starts all characters from there, and allows the profiles to control everything !!!
+[/INDENT]
+
+[INDENT]
+[U][B]Instance Automation[/B][/U] - User manually moves all characters approximately 5 yrds away from the correct portal entrance, starts all characters from there. 
+[/INDENT]
+[INDENT]
+User will need to stop the automated movement when the characters reach the appropriate level to advance to the next instance.
+[/INDENT]
+[INDENT]
+Otherwise, the characters will advance to the next instance automatically !!!
+[/INDENT]
+[/LIST]
+
+[LIST]
+[*][B][U][COLOR="#FF0000"]Important:[/COLOR][/U][/B]
+[INDENT]
+Two packages will be available : [SIZE=3][COLOR="#0000CD"][B]1-80 Battle Chest[/B][/COLOR][/SIZE] and [SIZE=3][COLOR="#0000CD"][B]1-85 Cataclysm[/B][/COLOR][/SIZE] 
+[/INDENT]
+[INDENT]
+The difference being [SIZE=3][COLOR="#0000CD"][B]1-85 Cataclysm[/B][/COLOR][/SIZE] will automatically advance to Blackrock Caverns at level 77.
+[/INDENT]
+[INDENT]
+[SIZE=3][COLOR="#0000CD"][B]1-80 Battle Chest[/B][/COLOR][/SIZE] will continue until level 80 in Halls of Lightning.
+[/INDENT]
+
+[/LIST]
+
+[LIST]
+ Users [U]will be able[/U] to create any [COLOR="#FF0000"](non zone-locked race)[/COLOR] level 1  character.
+[INDENT]
+The character will make its way to [COLOR="#0000CD"]Elwynn Forest[/COLOR]/[COLOR="#FF0000"]Durator[/COLOR] and grind to level 10 before setting its hearth in the right location for running Symbiotic.
+[/INDENT]
+[/LIST]
+
+[LIST]
+During testing, we noticed that HonorBuddy will give the following error if you intialize the bot while your character is in an instance.
+[/LIST]
+[LIST]
+If you encounter this problem, move your characters outside the instance and then start HonorBuddy:
+[INDENT]
+"Object reference not set to an instance of an object"
+[/INDENT]
+[/LIST]
+[/CODE]
+
+
+[B][SIZE=4][COLOR="#0000CD"]*** Special Thanks To: ***[/COLOR][/SIZE][/B]
+[CODE]
+[LIST]
+[*]Wigglez - Has driven me crazy in the process, but has: (coded, contributed, tested, and deleted much of the code, the football, and argued about "huggy bear")
+[/LIST]
+[LIST]
+[*]chinajade - the diamond in the rough - HB Dev, Custom Behavior Creator, Friend
+[/LIST]
+[LIST]
+[*]Akna - Custom Behavior Creator - His custom behaviors are what automates most of the profiles.
+[/LIST]
+[LIST]
+[*]Kickazz - Well we might as well admit it, a god among men, longtime friend who has taught me much.
+[/LIST]
+[LIST]
+[*]Natfoth - HB Dev - Custom Routine Dev - Custom Behavior Dev - Friend (my last resort)
+[/LIST]
+[LIST]
+[*]Bossland - The Boss
+[/LIST]
+[LIST]
+[*]Apoc - The Brains
+[/LIST]
+[LIST]
+[*]The remaining HB Devs, Custom Routine Creators, Custom Behavior Creators, Forum Moderators, HonorBuddy Users
+[/LIST]
+[LIST]
+[*]The many people who originaly purchased these profiles before they became free.
+[/LIST]
+[LIST]
+[*]The many users whos complaints have brought it this far.
+[/LIST]
+
+[B][SIZE=3][COLOR="#0000CD"]*** Last But Not Least ! ***[/COLOR][/SIZE][/B]
+
+[LIST]
+[*]My woman, Tammy who has literally been ignored for weeks at a time during certain portions of this endeavor.
+[/LIST]
+[/CODE]
+
+
+
+[SIZE=3][COLOR="#0000CD"][B]***** More examples of HonorBuddys abilities !!! *****[/B][/COLOR][/SIZE]
+[CODE]
+[LIST]
+[url=http://www.youtube.com/watch?v=aH56Q7KjXhE]Rogue Pickpocketing - Fire Camp Osul[/url] 
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=xg0LP-xm-0U][GoTo] Stormwind/orgrimmar To Dalaran[/url]    
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=X-FCwgKYd48]The Scale of the Sands - Reputation Farming[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=luaElLv876k]It's A Long Way To The Top[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=06tiJzE1lQ4]A Celestial Experience[/url] 
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=IaSM28ECqTQ]Instance Farming [90] Grim Batol[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=vUrGH8LIEB0]Instance Farming [85] Tol'vir[/url] 
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=g4e3NFjGzwo]Instance Farming [85] Blackrock Caverns[/url]  
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=L8Qx-HFlQW8]Instance Farming [85] Botanica[/url] 
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=6VybjbDPyYg]Instance Farning [85] Halls of Lightning[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=oAb6kwV6i2g]Instance Farning [85] Stonecore[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=JZiqxyubrhM]Korda Torros -  Forager's Gloves[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=v575AjGk-Zo]Deathcharger's Reins Stratholme[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=0QG8AnYKCi4]Instance Farming [90] Pit of Saron[/url]
+[/LIST]
+[LIST]
+[url=http://www.youtube.com/watch?v=drJgje2LYZY]Pangaea 87-88 2M XP/hr[/url]
+[/LIST]
+[/CODE]
+
+
+
+Notice: [U][B][COLOR="#FF0000"]All donors prior to 06/04/2013[/COLOR][/B][/U] will need to contact me via skype and provide me their donor name or email for access to the new svn.[/CENTER]
+
+[B][CENTER][COLOR="#FF0000"][SIZE=2]Thousand's of hours (concept - coding - testing - recoding - updating - retesting - recoding - retesting) have went into these profiles, yet we are providing them to you for free. Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
+
+[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
+
+[URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL]
+
+
+[SIZE=3][COLOR="#0000CD"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
+[CODE]
+
+
+
+[LIST]
+[*]Symbiotic 1-80 Battle Chest Click [URL="https://github.com/Wigglez/symbiotic/"][COLOR="#FF0000"]here[/COLOR][/URL] for the SVN URL.
+[/LIST]
+[LIST]
+[*]Symbiotic 1-85 Cataclysm Click [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FF0000"]here[/COLOR][/URL] for the SVN URL.
+[/LIST]
+
+
+[LIST]
+
+[/LIST]
+[/CODE]
+
+[B][U][COLOR="#FF0000"][SIZE=3]NOTE:[/SIZE][/COLOR][/U][/B] The zip files below will not be up-to-date with the SVN
+[/CENTER]

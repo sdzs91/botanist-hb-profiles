@@ -1,0 +1,126 @@
+[LIST]
+[/LIST]
+[LIST]
+[/LIST]
+
+[B][CENTER][SIZE=4][COLOR="#8B4513"]Botanist's Skyshard Endless Farm[/COLOR][/SIZE][/CENTER][/B]
+[CENTER]
+
+[B][I][U][CENTER][COLOR="#8B4513"][SIZE=3]Coming Soon[/SIZE][/COLOR][/CENTER][/U][/I][/B]
+
+[CENTER][IMG]http://i.imgur.com/DUhfvCO.png[/IMG][/CENTER]
+
+[B][COLOR="#8B4513"][SIZE=4]***** Information *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*]This profile will farm [URL="http://www.wowhead.com/item=86547"][COLOR="#800080"]Skyshard's[/COLOR][/URL]
+[/LIST]
+[LIST]
+[*]This profile will farm [URL="http://www.wowhead.com/item=90586"][COLOR="#800080"]Dory's Pageantry[/COLOR][/URL]
+[/LIST]
+[LIST]
+[*]This profile will farm [URL="http://www.wowhead.com/item=90587"][COLOR="#800080"]Natli's Fireheart Robe[/COLOR][/URL]
+[/LIST]
+[LIST]
+[*]This profile will farm [URL="http://www.wowhead.com/item=90573"][COLOR="#800080"]Wang's Unshakable Smil[/COLOR]e[/URL]
+[/LIST]
+[LIST]
+[*]This profile will farm [URL="http://www.wowhead.com/item=81216/spirit-money"][COLOR="#008000"]Spirit Money[/COLOR][/URL]
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+
+[/CODE]
+
+
+[B][COLOR="#8B4513"][SIZE=4]***** Instructions *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*]Log into Wow
+[/LIST]
+[LIST]
+[*]Initialize Honorbuddy
+[/LIST]
+[LIST]
+[*]Select Questing as your bot base
+[/LIST]
+[LIST]
+[*]Click the load profile button.
+[/LIST]
+[LIST]
+[*]Browse to where you have the profile stored.
+[/LIST]
+[LIST]
+[*]Double left click [QO-N-90][Skyshards][Flying]_botanist.xml
+[/LIST]
+[LIST]
+[*]Wait for the profile to load. Click start on HonorBuddy
+[/LIST]
+
+[/CODE]
+
+
+[B][COLOR="#8B4513"][SIZE=4]***** Prerequisites *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*]This profile will require a level 90 character
+[/LIST]
+[LIST]
+[*]This profile requires your character to be able to fly in Pandaria
+[/LIST]
+[LIST]
+[*]This profile requires you to set a mail recipient in the settings and tools window of HonorBuddy
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+
+[LIST]
+[*]-
+[/LIST]
+
+[/CODE]
+
+[CODE]
+[CENTER][LIST]
+[*] Should you have questions that [SIZE=3][U][COLOR="#8B4513"]are not[/COLOR][/U][/SIZE] answered on this page or bug reports :
+[INDENT]
+[SIZE=4][COLOR="#8B4513"]Contact[/COLOR][/SIZE] me via [SIZE=4][COLOR="#8B4513"][U]Skype[/U][/COLOR][/SIZE] by clicking my link ----> : [SIZE=4][URL="skype:Botanist68?add"][COLOR="#800080"]Botanist[/COLOR][/URL][/SIZE]
+[/INDENT]
+[/LIST][/CENTER]
+[/CODE]
+[/CENTER]
+
+[B][CENTER][COLOR="#8B4513"][SIZE=2] Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
+
+[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
+
+[URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL]
+
+
+[SIZE=3][COLOR="#8B4513"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
+[CODE]
+
+[LIST]
+[*]Will be added.
+[/LIST]
+[/CODE]
+
+[B][U][COLOR="#8B4513"][SIZE=3]NOTE:[/SIZE][/COLOR][/U][/B] The zip files below will not be up-to-date with the SVN
+[/CENTER]

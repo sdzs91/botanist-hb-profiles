@@ -1,0 +1,442 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>0.-1</MinDurability>
+	<MinFreeBagSlots>0.-1</MinFreeBagSlots>
+	<TargetingDistance>15</TargetingDistance>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+		<Mob Name="Corborusr" Entry="43438" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+	
+	<QuestOrder>
+	
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<!-- UserSettings -->
+		<CustomBehavior File="UserSettings"
+						FindMountAutomatically="True"
+						GroundMountFarmingMode="False"
+						HarvestHerbs="False"
+						HarvestMinerals="False"
+						KillBetweenHotspots="False"
+						LogoutForInactivity="False"
+						LogoutInactivityUseForceQuit="False"
+						LootMobs="True"
+						LootRadius="45"
+						MountName=""
+						NinjaSkin="False"
+						RessAtSpiritHealers="False"
+						SkinMobs="False"
+						UseMount="True" 
+						UseRandomMount="False" />
+						
+		<!-- If we are in Stonecore -->
+		<If Condition="Me.MapId == 725">
+		
+			<!-- Profile message - You started the bot with me inside Stonecore. Exiting the dungeon to reset -->
+			<CustomBehavior File="Message" Text="You started the bot with me inside Stonecore. Exiting the dungeon to reset." LogColor="Cyan" />	
+				
+			<!-- Move to - zone in location -->
+			<MoveTo X="851.052" Y="986.474" Z="317.2723" />
+
+			<!-- Go through the portal -->
+			<CustomBehavior File="Misc\InInstance" 
+							X="815.4514" Y="986.9715" Z="318.9995" />
+			
+			<!-- Move to - zone out location-->
+			<MoveTo X="1023.72" Y="644.747" Z="156.672" />
+						
+		</If>	<!-- If we are in Stonecore -->				
+						
+		<!-- If we are not in the Stonecore instance box -->
+		<If Condition="Me.Y &lt; 620.9702 || Me.Y &gt; 678.2952 || Me.X &lt; 987.7558 || Me.X &gt; 1062.086 || Me.Z &lt; 150 || Me.Z &gt; 160" >				
+				
+			<!-- Load profile - [QO-N-M][Reins of the Vitreous Stone Drake]_botanist_stonecore -->
+			<CustomBehavior File="LoadProfile" 
+							ProfileName="Movement\[QO-N-M][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore" />	
+						
+		</If>	<!-- If we are not in the Stonecore instance box -->				
+
+		<!-- While Loop -->			
+		<While Condition="true" >
+
+			<!-- Repair if necessary -->
+			<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
+			
+				<!-- CustomBehavior - LoadProfile - [QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore[repair-mail] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Movement\Vendors\[QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore[repair-mail]" />
+				
+			</If> <!-- Repair if necessary -->
+		
+			<!-- If we are in the Stonecore instance box -->
+			<If Condition="Me.Y &gt; 620.9702 &amp;&amp; Me.Y &lt; 678.2952 &amp;&amp; Me.X &gt; 987.7558 &amp;&amp; Me.X &lt; 1062.086 &amp;&amp; Me.Z &gt; 150 &amp;&amp; Me.Z &lt; 160" >	
+			
+				<!-- If our Hearthstone/Innkeepers Daughter is not set at Temple of the Earth -->				
+				<If Condition="Me.HearthstoneAreaId != 5303 ">
+			
+					<!-- Profile message - Our Hearthstone/Innkeeper's Daughter isn't set to Temple of the Earth. Moving to Temple of the Earth --> 
+					<CustomBehavior File="Message" 
+									Text="Our Hearthstone/Innkeeper's Daughter isn't set to Temple of the Earth. Moving to Temple of the Earth."
+									LogColor="Plum" />
+			
+					<!-- Flt to - Temple of the Earth entrance -->			
+					<CustomBehavior File="FlyTo" 
+									X="840.5391" Y="492.2466" Z="-63.31997" />
+					
+					<!-- Move to -  Temple of the Earth Innkeep -->
+					<MoveTo X="1018.878" Y="545.7827" Z="-49.33431" />			
+								
+					<!-- CustomBehavior - ForcedDismount -->
+					<CustomBehavior File="ForcedDismount" />
+		
+					<CustomBehavior File="SetHearthstone" 
+									MobId="45300"  
+									X="1032.42" Y="542.142" Z="-49.32676" />
+
+					<!-- Move to - outside Temple of the Earth -->
+					<MoveTo X="847.6309" Y="497.956" Z="-63.26773" />
+					
+					<!-- Profile message - Moving to Stonecore --> 
+					<CustomBehavior File="Message" 
+									Text="Moving to Stonecore."
+									LogColor="Plum" />
+					
+					<CustomBehavior File="FlyTo" X="773.7523" Y="596.1415" Z="43.54036" />
+
+					<CustomBehavior File="FlyTo" X="1027.767" Y="739.9456" Z="199.1932" />
+					
+					<CustomBehavior File="MyCTM" X="1026.425" Y="667.5716" Z="164.4908" /> 
+					
+					<CustomBehavior File="MyCTM" X="1023.72" Y="644.747" Z="156.672" />
+
+					<CustomBehavior File="ForcedDismount" />
+
+					<!-- Profile message - We have reached our destination --> 
+					<CustomBehavior File="Message" 
+									Text="We have reached our destination."
+									LogColor="Plum" />
+
+				</If>	<!-- If our Hearthstone/Innkeepers Daughter is not set at Temple of the Earth -->
+			
+				<!-- Profile message - Portal detected nearby --> 
+				<CustomBehavior File="Message" 
+								Text="Portal detected nearby."
+								LogColor="Plum" />	
+					
+				<!-- Profile message - Resetting the instance -->
+				<CustomBehavior File="Message" 
+								Text="Resetting the instance." 
+								LogColor="Plum" />
+				
+				<!-- Custom behavior - macro - reset the instance -->
+				<CustomBehavior File="RunMacro" 
+								Macro="/script ResetInstances()" />
+				
+				<!-- Custom behavior - macro - set the dungeon difficulty to normal -->
+				<CustomBehavior File="RunMacro" 
+								Macro="/script SetDungeonDifficultyID(1)" />
+				
+				<!-- Profile message - The instance has been reset -->
+				<CustomBehavior File="Message" 
+								Text="The instance has been reset." 
+								LogColor="Plum" />
+
+				<!-- While we didn't enter Stonecore -->
+				<While Condition="Me.MapId != 725">
+				
+					<!-- Move to - zone out location-->
+					<MoveTo X="1023.72" Y="644.747" Z="156.672" />
+
+					<!-- Move to - attempt to enter the instance -->
+					<CustomBehavior File="Misc\InInstance" 
+									X="1031.908" Y="614.5391" Z="153.8978" /> 
+									
+					<!-- Profile message - Waiting for the dungeon to load -->			
+					<CustomBehavior File="Message" 
+									Text="Waiting for the dungeon to load." 
+									LogColor="Plum" />
+								
+					<!-- Wait timer - wait 20-40 seconds -->			
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="20000"
+									VariantTime="20000" />
+									
+					<!-- If we are not in Stonecore -->
+					<If Condition="Me.MapId != 725">
+					
+						<!-- Profile message - We are instance locked, initiating loop procedures until we enter the instance -->
+						<CustomBehavior File="Message" 
+										Text="We are instance locked, initiating loop procedures until we enter the instance." 
+										LogColor="Plum" />
+										
+					</If>	<!-- If we are not in Stonecore -->
+					
+				</While>	<!-- While we have not entered Stonecore -->
+
+			</If>	<!-- If we are in the Stonecore instance box -->	
+
+			<!-- If we are inside Stonecore -->
+			<If Condition="Me.MapId == 725">	
+			
+				<!-- Move to - zone in location -->
+				<MoveTo X="851.052" Y="986.474" Z="317.2723" />
+											
+				<!-- Profile message - Deleting unwanted items from our bags -->				
+				<CustomBehavior File="Message" 
+								Text="Deleting unwanted items from our bags." 
+								LogColor="Orange" />
+
+				<!-- Bottled Nethergon Vapor -->
+				<CustomBehavior File="DeleteItems" 
+								Ids="32905" />
+
+				<!-- Mag'har Grainbread -->
+				<CustomBehavior File="DeleteItems" 
+								Ids="27855" />				
+						
+				<!-- Instance timer -->
+				<CustomBehavior File="Misc\InstanceTimer" 
+								Timer="Start" />							
+							
+				<!-- Turn on autolooting -->
+				<CustomBehavior File="RunMacro" 
+								Macro="/script SetCVar('AutoLootDefault', 1)" 
+								NumOfTimes="1" 
+								WaitTime="1000" />
+							
+				<CustomBehavior File="Message" 
+								Text="Stonecore initialized."  
+								LogColor="Plum" />
+			
+			
+				<!-- ************************************************************* Stonecore dungeon script ************************************************************************** -->
+				
+				
+				<!-- @@@@@@@@@@@@@@@@@@@@ 1st pull @@@@@@@@@@@@@@@@@@@@ -->
+				
+				
+				<!-- Move to - Millhouse Manastorm -->
+				<MoveTo X="902.09" Y="981.547" Z="316.8098" />
+				
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />
+								
+				<!-- Macro - Clear target -->					
+				<CustomBehavior File="RunMacro" 
+								Macro="/cleartarget" 
+								NumOfTimes="1" 
+								WaitTime="0"/>				
+				
+				<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
+				
+				
+				<!-- Move to - Millhouse Manastorm -->
+				<MoveTo X="977.0214" Y="895.4822" Z="306.4088" />
+				
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />
+								
+				<!-- Macro - Clear target -->					
+				<CustomBehavior File="RunMacro" 
+								Macro="/cleartarget" 
+								NumOfTimes="1" 
+								WaitTime="0"/>
+				
+				<!-- @@@@@@@@@@@@@@@@@@@@ 3rd pull @@@@@@@@@@@@@@@@@@@@ -->
+				
+				
+				<!-- Move to - Millhouse Manastorm -->
+				<MoveTo X="1049.773" Y="871.2941" Z="295.0014" />
+				
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />
+								
+				<!-- Macro - Clear target -->					
+				<CustomBehavior File="RunMacro" 
+								Macro="/cleartarget" 
+								NumOfTimes="1" 
+								WaitTime="0"/>
+				
+				
+				<!-- @@@@@@@@@@@@@@@@@@@@ 4th pull @@@@@@@@@@@@@@@@@@@@ -->
+				
+				
+				<!-- Profile message - Disabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Disabling combat." 
+									LogColor="Gold" />
+				
+				<!-- DisableBehavior - Combat -->
+				<DisableBehavior Name="Combat" />
+				
+				<!-- Move to - trigger -->
+				<MoveTo X="1109.075" Y="877.5101" Z="286.6938" />
+				
+				<!-- Wait timer - wait 15 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="15000" />
+				
+				<!-- Move to - cave entrance -->
+				<MoveTo X="1151.266" Y="931.5598" Z="284.5294" />
+				
+				<!-- Profile message - Enabling combat -->
+				<CustomBehavior File="Message" 
+									Text="Enabling combat." 
+									LogColor="Gold" />
+				
+				<!-- EnableBehavior - Combat -->	
+				<EnableBehavior Name="Combat" />
+				
+				<!-- Wait timer - wait 3 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="3000" />
+				
+				
+				<!-- @@@@@@@@@@@@@@@@@@@@ 5th pull @@@@@@@@@@@@@@@@@@@@ -->
+				
+				
+				<!-- Move to - pre-Slabhide -->
+				<MoveTo X="1244.63" Y="1199.083" Z="247.5745" />
+				
+				<!-- Wait timer - wait 15 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="15000" />
+				
+				
+				<!-- @@@@@@@@@@@@@@@@@@@@ 5th pull @@@@@@@@@@@@@@@@@@@@ -->
+				
+				
+				<!-- Move to - Slabhide -->
+				<MoveTo X="1292.352" Y="1226.478" Z="247.6368" />
+
+				<!-- Wait timer - wait 15 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="15000" />
+
+				<!-- Move to - Rock Borer kill zone -->
+				<MoveTo X="1030.217" Y="871.4951" Z="297.1246" />				
+
+				<!-- While our X > 900 -->
+				<While Condition="Me.X &gt; 900">
+					
+						<!-- Custom behavior - TargetAndMoveToMob - Rock Borer -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="1"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										TerminateWhen="Me.GotTarget &amp;&amp; Me.CurrentTarget.IsDead"
+										MobId="42845" >			
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+
+					<!-- If our target is a Rock Borer -->
+					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 42845)">
+					
+						<!-- Profile message  - Engaging a Rock Borer -->	
+						<CustomBehavior File="Message" 
+										Text="Engaging a Rock Borer." 
+										LogColor="Cyan" />
+						
+						<!-- CustomBehavior - RunMacro - cast Auto Attack -->
+						<CustomBehavior File="RunMacro" 
+										Macro="/cast Auto Attack" />
+						
+						<!-- Wait timer - wait 1 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="1000" />
+
+						<Else>
+
+							<!-- Move to - zone in location -->
+							<MoveTo X="851.052" Y="986.474" Z="317.2723" />
+						
+						</Else>
+										
+					</If>	<!-- If our target is a Schnottz Elite Trooper --> 
+					
+				</While> 	<!-- While our X > 900 -->				
+
+				<!-- CustomBehavior - Misc\InstanceTimer -  6 minutes and 40 seconds -->				
+				<CustomBehavior File="Misc\InstanceTimer" 
+								Timer="Check" 
+								WaitTime="400000" />
+
+				<!-- Repair if necessary -->
+				<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" >
+				
+					<!-- CustomBehavior - LoadProfile - [QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore[repair-mail] -->
+					<CustomBehavior File="LoadProfile" 
+									ProfileName="Movement\Vendors\[QO-N][Reins-of-the-Vitreous-Stone-Drake]_botanist_stonecore[repair-mail]" />
+					
+				</If> <!-- Repair if necessary -->				
+
+				<!-- If we don't need to vendor -->
+				<If Condition="Me.MapId == 725">
+				
+					<!-- Profile message - We have more than 25 empty bag slots. Our gear is above 30% durability and we have Clefthoof Ribs -->
+					<CustomBehavior File="Message" 
+									Text="We have more than 25 empty bag slots. Our gear is above 30% durability and we have Clefthoof Ribs."
+									LogColor="Orange" />
+
+					<!-- Profile message - Exiting the instance so we can reset it -->
+					<CustomBehavior File="Message" 
+									Text="Exiting the instance so we can reset it."
+									LogColor="Plum" />
+					
+					<!-- Move to - zone in location -->
+					<MoveTo X="851.052" Y="986.474" Z="317.2723" />
+
+					<!-- Go through the portal -->
+					<CustomBehavior File="Misc\InInstance" 
+									X="815.4514" Y="986.9715" Z="318.9995" />
+					
+					<!-- Move to - zone out location-->
+					<MoveTo X="1023.72" Y="644.747" Z="156.672" />
+					
+				</If>	<!-- If we are inside Utgarde Keep -->
+				
+			</If>	 <!-- If we are inside Stonecore -->
+
+		</While>	<!-- While Loop -->	
+	
+	</QuestOrder>
+
+
+</HBProfile>

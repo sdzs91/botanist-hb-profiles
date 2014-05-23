@@ -1,0 +1,124 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-M][90-Flying]_botanist_black_temple</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>True</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>		
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+
+	<Factions></Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+
+		<!-- Level check -->
+		<If Condition="Me.Level &gt;= 90">
+		
+		 	<!-- UserSettings -->
+			<CustomBehavior File="UserSettings"
+							FindMountAutomatically="True"
+							GroundMountFarmingMode="False"
+							HarvestHerbs="False"
+							HarvestMinerals="False"
+							KillBetweenHotspots="True"
+							LogoutForInactivity="False"
+							LogoutInactivityUseForceQuit="False"
+							LootMobs="True"
+							LootRadius="25"
+							MountName=""
+							NinjaSkin="False"
+							RessAtSpiritHealers="False"
+							SkinMobs="False"
+							UseMount="True" 
+							UseRandomMount="False" />
+			
+			<!-- Profile message - Waiting 3 seconds - Bag and durability check -->
+			<CustomBehavior File="Message" 
+							Text="Waiting 3 seconds - Bag and durability check."  
+							LogColor="Orange" />
+			
+			<!-- Wait timer - wait 3 seconds - delay -->
+			<CustomBehavior File="WaitTimer" 
+							WaitTime="3000" />
+			
+			<!-- If we have less then 35 empty bag slots or our durability is less than 30% -->
+			<If Condition="(Me.FreeBagSlots &lt;= 35) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+										
+				<!-- Load profile - [QO-N][90-Flying]_botanist_black_temple_[repair-mail] -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="Vendors\[QO-N][90-Flying]_botanist_black_temple_[repair-mail]" />
+
+			</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+
+			<!-- Profile message - All checks complete -->
+			<CustomBehavior File="Message" 
+							Text="All checks complete."  
+							LogColor="Orange" />
+
+			<!-- Profile message - Flying to Black Temple -->
+			<CustomBehavior File="Message" 
+							Text="Flying to Black Temple."  
+							LogColor="Orange" />
+
+			<!-- Fly to - Flying to Black Temple hover point -->
+			<CustomBehavior File="FlyTo" 
+							X="-3556.956" Y="332.331" Z="81.72329" />
+		
+			<!-- CTM to - land outside Black Temple -->
+			<CustomBehavior File="MyCTM" 
+							X="-3650.9" Y="316.897" Z="35.85256" />
+			
+			<!-- Custom behavior - ForcedDismount -->
+			<CustomBehavior File="ForcedDismount" />
+							
+			<!-- Move to - Black Temple instance box -->
+			<MoveTo X="-3650.9" Y="316.897" Z="35.85256" />
+			
+			<!-- If we are in the Black Temple instance box -->
+			<If Condition="Me.X &lt; -3607.206 &amp;&amp; Me.X &gt; -3655.454 &amp;&amp; Me.Y &gt; 292.4347 &amp;&amp; Me.Y &lt; 340.4077" >
+				
+				<!-- Load profile - [QO-N][90-Flying]_botanist_grim-batol -->
+				<CustomBehavior File="LoadProfile" 
+								ProfileName="..\[QO-N][90-Flying]_botanist_black_temple" />
+								
+			</If> 	<!-- If we are in the Black Temple instance box -->	
+			
+		</If>	<!-- Level check -->
+		
+	</QuestOrder>
+	
+</HBProfile>

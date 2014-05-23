@@ -1,0 +1,128 @@
+[B][CENTER][SIZE=4][COLOR="#FFA07A"]Botanist's [90] Pit of Saron Endless Gold Farm[/COLOR][/SIZE][/CENTER][/B]
+
+[CENTER][B][I][COLOR="#FFA07A"][SIZE=4]Available for Testing ![/SIZE][/COLOR][/I][/B]
+
+
+
+[CENTER][B][I][COLOR="#FFA07A"][SIZE=4][URL="http://www.wowhead.com/item=50380/battered-hilt"][COLOR="#800080"]Battered Hilt[/COLOR][/URL] Farm [COLOR="#000000"]also[/COLOR] Available for Testing[/SIZE][/COLOR][/I][/B]
+
+
+[video=youtube;0QG8AnYKCi4]https://www.youtube.com/watch?v=0QG8AnYKCi4[/video][/CENTER]
+
+
+[B][COLOR="#FFA07A"][SIZE=4]***** Information *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*]Will be added.
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+
+[/CODE]
+
+
+[B][COLOR="#FFA07A"][SIZE=4]***** Instructions *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*]Will be added.
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+
+[/CODE]
+
+
+[B][COLOR="#FFA07A"][SIZE=4]***** Prerequisites *****[/SIZE][/COLOR][/B]
+
+[CODE]
+[LIST]
+[*]Your character [U][B]must[/B][/U] have completed the questline in Forge of Souls
+[/LIST]
+[LIST]
+[*]Your character [U][B]must[/B][/U] be level 90
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+[LIST]
+[*]-
+[/LIST]
+
+[/CODE]
+
+[CODE]
+[CENTER][LIST]
+[*] Should you have questions that [SIZE=3][U][COLOR="#FFA07A"]are not[/COLOR][/U][/SIZE] answered on this page or bug reports :
+[INDENT]
+[SIZE=4][COLOR="#FFA07A"]Contact[/COLOR][/SIZE] me via [SIZE=4][COLOR="#FFA07A"][U]Skype[/U][/COLOR][/SIZE] by clicking my link ----> : [SIZE=4][URL="skype:Botanist68?add"][COLOR="#FFA07A"]Botanist[/COLOR][/URL][/SIZE]
+[/INDENT]
+[/LIST][/CENTER]
+[/CODE]
+[/CENTER]
+
+[B][CENTER][COLOR="#FFA07A"][SIZE=2] Please take a few minutes to click the + Rep button on the bottom left of this post or buy me a cup of coffee by clicking on the link below. Donors will also receive access to my private SVN which has 600+ profiles on it.[/SIZE][/COLOR][/CENTER][/B]
+
+[CENTER][URL="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBDWX3RDKP6M6"][IMG]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/IMG][/URL]
+
+[URL="https://www.wepay.com/donations/1429081960"] [IMG]http://i1341.photobucket.com/albums/o753/cloudmediaone/donate-wepay_zpsfb92bac6.png[/IMG] [/URL]
+
+
+[SIZE=3][COLOR="#FFA07A"][B]***** Where To Get It !!! *****[/B][/COLOR][/SIZE]
+[CODE]
+[CENTER]
+
+[LIST]
+[*]Available via the Public SVN [URL="https://botanist-hb-profiles.googlecode.com/svn/trunk"][COLOR="#FFA07A"]HERE[/COLOR][/URL]
+[/LIST]
+[LIST]
+Or attached zip file below.
+[/LIST]
+
+[/CENTER]
+[/CODE]
+
+[B][U][COLOR="#FFA07A"][SIZE=3]NOTE:[/SIZE][/COLOR][/U][/B] The zip files below will not be up-to-date with the SVN
+[/CENTER]
