@@ -389,18 +389,65 @@
 
 			</If>	<!-- If our hearthstone is set to Light's Hope Chapel -->
 				
+			<!-- If we are in the instance box-->
+			<If Condition="Me.X &lt; 3239.871 &amp;&amp; Me.X &gt; 3184.693 &amp;&amp; Me.Y &lt; -4033.876 &amp;&amp; Me.Y &gt; -4050.978" > 
+						
+				<!-- Profile message - Portal detected nearby -->
+				<CustomBehavior File="Message" 
+								Text="Portal detected nearby."
+								LogColor="Plum" />	
+
+				<!-- Profile message - Resetting the instance -->
+				<CustomBehavior File="Message" 
+								Text="Resetting the instance." 
+								LogColor="Plum" />
 				
+				<!-- Custom behavior - macro - reset the instance -->
+				<CustomBehavior File="RunMacro" 
+								Macro="/script ResetInstances()" />	
+								
+				<!-- Custom behavior - macro - set dungeon difficulty to normal -->					
+				<CustomBehavior File="RunMacro" 
+								Macro="/script SetDungeonDifficultyID(1)" />
 				
+				<!-- Profile message - The instance has been reset -->
+				<CustomBehavior File="Message" 
+								Text="The instance has been reset." 
+								LogColor="Plum" />
+					
+				<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
+				<While Condition="Me.MapId != 329">
 				
+					<!-- Move to - zone out location -->
+					<MoveTo X="3233.06" Y="-4048.3" Z="108.442" />
+
+					<!-- Move to - attempt to enter the instance -->
+					<CustomBehavior File="Misc\InInstance" 
+									X="3238.079" Y="-4057.018" Z="108.4619" />
+									
+					<!-- Profile message - Waiting for the dungeon to load -->				
+					<CustomBehavior File="Message" 
+									Text="Waiting for the dungeon to load." 
+									LogColor="Plum" />
+					
+					<!-- Wait timer - wait 20 seconds for the instance to load -->						
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="20000" />
+									
+					<!-- If we still aren't in, we're locked out -->
+					<If Condition="Me.MapId != 329">
+					
+						<!-- Profile message - We are locked out. Waiting 20 seconds, then attempting to enter again -->
+						<CustomBehavior File="Message" 
+										Text="We are locked out. Waiting 20 seconds, then attempting to enter again ." 
+										LogColor="Plum" />
+										
+					</If>	<!-- If we still aren't in, we're locked out -->
+					
+				</While>	<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
 				
-				
-				
-				
-				
-				
-				
-				
-				
+			</If>	<!-- If we are in the instance box -->	
+
 			<!-- If we are inside Stratholme -->
 			<If Condition="Me.MapId == 329">
 			
