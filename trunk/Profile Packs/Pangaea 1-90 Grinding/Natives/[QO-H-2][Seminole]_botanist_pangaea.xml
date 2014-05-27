@@ -18,9 +18,7 @@
 	<SellGreen>False</SellGreen>
 	<SellBlue>False</SellBlue>
 	<SellPurple>False</SellPurple>
-   
-	<TargetElites></TargetElites>
-	
+
 	<AvoidMobs>
 		<Mob Name="Dreamstalker" Entry="12498" />
 		<Mob Name="Phantim" Entry="5314" />

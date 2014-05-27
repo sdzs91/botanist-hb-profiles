@@ -18,9 +18,7 @@
 	<SellGreen>False</SellGreen>
 	<SellBlue>False</SellBlue>
 	<SellPurple>False</SellPurple>
-   
-	<TargetElites></TargetElites>
-	
+
 	<AvoidMobs>
 		<AvoidMob Name="Training Dummy" Entry="44548" />
 		<AvoidMob Name="Thuros Lightfingers" Entry="61" />
@@ -43,9 +41,7 @@
 	<Factions></Factions>
 	
 	<ProtectedItems></ProtectedItems>
-	
-	<ClearVendor /><ClearMailbox />
-		
+
 	<QuestOrder>
 	
 				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="45" ExpiryAction="InputEnabled_Continue" 

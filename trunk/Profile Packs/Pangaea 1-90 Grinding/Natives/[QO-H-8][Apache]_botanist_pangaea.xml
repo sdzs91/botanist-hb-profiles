@@ -19,8 +19,6 @@
 <SellBlue>False</SellBlue>
 <SellPurple>False</SellPurple>
 
-<TargetElites>True</TargetElites>
-
 <AvoidMobs>
 	<Mob Name="Suspicious Snow Pile" Entry="59967" />
 	<Mob Name="Ik'thik Slicewing" Entry="59832" />

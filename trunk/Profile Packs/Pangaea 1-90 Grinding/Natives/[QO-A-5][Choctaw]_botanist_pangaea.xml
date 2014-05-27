@@ -18,9 +18,7 @@
 	<SellGreen>False</SellGreen>
 	<SellBlue>False</SellBlue>
 	<SellPurple>False</SellPurple>
-   
-	<TargetElites></TargetElites>
-	
+
 	<AvoidMobs>
 		<Mob Name="Dragonbone Condor" Entry="26483" />		  
 	</AvoidMobs>

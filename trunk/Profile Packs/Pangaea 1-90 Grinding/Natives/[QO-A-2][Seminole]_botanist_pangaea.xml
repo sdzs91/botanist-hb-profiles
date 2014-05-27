@@ -18,9 +18,7 @@
 	<SellGreen>False</SellGreen>
 	<SellBlue>False</SellBlue>
 	<SellPurple>False</SellPurple>
-   
-	<TargetElites></TargetElites>
-	
+
 	<AvoidMobs>
 		<Mob Name="Seeker Aqualon" Entry="14269" />
 		<Mob Name="Cauldron Lord Soulwrath" Entry="11078" />

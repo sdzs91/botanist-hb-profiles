@@ -36,9 +36,7 @@
 	<ProtectedItems></ProtectedItems>
 		
 	<QuestOrder >
-	
-				
-		
+
 				<If Condition="Me.IsAlliance" >			
 					<CustomBehavior File="LoadProfile" ProfileName="Natives\[QO-A]_botanist_pangaea" />
 				</If>

@@ -17,10 +17,7 @@
 	<SellGreen>True</SellGreen>
 	<SellBlue>False</SellBlue>
 	<SellPurple>False</SellPurple>
-  
-	<TargetElites>False</TargetElites>
 
-  
 	<AvoidMobs>
 	</AvoidMobs>
 	
@@ -43,9 +40,7 @@
 		
 	
 	<QuestOrder>
-	
 
-			
 				<If Condition="Me.MapId == 870" >
 					<CustomBehavior File="UserSettings" 
 									LootMobs="True" 

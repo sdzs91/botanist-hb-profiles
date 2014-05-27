@@ -19,7 +19,6 @@
 <SellBlue>False</SellBlue>
 <SellPurple>False</SellPurple>
 
-<TargetElites>True</TargetElites>
 
 <AvoidMobs>
 	<Mob Name="Ik'thik Slicewing" Entry="59832" />

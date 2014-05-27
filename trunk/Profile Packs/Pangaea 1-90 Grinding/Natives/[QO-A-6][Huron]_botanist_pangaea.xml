@@ -18,9 +18,7 @@
 	<SellGreen>False</SellGreen>
 	<SellBlue>False</SellBlue>
 	<SellPurple>False</SellPurple>
-   
-	<TargetElites></TargetElites>
-	
+
 	<AvoidMobs>
 		<Mob Name="Nemesis" Entry="40340" />
 	</AvoidMobs>

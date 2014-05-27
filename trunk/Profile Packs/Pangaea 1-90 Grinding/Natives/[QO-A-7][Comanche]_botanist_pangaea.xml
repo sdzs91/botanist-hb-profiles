@@ -11,9 +11,9 @@
   <MailBlue>True</MailBlue>
   <MailPurple>True</MailPurple>
   
-  <Blackspots>
+	<Blackspots>
 		<Blackspot X="-675.1985" Y="-1533.633" Z="7.828131" Radius="54.23418" />
-</Blackspots>
+	</Blackspots>
     
 <QuestOrder>
 
