@@ -366,9 +366,10 @@
 					<!-- Run to the exit -->
 					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
 		
-					<!-- Instance timer to ensure run takes a minimum of 12 minutes and 30 seconds to avoid instance locks -->
+					<!-- CustomBehavior - Misc\InstanceTimer -  6 minutes and 40 seconds -->				
 					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
+									Timer="Check" 
+									WaitTime="400000" />
 	
 				</If><!-- If we are inside Vortex Pinnacle and have checked our reset -->
 						
