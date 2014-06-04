@@ -230,8 +230,17 @@
 									VehicleMountId="45455" 
 									X="-768.213" Y="-53.6862" Z="639.926" />
 					
-					<!-- Run to the dais once we land -->
-					<RunTo X="-925.2205" Y="-175.1197" Z="669.2666" />
+					<!-- Use the slipstream -->
+					<CustomBehavior File="MountVehOnly" 
+									VehicleMountId="45455" 
+									X="-768.213" Y="-53.6862" Z="639.926" />
+					
+					<!-- CustomBehavior - WaitTimer - 5 second delay-->
+					<CustomBehavior File="WaitTimer" 
+											WaitTime="5000" />
+					
+					<!-- Run to the dias once we land -->
+					<MoveTo X="-929.4961" Y="-168.1685" Z="669.2651" />
 									
 					<!-- Pull right-hand staircase -->				
 					<RunTo X="-986.8172" Y="-62.31145" Z="694.9169" />

@@ -76,7 +76,7 @@
 									LogColor="Plum" />
 						
 					<!-- Make our way to the exit -->
-					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+					<MoveTo X="-337.627" Y="15.3073" Z="626.979" />
 					
 					<!-- InInstance to exit the dungeon -->
 					<CustomBehavior File="Misc\InInstance" X="-327.7366" Y="24.78619" Z="626.7043" />
@@ -86,7 +86,7 @@
 									WaitTime="15000" />
 					
 					<!-- Make sure we run to the right spot outside the portal -->
-					<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
+					<MoveTo X="-11513.3" Y="-2309.88" Z="608.393" />
 				</If> <!-- Vortex Pinnacle -->
 				
 				<!-- If we are not in the box, load the movement profile -->
@@ -129,7 +129,7 @@
 					<While Condition="Me.ZoneId != 5035">
 					
 						<!-- Make sure we run to the right spot outside the portal -->
-						<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
+						<MoveTo X="-11513.3" Y="-2309.88" Z="608.393" />
 
 						<!-- Run back in the portal -->
 						<CustomBehavior File="Misc\InInstance" X="-11521.92" Y="-2317.052" Z="608.393" /> 
@@ -154,7 +154,7 @@
 				<!-- If we are inside Vortex Pinnacle and have checked our reset -->
 				<If Condition="Me.ZoneId == 5035">
 					<!-- Entrance -->
-					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+					<MoveTo X="-337.627" Y="15.3073" Z="626.979" />
 					
 					<!-- Runmacro - open all our bags -->				
 					<CustomBehavior File="RunMacro" 
@@ -178,7 +178,7 @@
 									AllowCombat="false">
 						<Hotspot X="-420.1686" Y="-66.62024" Z="634.4308" />
 					</CustomBehavior>
-					<RunTo X="-420.1686" Y="-66.62024" Z="634.4308" />				
+					<MoveTo X="-420.1686" Y="-66.62024" Z="634.4308" />				
 									
 					<!-- Wait timer to be sure we got aggro -->
 					<CustomBehavior File="WaitTimer" 
@@ -196,7 +196,7 @@
 									AllowCombat="false">
 						<Hotspot X="-488.4386" Y="-136.1343" Z="638.8187" />
 					</CustomBehavior>
-					<RunTo X="-488.4386" Y="-136.1343" Z="638.8187" />					
+					<MoveTo X="-488.4386" Y="-136.1343" Z="638.8187" />					
 									
 					<!-- Profile message - Second pull complete -->
 					<CustomBehavior File="Message" 
@@ -216,7 +216,7 @@
 						<Hotspot X="-573.7297" Y="-175.6947" Z="623.9427" />
 						<Hotspot X="-551.79" Y="-207.7548" Z="628.9031" />
 					</CustomBehavior>
-					<RunTo X="-551.79" Y="-207.7548" Z="628.9031" />				
+					<MoveTo X="-551.79" Y="-207.7548" Z="628.9031" />				
 									
 					<!-- Profile message - Third pull complete -->
 					<CustomBehavior File="Message" 
@@ -238,7 +238,7 @@
 						<Hotspot X="-695.4821" Y="-20.34745" Z="635.6711" />
 						<Hotspot X="-685.1094" Y="4.219316" Z="635.6729" />
 					</CustomBehavior>
-					<RunTo X="-685.1094" Y="4.219316" Z="635.6729" />
+					<MoveTo X="-685.1094" Y="4.219316" Z="635.6729" />
 									
 					<!-- Profile message - Fifth pull complete -->
 					<CustomBehavior File="Message" 
@@ -269,16 +269,20 @@
 										LogColor="Plum" />
 					
 					<!-- Run to the slipstream -->
-					<RunTo X="-752.7068" Y="-29.53746" Z="639.926" />
-					<RunTo X="-769.088" Y="-55.73653" Z="639.926" />
+					<MoveTo X="-752.7068" Y="-29.53746" Z="639.926" />
+					<MoveTo X="-769.088" Y="-55.73653" Z="639.926" />
 									
 					<!-- Use the slipstream -->
 					<CustomBehavior File="MountVehOnly" 
 									VehicleMountId="45455" 
 									X="-768.213" Y="-53.6862" Z="639.926" />
 					
+					<!-- CustomBehavior - WaitTimer - 5 second delay-->
+					<CustomBehavior File="WaitTimer" 
+											WaitTime="5000" />
+					
 					<!-- Run to the dias once we land -->
-					<RunTo X="-925.2205" Y="-175.1197" Z="669.2666" />
+					<MoveTo X="-929.4961" Y="-168.1685" Z="669.2651" />
 									
 					<!-- Pull righthand staircase -->				
 					<CustomBehavior File="RunLikeHell" 
@@ -295,7 +299,7 @@
 						<Hotspot X="-987.6241" Y="-63.68237" Z="694.9169" />
 						<Hotspot X="-974.8712" Y="-64.82938" Z="694.9169" />
 					</CustomBehavior>
-					<RunTo X="-974.8712" Y="-64.82938" Z="694.9169" />				
+					<MoveTo X="-974.8712" Y="-64.82938" Z="694.9169" />				
 									
 					<!-- Profile message - Fifth pull complete -->
 					<CustomBehavior File="Message" 
@@ -314,7 +318,7 @@
 						<Hotspot X="-1044.783" Y="-132.8248" Z="694.9169" />
 						<Hotspot X="-1021.897" Y="-126.2177" Z="694.9169" />
 					</CustomBehavior>
-					<RunTo X="-1021.897" Y="-126.2177" Z="694.9169" />			
+					<MoveTo X="-1021.897" Y="-126.2177" Z="694.9169" />			
 									
 					<!-- Profile message - Seventh pull complete -->
 					<CustomBehavior File="Message" 
@@ -322,7 +326,7 @@
 										LogColor="Plum" />
 										
 					<!-- Run to the first Howling Gale -->				
-					<RunTo X="-1007.842" Y="-101.291" Z="694.9153" />
+					<MoveTo X="-1007.842" Y="-101.291" Z="694.9153" />
 					
 					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
@@ -333,7 +337,7 @@
 					<DisableBehavior Name="Combat" />
 					
 					<!-- Move to the first Howling Gale -->				
-					<RunTo X="-1039.558" Y="-69.81506" Z="700.4934" />				
+					<MoveTo X="-1039.558" Y="-69.81506" Z="700.4934" />				
 	
 					<!-- Target the Howling Gale -->
 					<CustomBehavior File="RunMacro" 
@@ -399,7 +403,7 @@
 						<Hotspot X="-1134.85" Y="29.5967" Z="704.7352" />
 						<Hotspot X="-1171.694" Y="47.29779" Z="707.6915" />
 					</CustomBehavior>
-					<RunTo X="-1171.694" Y="47.29779" Z="707.6915" />	
+					<MoveTo X="-1171.694" Y="47.29779" Z="707.6915" />	
 
 					<!-- Move to - Altairus -->
 					<MoveTo X="-1236.973" Y="72.48884" Z="734.1793" />
@@ -423,7 +427,7 @@
 									WaitTime="5000" />				
 
 					<!-- Move to - exit -->
-					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+					<MoveTo X="-337.627" Y="15.3073" Z="626.979" />
 		
 					<!-- Instance timer to ensure run takes a minimum of 12 minutes and 30 seconds to avoid instance locks -->
 					<CustomBehavior File="Misc\InstanceTimer" 
@@ -439,7 +443,7 @@
 									LogColor="Plum" />
 						
 					<!-- Make our way to the exit -->
-					<RunTo X="-337.627" Y="15.3073" Z="626.979" />
+					<MoveTo X="-337.627" Y="15.3073" Z="626.979" />
 					
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" 
@@ -450,7 +454,7 @@
 									WaitTime="15000" />
 					
 					<!-- Make sure we run to the right spot outside the potral -->
-					<RunTo X="-11513.3" Y="-2309.88" Z="608.393" />
+					<MoveTo X="-11513.3" Y="-2309.88" Z="608.393" />
 					
 				</If> <!-- Vortex Pinnacle -->
 				
@@ -553,7 +557,7 @@
 					<CustomBehavior File="ForcedDismount" />	
 					
 					<!-- Run to the instance box -->
-					<Runto X="-11513.3" Y="-2309.88" Z="608.393" />
+					<MoveTo X="-11513.3" Y="-2309.88" Z="608.393" />
 				
 				</If> <!-- If we aren't in the box -->		
 			</While> <!-- Infinite loop -->
