@@ -255,21 +255,44 @@
 					<CustomBehavior File="Message" Text="Position check One Keg in Kun-Lai Summit" LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="I am moving to the innkeep in One Keg." LogColor="Lime" />
-						<RunTo X="3102.521" Y="1235.528" Z="653.9722" />
+						<MoveTo X="3102.521" Y="1235.528" Z="653.9722" />
 					<CustomBehavior File="ForcedDismount" />	
 					<CustomBehavior File="MyCTM" X="3112.496" Y="1246.227" Z="656.03" />
-						<RunTo X="3112.496" Y="1246.227" Z="656.03" />
+						<MoveTo X="3112.496" Y="1246.227" Z="656.03" />
 					<CustomBehavior File="Message" Text="I have located the innkeep." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="SetHearthstone" MobId="59688" X="3115.131" Y="1248.965" Z="654.8175" />
 					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
-						<RunTo X="3112.496" Y="1246.227" Z="656.03" />
+						<MoveTo X="3112.496" Y="1246.227" Z="656.03" />
 					<CustomBehavior File="MyCTM" X="3102.521" Y="1235.528" Z="653.9722" />	
-					<CustomBehavior File="ForcedMount" MountType="Ground" />					
-						<RunTo X="2743.002" Y="743.3937" Z="541.7739" />						
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+
+					
+					
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
+					
+					<MoveTo X="3038.612" Y="617.6991" Z="508.9014" />
+					
+					<MoveTo X="2722.957" Y="738.6133" Z="542.4093" />	
+					
 					<CustomBehavior File="ForcedDismount" />
+					
+					<!-- CustomBehavior -  message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+					
 				</If>	
 								
 				<If Condition="Me.ZoneId == 5841" >
