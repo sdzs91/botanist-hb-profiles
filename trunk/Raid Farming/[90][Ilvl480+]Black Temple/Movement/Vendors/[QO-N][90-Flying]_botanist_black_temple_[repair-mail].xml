@@ -69,15 +69,39 @@
 				<!-- Profile message - Our durability is less than 30% or we have less than 35 empty bag slots remaining -->
 				<CustomBehavior File="Message" 
 								Text="Our durability is less than 30% or we have less than 35 empty bag slots remaining." 
-								LogColor="Fuchsia" />
+								LogColor="Chartreuse" />
 			
+				<!-- If we are inside Black Temple -->
+				<If Condition="Me.MapId == 564">
+				
+					<!-- The Black Temple detected. Running out -->
+					<CustomBehavior File="Message" 
+									Text="The Black Temple detected. Running out."
+									LogColor="Plum" />
+						
+					<!-- Move to - zone in location -->
+					<MoveTo X="97.7989" Y="1001.99" Z="-86.7756" />
+					
+					<!-- Custom behavior - Misc/InInstance - exit the instance-->
+					<CustomBehavior File="Misc\InInstance" 
+									X="80.51482" Y="1001.702" Z="-88.89784" />
+					
+					<!-- Wait timer - wait 15 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="15000" />
+					
+					<!-- Move to - zone out location -->
+					<MoveTo X="-3650.9" Y="316.897" Z="35.85276" />
+					
+				</If>	<!-- If we are inside Black Temple -->
+
 				<!-- If we are Alliance -->					
 				<If Condition="Me.IsAlliance">					
 							
 					<!-- Profile message - Flying to WildHammer -->
 					<CustomBehavior File="Message" 
 										Text="Flying to WildHammer." 
-										LogColor="Fuchsia" />
+										LogColor="Chartreuse" />
 							
 					<!-- Fly to the WildHammer hover point -->
 					<CustomBehavior File="FlyTo" 
@@ -139,7 +163,7 @@
 					<!-- Profile message - Flying to Bloodgulch -->
 					<CustomBehavior File="Message" 
 										Text="Flying to Bloodgulch." 
-										LogColor="Fuchsia" />
+										LogColor="Chartreuse" />
 							
 					<!-- Fly to the Bloodgulch hover point -->
 					<CustomBehavior File="FlyTo" 

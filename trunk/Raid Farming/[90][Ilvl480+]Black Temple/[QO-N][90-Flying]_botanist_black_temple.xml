@@ -285,44 +285,22 @@
 				<!-- If our current target is an Aqueous Lord -->
 				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 22878)">
 				
-					<!-- If we are a DeathKnight -->
-					<If Condition="(Me.Class == WoWClass.DeathKnight)">
-					
-						<!-- Profile message - We are a Death Knight. Casting Death Grip -->
-						<CustomBehavior File="Message" 
-											Text="We are a Death Knight. Casting Death Grip." 
-											LogColor="Gold" />
+					<!-- Custom behavior - TargetAndMoveToMob - Aqueous Lord -->
+					<CustomBehavior File="TargetAndMoveToMob"
+									MoveWithinMaxRangeOfMob="1"
+									TargetOnlyIfHealthPercentAbove="5"
+									WaitForNpcs="False"
+									MobId="22878" >
+					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 									
-						<!-- Custom behavior - Macro - /cast Death Grip -->					
-						<CustomBehavior File="RunMacro" 
-										Macro="/cast Death Grip" 
-										NumOfTimes="1" 
-										WaitTime="500"/>					
-										
-						<!-- Custom behavior waitTimer - 5 second delay -->
-						<CustomBehavior File="WaitTimer" 
-										WaitTime="5000" />				
-										
-					</If>	 <!-- If we are a DeathKnight -->
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
+					<!-- Custom behavior waitTimer - 3 second delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />				
+		
 				</If>	<!-- If our current target is an Aqueous Lord -->				
 
 				<!-- Move to - safe location -->		
-				<MoveTo X="438.1569" Y="789.0763" Z="12.02314" />
+				<MoveTo X="434.6562" Y="772.8652" Z="11.96425" />
 				
 				<!-- Macro - Clear target -->					
 				<CustomBehavior File="RunMacro" 
@@ -338,17 +316,9 @@
 				<!-- If our current target is High Warlord Naj'entus -->
 				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 22887)">
 				
-					<!-- Custom behavior - TargetAndMoveToMob - High Warlord Naj'entus -->
-					<CustomBehavior File="TargetAndMoveToMob"
-									MoveWithinMaxRangeOfMob="15"
-									TargetOnlyIfHealthPercentAbove="5"
-									WaitForNpcs="False"
-									MobId="22887" >
-					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
-				
 					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 								EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="22887"
-								EventX="434.943" EventY="739.2536" EventZ="14.98661"
+								EventX="434.943" EventY="739.2537" EventZ="14.98658"
 								MoveAwayFromMobCastingSpellId1="39872"
 								MoveAwayFromMobWithAuraId1="39872"
 								MoveOutOfGroundEffectAuraId1="39872" >
@@ -539,7 +509,7 @@
 
 					<!-- Custom behavior - TargetAndMoveToMob - Ashtongue Channeler -->
 					<CustomBehavior File="TargetAndMoveToMob"
-									MoveWithinMaxRangeOfMob="1"
+									MoveWithinMaxRangeOfMob="3"
 									TargetOnlyIfHealthPercentAbove="5"
 									WaitForNpcs="False"
 									MobId="23421" >
@@ -553,34 +523,10 @@
 										Text="Engaging a Ashtongue Channeler." 
 										LogColor="Cyan" />
 						
-						<!-- If we are a DeathKnight -->
-						<If Condition="(Me.Class == WoWClass.DeathKnight)">
-						
-							<!-- Custom behavior - Macro - /cast Necrotic Strike -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/cast Necrotic Strike" 
-											NumOfTimes="1" 
-											WaitTime="500"/>
-							
-							<!-- Custom behavior - Macro - /Icy Touch -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/Cast Icy Touch" 
-											NumOfTimes="1" 
-											WaitTime="500"/>
-												
-							<!-- Custom behavior - Macro - /Blood Strike -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/Cast Plague Strike" 
-											NumOfTimes="1" 
-											WaitTime="500"/>
-												
-							<!-- Custom behavior - Macro - /cast Blood Strike -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/Cast Blood Strike" 
-											NumOfTimes="1" 
-											WaitTime="500"/>					
-											
-						</If>	 <!-- If we are a DeathKnight -->					
+						<!-- CustomBehavior - RunMacro - Auto Attack -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="5"
+										Macro="/cast Auto Attack" />					
 
 						<Else>
 						
@@ -657,34 +603,10 @@
 										Text="Engaging a Ashtongue Sorcerer." 
 										LogColor="Cyan" />
 						
-						<!-- If we are a DeathKnight -->
-						<If Condition="(Me.Class == WoWClass.DeathKnight)">
-						
-							<!-- Custom behavior - Macro - /cast Necrotic Strike -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/cast Necrotic Strike" 
-											NumOfTimes="1" 
-											WaitTime="500"/>
-							
-							<!-- Custom behavior - Macro - /Icy Touch -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/Cast Icy Touch" 
-											NumOfTimes="1" 
-											WaitTime="500"/>
-												
-							<!-- Custom behavior - Macro - /Blood Strike -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/Cast Plague Strike" 
-											NumOfTimes="1" 
-											WaitTime="500"/>
-												
-							<!-- Custom behavior - Macro - /cast Blood Strike -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/Cast Blood Strike" 
-											NumOfTimes="1" 
-											WaitTime="500"/>					
-											
-						</If>	 <!-- If we are a DeathKnight -->
+						<!-- CustomBehavior - RunMacro - Auto Attack -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="5"
+										Macro="/cast Auto Attack" />
 
 						<Else>
 						
@@ -786,34 +708,10 @@
 										Text="Engaging Shade of Akama." 
 										LogColor="Cyan" />
 						
-						<!-- If we are a DeathKnight -->
-						<If Condition="(Me.Class == WoWClass.DeathKnight)">
-						
-							<!-- Custom behavior - Macro - /cast Necrotic Strike -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/cast Necrotic Strike" 
-											NumOfTimes="1" 
-											WaitTime="500"/>
-							
-							<!-- Custom behavior - Macro - /Icy Touch -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/Cast Icy Touch" 
-											NumOfTimes="1" 
-											WaitTime="500"/>
-												
-							<!-- Custom behavior - Macro - /Blood Strike -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/Cast Plague Strike" 
-											NumOfTimes="1" 
-											WaitTime="500"/>
-												
-							<!-- Custom behavior - Macro - /cast Blood Strike -->					
-							<CustomBehavior File="RunMacro" 
-											Macro="/Cast Blood Strike" 
-											NumOfTimes="1" 
-											WaitTime="500"/>					
-											
-						</If>	 <!-- If we are a DeathKnight -->			
+						<!-- CustomBehavior - RunMacro - Auto Attack -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="5"
+										Macro="/cast Auto Attack" />			
 									
 						<Else>
 						
@@ -879,40 +777,17 @@
 								
 				<!-- If our target is Tenon Gorefiend -->
 				<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 22871)">				
-								
-					<!-- Profile message  - Engaging Tenon Gorefiend -->	
-					<CustomBehavior File="Message" 
-									Text="Engaging Tenon Gorefiend." 
-									LogColor="Cyan" />
-					
-					<!-- If we are a DeathKnight -->
-					<If Condition="(Me.Class == WoWClass.DeathKnight)">
-					
-						<!-- Custom behavior - Macro - /cast Necrotic Strike -->					
-						<CustomBehavior File="RunMacro" 
-										Macro="/cast Necrotic Strike" 
-										NumOfTimes="1" 
-										WaitTime="500"/>
-						
-						<!-- Custom behavior - Macro - /Icy Touch -->					
-						<CustomBehavior File="RunMacro" 
-										Macro="/Cast Icy Touch" 
-										NumOfTimes="1" 
-										WaitTime="500"/>
-											
-						<!-- Custom behavior - Macro - /Blood Strike -->					
-						<CustomBehavior File="RunMacro" 
-										Macro="/Cast Plague Strike" 
-										NumOfTimes="1" 
-										WaitTime="500"/>
-											
-						<!-- Custom behavior - Macro - /cast Blood Strike -->					
-						<CustomBehavior File="RunMacro" 
-										Macro="/Cast Blood Strike" 
-										NumOfTimes="1" 
-										WaitTime="500"/>					
-										
-					</If>	 <!-- If we are a DeathKnight -->			
+
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+								EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="22871"
+								EventX="606.6405" EventY="402.1733" EventZ="187.0896"
+								MoveAwayFromMobCastingSpellId1="39872"
+								MoveAwayFromMobWithAuraId1="39872"
+								MoveOutOfGroundEffectAuraId1="39872" >
+							<Safespots>
+								<Hotspot X="606.6405" Y="402.1733" Z="187.0896" />
+							</Safespots>
+					</CustomBehavior>			
 								
 					<Else>
 					
@@ -1127,14 +1002,13 @@
 				<!-- Move to - safe ranged attack -->		
 				<MoveTo X="709.156" Y="273.4322" Z="277.4417" />
 						
-
 				<!-- Macro - Clear target -->					
 				<CustomBehavior File="RunMacro" 
 								Macro="/cleartarget" 
 								NumOfTimes="1" 
 								WaitTime="0"/>
 
-				<!-- Custom behavior - Runmacro - target Gathios the Shatterer-->	
+				<!-- Custom behavior - Runmacro - target Gathios the Shatterer -->	
 				<CustomBehavior File="RunMacro" 
 								Macro="/target Gathios the Shatterer" />				
 	
@@ -1146,9 +1020,16 @@
 									Text="Engaging Gathios the Shatterer." 
 									LogColor="Cyan" />
 					
-					<CustomBehavior File="KillUntilComplete" 
-									MobId="22949" 
-									X="700.7393" Y="302.7222" Z="277.4431" />	
+					<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+								EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="22949"
+								EventX="704.5431" EventY="304.8978" EventZ="277.4431"
+								MoveAwayFromMobCastingSpellId1="111111"
+								MoveAwayFromMobWithAuraId1="111111"
+								MoveOutOfGroundEffectAuraId1="111111" >
+							<Safespots>
+								<Hotspot X="704.5431" Y="304.8978" Z="277.4431" />
+							</Safespots>
+					</CustomBehavior>
 								
 					<Else>
 					
@@ -1188,6 +1069,9 @@
 								Text="Moving to Akama." 
 								LogColor="Plum" />
 
+				<!-- Move to - Akama -->
+				<MoveTo X="660.7646" Y="305.7663" Z="271.6883" />				
+
 				<CustomBehavior File="InteractWith" 
 								ObjectType="Npc"
 								MobId="23089" 
@@ -1199,7 +1083,7 @@
 				<!-- ************************************************************* -->
 				 
 				
-				<!-- Move to -top of the ramp-->				
+				<!-- Move to - top of the ramp -->				
 				<MoveTo X="754.4705" Y="304.6359" Z="312.1339"  />
 				
 				<!-- Profile message - Waiting 80 seconds for Akama -->
@@ -1244,9 +1128,9 @@
 				<!-- Move to - Illidan Stormrage -->
 				<MoveTo X="705.7319" Y="304.9877" Z="353.8415" />
 				
-				<!-- Custom behavior waitTimer - 120 second delay -->
+				<!-- Custom behavior waitTimer - 5 minute delay -->
 				<CustomBehavior File="WaitTimer" 
-								WaitTime="1200000" />
+								WaitTime="300000" />
 
 				<!-- Profile message - Disabling 'Pull' behavior -->
 				<CustomBehavior File="Message" 
