@@ -123,7 +123,7 @@
 				<!-- Profile message - Setting our Hearthstone with the innkeep-->
 				<CustomBehavior File="Message" 
 								Text="Setting our Hearthstone with the innkeep." 
-								LogColor="Fuchsia" />
+								LogColor="Chartreuse" />
 
 				<!-- Custom behavior - SetHearthstone -->				
 				<CustomBehavior File="SetHearthstone" 
@@ -133,7 +133,7 @@
 				<!-- Profile message - I have set our Hearthstone -->				
 				<CustomBehavior File="Message" 
 								Text="I have set our Hearthstone." 
-								LogColor="Fuchsia" />
+								LogColor="Chartreuse" />
 
 				<!-- Move to - exit the inn -->
 				<MoveTo X="2280.737" Y="-5319.798" Z="88.75224" />
@@ -144,7 +144,7 @@
 					<!-- Profile message - Checking our bag space and gear durability -->
 					<CustomBehavior File="Message" 
 									Text="Checking our bag space and gear durability." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Wait timer - wait 1 second - delay -->
 					<CustomBehavior File="WaitTimer" 
@@ -153,11 +153,11 @@
 					<!-- Profile message - Checking our bag space and gear durability -->
 					<CustomBehavior File="Message" 
 									Text="I have detected that we have less than 20 empty bag slots or that our gear is about to break. I'm going to repair and mail." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Profile message - Moving to repair and mail -->
 					<CustomBehavior File="Message" Text="Moving to repair and mail." 
-									LogColor="Fuchsia" />	
+									LogColor="Chartreuse" />	
 					
 					<SetVendor>
 						<Vendors>
@@ -192,7 +192,7 @@
 					<!-- Profile message - We have more than 20 empty slots and our gear is above 30 percent durability -->
 					<CustomBehavior File="Message" 
 									Text="We have more than 20 empty slots and our gear is above 30 percent durability." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Wait timer - wait 1 second - delay -->
 					<CustomBehavior File="WaitTimer" 
@@ -205,7 +205,7 @@
 					<!-- Profile message - Flying to the East Gate Service Entrance -->		
 					<CustomBehavior File="Message" 
 									Text="Flying to the East Gate Service Entrance." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Fly to - East Gate Service Entrance -->
 					<CustomBehavior File="FlyTo" 
@@ -214,7 +214,7 @@
 					<!-- Profile message - We have reached the East Gate Service Entrance -->	
 					<CustomBehavior File="Message" 
 									Text="We have reached the East Gate Service Entrance." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Custom behavior - ForcedDismount -->
 					<CustomBehavior File="ForcedDismount" />
@@ -222,7 +222,7 @@
 					<!-- Profile message - Opening the gate -->
 					<CustomBehavior File="Message" 
 									Text="Opening the gate." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Move to - East Gate Service Entrance gate -->
 					<MoveTo X="3182.442" Y="-4039.105" Z="107.3712" />
@@ -276,7 +276,7 @@
 							<!-- Profile message - Checking our bag space and gear durability -->
 							<CustomBehavior File="Message" 
 											Text="Checking our bag space and gear durability." 
-											LogColor="Fuchsia" />
+											LogColor="Chartreuse" />
 							
 							<!-- Wait timer - wait 1 second - delay -->
 							<CustomBehavior File="WaitTimer" 
@@ -285,11 +285,11 @@
 							<!-- Profile message - Checking our bag space and gear durability -->
 							<CustomBehavior File="Message" 
 											Text="I have detected that we have less than 20 empty bag slots or that our gear is about to break. I'm going to repair and mail." 
-											LogColor="Fuchsia" />
+											LogColor="Chartreuse" />
 							
 							<!-- Profile message - Moving to repair and mail -->
 							<CustomBehavior File="Message" Text="Moving to repair and mail." 
-											LogColor="Fuchsia" />	
+											LogColor="Chartreuse" />	
 							
 							<!-- Fly to - Light's Hope Chapel -->
 							<CustomBehavior File="FlyTo" 
@@ -335,7 +335,7 @@
 							<!-- Profile message - We have more than 20 empty slots and our gear is above 30 percent durability -->
 							<CustomBehavior File="Message" 
 											Text="We have more than 20 empty slots and our gear is above 30 percent durability." 
-											LogColor="Fuchsia" />
+											LogColor="Chartreuse" />
 							
 							<!-- Wait timer - wait 1 second - delay -->
 							<CustomBehavior File="WaitTimer" 
@@ -344,7 +344,7 @@
 							<!-- Profile message - Flying to the East Gate Service Entrance -->		
 							<CustomBehavior File="Message" 
 											Text="Flying to the East Gate Service Entrance." 
-											LogColor="Fuchsia" />
+											LogColor="Chartreuse" />
 							
 							<!-- Fly to - East Gate Service Entrance -->
 							<CustomBehavior File="FlyTo" 
@@ -353,7 +353,7 @@
 							<!-- Profile message - We have reached the East Gate Service Entrance -->	
 							<CustomBehavior File="Message" 
 											Text="We have reached the East Gate Service Entrance." 
-											LogColor="Fuchsia" />
+											LogColor="Chartreuse" />
 							
 							<!-- Custom behavior - ForcedDismount -->
 							<CustomBehavior File="ForcedDismount" />
@@ -361,7 +361,7 @@
 							<!-- Profile message - Opening the gate -->
 							<CustomBehavior File="Message" 
 											Text="Opening the gate." 
-											LogColor="Fuchsia" />
+											LogColor="Chartreuse" />
 							
 							<!-- Move to - East Gate Service Entrance gate -->
 							<MoveTo X="3182.442" Y="-4039.105" Z="107.3712" />
@@ -459,24 +459,9 @@
 								Text="Deleting unwanted items from our bags." 
 								LogColor="Orange" />
 								
-				<!-- Delete these items -->				
-				<CustomBehavior File="DeleteItems" 
-								Ids="8766" />	<!-- Morning Glory Dew -->
-								
-				<CustomBehavior File="DeleteItems" 
-								Ids="13444" />	<!-- Major Mana Potion -->
-														
-				<CustomBehavior File="DeleteItems" 
-								Ids="11737" />	<!-- Libram of Voracity -->	
-
-				<CustomBehavior File="DeleteItems" 
-								Ids="11736" />	<!-- Libram of Resilience -->
-
-				<CustomBehavior File="DeleteItems" 
-								Ids="8952" />	<!-- Roasted Quail -->	
-
-				<CustomBehavior File="DeleteItems" 
-								Ids="13443" />	<!-- Superior Mana Potion -->				
+				<!-- Custom behavior - DeleteItems -->				
+				<CustomBehavior File="DeleteItems"
+								Ids="3927,1645,3928,6149,7972,10285" />				
 								
 				<!-- Instance timer -->
 				<CustomBehavior File="Misc\InstanceTimer" 
@@ -487,7 +472,7 @@
 								Macro="/script SetCVar('AutoLootDefault', 1)"  
 								WaitTime="1000" />
 				
-				<!-- Profile message - Hellfire Ramparts initialized -->
+				<!-- Profile message - Stratholme initialized -->
 				<CustomBehavior File="Message" 
 								Text="Stratholme initialized."  
 								LogColor="Plum" />				
@@ -515,7 +500,7 @@
 				<!-- Profile message - Disabling combat -->
 				<CustomBehavior File="Message" 
 									Text="Disabling combat." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 
 				<!-- Disable combat -->
 				<DisableBehavior Name="Combat" />				
@@ -1084,7 +1069,7 @@
 					<!-- Profile message - We looted Deathcharger's Reins -->
 					<CustomBehavior File="Message" 
 									Text="We looted Deathcharger's Reins." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Wait timer - wait 1 second - delay -->
 					<CustomBehavior File="WaitTimer" 
@@ -1093,7 +1078,7 @@
 					<!-- Profile message - Equipping Deathcharger's Reins -->
 					<CustomBehavior File="Message" 
 									Text="Equipping Deathcharger's Reins." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Custom behavior - RunLua - Equip Deathcharger's -->
 					<CustomBehavior File="Misc\RunLua" 
@@ -1103,7 +1088,7 @@
 					<!-- Profile message - Congrats on your mount -->
 					<CustomBehavior File="Message" 
 									Text="Congrats on your mount." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Wait timer - wait 3 second - delay -->
 					<CustomBehavior File="WaitTimer" 
@@ -1112,7 +1097,7 @@
 					<!-- Profile message - Stopping the bot -->
 					<CustomBehavior File="Message" 
 									Text="Stopping the bot." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Custom behavior - UserSettings - StopBot -->
 					<CustomBehavior File="UserSettings" 
@@ -1122,13 +1107,13 @@
 					<Else>
 					
 						<!-- Profile message - Deathcharger's Reins didn't drop -->
-						<CustomBehavior File="Message" Text="Deathcharger's Reins didn't drop." LogColor="Fuchsia" />
+						<CustomBehavior File="Message" Text="Deathcharger's Reins didn't drop." LogColor="Chartreuse" />
 				
 						<!-- Wait timer - wait 1 second - delay -->
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						
 						<!-- Profile message - Checking our gears durability -->
-						<CustomBehavior File="Message" Text="Checking our gears durability." LogColor="Fuchsia" />
+						<CustomBehavior File="Message" Text="Checking our gears durability." LogColor="Chartreuse" />
 						
 						<!-- If our bags have less than 20 empty slots or our durability < 30 % -->
 						<If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.3)" >
@@ -1137,7 +1122,7 @@
 							<CustomBehavior File="WaitTimer" WaitTime="1000" />
 							
 							<!-- Profile message - I have detected that our gear is about to break. I'm going to hearth, and repair -->
-							<CustomBehavior File="Message" Text="I have detected that our gear is about to break. I'm going to hearth, and repair." LogColor="Fuchsia" />
+							<CustomBehavior File="Message" Text="I have detected that our gear is about to break. I'm going to hearth, and repair." LogColor="Chartreuse" />
 							
 							<!-- Have hearthstone -->
 							<If Condition="HasItem(6948)">
@@ -1171,7 +1156,7 @@
 							<If Condition="Me.MapId != 329">
 							
 								<!-- Profile message - We successfully hearthed, moving to the repair vendor -->
-								<CustomBehavior File="Message" Text="We successfully hearthed, moving to the repair vendor." LogColor="Fuchsia" />		
+								<CustomBehavior File="Message" Text="We successfully hearthed, moving to the repair vendor." LogColor="Chartreuse" />		
 								
 								<SetVendor>
 									<Vendors>
@@ -1201,7 +1186,7 @@
 							<If Condition="Me.MapId == 329">
 								
 								<!-- Profile message -Our Hearthstone didn't work. Exiting the instance -->
-								<CustomBehavior File="Message" Text="Our Hearthstone didn't work. Exiting the instance." LogColor="Fuchsia" />
+								<CustomBehavior File="Message" Text="Our Hearthstone didn't work. Exiting the instance." LogColor="Chartreuse" />
 								
 								<!-- Move to - 1st gate -->
 								<MoveTo X="3627.206" Y="-3640.699" Z="138.4589" />
@@ -1213,7 +1198,7 @@
 								<!-- Profile message - Opening the gate -->
 								<CustomBehavior File="Message" 
 												Text="Opening the gate." 
-												LogColor="Fuchsia" />
+												LogColor="Chartreuse" />
 								
 								<!-- Custom behavior - InteractWith - open the gate -->	
 								<CustomBehavior File="InteractWith" 
@@ -1241,7 +1226,7 @@
 								<!-- Profile message - I have exited the dungeon -->
 								<CustomBehavior File="Message" 
 												Text="I have exited the dungeon." 
-												LogColor="Fuchsia" />
+												LogColor="Chartreuse" />
 												
 								<!-- Move to - East Gate Service Entrance gate -->
 								<MoveTo X="3189.636" Y="-4039.492" Z="107.9911" />
@@ -1306,7 +1291,7 @@
 								<!-- Profile message - I have detected that our gear is above 30 percent durability -->
 								<CustomBehavior File="Message" 
 												Text="I have detected that our gear is above 30 percent durability." 
-												LogColor="Fuchsia" />
+												LogColor="Chartreuse" />
 				
 								<!-- Wait timer - wait 1 second - delay -->
 								<CustomBehavior File="WaitTimer" 
@@ -1315,7 +1300,7 @@
 								<!-- Profile message - Exiting the dungeon -->
 								<CustomBehavior File="Message" 
 												Text="Exiting the dungeon." 
-												LogColor="Fuchsia" />
+												LogColor="Chartreuse" />
 							
 								<!-- Move to - Slaughter Square  -->	
 								<CustomBehavior File="NoCombatMoveTo" 
@@ -1340,7 +1325,7 @@
 								<!-- Profile message - Opening the gate -->
 								<CustomBehavior File="Message" 
 												Text="Opening the gate." 
-												LogColor="Fuchsia" />
+												LogColor="Chartreuse" />
 				
 								<!-- Custom behavior - InteractWith - open the gate -->
 								<CustomBehavior File="InteractWith" 
