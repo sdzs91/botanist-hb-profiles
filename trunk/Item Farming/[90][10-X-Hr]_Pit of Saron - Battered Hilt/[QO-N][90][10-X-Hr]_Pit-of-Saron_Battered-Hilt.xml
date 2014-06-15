@@ -365,6 +365,12 @@
 					<!-- Move to - Deathwhisper Torturer  -->
 					<MoveTo X="594.4445" Y="273.5695" Z="506.1756" />
 					
+					<!-- Move to - Deathwhisper Torturer  -->
+					<MoveTo X="626.2118" Y="112.3264" Z="509.9253" />
+					
+					<!-- Move to - Deathwhisper Necrolyte  -->
+					<MoveTo X="625.6506" Y="168.9163" Z="507.509" />
+
 					<!-- Move to - Wrathbone Laborer  -->
 					<MoveTo X="629.1441" Y="332.3004" Z="511.8988" />
 					
@@ -487,11 +493,14 @@
 					<!-- Move to - middle of the path -->
 					<MoveTo X="619.5768" Y="17.00592" Z="513.6304" />
 					
-					<!-- Move to - middle of the path - turn right to tag the Wrathbone Laborer -->
-					<MoveTo X="636.5443" Y="-23.10391" Z="513.7417" />
+					<!-- Move to - middle of the path - tag the Wrathbone Laborer -->
+					<MoveTo X="625.6924" Y="-17.32556" Z="513.7401" />
 
-					<!-- Move to - middle of the path -->
-					<MoveTo X="619.5768" Y="17.00592" Z="513.6304" />
+					<!-- Move to - middle of the path - stairs -->
+					<MoveTo X="682.0004" Y="-103.4872" Z="513.7372" />
+
+					<!-- Move to - Wrathbone Laborer -->
+					<MoveTo X="645.7587" Y="-119.1181" Z="513.5259" />
 
 					<!-- CustomBehavior -  message - Enabling combat -->
 					<CustomBehavior File="Message" 
@@ -518,7 +527,7 @@
 					<!-- CustomBehavior - Misc\InstanceTimer - 6 minutes and 40 seconds -->
 					<CustomBehavior File="Misc\InstanceTimer" 
 									Timer="Check" 
-									WaitTime="400000" />
+									WaitTime="5000" />
 
 					<!-- If we don't have Savory Snowplum -->
 					<If Condition="!HasItem(35948)">

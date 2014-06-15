@@ -68,14 +68,14 @@
 		<If Condition="Me.Level &gt;= 85">
 			
 			<!-- If we are inside Forge of Souls or Pit of Saron -->
-			<If Condition="Me.MapId == 632 || Me.MapId == 658">	
+			<If Condition="Me.MapId == 658">	
 				
 				<!-- If our hearthstone is set to Nesingwary Base Camp -->
 				<If Condition="Me.HearthstoneAreaId == 4284">
 				
-					<!-- Profile message - We are in Forge of Souls or Pit of Saron -->
+					<!-- Profile message - We are in Pit of Saron -->
 					<CustomBehavior File="Message" 
-									Text="We are in Forge of Souls or Pit of Saron" 
+									Text="We are in Pit of Saron" 
 									LogColor="Cyan" />
 								
 					<!-- If we have a Hearthstone -->
@@ -130,9 +130,6 @@
 				<CustomBehavior File="Misc\InInstance"
 								X="421.0371" Y="212.262" Z="529.8098" /> 
 				
-				<!-- Move to - zone out location -->
-				<MoveTo X="5667.65" Y="2007.45" Z="798.041" />
-
 				<!-- Move to - safe mounting location -->
 				<MoveTo X="5607.845" Y="2028.193" Z="798.0425" />
 				<MoveTo X="5614.709" Y="2035.648" Z="798.0425" />
@@ -171,58 +168,6 @@
 								X="5721.773" Y="3977.292" Z="-51.11684" />				
 								
 			</If>	<!-- If we are inside Pit of Saron -->
-
-			<!-- If we are inside Forge of Souls -->
-			<If Condition="Me.MapId == 632">	
-
-				<!-- Move to - zone in location -->
-				<MoveTo X="4921.31" Y="2177.36" Z="638.733" />
-
-				<!-- Custom behavior - Misc/InInstance - exit the instance-->
-				<CustomBehavior File="Misc\InInstance" 
-								X="4926.322" Y="2166.706" Z="638.733" />
-				
-				<!-- Move to - zone out location -->
-				<MoveTo X="5667.65" Y="2007.45" Z="798.041" />
-
-				<!-- Move to - safe mounting location -->
-				<MoveTo X="5607.845" Y="2028.193" Z="798.0425" />
-				<MoveTo X="5614.709" Y="2035.648" Z="798.0425" />
-				<MoveTo X="5626.423" Y="2046.705" Z="798.0425" />
-				<MoveTo X="5635.56" Y="2059.689" Z="798.0532" />
-				<MoveTo X="5638.2" Y="2075.524" Z="798.0557" />
-				<MoveTo X="5639.41" Y="2091.568" Z="798.0557" />
-				<MoveTo X="5650.82" Y="2100.726" Z="798.0557" />
-				<MoveTo X="5666.634" Y="2097.846" Z="798.0557" />
-				<MoveTo X="5682.542" Y="2097.554" Z="798.0557" />
-				<MoveTo X="5690.303" Y="2110.782" Z="798.0557" />
-				<MoveTo X="5691.236" Y="2126.847" Z="798.0557" />
-				<MoveTo X="5692.303" Y="2142.946" Z="798.0655" />
-				<MoveTo X="5693.214" Y="2158.808" Z="798.1254" />
-				<MoveTo X="5693.699" Y="2168.448" Z="798.1254" />
-
-				<!-- CustomBehavior ForcedMount - Flying -->
-			   <CustomBehavior File="ForcedMount"
-							   QuestId="14069"
-							   MountType="Flying" />				
-								
-				<!-- CustomBehavior - FlyTo - avoid entering the Frozen Throne -->
-				<CustomBehavior File="FlyTo" 
-								X="5694.623" Y="2212.47" Z="815.1514" />
-						
-				<!-- Move to - avoid entering the Frozen Throne -->
-				<CustomBehavior File="MyCTM"
-								X="5612.389" Y="2610.774" Z="848.3267" />
-				
-				<!-- Move to - avoid flying to the ocean -->
-				<CustomBehavior File="MyCTM"
-								X="5778.345" Y="3172.62" Z="806.609" />
-								
-				<!-- Move to - avoid flying to the ocean -->
-				<CustomBehavior File="MyCTM"
-								X="5721.773" Y="3977.292" Z="-51.11684" />
-								
-			</If>	<!-- If we are inside Forge of Souls -->
 
 			<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 			<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
