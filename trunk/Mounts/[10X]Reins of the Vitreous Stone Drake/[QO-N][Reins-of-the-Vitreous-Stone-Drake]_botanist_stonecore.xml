@@ -329,7 +329,76 @@
 				<CustomBehavior File="WaitTimer" 
 								WaitTime="3000" />
 				
+				<!-- @@@@@@@@@@@@@@@@@@@@ 5th pull @@@@@@@@@@@@@@@@@@@@ -->
 				
+				<!-- Move to - cave exit -->
+				<MoveTo X="1186.836" Y="1108.739" Z="263.211" />
+				
+				<!-- While Me.X &lt; 1240 -->
+				<While Condition="Me.X &lt; 1240" >
+				
+					<!-- Macro - Clear target -->					
+					<CustomBehavior File="RunMacro" 
+									Macro="/cleartarget" 
+									NumOfTimes="1" 
+									WaitTime="0"/>
+					
+					<!-- Custom behavior waitTimer - 1 second delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="1000" />				
+									
+					<!-- Custom behavior - Runmacro - target Rock Borer -->	
+					<CustomBehavior File="RunMacro" 
+									Macro="/target Rock Borer" />				
+									
+					<!-- If our target does exist and is above 5& health and is a rock borer -->				
+					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.HealthPercent > 5) &amp;&amp; (Me.CurrentTarget.Entry == 42845)" >				
+									
+						<!-- Profile message - Engaging a Rock Borer -->
+						<CustomBehavior File="Message" 
+										Text="Engaging a Venom Belcher." 
+										LogColor="Plum" />			
+									
+						<!-- Custom behavior - TargetAndMoveToMob - Rock Borer -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="1"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="42845" >
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+				
+						<!-- Custom behavior waitTimer - 1 second delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="1000" />
+										
+						<!-- CustomBehavior - RunMacro - Auto Attack -->
+						<CustomBehavior File="RunMacro"
+										NumOfTimes="5"
+										Macro="/cast Auto Attack" />				
+						
+						<!-- Else our target does not exist or is above 5% health or is not a rock borer -->
+						<Else>
+					
+							<!-- Profile message - There are no Rock Borers available, moving to Slabhide to break the while loop -->
+							<CustomBehavior File="Message" 
+											Text="There are no Rock Borers available, moving to Slabhide to break the while loop." 
+											LogColor="Plum" />
+						
+							<!-- Move to - pre-Slabhide to break the while loop  -->	
+							<MoveTo X="1244.63" Y="1199.083" Z="247.5745" />
+						
+							<!-- Custom behavior waitTimer - 1 second delay -->
+							<CustomBehavior File="WaitTimer" 
+											WaitTime="1000" />
+
+					
+						</Else>		<!-- Else our target does not exist or is above 5% health or is not a rock borer -->
+				
+					</If>	<!-- If our target exist and is above 5& health and is a rock borer -->
+					
+				</While>	<!-- While Me.X &lt; 1240 -->
+				
+
 				<!-- @@@@@@@@@@@@@@@@@@@@ 5th pull @@@@@@@@@@@@@@@@@@@@ -->
 				
 				
