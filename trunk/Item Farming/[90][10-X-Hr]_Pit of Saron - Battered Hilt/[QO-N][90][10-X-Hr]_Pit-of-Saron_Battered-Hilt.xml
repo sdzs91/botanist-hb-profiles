@@ -365,6 +365,12 @@
 					<!-- Move to - Deathwhisper Torturer  -->
 					<MoveTo X="594.4445" Y="273.5695" Z="506.1756" />
 					
+					<!-- Move to - Deathwhisper Torturer  -->
+					<MoveTo X="629.1441" Y="332.3004" Z="511.8988" />
+					
+					<!-- Move to - Deathwhisper Necrolyte  -->
+					<MoveTo X="559.6146" Y="143.4896" Z="516.1251" />
+
 					<!-- Move to - Wrathbone Laborer  -->
 					<MoveTo X="629.1441" Y="332.3004" Z="511.8988" />
 					
@@ -407,12 +413,6 @@
 					
 					<!-- Move to - Deathwhisper Torturer  -->
 					<MoveTo X="618.8143" Y="211.2049" Z="507.2203" />
-					
-					<!-- Move to - Deathwhisper Torturer  -->
-					<MoveTo X="629.1441" Y="332.3004" Z="511.8988" />
-					
-					<!-- Move to - Deathwhisper Necrolyte  -->
-					<MoveTo X="559.6146" Y="143.4896" Z="516.1251" />
 
 					<!-- Move to - Wrathbone Laborer -->
 					<MoveTo X="552.8108" Y="72.85243" Z="525.5356" />
