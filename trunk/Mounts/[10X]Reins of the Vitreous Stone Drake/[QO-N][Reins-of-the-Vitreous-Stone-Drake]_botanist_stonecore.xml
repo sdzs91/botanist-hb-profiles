@@ -316,8 +316,15 @@
 				<!-- Move to - cave exit -->
 				<MoveTo X="1184.762" Y="1109.033" Z="262.7692" />
 
+				<!-- Move to - center front before Slabhide -->
+				<MoveTo X="1252.241" Y="1208.271" Z="247.1515" />
+				
 				<!-- Move to - right side before Slabhide -->
-				<MoveTo X="1265.782" Y="1189.95" Z="247.9385" />
+				<MoveTo X="1288.944" Y="1185.156" Z="248.1451" />
+				
+				<!-- Wait timer - wait 5 seconds - delay -->
+				<CustomBehavior File="WaitTimer" 
+								WaitTime="5000" />
 				
 				<!-- Profile message - Enabling combat -->
 				<CustomBehavior File="Message" 
