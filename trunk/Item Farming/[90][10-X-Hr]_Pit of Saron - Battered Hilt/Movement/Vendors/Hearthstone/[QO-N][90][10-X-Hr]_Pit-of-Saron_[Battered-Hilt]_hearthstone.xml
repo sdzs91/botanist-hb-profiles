@@ -115,9 +115,9 @@
 					<CustomBehavior File="UserSettings"
 									UseMount="True" />
 					
-					<!--  CustomBehavior - LoadProfile - [QO-N][85][10-X-Hr][Forge-of-Souls]_botanist -->				
+					<!--  CustomBehavior - LoadProfile - [QO-N][90][10-X-Hr]_Pit-of-Saron_Battered-Hilt -->				
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="..\..\..\[QO-N][85][10-X-Hr][Forge-of-Souls]_botanist" />
+									ProfileName="..\..\..\[QO-N][90][10-X-Hr]_Pit-of-Saron_Battered-Hilt" />
 
 				</Else>	<!-- Else our hearthstone is not set at Golshire-->
 

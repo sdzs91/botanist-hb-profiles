@@ -266,9 +266,9 @@
 												Text="We have over 1000 gold in our bags."
 												LogColor="Gold" />
 								
-								<!-- Load profile - [QO-N]][mobile-banking]_botanist -->
+								<!-- Load profile - [QO-N][90][10-X-Hr]_Pit-of-Saron_[Battered-Hilt]_mobile-banking -->
 								<CustomBehavior File="LoadProfile" 
-												ProfileName="Movement\Vendors\MobileBanking\[QO-N]][mobile-banking]_botanist" />
+												ProfileName="Movement\Vendors\MobileBanking\[QO-N][90][10-X-Hr]_Pit-of-Saron_[Battered-Hilt]_mobile-banking" />
 												
 								<!-- Else we have < 1000 gold -->				
 								<Else>
