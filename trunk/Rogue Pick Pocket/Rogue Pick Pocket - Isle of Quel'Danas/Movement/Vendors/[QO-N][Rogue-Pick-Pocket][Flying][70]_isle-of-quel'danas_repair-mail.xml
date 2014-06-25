@@ -26,7 +26,7 @@
 	<QuestOrder>
 	
 		<!-- While our level is >= 80 and < 100 -->
-		<While Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 100" >
+		<While Condition="Me.Level &gt;= 70 &amp;&amp; Me.Level &lt; 100" >
 				
 			<!-- Profile message - Repair\Mail procedures initialized -->
 			<CustomBehavior File="Message" 
