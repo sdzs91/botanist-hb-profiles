@@ -43,7 +43,7 @@
 							KillBetweenHotspots="True"
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
-							LootMobs="True"
+							LootMobs="False"
 							LootRadius="25"
 							MountName=""
 							NinjaSkin="False"
