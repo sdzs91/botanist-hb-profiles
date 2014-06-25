@@ -91,8 +91,8 @@
 			<!-- Custom behavior - ForcedDismount -->	
 			<CustomBehavior File="ForcedDismount" />
 
-		<!-- While our level is >= 80 and < 100 -->
-		<While Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 100" >	
+		<!-- While our level is >= 70 and < 100 -->
+		<While Condition="Me.Level &gt;= 70 &amp;&amp; Me.Level &lt; 100" >	
 			
 			<!-- If our empty bag slots is > 4 and our lowest durability is > 30% -->
 			<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
