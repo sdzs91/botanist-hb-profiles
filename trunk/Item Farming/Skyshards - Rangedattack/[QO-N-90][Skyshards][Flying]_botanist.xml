@@ -137,11 +137,7 @@
 				<CustomBehavior File="Message" 
 								Text="Disabling mount use." 
 								LogColor="Plum" />
-				
-				<!-- Wait timer - wait 1 seconds - delay -->
-				<CustomBehavior File="WaitTimer" 
-								WaitTime="1000" />
-				
+
 				<!-- UserSettings -->
 				<CustomBehavior File="UserSettings"
 								UseMount="False" />	
