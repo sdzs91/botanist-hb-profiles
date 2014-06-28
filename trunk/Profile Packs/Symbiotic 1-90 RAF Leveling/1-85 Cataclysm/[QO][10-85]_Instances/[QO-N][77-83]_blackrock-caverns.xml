@@ -18,9 +18,7 @@
 	<SellGreen>False</SellGreen>
 	<SellBlue>False</SellBlue>
 	<SellPurple>False</SellPurple>
-   
-	<TargetElites>True</TargetElites>
-	
+
 	<AvoidMobs>		
 		<Mob Name="Summon Enabler Stalker" Entry="53488" />
 		<Mob Name="Karsh Steelbender" Entry="39698" />
@@ -72,18 +70,21 @@
 			<While Condition="true" >	
 				<!-- Blackrock Caverns -->
 				<If Condition="Me.ZoneId == 4926">
+				
 					<CustomBehavior File="Message" 
 									Text="Blackrock Caverns detected. Running out."
 									LogColor="Fuchsia" />
 						
-					<!-- Make our way to the exit -->
-					<MoveTo X="209.903" Y="1133.02" Z="205.569" />
-
-					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="211.7239" Y="1142" Z="206.0054" />
-
-					<!-- Make sure we run to the right spot outside the potral -->
+					<!-- Move to - zone in location -->
+					<MoveTo X="209.903" Y="1133.02" Z="205.569" />	
+						
+					<!-- Custom behavior - Misc/InInstance - exit the instance-->
+					<CustomBehavior File="Misc\InInstance" 
+									X="214.2176" Y="1142.878" Z="206.3763" />
+					
+					<!-- Move to - zone out location -->
 					<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
+					
 				</If> <!-- HoL -->
 				
 				<!-- If we are not in the box, load the movement profile -->
@@ -679,14 +680,16 @@
 									Text="Blackrock Caverns detected. Running out to reset."
 									LogColor="Fuchsia" />
 						
-					<!-- Make our way to the exit -->
-					<MoveTo X="209.903" Y="1133.02" Z="205.569" />
-
-					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="211.7239" Y="1142" Z="206.0054" />
+					<!-- Move to - zone in location -->
+					<MoveTo X="209.903" Y="1133.02" Z="205.569" />	
+						
+					<!-- Custom behavior - Misc/InInstance - exit the instance-->
+					<CustomBehavior File="Misc\InInstance" 
+									X="214.2176" Y="1142.878" Z="206.3763" />
 					
-					<!-- Make sure we run to the right spot outside the potral -->
+					<!-- Move to - zone out location -->
 					<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
+					
 				</If> <!-- HoL -->
 				
 				<!-- If we are in the box -->
@@ -778,14 +781,16 @@
 									Text="Blackrock Caverns detected. Running out."
 									LogColor="Fuchsia" />
 						
-					<!-- Make our way to the exit -->
-					<MoveTo X="209.903" Y="1133.02" Z="205.569" />
-
-					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="211.7239" Y="1142" Z="206.0054" />
+					<!-- Move to - zone in location -->
+					<MoveTo X="209.903" Y="1133.02" Z="205.569" />	
+						
+					<!-- Custom behavior - Misc/InInstance - exit the instance-->
+					<CustomBehavior File="Misc\InInstance" 
+									X="214.2176" Y="1142.878" Z="206.3763" />
 					
-					<!-- Make sure we run to the right spot outside the potral -->
+					<!-- Move to - zone out location -->
 					<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
+					
 				</If> <!-- HoL -->
 			
 				<!-- If we are not in the box, load the movement profile -->
@@ -1058,18 +1063,20 @@
 					<CustomBehavior File="Message" 
 									Text="Blackrock Caverns detected. Running out."
 									LogColor="Fuchsia" />
-						
-					<!-- Make our way to the exit -->
-					<MoveTo X="209.903" Y="1133.02" Z="205.569" />
 
 					<!-- enableable combat -->
 					<EnableBehavior Name="Combat" />
 					
-					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="211.7239" Y="1142" Z="206.0054" />
+					<!-- Move to - zone in location -->
+					<MoveTo X="209.903" Y="1133.02" Z="205.569" />	
+						
+					<!-- Custom behavior - Misc/InInstance - exit the instance-->
+					<CustomBehavior File="Misc\InInstance" 
+									X="214.2176" Y="1142.878" Z="206.3763" />
 					
-					<!-- Make sure we run to the right spot outside the potral -->
-					<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" /> 
+					<!-- Move to - zone out location -->
+					<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
+					
 				</If> <!-- BRC -->
 			</While> <!-- Infinite loop -->
 		</If> <!-- RAF -->

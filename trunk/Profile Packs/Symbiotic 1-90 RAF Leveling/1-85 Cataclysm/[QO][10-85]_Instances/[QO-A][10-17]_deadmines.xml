@@ -19,9 +19,7 @@
 	<SellGreen>False</SellGreen>
 	<SellBlue>False</SellBlue>
 	<SellPurple>False</SellPurple>
-   
-	<TargetElites>True</TargetElites>
-	
+
 	<AvoidMobs>
 		<Mob Name="Monstrous Parrot" Entry="48447" />
 		<Mob Name="Mining Powder" Entry="48284" />
