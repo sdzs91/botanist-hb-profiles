@@ -68,6 +68,7 @@
 						
 			<!-- Infinite loop -->
 			<While Condition="true" >	
+			
 				<!-- Blackrock Caverns -->
 				<If Condition="Me.ZoneId == 4926">
 				
@@ -78,12 +79,13 @@
 					<!-- Move to - zone in location -->
 					<MoveTo X="209.903" Y="1133.02" Z="205.569" />	
 						
-					<!-- Custom behavior - Misc/InInstance - exit the instance-->
-					<CustomBehavior File="Misc\InInstance" 
-									X="214.2176" Y="1142.878" Z="206.3763" />
-					
-					<!-- Move to - zone out location -->
-					<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
+					<!-- Custom behavior - MyCTM - exit the instance-->
+					<CustomBehavior File="MyCTM"
+									X="212.4203" Y="1140.593" Z="206.6392" />
+									
+					<!-- CustomBehavior - WaitTimer - delay movement - 12 seconds -->			
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="12000" />				
 					
 				</If> <!-- HoL -->
 				
@@ -683,12 +685,13 @@
 					<!-- Move to - zone in location -->
 					<MoveTo X="209.903" Y="1133.02" Z="205.569" />	
 						
-					<!-- Custom behavior - Misc/InInstance - exit the instance-->
-					<CustomBehavior File="Misc\InInstance" 
-									X="214.2176" Y="1142.878" Z="206.3763" />
-					
-					<!-- Move to - zone out location -->
-					<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
+					<!-- Custom behavior - MyCTM - exit the instance-->
+					<CustomBehavior File="MyCTM"
+									X="212.4203" Y="1140.593" Z="206.6392" />
+									
+					<!-- CustomBehavior - WaitTimer - delay movement - 12 seconds -->			
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="12000" />
 					
 				</If> <!-- HoL -->
 				
@@ -784,12 +787,13 @@
 					<!-- Move to - zone in location -->
 					<MoveTo X="209.903" Y="1133.02" Z="205.569" />	
 						
-					<!-- Custom behavior - Misc/InInstance - exit the instance-->
-					<CustomBehavior File="Misc\InInstance" 
-									X="214.2176" Y="1142.878" Z="206.3763" />
-					
-					<!-- Move to - zone out location -->
-					<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
+					<!-- Custom behavior - MyCTM - exit the instance-->
+					<CustomBehavior File="MyCTM"
+									X="212.4203" Y="1140.593" Z="206.6392" />
+									
+					<!-- CustomBehavior - WaitTimer - delay movement - 12 seconds -->			
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="12000" />
 					
 				</If> <!-- HoL -->
 			
@@ -1070,12 +1074,13 @@
 					<!-- Move to - zone in location -->
 					<MoveTo X="209.903" Y="1133.02" Z="205.569" />	
 						
-					<!-- Custom behavior - Misc/InInstance - exit the instance-->
-					<CustomBehavior File="Misc\InInstance" 
-									X="214.2176" Y="1142.878" Z="206.3763" />
-					
-					<!-- Move to - zone out location -->
-					<MoveTo X="-7571.14" Y="-1324.96" Z="245.538" />
+					<!-- Custom behavior - MyCTM - exit the instance-->
+					<CustomBehavior File="MyCTM"
+									X="212.4203" Y="1140.593" Z="206.6392" />
+									
+					<!-- CustomBehavior - WaitTimer - delay movement - 12 seconds -->			
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="12000" />
 					
 				</If> <!-- BRC -->
 			</While> <!-- Infinite loop -->
