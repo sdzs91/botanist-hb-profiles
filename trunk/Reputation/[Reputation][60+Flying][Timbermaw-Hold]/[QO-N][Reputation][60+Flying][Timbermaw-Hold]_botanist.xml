@@ -62,9 +62,9 @@
 								Text="We do not have Exalted Reputation with Timbermaw Hold."  
 								LogColor="Chartreuse" />
 			
-				<!-- CustomBehavior - message - We will execute this profile until we are Exalted Reputation with Timbermaw Hold -->
+				<!-- CustomBehavior - message - We will execute this profile until we are Exalted  -->
 				<CustomBehavior File="Message" 
-								Text="We will execute this profile until we are Exalted Reputation with Timbermaw Hold."  
+								Text="We will execute this profile until we are Exalted."  
 								LogColor="Chartreuse" />
 								
 				<!-- If we are in Kalimdor -->
@@ -72,7 +72,7 @@
 					
 					<!-- CustomBehavior - message - We are in Kalimdor -->
 					<CustomBehavior File="Message" 
-									Text="We are in Kalimdor."  
+									Text="We are in Kalimdor \n Flying to Felpaw Village in Felwood."  
 									LogColor="Chartreuse" />
 								
 					<!-- Move to - Felpaw Village -->				

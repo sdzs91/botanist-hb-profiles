@@ -70,9 +70,9 @@
 				<!-- If we are Horde -->						
 				<If Condition="Me.IsHorde">
 				
-					<!-- Profile message - We are in Eastern Kingdoms -->
+					<!-- Profile message - We are Horde.\nWe are in Eastern Kingdoms.\nWe need to be in Kalimdor.\nMoving to Brill.\nTaking the zeppelin to Orgrimmar -->
 					<CustomBehavior File="Message" 
-									Text="We are in Eastern Kingdoms. \nWe are Horde. \nMoving to the zeppelin at Undercity." 
+									Text="We are Horde.\nWe are in Eastern Kingdoms.\nWe need to be in Kalimdor.\nMoving to Brill.\nTaking the zeppelin to Orgrimmar."  
 									LogColor="Cyan" />
 									
 					<!-- Fly to the zeppelin hover point -->
@@ -113,9 +113,9 @@
 				<!-- If we are Alliance -->					
 				<If Condition="Me.IsAlliance">				
 
-					<!-- Profile message - Moving to Menethil Harbor docks -->
+					<!-- Profile message - We are Allince.\nWe are in Eastern Kingdoms.\nWe need to be in Kalimdor.\nMoving to Menethil Harbor docks.\nTaking the boat to Theramore Isle -->
 					<CustomBehavior File="Message" 
-									Text="Moving to Menethil Harbor docks."  
+									Text="We are Allince.\nWe are in Eastern Kingdoms.\nWe need to be in Kalimdor.\nMoving to Menethil Harbor docks.\nTaking the boat to Theramore Isle."  
 									LogColor="Cyan" />				
 					
 					<!-- Move to - Menethil Harbor docks -->				
