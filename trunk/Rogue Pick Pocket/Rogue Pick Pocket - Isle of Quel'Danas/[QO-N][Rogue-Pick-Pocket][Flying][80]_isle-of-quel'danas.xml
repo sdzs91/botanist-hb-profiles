@@ -178,7 +178,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -223,7 +225,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -257,12 +261,14 @@
 					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Fan of Knives" 
-									NumOfTimes="3" />
+									NumOfTimes="3"  
+									WaitTime="500" />
 									
 					<!-- Custom behavior - RunMacro - cast stealth -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
-					
+									Macro="/cast Stealth"				
+									NumOfTimes="1"  
+									WaitTime="500" />
 					
 					<!-- ****************** 2nd group ******************* -->
 					
@@ -285,7 +291,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -325,7 +333,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -351,11 +361,14 @@
 					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Fan of Knives" 
-									NumOfTimes="3" />
+									NumOfTimes="3"  
+									WaitTime="500" />
 									
 					<!-- Custom behavior - RunMacro - cast stealth -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Stealth"				
+									NumOfTimes="1"  
+									WaitTime="500" />				
 					
 					
 					<!-- ****************** 3rd group ******************* -->
@@ -379,7 +392,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -419,7 +434,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -445,11 +462,14 @@
 					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Fan of Knives" 
-									NumOfTimes="3" />
+									NumOfTimes="3"  
+									WaitTime="500" />
 					
 					<!-- Custom behavior - RunMacro - cast stealth -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />
+									Macro="/cast Stealth"				
+									NumOfTimes="1"  
+									WaitTime="500" />
 									
 					
 					<!-- ****************** 4th group ******************* -->
@@ -473,7 +493,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -507,11 +529,14 @@
 					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Fan of Knives" 
-									NumOfTimes="3" />
+									NumOfTimes="3"  
+									WaitTime="500" />
 									
 					<!-- Custom behavior - RunMacro - cast stealth -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Stealth"				
+									NumOfTimes="1"  
+									WaitTime="500" />				
 					
 					
 					<!-- ****************** 5th group ******************* -->
@@ -535,7 +560,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -569,11 +596,14 @@
 					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Fan of Knives" 
-									NumOfTimes="3" />
+									NumOfTimes="3"  
+									WaitTime="500" />
 									
 					<!-- Custom behavior - RunMacro - cast stealth -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Stealth"				
+									NumOfTimes="1"  
+									WaitTime="500" />				
 					
 					
 					<!-- ****************** 6th group ******************* -->
@@ -597,7 +627,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -638,7 +670,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -664,11 +698,14 @@
 					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Fan of Knives" 
-									NumOfTimes="3" />
+									NumOfTimes="3"  
+									WaitTime="500" />
 									
 					<!-- Custom behavior - RunMacro - cast stealth -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Stealth"				
+									NumOfTimes="1"  
+									WaitTime="500" />				
 					
 					
 					<!-- ****************** 6th group ******************* -->
@@ -692,7 +729,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -732,7 +771,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -755,11 +796,14 @@
 					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Fan of Knives" 
-									NumOfTimes="3" />
+									NumOfTimes="3"  
+									WaitTime="500" />
 									
 					<!-- Custom behavior - RunMacro - cast stealth -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Stealth"				
+									NumOfTimes="1"  
+									WaitTime="500" />				
 					
 					
 					<!-- ****************** 7th group ******************* -->
@@ -783,7 +827,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -823,7 +869,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -849,11 +897,14 @@
 					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Fan of Knives" 
-									NumOfTimes="3" />
+									NumOfTimes="3"  
+									WaitTime="500" />
 									
 					<!-- Custom behavior - RunMacro - cast stealth -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Stealth"				
+									NumOfTimes="1"  
+									WaitTime="500" />				
 					
 					
 					<!-- ****************** 8th group ******************* -->
@@ -877,7 +928,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -911,7 +964,8 @@
 					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Fan of Knives" 
-									NumOfTimes="3" />
+									NumOfTimes="3"  
+									WaitTime="500" />
 
 					<!-- If we are stealthed -->
 					<If Condition="Me.HasAura(&quot;Stealth&quot;)">	
@@ -931,7 +985,9 @@
 										
 							<!-- Custom behavior - RunMacro - cast stealth -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
