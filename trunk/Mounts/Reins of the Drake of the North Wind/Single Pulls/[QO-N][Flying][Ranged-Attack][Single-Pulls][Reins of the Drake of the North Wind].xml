@@ -289,6 +289,9 @@
 									NumOfTimes="1" 
 									WaitTime="0"/>
 					
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+										
 					<!-- MoveTo to the second Howling Gale -->				
 					<CustomBehavior File="MyCTM" 
 									X="-1061.07" Y="-48.62126" Z="700.4818" />
@@ -308,6 +311,9 @@
 					<!-- Cast one of the following spells -->
 					<CustomBehavior File="Misc\RangeAttack" />
 									
+					<CustomBehavior File="WaitTimer" 
+										WaitTime="3000" />
+										
 					<!-- MoveTo to the top of the stairs -->				
 					<CustomBehavior File="MyCTM" 
 									X="-1099.821" Y="-9.875572" Z="704.7399" />
