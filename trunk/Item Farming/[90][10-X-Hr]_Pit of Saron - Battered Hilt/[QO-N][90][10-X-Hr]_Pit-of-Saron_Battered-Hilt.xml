@@ -325,10 +325,19 @@
 									NumOfTimes="1" 
 									WaitTime="1000" />
 
-					<!-- Profile message - Pit of Saron initialized -->			
+					<!-- CustomBehavior - Message - Opening our bags to view our inventory -->
 					<CustomBehavior File="Message" 
-									Text="Pit of Saron (Batterered Hilt Farm) initialized."  
-									LogColor="Orange" />
+									Text="Opening our bags to view our inventory." 
+									LogColor="Plum" />
+								
+					<!-- CustomBehavior - RunMacro - /script OpenAllBags() -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/script OpenAllBags()" />
+									
+					<!-- Profile message - Pit of Saron (Battered Hilt Farm) initialized -->			
+					<CustomBehavior File="Message" 
+									Text="Pit of Saron (Battered Hilt Farm) initialized."  
+									LogColor="Gold" />
 					
 					
 					<!-- ****************************************************** Pit of Saron ********************************************************************** -->
@@ -348,133 +357,173 @@
 										
 					</If>	<!-- If we are DeathKnight-->
 					
-					<!-- Profile message - Disabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Disabling combat." 
-										LogColor="Gold" />
 					
-					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />
 					
-					<!-- Move to - Deathwhisper Necrolyte  -->
-					<MoveTo X="497.3195" Y="247.8559" Z="528.7088" />
 					
-					<!-- Move to - Wrathbone Laborer  -->
-					<MoveTo X="562.6528" Y="315.9115" Z="508.5274" />
 					
-					<!-- Move to - Deathwhisper Torturer  -->
-					<MoveTo X="594.4445" Y="273.5695" Z="506.1756" />
+					
+					<!-- Level Check - 90 -->
+					<If Condition="Me.Level &gt;= 90">
+					
+						<!-- Profile message - We are level 90. \n\n\n\nInitiating level 90 farming mechanics -->
+						<CustomBehavior File="Message" 
+											Text="We are level 90. \n\n\n\nInitiating level 90 farming mechanics." 
+											LogColor="Gold" /> 
+											
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+						
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />
+						
+						<!-- Move to - Deathwhisper Necrolyte  -->
+						<MoveTo X="497.3195" Y="247.8559" Z="528.7088" />
+						
+						<!-- Move to - Wrathbone Laborer  -->
+						<MoveTo X="562.6528" Y="315.9115" Z="508.5274" />
+						
+						<!-- Move to - Deathwhisper Torturer  -->
+						<MoveTo X="594.4445" Y="273.5695" Z="506.1756" />
 
-					<!-- Move to - Wrathbone Laborer  -->
-					<MoveTo X="629.1441" Y="332.3004" Z="511.8989" />
-					
-					<!-- Move to - Wrathbone Laborer  -->
-					<MoveTo X="638.908" Y="246.5469" Z="508.4926" />
+						<!-- Move to - Wrathbone Laborer  -->
+						<MoveTo X="629.1441" Y="332.3004" Z="511.8989" />
+						
+						<!-- Move to - Wrathbone Laborer  -->
+						<MoveTo X="638.908" Y="246.5469" Z="508.4926" />
 
-					<!-- Move to - Deathwhisper Torturer  -->
-					<MoveTo X="618.8143" Y="211.2049" Z="507.2203" />
-					
-					<!-- CustomBehavior -  message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />
+						<!-- Move to - Deathwhisper Torturer  -->
+						<MoveTo X="618.8143" Y="211.2049" Z="507.2203" />
+						
+						<!-- CustomBehavior -  message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
 
-					<!-- enable combat -->
-					<EnableBehavior Name="Combat" />
+						<!-- enable combat -->
+						<EnableBehavior Name="Combat" />
+						
+						<!-- Wait timer - wait 5 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
 					
-					<!-- Wait timer - wait 5 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="5000" />
-				
-					<!-- Move to - Wrathbone Laborer  -->
-					<MoveTo X="638.908" Y="246.5469" Z="508.4927" />
+						<!-- Move to - Wrathbone Laborer  -->
+						<MoveTo X="638.908" Y="246.5469" Z="508.4927" />
 
-				
-				
-					<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 					
 					
-					<!-- Profile message - Disabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Disabling combat." 
-										LogColor="Gold" />
-										
-					<!-- DisableBehavior - Combat -->
-					<DisableBehavior Name="Combat" />
-					
-					<!-- Move to - Wrathbone Laborer  -->
-					<MoveTo X="710.5347" Y="184.6962" Z="511.4628" />
-					
-					<!-- Move to - plateu -->
-					<MoveTo X="672.9695" Y="131.5805" Z="512.4858" />
+						<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+						
+						
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+											
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />
+						
+						<!-- Move to - Wrathbone Laborer  -->
+						<MoveTo X="710.5347" Y="184.6962" Z="511.4628" />
+						
+						<!-- Move to - plateu -->
+						<MoveTo X="672.9695" Y="131.5805" Z="512.4858" />
 
-					<!-- Move to - Wrathbone Laborer  -->
-					<MoveTo X="672.9695" Y="131.5805" Z="512.4858" />
-					
-					<!-- Move to - Wrathbone Laborer  -->
-					<MoveTo X="589.704" Y="193.2678" Z="509.1335" />
+						<!-- Move to - Wrathbone Laborer  -->
+						<MoveTo X="672.9695" Y="131.5805" Z="512.4858" />
+						
+						<!-- Move to - Wrathbone Laborer  -->
+						<MoveTo X="589.704" Y="193.2678" Z="509.1335" />
 
-					<!-- Move to - Deathwhisper Torturer -->
-					<MoveTo X="589.1077" Y="156.2326" Z="509.6336" />
+						<!-- Move to - Deathwhisper Torturer -->
+						<MoveTo X="589.1077" Y="156.2326" Z="509.6336" />
 
-					<!-- Move to - Deathwhisper Torturer -->
-					<MoveTo X="626.2118" Y="112.3264" Z="509.9253" />
-					
-					<!-- Move to - Wrathbone Laborer -->
-					<MoveTo X="552.8108" Y="72.85243" Z="525.5356" />
-					
-					<!-- CustomBehavior -  message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />
+						<!-- Move to - Deathwhisper Torturer -->
+						<MoveTo X="626.2118" Y="112.3264" Z="509.9253" />
+						
+						<!-- Move to - Wrathbone Laborer -->
+						<MoveTo X="552.8108" Y="72.85243" Z="525.5356" />
+						
+						<!-- Move to - Deathwhisper Necrolyte -->
+						<MoveTo X="559.6146" Y="143.4896" Z="516.1251" /
+						
+						<!-- CustomBehavior -  message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
 
-					<!-- enable combat -->
-					<EnableBehavior Name="Combat" />
+						<!-- enable combat -->
+						<EnableBehavior Name="Combat" />
+						
+						<!-- Wait timer - wait 5 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
 					
-					<!-- Wait timer - wait 5 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="5000" />
-				
-					<!-- Move to - Wrathbone Laborer -->
-					<MoveTo X="552.8108" Y="72.85243" Z="525.5356" />
+						<!-- Move to - Deathwhisper Necrolyte -->
+						<MoveTo X="559.6146" Y="143.4896" Z="516.1251" />
 
-				
-				
-					<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
-				
 					
+					
+						<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+					
+						
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+											
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />
+						
+						<!-- Move to - start of the path  -->
+						<MoveTo X="624.6357" Y="89.70233" Z="512.0253" />
+						
+						<!-- Move to - middle of the path - turn right to tag the Wrathbone Laborer -->
+						<MoveTo X="615.2495" Y="49.12225" Z="512.4169" />
 
-					<!-- Move to - start of the path  -->
-					<MoveTo X="624.6357" Y="89.70233" Z="512.0253" />
-					
-					<!-- Move to - middle of the path - turn right to tag the Wrathbone Laborer -->
-					<MoveTo X="615.2495" Y="49.12225" Z="512.4169" />
+						<!-- Move to - Wrathbone Laborer -->
+						<MoveTo X="598.408" Y="54.74653" Z="509.7687" />
 
-					<!-- Move to - Wrathbone Laborer -->
-					<MoveTo X="598.408" Y="54.74653" Z="509.7687" />
+						<!-- Move to - middle of the path - turn right to tag the Wrathbone Laborer -->
+						<MoveTo X="616.3859" Y="65.35201" Z="512.437" />
 
-					<!-- Move to - middle of the path - turn right to tag the Wrathbone Laborer -->
-					<MoveTo X="616.3859" Y="65.35201" Z="512.437" />
+						<!-- Move to - middle of the path -->
+						<MoveTo X="619.5768" Y="17.00592" Z="513.6304" />
+						
+						<!-- Move to - middle of the path - turn right to tag the Wrathbone Laborer -->
+						<MoveTo X="636.5443" Y="-23.10391" Z="513.7417" />
 
-					<!-- Move to - middle of the path - turn right to tag the Wrathbone Laborer -->
-					<MoveTo X="616.3859" Y="65.35201" Z="512.437" />
+						<!-- Move to - middle of the path -->
+						<MoveTo X="619.5768" Y="17.00592" Z="513.6304" />
 					
-					
-					<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
-					
-					
-					<!-- Move to - middle of the path -->
-					<MoveTo X="619.5768" Y="17.00592" Z="513.6304" />
-					
-					<!-- Move to - middle of the path - turn right to tag the Wrathbone Laborer -->
-					<MoveTo X="636.5443" Y="-23.10391" Z="513.7417" />
+						<!-- CustomBehavior -  message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
 
-					<!-- Move to - middle of the path -->
-					<MoveTo X="619.5768" Y="17.00592" Z="513.6304" />
-				
-					<!-- Move to - middle of the path -->
-					<MoveTo X="619.5768" Y="17.00592" Z="513.6304" />
-
+						<!-- enable combat -->
+						<EnableBehavior Name="Combat" />
+						
+						<!-- Wait timer - wait 5 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+					
+						<!-- Move to - middle of the path -->
+						<MoveTo X="619.5768" Y="17.00592" Z="513.6304" />
+					
+					</If>	<!-- Level Check - 90 -->
+					
+					<!-- Level Check - 90 -->
+					<If Condition="Me.Level &lt; 90">
+						
+						<!-- Profile message - We are less than level 90. \n\n\n\nInitiating 85-89 farming mechanics -->
+						<CustomBehavior File="Message" 
+											Text="We are less than level 90. \n\n\n\nInitiating 85-89 farming mechanics." 
+											LogColor="Gold" />
+	
+					</If>	<!-- Level Check - 85 -->
+					
 					
 					<!-- XXXXXXXXX EXIT XXXXXXX -->
 
