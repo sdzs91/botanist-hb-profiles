@@ -477,7 +477,7 @@
 						<DisableBehavior Name="Combat" />
 						
 						<!-- Move to - start of the path  -->
-						<MoveTo X="624.6357" Y="89.70233" Z="512.0253" />
+						<MoveTo X="626.0861" Y="92.07126" Z="511.9532" />
 						
 						<!-- Move to - middle of the path - turn right to tag the Wrathbone Laborer -->
 						<MoveTo X="615.2495" Y="49.12225" Z="512.4169" />
@@ -496,6 +496,17 @@
 						<!-- enable combat -->
 						<EnableBehavior Name="Combat" />
 						
+						<!-- Wait timer - wait 5 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+					
+						<!-- Move to - middle of the path - turn right to tag the Wrathbone Laborer -->
+						<MoveTo X="616.3859" Y="65.35201" Z="512.437" />
+						
+						
+						<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+						
+						
 						<!-- Profile message - Disabling combat -->
 						<CustomBehavior File="Message" 
 											Text="Disabling combat." 
@@ -511,7 +522,7 @@
 						<MoveTo X="636.5443" Y="-23.10391" Z="513.7417" />
 
 						<!-- Move to - middle of the path -->
-						<MoveTo X="619.5768" Y="17.00592" Z="513.6304" />
+						<MoveTo X="683.2925" Y="-105.4445" Z="513.7352" />
 					
 						<!-- CustomBehavior -  message - Enabling combat -->
 						<CustomBehavior File="Message" 
@@ -530,7 +541,7 @@
 					
 					</If>	<!-- Level Check - 90 -->
 					
-					<!-- Level Check - 90 -->
+					<!-- Level Check - < 90 -->
 					<If Condition="Me.Level &lt; 90">
 						
 						<!-- Profile message - We are less than level 90. \n\n\n\nInitiating 85-89 farming mechanics -->
@@ -538,7 +549,7 @@
 											Text="We are less than level 90. \n\n\n\nInitiating 85-89 farming mechanics." 
 											LogColor="Gold" />
 	
-					</If>	<!-- Level Check - 85 -->
+					</If>	<!-- Level Check - < 90 -->
 					
 					
 					<!-- XXXXXXXXX EXIT XXXXXXX -->
