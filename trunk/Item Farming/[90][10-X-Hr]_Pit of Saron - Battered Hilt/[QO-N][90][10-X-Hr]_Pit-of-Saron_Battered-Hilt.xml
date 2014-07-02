@@ -446,7 +446,7 @@
 						<MoveTo X="552.8108" Y="72.85243" Z="525.5356" />
 						
 						<!-- Move to - Deathwhisper Necrolyte -->
-						<MoveTo X="559.6146" Y="143.4896" Z="516.1251" /
+						<MoveTo X="559.6146" Y="143.4896" Z="516.1251" />
 						
 						<!-- CustomBehavior -  message - Enabling combat -->
 						<CustomBehavior File="Message" 
