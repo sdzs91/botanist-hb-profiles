@@ -496,6 +496,18 @@
 						<!-- enable combat -->
 						<EnableBehavior Name="Combat" />
 													
+						<!-- Wait timer - wait 5 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />							
+					
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+											
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />							
+													
 						<!-- Move to - middle of the path -->
 						<MoveTo X="617.4015" Y="27.0486" Z="512.9844" />
 						
@@ -507,7 +519,19 @@
 						
 						<!-- Move to - middle of the path -->
 						<MoveTo X="677.7943" Y="-98.10395" Z="513.7341" />
+						
+						<!-- CustomBehavior -  message - Enabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Enabling combat." 
+											LogColor="Gold" />
+						
+						<!-- enable combat -->
+						<EnableBehavior Name="Combat" />
 					
+						<!-- Wait timer - wait 5 seconds - delay -->
+						<CustomBehavior File="WaitTimer" 
+										WaitTime="5000" />
+										
 					</If>	<!-- Level Check - 90 -->
 					
 					<!-- Level Check - < 90 -->
