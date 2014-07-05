@@ -45,10 +45,9 @@
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
 							LootMobs="True"
-							LootRadius="5"
+							LootRadius="65"
 							MountName=""
 							NinjaSkin="False"
-							PullDistance="1"
 							RessAtSpiritHealers="False"
 							SkinMobs="False"
 							UseMount="True" 
@@ -174,9 +173,9 @@
 										Text="Engaging a Ancient Mogu Spirit." 
 										LogColor="Cyan" />
 						
-						<!-- Reset the instance -->
+						<!-- CustomBehavior - RunMacro - cast Mortal Strike -->
 						<CustomBehavior File="RunMacro" 
-										Macro="/startattack" />
+										Macro="/cast Mortal Strike" />
 
 					</If>	<!-- If our target is a Ancient Mogu Spirit --> 
 

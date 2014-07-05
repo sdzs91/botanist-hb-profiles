@@ -175,7 +175,7 @@
 			</If>	<!-- Else we are Horde -->
 			
 		</If>	<!-- If we are in Kalimdor -->
-			
+		
 			<!-- If we are in Pandaria -->
 			<If Condition="Me.MapId == 870" >
 			
