@@ -18,9 +18,7 @@
 	<SellGreen>True</SellGreen>
 	<SellBlue>True</SellBlue>
 	<SellPurple>False</SellPurple>
-   
-	<TargetElites>True</TargetElites>
-	
+
 	<AvoidMobs>
 		<Mob Name="Summon Enabler Stalker" Entry="53488" />
 	</AvoidMobs>
@@ -543,7 +541,6 @@
 				<!-- Load profile - [QO-N][Solstice][86-87]_halls-of-lightning -->
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="..\[QO-N][Solstice][86-87]_halls-of-lightning" />
-								
 								
 			</If> 	<!-- If we are in the Halls of Lightning instance box -->
 			

@@ -18,9 +18,7 @@
 	<SellGreen>True</SellGreen>
 	<SellBlue>True</SellBlue>
 	<SellPurple>False</SellPurple>
-   
-	<TargetElites>True</TargetElites>
-	
+
 	<AvoidMobs>		
 	</AvoidMobs>
 	
@@ -533,11 +531,11 @@
 								
 				<!-- Fly to - Gundrak - hover point -->
 				<CustomBehavior File="FlyTo" 
-								X="6717.32" Y="-4645.55" Z="450.017" />
+								X="6743.5" Y="-4617.181" Z="488.5115" />
 								
 				<!-- Fly to - rear entrance to Gundrak -->
 				<CustomBehavior File="MyCTM" 
-								X="6717.32" Y="-4645.55" Z="450.017" />
+								X="6709.485" Y="-4653.356" Z="445.9457" />
 
 				<!-- Custom behavior - Forced Dismount -->				
 				<CustomBehavior File="ForcedDismount" />				

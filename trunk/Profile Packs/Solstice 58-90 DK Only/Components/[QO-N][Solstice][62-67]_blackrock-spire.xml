@@ -19,9 +19,7 @@
 	<SellGreen>True</SellGreen>
 	<SellBlue>True</SellBlue>
 	<SellPurple>False</SellPurple>
-   
-	<TargetElites>True</TargetElites>
-	
+
 	<AvoidMobs>	
 		<Mob Name="Summon Enabler Stalker" 
 			 Entry="53488" />
