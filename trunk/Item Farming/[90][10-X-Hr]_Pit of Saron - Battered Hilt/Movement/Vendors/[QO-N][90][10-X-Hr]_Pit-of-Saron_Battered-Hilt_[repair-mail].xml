@@ -12,13 +12,13 @@
 	<MailWhite>True</MailWhite>
 	<MailGreen>False</MailGreen>
 	<MailBlue>False</MailBlue>
-	<MailPurple>False</MailPurple>
+	<MailPurple>True</MailPurple>
    
 	<SellGrey>True</SellGrey>
 	<SellWhite>False</SellWhite>
 	<SellGreen>True</SellGreen>
 	<SellBlue>True</SellBlue>
-	<SellPurple>True</SellPurple>
+	<SellPurple>False</SellPurple>
    
 	<TargetElites>True</TargetElites>
 	
