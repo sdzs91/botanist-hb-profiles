@@ -1,7 +1,7 @@
-<HBProfile>
-<Name>[QO-N][Rogue-Pick-Pocket][Flying][70]_isle-of-quel'danas</Name> 
+﻿<HBProfile>
+<Name>[QO-N][Rogue-Pick-Pocket][Flying][80]_isle-of-quel'danas</Name> 
 
-<MinLevel>70</MinLevel> 
+<MinLevel>80</MinLevel> 
 <MaxLevel>101</MaxLevel>
 <MinDurability>-1</MinDurability>
 <MinFreeBagSlots>-1</MinFreeBagSlots>
@@ -44,6 +44,7 @@
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
 							LootMobs="False"
+							LootRadius="25"
 							MountName=""
 							NinjaSkin="False"
 							RessAtSpiritHealers="False"
@@ -69,7 +70,7 @@
 			
 					<!-- Load profile - [QO-N-M][Rogue-Pick-Pocket][Flying][80]_isle-of-quel'danas -->
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[QO-N-M][Rogue-Pick-Pocket][Flying][70]_isle-of-quel'danas" />				
+									ProfileName="Movement\[QO-N-M][Rogue-Pick-Pocket][Flying][80]_isle-of-quel'danas" />				
 
 				</Else>		<!-- Else our hearthstone is not set at Sun's Reach -->
 
@@ -80,7 +81,7 @@
 			
 				<!-- Load profile - [QO-N-M][Rogue-Pick-Pocket][Flying][90]_isle-of-reckoning -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="Movement\[QO-N-M][Rogue-Pick-Pocket][Flying][70]_isle-of-quel'danas" />				
+								ProfileName="Movement\[QO-N-M][Rogue-Pick-Pocket][Flying][80]_isle-of-quel'danas" />				
 
 			</If>	<!-- If we are not in the farming area -->
 
@@ -90,8 +91,8 @@
 			<!-- Custom behavior - ForcedDismount -->	
 			<CustomBehavior File="ForcedDismount" />
 
-		<!-- While our level is >= 70 and < 100 -->
-		<While Condition="Me.Level &gt;= 70 &amp;&amp; Me.Level &lt; 100" >	
+		<!-- While our level is >= 80 and < 100 -->
+		<While Condition="Me.Level &gt;= 80 &amp;&amp; Me.Level &lt; 100" >	
 			
 			<!-- If our empty bag slots is > 4 and our lowest durability is > 30% -->
 			<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
@@ -175,9 +176,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -220,9 +221,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -233,13 +234,13 @@
 						
 					</If>	<!-- If we are stealthed -->
 					
-					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<!-- Custom behavior - RunMacro - cast  Sprinten -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast sprint" />
+									Macro="/cast Sprinten" />
 					
-					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<!-- Custom behavior - RunMacro - cast Geschwindigkeitsschub -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Burst of Speed" />
+									Macro="/cast Geschwindigkeitsschub" />
 									
 					<!-- Move to - 1st group of Murlocs - pivot point -->
 					<MoveTo X="12528.73" Y="-7346.507" Z="-0.597317" />
@@ -248,19 +249,19 @@
 					<CustomBehavior File="MyCTM"
 									X="12545.12" Y="-7344.372" Z="-0.4131309" />
 					
-					<!-- Custom behavior - RunMacro - /targetenemy\n/cast pick pocket -->
+					<!-- Custom behavior - RunMacro - /targetenemy\n/cast Taschendiebstahl -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/targetenemy\n/cast pick pocket" 
+									Macro="/targetenemy\n/cast Taschendiebstahl" 
 									NumOfTimes="8" />
 					
-					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
+					<!-- Custom behavior - RunMacro - cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Fan of Knives" 
+									Macro="/cast Dolchfächer" 
 									NumOfTimes="3" />
 									
-					<!-- Custom behavior - RunMacro - cast stealth -->
+					<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Verstohlenheit" />				
 					
 					
 					<!-- ****************** 2nd group ******************* -->
@@ -282,9 +283,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -295,13 +296,13 @@
 						
 					</If>	<!-- If we are stealthed -->
 					
-					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<!-- Custom behavior - RunMacro - cast  Sprinten -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast sprint" />
+									Macro="/cast Sprinten" />
 					
-					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<!-- Custom behavior - RunMacro - cast Geschwindigkeitsschub -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Burst of Speed" />
+									Macro="/cast Geschwindigkeitsschub" />
 									
 					<!-- Move to - 2nd group of Murlocs -->
 					<MoveTo X="12555.05" Y="-7364.825" Z="-0.3154263" />
@@ -322,9 +323,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -342,19 +343,19 @@
 					<CustomBehavior File="MyCTM"
 									X="12536.77" Y="-7408.447" Z="0.6505647" />
 					
-					<!-- Custom behavior - RunMacro - /targetenemy\n/cast pick pocket -->
+					<!-- Custom behavior - RunMacro - /targetenemy\n/cast Taschendiebstahl -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/targetenemy\n/cast pick pocket" 
+									Macro="/targetenemy\n/cast Taschendiebstahl" 
 									NumOfTimes="8" />
 					
-					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
+					<!-- Custom behavior - RunMacro - cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Fan of Knives" 
+									Macro="/cast Dolchfächer" 
 									NumOfTimes="3" />
 									
-					<!-- Custom behavior - RunMacro - cast stealth -->
+					<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Verstohlenheit" />				
 					
 					
 					<!-- ****************** 3rd group ******************* -->
@@ -376,9 +377,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -389,13 +390,13 @@
 						
 					</If>	<!-- If we are stealthed -->
 					
-					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<!-- Custom behavior - RunMacro - cast  Sprinten -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast sprint" />
+									Macro="/cast Sprinten" />
 					
-					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<!-- Custom behavior - RunMacro - cast Geschwindigkeitsschub -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Burst of Speed" />
+									Macro="/cast Geschwindigkeitsschub" />
 									
 					<!-- Move to - 3rd group of Murlocs -->
 					<MoveTo X="12539.07" Y="-7430.317" Z="0.05617226" />
@@ -416,9 +417,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -436,19 +437,19 @@
 					<CustomBehavior File="MyCTM"
 									X="12525.77" Y="-7446.265" Z="0.2024674" />
 					
-					<!-- Custom behavior - RunMacro - /targetenemy\n/cast pick pocket -->
+					<!-- Custom behavior - RunMacro - /targetenemy\n/cast Taschendiebstahl -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/targetenemy\n/cast pick pocket" 
+									Macro="/targetenemy\n/cast Taschendiebstahl" 
 									NumOfTimes="8" />
 					
-					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
+					<!-- Custom behavior - RunMacro - cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Fan of Knives" 
+									Macro="/cast Dolchfächer" 
 									NumOfTimes="3" />
 					
-					<!-- Custom behavior - RunMacro - cast stealth -->
+					<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />
+									Macro="/cast Verstohlenheit" />
 									
 					
 					<!-- ****************** 4th group ******************* -->
@@ -470,9 +471,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -483,13 +484,13 @@
 						
 					</If>	<!-- If we are stealthed -->
 					
-					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<!-- Custom behavior - RunMacro - cast  Sprinten -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast sprint" />
+									Macro="/cast Sprinten" />
 					
-					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<!-- Custom behavior - RunMacro - cast Geschwindigkeitsschub -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Burst of Speed" />
+									Macro="/cast Geschwindigkeitsschub" />
 
 					<!-- Move to - 4th group of Murlocs - pivot point -->
 					<MoveTo X="12508.69" Y="-7469.408" Z="-0.2989214" />
@@ -498,19 +499,19 @@
 					<CustomBehavior File="MyCTM"
 									X="12497.35" Y="-7466.493" Z="0.4141557" />
 					
-					<!-- Custom behavior - RunMacro - /targetenemy\n/cast pick pocket -->
+					<!-- Custom behavior - RunMacro - /targetenemy\n/cast Taschendiebstahl -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/targetenemy\n/cast pick pocket" 
+									Macro="/targetenemy\n/cast Taschendiebstahl" 
 									NumOfTimes="8" />
 					
-					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
+					<!-- Custom behavior - RunMacro - cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Fan of Knives" 
+									Macro="/cast Dolchfächer" 
 									NumOfTimes="3" />
 									
-					<!-- Custom behavior - RunMacro - cast stealth -->
+					<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Verstohlenheit" />				
 					
 					
 					<!-- ****************** 5th group ******************* -->
@@ -532,9 +533,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -545,13 +546,13 @@
 						
 					</If>	<!-- If we are stealthed -->
 					
-					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<!-- Custom behavior - RunMacro - cast  Sprinten -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast sprint" />
+									Macro="/cast Sprinten" />
 					
-					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<!-- Custom behavior - RunMacro - cast Geschwindigkeitsschub -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Burst of Speed" />
+									Macro="/cast Geschwindigkeitsschub" />
 
 					<!-- Move to - 5th group of Murlocs - pivot point -->
 					<MoveTo X="12492.54" Y="-7452.512" Z="0.578841" />
@@ -560,19 +561,19 @@
 					<CustomBehavior File="MyCTM"
 									X="12482.66" Y="-7465.045" Z="0.2077907" />
 					
-					<!-- Custom behavior - RunMacro - /targetenemy\n/cast pick pocket -->
+					<!-- Custom behavior - RunMacro - /targetenemy\n/cast Taschendiebstahl -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/targetenemy\n/cast pick pocket" 
+									Macro="/targetenemy\n/cast Taschendiebstahl" 
 									NumOfTimes="8" />
 					
-					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
+					<!-- Custom behavior - RunMacro - cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Fan of Knives" 
+									Macro="/cast Dolchfächer" 
 									NumOfTimes="3" />
 									
-					<!-- Custom behavior - RunMacro - cast stealth -->
+					<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Verstohlenheit" />				
 					
 					
 					<!-- ****************** 6th group ******************* -->
@@ -594,9 +595,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -607,13 +608,13 @@
 						
 					</If>	<!-- If we are stealthed -->
 					
-					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<!-- Custom behavior - RunMacro - cast  Sprinten -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast sprint" />
+									Macro="/cast Sprinten" />
 					
-					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<!-- Custom behavior - RunMacro - cast Geschwindigkeitsschub -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Burst of Speed" />
+									Macro="/cast Geschwindigkeitsschub" />
 
 					<!-- Move to - 6th mob on the right  -->
 					<CustomBehavior File="MyCTM"
@@ -635,9 +636,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -655,19 +656,19 @@
 					<CustomBehavior File="MyCTM"
 									X="12443.91" Y="-7460.986" Z="0.3627778" />
 					
-					<!-- Custom behavior - RunMacro - /targetenemy\n/cast pick pocket -->
+					<!-- Custom behavior - RunMacro - /targetenemy\n/cast Taschendiebstahl -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/targetenemy\n/cast pick pocket" 
+									Macro="/targetenemy\n/cast Taschendiebstahl" 
 									NumOfTimes="8" />
 					
-					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
+					<!-- Custom behavior - RunMacro - cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Fan of Knives" 
+									Macro="/cast Dolchfächer" 
 									NumOfTimes="3" />
 									
-					<!-- Custom behavior - RunMacro - cast stealth -->
+					<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Verstohlenheit" />				
 					
 					
 					<!-- ****************** 6th group ******************* -->
@@ -689,9 +690,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -702,13 +703,13 @@
 						
 					</If>	<!-- If we are stealthed -->
 					
-					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<!-- Custom behavior - RunMacro - cast  Sprinten -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast sprint" />
+									Macro="/cast Sprinten" />
 					
-					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<!-- Custom behavior - RunMacro - cast Geschwindigkeitsschub -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Burst of Speed" />
+									Macro="/cast Geschwindigkeitsschub" />
 
 					<!-- Move to - 6th group of Murlocs - pivot point -->
 					<MoveTo X="12414.29" Y="-7424.688" Z="0.4334641" />
@@ -729,9 +730,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -746,19 +747,19 @@
 					<CustomBehavior File="MyCTM"
 									X="12422.05" Y="-7392.576" Z="0.9493137" />
 					
-					<!-- Custom behavior - RunMacro - /targetenemy\n/cast pick pocket -->
+					<!-- Custom behavior - RunMacro - /targetenemy\n/cast Taschendiebstahl -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/targetenemy\n/cast pick pocket" 
+									Macro="/targetenemy\n/cast Taschendiebstahl" 
 									NumOfTimes="8" />
 					
-					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
+					<!-- Custom behavior - RunMacro - cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Fan of Knives" 
+									Macro="/cast Dolchfächer" 
 									NumOfTimes="3" />
 									
-					<!-- Custom behavior - RunMacro - cast stealth -->
+					<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Verstohlenheit" />				
 					
 					
 					<!-- ****************** 7th group ******************* -->
@@ -780,9 +781,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -793,13 +794,13 @@
 						
 					</If>	<!-- If we are stealthed -->
 					
-					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<!-- Custom behavior - RunMacro - cast  Sprinten -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast sprint" />
+									Macro="/cast Sprinten" />
 					
-					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<!-- Custom behavior - RunMacro - cast Geschwindigkeitsschub -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Burst of Speed" />
+									Macro="/cast Geschwindigkeitsschub" />
 
 					<!-- Move to - 7th group of Murlocs -->
 					<MoveTo X="12440.37" Y="-7368.688" Z="0.2089976" />
@@ -820,9 +821,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -840,19 +841,19 @@
 					<CustomBehavior File="MyCTM"
 									X="12434.49" Y="-7337.422" Z="-0.163067" />
 					
-					<!-- Custom behavior - RunMacro - /targetenemy\n/cast pick pocket -->
+					<!-- Custom behavior - RunMacro - /targetenemy\n/cast Taschendiebstahl -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/targetenemy\n/cast pick pocket" 
+									Macro="/targetenemy\n/cast Taschendiebstahl" 
 									NumOfTimes="8" />
 					
-					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
+					<!-- Custom behavior - RunMacro - cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Fan of Knives" 
+									Macro="/cast Dolchfächer" 
 									NumOfTimes="3" />
 									
-					<!-- Custom behavior - RunMacro - cast stealth -->
+					<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Stealth" />				
+									Macro="/cast Verstohlenheit" />				
 					
 					
 					<!-- ****************** 8th group ******************* -->
@@ -874,9 +875,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -887,13 +888,13 @@
 						
 					</If>	<!-- If we are stealthed -->
 					
-					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<!-- Custom behavior - RunMacro - cast  Sprinten -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast sprint" />
+									Macro="/cast Sprinten" />
 					
-					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<!-- Custom behavior - RunMacro - cast Geschwindigkeitsschub -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Burst of Speed" />
+									Macro="/cast Geschwindigkeitsschub" />
 
 					<!-- Move to - 8th group of Murlocs - pivot point -->
 					<MoveTo X="12428.04" Y="-7333.63" Z="-0.7338482" />
@@ -902,14 +903,14 @@
 					<CustomBehavior File="MyCTM"
 									X="12421.9" Y="-7327.417" Z="-0.686829" />
 					
-					<!-- Custom behavior - RunMacro - /targetenemy\n/cast pick pocket -->
+					<!-- Custom behavior - RunMacro - /targetenemy\n/cast Taschendiebstahl -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/targetenemy\n/cast pick pocket" 
+									Macro="/targetenemy\n/cast Taschendiebstahl" 
 									NumOfTimes="8" />
 					
-					<!-- Custom behavior - RunMacro - /cast Fan of Knives -->
+					<!-- Custom behavior - RunMacro - cast Fan of Knives -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/cast Fan of Knives" 
+									Macro="/cast Dolchfächer" 
 									NumOfTimes="3" />
 
 					<!-- If we are stealthed -->
@@ -928,9 +929,9 @@
 											Text="We are not stealthed. Casting Stealth." 
 											LogColor="Plum" />
 										
-							<!-- Custom behavior - RunMacro - cast stealth -->
+							<!-- Custom behavior - RunMacro - cast Verstohlenheit -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Stealth" />			
+											Macro="/cast Verstohlenheit" />			
 										
 							<!-- Profile message - We are stealthed -->
 							<CustomBehavior File="Message" 
@@ -943,13 +944,13 @@
 									
 				</If>	<!-- If we are in the farming area --> 	
 							
-				<!-- Custom behavior - RunMacro - cast Sprint -->
+				<!-- Custom behavior - RunMacro - cast  Sprinten -->
 				<CustomBehavior File="RunMacro" 
-								Macro="/cast sprint" />
+								Macro="/cast Sprinten" />
 				
-				<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+				<!-- Custom behavior - RunMacro - cast Geschwindigkeitsschub -->
 				<CustomBehavior File="RunMacro" 
-								Macro="/cast Burst of Speed" />			
+								Macro="/cast Geschwindigkeitsschub" />			
 							
 			</If>	<!-- If our empty bag slots is > 4 and our lowest durability is > 30% -->
 			
@@ -970,9 +971,9 @@
 								Text="I have detected that our bags are full. Initiating repair/mail procedures." 
 								LogColor="Plum" />
 								
-				<!-- Load profile - [QO-N][Rogue-Pick-Pocket][Flying][70]_isle-of-quel'danas_repair-mail -->
+				<!-- Load profile - [QO-N][Rogue-Pick-Pocket][Flying][80]_isle-of-quel'danas_repair-mail -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="Movement\Vendors\[QO-N][Rogue-Pick-Pocket][Flying][70]_isle-of-quel'danas_repair-mail" />				
+								ProfileName="Movement\Vendors\[QO-N][Rogue-Pick-Pocket][Flying][80]_isle-of-quel'danas_repair-mail" />				
 
 			</If>	<!-- If our free bag slots are <= 4 or our durability <= 30% -->
 
