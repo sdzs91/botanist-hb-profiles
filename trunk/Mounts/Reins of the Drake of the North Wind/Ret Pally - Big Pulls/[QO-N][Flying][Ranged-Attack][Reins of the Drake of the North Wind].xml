@@ -343,14 +343,15 @@
 					<CustomBehavior File="RunMacro" 
 									Macro="/tar Howling Gale" 
 									NumOfTimes="1" 
-									WaitTime="1000" 
+									WaitTime="1000" />
+									
 					<!-- Custom behavior - RunMacro - cast Judgement -->	
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Judgement" 
 									NumOfTimes="1" 
 									WaitTime="0"/>
 									
-					<!-- Custom behavior -  Wait timer- 3 second loot delay -->
+					<!-- Custom behavior -  Wait timer- 2 second loot delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="2000" />
 									
