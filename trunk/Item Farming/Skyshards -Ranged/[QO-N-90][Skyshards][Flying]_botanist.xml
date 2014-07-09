@@ -151,14 +151,10 @@
 				
 				
 				<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
-					
-					<!-- UserSettings -->
-					<CustomBehavior File="UserSettings"
-									UseMount="False" />
-								
+				
 					<!-- Custom behavior - TargetAndMoveToMob -->
 					<CustomBehavior File="TargetAndMoveToMob"
-									MoveWithinMaxRangeOfMob="5"
+									MoveWithinMaxRangeOfMob="20"
 									TargetOnlyIfHealthPercentAbove="5"
 									WaitForNpcs="False"
 									MobId="58671" >
@@ -177,10 +173,9 @@
 						<CustomBehavior File="Message" 
 										Text="Engaging a Ancient Mogu Spirit." 
 										LogColor="Cyan" />
-
-						<!-- CustomBehavior - RunMacro - Auto Attack -->
-						<CustomBehavior File="RunMacro" 
-										Macro="/cast Auto Attack" />				
+						
+						<!-- Cast one of the following spells -->
+						<CustomBehavior File="Misc\RangeAttack" />
 
 					</If>	<!-- If our target is a Ancient Mogu Spirit --> 
 
