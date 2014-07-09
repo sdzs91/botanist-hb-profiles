@@ -339,16 +339,25 @@
 					<!-- Move to the first Howling Gale -->				
 					<MoveTo X="-1039.558" Y="-69.81506" Z="700.4934" />				
 	
+					<!-- Profile message - Targeting the first Howling Gale -->
+					<CustomBehavior File="Message" 
+										Text="Targeting the first Howling Gale." 
+										LogColor="Plum" />
+	
+					<!-- Custom behavior -  Wait timer- 2 second loot delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="2000" />
+	
 					<!-- Target the Howling Gale -->
 					<CustomBehavior File="RunMacro" 
 									Macro="/tar Howling Gale" 
-									NumOfTimes="1" 
+									NumOfTimes="2" 
 									WaitTime="1000" />
 									
 					<!-- Custom behavior - RunMacro - cast Judgement -->	
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Judgement" 
-									NumOfTimes="1" 
+									NumOfTimes="2" 
 									WaitTime="0"/>
 									
 					<!-- Custom behavior -  Wait timer- 2 second loot delay -->
@@ -364,6 +373,15 @@
 					<!-- MoveTo to the second Howling Gale -->				
 					<MoveTo X="-1061.07" Y="-48.62126" Z="700.4818" />
 					
+					<!-- Profile message - Targeting the second Howling Gale -->
+					<CustomBehavior File="Message" 
+										Text="Targeting the second Howling Gale." 
+										LogColor="Plum" />
+	
+					<!-- Custom behavior -  Wait timer- 2 second loot delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="2000" />
+					
 					<!-- Clear target -->				
 					<CustomBehavior File="RunMacro" 
 									Macro="/cleartarget" 
@@ -373,13 +391,13 @@
 					<!-- Target the Howling Gale -->				
 					<CustomBehavior File="RunMacro" 
 									Macro="/targetenemy" 
-									NumOfTimes="1" 
+									NumOfTimes="2" 
 									WaitTime="1000" />
 					
 					<!-- Custom behavior - RunMacro - cast Judgement -->	
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Judgement" 
-									NumOfTimes="1" 
+									NumOfTimes="2" 
 									WaitTime="0"/>
 									
 					<!-- Custom behavior -  Wait timer- 3 second loot delay -->
