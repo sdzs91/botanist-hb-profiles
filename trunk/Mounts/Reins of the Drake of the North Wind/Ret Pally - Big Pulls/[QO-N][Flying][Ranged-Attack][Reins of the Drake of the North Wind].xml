@@ -354,11 +354,13 @@
 									NumOfTimes="2" 
 									WaitTime="1000" />
 									
-					<!-- Custom behavior - RunMacro - cast Judgement -->	
-					<CustomBehavior File="RunMacro" 
-									Macro="/cast Judgement" 
-									NumOfTimes="2" 
-									WaitTime="0"/>
+					<!-- Profile message - Using a ranged attack against the first Howling Gale -->
+					<CustomBehavior File="Message" 
+										Text="Using a ranged attack against the first Howling Gale." 
+										LogColor="Plum" />				
+									
+					<!-- Cast one of the following spells -->
+					<CustomBehavior File="Misc\RangeAttack" />
 									
 					<!-- Custom behavior -  Wait timer- 2 second loot delay -->
 					<CustomBehavior File="WaitTimer" 
@@ -394,11 +396,13 @@
 									NumOfTimes="2" 
 									WaitTime="1000" />
 					
-					<!-- Custom behavior - RunMacro - cast Judgement -->	
-					<CustomBehavior File="RunMacro" 
-									Macro="/cast Judgement" 
-									NumOfTimes="2" 
-									WaitTime="0"/>
+					<!-- Profile message - Using a ranged attack against the second Howling Gale -->
+					<CustomBehavior File="Message" 
+										Text="Using a ranged attack against the second Howling Gale." 
+										LogColor="Plum" />				
+									
+					<!-- Cast one of the following spells -->
+					<CustomBehavior File="Misc\RangeAttack" />
 									
 					<!-- Custom behavior -  Wait timer- 3 second loot delay -->
 					<CustomBehavior File="WaitTimer" 
