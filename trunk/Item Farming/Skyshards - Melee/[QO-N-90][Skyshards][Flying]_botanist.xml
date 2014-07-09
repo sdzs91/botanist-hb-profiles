@@ -172,10 +172,10 @@
 						<CustomBehavior File="Message" 
 										Text="Engaging a Ancient Mogu Spirit." 
 										LogColor="Cyan" />
-						
-						<!-- CustomBehavior - RunMacro - cast Mortal Strike -->
+
+						<!-- CustomBehavior - RunMacro - Auto Attack -->
 						<CustomBehavior File="RunMacro" 
-										Macro="/cast Mortal Strike" />
+										Macro="/cast Auto Attack" />				
 
 					</If>	<!-- If our target is a Ancient Mogu Spirit --> 
 
