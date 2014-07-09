@@ -150,7 +150,11 @@
 				
 				
 				<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
-				
+					
+					<!-- UserSettings -->
+					<CustomBehavior File="UserSettings"
+									UseMount="False" />
+								
 					<!-- Custom behavior - TargetAndMoveToMob -->
 					<CustomBehavior File="TargetAndMoveToMob"
 									MoveWithinMaxRangeOfMob="5"
