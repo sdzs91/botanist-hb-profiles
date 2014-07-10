@@ -143,9 +143,9 @@
 			<!-- If we have less then 35 empty bag slots or our durability is less than 30% -->
 			<If Condition="(Me.FreeBagSlots &lt;= 35) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 
-				<!-- Profile message - Our durability is less than 30% or we have less than 25 empty bag slots remaining -->
+				<!-- Profile message - Our durability is less than 30% or we have less than 35 empty bag slots remaining -->
 				<CustomBehavior File="Message" 
-								Text="Our durability is less than 30% or we have less than 25 empty bag slots remaining." 
+								Text="Our durability is less than 30% or we have less than 35 empty bag slots remaining." 
 								LogColor="Fuchsia" />
 			
 				<!-- If we are Alliance -->					
@@ -270,7 +270,7 @@
 				<CustomBehavior File="LoadProfile" 
 										ProfileName="[QO-N][90-Flying]_botanist_grim-batol_[food]" />
 										
-			</If>	
+			</If>	<!-- If we have more than 35 empty bag slots and our durability is greater than 30% -->	
 			
 		</If>
 		
