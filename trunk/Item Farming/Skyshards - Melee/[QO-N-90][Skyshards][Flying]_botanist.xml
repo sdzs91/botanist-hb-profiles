@@ -187,8 +187,11 @@
 											LogColor="Plum" />
 
 							<!-- CustomBehavior - RunMacro - cast Judgment -->
-						<CustomBehavior File="RunMacro" 
-										Macro="/cast Judgment" />
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Judgment" />
+										
+							<!-- Cast one of the following spells -->
+							<CustomBehavior File="Misc\RangeAttack" />			
 										
 						</If>	<!-- If we are Paladin-->				
 	
