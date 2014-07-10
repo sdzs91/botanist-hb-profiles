@@ -254,7 +254,7 @@
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Vendors\[QO-N][90-Flying]_botanist_grim-batol_[repair-mail]" />
 
-			</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+			</If>	<!-- If we have less then 35 empty bag slots or our durability is less than 30% -->
 
 			<!-- Profile message - Waiting 3 seconds - Food check - Pine Nut Bread -->
 			<CustomBehavior File="Message" 
