@@ -178,6 +178,20 @@
 										Text="Engaging a Ancient Mogu Spirit." 
 										LogColor="Cyan" />
 
+						<!-- If we are Paladin-->
+						<If Condition="(Me.Class == WoWClass.Paladin)">
+						
+							<!-- Profile message - We are using a Paladin -->
+							<CustomBehavior File="Message" 
+											Text="We are using a Paladin \nCasting Judgment." 
+											LogColor="Plum" />
+
+							<!-- CustomBehavior - RunMacro - cast Judgment -->
+						<CustomBehavior File="RunMacro" 
+										Macro="/cast Judgment" />
+										
+						</If>	<!-- If we are Paladin-->				
+	
 						<!-- CustomBehavior - RunMacro - Auto Attack -->
 						<CustomBehavior File="RunMacro" 
 										Macro="/cast Auto Attack" />				
