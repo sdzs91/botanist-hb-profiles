@@ -1008,9 +1008,13 @@
 					<!-- Run to ramp before Karsh Steelbender -->
 					<MoveTo X="303.4512" Y="809.5098" Z="103.5507" />
 					
-					<!-- Wait timer to delay movement - 20 seconds -->
+					<!-- Continue when tagged -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									CheckRange="1" />
+					
+					<!-- Wait timer to delay movement - 60 seconds -->
 					<CustomBehavior File="WaitTimer"
-									WaitTime="20000" />
+									WaitTime="60000" />
 									
 					<!-- Profile message - Waiting to be tagged by the Booster -->
 					<CustomBehavior File="Message" 

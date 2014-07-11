@@ -270,12 +270,12 @@
 										Text="Flying to the rendzvous point.." 
 										LogColor="Lime" />
 					
-					<!-- Fly to the hover/rendezvous point -->
+					<!-- Fly to the hover/rendezvous point 
 					<CustomBehavior File="FlyTo" X="-7038.787" Y="-1230.125" Z="390.7811" />
 					
-					<!-- Continue when tagged by the RAFs -->
+					Continue when tagged by the RAFs 
 					<CustomBehavior File="Misc\LoadProfileOn" 
-											CheckRange="5" />
+											CheckRange="5" />	-->
 									
 					<!-- Wait 20 seconds -->
 					<CustomBehavior File="WaitTimer" 
@@ -586,16 +586,16 @@
 			</If>
 			
 			<!-- Profile message - Flying to the rendzvous -->
-					<CustomBehavior File="Message" 
-										Text="Flying to the rendzvous point." 
-										LogColor="Lime" />
+			<CustomBehavior File="Message" 
+								Text="Flying to the rendzvous point." 
+								LogColor="Lime" />
 										
 			<!-- Fly to the rendzvous at Iron Summit -->
 			<CustomBehavior File="FlyTo" X="-7038.787" Y="-1230.125" Z="390.7811" />
 			
-			<!-- Continue when tagged by the Booster -->
+			<!-- Continue when tagged by the Booster 
 			<CustomBehavior File="Misc\LoadProfileOn" 
-									CheckRange="5" />
+									CheckRange="5" />	-->
 									
 			<!-- Wait 20 seconds -->
 			<CustomBehavior File="WaitTimer" 
