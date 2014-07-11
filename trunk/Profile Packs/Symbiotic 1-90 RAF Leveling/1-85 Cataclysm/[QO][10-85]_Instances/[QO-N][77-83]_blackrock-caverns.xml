@@ -647,20 +647,25 @@
 					<!-- Wait timer to delay movement - 5 seconds -->
 					<CustomBehavior File="WaitTimer" 
 										WaitTime="5000" />
-										
+					
 					<!-- Run to trigger before exit -->
 					<MoveTo X="223.3936" Y="1110.335" Z="205.6088" />
 					
 					<!-- Continue when all members are present -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
 									CheckRange="1" />
-				
+
+
 					<!-- Wait timer to delay movement - 3 seconds -->		
 					<CustomBehavior File="WaitTimer"
 									WaitTime="3000" />
 					
 					<!-- Run to level check -->
 					<MoveTo X="222.4308" Y="1128.161" Z="205.569" />
+					
+					<!-- Continue when tagged -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									CheckRange="1" />
 					
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -1025,14 +1030,10 @@
 					<CustomBehavior File="Misc\LoadProfileOn" 
 									CheckRange="1" />
 
-					<!-- Wait timer to delay movement - 30 seconds -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="30000" />				
-
 					<!-- Move to - teleport -->
 					<MoveTo X="285.7425" Y="841.1832" Z="95.92287" />
 					
-					<!-- Interact with the telport -->
+					<!-- Ineract with the telport -->
 					<CustomBehavior File="InteractWith" MobId="51340" />
 					
 					<!-- Wait timer to delay movement - 5 seconds -->
@@ -1045,18 +1046,23 @@
 					<!-- Continue when all members are present -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
 									CheckRange="1" />
-				
-					<!-- Wait timer to delay movement - 8 seconds -->		
+
+
+					<!-- Wait timer to delay movement - 3 seconds -->		
 					<CustomBehavior File="WaitTimer"
-									WaitTime="8000" />
+									WaitTime="3000" />
 					
 					<!-- Run to level check -->
 					<MoveTo X="222.4308" Y="1128.161" Z="205.569" />
 					
+					<!-- Continue when tagged -->
+					<CustomBehavior File="Misc\LoadProfileOn" 
+									CheckRange="1" />
+					
 					<!-- If we are high enough to go to the next instance, do so -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
 									MinLevel="83" 
-									ProfileName="[QO-N][83-85]_lost-city-of-the-tol'vir.xml"  />
+									ProfileName="[QO-N][83-85]_lost-city-of-the-tol'vir.xml" />
 				
 					<!-- Wait timer to delay movement - 30 seconds -->
 					<CustomBehavior File="WaitTimer" 
