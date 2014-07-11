@@ -46,7 +46,7 @@
 		<If Condition="Me.Level &gt;= 90">
 			<CustomBehavior File="Message" 
 							Text="We are a Booster." 
-							LogColor="Fuchsia" />
+							LogColor="Chartreuse" />
 		
 			<!-- Booster UserSettings -->
 			<CustomBehavior File="UserSettings"
@@ -74,7 +74,7 @@
 				
 					<CustomBehavior File="Message" 
 									Text="Blackrock Caverns detected. Running out."
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 						
 					<!-- Move to - zone in location -->
 					<MoveTo X="209.903" Y="1133.02" Z="205.569" />	
@@ -93,7 +93,7 @@
 				<If Condition="Me.X &gt; -7565.834 || Me.X &lt; -7582.962 || Me.Y &gt; -1297.568 || Me.Y &lt; -1328.157" >
 					<CustomBehavior File="Message" 
 									Text="Distance from portal is not within our proximity, initializing movement to get there."
-									LogColor="Fuchsia" />	
+									LogColor="Chartreuse" />	
 									
 					<CustomBehavior File="LoadProfile" 
 									ProfileName="Movement\[QO-N-M][80-83]_blackrock-caverns" />
@@ -102,7 +102,7 @@
 				<If Condition="Me.X &lt; -7565.834 &amp;&amp; Me.X &gt; -7582.962 &amp;&amp; Me.Y &lt; -1297.568 &amp;&amp; Me.Y &gt; -1328.157" >
 					<CustomBehavior File="Message" 
 									Text="Portal detected nearby."
-									LogColor="Fuchsia" />	
+									LogColor="Chartreuse" />	
 						
 					<!-- If we didn't enter the instance, wait 15 seconds then attempt to enter again -->
 					<While Condition="Me.ZoneId != 4926">
@@ -114,7 +114,7 @@
 										
 						<CustomBehavior File="Message" 
 										Text="Waiting for the dungeon to load." 
-										LogColor="Fuchsia" />
+										LogColor="Chartreuse" />
 									
 						<!-- Wait timer to delay movement - 30 seconds with 30 second variant -->			
 						<CustomBehavior File="WaitTimer" 
@@ -125,7 +125,7 @@
 						<If Condition="Me.ZoneId != 4926">
 							<CustomBehavior File="Message" 
 											Text="We are locked out. Waiting and trying again." 
-											LogColor="Fuchsia" />
+											LogColor="Chartreuse" />
 						</If> <!-- Locked -->
 					</While> <!-- While we aren't in the instance -->
 				</If> <!-- In box -->
@@ -145,7 +145,7 @@
 				
 					<CustomBehavior File="Message" 
 									Text="Waiting for the tag."  
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 				
 					<!-- Begin the instance once all party members are within range  -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -157,7 +157,7 @@
 									
 					<CustomBehavior File="Message" 
 									Text="Blackrock Caverns initialized."  
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 									
 					<!-- Run to beginning of the bridge -->				
 					<MoveTo X="209.4919" Y="1130.522" Z="205.5689" />				
@@ -217,7 +217,7 @@
 					<!-- Profile message - Tagging the RAFs to send them out of the instance to keep them from dying -->
 					<CustomBehavior File="Message" 
 									Text="Tagging the RAFs to send them out of the instance, to keep them from dying." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- go tag RAF's to send them out of the instance -->
 					<MoveTo X="210.239" Y="1103.664" Z="208.8924" />
@@ -253,7 +253,7 @@
 					<!-- Profile message - Waiting for all party members to be present -->
 					<CustomBehavior File="Message" 
 									Text="Waiting for all party members to be present." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 									
 					<!-- Continue when tagged by the RAFs -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -426,7 +426,7 @@
 					<!-- Profile message - Tagging the RAFs at the third Evolved Twilight Zealot -->
 					<CustomBehavior File="Message" 
 									Text="Tagging the RAFs at the deadend-bridge entrance." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Tag the RAFs at the deadend bridge entrance -->
 					<MoveTo X="543.8633" Y="893.7067" Z="156.5036" />
@@ -447,7 +447,7 @@
 					<!-- Profile message - Waiting to be tagged by the RAFs -->
 					<CustomBehavior File="Message" 
 									Text="Waiting to be tagged by the RAFs." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 									
 					<!-- Continue when tagged by the RAFs -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -490,13 +490,13 @@
 					<!-- ************************** 1st Mobs after Karsh ********************************************* -->
 					
 					
-					<!-- Profile message - Enabling combat -->
+					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
+										Text="Disabling combat." 
 										LogColor="Gold" />
-
-					<!-- enable combat -->
-					<EnableBehavior Name="Combat" />
+					
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
 					
 					<!-- Move to - left-hand group after Karsh -->
 					<MoveTo X="224.8825" Y="708.1334" Z="109.0304" />
@@ -515,6 +515,14 @@
 					
 					<!-- Move to - right-hand group at the bottom of the incline -->
 					<MoveTo X="195.5416" Y="618.7083" Z="78.83279" />
+					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
 
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
@@ -524,12 +532,28 @@
 					<!-- ************************** 2nd mobs after Karsh ********************************************* -->
 					
 					
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
+					
 					<!-- Move to - left-hand group  -->
 					<MoveTo X="235.7731" Y="586.729" Z="74.98917" />
 					
 					<!-- Move to - kite to RAF XP range  -->
 					<MoveTo X="212.2745" Y="643.5215" Z="86.12631" />
 
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
+					
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="3000" />
@@ -538,12 +562,27 @@
 					<!-- ************************** 3rd mobs after Karsh ********************************************* -->
 					
 
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
 					
 					<!-- Move to - right-hand group - end of the path -->
 					<MoveTo X="269.6845" Y="545.0919" Z="69.91064" />
 
 					<!-- Move to - kite to the middle of the path -->
 					<MoveTo X="212.9883" Y="593.7704" Z="75.40996" />
+					
+					<!-- Profile message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
 					
 					<!-- Wait timer - wait 3 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
@@ -600,7 +639,7 @@
 					<!-- Profile message - Tagging the RAFs on the bridge before Karsh -->
 					<CustomBehavior File="Message" 
 									Text="Tagging the RAFs on the bridge before Karsh." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 
 					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
@@ -685,7 +724,7 @@
 				<If Condition="Me.ZoneId == 4926">
 					<CustomBehavior File="Message" 
 									Text="Blackrock Caverns detected. Running out to reset."
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 						
 					<!-- Move to - zone in location -->
 					<MoveTo X="209.903" Y="1133.02" Z="205.569" />	
@@ -705,7 +744,7 @@
 					<!-- First reset isn't enough to get a fresh instance if toons are still inside -->
 					<CustomBehavior File="Message" 
 									Text="Resetting instance, 1 of 2." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<CustomBehavior File="RunMacro" 
 									Macro="/script ResetInstances()" />
@@ -720,7 +759,7 @@
 					<!-- The second reset confirms we are safe to enter the instance -->
 					<CustomBehavior File="Message" 
 									Text="Resetting instance, 2 of 2." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					<CustomBehavior File="RunMacro" 
 									Macro="/script ResetInstances()" />
 					<CustomBehavior File="RunMacro" 
@@ -728,7 +767,7 @@
 					
 					<CustomBehavior File="Message" 
 									Text="Instance reset." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 				</If> <!-- In box -->
 			</While> <!-- Infinite loop -->
 		</If> <!-- Booster -->	
@@ -740,13 +779,13 @@
 		<If Condition="Me.Level &lt;= 85">
 			<CustomBehavior File="Message" 
 							Text="We are a RAF." 
-							LogColor="Fuchsia" />
+							LogColor="Chartreuse" />
 							
 			<If Condition="Me.IsAlliance">
 				<If Condition="Me.HearthstoneAreaId != 5148">
 					<CustomBehavior File="Message" 
 									Text="Our Hearthstone isn't set in the Trade District in Stormwind. Stopping profile." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 									
 					<CustomBehavior File="UserSettings" 
 										StopBot="true" />
@@ -756,7 +795,7 @@
 					<If Condition="Me.HearthstoneAreaId != 5170">
 						<CustomBehavior File="Message" 
 										Text="Our Hearthstone isn't set in the Valley of Strength in Orgrimmar. Stopping profile." 
-										LogColor="Fuchsia" />
+										LogColor="Chartreuse" />
 										
 						<CustomBehavior File="UserSettings" 
 										StopBot="true" />
@@ -787,7 +826,7 @@
 				<If Condition="Me.ZoneId == 4926">
 					<CustomBehavior File="Message" 
 									Text="Blackrock Caverns detected. Running out."
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 						
 					<!-- Move to - zone in location -->
 					<MoveTo X="209.903" Y="1133.02" Z="205.569" />	
@@ -806,7 +845,7 @@
 				<If Condition="Me.X &gt; -7565.834 || Me.X &lt; -7582.962 || Me.Y &gt; -1297.568 || Me.Y &lt; -1328.157" >
 					<CustomBehavior File="Message" 
 									Text="Distance from portal is not within our proximity, initializing movement to get there."
-									LogColor="Fuchsia" />	
+									LogColor="Chartreuse" />	
 									
 					<CustomBehavior File="LoadProfile" 
 									ProfileName="Movement\[QO-N-M][80-83]_blackrock-caverns" />
@@ -815,7 +854,7 @@
 				<If Condition="Me.X &lt; -7565.834 &amp;&amp; Me.X &gt; -7582.962 &amp;&amp; Me.Y &lt; -1297.568 &amp;&amp; Me.Y &gt; -1328.157" >
 					<CustomBehavior File="Message" 
 									Text="Portal detected nearby."
-									LogColor="Fuchsia" />	
+									LogColor="Chartreuse" />	
 						
 					<!-- If we didn't enter the instance, wait 15 seconds then attempt to enter again -->
 					<While Condition="Me.ZoneId != 4926">
@@ -827,7 +866,7 @@
 										
 						<CustomBehavior File="Message" 
 										Text="Waiting for the dungeon to load." 
-										LogColor="Fuchsia" />
+										LogColor="Chartreuse" />
 									
 						<!-- Wait timer to delay movement - 30 seconds with 30 second variant -->			
 						<CustomBehavior File="WaitTimer" 
@@ -838,7 +877,7 @@
 						<If Condition="Me.ZoneId != 4926">
 							<CustomBehavior File="Message" 
 											Text="We are locked out. Waiting and trying again." 
-											LogColor="Fuchsia" />
+											LogColor="Chartreuse" />
 						</If> <!-- Locked -->
 					</While> <!-- While we aren't in the instance -->
 				</If> <!-- In box -->
@@ -867,7 +906,7 @@
 									
 					<CustomBehavior File="Message" 
 									Text="Blackrock Caverns initialized."  
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 
 					<!-- Wait timer to delay movement - 70 seconds -->
 					<CustomBehavior File="WaitTimer" 
@@ -880,7 +919,7 @@
 					<!-- Profile message - Waiting to be tagged by the Booster -->
 					<CustomBehavior File="Message" 
 									Text="Waiting to be tagged by the Booster." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 									
 					<!-- Exit the instance after being tagged to avoid dying -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -903,7 +942,7 @@
 					<If Condition="Me.X &lt; -7565.834 &amp;&amp; Me.X &gt; -7582.962 &amp;&amp; Me.Y &lt; -1297.568 &amp;&amp; Me.Y &gt; -1328.157" >
 						<CustomBehavior File="Message" 
 										Text="Portal detected nearby."
-										LogColor="Fuchsia" />	
+										LogColor="Chartreuse" />	
 							
 						<!-- If we didn't enter the instance, wait 15 seconds then attempt to enter again -->
 						<While Condition="Me.ZoneId != 4926">
@@ -915,7 +954,7 @@
 											
 							<CustomBehavior File="Message" 
 											Text="Waiting for the dungeon to load." 
-											LogColor="Fuchsia" />
+											LogColor="Chartreuse" />
 										
 							<!-- Wait timer to delay movement - 30 seconds with 30 second variant -->			
 							<CustomBehavior File="WaitTimer" 
@@ -926,7 +965,7 @@
 							<If Condition="Me.ZoneId != 4926">
 								<CustomBehavior File="Message" 
 												Text="We are locked out. Waiting and trying again." 
-												LogColor="Fuchsia" />
+												LogColor="Chartreuse" />
 							</If> <!-- Locked -->
 						</While> <!-- While we aren't in the instance -->
 					</If> <!-- If we are in the box -->
@@ -937,7 +976,7 @@
 					<!-- Profile message - Waiting for all party members to be present -->
 					<CustomBehavior File="Message" 
 									Text="Waiting for all party members to be present." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- LPO to tag or be tagged at the first bridge -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -969,7 +1008,7 @@
 					<!-- Profile message - Moving to Corla, Herald of Twilight -->
 					<CustomBehavior File="Message" 
 									Text="Moving to Corla, Herald of Twilight." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Run to Corla, Herald of Twilight -->
 					<MoveTo X="573.5693" Y="985.1115" Z="155.3528" />
@@ -981,7 +1020,7 @@
 					<!-- Profile message - Moving to the deadend-bridge entrance -->
 					<CustomBehavior File="Message" 
 									Text="Moving to the deadend-bridge entrance." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Move to the deadend bridge entrance -->
 					<MoveTo X="543.8633" Y="893.7067" Z="156.5036" />
@@ -989,7 +1028,7 @@
 					<!-- Profile message - Waiting to be tagged by the Booster -->
 					<CustomBehavior File="Message" 
 									Text="Waiting to be tagged by the Booster." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 					
 					<!-- Continue when tagged -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -1002,7 +1041,7 @@
 					<!-- Profile message - Moving to the ramp before Karsh Steelbender -->
 					<CustomBehavior File="Message" 
 									Text="Moving to the ramp before Karsh Steelbender to tag the Booster." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 
 					<!-- CTM to jump off the ramp -->
 					<CustomBehavior File="MyCTM" X="567.2651" Y="889.2255" Z="155.3758" />
@@ -1024,7 +1063,7 @@
 					<!-- Profile message - Waiting to be tagged by the Booster -->
 					<CustomBehavior File="Message" 
 									Text="Waiting to be tagged by the Booster." 
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 									
 					<!-- Continue when tagged -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -1076,7 +1115,7 @@
 				<If Condition="Me.ZoneId == 4926">
 					<CustomBehavior File="Message" 
 									Text="Blackrock Caverns detected. Running out."
-									LogColor="Fuchsia" />
+									LogColor="Chartreuse" />
 
 					<!-- enableable combat -->
 					<EnableBehavior Name="Combat" />
