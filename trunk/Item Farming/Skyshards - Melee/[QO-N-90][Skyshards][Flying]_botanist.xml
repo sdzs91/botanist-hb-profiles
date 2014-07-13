@@ -194,6 +194,23 @@
 							<CustomBehavior File="Misc\RangeAttack" />			
 										
 						</If>	<!-- If we are Paladin-->				
+						
+						<!-- If we are Rogue -->
+						<If Condition="(Me.Class == WoWClass.Rogue)">
+						
+							<!-- Profile message - We are using a Rogue -->
+							<CustomBehavior File="Message" 
+											Text="We are using a Rogue \nSinister Strike." 
+											LogColor="Plum" />
+
+							<!-- CustomBehavior - RunMacro - cast Sinister Strike -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Sinister Strike" />
+										
+							<!-- Cast one of the following spells -->
+							<CustomBehavior File="Misc\RangeAttack" />			
+										
+						</If>	<!-- If we are Paladin-->
 	
 						<!-- CustomBehavior - RunMacro - Auto Attack -->
 						<CustomBehavior File="RunMacro" 
