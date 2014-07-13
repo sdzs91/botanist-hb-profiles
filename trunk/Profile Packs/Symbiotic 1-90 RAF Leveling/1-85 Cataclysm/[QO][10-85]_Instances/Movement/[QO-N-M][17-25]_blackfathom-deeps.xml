@@ -852,6 +852,14 @@
 									Text="We are Alliance." 
 									LogColor="Cyan" />
 									
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />				
+									
 					<If Condition="Me.X &gt; 7700 &amp;&amp; Me.X &lt;= 8600" >
 						<CustomBehavior File="Message" 
 										Text="We are in Rut'theran Village." 
@@ -869,6 +877,7 @@
 										LogColor="Lime" />
 									
 						<RunTo X="7459.9" Y="-326.56" Z="8.089962" />
+						
 					</If> <!-- Rut'theran Village -->
 						
 					<If Condition="Me.ZoneId == 148">
@@ -876,11 +885,14 @@
 										Text="We are in Darkshore." 
 										LogColor="Cyan" />
 										
+										
+										
 						<If Condition="Me.X &gt; 6000 &amp;&amp; Me.X &lt;= 7700">
+						
 							<CustomBehavior File="Message" 
 											Text="We are in Lor'danel." 
 											LogColor="Cyan" />
-											
+
 							<CustomBehavior File="WaitTimer" 
 											WaitTime="10000" />
 											
@@ -892,7 +904,7 @@
 											LogColor="Lime" />
 										
 							<!-- Run past the mountain -->
-							<CustomBehavior File="NoCombatMoveTo" X="5789.486" Y="282.5884" Z="21.9652" />
+							<MoveTo X="5789.486" Y="282.5884" Z="21.9652" />
 						</If> <!-- Lor'danel -->
 			
 						
@@ -900,7 +912,7 @@
 							<CustomBehavior File="Message" 
 											Text="We are between The Eye of the Vortex and Grove of the Ancients." 
 											LogColor="Cyan" />
-						
+
 							<!-- Run to Grove of the Ancients, darkshore -->
 							<RunTo X="4970.5" Y="147.65" Z="51.64" />
 							
@@ -913,7 +925,7 @@
 											LogColor="Lime" />
 						
 							<!-- Ashenvale -->
-							<CustomBehavior File="NoCombatMoveTo" X="4104.732" Y="22.3274" Z="17.77499" />
+							<MoveTo X="4104.732" Y="22.3274" Z="17.77499" />
 						</If> <!-- Grove of the Ancients -->
 					</If> <!-- Darkshore -->
 					
@@ -926,9 +938,9 @@
 							<CustomBehavior File="Message" 
 											Text="We are below the northern entrance to Ashenvale." 
 											LogColor="Cyan" />
-											
+
 							<!-- RunLikeHell to force movement to the rendezvous -->
-							<CustomBehavior File="NoCombatMoveTo" X="3870.062" Y="539.0946" Z="6.604815" />
+							<MoveTo X="3870.062" Y="539.0946" Z="6.604815" />
 							
 							<CustomBehavior File="Message" 
 											Text="We are at the rendezvous point." 
@@ -940,6 +952,14 @@
 						<CustomBehavior File="Message" 
 										Text="We are Horde." 
 										LogColor="Cyan" />
+										
+						<!-- Profile message - Disabling combat -->
+						<CustomBehavior File="Message" 
+											Text="Disabling combat." 
+											LogColor="Gold" />
+						
+						<!-- DisableBehavior - Combat -->
+						<DisableBehavior Name="Combat" />				
 					
 						<!-- Orgrimmar -->
 						<If Condition="Me.ZoneId == 1637">
@@ -996,7 +1016,7 @@
 												LogColor="Lime" />
 													
 								<!-- Moving to Crossroads flight master -->
-								<CustomBehavior File="NoCombatMoveTo" X="-439.4449" Y="-2598.785" Z="95.84019" />
+								<MoveTo X="-439.4449" Y="-2598.785" Z="95.84019" />
 								
 								<CustomBehavior File="Message" 
 												Text="We are in The Crossroads." 
@@ -1007,19 +1027,19 @@
 												LogColor="Lime" />
 												
 								<!-- Run to the tower intersection to stay on the road -->
-								<CustomBehavior File="NoCombatMoveTo" X="42.21896" Y="-2717.489" Z="91.66673" />
+								<MoveTo X="42.21896" Y="-2717.489" Z="91.66673" />
 								
 								<CustomBehavior File="Message" 
 												Text="We are at the tower." 
 												LogColor="Cyan" />
 												
 								<!-- Run past the next check -->
-								<CustomBehavior File="NoCombatMoveTo" X="93.25973" Y="-2710.727" Z="91.69537" />
+								<MoveTo X="93.25973" Y="-2710.727" Z="91.69537" />
 							</If> <!-- Tower and lower -->
 							
 							<!-- Between the tower north of crossroads and the gates entering ashenvale, move to Mor'shan Rampart -->
 							<If Condition="Me.X &gt; 40 &amp;&amp; Me.X &lt;= 1260" >
-								<CustomBehavior File="NoCombatMoveTo" X="93.25973" Y="-2710.727" Z="91.69537" />
+								<MoveTo X="93.25973" Y="-2710.727" Z="91.69537" />
 							
 								<CustomBehavior File="Message" 
 												Text="We are between the tower and the gates of Ashenvale."
@@ -1030,19 +1050,19 @@
 												LogColor="Lime" />
 							
 								<!-- Moving to the dead tree to stay on the road -->
-								<CustomBehavior File="NoCombatMoveTo" X="574.6573" Y="-2568.682" Z="95.80037" />
+								<MoveTo X="574.6573" Y="-2568.682" Z="95.80037" />
 							
 								<!-- Moving to the huggy bear to avoid getting killed -->
-								<CustomBehavior File="NoCombatMoveTo" X="755.0905" Y="-2391.459" Z="91.66711" />
+								<MoveTo X="755.0905" Y="-2391.459" Z="91.66711" />
 							
 								<!-- Moving to the huggy bear 2 to avoid getting killed -->
-								<CustomBehavior File="NoCombatMoveTo" X="954.4182" Y="-2359.165" Z="91.7278" />
+								<MoveTo X="954.4182" Y="-2359.165" Z="91.7278" />
 							
 								<!-- Moving back to the road -->
-								<CustomBehavior File="NoCombatMoveTo" X="1100.294" Y="-2318.211" Z="91.70042" />
+								<MoveTo X="1100.294" Y="-2318.211" Z="91.70042" />
 							
 								<!-- Moving to Mor'shan Rampart flight master-->
-								<CustomBehavior File="NoCombatMoveTo" X="1206.031" Y="-2209.855" Z="92.1406" />
+								<MoveTo X="1206.031" Y="-2209.855" Z="92.1406" />
 								
 								<CustomBehavior File="Message" 
 												Text="We are in Mor'shan Rampart." 
@@ -1053,7 +1073,7 @@
 												Text="Moving to Splintertree Post."
 												LogColor="Lime" />
 												
-								<CustomBehavior File="NoCombatMoveTo" X="1202.344" Y="-2306.263" Z="91.69298" />
+								<MoveTo X="1202.344" Y="-2306.263" Z="91.69298" />
 				
 								<!-- RunLikeHell to bypass the gate guards -->
 								<CustomBehavior File="RunLikeHell" 
@@ -1129,7 +1149,7 @@
 								</CustomBehavior>
 								
 								<!-- Run past the next check -->
-								<CustomBehavior File="NoCombatMoveTo" X="2014.13" Y="-1899.615" Z="98.50292" />
+								<MoveTo X="2014.13" Y="-1899.615" Z="98.50292" />
 							</If> <!-- Splintertree Post -->
 							
 							<!-- North of the gates entering ashenvale and west of the bridge between silverwind refuge and splintertree outpost and east of the atranaar and hellscream's reach path convergence -->
@@ -1141,7 +1161,7 @@
 												LogColor="Cyan" />
 								
 								<!-- RunLikeHell to bypass the mobs outside Hellscream's Watch -->
-								<CustomBehavior File="NoCombatMoveTo" 
+								<MoveTo 
 												X="3049.08" Y="-498.95" Z="205.6398" />
 						
 								<!-- Moving to Hellscream's Watch flight master -->
@@ -1156,12 +1176,12 @@
 												LogColor="Lime" />
 								
 								<!-- Run past the next check -->
-								<CustomBehavior File="NoCombatMoveTo" X="2818.664" Y="28.33277" Z="95.37694" />
+								<MoveTo X="2818.664" Y="28.33277" Z="95.37694" />
 							</If> <!-- Hellscream's Watch -->
 							
 							<!-- North of the gates entering ashenvale and west of the atranaar and hellscream's reach path convergence -->
 							<If Condition="Me.Y &gt; -15 &amp;&amp; Me.X &lt; 3700" >
-								<CustomBehavior File="NoCombatMoveTo" X="2818.664" Y="28.33277" Z="95.37694" />
+								<MoveTo X="2818.664" Y="28.33277" Z="95.37694" />
 								
 								<CustomBehavior File="Message" 
 												Text="We are west of Astranaar and Hellscream's Watch."
@@ -1172,7 +1192,7 @@
 												LogColor="Lime" />
 								
 								<!-- Moving to the intersection sign post -->
-								<CustomBehavior File="NoCombatMoveTo" X="3520.993" Y="554.2925" Z="5.413744" />
+								<MoveTo X="3520.993" Y="554.2925" Z="5.413744" />
 								
 								<!-- Moving to the rendezvous -->
 								<CustomBehavior File="RunLikeHell" 
@@ -1195,12 +1215,35 @@
 				
 				<!-- Not at rendezvous -->
 				<If Condition="Me.X != 3817 &amp;&amp; Me.Y != 513">
+				
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
+				
 					<CustomBehavior File="Message" 
 									Text="Moving to the rendezvous point."
 									LogColor="Lime" />
 				
-					<CustomBehavior File="NoCombatMoveTo" X="3817.794" Y="513.2227" Z="30.93373" />
+					<MoveTo X="3817.794" Y="513.2227" Z="30.93373" />
+
 				</If> <!-- Not at rendezvous -->
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				
 				<!-- Begin the randezvous once all party members are within range -->
 				<CustomBehavior File="Misc\LoadProfileOn" 
@@ -1257,7 +1300,7 @@
 								WaitTime="20000" />				
 								
 				<!-- Priestess -->				
-				<CustomBehavior File="NoCombatMoveTo" X="4291.086" Y="897.1267" Z="-12.03782" />
+				<MoveTo X="4291.086" Y="897.1267" Z="-12.03782" />
 				
 				<!-- profile message - Waiting to be tagged by the Booster -->				
 				<CustomBehavior File="Message" 
@@ -1273,7 +1316,7 @@
 								WaitTime="25000" />					
 								
 				<!-- battle standard -->				
-				<CustomBehavior File="NoCombatMoveTo" X="4252.153" Y="821.1868" Z="-7.261003" />
+				<MoveTo X="4252.153" Y="821.1868" Z="-7.261003" />
 				
 				<!-- profile message - Waiting to be tagged by the Booster -->				
 				<CustomBehavior File="Message" 
@@ -1289,13 +1332,21 @@
 								WaitTime="25000" />					
 								
 				<!-- Run to the instance box -->				
-				<CustomBehavior File="NoCombatMoveTo" X="4248.14" Y="745.047" Z="-24.4963" />
+				<MoveTo X="4248.14" Y="745.047" Z="-24.4963" />
 				
 				<!-- Inside the instance box, load the Blackfathom Deeps profile -->
 				<If Condition="Me.X &gt; 4230 &amp;&amp; Me.X &lt; 4270 &amp;&amp; Me.Y &lt; 760 &amp;&amp; Me.Y &gt; 720" >
 					<CustomBehavior File="Message" 
 									Text="We are in the Blackfathom Deeps box." 
 									LogColor="Cyan" />
+									
+					<!-- CustomBehavior -  message - Enabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Enabling combat." 
+										LogColor="Gold" />
+
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />
 					
 					<CustomBehavior File="LoadProfile" 
 									ProfileName="..\[QO-N][17-25]_blackfathom-deeps" />
