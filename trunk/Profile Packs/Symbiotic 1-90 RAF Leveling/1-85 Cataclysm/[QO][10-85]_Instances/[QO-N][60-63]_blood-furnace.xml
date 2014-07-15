@@ -73,13 +73,13 @@
 									Text="Hellfire Ramparts detected. Running out."
 									LogColor="Fuchsia" />
 									
-					<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+					<MoveTo X="-1355.28" Y="1641.57" Z="68.274" />
 					
 					<!-- Go through the portal -->
 					<CustomBehavior File="Misc\InInstance" X="-1358.403" Y="1629.539" Z="68.55495" />
 					
 					<!-- Make sure we run to the right spot outside the portal -->
-					<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
+					<MoveTo X="-363.436" Y="3078.43" Z="-15.0013" />
 				</If> <!-- HR -->
 			
 				<!-- If we are inside -->
@@ -88,14 +88,16 @@
 									Text="Blood Furnace detected. Running out."
 									LogColor="Fuchsia" />
 									
-					<RunTo X="-4.093049" Y="17.00105" Z="-44.78368" />
+					<MoveTo X="-2.73782" Y="19.8424" Z="-44.79777" />
 					
 					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="0.3497318" Y="33.50735" Z="-44.84385" />
+					<CustomBehavior File="Misc\InInstance" 
+									X="2" Y="28.3704" Z="-44.78903" />
 
-					
 					<!-- Make sure we run to the right spot outside the portal -->
-					<RunTo X="-302.408" Y="3162.92" Z="31.7273" />
+					<CustomBehavior File="MyCTM" 
+									X="-302.408" Y="3162.92" Z="31.7273" />
+					
 				</If> <!-- BF -->
 			
 				<!-- If we are not in the box, load the movement profile -->
@@ -117,7 +119,7 @@
 					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
 					<While Condition="Me.ZoneId != 3713">
 						<!-- Make sure we run to the right spot outside the portal -->
-						<RunTo X="-302.408" Y="3162.92" Z="31.7273" />
+						<MoveTo X="-302.408" Y="3162.92" Z="31.7273" />
 
 						<!-- Run back in the portal -->
 						<CustomBehavior File="Misc\InInstance" X="-304.8059" Y="3173.918" Z="31.7268" />
@@ -147,10 +149,10 @@
 					<CustomBehavior File="RunMacro"
 									Macro="/run SetOptOutOfLoot(1)" />
 					
-					<RunTo X="-2.73782" Y="19.8424" Z="-44.79826" />
+					<MoveTo X="-2.73782" Y="19.8424" Z="-44.79826" />
 				
 					<!-- Run to quest givers -->
-					<RunTo X="0.2994731" Y="-15.27276" Z="-42.70581" />
+					<MoveTo X="0.2994731" Y="-15.27276" Z="-42.70581" />
 
 					<!-- Begin the instance once all party members are within range  -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -189,20 +191,20 @@
 						<Hotspot X="-0.449405" Y="-77.91169" Z="-41.33155" />
 						<Hotspot X="46.11079" Y="-78.09003" Z="-40.26909" />
 					</CustomBehavior>
-					<RunTo X="46.11079" Y="-78.09003" Z="-40.26909" />
+					<MoveTo X="46.11079" Y="-78.09003" Z="-40.26909" />
 					
 					<CustomBehavior File="Message" 
 									Text="Tagging RAFs."
 									LogColor="Fuchsia" />
 									
 					<!-- Tagging rafs -->
-					<RunTo X="0.2994731" Y="-15.27276" Z="-42.70581" />
+					<MoveTo X="0.2994731" Y="-15.27276" Z="-42.70581" />
 					
 					<!-- Run back up the stairs -->
-					<RunTo X="197.8716" Y="-84.52708" Z="9.611606" />
-					<RunTo X="228.5886" Y="-84.20152" Z="9.595618" />
-					<RunTo X="238.8762" Y="-76.45096" Z="9.624174" />
-					<RunTo X="242.2223" Y="-60.96181" Z="9.610771" />
+					<MoveTo X="197.8716" Y="-84.52708" Z="9.611606" />
+					<MoveTo X="228.5886" Y="-84.20152" Z="9.595618" />
+					<MoveTo X="238.8762" Y="-76.45096" Z="9.624174" />
+					<MoveTo X="242.2223" Y="-60.96181" Z="9.610771" />
 					
 					<!-- Clears the top corridor and first boss -->
 					<CustomBehavior File="RunLikeHell"
@@ -229,7 +231,7 @@
 					</CustomBehavior>
 					
 					<!-- exit of 1st boss room -->
-					<RunTo X="326.5659" Y="144.0777" Z="9.61676" />
+					<MoveTo X="326.5659" Y="144.0777" Z="9.61676" />
 					
 					<!-- Wait timer - wait 10 seconds to aggro the patrol-->
 					<CustomBehavior File="WaitTimer" 
@@ -260,7 +262,7 @@
 					</CustomBehavior>	
 						
 					<!-- near the cell lever -->	
-					<RunTo X="448.1384" Y="60.1921" Z="9.61374" />
+					<MoveTo X="448.1384" Y="60.1921" Z="9.61374" />
 						
 					<CustomBehavior File="InteractWith" 
 									MobId="181982"
@@ -283,7 +285,7 @@
 									WaitTime="3000" />
 									
 					<!-- Exit after Broggok -->
-					<RunTo X="455.9192" Y="41.57648" Z="9.61687" />
+					<MoveTo X="455.9192" Y="41.57648" Z="9.61687" />
 					
 					<!-- Clears to last boss -->
 					<CustomBehavior File="RunLikeHell" 
@@ -327,12 +329,12 @@
 									LogColor="Fuchsia" />
 									
 					<!-- Tag rafs -->
-					<RunTo X="269.5512" Y="-126.7503" Z="-25.16308" />
-					<RunTo X="-2.869573" Y="-108.3897" Z="-41.34134" />
-					<RunTo X="5.557644" Y="-92.14471" Z="-41.33173" />
+					<MoveTo X="269.5512" Y="-126.7503" Z="-25.16308" />
+					<MoveTo X="-2.869573" Y="-108.3897" Z="-41.34134" />
+					<MoveTo X="5.557644" Y="-92.14471" Z="-41.33173" />
 						
 					<!-- Tag the rafs -->
-					<RunTo X="255.5342" Y="-84.35275" Z="9.617249" />
+					<MoveTo X="255.5342" Y="-84.35275" Z="9.617249" />
 					
 					<CustomBehavior File="WaitTimer" 
 									WaitTime="5000" />
@@ -350,13 +352,15 @@
 									Text="Blood Furnace detected. Running out to reset."
 									LogColor="Fuchsia" />
 									
-					<RunTo X="-4.093049" Y="17.00105" Z="-44.78368" />
+					<MoveTo X="-2.73782" Y="19.8424" Z="-44.79777" />
 					
 					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="0.3497318" Y="33.50735" Z="-44.84385" />
-					
+					<CustomBehavior File="Misc\InInstance" 
+									X="2" Y="28.3704" Z="-44.78903" />
+
 					<!-- Make sure we run to the right spot outside the portal -->
-					<RunTo X="-302.408" Y="3162.92" Z="31.7273" />
+					<CustomBehavior File="MyCTM" 
+									X="-302.408" Y="3162.92" Z="31.7273" />
 				</If> <!-- BF -->
 				
 				<!-- If we are in the box -->
@@ -519,13 +523,15 @@
 									Text="Blood Furnace detected. Running out."
 									LogColor="Fuchsia" />
 									
-					<RunTo X="-4.093049" Y="17.00105" Z="-44.78368" />
+					<MoveTo X="-2.73782" Y="19.8424" Z="-44.79777" />
 					
 					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="0.3497318" Y="33.50735" Z="-44.84385" />
-					
+					<CustomBehavior File="Misc\InInstance" 
+									X="2" Y="28.3704" Z="-44.78903" />
+
 					<!-- Make sure we run to the right spot outside the portal -->
-					<RunTo X="-302.408" Y="3162.92" Z="31.7273" />
+					<CustomBehavior File="MyCTM" 
+									X="-302.408" Y="3162.92" Z="31.7273" />
 				</If> <!-- BF -->
 			
 				<!-- If we are not in the box, load the movement profile -->
@@ -547,7 +553,7 @@
 					<!-- If we didn't enter the instance, wait 20 seconds then attempt to enter again -->
 					<While Condition="Me.ZoneId != 3713">
 						<!-- Make sure we run to the right spot outside the portal -->
-						<RunTo X="-302.408" Y="3162.92" Z="31.7273" />
+						<MoveTo X="-302.408" Y="3162.92" Z="31.7273" />
 
 						<!-- Run back in the portal -->
 						<CustomBehavior File="Misc\InInstance" X="-304.8059" Y="3173.918" Z="31.7268" />
@@ -576,10 +582,10 @@
 									LogColor="Yellow" />	
 									
 					<!-- Entrance -->
-					<RunTo X="-2.73782" Y="19.8424" Z="-44.79826" />
+					<MoveTo X="-2.73782" Y="19.8424" Z="-44.79826" />
 					
 					<!-- Run to quest givers -->
-					<RunTo X="0.2994731" Y="-15.27276" Z="-42.70581" />
+					<MoveTo X="0.2994731" Y="-15.27276" Z="-42.70581" />
 
 					<!-- Begin the instance once all party members are within range  -->
 					<CustomBehavior File="Misc\LoadProfileOn" 
@@ -601,7 +607,7 @@
 									WaitTime="20000" />
 					
 					<!-- Move to top of stairs --> 
-					<RunTo X="255.5342" Y="-84.35275" Z="9.617249" />
+					<MoveTo X="255.5342" Y="-84.35275" Z="9.617249" />
 					
 					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
@@ -631,23 +637,18 @@
 									Text="Blood Furnace detected. Running out."
 									LogColor="Fuchsia" />
 									
-					<RunTo X="-4.093049" Y="17.00105" Z="-44.78368" />
-					
-
+					<MoveTo X="-2.73782" Y="19.8424" Z="-44.79777" />
 					
 					<!-- Go through the portal -->
-					<CustomBehavior File="Misc\InInstance" X="0.3497318" Y="33.50735" Z="-44.84385" />
-					
-					<!-- Profile message - Enabling combat -->
-					<CustomBehavior File="Message" 
-										Text="Enabling combat." 
-										LogColor="Gold" />
+					<CustomBehavior File="Misc\InInstance" 
+									X="2" Y="28.3704" Z="-44.78903" />
+
+					<!-- Make sure we run to the right spot outside the portal -->
+					<CustomBehavior File="MyCTM" 
+									X="-302.408" Y="3162.92" Z="31.7273" />
 
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />
-					
-					<!-- Make sure we run to the right spot outside the portal -->
-					<RunTo X="-302.408" Y="3162.92" Z="31.7273" />
 					
 				</If> <!-- BF -->
 			</While> <!-- Infinite loop -->
