@@ -193,14 +193,31 @@
 							<!-- Cast one of the following spells -->
 							<CustomBehavior File="Misc\RangeAttack" />			
 										
-						</If>	<!-- If we are Paladin-->				
+						</If>	<!-- If we are Paladin -->				
+						
+						<!-- If we are Warrior -->
+						<If Condition="(Me.Class == WoWClass.Warrior)">
+						
+							<!-- Profile message - We are using a Warrior -->
+							<CustomBehavior File="Message" 
+											Text="We are using a Warrior \nCasting Charge." 
+											LogColor="Plum" />
+
+							<!-- CustomBehavior - RunMacro - cast Charge -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Charge" />
+										
+							<!-- Cast one of the following spells -->
+							<CustomBehavior File="Misc\RangeAttack" />			
+										
+						</If>	<!-- If we are Rogue -->
 						
 						<!-- If we are Rogue -->
 						<If Condition="(Me.Class == WoWClass.Rogue)">
 						
-							<!-- Profile message - We are using a Rogue -->
+							<!-- Profile message - We are using a Warrior \nSinist Strike -->
 							<CustomBehavior File="Message" 
-											Text="We are using a Rogue \nSinister Strike." 
+											Text="We are using a Rogue \nCasting Sinister Strike." 
 											LogColor="Plum" />
 
 							<!-- CustomBehavior - RunMacro - cast Sinister Strike -->
@@ -210,7 +227,7 @@
 							<!-- Cast one of the following spells -->
 							<CustomBehavior File="Misc\RangeAttack" />			
 										
-						</If>	<!-- If we are Paladin-->
+						</If>	<!-- If we are Rogue -->
 	
 						<!-- CustomBehavior - RunMacro - Auto Attack -->
 						<CustomBehavior File="RunMacro" 
