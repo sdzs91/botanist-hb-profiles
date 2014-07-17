@@ -156,97 +156,131 @@
 					<CustomBehavior File="UserSettings"
 									UseMount="False" />
 								
-					<!-- Custom behavior - TargetAndMoveToMob -->
-					<CustomBehavior File="TargetAndMoveToMob"
-									MoveWithinMaxRangeOfMob="5"
-									TargetOnlyIfHealthPercentAbove="5"
-									WaitForNpcs="False"
-									MobId="58671" >
-						<HuntingGrounds>
-			                <Hotspot X="880.9749" Y="1446.555" Z="376.5369" />
-							<Hotspot X="762.4465" Y="1388.602" Z="437.8762" />
-							<Hotspot X="727.1005" Y="1294.87" Z="465.7336" />
-							<Hotspot X="813.3298" Y="1185.12" Z="464.8368" />
-			            </HuntingGrounds>			
-					</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
-				
-					<!-- If our target is a Ancient Mogu Spirit -->
-					<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 58671)">
+					<!-- If we are Warrior -->
+					<If Condition="(Me.Class == WoWClass.Warrior)">
+						
+						
+						<!-- Custom behavior - TargetAndMoveToMob -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="15"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="58671" >
+							<HuntingGrounds>
+								<Hotspot X="880.9749" Y="1446.555" Z="376.5369" />
+								<Hotspot X="762.4465" Y="1388.602" Z="437.8762" />
+								<Hotspot X="727.1005" Y="1294.87" Z="465.7336" />
+								<Hotspot X="813.3298" Y="1185.12" Z="464.8368" />
+							</HuntingGrounds>			
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
 					
-						<!-- Profile message  - Engaging a Ancient Mogu Spirit -->	
-						<CustomBehavior File="Message" 
-										Text="Engaging a Ancient Mogu Spirit." 
-										LogColor="Cyan" />
-
-						<!-- If we are Paladin-->
-						<If Condition="(Me.Class == WoWClass.Paladin)">
+						<!-- If our target is a Ancient Mogu Spirit -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 58671)">
 						
-							<!-- Profile message - We are using a Paladin -->
+							<!-- Profile message  - Engaging a Ancient Mogu Spirit -->	
 							<CustomBehavior File="Message" 
-											Text="We are using a Paladin \nCasting Judgment." 
-											LogColor="Plum" />
-
-							<!-- CustomBehavior - RunMacro - cast Judgment -->
-							<CustomBehavior File="RunMacro" 
-											Macro="/cast Judgment" />
-										
-							<!-- Cast one of the following spells -->
-							<CustomBehavior File="Misc\RangeAttack" />			
-										
-						</If>	<!-- If we are Paladin -->				
-						
-						<!-- If we are Warrior -->
-						<If Condition="(Me.Class == WoWClass.Warrior)">
-						
+											Text="Engaging a Ancient Mogu Spirit." 
+											LogColor="Cyan" />
 							<!-- Profile message - We are using a Warrior -->
-							<CustomBehavior File="Message" 
-											Text="We are using a Warrior \nCasting Charge\Taunt\Mortal Strike\Colossus Smash." 
-											LogColor="Plum" />
+								<CustomBehavior File="Message" 
+												Text="We are using a Warrior \nCasting Charge\Taunt\Mortal Strike\Colossus Smash." 
+												LogColor="Plum" />
+												
+								<!-- CustomBehavior - RunMacro - cast Charge -->
+								<CustomBehavior File="RunMacro" 
+												Macro="/cast Charge" /> 
+												
+								<!-- CustomBehavior - RunMacro - cast Taunt -->
+								<CustomBehavior File="RunMacro" 
+												Macro="/cast Taunt" />
 											
-							<!-- CustomBehavior - RunMacro - cast Charge -->
+								<!-- CustomBehavior - RunMacro - cast Mortal Strike -->
+								<CustomBehavior File="RunMacro" 
+												Macro="/cast Mortal Strike" />
+												
+								<!-- CustomBehavior - RunMacro - cast Colossus Smash -->
+								<CustomBehavior File="RunMacro" 
+												Macro="/cast Colossus Smash" />	
+												
+								<!-- Cast one of the following spells -->
+								<CustomBehavior File="Misc\RangeAttack" />
+							
+		
+							<!-- CustomBehavior - RunMacro - Auto Attack -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Charge" /> 
-											
-							<!-- CustomBehavior - RunMacro - cast Taunt -->
-							<CustomBehavior File="RunMacro" 
-											Macro="/cast Taunt" />
-										
-							<!-- CustomBehavior - RunMacro - cast Mortal Strike -->
-							<CustomBehavior File="RunMacro" 
-											Macro="/cast Mortal Strike" />
-											
-							<!-- CustomBehavior - RunMacro - cast Colossus Smash -->
-							<CustomBehavior File="RunMacro" 
-											Macro="/cast Colossus Smash" />	
-											
-							<!-- Cast one of the following spells -->
-							<CustomBehavior File="Misc\RangeAttack" />			
-										
-						</If>	<!-- If we are Rogue -->
+											Macro="/cast Auto Attack" />				
+
+						</If>	<!-- If our target is a Ancient Mogu Spirit -->
+				
+					</If>	<!-- If we are Warrior -->			
+								
+					<!-- If we are not a Warrior -->
+					<If Condition="(Me.Class != WoWClass.Warrior)">			
+								
+						<!-- Custom behavior - TargetAndMoveToMob -->
+						<CustomBehavior File="TargetAndMoveToMob"
+										MoveWithinMaxRangeOfMob="5"
+										TargetOnlyIfHealthPercentAbove="5"
+										WaitForNpcs="False"
+										MobId="58671" >
+							<HuntingGrounds>
+								<Hotspot X="880.9749" Y="1446.555" Z="376.5369" />
+								<Hotspot X="762.4465" Y="1388.602" Z="437.8762" />
+								<Hotspot X="727.1005" Y="1294.87" Z="465.7336" />
+								<Hotspot X="813.3298" Y="1185.12" Z="464.8368" />
+							</HuntingGrounds>			
+						</CustomBehavior>	<!-- Custom behavior - TargetAndMoveToMob -->
+					
+						<!-- If our target is a Ancient Mogu Spirit -->
+						<If Condition="(Me.CurrentTarget != null) &amp;&amp; (Me.CurrentTarget.Entry == 58671)">
 						
-						<!-- If we are Rogue -->
-						<If Condition="(Me.Class == WoWClass.Rogue)">
-						
-							<!-- Profile message - We are using a Warrior \nSinist Strike -->
+							<!-- Profile message  - Engaging a Ancient Mogu Spirit -->	
 							<CustomBehavior File="Message" 
-											Text="We are using a Rogue \nCasting Sinister Strike." 
-											LogColor="Plum" />
+											Text="Engaging a Ancient Mogu Spirit." 
+											LogColor="Cyan" />
 
-							<!-- CustomBehavior - RunMacro - cast Sinister Strike -->
+							<!-- If we are Paladin-->
+							<If Condition="(Me.Class == WoWClass.Paladin)">
+							
+								<!-- Profile message - We are using a Paladin -->
+								<CustomBehavior File="Message" 
+												Text="We are using a Paladin \nCasting Judgment." 
+												LogColor="Plum" />
+
+								<!-- CustomBehavior - RunMacro - cast Judgment -->
+								<CustomBehavior File="RunMacro" 
+												Macro="/cast Judgment" />
+											
+								<!-- Cast one of the following spells -->
+								<CustomBehavior File="Misc\RangeAttack" />			
+											
+							</If>	<!-- If we are Paladin -->				
+							
+							<!-- If we are Rogue -->
+							<If Condition="(Me.Class == WoWClass.Rogue)">
+							
+								<!-- Profile message - We are using a Warrior \nSinist Strike -->
+								<CustomBehavior File="Message" 
+												Text="We are using a Rogue \nCasting Sinister Strike." 
+												LogColor="Plum" />
+
+								<!-- CustomBehavior - RunMacro - cast Sinister Strike -->
+								<CustomBehavior File="RunMacro" 
+												Macro="/cast Sinister Strike" />
+											
+								<!-- Cast one of the following spells -->
+								<CustomBehavior File="Misc\RangeAttack" />			
+											
+							</If>	<!-- If we are Rogue -->
+		
+							<!-- CustomBehavior - RunMacro - Auto Attack -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Sinister Strike" />
-										
-							<!-- Cast one of the following spells -->
-							<CustomBehavior File="Misc\RangeAttack" />			
-										
-						</If>	<!-- If we are Rogue -->
-	
-						<!-- CustomBehavior - RunMacro - Auto Attack -->
-						<CustomBehavior File="RunMacro" 
-										Macro="/cast Auto Attack" />				
+											Macro="/cast Auto Attack" />				
 
-					</If>	<!-- If our target is a Ancient Mogu Spirit --> 
+						</If>	<!-- If our target is a Ancient Mogu Spirit --> 
 
+					</If>	<!-- If we are not a Warrior -->
+					
 				</While>	<!-- While our empty bag slots is > 4 and our lowest durability is > 30% -->
 
 			</If>	<!-- If we are in the farming area -->	
