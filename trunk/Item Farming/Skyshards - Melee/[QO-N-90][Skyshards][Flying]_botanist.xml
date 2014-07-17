@@ -200,13 +200,25 @@
 						
 							<!-- Profile message - We are using a Warrior -->
 							<CustomBehavior File="Message" 
-											Text="We are using a Warrior \nCasting Taunt." 
+											Text="We are using a Warrior \nCasting Charge\Taunt\Mortal Strike\Colossus Smash." 
 											LogColor="Plum" />
-
+											
+							<!-- CustomBehavior - RunMacro - cast Charge -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Charge" /> 
+											
 							<!-- CustomBehavior - RunMacro - cast Taunt -->
 							<CustomBehavior File="RunMacro" 
 											Macro="/cast Taunt" />
 										
+							<!-- CustomBehavior - RunMacro - cast Mortal Strike -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Mortal Strike" />
+											
+							<!-- CustomBehavior - RunMacro - cast Colossus Smash -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Colossus Smash" />	
+											
 							<!-- Cast one of the following spells -->
 							<CustomBehavior File="Misc\RangeAttack" />			
 										
