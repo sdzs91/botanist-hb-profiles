@@ -200,12 +200,12 @@
 						
 							<!-- Profile message - We are using a Warrior -->
 							<CustomBehavior File="Message" 
-											Text="We are using a Warrior \nCasting Charge." 
+											Text="We are using a Warrior \nCasting Taunt." 
 											LogColor="Plum" />
 
-							<!-- CustomBehavior - RunMacro - cast Charge -->
+							<!-- CustomBehavior - RunMacro - cast Taunt -->
 							<CustomBehavior File="RunMacro" 
-											Macro="/cast Charge" />
+											Macro="/cast Taunt" />
 										
 							<!-- Cast one of the following spells -->
 							<CustomBehavior File="Misc\RangeAttack" />			
