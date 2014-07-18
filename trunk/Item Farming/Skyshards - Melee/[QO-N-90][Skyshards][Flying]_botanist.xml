@@ -162,7 +162,7 @@
 						
 						<!-- Custom behavior - TargetAndMoveToMob -->
 						<CustomBehavior File="TargetAndMoveToMob"
-										MoveWithinMaxRangeOfMob="15"
+										MoveWithinMaxRangeOfMob="25"
 										TargetOnlyIfHealthPercentAbove="5"
 										WaitForNpcs="False"
 										MobId="58671" >
