@@ -7,19 +7,18 @@
 <MinDurability>-1</MinDurability>
 <MinFreeBagSlots>-1</MinFreeBagSlots>
 <TargetingDistance>1</TargetingDistance>
-<TargetElites>False</TargetElites>
 
 <MailGrey>False</MailGrey>
 <MailWhite>False</MailWhite>
 <MailGreen>False</MailGreen>
 <MailBlue>False</MailBlue>
-<MailYellow>False</MailYellow>
+<MailPurple>False</MailPurple>
 
 <SellGrey>False</SellGrey>
 <SellWhite>False</SellWhite>
 <SellGreen>False</SellGreen>
 <SellBlue>False</SellBlue>
-<SellYellow>False</SellYellow>
+<SellPurple>False</SellPurple>
 
 <AvoidMobs>		 
 </AvoidMobs>
