@@ -38,7 +38,8 @@
 	
 	<ProtectedItems>
 		<Item name="Book of Glyph Mastery" entry="45912" />
-		<Item name="Frostweave Cloth" entry="33470" />		
+		<Item name="Frostweave Cloth" entry="33470" />
+		<Item name="Battered Hilt" entry="50380" />
 	</ProtectedItems>
 
 	<Factions></Factions>

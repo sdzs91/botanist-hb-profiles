@@ -209,15 +209,12 @@
 					<!-- While we are not in Pit of Saron -->
 					<While Condition="Me.MapId != 658">
 					
-						<!-- Move to - front of the gate -->
-						<MoveTo X="5599.053" Y="2016.028" Z="798.0415" />
-						
 						<!-- Move to - inside the gate -->
-						<MoveTo X="5588.33" Y="2007.564" Z="798.1821" />
+						<MoveTo X="5589.354" Y="2007.788" Z="798.1819" />
 
 						<!-- Attempt to enter the portal -->
 						<CustomBehavior File="Misc\InInstance" 
-										X="5584.498" Y="2004.507" Z="798.0421" /> 
+										X="5585.37" Y="2004.168" Z="798.0645" /> 
 										
 						<!-- Profile message - Waiting for the dungeon to load -->				
 						<CustomBehavior File="Message" 
