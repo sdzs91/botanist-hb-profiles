@@ -41,9 +41,6 @@
 	<Factions></Factions>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
-
 
 		<If Condition="Me.Level &gt;= 90">
 		
