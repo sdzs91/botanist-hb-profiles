@@ -1041,9 +1041,15 @@
 									NumOfTimes="1"
 									Macro="/tar Altairus" />
 					
-					<!-- Macro -cast Ambush -->					
+					<!-- Macro - cast Ambush -->					
 					<CustomBehavior File="RunMacro" 
 									Macro="/cast Ambush" 
+									NumOfTimes="1" 
+									WaitTime="0"/>
+									
+					<!-- Macro - cast Ambush -->					
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Moonfire" 
 									NumOfTimes="1" 
 									WaitTime="0"/>
 
