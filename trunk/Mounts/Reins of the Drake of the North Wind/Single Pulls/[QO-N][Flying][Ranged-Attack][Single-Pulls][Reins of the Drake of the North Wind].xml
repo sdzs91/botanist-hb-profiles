@@ -232,7 +232,7 @@
 											WaitTime="10000" />
 					
 					<!-- Run to the dias once we land -->
-					<MoveTo X="-927.8934" Y="-167.7858" Z="669.265"
+					<MoveTo X="-927.8934" Y="-167.7858" Z="669.265" />
 									
 					<!-- Pull right-hand staircase -->				
 					<MoveTo X="-986.8172" Y="-62.31145" Z="694.9169" />
