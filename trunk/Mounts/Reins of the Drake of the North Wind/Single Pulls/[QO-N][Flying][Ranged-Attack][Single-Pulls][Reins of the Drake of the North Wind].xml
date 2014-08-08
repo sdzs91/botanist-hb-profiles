@@ -227,12 +227,12 @@
 									VehicleMountId="45455" 
 									X="-768.213" Y="-53.6862" Z="639.926" />
 					
-					<!-- CustomBehavior - WaitTimer - 5 second delay-->
+					<!-- CustomBehavior - WaitTimer - 10 second delay-->
 					<CustomBehavior File="WaitTimer" 
-											WaitTime="5000" />
+											WaitTime="10000" />
 					
 					<!-- Run to the dias once we land -->
-					<MoveTo X="-929.4961" Y="-168.1685" Z="669.2651" />
+					<MoveTo X="-927.8934" Y="-167.7858" Z="669.265"
 									
 					<!-- Pull right-hand staircase -->				
 					<MoveTo X="-986.8172" Y="-62.31145" Z="694.9169" />
