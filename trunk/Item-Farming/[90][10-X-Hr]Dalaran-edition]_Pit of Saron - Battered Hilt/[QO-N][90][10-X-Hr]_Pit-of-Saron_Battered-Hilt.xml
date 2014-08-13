@@ -159,29 +159,29 @@
 				<!-- If we are in the Pit of Saron instance box -->
 				<If Condition="Me.X &lt; 5605.78 &amp;&amp; Me.X &gt; 5585.78 &amp;&amp; Me.Y &lt; 2023.27 &amp;&amp; Me.Y &gt; 2003.27" >
 
-					<!-- If our hearthstone is set to Nesingwary Base Camp -->
-					<If Condition="Me.HearthstoneAreaId == 4284">
+					<!-- If our hearthstone is set to Dalaran -->
+					<If Condition="Me.HearthstoneAreaId == 4395">
 				
-						<!-- CustomBehavior - message - Our Hearthstone has been set to Nesingwary Base Camp -->
+						<!-- CustomBehavior - message - Our Hearthstone has been set to Dalaran -->
 						<CustomBehavior File="Message" 
-										Text="Our Hearthstone has been set to Nesingwary Base Camp." 
+										Text="Our Hearthstone has been set to Dalaran." 
 										LogColor="Cyan" />
 				
 						<!-- Else our hearthstone is not set to Nesingwary Base Camp -->
 						<Else>
 						
-							<!-- CustomBehavior - message - Our Hearthstone has not been set to Nesingwary Base Camp -->
+							<!-- CustomBehavior - message - Our Hearthstone has not been set to Dalaran -->
 						<CustomBehavior File="Message" 
-										Text="Our Hearthstone has not been set to Nesingwary Base Camp." 
+										Text="Our Hearthstone has not been set to Dalaran." 
 										LogColor="Cyan" />
 										
 						<!-- Load profile - [QO-N][90][10-X-Hr]_Pit-of-Saron_[Battered-Hilt]_hearthstone -->
 						<CustomBehavior File="LoadProfile" 
 										ProfileName="Movement\Vendors\Hearthstone\[QO-N][90][10-X-Hr]_Pit-of-Saron_[Battered-Hilt]_hearthstone" />				
 
-						</Else>	<!-- Else our hearthstone is not set to Nesingwary Base Camp -->
+						</Else>	<!-- Else our hearthstone is not set to Dalaran -->
 				
-					</If>	<!-- If our hearthstone is set to Nesingwary Base Camp -->
+					</If>	<!-- If our hearthstone is set to Dalaran -->
 
 					<!-- Profile message - Portal detected nearby -->
 					<CustomBehavior File="Message" 
