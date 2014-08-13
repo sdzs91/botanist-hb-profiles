@@ -556,14 +556,14 @@
 									Timer="Check" 
 									WaitTime="5000" />
 
-					<!-- If we don't have Savory Snowplum -->
-					<If Condition="!HasItem(35948)">
+					<!-- If we don't have Mead Basted Caribou -->
+					<If Condition="!HasItem(35953)">
 
 						<!-- Load profile - [QO-N][90][10-X-Hr]_Pit-of-Saron_Battered-Hilt_[repair-mail] -->
 						<CustomBehavior File="LoadProfile" 
 										ProfileName="Movement\Vendors\[QO-N][90][10-X-Hr]_Pit-of-Saron_Battered-Hilt_[repair-mail]" />
 			
-					</If>	<!-- If we don't have Savory Snowplum -->
+					</If>	<!-- If we don't have Mead Basted Caribou -->
 					
 					<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 					<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >

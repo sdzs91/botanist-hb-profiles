@@ -505,9 +505,9 @@
 					<CustomBehavior File="MyCTM"
 									X="6267.09" Y="1760.01" Z="824.46" />				
 
-					<!-- CTM to - Dalaran avoidance point IV -->
+					<!-- CTM to - Pit of Saron - hover point -->
 					<CustomBehavior File="MyCTM"
-									X="5698.62" Y="2198.524" Z="803.3525" />				
+									X="5929.904" Y="2136.815" Z="679.8463" />				
 	
 				</If>	<!-- If we are in Dalaran -->						
 	
