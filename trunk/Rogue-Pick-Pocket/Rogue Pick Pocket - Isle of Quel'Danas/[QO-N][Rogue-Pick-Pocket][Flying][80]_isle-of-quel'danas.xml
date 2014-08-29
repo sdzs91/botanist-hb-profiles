@@ -248,6 +248,45 @@
 					<!-- Move to - 1st group of Murlocs - pivot point -->
 					<MoveTo X="12528.73" Y="-7346.507" Z="-0.597317" />
 					
+					<!-- If we are stealthed -->
+					<If Condition="Me.HasAura(&quot;Stealth&quot;)">	
+					
+						<!-- Profile message - We are stealthed -->
+						<CustomBehavior File="Message" 
+										Text="We are stealthed." 
+										LogColor="Gold" />
+					
+						<!-- Else if we are not stealthed -->
+						<Else>
+						
+							<!-- Profile message - We are not stealthed. Casting Stealth -->
+							<CustomBehavior File="Message" 
+											Text="We are not stealthed. Casting Stealth." 
+											LogColor="Plum" />
+										
+							<!-- Custom behavior - RunMacro - cast stealth -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
+										
+							<!-- Profile message - We are stealthed -->
+							<CustomBehavior File="Message" 
+											Text="We are stealthed." 
+											LogColor="Gold" />			
+										
+						</Else>		<!-- Else if we are not stealthed -->					
+						
+					</If>	<!-- If we are stealthed -->
+					
+					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast sprint" />
+					
+					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Burst of Speed" />
+									
 					<!-- Move to - 7th mob on the right - alignment point -->
 					<CustomBehavior File="MyCTM"
 									X="12545.12" Y="-7344.372" Z="-0.4131309" />
@@ -348,6 +387,45 @@
 					<!-- Move to - 2nd group of Murlocs - pivot point -->
 					<MoveTo X="12546.74" Y="-7405.228" Z="-0.3087599" />
 					
+					<!-- If we are stealthed -->
+					<If Condition="Me.HasAura(&quot;Stealth&quot;)">	
+					
+						<!-- Profile message - We are stealthed -->
+						<CustomBehavior File="Message" 
+										Text="We are stealthed." 
+										LogColor="Gold" />
+					
+						<!-- Else if we are not stealthed -->
+						<Else>
+						
+							<!-- Profile message - We are not stealthed. Casting Stealth -->
+							<CustomBehavior File="Message" 
+											Text="We are not stealthed. Casting Stealth." 
+											LogColor="Plum" />
+										
+							<!-- Custom behavior - RunMacro - cast stealth -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
+										
+							<!-- Profile message - We are stealthed -->
+							<CustomBehavior File="Message" 
+											Text="We are stealthed." 
+											LogColor="Gold" />			
+										
+						</Else>		<!-- Else if we are not stealthed -->					
+						
+					</If>	<!-- If we are stealthed -->
+					
+					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast sprint" />
+					
+					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Burst of Speed" />
+									
 					<!-- Move to - 2nd mob on the right - alignment point -->
 					<CustomBehavior File="MyCTM"
 									X="12536.77" Y="-7408.447" Z="0.6505647" />
@@ -449,6 +527,45 @@
 					<!-- Move to - 3rd group of Murlocs - pivot point -->
 					<MoveTo X="12529.4" Y="-7434.096" Z="0.9169022" />
 					
+					<!-- If we are stealthed -->
+					<If Condition="Me.HasAura(&quot;Stealth&quot;)">	
+					
+						<!-- Profile message - We are stealthed -->
+						<CustomBehavior File="Message" 
+										Text="We are stealthed." 
+										LogColor="Gold" />
+					
+						<!-- Else if we are not stealthed -->
+						<Else>
+						
+							<!-- Profile message - We are not stealthed. Casting Stealth -->
+							<CustomBehavior File="Message" 
+											Text="We are not stealthed. Casting Stealth." 
+											LogColor="Plum" />
+										
+							<!-- Custom behavior - RunMacro - cast stealth -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
+										
+							<!-- Profile message - We are stealthed -->
+							<CustomBehavior File="Message" 
+											Text="We are stealthed." 
+											LogColor="Gold" />			
+										
+						</Else>		<!-- Else if we are not stealthed -->					
+						
+					</If>	<!-- If we are stealthed -->
+					
+					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast sprint" />
+					
+					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Burst of Speed" />
+									
 					<!-- Move to - 3rd mob on the right - alignment point -->
 					<CustomBehavior File="MyCTM"
 									X="12525.77" Y="-7446.265" Z="0.2024674" />
@@ -516,6 +633,45 @@
 					<!-- Move to - 4th group of Murlocs - pivot point -->
 					<MoveTo X="12508.69" Y="-7469.408" Z="-0.2989214" />
 					
+					<!-- If we are stealthed -->
+					<If Condition="Me.HasAura(&quot;Stealth&quot;)">	
+					
+						<!-- Profile message - We are stealthed -->
+						<CustomBehavior File="Message" 
+										Text="We are stealthed." 
+										LogColor="Gold" />
+					
+						<!-- Else if we are not stealthed -->
+						<Else>
+						
+							<!-- Profile message - We are not stealthed. Casting Stealth -->
+							<CustomBehavior File="Message" 
+											Text="We are not stealthed. Casting Stealth." 
+											LogColor="Plum" />
+										
+							<!-- Custom behavior - RunMacro - cast stealth -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
+										
+							<!-- Profile message - We are stealthed -->
+							<CustomBehavior File="Message" 
+											Text="We are stealthed." 
+											LogColor="Gold" />			
+										
+						</Else>		<!-- Else if we are not stealthed -->					
+						
+					</If>	<!-- If we are stealthed -->
+					
+					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast sprint" />
+					
+					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Burst of Speed" />
+									
 					<!-- Move to - 4th mob on the right - alignment point -->
 					<CustomBehavior File="MyCTM"
 									X="12497.35" Y="-7466.493" Z="0.4141557" />
@@ -583,6 +739,45 @@
 					<!-- Move to - 5th group of Murlocs - pivot point -->
 					<MoveTo X="12492.54" Y="-7452.512" Z="0.578841" />
 					
+					<!-- If we are stealthed -->
+					<If Condition="Me.HasAura(&quot;Stealth&quot;)">	
+					
+						<!-- Profile message - We are stealthed -->
+						<CustomBehavior File="Message" 
+										Text="We are stealthed." 
+										LogColor="Gold" />
+					
+						<!-- Else if we are not stealthed -->
+						<Else>
+						
+							<!-- Profile message - We are not stealthed. Casting Stealth -->
+							<CustomBehavior File="Message" 
+											Text="We are not stealthed. Casting Stealth." 
+											LogColor="Plum" />
+										
+							<!-- Custom behavior - RunMacro - cast stealth -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
+										
+							<!-- Profile message - We are stealthed -->
+							<CustomBehavior File="Message" 
+											Text="We are stealthed." 
+											LogColor="Gold" />			
+										
+						</Else>		<!-- Else if we are not stealthed -->					
+						
+					</If>	<!-- If we are stealthed -->
+					
+					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast sprint" />
+					
+					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Burst of Speed" />
+									
 					<!-- Move to - 5th mob on the right - alignment point -->
 					<CustomBehavior File="MyCTM"
 									X="12482.66" Y="-7465.045" Z="0.2077907" />
@@ -685,6 +880,45 @@
 					<!-- Move to - 6th group of Murlocs - pivot point -->
 					<MoveTo X="12456.31" Y="-7468.493" Z="-0.1049877" />
 					
+					<!-- If we are stealthed -->
+					<If Condition="Me.HasAura(&quot;Stealth&quot;)">	
+					
+						<!-- Profile message - We are stealthed -->
+						<CustomBehavior File="Message" 
+										Text="We are stealthed." 
+										LogColor="Gold" />
+					
+						<!-- Else if we are not stealthed -->
+						<Else>
+						
+							<!-- Profile message - We are not stealthed. Casting Stealth -->
+							<CustomBehavior File="Message" 
+											Text="We are not stealthed. Casting Stealth." 
+											LogColor="Plum" />
+										
+							<!-- Custom behavior - RunMacro - cast stealth -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
+										
+							<!-- Profile message - We are stealthed -->
+							<CustomBehavior File="Message" 
+											Text="We are stealthed." 
+											LogColor="Gold" />			
+										
+						</Else>		<!-- Else if we are not stealthed -->					
+						
+					</If>	<!-- If we are stealthed -->
+					
+					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast sprint" />
+					
+					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Burst of Speed" />
+									
 					<!-- Move to - 6th mob on the right - alignment point -->
 					<CustomBehavior File="MyCTM"
 									X="12443.91" Y="-7460.986" Z="0.3627778" />
@@ -951,6 +1185,45 @@
 					<!-- Move to - 8th group of Murlocs - pivot point -->
 					<MoveTo X="12428.04" Y="-7333.63" Z="-0.7338482" />
 					
+					<!-- If we are stealthed -->
+					<If Condition="Me.HasAura(&quot;Stealth&quot;)">	
+					
+						<!-- Profile message - We are stealthed -->
+						<CustomBehavior File="Message" 
+										Text="We are stealthed." 
+										LogColor="Gold" />
+					
+						<!-- Else if we are not stealthed -->
+						<Else>
+						
+							<!-- Profile message - We are not stealthed. Casting Stealth -->
+							<CustomBehavior File="Message" 
+											Text="We are not stealthed. Casting Stealth." 
+											LogColor="Plum" />
+										
+							<!-- Custom behavior - RunMacro - cast stealth -->
+							<CustomBehavior File="RunMacro" 
+											Macro="/cast Stealth"				
+											NumOfTimes="1"  
+											WaitTime="500" />			
+										
+							<!-- Profile message - We are stealthed -->
+							<CustomBehavior File="Message" 
+											Text="We are stealthed." 
+											LogColor="Gold" />			
+										
+						</Else>		<!-- Else if we are not stealthed -->					
+						
+					</If>	<!-- If we are stealthed -->
+					
+					<!-- Custom behavior - RunMacro - cast Sprint -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast sprint" />
+					
+					<!-- Custom behavior - RunMacro - cast Burst of Speed -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Burst of Speed" />
+									
 					<!-- Move to - 8th mob on the right - alignment point -->
 					<CustomBehavior File="MyCTM"
 									X="12421.9" Y="-7327.417" Z="-0.686829" />
