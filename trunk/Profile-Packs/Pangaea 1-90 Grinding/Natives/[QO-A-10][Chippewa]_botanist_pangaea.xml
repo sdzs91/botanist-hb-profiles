@@ -92,16 +92,31 @@
 							<RunTo X="3801.734" Y="876.8668" Z="444.675" />
 							<RunTo X="3813.135" Y="886.7227" Z="444.6763" />
 						<CustomBehavior File="Message" Text="Approaching Whispercloud's Balloon to Zouchin Village." LogColor="Lime" />
-							<RunTo X="3854.344" Y="886.5063" Z="421.6764" />
-							<RunTo X="3943.261" Y="868.8353" Z="416.4419" />	<!-- balloon -->
+							<MoveTo X="3854.344" Y="886.5063" Z="421.6764" />
+							<MoveTo X="3943.261" Y="868.8353" Z="416.4419" />	<!-- balloon -->
 						<CustomBehavior File="Message" Text="Taking Whispercloud's Balloon to Zouchin Village." LogColor="Lime" />
+						
+						
+						
 						<CustomBehavior File="MountVehOnly" VehicleMountId="63355" X="3943.283" Y="868.7465" Z="416.442" />
-						<CustomBehavior File="WaitTimer" WaitTime="45000" />				
-							<RunTo X="4164.85" Y="843.9771" Z="163.6245" />
-							<RunTo X="4174.035" Y="795.0348" Z="154.5986" />
-							<RunTo X="4205.211" Y="811.8825" Z="145.8235" />
-							<RunTo X="4251.284" Y="896.911" Z="124.3389" />
-							<RunTo X="4304.605" Y="941.5417" Z="116.9282" />
+						<CustomBehavior File="WaitTimer" WaitTime="75000" />
+						
+						<CustomBehavior File="MyCTM" X="4163.677" Y="837.5557" Z="161.9299" />
+
+						<MoveTo X="4163.243" Y="822.119" Z="160.3784" />
+						<MoveTo X="4171.499" Y="798.9175" Z="155.3296" />
+						<MoveTo X="4196.209" Y="798.2818" Z="149.4186" />
+						<MoveTo X="4208.131" Y="819.7463" Z="144.0814" />
+						<MoveTo X="4209.824" Y="844.892" Z="139.2231" />
+						<MoveTo X="4213.422" Y="869.4962" Z="135.3934" />
+						<MoveTo X="4231.528" Y="886.5049" Z="129.0215" />
+						<MoveTo X="4250.99" Y="902.2946" Z="124.2652" />
+						<MoveTo X="4268.799" Y="920.1135" Z="122.307" />
+						<MoveTo X="4287.755" Y="936.582" Z="119.7292" />
+						<MoveTo X="4312.824" Y="937.9879" Z="115.4091" />
+						<MoveTo X="4337.881" Y="935.0225" Z="111.2885" />
+						<MoveTo X="4357.733" Y="933.3609" Z="110.5504" />
+
 						<CustomBehavior File="Message" Text="Learning the Zouchin Village flight path." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="5000" />
 						<CustomBehavior File="Message" Text="Taking the flight path back to One Keg." LogColor="Lime" />				

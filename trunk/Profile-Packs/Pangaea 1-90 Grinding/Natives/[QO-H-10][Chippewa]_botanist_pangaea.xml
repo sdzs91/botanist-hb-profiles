@@ -98,7 +98,7 @@
 						
 						
 						<CustomBehavior File="MountVehOnly" VehicleMountId="63355" X="3943.283" Y="868.7465" Z="416.442" />
-						<CustomBehavior File="WaitTimer" WaitTime="45000" />
+						<CustomBehavior File="WaitTimer" WaitTime="75000" />
 						
 						<CustomBehavior File="MyCTM" X="4163.677" Y="837.5557" Z="161.9299" />
 
