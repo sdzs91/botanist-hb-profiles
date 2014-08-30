@@ -195,8 +195,12 @@
 			</If>
 		</If>
 			
+			
+			
 	   <!-- ********************************************************************************************************** -->	
-									
+						
+
+						
 		
 		<If Condition="Me.MapId == 870" >
 			<If Condition="Me.ZoneId == 5785 || Me.ZoneId == 5805" >
@@ -217,26 +221,32 @@
 			</If>	
 		</If>		
 		
-		<If Condition="Me.MapId == 870" >
-			<If Condition="Me.ZoneId != 5841" >
-				<CustomBehavior File="Message" Text="I am not where I should be. Moving to One Keg in Kun-Lai Summit." LogColor="Lime" />
-				<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<RunTo X="3124.52" Y="1224.28" Z="654.231" />
-				<CustomBehavior File="Message" Text="I have reached One Keg." LogColor="Lime" />
-			</If>	
-		</If>
-
-		<If Condition="Me.MapId == 870" >				 
-			<If Condition="Me.ZoneId == 5841" >
-				<If  Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt; 88" >
+		
+		
+		
+		
+		<While Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt; 88" >
+		
+			<If Condition="Me.MapId == 870" >
+				<If Condition="Me.ZoneId != 5841" >
+					<CustomBehavior File="Message" Text="I am not where I should be. Moving to One Keg in Kun-Lai Summit." LogColor="Lime" />
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the level 87-88 bracket." LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<RunTo X="3124.52" Y="1224.28" Z="654.231" />
+					<CustomBehavior File="Message" Text="I have reached One Keg." LogColor="Lime" />
 				</If>	
 			</If>
-		</If>
+
+			<If Condition="Me.MapId == 870" >				 
+				<If Condition="Me.ZoneId == 5841" >
+					<If  Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt; 88" >
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am in the level 87-88 bracket." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					</If>	
+				</If>
+			</If>
 		
-		<While Condition="Me.Level &gt;= 87 &amp;&amp; Me.Level &lt; 88" >		
+				
 			<!-- User settings -->
 			<CustomBehavior File="UserSettings" 
 							UseFlightPaths="True" 
@@ -468,11 +478,11 @@
 		</If>	
 		
 		<If Condition="Me.MapId == 870" >				 
-				<If  Condition="Me.Level &gt; 88 &amp;&amp; Me.Level &lt; 90" >
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-					<CustomBehavior File="Message" Text="I am in the level 89-90 bracket, changing to the newest farming location " LogColor="Lime" />
-					<CustomBehavior File="WaitTimer" WaitTime="1000" />
-				</If>	
+			<If  Condition="Me.Level &gt; 88 &amp;&amp; Me.Level &lt; 90" >
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<CustomBehavior File="Message" Text="I am in the level 89-90 bracket, changing to the newest farming location " LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>	
 		</If>		
 				
 		<While Condition="Me.Level &gt; 88 &amp;&amp; Me.Level &lt; 90" >				
