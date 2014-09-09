@@ -72,12 +72,14 @@
 						<CustomBehavior File="Message" Text="Position check, Dark Portal in Badlands." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="Going to Orgrimmar and taking the portal to Blasted Lands." LogColor="Lime" />
-							<RunTo X="-6811.209" Y="836.3549" Z="49.83052" />	
-							<RunTo X="1798.27" Y="-4363.27" Z="102.5216" />					
-						<CustomBehavior File="Message" Text="I have reached Orgrimmar, moving to the portal." LogColor="Lime" />
-							<RunTo X="1685.938" Y="-4126.875" Z="66.34236" />
+							
+						<!-- Move to - Orgrimmar portal to Blasted Lands -->
+						<MoveTo X="1771.722" Y="-4327.896" Z="-8.247296" />
+
+
 						<CustomBehavior File="Message" Text="Taking the portal to Blasted Lands." LogColor="Yellow" />
-						<CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1685.18" Y="-4123.42" Z="66.3376" />
+						<CustomBehavior File="InteractWith" 
+										MobId="195142" />
 						<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="TimeRemaining}" />
 						<CustomBehavior File="ForcedMount" MountType="Ground" />
 						<CustomBehavior File="Message" Text="Moving to the Dark Portal." LogColor="Yellow" />
