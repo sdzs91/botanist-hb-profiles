@@ -69,7 +69,7 @@
 				
 				<If Condition="Me.Level == 58" >
 					<If Condition="Me.MapId == 1" >
-						<CustomBehavior File="Message" Text="Position check, Dark Portal in Badlands." LogColor="Lime" />
+						<CustomBehavior File="Message" Text="Position check, Dark Portal in Blasted Lands." LogColor="Lime" />
 						<CustomBehavior File="WaitTimer" WaitTime="1000" />
 						<CustomBehavior File="Message" Text="Going to Orgrimmar and taking the portal to Blasted Lands." LogColor="Lime" />
 							
