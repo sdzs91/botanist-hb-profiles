@@ -265,7 +265,7 @@
 			<CustomBehavior File="WaitTimer" 
 							WaitTime="3000" />
 			
-			<!-- If we don't have Pine Nut Bread -->
+			<!-- If we have Pine Nut Bread -->
 			<If Condition="!HasItem(58260)">
 	
 				<!-- Load profile - [QO-N][85-Flying]_botanist_grim-batol_[repair-mail] -->

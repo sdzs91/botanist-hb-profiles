@@ -141,8 +141,8 @@
 				
 			</If>	<!-- If we are inside Grim Batol -->
 
-			<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
-			<If Condition="(Me.FreeBagSlots &lt;= 25) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+			<!-- If we have less then 10 empty bag slots or our durability is less than 30% -->
+			<If Condition="(Me.FreeBagSlots &lt;= 10) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 
 				<!-- Profile message - Our durability is less than 30% or we have less than 25 empty bag slots remaining -->
 				<CustomBehavior File="Message" 
@@ -264,8 +264,8 @@
 		
 			</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 				
-			<!-- If we have more than 25 empty bag slots and our durability is greater than 30% -->
-			<If Condition="(Me.FreeBagSlots &gt; 25) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
+			<!-- If we have more than 10 empty bag slots and our durability is greater than 30% -->
+			<If Condition="(Me.FreeBagSlots &gt; 10) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
 			
 				<!-- Load profile - [QO-N][85-Flying]_botanist_grim-batol_[food] -->
 				<CustomBehavior File="LoadProfile" 
