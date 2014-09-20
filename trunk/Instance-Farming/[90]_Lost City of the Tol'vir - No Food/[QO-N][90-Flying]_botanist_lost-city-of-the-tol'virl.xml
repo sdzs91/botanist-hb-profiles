@@ -541,24 +541,6 @@
 										ProfileName="Movement\Vendors\[QO-N][90-Flying]_botanist_lost-city-of-the-tol'virll_[repair-mail]" />
 
 					</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
-
-					<!-- Profile message - Waiting 3 seconds - Food check - Pine Nut Bread -->
-					<CustomBehavior File="Message" 
-									Text="Waiting 3 seconds - Food check - Pine Nut Bread."  
-									LogColor="Plum" />
-					
-					<!-- Wait timer - wait 3 seconds - delay -->
-					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
-					
-					<!-- If we don't have Pine Nut Bread -->
-					<If Condition="!HasItem(58260)">
-
-						<!-- Load profile - [QO-N][90-Flying]_botanist_lost-city-of-the-tol'virll_[repair-mail] -->
-						<CustomBehavior File="LoadProfile" 
-										ProfileName="Movement\Vendors\[QO-N][90-Flying]_botanist_lost-city-of-the-tol'virll_[repair-mail]" />
-			
-					</If>	<!-- If we don't have Pine Nut Bread -->
 					
 					<!-- Profile message - All checks complete -->
 					<CustomBehavior File="Message" 
