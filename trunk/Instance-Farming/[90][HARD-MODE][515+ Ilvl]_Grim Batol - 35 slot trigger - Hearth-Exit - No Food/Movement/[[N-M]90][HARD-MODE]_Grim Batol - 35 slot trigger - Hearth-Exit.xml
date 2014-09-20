@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-M][90-Flying]_botanist_grim-batol</Name>
+	<Name>[N-M]90][HARD-MODE]_Grim Batol - 35 slot trigger - Hearth-Exit</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -254,7 +254,7 @@
 				<CustomBehavior File="LoadProfile" 
 								ProfileName="Vendors\[QO-N][90-Flying]_botanist_grim-batol_[repair-mail]" />
 
-			</If>	<!-- If we have less then 35 empty bag slots or our durability is less than 30% -->
+			</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
 			
 			<!-- Profile message - All checks complete -->
 			<CustomBehavior File="Message" 
@@ -285,7 +285,7 @@
 				
 				<!-- Load profile - [QO-N][90-Flying]_botanist_grim-batol -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][90-Flying]_botanist_grim-batol" />
+								ProfileName="..\[N][90][HARD-MODE]_Grim Batol - 35 slot trigger - Hearth-Exit" />
 								
 			</If> 	<!-- If we are in the Grim Batol instance box -->	
 			
