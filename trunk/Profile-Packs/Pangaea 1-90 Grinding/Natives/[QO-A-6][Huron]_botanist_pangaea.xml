@@ -3,9 +3,10 @@
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
-   
+	<TargetingDistance>40</TargetingDistance>
 	<MinDurability>0.1</MinDurability>
 	<MinFreeBagSlots>1</MinFreeBagSlots>
+	<TargetingDistance>30</TargetingDistance>
 	
 	<MailGrey>False</MailGrey>
 	<MailWhite>False</MailWhite>
@@ -403,16 +404,18 @@
 		<While Condition="Me.Level &gt;= 84 &amp;&amp; Me.Level &lt; 85" >
 				
 				<If Condition="Me.MapId == 0" >
+				
 					<!-- User settings -->
-				<CustomBehavior File="UserSettings" 
-								UseFlightPaths="True" 
-								LootMobs="True" 
-								HarvestHerbs="False" 
-								HarvestMinerals="False" 
-								KillBetweenHotspots="True" 
-								RessAtSpiritHealers="False" 
-								LootRadius="50" 
-								LogoutForInactivity="True" />				
+					<CustomBehavior File="UserSettings" 
+									UseFlightPaths="True" 
+									LootMobs="True" 
+									HarvestHerbs="False" 
+									HarvestMinerals="False" 
+									KillBetweenHotspots="True" 
+									RessAtSpiritHealers="False" 
+									LootRadius="50" 
+									LogoutForInactivity="True" />	
+								
 					<CustomBehavior File="Message" Text="Position check, Thundermar in Twilight Highlands." LogColor="Lime" />  
 					<CustomBehavior File="WaitTimer" WaitTime="1000" />
 					<CustomBehavior File="Message" Text="Moving to the innkeep at Thundermar." LogColor="Lime" />

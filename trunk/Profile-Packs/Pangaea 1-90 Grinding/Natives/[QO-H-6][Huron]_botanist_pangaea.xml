@@ -3,9 +3,10 @@
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
-   
+	<TargetingDistance>40</TargetingDistance>
 	<MinDurability>0.1</MinDurability>
 	<MinFreeBagSlots>1</MinFreeBagSlots>
+	<TargetingDistance>30</TargetingDistance>
 	
 	<MailGrey>False</MailGrey>
 	<MailWhite>False</MailWhite>
