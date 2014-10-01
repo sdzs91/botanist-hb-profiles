@@ -1,6 +1,6 @@
 Copy the questbehaviors in this Misc folder and paste them to your Honorbuddy\Questbehaviors\Misc folder
 
-Replace any files that are already there
+Do NOT replace any files that are already there
 
 Close and restart the bot after copying the questbehaviors
 
