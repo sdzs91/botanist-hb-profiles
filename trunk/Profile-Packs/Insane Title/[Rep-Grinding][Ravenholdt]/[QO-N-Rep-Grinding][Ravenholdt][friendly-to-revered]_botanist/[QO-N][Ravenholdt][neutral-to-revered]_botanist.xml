@@ -78,18 +78,18 @@
 										
 						<GrindTo Condition="(GetFactionreputation(349) &gt; 21001) || (Me.LowestDurabilityPercent &lt; .30)" />
 
-						<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+						<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
 							
 							<!-- CustomBehavior - UserSettings - UseMount = True -->
 							<CustomBehavior File="UserSettings"
 											UseMount="True" />								
 												
-							<!-- Load profile - [QO-N][reputation][60+Flying][Timbermaw-Hold][repair-mail] -->
+							<!-- Load profile - [QO-N][Ravenholdt][friendly-to-revered]_botanist_repair -->
 							<CustomBehavior File="LoadProfile" 
-											ProfileName="Movement\Vendors\[QO-N][reputation][60+Flying][Timbermaw-Hold][repair-mail]" />
+											ProfileName="Movement\Vendors\[QO-N][Ravenholdt][friendly-to-revered]_botanist_repair" />
 
-						</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+						</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 
 						<Else>
 						
@@ -104,9 +104,9 @@
 					<!-- Else we are not in Eastern Kingdoms -->
 					<Else>
 					
-						<!-- Custom behavior - LoadProfile -[QO-N-M][reputation][60+Flying][Timbermaw-Hold]_botanist -->
+						<!-- Custom behavior - LoadProfile - [QO-N-M][Ravenholdt][friendly-to-revered]_botanist -->
 						<CustomBehavior File="LoadProfile" 
-										ProfileName="Movement\[QO-N-M][reputation][60+Flying][Timbermaw-Hold]_botanist" />
+										ProfileName="Movement\[QO-N-M][Ravenholdt][friendly-to-revered]_botanist" />
 										
 					</Else>		<!-- Else we are not in Kalimdor -->					
 					
@@ -128,7 +128,8 @@
 				
 			</If>	<!-- Level Check -->
 		
-		</While>		
+		</While>	<!-- Infinite loop -->
+		
 		
 	</QuestOrder>
 	
