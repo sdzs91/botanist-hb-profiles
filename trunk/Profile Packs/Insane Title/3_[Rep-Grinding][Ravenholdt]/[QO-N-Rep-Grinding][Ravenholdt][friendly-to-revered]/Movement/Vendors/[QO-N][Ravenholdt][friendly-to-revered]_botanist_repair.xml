@@ -82,13 +82,13 @@
 				<!-- If we are Alliance -->
 				<If Condition="Me.IsAlliance">
 				
-					<!-- Fly to - Whisperwind Grove hover point -->
+					<!-- Fly to - Refuge Point - hover point -->
 					<CustomBehavior File="FlyTo" 
-									X="6090.243" Y="-872.4688" Z="437.0766" />
+									X="-1265.327" Y="-2488.484" Z="75.54308" />
 					
 					<!-- CTM to - ally repair vendor -->
 					<CustomBehavior File="MyCTM" 
-										X="6091.913" Y="-839.1793" Z="411.826" />
+										X="-1256.566" Y="-2542.965" Z="21.31395" />
 					
 					<!-- Custom behavior - ForcedDismount -->
 					<CustomBehavior File="ForcedDismount" />
@@ -101,22 +101,21 @@
 					<!-- Whisperwind Grove -->					
 					<SetVendor>
 						<Vendors>
-							<Vendor Name="Ciana" 
-									Entry="48577" 
+							<Vendor Name="Jannos Ironwill" 
+									Entry="1471" 
 									Type="Repair" 
-									X="6086.02" Y="-817.925" Z="414.802" />
+									X="-1257.819" Y="-2546.45" Z="21.45369" />
 						</Vendors>
 					</SetVendor>
 
 					<SetMailbox>
 						<Mailboxes>
-							<Mailbox X="6077.103" Y="-886.9949" Z="411.9005" />
 						</Mailboxes>
 					</SetMailbox>	
 
 					<!-- Vendor conditions -->
 					<CustomBehavior File="ForceSetVendor" 
-									DoMail="True" 
+									DoMail="False" 
 									DoRepair="True" 
 									DoSell="True" 
 									DoTrain="False" />
@@ -126,13 +125,13 @@
 				<!-- If we are Horde -->
 				<If Condition="Me.IsHorde">
 				
-					<!-- Fly to - Whisperwind Grove hover point -->
+					<!-- Fly to - Hammerfall - hover point -->
 					<CustomBehavior File="FlyTo" 
-									X="6090.243" Y="-872.4688" Z="437.0766" />
+									X="-976.5247" Y="-3508.619" Z="95.83376" />
 					
-					<!-- CTM to - ally repair vendor -->
+					<!-- CTM to - Horde repair vendor -->
 					<CustomBehavior File="MyCTM" 
-										X="6091.913" Y="-839.1793" Z="411.826" />
+										X="-938.5004" Y="-3477.394" Z="51.33202" />
 					
 					<!-- Custom behavior - ForcedDismount -->
 					<CustomBehavior File="ForcedDismount" />
@@ -142,43 +141,42 @@
 									Text="Our durability is less than 30%, or our bags have less than 25 empty slots left."
 									LogColor="Cyan" />
 									
-					<!-- Whisperwind Grove -->					
+					<!-- Hammerfall -->					
 					<SetVendor>
 						<Vendors>
-							<Vendor Name="Ciana" 
-									Entry="48577" 
+							<Vendor Name="Mu'uta" 
+									Entry="9555" 
 									Type="Repair" 
-									X="6086.02" Y="-817.925" Z="414.802" />
+									X="-933.8503" Y="-3477.469" Z="51.30426" />
 						</Vendors>
 					</SetVendor>
 
 					<SetMailbox>
 						<Mailboxes>
-							<Mailbox X="6077.103" Y="-886.9949" Z="411.9005" />
 						</Mailboxes>
 					</SetMailbox>	
 
 					<!-- Vendor conditions -->
 					<CustomBehavior File="ForceSetVendor" 
-									DoMail="True" 
+									DoMail="False" 
 									DoRepair="True" 
 									DoSell="True" 
 									DoTrain="False" />
 
 				</If>	<!-- If we are Horde -->
 
-			</If>	<!-- If we have less then 25 empty bag slots or our durability is less than 30% -->
+			</If>	<!-- If we have less then 4 empty bag slots or our durability is less than 30% -->
 				
 			<!-- If we have more than 4 empty bag slots and our durability is greater than 30% -->
 			<If Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt;= 0.3)" >
 			
-				<!-- Load profile - [QO-N][Reputation][60+Flying][Timbermaw-Hold]_botanist -->
+				<!-- Load profile - [QO-N][Ravenholdt][neutral-to-revered]_botanist -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\..\[QO-N][Reputation][60+Flying][Timbermaw-Hold]_botanist" />
+								ProfileName="..\..\[QO-N][Ravenholdt][neutral-to-revered]_botanist" />
 										
 			</If>	<!-- If we have more than 4 empty bag slots and our durability is greater than 30% -->	
 			
-		</If>	<!-- If our level is => -->
+		</If>	<!-- If our level is => 60 -->
 		
 	</QuestOrder>
 	
