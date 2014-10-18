@@ -84,6 +84,19 @@
 								StopBot="true" />
 			</If> 	
 			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			<!-- If we are in Eastern Kingdoms -->
 			<If Condition="Me.MapId == 0">
 				<CustomBehavior File="Message" 
@@ -96,9 +109,10 @@
 									Text="We are not in the box." 
 									LogColor="Cyan" />
 									
-					<!-- If we are in Blackrock Mountain, start clearing outside of the Blackrock Depths portal -->
+					<!-- If we are in Blackrock Mountain -->
 					<If Condition="Me.ZoneId == 25">	
-						<!-- IN BRD BOX -->
+					
+						<!-- If we are in the BRD instance box -->
 						<If Condition="Me.X &gt; -7200 &amp;&amp; Me.X &lt; -7000 &amp;&amp; Me.Y &lt; -900 &amp;&amp; Me.Y &gt; -1000" >
 							<CustomBehavior File="Message" 
 											Text="We are in the Blackrock Depths box."
@@ -193,30 +207,13 @@
 											Text="Flying to Iron Summit." 
 											LogColor="Lime" />
 											
-							<!-- Blackrock Mountain -->
+							<!-- If we are in Blackrock Mountain -->
 							<If Condition="Me.ZoneId == 25">
-								<!-- Fly outside of Blackrock mountain just in case we don't have our hearth set in order to set it -->
-								<CustomBehavior File="FlyTo" 
-												X="-7562.834" Y="-1062.404" Z="231.615" />
-								<CustomBehavior File="FlyTo" 
-												X="-7535.617" Y="-1099.259" Z="276.5862" />
-								<CustomBehavior File="FlyTo" 
-												X="-7484.508" Y="-1071.724" Z="265.4083" />
-								<CustomBehavior File="FlyTo" 
-												X="-7428.28" Y="-1058.494" Z="273.2607" />
-								<CustomBehavior File="FlyTo" 
-												X="-7401.982" Y="-1105.873" Z="278.0755" />
-												
-								<CustomBehavior File="ForcedDismount" />
-								
-								<!-- MyCTM through gates -->
-								<CustomBehavior File="MyCTM" 
-												X="-7372.676" Y="-1096.317" Z="277.8396" />
-								<CustomBehavior File="MyCTM" 
-												X="-7355.349" Y="-1105.106" Z="277.8396" />
-								<CustomBehavior File="MyCTM" 
-												X="-7327.033" Y="-1086.471" Z="277.1177" />
-							</If> <!-- BRM -->
+							
+								<!-- MoveTo - outside the Blackrock Mountain gates -->
+								<MoveTo X="-7319.676" Y="-1080.691" Z="277.0691" />
+							
+							</If>	<!-- If we are in Blackrock Mountain -->
 					
 							<!-- Fly to the hover point above the innkeep in Iron Summit -->
 							<CustomBehavior File="FlyTo" 
@@ -292,36 +289,36 @@
 					<CustomBehavior File="Message" 
 									Text="Moving to Blackrock Spire." 
 									LogColor="Cyan" />
-									
-					<CustomBehavior File="FlyTo" 
-									X="-7294.66" Y="-1084.194" Z="304.1888" />
-					<CustomBehavior File="FlyTo" 
-									X="-7327.798" Y="-1086.975" Z="277.1317" />
-					
-					<CustomBehavior File="ForcedDismount" />
-					
-					<!-- Move to end of chain -->
-					<RunTo X="-7482.167" Y="-1163.467" Z="277.9067" />
-					
-					<CustomBehavior File="ForcedDismount" />
-					
-					<CustomBehavior File="MyCTM" X="-7470.056" Y="-1164.558" Z="273.2744" />
-					<CustomBehavior File="MyCTM" X="-7469.265" Y="-1186.581" Z="273.9157" />
-					<CustomBehavior File="MyCTM" X="-7480.061" Y="-1194.603" Z="278.3599" />
-					<CustomBehavior File="MyCTM" X="-7501.622" Y="-1200.502" Z="281.8502" />
-					<CustomBehavior File="MyCTM" X="-7517.264" Y="-1210.495" Z="290.9408" />
-					<CustomBehavior File="MyCTM" X="-7530.776" Y="-1209.405" Z="285.4507" />
-					<CustomBehavior File="MyCTM" X="-7534.965" Y="-1214.374" Z="285.4137" />
-					
-					<!-- Moving to the instance box -->
-					<RunTo X="-7524.65" Y="-1229.13" Z="285.731" />
 
-					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="FlyTo" 
+									X="-7316.447" Y="-1079.151" Z="277.0703" />
 					
-				</If> <!-- Not in box -->
+					<CustomBehavior File="ForcedDismount" />				
+
+					<!-- MoveTo - balcony -->
+					<MoveTo X="-7535.527" Y="-1212.692" Z="285.4439" />
+					
+					<!-- MoveTo - bottom of the ramp -->
+					<CustomBehavior File="MyCTM"
+									X="-7522.896" Y="-1232.071" Z="285.7424" />
+					
+					<!-- MoveTo - top of the ramp -->
+					<CustomBehavior File="MyCTM"
+									X="-7516.769" Y="-1263.331" Z="296.6023" />
+					
+					
+					<!-- MoveTo - middle of the room -->
+					<CustomBehavior File="MyCTM"
+									X="-7506.983" Y="-1326.109" Z="291.6811" />
+
+					<!-- MoveTo - zone out location -->
+					<CustomBehavior File="MyCTM"
+									X="-7516.25" Y="-1333.5" Z="291.686" />		
+					
+				</If>	<!-- If we are not in the Lower Blackrock Spire instance box -->
 				
-				<!-- Inside the instance box, load the profile -->
-				<If Condition="Me.X &lt; -7500 &amp;&amp; Me.X &gt; -7550 &amp;&amp; Me.Y &gt; -1260 &amp;&amp; Me.Y &lt; -1200" >
+				<!-- If we are in the Lower Blackrock Spire instance box -->
+				<If Condition="Me.X &gt; -7521.25 &amp;&amp; Me.X &lt; -7511.25 &amp;&amp; Me.Y &lt; -1328.5 &amp;&amp; Me.Y &gt; -1338.5" >
 					<CustomBehavior File="Message" 
 									Text="We are in the box." 
 									LogColor="Cyan" />
@@ -329,6 +326,7 @@
 					<CustomBehavior File="LoadProfile" 
 									ProfileName="..\[QO-N][48-60]_blackrock-spire" />
 				</If> <!-- Load profile -->
+				
 			</If> <!-- Eastern Kingdoms -->
 		</If> <!-- Booster -->
 						
@@ -463,19 +461,26 @@
 										
 						<!-- Move to end of chain -->
 						<RunTo X="-7482.167" Y="-1163.467" Z="277.9067" />
+
+						<!-- MoveTo - balcony -->
+						<MoveTo X="-7535.527" Y="-1212.692" Z="285.4439" />
 						
-						<CustomBehavior File="ForcedDismount" />
+						<!-- MoveTo - bottom of the ramp -->
+						<CustomBehavior File="MyCTM"
+										X="-7522.896" Y="-1232.071" Z="285.7424" />
 						
-						<CustomBehavior File="MyCTM" X="-7470.056" Y="-1164.558" Z="273.2744" />
-						<CustomBehavior File="MyCTM" X="-7469.265" Y="-1186.581" Z="273.9157" />
-						<CustomBehavior File="MyCTM" X="-7480.061" Y="-1194.603" Z="278.3599" />
-						<CustomBehavior File="MyCTM" X="-7501.622" Y="-1200.502" Z="281.8502" />
-						<CustomBehavior File="MyCTM" X="-7517.264" Y="-1210.495" Z="290.9408" />
-						<CustomBehavior File="MyCTM" X="-7530.776" Y="-1209.405" Z="285.4507" />
-						<CustomBehavior File="MyCTM" X="-7534.965" Y="-1214.374" Z="285.4137" />
+						<!-- MoveTo - top of the ramp -->
+						<CustomBehavior File="MyCTM"
+										X="-7516.769" Y="-1263.331" Z="296.6023" />
 						
-						<!-- Moving to the instance box -->
-						<RunTo X="-7524.65" Y="-1229.13" Z="285.731" />
+						
+						<!-- MoveTo - middle of the room -->
+						<CustomBehavior File="MyCTM"
+										X="-7506.983" Y="-1326.109" Z="291.6811" />
+
+						<!-- MoveTo - zone out location -->
+						<CustomBehavior File="MyCTM"
+										X="-7516.25" Y="-1333.5" Z="291.686" />	
 						
 						<!-- Not in Blackrock mountain -->
 						<Else>
@@ -493,8 +498,8 @@
 					</If> <!-- Blackrock Mountain -->
 				</If> <!-- Not in box -->
 				
-				<!-- Inside the instance box, load the profile -->
-				<If Condition="Me.X &lt; -7500 &amp;&amp; Me.X &gt; -7550 &amp;&amp; Me.Y &gt; -1260 &amp;&amp; Me.Y &lt; -1200" >
+				<!-- If we are in the Lower Blackrock Spire instance box -->
+				<If Condition="Me.X &gt; -7521.25 &amp;&amp; Me.X &lt; -7511.25 &amp;&amp; Me.Y &lt; -1328.5 &amp;&amp; Me.Y &gt; -1338.5" >
 					<CustomBehavior File="Message" 
 									Text="We are in the box." 
 									LogColor="Cyan" />
