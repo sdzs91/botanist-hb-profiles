@@ -893,6 +893,10 @@
 					<!-- Move to - second Howling Gale -->				
 					<MoveTo X="-1061.07" Y="-48.62126" Z="700.4818" />
 					
+					<!-- Custom behavior -  Wait timer- 3 second loot delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="3000" />
+									
 					<!-- Clear target -->				
 					<CustomBehavior File="RunMacro" 
 									Macro="/cleartarget" 
