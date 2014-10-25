@@ -61,7 +61,7 @@
 							LogoutForInactivity="False"
 							LogoutInactivityUseForceQuit="False"
 							LootMobs="True"
-							LootRadius="25"
+							LootRadius="45"
 							MountName=""
 							NinjaSkin="False"
 							RessAtSpiritHealers="False"
