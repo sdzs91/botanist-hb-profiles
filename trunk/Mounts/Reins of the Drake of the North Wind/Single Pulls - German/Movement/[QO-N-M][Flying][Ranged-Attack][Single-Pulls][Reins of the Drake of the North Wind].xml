@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N-M][Flying][Monks][Reins of the Drake of the North Wind]</Name>
+	<Name>[QO-N-M][Flying][Ranged-Attack][Single-Pulls][Reins of the Drake of the North Wind]</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -41,9 +41,6 @@
 	<Factions></Factions>
 	
 	<QuestOrder>
-		<ClearVendor />
-		<ClearMailbox />
-
 
 		<If Condition="Me.Level &gt;= 90">
 		
@@ -280,11 +277,14 @@
 					</Else>
 				</If>	<!-- hearth -->	
 			</If>	<!-- Kalimdor -->
+	
 
+			
+			
 			<!-- In box -->
 			<If Condition="Me.X &lt; -11413 &amp;&amp; Me.X &gt; -11613 &amp;&amp; Me.Y &gt; -2409 &amp;&amp; Me.Y &lt; -2209 &amp;&amp; Me.Z &gt; 575" >
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[QO-N][Flying][Monks][Reins of the Drake of the North Wind]" />
+								ProfileName="..\[QO-N][Flying][Ranged-Attack][Single-Pulls][Reins of the Drake of the North Wind]" />
 			</If> <!-- In box -->		
 		</If> <!-- Booster -->
 	</QuestOrder>

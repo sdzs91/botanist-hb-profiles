@@ -849,8 +849,11 @@
 									NumOfTimes="1" 
 									WaitTime="1000" />
 					
-					<!-- Cast one of the following spells -->
-					<CustomBehavior File="Misc\RangeAttack" />
+					<!-- CustomBehavior - RunMacro - cast Throw -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Throw" 
+									NumOfTimes="1" 
+									WaitTime="500" />
 
 					<!-- Custom behavior - RunMacro - cleartarget -->	
 					<CustomBehavior File="RunMacro" 
@@ -902,8 +905,11 @@
 									NumOfTimes="1" 
 									WaitTime="1000" />
 					
-					<!-- Cast one of the following spells -->
-					<CustomBehavior File="Misc\RangeAttack" />
+					<!-- CustomBehavior - RunMacro - cast Throw -->
+					<CustomBehavior File="RunMacro" 
+									Macro="/cast Throw" 
+									NumOfTimes="1" 
+									WaitTime="500" />
 									
 					<!-- MoveTo to the top of the stairs -->				
 					<MoveTo X="-1107.029" Y="-2.914684" Z="704.7407" />

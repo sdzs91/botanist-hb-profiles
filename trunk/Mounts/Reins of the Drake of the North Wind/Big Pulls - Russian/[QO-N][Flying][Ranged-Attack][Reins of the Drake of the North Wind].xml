@@ -326,7 +326,7 @@
 										Text="Seventh pull complete." 
 										LogColor="Plum" />
 										
-					<!-- Run to the first Howling Gale -->				
+					<!-- Run to the first Воющая буря -->				
 					<MoveTo X="-1007.842" Y="-101.291" Z="694.9153" />
 					
 					<!-- Profile message - Disabling combat -->
@@ -337,12 +337,12 @@
 					<!-- Disable combat -->
 					<DisableBehavior Name="Combat" />
 					
-					<!-- Move to the first Howling Gale -->				
+					<!-- Move to the first Воющая буря -->				
 					<MoveTo X="-1039.558" Y="-69.81506" Z="700.4934" />				
 	
-					<!-- Target the Howling Gale -->
+					<!-- Target the Воющая буря -->
 					<CustomBehavior File="RunMacro" 
-									Macro="/tar Howling Gale" 
+									Macro="/tar Воющая буря" 
 									NumOfTimes="1" 
 									WaitTime="1000" />
 					
@@ -355,7 +355,7 @@
 									NumOfTimes="1" 
 									WaitTime="0"/>
 					
-					<!-- MoveTo to the second Howling Gale -->				
+					<!-- MoveTo to the second Воющая буря -->				
 					<MoveTo X="-1061.07" Y="-48.62126" Z="700.4818" />
 					
 					<!-- Clear target -->				
@@ -364,7 +364,7 @@
 									NumOfTimes="1" 
 									WaitTime="1000" />					
 									
-					<!-- Target the Howling Gale -->				
+					<!-- Target the Воющая буря -->				
 					<CustomBehavior File="RunMacro" 
 									Macro="/targetenemy" 
 									NumOfTimes="1" 
