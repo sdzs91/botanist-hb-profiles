@@ -121,7 +121,7 @@
 					
 					<!-- Custom behavior - LoadProfile - Movement\[[N-M]90][HARD-MODE]_Grim Batol - 35 slot trigger - Hearth-Exit -->
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[[N-M]90][HARD-MODE]_Grim Batol - 35 slot trigger - Hearth-Exit" />
+									ProfileName="Movement\[N-M]90][HARD-MODE]_Grim Batol - 35 slot trigger - Hearth-Exit" />
 					
 				</If>	<!-- If we are not in the Grim Batol instance box, load the movement profile -->
 				
@@ -187,6 +187,70 @@
 				
 				<!-- If we are inside Grim Batol -->
 				<If Condition="Me.ZoneId == 4950">
+					
+					<!-- If our guild => 11 -->
+					<If Condition="StyxWoW.Me.GuildLevel &gt;= 11" >				
+									
+						<!--  CustomBehavior - Message - Our guild is level 11 or greater -->
+						<CustomBehavior File="Message" 
+										Text="Our guild is level 11 or greater."
+										LogColor="Gold" />			
+
+						<!-- If we have friendly reputation with our guild -->				
+						<If Condition="GetFactionReputation(1168) &gt; 3000">		
+								
+							<!--  CustomBehavior - Message - We have friendly or greater reputation with our guild -->
+							<CustomBehavior File="Message" 
+											Text="We have friendly or greater reputation with our guild."
+											LogColor="Gold" />	
+								
+							<!-- If we have > 2000 gold -->
+							<If Condition="(Me.Gold &gt;= 2000)" >
+								
+								<!--  CustomBehavior - Message - We have over 1000 gold in our bags -->
+								<CustomBehavior File="Message" 
+												Text="We have over 1000 gold in our bags."
+												LogColor="Gold" />
+
+								<!-- Load profile - [QO-N][90]_Grim Batol_[mobile-banking] -->
+								<CustomBehavior File="LoadProfile" 
+												ProfileName="Movement\Vendors\Mobile-Banking\[QO-N][90]_Grim Batol_[mobile-banking]" />
+												
+								<!-- Else we have < 2000 gold -->				
+								<Else>
+								
+									<!--  CustomBehavior - Message - We have over 2000 gold in our bags -->
+									<CustomBehavior File="Message" 
+													Text="We have less than 2000 gold in our bags."
+													LogColor="Cyan" />
+													
+								</Else>		<!-- Else we have < 1000 gold -->
+								
+							</If>	<!-- If we have < 2000 gold -->	
+							
+							<!-- Else we have less than 2000 gold in our bags -->			
+							<Else>
+							
+								<!--  CustomBehavior - Message - We we don't have friendly reputation with our guild -->
+								<CustomBehavior File="Message" 
+												Text="We we don't have friendly reputation with our guild."
+												LogColor="Cyan" />
+												
+							</Else>		<!-- Else we don't have friendly reputation with our guild -->
+							
+						</If>	<!-- If we have friendly reputation with our guild -->				
+										
+						<!-- Else our guild < 11 -->			
+						<Else>
+						
+							<!--  CustomBehavior - Message - Our guild is less than level 11 -->
+							<CustomBehavior File="Message" 
+											Text="Our guild is less than level 11."
+											LogColor="Cyan" />
+											
+						</Else>		<!-- Else our guild < 11 -->				
+										
+					</If>	<!-- If our guild => 11 -->
 					
 					<!--Profile message	- Deleting unwanted items from our bags -->				
 					<CustomBehavior File="Message" 
@@ -550,6 +614,11 @@
 					<!-- @@@@@@@@@@@@@@@@@@@@ hearth out @@@@@@@@@@@@@@@@@@@@ -->
 				
 				
+					<!-- CustomBehavior - Misc\InstanceTimer -->				
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Check" 
+									WaitTime="5000" />
+				
 					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
 					
@@ -691,11 +760,7 @@
 
 					<!-- Move to - zone in location -->
 					<MoveTo X="-624.155" Y="-189.365" Z="272.04" />
-					
-					<!-- Instance timer check if we didn't repair -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
-					
+
 					<!-- Custom behavior - Misc/InInstance - exit the instance-->
 					<CustomBehavior File="Misc\InInstance" 
 									X="-630.1126" Y="-172.9248" Z="272.1369" />

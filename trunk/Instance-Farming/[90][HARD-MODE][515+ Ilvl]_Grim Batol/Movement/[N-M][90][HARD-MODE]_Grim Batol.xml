@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[N-M]90][HARD-MODE]_Grim Batol - 35 slot trigger - Hearth-Exit</Name>
+	<Name>[N-M][90][HARD-MODE]_Grim Batol</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -60,10 +60,10 @@
 						LootRadius="25"
 						MountName=""
 						NinjaSkin="False"
-						RessAtSpiritHealers="False"
+						RessAtSpiritHealers="True"
 						SkinMobs="False"
 						UseMount="True" 
-						UseRandomMount="False" />	
+						UseRandomMount="False" />
 
 			<!-- If we are in Kalimdor -->
 			<If Condition="Me.MapId == 1">
@@ -303,7 +303,7 @@
 				
 				<!-- Load profile - [QO-N][90-Flying]_botanist_grim-batol -->
 				<CustomBehavior File="LoadProfile" 
-								ProfileName="..\[N][90][HARD-MODE]_Grim Batol - 35 slot trigger - Hearth-Exit" />
+								ProfileName="..\[N][90][HARD-MODE]_Grim Batol" />
 								
 			</If> 	<!-- If we are in the Grim Batol instance box -->	
 			

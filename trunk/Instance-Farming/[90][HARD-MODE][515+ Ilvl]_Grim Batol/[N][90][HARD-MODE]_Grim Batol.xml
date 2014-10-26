@@ -1,5 +1,5 @@
 ﻿<HBProfile creator="Botanist" version="1.0">
-	<Name>[QO-N][90-Flying]_botanist_grim-batol</Name>
+	<Name>[N][90][HARD-MODE]_Grim Batol</Name>
    
 	<MinLevel>1</MinLevel>
 	<MaxLevel>101</MaxLevel>
@@ -61,7 +61,7 @@
 						LootRadius="25"
 						MountName=""
 						NinjaSkin="False"
-						RessAtSpiritHealers="False"
+						RessAtSpiritHealers="True"
 						SkinMobs="False"
 						UseMount="True" 
 						UseRandomMount="False" />	
@@ -85,9 +85,9 @@
 									Text="Waiting 3 seconds - Bag and durability check."  
 									LogColor="Orange" />
 					
-					<!-- Wait timer - wait 3 seconds - delay -->
+					<!-- Wait timer - wait 5 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="5000" />
 					
 					<!-- If we have less then 35 empty bag slots or our durability is less than 30% -->
 					<If Condition="(Me.FreeBagSlots &lt;= 35) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
@@ -103,9 +103,9 @@
 									Text="Waiting 3 seconds - Food check - Pine Nut Bread."  
 									LogColor="Orange" />
 					
-					<!-- Wait timer - wait 3 seconds - delay -->
+					<!-- Wait timer - wait 5 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="5000" />
 					
 					<!-- If we don't have Pine Nut Bread -->
 					<If Condition="!HasItem(58260)">
@@ -137,9 +137,9 @@
 				<!-- If we are not in the Grim Batol instance box, load the movement profile -->
 				<If Condition="Me.X &gt; -4051.118 || Me.X &lt; -4088.162 || Me.Y &gt; -3439.181 || Me.Y &lt; -3462.127" >
 					
-					<!-- Custom behavior - LoadProfile - Movement\[[N-M]90][HARD-MODE]_Grim Batol - 35 slot trigger - Hearth-Exit -->
+					<!-- Custom behavior - LoadProfile - Movement\[N-M][90][HARD-MODE]_Grim Batol -->
 					<CustomBehavior File="LoadProfile" 
-									ProfileName="Movement\[[N-M]90][HARD-MODE]_Grim Batol - 35 slot trigger - Hearth-Exit" />
+									ProfileName="Movement\[N-M][90][HARD-MODE]_Grim Batol" />
 					
 				</If>	<!-- If we are not in the Grim Batol instance box, load the movement profile -->
 				
@@ -206,6 +206,69 @@
 				<!-- If we are inside Grim Batol -->
 				<If Condition="Me.ZoneId == 4950">
 					
+					<!-- If our guild => 11 -->
+					<If Condition="StyxWoW.Me.GuildLevel &gt;= 11" >				
+									
+						<!--  CustomBehavior - Message - Our guild is level 11 or greater -->
+						<CustomBehavior File="Message" 
+										Text="Our guild is level 11 or greater."
+										LogColor="Gold" />			
+
+						<!-- If we have friendly reputation with our guild -->				
+						<If Condition="GetFactionReputation(1168) &gt; 3000">		
+								
+							<!--  CustomBehavior - Message - We have friendly or greater reputation with our guild -->
+							<CustomBehavior File="Message" 
+											Text="We have friendly or greater reputation with our guild."
+											LogColor="Gold" />	
+								
+							<!-- If we have > 2000 gold -->
+							<If Condition="(Me.Gold &gt;= 2000)" >
+								
+								<!--  CustomBehavior - Message - We have over 1000 gold in our bags -->
+								<CustomBehavior File="Message" 
+												Text="We have over 1000 gold in our bags."
+												LogColor="Gold" />
+
+								<!-- Load profile - [QO-N][90]_Grim Batol_[mobile-banking] -->
+								<CustomBehavior File="LoadProfile" 
+												ProfileName="Movement\Vendors\Mobile-Banking\[QO-N][90]_Grim Batol_[mobile-banking]" />
+												
+								<!-- Else we have < 2000 gold -->				
+								<Else>
+								
+									<!--  CustomBehavior - Message - We have over 2000 gold in our bags -->
+									<CustomBehavior File="Message" 
+													Text="We have less than 2000 gold in our bags."
+													LogColor="Cyan" />
+													
+								</Else>		<!-- Else we have < 1000 gold -->
+								
+							</If>	<!-- If we have < 2000 gold -->	
+							
+							<!-- Else we have less than 2000 gold in our bags -->			
+							<Else>
+							
+								<!--  CustomBehavior - Message - We we don't have friendly reputation with our guild -->
+								<CustomBehavior File="Message" 
+												Text="We we don't have friendly reputation with our guild."
+												LogColor="Cyan" />
+												
+							</Else>		<!-- Else we don't have friendly reputation with our guild -->
+							
+						</If>	<!-- If we have friendly reputation with our guild -->				
+										
+						<!-- Else our guild < 11 -->			
+						<Else>
+						
+							<!--  CustomBehavior - Message - Our guild is less than level 11 -->
+							<CustomBehavior File="Message" 
+											Text="Our guild is less than level 11."
+											LogColor="Cyan" />
+											
+						</Else>		<!-- Else our guild < 11 -->				
+										
+					</If>	<!-- If our guild => 11 -->
 					<!--Profile message	- Deleting unwanted items from our bags -->				
 					<CustomBehavior File="Message" 
 									Text="Deleting unwanted items from our bags." 
@@ -309,9 +372,9 @@
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />
 					
-					<!-- Wait timer - wait 3 seconds - delay -->
+					<!-- Wait timer - wait 5 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="5000" />
 
 									
 					<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -357,9 +420,9 @@
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />				
 									
-					<!-- Wait timer - wait 3 seconds - delay -->
+					<!-- Wait timer - wait 5 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="5000" />
 					
 				
 					<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -393,9 +456,9 @@
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />				
 									
-					<!-- Wait timer - wait 3 seconds - delay -->
+					<!-- Wait timer - wait 5 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />				
+									WaitTime="5000" />				
 				
 
 					<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -423,9 +486,9 @@
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />				
 									
-					<!-- Wait timer - wait 3 seconds - delay -->
+					<!-- Wait timer - wait 5 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="5000" />
 
 					<!-- Profile message - Disabling combat -->
 					<CustomBehavior File="Message" 
@@ -449,9 +512,9 @@
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />				
 									
-					<!-- Wait timer - wait 3 seconds - delay -->
+					<!-- Wait timer - wait 5 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="5000" />
 									
 									
 					<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -485,9 +548,9 @@
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />				
 									
-					<!-- Wait timer - wait 3 seconds - delay -->
+					<!-- Wait timer - wait 5 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="5000" />
 				
 				
 					<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -507,6 +570,21 @@
 					<!-- Move to - 5th group in Condemned Halls -->
 					<MoveTo X="-621.3073" Y="-730.7749" Z="268.7676" />
 					
+					<!-- enable combat -->
+					<EnableBehavior Name="Combat" />				
+									
+					<!-- Wait timer - wait 5 seconds - delay -->
+					<CustomBehavior File="WaitTimer" 
+									WaitTime="5000" />
+					
+					<!-- Profile message - Disabling combat -->
+					<CustomBehavior File="Message" 
+										Text="Disabling combat." 
+										LogColor="Gold" />
+					
+					<!-- DisableBehavior - Combat -->
+					<DisableBehavior Name="Combat" />
+
 					<!-- Move to - 6th group in Condemned Halls -->
 					<MoveTo X="-635.978" Y="-666.1339" Z="268.768" />
 													
@@ -524,9 +602,9 @@
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />				
 									
-					<!-- Wait timer - wait 3 seconds - delay -->
+					<!-- Wait timer - wait 5 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="5000" />
 				
 				
 					<!-- @@@@@@@@@@@@@@@@@@@@ 2nd pull @@@@@@@@@@@@@@@@@@@@ -->
@@ -560,13 +638,18 @@
 					<!-- enable combat -->
 					<EnableBehavior Name="Combat" />				
 									
-					<!-- Wait timer - wait 3 seconds - delay -->
+					<!-- Wait timer - wait 5 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="5000" />
 				
 
 					<!-- @@@@@@@@@@@@@@@@@@@@ hearth out @@@@@@@@@@@@@@@@@@@@ -->
 				
+				
+					<!-- CustomBehavior - Misc\InstanceTimer -->				
+					<CustomBehavior File="Misc\InstanceTimer" 
+									Timer="Check" 
+									WaitTime="5000" />
 				
 					<!-- If we have a Hearthstone -->
 					<If Condition="HasItem(6948)">
@@ -611,9 +694,9 @@
 									Text="Waiting 3 seconds - Bag and durability check."  
 									LogColor="Orange" />
 					
-					<!-- Wait timer - wait 3 seconds - delay -->
+					<!-- Wait timer - wait 5 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="5000" />
 					
 					<!-- If we have less then 35 empty bag slots or our durability is less than 30% -->
 					<If Condition="(Me.FreeBagSlots &lt;= 35) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
@@ -629,9 +712,9 @@
 									Text="Waiting 3 seconds - Food check - Mead Basted Caribou."  
 									LogColor="Orange" />
 					
-					<!-- Wait timer - wait 3 seconds - delay -->
+					<!-- Wait timer - wait 5 seconds - delay -->
 					<CustomBehavior File="WaitTimer" 
-									WaitTime="3000" />
+									WaitTime="5000" />
 					
 					<!-- If we don't have Pine Nut Bread -->
 					<If Condition="!HasItem(58260)">
@@ -727,11 +810,7 @@
 
 					<!-- Move to - zone in location -->
 					<MoveTo X="-624.155" Y="-189.365" Z="272.04" />
-					
-					<!-- Instance timer check if we didn't repair -->
-					<CustomBehavior File="Misc\InstanceTimer" 
-									Timer="Check" />
-					
+
 					<!-- Custom behavior - Misc/InInstance - exit the instance-->
 					<CustomBehavior File="Misc\InInstance" 
 									X="-630.1126" Y="-172.9248" Z="272.1369" />

@@ -54,7 +54,7 @@
 						LootRadius="25"
 						MountName=""
 						NinjaSkin="False"
-						RessAtSpiritHealers="False"
+						RessAtSpiritHealers="True"
 						SkinMobs="False"
 						UseMount="True" 
 						UseRandomMount="False" />	
@@ -158,9 +158,9 @@
 			<!-- If we have Pine Nut Bread -->
 			<If Condition="HasItem(58260)">
 			
-				<!-- Load profile - [N][90][HARD-MODE]_Grim Batol - 35 slot trigger - Hearth-Exit -->
+				<!-- Load profile - [N][90][HARD-MODE]_Grim Batol -->
 				<CustomBehavior File="LoadProfile" 
-										ProfileName="..\..\[N][90][HARD-MODE]_Grim Batol - 35 slot trigger - Hearth-Exit" />
+										ProfileName="..\..\[N][90][HARD-MODE]_Grim Batol" />
 										
 			</If>	<!-- If we do have Pine Nut Bread -->	
 			

@@ -55,7 +55,7 @@
 						LootRadius="25"
 						MountName=""
 						NinjaSkin="False"
-						RessAtSpiritHealers="False"
+						RessAtSpiritHealers="True"
 						SkinMobs="False"
 						UseMount="True" 
 						UseRandomMount="False" />	
