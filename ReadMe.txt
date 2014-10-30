@@ -14,4 +14,4 @@ I will no longer support HonorBuddy (as a company).
 
 I will continue to update my donor SVN and all the profiles it contains. 
 
-All new products will be released via my donor SVN, my website 
+All new products will be released via my donor SVN or my website.
